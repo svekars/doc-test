@@ -1,0 +1,965 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Distributed Data Parallel &#8212; PyTorch main documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/katex-math.css?v=91adb8b6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/jit.css?v=8de1ea5d" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3ccf5357" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=189c4a6a" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=940804e7"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notes/ddp';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FSDP Notes" href="fsdp.html" />
+    <link rel="prev" title="Getting Started on Intel GPU" href="get_start_xpu.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+<div class="container-fluid header-holder tutorials-header" id="header-holder">
+  <div class="container">
+    <div class="header-container">
+      <a class="header-logo" href="" aria-label="PyTorch"></a>
+
+      <div class="main-menu">
+        <ul>
+
+          <li class="main-menu-item">
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Learn
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Get Started</span>
+                  <p>Run PyTorch locally or get started quickly with one of the supported cloud platforms</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Tutorials</span>
+                  <p>Whats new in PyTorch tutorials</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Learn the Basics</span>
+                  <p>Familiarize yourself with PyTorch concepts and modules</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Recipes</span>
+                  <p>Bite-size, ready-to-deploy PyTorch code examples</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Intro to PyTorch - YouTube Series</span>
+                  <p>Master PyTorch basics with our engaging YouTube tutorial series</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Ecosystem
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Tools</span>
+                  <p>Learn about the tools and frameworks in the PyTorch Ecosystem</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Community</span>
+                  <p>Join the PyTorch developer community to contribute, learn, and get your questions answered</p>
+                </a>
+                <a class="nav-dropdown-item" href="" target="_blank">
+                  <span class=dropdown-title>Forums</span>
+                  <p>A place to discuss PyTorch code, issues, install, research</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Developer Resources</span>
+                  <p>Find resources and get questions answered</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Contributor Awards - 2024</span>
+                  <p>Award winners announced at this year's PyTorch Conference</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Edge
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">About PyTorch Edge</span>
+                  <p>Build innovative and privacy-aware AI experiences for edge devices</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">ExecuTorch</span>
+                  <p>End-to-end solution for enabling on-device inference capabilities across mobile and edge devices</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">ExecuTorch Docs</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="main-menu-item">
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Docs
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch</span>
+                  <p>Explore the documentation for comprehensive guidance on how to use PyTorch</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Domains</span>
+                  <p>Read the PyTorch Domains documentation to learn more about domain-specific libraries</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Blogs & News
+              lnhetrlnle</a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Blog</span>
+                  <p>Catch up on the latest technical news and happenings</p>
+                </a>
+                 <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Community Blog</span>
+                  <p>Stories from the PyTorch ecosystem</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Videos</span>
+                  <p>Learn about the latest PyTorch tutorials, new, and more </p>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Community Stories</span>
+                  <p>Learn how our community solves real, everyday machine learning problems with PyTorch</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Events</span>
+                  <p>Find events, webinars, and podcasts</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Newsletter</span>
+                  <p>Stay up-to-date with the latest updates</p>
+                </a>
+            </div>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                About
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Foundation</span>
+                  <p>Learn more about the PyTorch Foundation</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Governing Board</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Cloud Credit Program</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Technical Advisory Council</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Staff</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Contact Us</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="main-menu-item">
+            <div class="no-dropdown">
+              <a href="" data-cta="join">
+                Become a Member
+              </a>
+            </div>
+          </li>
+          <li>
+           <div class="main-menu-item">
+             <a href="" class="github-icon">
+             </a>
+           </div>
+          </li>
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <li>
+            <div class="main-menu-item">
+             <a href="" class="search-icon">
+             </a>
+            </div>
+          </li>
+          --->
+        </ul>
+      </div>
+
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+    </div>
+  </div>
+</div>
+
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
+    <div class="navbar-item">
+      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
+    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../python-api/index.html">
+    Python API
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Developer Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../community/index.html">
+    Community
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../lang-bindings/index.html">
+    Language Bindings
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../python-api/index.html">
+    Python API
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Developer Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../community/index.html">
+    Community
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../lang-bindings/index.html">
+    Language Bindings
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Core Concepts</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="autograd.html">Autograd mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gradcheck.html">Gradcheck mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Device and Hardware Support</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cuda.html">CUDA semantics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hip.html">HIP (ROCm) semantics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mps.html">MPS backend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_start_xpu.html">Getting Started on Intel GPU</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Distributed Training and Deployment</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Distributed Data Parallel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fsdp.html">FSDP Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large_scale_deployments.html">Features for large-scale deployments</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization and Performance</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="amp_examples.html">Automatic Mixed Precision examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cpu_threading_torchscript_inference.html">CPU threading and TorchScript inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multiprocessing.html">Multiprocessing best practices</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extending PyTorch</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="extending.html">Extending PyTorch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extending.func.html">Extending torch.func with autograd.Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_operators.html">PyTorch Custom Operators Landing Page</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Numerical Considerations</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="broadcasting.html">Broadcasting semantics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numerical_accuracy.html">Numerical accuracy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="randomness.html">Reproducibility</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Serialization and Storage</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="serialization.html">Serialization semantics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FAQs</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="windows.html">Windows FAQ</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Developer Notes</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Distributed Data Parallel</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="distributed-data-parallel">
+<span id="ddp"></span><h1>Distributed Data Parallel<a class="headerlink" href="#distributed-data-parallel" title="Link to this heading">#</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The implementation of <a class="reference internal" href="../python-api/generated/torch.nn.parallel.DistributedDataParallel.html#torch.nn.parallel.DistributedDataParallel" title="torch.nn.parallel.DistributedDataParallel"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.parallel.DistributedDataParallel</span></code></a>
+evolves over time. This design note is written based on the state as of v1.4.</p>
+</div>
+<p><a class="reference internal" href="../python-api/generated/torch.nn.parallel.DistributedDataParallel.html#torch.nn.parallel.DistributedDataParallel" title="torch.nn.parallel.DistributedDataParallel"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.parallel.DistributedDataParallel</span></code></a> (DDP) transparently performs
+distributed data parallel training. This page describes how it works and reveals
+implementation details.</p>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h2>
+<p>Let us start with a simple <a class="reference internal" href="../python-api/generated/torch.nn.parallel.DistributedDataParallel.html#torch.nn.parallel.DistributedDataParallel" title="torch.nn.parallel.DistributedDataParallel"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.parallel.DistributedDataParallel</span></code></a>
+example. This example uses a <a class="reference internal" href="../python-api/generated/torch.nn.Linear.html#torch.nn.Linear" title="torch.nn.Linear"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.Linear</span></code></a> as the local model, wraps
+it with DDP, and then runs one forward pass, one backward pass, and an optimizer
+step on the DDP model. After that, parameters on the local model will be
+updated, and all models on different processes should be exactly the same.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch.distributed</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dist</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch.multiprocessing</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mp</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nn</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch.optim</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">optim</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">torch.nn.parallel</span><span class="w"> </span><span class="kn">import</span> <span class="n">DistributedDataParallel</span> <span class="k">as</span> <span class="n">DDP</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">example</span><span class="p">(</span><span class="n">rank</span><span class="p">,</span> <span class="n">world_size</span><span class="p">):</span>
+    <span class="c1"># create default process group</span>
+    <span class="n">dist</span><span class="o">.</span><span class="n">init_process_group</span><span class="p">(</span><span class="s2">&quot;gloo&quot;</span><span class="p">,</span> <span class="n">rank</span><span class="o">=</span><span class="n">rank</span><span class="p">,</span> <span class="n">world_size</span><span class="o">=</span><span class="n">world_size</span><span class="p">)</span>
+    <span class="c1"># create local model</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">rank</span><span class="p">)</span>
+    <span class="c1"># construct DDP model</span>
+    <span class="n">ddp_model</span> <span class="o">=</span> <span class="n">DDP</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">device_ids</span><span class="o">=</span><span class="p">[</span><span class="n">rank</span><span class="p">])</span>
+    <span class="c1"># define loss function and optimizer</span>
+    <span class="n">loss_fn</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">MSELoss</span><span class="p">()</span>
+    <span class="n">optimizer</span> <span class="o">=</span> <span class="n">optim</span><span class="o">.</span><span class="n">SGD</span><span class="p">(</span><span class="n">ddp_model</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="mf">0.001</span><span class="p">)</span>
+
+    <span class="c1"># forward pass</span>
+    <span class="n">outputs</span> <span class="o">=</span> <span class="n">ddp_model</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">rank</span><span class="p">))</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">rank</span><span class="p">)</span>
+    <span class="c1"># backward pass</span>
+    <span class="n">loss_fn</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+    <span class="c1"># update parameters</span>
+    <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">world_size</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">mp</span><span class="o">.</span><span class="n">spawn</span><span class="p">(</span><span class="n">example</span><span class="p">,</span>
+        <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">world_size</span><span class="p">,),</span>
+        <span class="n">nprocs</span><span class="o">=</span><span class="n">world_size</span><span class="p">,</span>
+        <span class="n">join</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="c1"># Environment variables which need to be</span>
+    <span class="c1"># set when using c10d&#39;s default &quot;env&quot;</span>
+    <span class="c1"># initialization mode.</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;MASTER_ADDR&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;MASTER_PORT&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;29500&quot;</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>DDP works with TorchDynamo.  When used with TorchDynamo, apply the DDP model wrapper
+before compiling the model, such that torchdynamo can apply <code class="docutils literal notranslate"><span class="pre">DDPOptimizer</span></code>
+(graph-break optimizations) based on DDP bucket sizes.  (See <a class="reference external" href="./ddp.html#torchdynamo-ddpoptimizer">TorchDynamo DDPOptimizer</a> for more information.)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ddp_model</span> <span class="o">=</span> <span class="n">DDP</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">device_ids</span><span class="o">=</span><span class="p">[</span><span class="n">rank</span><span class="p">])</span>
+<span class="n">ddp_model</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">ddp_model</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="internal-design">
+<h2>Internal Design<a class="headerlink" href="#internal-design" title="Link to this heading">#</a></h2>
+<p>This section reveals how it works under the hood of
+<a class="reference internal" href="../python-api/generated/torch.nn.parallel.DistributedDataParallel.html#torch.nn.parallel.DistributedDataParallel" title="torch.nn.parallel.DistributedDataParallel"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.parallel.DistributedDataParallel</span></code></a> by diving into details of
+every step in one iteration.</p>
+<ul class="simple">
+<li><p><strong>Prerequisite</strong>: DDP relies on c10d <code class="docutils literal notranslate"><span class="pre">ProcessGroup</span></code> for communications.
+Hence, applications must create <code class="docutils literal notranslate"><span class="pre">ProcessGroup</span></code> instances before constructing
+DDP.</p></li>
+<li><p><strong>Construction</strong>: The DDP constructor takes a reference to the local module,
+and broadcasts <code class="docutils literal notranslate"><span class="pre">state_dict()</span></code> from the process with rank 0 to all other
+processes in the group to make sure that all model replicas start from the
+exact same state. Then, each DDP process creates a local <code class="docutils literal notranslate"><span class="pre">Reducer</span></code>, which
+later will take care of the gradients synchronization during the backward
+pass. To improve communication efficiency, the <code class="docutils literal notranslate"><span class="pre">Reducer</span></code> organizes parameter
+gradients into buckets, and reduces one bucket at a time. Bucket size can be
+configured by setting the <cite>bucket_cap_mb</cite> argument in DDP constructor. The
+mapping from parameter gradients to buckets is determined at the construction
+time, based on the bucket size limit and parameter sizes. Model parameters are
+allocated into buckets in (roughly) the reverse order of
+<code class="docutils literal notranslate"><span class="pre">Model.parameters()</span></code> from the given model. The reason for using the reverse
+order is because DDP expects gradients to become ready during the backward
+pass in approximately that order. The figure below shows an example. Note
+that, the <code class="docutils literal notranslate"><span class="pre">grad0</span></code> and <code class="docutils literal notranslate"><span class="pre">grad1</span></code> are in <code class="docutils literal notranslate"><span class="pre">bucket1</span></code>, and the other two
+gradients are in <code class="docutils literal notranslate"><span class="pre">bucket0</span></code>. Of course, this assumption might not always
+be true, and when that happens it could hurt DDP backward speed as the
+<code class="docutils literal notranslate"><span class="pre">Reducer</span></code> cannot kick off the communication at the earliest possible time.
+Besides bucketing, the <code class="docutils literal notranslate"><span class="pre">Reducer</span></code> also registers autograd hooks during
+construction, one hook per parameter. These hooks will be triggered during
+the backward pass when the gradient becomes ready.</p></li>
+<li><p><strong>Forward Pass</strong>: The DDP takes the input and passes it to the local model,
+and then analyzes the output from the local model if
+<code class="docutils literal notranslate"><span class="pre">find_unused_parameters</span></code> is set to <code class="docutils literal notranslate"><span class="pre">True</span></code>. This mode allows running
+backward on a subgraph of the model, and DDP finds out which parameters are
+involved in the backward pass by traversing the autograd graph from the model
+output and marking all unused parameters as ready for reduction. During the
+backward pass, the <code class="docutils literal notranslate"><span class="pre">Reducer</span></code> would only wait for unready parameters, but it
+would still reduce all buckets. Marking a parameter gradient as ready does not
+help DDP skip buckets as for now, but it will prevent DDP from waiting for
+absent gradients forever during the backward pass. Note that traversing the
+autograd graph introduces extra overheads, so applications should only set
+<code class="docutils literal notranslate"><span class="pre">find_unused_parameters</span></code> to <code class="docutils literal notranslate"><span class="pre">True</span></code> when necessary.</p></li>
+<li><p><strong>Backward Pass</strong>: The <code class="docutils literal notranslate"><span class="pre">backward()</span></code> function is directly invoked on the loss
+<code class="docutils literal notranslate"><span class="pre">Tensor</span></code>, which is out of DDP’s control, and DDP uses autograd hooks
+registered at construction time to trigger gradients synchronizations. When
+one gradient becomes ready, its corresponding DDP hook on that grad
+accumulator will fire, and DDP will then mark that parameter gradient as
+ready for reduction. When gradients in one bucket are all ready, the
+<code class="docutils literal notranslate"><span class="pre">Reducer</span></code> kicks off an asynchronous <code class="docutils literal notranslate"><span class="pre">allreduce</span></code> on that bucket to
+calculate mean of gradients across all processes. When all buckets are ready,
+the <code class="docutils literal notranslate"><span class="pre">Reducer</span></code> will block waiting for all <code class="docutils literal notranslate"><span class="pre">allreduce</span></code> operations to finish.
+When this is done, averaged gradients are written to the <code class="docutils literal notranslate"><span class="pre">param.grad</span></code> field
+of all parameters. So after the backward pass, the <cite>grad</cite> field on the same
+corresponding parameter across different DDP processes should be the same.</p></li>
+<li><p><strong>Optimizer Step</strong>: From the optimizer’s perspective, it is optimizing a local
+model. Model replicas on all DDP processes can keep in sync because they all
+start from the same state and they have the same averaged gradients in
+every iteration.</p></li>
+</ul>
+<a class="reference internal image-reference" href="https://user-images.githubusercontent.com/16999635/72401724-d296d880-371a-11ea-90ab-737f86543df9.png"><img alt="ddp_grad_sync.png" src="https://user-images.githubusercontent.com/16999635/72401724-d296d880-371a-11ea-90ab-737f86543df9.png" style="width: 700px;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>DDP requires <code class="docutils literal notranslate"><span class="pre">Reducer</span></code> instances on all processes to invoke <code class="docutils literal notranslate"><span class="pre">allreduce</span></code>
+in exactly the same order, which is done by always running <code class="docutils literal notranslate"><span class="pre">allreduce</span></code>
+in the bucket index order instead of actual bucket ready order. Mismatched
+<code class="docutils literal notranslate"><span class="pre">allreduce</span></code> order across processes can lead to wrong results or DDP backward
+hang.</p>
+</div>
+</section>
+<section id="implementation">
+<h2>Implementation<a class="headerlink" href="#implementation" title="Link to this heading">#</a></h2>
+<p>Below are pointers to the DDP implementation components. The stacked graph shows
+the structure of the code.</p>
+<section id="processgroup">
+<h3>ProcessGroup<a class="headerlink" href="#processgroup" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/pytorch/pytorch/blob/v1.7.0/torch/lib/c10d/ProcessGroup.hpp">ProcessGroup.hpp</a>:
+contains the abstract API of all process group implementations. The <code class="docutils literal notranslate"><span class="pre">c10d</span></code>
+library provides 3 implementations out of the box, namely,
+<cite>ProcessGroupGloo</cite>, <cite>ProcessGroupNCCL</cite>, and <cite>ProcessGroupMPI</cite>.
+<code class="docutils literal notranslate"><span class="pre">DistributedDataParallel</span></code> uses <code class="docutils literal notranslate"><span class="pre">ProcessGroup::broadcast()</span></code> to send
+model states from the process with rank 0 to others during initialization
+and <code class="docutils literal notranslate"><span class="pre">ProcessGroup::allreduce()</span></code> to sum gradients.</p></li>
+<li><p><a class="reference external" href="https://github.com/pytorch/pytorch/blob/v1.7.0/torch/lib/c10d/Store.hpp">Store.hpp</a>:
+assists the rendezvous service for process group instances to find each other.</p></li>
+</ul>
+</section>
+<section id="distributeddataparallel">
+<h3>DistributedDataParallel<a class="headerlink" href="#distributeddataparallel" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/pytorch/pytorch/blob/v1.7.0/torch/nn/parallel/distributed.py">distributed.py</a>:
+is the Python entry point for DDP. It implements the initialization steps and
+the <code class="docutils literal notranslate"><span class="pre">forward</span></code> function for the <code class="docutils literal notranslate"><span class="pre">nn.parallel.DistributedDataParallel</span></code>
+module which call into C++ libraries. Its <code class="docutils literal notranslate"><span class="pre">_sync_param</span></code> function performs
+intra-process parameter synchronization when one DDP process works on multiple
+devices, and it also broadcasts model buffers from the process with rank 0 to
+all other processes. The inter-process parameter synchronization happens in
+<code class="docutils literal notranslate"><span class="pre">Reducer.cpp</span></code>.</p></li>
+<li><p><a class="reference external" href="https://github.com/pytorch/pytorch/blob/v1.7.0/torch/csrc/distributed/c10d/comm.h">comm.h</a>:
+implements the coalesced broadcast helper function which is invoked to
+broadcast model states during initialization and synchronize model buffers
+before the forward pass.</p></li>
+<li><p><a class="reference external" href="https://github.com/pytorch/pytorch/blob/v1.7.0/torch/csrc/distributed/c10d/reducer.h">reducer.h</a>:
+provides the core implementation for gradient synchronization in the backward
+pass. It has three entry point functions:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">Reducer</span></code>: The constructor is called in <code class="docutils literal notranslate"><span class="pre">distributed.py</span></code> which registers
+<code class="docutils literal notranslate"><span class="pre">Reducer::autograd_hook()</span></code> to gradient accumulators.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autograd_hook()</span></code> function will be invoked by the autograd engine when
+a gradient becomes ready.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prepare_for_backward()</span></code> is called at the end of DDP forward pass in
+<code class="docutils literal notranslate"><span class="pre">distributed.py</span></code>. It traverses the autograd graph to find unused
+parameters when <code class="docutils literal notranslate"><span class="pre">find_unused_parameters</span></code> is set to <code class="docutils literal notranslate"><span class="pre">True</span></code> in DDP
+constructor.</p></li>
+</ul>
+</li>
+</ul>
+<a class="reference internal image-reference" href="https://user-images.githubusercontent.com/16999635/72313120-4e7c1c80-3658-11ea-9c6d-44336b2daeac.png"><img alt="ddp_code.png" src="https://user-images.githubusercontent.com/16999635/72313120-4e7c1c80-3658-11ea-9c6d-44336b2daeac.png" style="width: 400px;" />
+</a>
+</section>
+<section id="id1">
+<h3>TorchDynamo DDPOptimizer<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>DDP’s performance advantage comes from overlapping allreduce collectives with computations during backwards.
+AotAutograd prevents this overlap when used with TorchDynamo for compiling a whole forward and whole backward graph,
+because allreduce ops are launched by autograd hooks _after_ the whole optimized backwards computation finishes.</p>
+<p>TorchDynamo’s DDPOptimizer helps by breaking the forward graph at the logical boundaries of DDP’s allreduce buckets
+during backwards.  Note: the goal is to break the graph during backwards, and the simplest implementation is to
+break the forward graphs and then call AotAutograd and compilation on each section.  This allows DDP’s allreduce hooks
+to fire in-between sections of backwards, and schedule communications to overlap with compute.</p>
+<p>See <a class="reference external" href="https://dev-discuss.pytorch.org/t/torchdynamo-update-9-making-ddp-work-with-torchdynamo/860/1">this blog post</a> for
+a more in-depth explanation and experimental results, or read the docs and code at
+<a class="reference external" href="https://github.com/pytorch/pytorch/blob/bbc39b7bb48d28d67e3253a89cc82df3687ddd1b/torch/_dynamo/backends/distributed.py#L124">torch/_dynamo/optimizations/distributed.py</a></p>
+<p>To Debug DDPOptimizer, set <cite>TORCH_LOGS=’ddp_graphs’</cite> for full graph dumps. For logs without graphs, add any of ‘dynamo’, ‘distributed’, or ‘dist_ddp’ to  <cite>TORCH_LOGS</cite>
+(for basic info about bucket boundaries).  To disable DDPOptimizer, set <cite>torch._dynamo.config.optimize_ddp=False</cite>.
+DDP and TorchDynamo should still work correctly without DDPOptimizer, but with performance degradation.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="get_start_xpu.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Getting Started on Intel GPU</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="fsdp.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">FSDP Notes</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc">
+<div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-design">Internal Design</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementation">Implementation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#processgroup">ProcessGroup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distributeddataparallel">DistributedDataParallel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">TorchDynamo DDPOptimizer</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/notes/ddp.rst">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div>
+<div class="sidebar-secondary-item"> 
+</div>
+<div class="sidebar-secondary-item">
+ <p>PyTorch Libraries</p>
+ <ul>
+ 
+  <li><a href="https://pytorch.org/vision">torchvision</a></li>
+ 
+  <li><a href="https://pytorch.org/executorch">ExecuTorch</a></li>
+ 
+  <li><a href="https://https://pytorch.org/ao">torchao</a></li>
+ 
+  <li><a href="https://https://pytorch.org/audio">torchaudio</a></li>
+ 
+  <li><a href="https://https://pytorch.org/torchrec">torchrec</a></li>
+ 
+  <li><a href="https://https://pytorch.org/serve">torchserve</a></li>
+ 
+  <li><a href="https://https://pytorch.org/data">torchdata</a></li>
+ 
+  <li><a href="https://https://pytorch.org/xla">PyTorch on XLA devices</a></li>
+ 
+ </ul>
+</div>
+</div>
+
+</div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright PyTorch Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

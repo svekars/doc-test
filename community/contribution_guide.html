@@ -1,0 +1,1104 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>PyTorch Contribution Guide &#8212; PyTorch main documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/katex-math.css?v=91adb8b6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/jit.css?v=8de1ea5d" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3ccf5357" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=189c4a6a" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=940804e7"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'community/contribution_guide';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="PyTorch Design Philosophy" href="design.html" />
+    <link rel="prev" title="PyTorch Governance | Build + CI" href="build_ci_governance.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+<div class="container-fluid header-holder tutorials-header" id="header-holder">
+  <div class="container">
+    <div class="header-container">
+      <a class="header-logo" href="" aria-label="PyTorch"></a>
+
+      <div class="main-menu">
+        <ul>
+
+          <li class="main-menu-item">
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Learn
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Get Started</span>
+                  <p>Run PyTorch locally or get started quickly with one of the supported cloud platforms</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Tutorials</span>
+                  <p>Whats new in PyTorch tutorials</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Learn the Basics</span>
+                  <p>Familiarize yourself with PyTorch concepts and modules</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Recipes</span>
+                  <p>Bite-size, ready-to-deploy PyTorch code examples</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Intro to PyTorch - YouTube Series</span>
+                  <p>Master PyTorch basics with our engaging YouTube tutorial series</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Ecosystem
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Tools</span>
+                  <p>Learn about the tools and frameworks in the PyTorch Ecosystem</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Community</span>
+                  <p>Join the PyTorch developer community to contribute, learn, and get your questions answered</p>
+                </a>
+                <a class="nav-dropdown-item" href="" target="_blank">
+                  <span class=dropdown-title>Forums</span>
+                  <p>A place to discuss PyTorch code, issues, install, research</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Developer Resources</span>
+                  <p>Find resources and get questions answered</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Contributor Awards - 2024</span>
+                  <p>Award winners announced at this year's PyTorch Conference</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Edge
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">About PyTorch Edge</span>
+                  <p>Build innovative and privacy-aware AI experiences for edge devices</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">ExecuTorch</span>
+                  <p>End-to-end solution for enabling on-device inference capabilities across mobile and edge devices</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">ExecuTorch Docs</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="main-menu-item">
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Docs
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch</span>
+                  <p>Explore the documentation for comprehensive guidance on how to use PyTorch</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Domains</span>
+                  <p>Read the PyTorch Domains documentation to learn more about domain-specific libraries</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Blogs & News
+              lnhetrlnle</a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Blog</span>
+                  <p>Catch up on the latest technical news and happenings</p>
+                </a>
+                 <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Community Blog</span>
+                  <p>Stories from the PyTorch ecosystem</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Videos</span>
+                  <p>Learn about the latest PyTorch tutorials, new, and more </p>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Community Stories</span>
+                  <p>Learn how our community solves real, everyday machine learning problems with PyTorch</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Events</span>
+                  <p>Find events, webinars, and podcasts</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Newsletter</span>
+                  <p>Stay up-to-date with the latest updates</p>
+                </a>
+            </div>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                About
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Foundation</span>
+                  <p>Learn more about the PyTorch Foundation</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Governing Board</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Cloud Credit Program</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Technical Advisory Council</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Staff</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Contact Us</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="main-menu-item">
+            <div class="no-dropdown">
+              <a href="" data-cta="join">
+                Become a Member
+              </a>
+            </div>
+          </li>
+          <li>
+           <div class="main-menu-item">
+             <a href="" class="github-icon">
+             </a>
+           </div>
+          </li>
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <li>
+            <div class="main-menu-item">
+             <a href="" class="search-icon">
+             </a>
+            </div>
+          </li>
+          --->
+        </ul>
+      </div>
+
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+    </div>
+  </div>
+</div>
+
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
+    <div class="navbar-item">
+      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
+    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../python-api/index.html">
+    Python API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../notes/index.html">
+    Developer Notes
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Community
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../lang-bindings/index.html">
+    Language Bindings
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../python-api/index.html">
+    Python API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../notes/index.html">
+    Developer Notes
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Community
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../lang-bindings/index.html">
+    Language Bindings
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="build_ci_governance.html">PyTorch Governance | Build + CI</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">PyTorch Contribution Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html">PyTorch Design Philosophy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="governance.html">PyTorch Governance | Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="persons_of_interest.html">PyTorch Governance | Maintainers</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Community</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">PyTorch Contribution Guide</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This page has been deprecated. Please refer to the <a class="reference external" href="https://github.com/pytorch/pytorch/wiki/The-Ultimate-Guide-to-PyTorch-Contributions">Contribution Guide</a> on the PyTorch Wiki.</p>
+</div>
+<section id="pytorch-contribution-guide">
+<h1>PyTorch Contribution Guide<a class="headerlink" href="#pytorch-contribution-guide" title="Link to this heading">#</a></h1>
+<p>PyTorch is a GPU-accelerated Python tensor computation package for
+building deep neural networks using a tape-based autograd systems.</p>
+<section id="contribution-process">
+<h2>Contribution Process<a class="headerlink" href="#contribution-process" title="Link to this heading">#</a></h2>
+<p>The PyTorch organization is governed by <a class="reference internal" href="governance.html"><span class="doc">PyTorch
+Governance</span></a> and the technical guide to contributing
+can be found in <a class="reference external" href="https://github.com/pytorch/pytorch/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
+<p>The PyTorch development process involves a healthy amount of open
+discussions between the core development team and the community.</p>
+<p>PyTorch operates similarly to most open source projects on GitHub.
+However, if you’ve never contributed to an open source project before,
+here is the basic process.</p>
+<ul class="simple">
+<li><p><strong>Figure out what you’re going to work on.</strong> The majority of open
+source contributions come from people scratching their own itches.
+However, if you don’t know what you want to work on, or are just
+looking to get more acquainted with the project, here are some tips
+for how to find appropriate tasks:</p>
+<ul>
+<li><p>Look through the <a class="reference external" href="https://github.com/pytorch/pytorch/issues/">issue
+tracker</a> and see if
+there are any issues you know how to fix. Issues that are
+confirmed by other contributors tend to be better to investigate.
+We also maintain some labels for issues that are likely to be
+good for new people, e.g., <strong>bootcamp</strong> and <strong>1hr</strong>, although
+these labels are less well maintained.</p></li>
+<li><p>Join us on <a class="reference external" href="https://dev-discuss.pytorch.org/">dev discuss</a>
+and let us know you’re interested in getting to
+know PyTorch. We’re very happy to help out researchers and
+partners get up to speed with the codebase.</p></li>
+</ul>
+</li>
+<li><p><strong>Figure out the scope of your change and reach out for design
+comments on a GitHub issue if it’s large.</strong> The majority of pull
+requests are small; in that case, no need to let us know about what
+you want to do, just get cracking. But if the change is going to be
+large, it’s usually a good idea to get some design comments about it
+first by <a class="reference external" href="https://github.com/pytorch/rfcs/blob/master/README.md">submitting an RFC</a>.</p>
+<ul>
+<li><p>If you don’t know how big a change is going to be, we can help you
+figure it out! Just post about it on
+<a class="reference external" href="https://github.com/pytorch/pytorch/issues/">issues</a> or
+<a class="reference external" href="https://dev-discuss.pytorch.org/">dev discuss</a>.</p></li>
+<li><p>Some feature additions are very standardized; for example, lots of
+people add new operators or optimizers to PyTorch. Design
+discussion in these cases boils down mostly to, “Do we want this
+operator/optimizer?” Giving evidence for its utility, e.g., usage
+in peer reviewed papers, or existence in other frameworks, helps a
+bit when making this case.</p>
+<ul>
+<li><p><strong>Adding operators / algorithms from recently-released research</strong>
+is generally not accepted unless there is overwhelming evidence that
+this newly published work has ground-breaking results and will eventually
+become a standard in the field. If you are not sure where your method falls,
+open an issue first before implementing a PR.</p></li>
+</ul>
+</li>
+<li><p>Core changes and refactors can be quite difficult to coordinate
+since the pace of development on the PyTorch main branch is quite fast.
+Definitely reach out about fundamental or cross-cutting changes;
+we can often give guidance about how to stage such changes into
+more easily reviewable pieces.</p></li>
+</ul>
+</li>
+<li><p><strong>Code it out!</strong></p>
+<ul>
+<li><p>See the <a class="reference external" href="https://github.com/pytorch/pytorch/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> file for advice for working with PyTorch in a
+technical form.</p></li>
+</ul>
+</li>
+<li><p><strong>Open a pull request.</strong></p>
+<ul>
+<li><p>If you are not ready for the pull request to be reviewed, create a draft
+pull request first - you can later convert it to a full PR by pressing
+“Ready for review” button. You can also prepend the title of the PR with
+“[WIP]” (“work in progress”) while it’s still in draft. We will ignore
+draft PRs when doing review passes. If you are working on a complex change,
+it’s good to start things off as a draft, because you will need to spend
+time looking at CI results to see if things worked out or not.</p></li>
+<li><p>Find an appropriate reviewer for your change. We have some folks
+who regularly go through the PR queue and try to review
+everything, but if you happen to know who the maintainer for a
+given subsystem affected by your patch is, feel free to include
+them directly on the pull request. You can learn more about
+<a class="reference external" href="https://pytorch.org/docs/main/community/persons_of_interest.html">Persons of Interest</a>
+that could review your code.</p></li>
+</ul>
+</li>
+<li><p><strong>Iterate on the pull request until it’s accepted!</strong></p>
+<ul>
+<li><p>We’ll try our best to minimize the number of review round trips and
+block PRs only when there are major issues. For the most common
+issues in pull requests, take a look at <a class="reference external" href="#common-mistakes-to-avoid">Common Mistakes</a>.</p></li>
+<li><p>Once a pull request is accepted and CI is passing, there is
+nothing else you need to do; we will merge the PR for you.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h2>
+<section id="proposing-new-features">
+<h3>Proposing New Features<a class="headerlink" href="#proposing-new-features" title="Link to this heading">#</a></h3>
+<p>New feature ideas are best discussed on a specific issue. Please include
+as much information as you can, any accompanying data, and your proposed
+solution. The PyTorch team and community frequently review new issues
+and comments where they think they can help. If you feel confident in
+your solution, go ahead and implement it.</p>
+</section>
+<section id="reporting-issues">
+<h3>Reporting Issues<a class="headerlink" href="#reporting-issues" title="Link to this heading">#</a></h3>
+<p>If you’ve identified an issue, first search through the <a class="reference external" href="https://github.com/pytorch/pytorch/issues">list of
+existing issues</a> on the
+repo. If you are unable to find a similar issue, then create a new one.
+Supply as much information you can to reproduce the problematic
+behavior. Also, include any additional insights like the behavior you
+expect.</p>
+</section>
+<section id="implementing-features-or-fixing-bugs">
+<h3>Implementing Features or Fixing Bugs<a class="headerlink" href="#implementing-features-or-fixing-bugs" title="Link to this heading">#</a></h3>
+<p>If you want to fix a specific issue, it’s best to comment on the
+individual issue with your intent. However, we do not lock or assign
+issues except in cases where we have worked with the developer before.
+It’s best to strike up a conversation on the issue and discuss your
+proposed solution. The PyTorch team can provide guidance that saves you
+time.</p>
+<p>Issues that are labeled first-new-issue, low, or medium priority provide
+the best entrance points and are great places to start.</p>
+</section>
+<section id="adding-tutorials">
+<h3>Adding Tutorials<a class="headerlink" href="#adding-tutorials" title="Link to this heading">#</a></h3>
+<p>A great deal of the tutorials on <a class="reference external" href="https://pytorch.org/">pytorch.org</a>
+come from the community itself and we welcome additional contributions.
+To learn more about how to contribute a new tutorial you can learn more
+here: <a class="reference external" href="https://github.com/pytorch/tutorials/#contributing">PyTorch.org Tutorial Contribution Guide on
+GitHub</a></p>
+</section>
+<section id="improving-documentation-tutorials">
+<h3>Improving Documentation &amp; Tutorials<a class="headerlink" href="#improving-documentation-tutorials" title="Link to this heading">#</a></h3>
+<p>We aim to produce high quality documentation and tutorials. On rare
+occasions that content includes typos or bugs. If you find something you
+can fix, send us a pull request for consideration.</p>
+<p>Take a look at the <a class="reference external" href="#on-documentation">Documentation</a> section to learn how our system
+works.</p>
+</section>
+<section id="participating-in-online-discussions">
+<h3>Participating in Online Discussions<a class="headerlink" href="#participating-in-online-discussions" title="Link to this heading">#</a></h3>
+<p>You can find active discussions happening on the <a class="reference external" href="https://discuss.pytorch.org/">PyTorch Discussion
+Forums</a>  for users as well as the
+<a class="reference external" href="https://dev-discuss.pytorch.org/">PyTorch Dev Discussion Forums</a>
+for developers and maintainers.</p>
+</section>
+<section id="submitting-pull-requests-to-fix-open-issues">
+<h3>Submitting Pull Requests to Fix Open Issues<a class="headerlink" href="#submitting-pull-requests-to-fix-open-issues" title="Link to this heading">#</a></h3>
+<p>You can view a list of all open issues
+<a class="reference external" href="https://github.com/pytorch/pytorch/issues">here</a>. Commenting on an
+issue is a great way to get the attention of the team. From here you can
+share your ideas and how you plan to resolve the issue.</p>
+<p>For more challenging issues, the team will provide feedback and
+direction for how to best solve the issue.</p>
+<p>If you’re not able to fix the issue yourself, commenting and sharing
+whether you can reproduce the issue can help the team
+identify problem areas.</p>
+</section>
+<section id="reviewing-open-pull-requests">
+<h3>Reviewing Open Pull Requests<a class="headerlink" href="#reviewing-open-pull-requests" title="Link to this heading">#</a></h3>
+<p>We appreciate your help reviewing and commenting on pull requests. Our
+team strives to keep the number of open pull requests at a manageable
+size, we respond quickly for more information if we need it, and we
+merge PRs that we think are useful. However, due to the high level of
+interest, additional eyes on the pull requests are always appreciated.</p>
+</section>
+<section id="improving-code-readability">
+<h3>Improving Code Readability<a class="headerlink" href="#improving-code-readability" title="Link to this heading">#</a></h3>
+<p>Improving code readability helps everyone. It is often better to submit a
+small number of pull requests that touch a few files versus a large pull
+request that touches many files. Starting a discussion in the PyTorch
+forum <a class="reference external" href="https://discuss.pytorch.org/">here</a> or on an issue related to
+your improvement is the best way to get started.</p>
+</section>
+<section id="adding-test-cases-to-make-the-codebase-more-robust">
+<h3>Adding Test Cases to Make the Codebase More Robust<a class="headerlink" href="#adding-test-cases-to-make-the-codebase-more-robust" title="Link to this heading">#</a></h3>
+<p>Additional test coverage is appreciated.</p>
+</section>
+<section id="promoting-pytorch">
+<h3>Promoting PyTorch<a class="headerlink" href="#promoting-pytorch" title="Link to this heading">#</a></h3>
+<p>Your use of PyTorch in your projects, research papers, write ups, blogs,
+or general discussions around the internet helps to raise awareness for
+PyTorch and our growing community. Please reach out to
+<a class="reference external" href="mailto:marketing&#37;&#52;&#48;pytorch&#46;org">marketing<span>&#64;</span>pytorch<span>&#46;</span>org</a>
+for marketing support.</p>
+</section>
+<section id="triaging-issues">
+<h3>Triaging Issues<a class="headerlink" href="#triaging-issues" title="Link to this heading">#</a></h3>
+<p>If you feel that an issue could benefit from a particular tag or level
+of complexity, comment on the issue and share your opinion. If you
+feel an issue isn’t categorized properly, comment and let the team know.</p>
+</section>
+</section>
+<section id="about-open-source-development">
+<h2>About Open Source Development<a class="headerlink" href="#about-open-source-development" title="Link to this heading">#</a></h2>
+<p>If this is your first time contributing to an open source project, some
+aspects of the development process may seem unusual to you.</p>
+<ul class="simple">
+<li><p><strong>There is no way to “claim” issues.</strong> People often want to “claim”
+an issue when they decide to work on it, to ensure that there isn’t
+wasted work when someone else ends up working on it. This doesn’t
+really work too well in open source, since someone may decide to work
+on something, and end up not having time to do it. Feel free to give
+information in an advisory fashion, but at the end of the day, we
+will take running code and rough consensus to move forward quickly.</p></li>
+<li><p><strong>There is a high bar for new functionality.</strong> Unlike
+in a corporate environment, where the person who wrote code
+implicitly “owns” it and can be expected to take care of it for the
+code’s lifetime, once a pull request is merged into an open
+source project, it immediately becomes the collective responsibility
+of all maintainers on the project. When we merge code, we are saying
+that we, the maintainers, can review subsequent changes and
+make a bugfix to the code. This naturally leads to a higher standard
+of contribution.</p></li>
+</ul>
+</section>
+<section id="common-mistakes-to-avoid">
+<h2>Common Mistakes To Avoid<a class="headerlink" href="#common-mistakes-to-avoid" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Did you add tests?</strong> (Or if the change is hard to test, did you
+describe how you tested your change?)</p>
+<ul>
+<li><p>We have a few motivations for why we ask for tests:</p>
+<ol class="arabic simple">
+<li><p>to help us tell if we break it later</p></li>
+<li><p>to help us tell if the patch is correct in the first place
+(yes, we did review it, but as Knuth says, “beware of the
+following code, for I have not run it, merely proven it
+correct”)</p></li>
+</ol>
+</li>
+<li><p>When is it OK not to add a test? Sometimes a change can’t be
+conveniently tested, or the change is so obviously correct (and
+unlikely to be broken) that it’s OK not to test it. On the
+contrary, if a change seems likely (or is known to be likely)
+to be accidentally broken, it’s important to put in the time to
+work out a testing strategy.</p></li>
+</ul>
+</li>
+<li><p><strong>Is your PR too long?</strong></p>
+<ul>
+<li><p>It’s easier for us to review and merge small PRs. The difficulty of
+reviewing a PR scales nonlinearly with its size.</p></li>
+<li><p>When is it OK to submit a large PR? It helps a lot if there was a
+corresponding design discussion in an issue, with sign off from
+the people who are going to review your diff. We can also help
+give advice about how to split up a large change into individually
+shippable parts. Similarly, it helps if there is a complete
+description of the contents of the PR: it’s easier to review code
+if we know what’s inside!</p></li>
+</ul>
+</li>
+<li><p><strong>Comments for subtle things?</strong> In cases where the behavior of your code
+is nuanced, please include extra comments and documentation to allow
+us to better understand the intention of your code.</p></li>
+<li><p><strong>Did you add a hack?</strong> Sometimes, the right answer is a hack. But
+usually, we will have to discuss it.</p></li>
+<li><p><strong>Do you want to touch a very core component?</strong> To prevent
+major regressions, pull requests that touch core components receive
+extra scrutiny. Make sure you’ve discussed your changes with the team
+before undertaking major changes.</p></li>
+<li><p><strong>Want to add a new feature?</strong> If you want to add new features,
+comment your intention on the related issue. Our team tries to
+comment on and provide feedback to the community. It’s better to have
+an open discussion with the team and the rest of the community before
+building new features. This helps us stay aware of what you’re
+working on and increases the chance that it’ll be merged.</p></li>
+<li><p><strong>Did you touch code unrelated to the PR?</strong> To aid in code review,
+please only include files in your pull request that are directly
+related to your changes.</p></li>
+</ul>
+</section>
+<section id="frequently-asked-questions">
+<h2>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>How can I contribute as a reviewer?</strong> There is lots of value if
+community developers reproduce issues, try out new functionality, or
+otherwise help us identify or troubleshoot issues. Commenting on
+tasks or pull requests with your environment details is helpful and
+appreciated.</p></li>
+<li><p><strong>CI tests failed, what does it mean?</strong> Maybe your PR is based
+off a broken main branch? You can try to rebase your change on top
+of the latest main branch. You can also see the current status of
+main branch’s CI at <a class="reference external" href="https://hud.pytorch.org/">https://hud.pytorch.org/</a>.</p></li>
+<li><p><strong>What are the most high risk changes?</strong> Anything that touches build
+configuration is a risky area. Please avoid changing these unless
+you’ve had a discussion with the team beforehand.</p></li>
+<li><p><strong>Hey, a commit showed up on my branch, what’s up with that?</strong>
+Sometimes another community member will provide a patch or fix to
+your pull request or branch. This is often needed for getting CI tests
+to pass.</p></li>
+</ul>
+</section>
+<section id="on-documentation">
+<h2>On Documentation<a class="headerlink" href="#on-documentation" title="Link to this heading">#</a></h2>
+<section id="python-docs">
+<h3>Python Docs<a class="headerlink" href="#python-docs" title="Link to this heading">#</a></h3>
+<p>PyTorch documentation is generated from python source using
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx</a>. Generated HTML is
+copied to the docs folder in the main branch of
+<a class="reference external" href="https://github.com/pytorch/pytorch.github.io/tree/master/docs">pytorch.github.io</a>,
+and is served via GitHub pages.</p>
+<ul class="simple">
+<li><p>Site: <a class="reference external" href="https://pytorch.org/docs">https://pytorch.org/docs</a></p></li>
+<li><p>GitHub: <a class="github reference external" href="https://github.com/pytorch/pytorch/tree/main/docs">pytorch/pytorch</a></p></li>
+<li><p>Served from:
+<a class="github reference external" href="https://github.com/pytorch/pytorch.github.io/tree/master/docs">pytorch/pytorch.github.io</a></p></li>
+</ul>
+</section>
+<section id="c-docs">
+<h3>C++ Docs<a class="headerlink" href="#c-docs" title="Link to this heading">#</a></h3>
+<p>For C++ code we use Doxygen to generate the content files. The C++ docs
+are built on a special server and the resulting files are copied to the
+<a class="github reference external" href="https://github.com/pytorch/cppdocs">pytorch/cppdocs</a> repo, and are served from GitHub
+pages.</p>
+<ul class="simple">
+<li><p>Site: <a class="reference external" href="https://pytorch.org/cppdocs">https://pytorch.org/cppdocs</a></p></li>
+<li><p>GitHub: <a class="github reference external" href="https://github.com/pytorch/pytorch/tree/main/docs/cpp">pytorch/pytorch</a></p></li>
+<li><p>Served from: <a class="github reference external" href="https://github.com/pytorch/cppdocs">pytorch/cppdocs</a></p></li>
+</ul>
+</section>
+</section>
+<section id="tutorials">
+<h2>Tutorials<a class="headerlink" href="#tutorials" title="Link to this heading">#</a></h2>
+<p>PyTorch tutorials are documents used to help understand using PyTorch to
+accomplish specific tasks or to understand more holistic concepts.
+Tutorials are built using
+<a class="reference external" href="https://sphinx-gallery.readthedocs.io/en/latest/index.html">Sphinx-Gallery</a>
+from executable python source files, or from restructured-text (rst)
+files.</p>
+<ul class="simple">
+<li><p>Site: <a class="reference external" href="https://pytorch.org/tutorials">https://pytorch.org/tutorials</a></p></li>
+<li><p>GitHub: <a class="github reference external" href="https://github.com/pytorch/tutorials">pytorch/tutorials</a></p></li>
+</ul>
+<section id="tutorials-build-overview">
+<h3>Tutorials Build Overview<a class="headerlink" href="#tutorials-build-overview" title="Link to this heading">#</a></h3>
+<p>For tutorials, <a class="reference external" href="https://github.com/pytorch/tutorials/pulls">pull
+requests</a> trigger a
+rebuild of the entire site using CircleCI to test the effects of the
+change. This build is sharded into 9 worker builds and takes around 40
+minutes total. At the same time, we do a Netlify build using <em>make
+html-noplot</em>, which builds the site without rendering the notebook
+output into pages for quick review.</p>
+<p>After a PR is accepted, the site is rebuilt and deployed using GitHub
+Actions.</p>
+</section>
+<section id="contributing-a-new-tutorial">
+<h3>Contributing a New Tutorial<a class="headerlink" href="#contributing-a-new-tutorial" title="Link to this heading">#</a></h3>
+<p>See <a class="reference external" href="https://github.com/pytorch/tutorials/#contributing">PyTorch.org Tutorial Contribution
+Guide</a>.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="build_ci_governance.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">PyTorch Governance | Build + CI</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="design.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">PyTorch Design Philosophy</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc">
+<div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contribution-process">Contribution Process</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting Started</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proposing-new-features">Proposing New Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reporting-issues">Reporting Issues</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementing-features-or-fixing-bugs">Implementing Features or Fixing Bugs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-tutorials">Adding Tutorials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#improving-documentation-tutorials">Improving Documentation &amp; Tutorials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#participating-in-online-discussions">Participating in Online Discussions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submitting-pull-requests-to-fix-open-issues">Submitting Pull Requests to Fix Open Issues</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reviewing-open-pull-requests">Reviewing Open Pull Requests</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#improving-code-readability">Improving Code Readability</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-test-cases-to-make-the-codebase-more-robust">Adding Test Cases to Make the Codebase More Robust</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#promoting-pytorch">Promoting PyTorch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#triaging-issues">Triaging Issues</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-open-source-development">About Open Source Development</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-mistakes-to-avoid">Common Mistakes To Avoid</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#on-documentation">On Documentation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-docs">Python Docs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-docs">C++ Docs</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorials">Tutorials</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorials-build-overview">Tutorials Build Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing-a-new-tutorial">Contributing a New Tutorial</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/community/contribution_guide.rst">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div>
+<div class="sidebar-secondary-item"> 
+</div>
+<div class="sidebar-secondary-item">
+ <p>PyTorch Libraries</p>
+ <ul>
+ 
+  <li><a href="https://pytorch.org/vision">torchvision</a></li>
+ 
+  <li><a href="https://pytorch.org/executorch">ExecuTorch</a></li>
+ 
+  <li><a href="https://https://pytorch.org/ao">torchao</a></li>
+ 
+  <li><a href="https://https://pytorch.org/audio">torchaudio</a></li>
+ 
+  <li><a href="https://https://pytorch.org/torchrec">torchrec</a></li>
+ 
+  <li><a href="https://https://pytorch.org/serve">torchserve</a></li>
+ 
+  <li><a href="https://https://pytorch.org/data">torchdata</a></li>
+ 
+  <li><a href="https://https://pytorch.org/xla">PyTorch on XLA devices</a></li>
+ 
+ </ul>
+</div>
+</div>
+
+</div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright PyTorch Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

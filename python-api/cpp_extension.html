@@ -1,0 +1,1061 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>torch.utils.cpp_extension &#8212; PyTorch main documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/katex-math.css?v=91adb8b6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/jit.css?v=8de1ea5d" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3ccf5357" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=189c4a6a" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=940804e7"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'python-api/cpp_extension';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+<div class="container-fluid header-holder tutorials-header" id="header-holder">
+  <div class="container">
+    <div class="header-container">
+      <a class="header-logo" href="" aria-label="PyTorch"></a>
+
+      <div class="main-menu">
+        <ul>
+
+          <li class="main-menu-item">
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Learn
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Get Started</span>
+                  <p>Run PyTorch locally or get started quickly with one of the supported cloud platforms</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Tutorials</span>
+                  <p>Whats new in PyTorch tutorials</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Learn the Basics</span>
+                  <p>Familiarize yourself with PyTorch concepts and modules</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Recipes</span>
+                  <p>Bite-size, ready-to-deploy PyTorch code examples</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Intro to PyTorch - YouTube Series</span>
+                  <p>Master PyTorch basics with our engaging YouTube tutorial series</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Ecosystem
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Tools</span>
+                  <p>Learn about the tools and frameworks in the PyTorch Ecosystem</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Community</span>
+                  <p>Join the PyTorch developer community to contribute, learn, and get your questions answered</p>
+                </a>
+                <a class="nav-dropdown-item" href="" target="_blank">
+                  <span class=dropdown-title>Forums</span>
+                  <p>A place to discuss PyTorch code, issues, install, research</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Developer Resources</span>
+                  <p>Find resources and get questions answered</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Contributor Awards - 2024</span>
+                  <p>Award winners announced at this year's PyTorch Conference</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Edge
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">About PyTorch Edge</span>
+                  <p>Build innovative and privacy-aware AI experiences for edge devices</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">ExecuTorch</span>
+                  <p>End-to-end solution for enabling on-device inference capabilities across mobile and edge devices</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">ExecuTorch Docs</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="main-menu-item">
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Docs
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch</span>
+                  <p>Explore the documentation for comprehensive guidance on how to use PyTorch</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Domains</span>
+                  <p>Read the PyTorch Domains documentation to learn more about domain-specific libraries</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Blogs & News
+              lnhetrlnle</a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Blog</span>
+                  <p>Catch up on the latest technical news and happenings</p>
+                </a>
+                 <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Community Blog</span>
+                  <p>Stories from the PyTorch ecosystem</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Videos</span>
+                  <p>Learn about the latest PyTorch tutorials, new, and more </p>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Community Stories</span>
+                  <p>Learn how our community solves real, everyday machine learning problems with PyTorch</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Events</span>
+                  <p>Find events, webinars, and podcasts</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Newsletter</span>
+                  <p>Stay up-to-date with the latest updates</p>
+                </a>
+            </div>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                About
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Foundation</span>
+                  <p>Learn more about the PyTorch Foundation</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Governing Board</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Cloud Credit Program</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Technical Advisory Council</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Staff</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Contact Us</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="main-menu-item">
+            <div class="no-dropdown">
+              <a href="" data-cta="join">
+                Become a Member
+              </a>
+            </div>
+          </li>
+          <li>
+           <div class="main-menu-item">
+             <a href="" class="github-icon">
+             </a>
+           </div>
+          </li>
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <li>
+            <div class="main-menu-item">
+             <a href="" class="search-icon">
+             </a>
+            </div>
+          </li>
+          --->
+        </ul>
+      </div>
+
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+    </div>
+  </div>
+</div>
+
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
+    <div class="navbar-item">
+      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
+    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="index.html">
+    Python API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../notes/index.html">
+    Developer Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../community/index.html">
+    Community
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../lang-bindings/index.html">
+    Language Bindings
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="index.html">
+    Python API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../notes/index.html">
+    Developer Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../community/index.html">
+    Community
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../lang-bindings/index.html">
+    Language Bindings
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">torch.utils.cpp_extension</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="torch-utils-cpp-extension">
+<h1>torch.utils.cpp_extension<a class="headerlink" href="#torch-utils-cpp-extension" title="Link to this heading">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.utils.cpp_extension.CppExtension">
+<span class="sig-prename descclassname"><span class="pre">torch.utils.cpp_extension.</span></span><span class="sig-name descname"><span class="pre">CppExtension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sources</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/utils/cpp_extension.html#CppExtension"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/utils/cpp_extension.py#L964"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.utils.cpp_extension.CppExtension" title="Link to this definition">#</a></dt>
+<dd><p>Create a <code class="xref py py-class docutils literal notranslate"><span class="pre">setuptools.Extension</span></code> for C++.</p>
+<p>Convenience method that creates a <code class="xref py py-class docutils literal notranslate"><span class="pre">setuptools.Extension</span></code> with the
+bare minimum (but often sufficient) arguments to build a C++ extension.</p>
+<p>All arguments are forwarded to the <code class="xref py py-class docutils literal notranslate"><span class="pre">setuptools.Extension</span></code>
+constructor. Full list arguments can be found at
+<a class="reference external" href="https://setuptools.pypa.io/en/latest/userguide/ext_modules.html#extension-api-reference">https://setuptools.pypa.io/en/latest/userguide/ext_modules.html#extension-api-reference</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The PyTorch python API (as provided in libtorch_python) cannot be built
+with the flag <code class="docutils literal notranslate"><span class="pre">py_limited_api=True</span></code>.  When this flag is passed, it is
+the user’s responsibility in their library to not use APIs from
+libtorch_python (in particular pytorch/python bindings) and to only use
+APIs from libtorch (aten objects, operators and the dispatcher). For
+example, to give access to custom ops from python, the library should
+register the ops through the dispatcher.</p>
+</div>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">setuptools</span><span class="w"> </span><span class="kn">import</span> <span class="n">setup</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.cpp_extension</span><span class="w"> </span><span class="kn">import</span> <span class="n">BuildExtension</span><span class="p">,</span> <span class="n">CppExtension</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">setup</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;extension&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">ext_modules</span><span class="o">=</span><span class="p">[</span>
+<span class="gp">... </span>        <span class="n">CppExtension</span><span class="p">(</span>
+<span class="gp">... </span>            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;extension&#39;</span><span class="p">,</span>
+<span class="gp">... </span>            <span class="n">sources</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;extension.cpp&#39;</span><span class="p">],</span>
+<span class="gp">... </span>            <span class="n">extra_compile_args</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;-g&#39;</span><span class="p">],</span>
+<span class="gp">... </span>            <span class="n">extra_link_args</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;-Wl,--no-as-needed&#39;</span><span class="p">,</span> <span class="s1">&#39;-lm&#39;</span><span class="p">])</span>
+<span class="gp">... </span>    <span class="p">],</span>
+<span class="gp">... </span>    <span class="n">cmdclass</span><span class="o">=</span><span class="p">{</span>
+<span class="gp">... </span>        <span class="s1">&#39;build_ext&#39;</span><span class="p">:</span> <span class="n">BuildExtension</span>
+<span class="gp">... </span>    <span class="p">})</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.utils.cpp_extension.CUDAExtension">
+<span class="sig-prename descclassname"><span class="pre">torch.utils.cpp_extension.</span></span><span class="sig-name descname"><span class="pre">CUDAExtension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sources</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/utils/cpp_extension.html#CUDAExtension"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/utils/cpp_extension.py#L1026"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.utils.cpp_extension.CUDAExtension" title="Link to this definition">#</a></dt>
+<dd><p>Create a <code class="xref py py-class docutils literal notranslate"><span class="pre">setuptools.Extension</span></code> for CUDA/C++.</p>
+<p>Convenience method that creates a <code class="xref py py-class docutils literal notranslate"><span class="pre">setuptools.Extension</span></code> with the
+bare minimum (but often sufficient) arguments to build a CUDA/C++
+extension. This includes the CUDA include path, library path and runtime
+library.</p>
+<p>All arguments are forwarded to the <code class="xref py py-class docutils literal notranslate"><span class="pre">setuptools.Extension</span></code>
+constructor. Full list arguments can be found at
+<a class="reference external" href="https://setuptools.pypa.io/en/latest/userguide/ext_modules.html#extension-api-reference">https://setuptools.pypa.io/en/latest/userguide/ext_modules.html#extension-api-reference</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The PyTorch python API (as provided in libtorch_python) cannot be built
+with the flag <code class="docutils literal notranslate"><span class="pre">py_limited_api=True</span></code>.  When this flag is passed, it is
+the user’s responsibility in their library to not use APIs from
+libtorch_python (in particular pytorch/python bindings) and to only use
+APIs from libtorch (aten objects, operators and the dispatcher). For
+example, to give access to custom ops from python, the library should
+register the ops through the dispatcher.</p>
+</div>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">setuptools</span><span class="w"> </span><span class="kn">import</span> <span class="n">setup</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.cpp_extension</span><span class="w"> </span><span class="kn">import</span> <span class="n">BuildExtension</span><span class="p">,</span> <span class="n">CUDAExtension</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">setup</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;cuda_extension&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">ext_modules</span><span class="o">=</span><span class="p">[</span>
+<span class="gp">... </span>        <span class="n">CUDAExtension</span><span class="p">(</span>
+<span class="gp">... </span>                <span class="n">name</span><span class="o">=</span><span class="s1">&#39;cuda_extension&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                <span class="n">sources</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;extension.cpp&#39;</span><span class="p">,</span> <span class="s1">&#39;extension_kernel.cu&#39;</span><span class="p">],</span>
+<span class="gp">... </span>                <span class="n">extra_compile_args</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;cxx&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;-g&#39;</span><span class="p">],</span>
+<span class="gp">... </span>                                    <span class="s1">&#39;nvcc&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;-O2&#39;</span><span class="p">]},</span>
+<span class="gp">... </span>                <span class="n">extra_link_args</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;-Wl,--no-as-needed&#39;</span><span class="p">,</span> <span class="s1">&#39;-lcuda&#39;</span><span class="p">])</span>
+<span class="gp">... </span>    <span class="p">],</span>
+<span class="gp">... </span>    <span class="n">cmdclass</span><span class="o">=</span><span class="p">{</span>
+<span class="gp">... </span>        <span class="s1">&#39;build_ext&#39;</span><span class="p">:</span> <span class="n">BuildExtension</span>
+<span class="gp">... </span>    <span class="p">})</span>
+</pre></div>
+</div>
+<p>Compute capabilities:</p>
+<p>By default the extension will be compiled to run on all archs of the cards visible during the
+building process of the extension, plus PTX. If down the road a new card is installed the
+extension may need to be recompiled. If a visible card has a compute capability (CC) that’s
+newer than the newest version for which your nvcc can build fully-compiled binaries, PyTorch
+will make nvcc fall back to building kernels with the newest version of PTX your nvcc does
+support (see below for details on PTX).</p>
+<p>You can override the default behavior using <cite>TORCH_CUDA_ARCH_LIST</cite> to explicitly specify which
+CCs you want the extension to support:</p>
+<p><code class="docutils literal notranslate"><span class="pre">TORCH_CUDA_ARCH_LIST=&quot;6.1</span> <span class="pre">8.6&quot;</span> <span class="pre">python</span> <span class="pre">build_my_extension.py</span></code>
+<code class="docutils literal notranslate"><span class="pre">TORCH_CUDA_ARCH_LIST=&quot;5.2</span> <span class="pre">6.0</span> <span class="pre">6.1</span> <span class="pre">7.0</span> <span class="pre">7.5</span> <span class="pre">8.0</span> <span class="pre">8.6+PTX&quot;</span> <span class="pre">python</span> <span class="pre">build_my_extension.py</span></code></p>
+<p>The +PTX option causes extension kernel binaries to include PTX instructions for the specified
+CC. PTX is an intermediate representation that allows kernels to runtime-compile for any CC &gt;=
+the specified CC (for example, 8.6+PTX generates PTX that can runtime-compile for any GPU with
+CC &gt;= 8.6). This improves your binary’s forward compatibility. However, relying on older PTX to
+provide forward compat by runtime-compiling for newer CCs can modestly reduce performance on
+those newer CCs. If you know exact CC(s) of the GPUs you want to target, you’re always better
+off specifying them individually. For example, if you want your extension to run on 8.0 and 8.6,
+“8.0+PTX” would work functionally because it includes PTX that can runtime-compile for 8.6, but
+“8.0 8.6” would be better.</p>
+<p>Note that while it’s possible to include all supported archs, the more archs get included the
+slower the building process will be, as it will build a separate kernel image for each arch.</p>
+<p>Note that CUDA-11.5 nvcc will hit internal compiler error while parsing torch/extension.h on Windows.
+To workaround the issue, move python binding logic to pure C++ file.</p>
+<dl class="simple">
+<dt>Example use:</dt><dd><p>#include &lt;ATen/ATen.h&gt;
+at::Tensor SigmoidAlphaBlendForwardCuda(….)</p>
+</dd>
+<dt>Instead of:</dt><dd><p>#include &lt;torch/extension.h&gt;
+torch::Tensor SigmoidAlphaBlendForwardCuda(…)</p>
+</dd>
+</dl>
+<p>Currently open issue for nvcc bug: <a class="github reference external" href="https://github.com/pytorch/pytorch/issues/69460">pytorch/pytorch#69460</a>
+Complete workaround code example: <a class="github reference external" href="https://github.com/facebookresearch/pytorch3d/commit/cb170ac024a949f1f9614ffe6af1c38d972f7d48">facebookresearch/pytorch3d</a></p>
+<p>Relocatable device code linking:</p>
+<p>If you want to reference device symbols across compilation units (across object files),
+the object files need to be built with <cite>relocatable device code</cite> (-rdc=true or -dc).
+An exception to this rule is “dynamic parallelism” (nested kernel launches)  which is not used a lot anymore.
+<cite>Relocatable device code</cite> is less optimized so it needs to be used only on object files that need it.
+Using <cite>-dlto</cite> (Device Link Time Optimization) at the device code compilation step and <cite>dlink</cite> step
+helps reduce the protentional perf degradation of <cite>-rdc</cite>.
+Note that it needs to be used at both steps to be useful.</p>
+<p>If you have <cite>rdc</cite> objects you need to have an extra <cite>-dlink</cite> (device linking) step before the CPU symbol linking step.
+There is also a case where <cite>-dlink</cite> is used without <cite>-rdc</cite>:
+when an extension is linked against a static lib containing rdc-compiled objects
+like the [NVSHMEM library](<a class="reference external" href="https://developer.nvidia.com/nvshmem">https://developer.nvidia.com/nvshmem</a>).</p>
+<p>Note: Ninja is required to build a CUDA Extension with RDC linking.</p>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">CUDAExtension</span><span class="p">(</span>
+<span class="gp">... </span>       <span class="n">name</span><span class="o">=</span><span class="s1">&#39;cuda_extension&#39;</span><span class="p">,</span>
+<span class="gp">... </span>       <span class="n">sources</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;extension.cpp&#39;</span><span class="p">,</span> <span class="s1">&#39;extension_kernel.cu&#39;</span><span class="p">],</span>
+<span class="gp">... </span>       <span class="n">dlink</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span>       <span class="n">dlink_libraries</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;dlink_lib&quot;</span><span class="p">],</span>
+<span class="gp">... </span>       <span class="n">extra_compile_args</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;cxx&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;-g&#39;</span><span class="p">],</span>
+<span class="gp">... </span>                           <span class="s1">&#39;nvcc&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;-O2&#39;</span><span class="p">,</span> <span class="s1">&#39;-rdc=true&#39;</span><span class="p">]})</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.utils.cpp_extension.BuildExtension">
+<span class="sig-prename descclassname"><span class="pre">torch.utils.cpp_extension.</span></span><span class="sig-name descname"><span class="pre">BuildExtension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/utils/cpp_extension.html#BuildExtension"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/utils/cpp_extension.py#L491"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.utils.cpp_extension.BuildExtension" title="Link to this definition">#</a></dt>
+<dd><p>A custom <code class="xref py py-mod docutils literal notranslate"><span class="pre">setuptools</span></code> build extension .</p>
+<p>This <code class="xref py py-class docutils literal notranslate"><span class="pre">setuptools.build_ext</span></code> subclass takes care of passing the
+minimum required compiler flags (e.g. <code class="docutils literal notranslate"><span class="pre">-std=c++17</span></code>) as well as mixed
+C++/CUDA compilation (and support for CUDA files in general).</p>
+<p>When using <a class="reference internal" href="#torch.utils.cpp_extension.BuildExtension" title="torch.utils.cpp_extension.BuildExtension"><code class="xref py py-class docutils literal notranslate"><span class="pre">BuildExtension</span></code></a>, it is allowed to supply a dictionary
+for <code class="docutils literal notranslate"><span class="pre">extra_compile_args</span></code> (rather than the usual list) that maps from
+languages (<code class="docutils literal notranslate"><span class="pre">cxx</span></code> or <code class="docutils literal notranslate"><span class="pre">nvcc</span></code>) to a list of additional compiler flags to
+supply to the compiler. This makes it possible to supply different flags to
+the C++ and CUDA compiler during mixed compilation.</p>
+<p><code class="docutils literal notranslate"><span class="pre">use_ninja</span></code> (bool): If <code class="docutils literal notranslate"><span class="pre">use_ninja</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code> (default), then we
+attempt to build using the Ninja backend. Ninja greatly speeds up
+compilation compared to the standard <code class="docutils literal notranslate"><span class="pre">setuptools.build_ext</span></code>.
+Fallbacks to the standard distutils backend if Ninja is not available.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By default, the Ninja backend uses #CPUS + 2 workers to build the
+extension. This may use up too many resources on some systems. One
+can control the number of workers by setting the <cite>MAX_JOBS</cite> environment
+variable to a non-negative number.</p>
+</div>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.utils.cpp_extension.load">
+<span class="sig-prename descclassname"><span class="pre">torch.utils.cpp_extension.</span></span><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sources</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_cflags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_cuda_cflags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_ldflags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_include_paths</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">build_directory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_cuda</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_python_module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_standalone</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_intermediates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/utils/cpp_extension.html#load"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/utils/cpp_extension.py#L1297"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.utils.cpp_extension.load" title="Link to this definition">#</a></dt>
+<dd><p>Load a PyTorch C++ extension just-in-time (JIT).</p>
+<p>To load an extension, a Ninja build file is emitted, which is used to
+compile the given sources into a dynamic library. This library is
+subsequently loaded into the current Python process as a module and
+returned from this function, ready for use.</p>
+<p>By default, the directory to which the build file is emitted and the
+resulting library compiled to is <code class="docutils literal notranslate"><span class="pre">&lt;tmp&gt;/torch_extensions/&lt;name&gt;</span></code>, where
+<code class="docutils literal notranslate"><span class="pre">&lt;tmp&gt;</span></code> is the temporary folder on the current platform and <code class="docutils literal notranslate"><span class="pre">&lt;name&gt;</span></code>
+the name of the extension. This location can be overridden in two ways.
+First, if the <code class="docutils literal notranslate"><span class="pre">TORCH_EXTENSIONS_DIR</span></code> environment variable is set, it
+replaces <code class="docutils literal notranslate"><span class="pre">&lt;tmp&gt;/torch_extensions</span></code> and all extensions will be compiled
+into subfolders of this directory. Second, if the <code class="docutils literal notranslate"><span class="pre">build_directory</span></code>
+argument to this function is supplied, it overrides the entire path, i.e.
+the library will be compiled into that folder directly.</p>
+<p>To compile the sources, the default system compiler (<code class="docutils literal notranslate"><span class="pre">c++</span></code>) is used,
+which can be overridden by setting the <code class="docutils literal notranslate"><span class="pre">CXX</span></code> environment variable. To pass
+additional arguments to the compilation process, <code class="docutils literal notranslate"><span class="pre">extra_cflags</span></code> or
+<code class="docutils literal notranslate"><span class="pre">extra_ldflags</span></code> can be provided. For example, to compile your extension
+with optimizations, pass <code class="docutils literal notranslate"><span class="pre">extra_cflags=['-O3']</span></code>. You can also use
+<code class="docutils literal notranslate"><span class="pre">extra_cflags</span></code> to pass further include directories.</p>
+<p>CUDA support with mixed compilation is provided. Simply pass CUDA source
+files (<code class="docutils literal notranslate"><span class="pre">.cu</span></code> or <code class="docutils literal notranslate"><span class="pre">.cuh</span></code>) along with other sources. Such files will be
+detected and compiled with nvcc rather than the C++ compiler. This includes
+passing the CUDA lib64 directory as a library directory, and linking
+<code class="docutils literal notranslate"><span class="pre">cudart</span></code>. You can pass additional flags to nvcc via
+<code class="docutils literal notranslate"><span class="pre">extra_cuda_cflags</span></code>, just like with <code class="docutils literal notranslate"><span class="pre">extra_cflags</span></code> for C++. Various
+heuristics for finding the CUDA install directory are used, which usually
+work fine. If not, setting the <code class="docutils literal notranslate"><span class="pre">CUDA_HOME</span></code> environment variable is the
+safest option.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – The name of the extension to build. This MUST be the same as the
+name of the pybind11 module!</p></li>
+<li><p><strong>sources</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>]</em>) – A list of relative or absolute paths to C++ source files.</p></li>
+<li><p><strong>extra_cflags</strong> – optional list of compiler flags to forward to the build.</p></li>
+<li><p><strong>extra_cuda_cflags</strong> – optional list of compiler flags to forward to nvcc
+when building CUDA sources.</p></li>
+<li><p><strong>extra_ldflags</strong> – optional list of linker flags to forward to the build.</p></li>
+<li><p><strong>extra_include_paths</strong> – optional list of include directories to forward
+to the build.</p></li>
+<li><p><strong>build_directory</strong> – optional path to use as build workspace.</p></li>
+<li><p><strong>verbose</strong> – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, turns on verbose logging of load steps.</p></li>
+<li><p><strong>with_cuda</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em> | </em><em>None</em>) – Determines whether CUDA headers and libraries are added to
+the build. If set to <code class="docutils literal notranslate"><span class="pre">None</span></code> (default), this value is
+automatically determined based on the existence of <code class="docutils literal notranslate"><span class="pre">.cu</span></code> or
+<code class="docutils literal notranslate"><span class="pre">.cuh</span></code> in <code class="docutils literal notranslate"><span class="pre">sources</span></code>. Set it to <cite>True`</cite> to force CUDA headers
+and libraries to be included.</p></li>
+<li><p><strong>is_python_module</strong> – If <code class="docutils literal notranslate"><span class="pre">True</span></code> (default), imports the produced shared
+library as a Python module. If <code class="docutils literal notranslate"><span class="pre">False</span></code>, behavior depends on
+<code class="docutils literal notranslate"><span class="pre">is_standalone</span></code>.</p></li>
+<li><p><strong>is_standalone</strong> – If <code class="docutils literal notranslate"><span class="pre">False</span></code> (default) loads the constructed extension
+into the process as a plain dynamic library. If <code class="docutils literal notranslate"><span class="pre">True</span></code>, build a
+standalone executable.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><p>Returns the loaded PyTorch extension as a Python module.</p>
+<dl class="simple">
+<dt>If <code class="docutils literal notranslate"><span class="pre">is_python_module</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code> and <code class="docutils literal notranslate"><span class="pre">is_standalone</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>:</dt><dd><p>Returns nothing. (The shared library is loaded into the process as
+a side effect.)</p>
+</dd>
+<dt>If <code class="docutils literal notranslate"><span class="pre">is_standalone</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</dt><dd><p>Return the path to the executable. (On Windows, TORCH_LIB_PATH is
+added to the PATH environment variable as a side effect.)</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>If <code class="docutils literal notranslate"><span class="pre">is_python_module</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.cpp_extension</span><span class="w"> </span><span class="kn">import</span> <span class="n">load</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">module</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;extension&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">sources</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;extension.cpp&#39;</span><span class="p">,</span> <span class="s1">&#39;extension_kernel.cu&#39;</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">extra_cflags</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;-O2&#39;</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.utils.cpp_extension.load_inline">
+<span class="sig-prename descclassname"><span class="pre">torch.utils.cpp_extension.</span></span><span class="sig-name descname"><span class="pre">load_inline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cpp_sources</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cuda_sources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">functions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_cflags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_cuda_cflags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_ldflags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_include_paths</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">build_directory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_cuda</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_python_module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_pytorch_error_handling</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_intermediates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_pch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/utils/cpp_extension.html#load_inline"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/utils/cpp_extension.py#L1587"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.utils.cpp_extension.load_inline" title="Link to this definition">#</a></dt>
+<dd><p>Load a PyTorch C++ extension just-in-time (JIT) from string sources.</p>
+<p>This function behaves exactly like <a class="reference internal" href="#torch.utils.cpp_extension.load" title="torch.utils.cpp_extension.load"><code class="xref py py-func docutils literal notranslate"><span class="pre">load()</span></code></a>, but takes its sources as
+strings rather than filenames. These strings are stored to files in the
+build directory, after which the behavior of <a class="reference internal" href="#torch.utils.cpp_extension.load_inline" title="torch.utils.cpp_extension.load_inline"><code class="xref py py-func docutils literal notranslate"><span class="pre">load_inline()</span></code></a> is
+identical to <a class="reference internal" href="#torch.utils.cpp_extension.load" title="torch.utils.cpp_extension.load"><code class="xref py py-func docutils literal notranslate"><span class="pre">load()</span></code></a>.</p>
+<p>See <a class="reference external" href="https://github.com/pytorch/pytorch/blob/master/test/test_cpp_extensions_jit.py">the
+tests</a>
+for good examples of using this function.</p>
+<p>Sources may omit two required parts of a typical non-inline C++ extension:
+the necessary header includes, as well as the (pybind11) binding code. More
+precisely, strings passed to <code class="docutils literal notranslate"><span class="pre">cpp_sources</span></code> are first concatenated into a
+single <code class="docutils literal notranslate"><span class="pre">.cpp</span></code> file. This file is then prepended with <code class="docutils literal notranslate"><span class="pre">#include</span>
+<span class="pre">&lt;torch/extension.h&gt;</span></code>.</p>
+<p>Furthermore, if the <code class="docutils literal notranslate"><span class="pre">functions</span></code> argument is supplied, bindings will be
+automatically generated for each function specified. <code class="docutils literal notranslate"><span class="pre">functions</span></code> can
+either be a list of function names, or a dictionary mapping from function
+names to docstrings. If a list is given, the name of each function is used
+as its docstring.</p>
+<p>The sources in <code class="docutils literal notranslate"><span class="pre">cuda_sources</span></code> are concatenated into a separate <code class="docutils literal notranslate"><span class="pre">.cu</span></code>
+file and  prepended with <code class="docutils literal notranslate"><span class="pre">torch/types.h</span></code>, <code class="docutils literal notranslate"><span class="pre">cuda.h</span></code> and
+<code class="docutils literal notranslate"><span class="pre">cuda_runtime.h</span></code> includes. The <code class="docutils literal notranslate"><span class="pre">.cpp</span></code> and <code class="docutils literal notranslate"><span class="pre">.cu</span></code> files are compiled
+separately, but ultimately linked into a single library. Note that no
+bindings are generated for functions in <code class="docutils literal notranslate"><span class="pre">cuda_sources</span></code> per se. To bind
+to a CUDA kernel, you must create a C++ function that calls it, and either
+declare or define this C++ function in one of the <code class="docutils literal notranslate"><span class="pre">cpp_sources</span></code> (and
+include its name in <code class="docutils literal notranslate"><span class="pre">functions</span></code>).</p>
+<p>See <a class="reference internal" href="#torch.utils.cpp_extension.load" title="torch.utils.cpp_extension.load"><code class="xref py py-func docutils literal notranslate"><span class="pre">load()</span></code></a> for a description of arguments omitted below.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cpp_sources</strong> – A string, or list of strings, containing C++ source code.</p></li>
+<li><p><strong>cuda_sources</strong> – A string, or list of strings, containing CUDA source code.</p></li>
+<li><p><strong>functions</strong> – A list of function names for which to generate function
+bindings. If a dictionary is given, it should map function names to
+docstrings (which are otherwise just the function names).</p></li>
+<li><p><strong>with_cuda</strong> – Determines whether CUDA headers and libraries are added to
+the build. If set to <code class="docutils literal notranslate"><span class="pre">None</span></code> (default), this value is
+automatically determined based on whether <code class="docutils literal notranslate"><span class="pre">cuda_sources</span></code> is
+provided. Set it to <code class="docutils literal notranslate"><span class="pre">True</span></code> to force CUDA headers
+and libraries to be included.</p></li>
+<li><p><strong>with_pytorch_error_handling</strong> – Determines whether pytorch error and
+warning macros are handled by pytorch instead of pybind. To do
+this, each function <code class="docutils literal notranslate"><span class="pre">foo</span></code> is called via an intermediary <code class="docutils literal notranslate"><span class="pre">_safe_foo</span></code>
+function. This redirection might cause issues in obscure cases
+of cpp. This flag should be set to <code class="docutils literal notranslate"><span class="pre">False</span></code> when this redirect
+causes issues.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.cpp_extension</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_inline</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">source</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="go">at::Tensor sin_add(at::Tensor x, at::Tensor y) {</span>
+<span class="go">  return x.sin() + y.sin();</span>
+<span class="go">}</span>
+<span class="go">&quot;&quot;&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">module = load_inline(name=&#39;inline_extension&#39;,</span>
+<span class="gp">... </span><span class="s2">                     cpp_sources=[source],</span>
+<span class="gp">... </span><span class="s2">                     functions=[&#39;sin_add&#39;])</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since load_inline will just-in-time compile the source code, please ensure
+that you have the right toolchains installed in the runtime. For example,
+when loading C++, make sure a C++ compiler is available. If you’re loading
+a CUDA extension, you will need to additionally install the corresponding CUDA
+toolkit (nvcc and any other dependencies your code has). Compiling toolchains
+are not included when you install torch and must be additionally installed.</p>
+<p>During compiling, by default, the Ninja backend uses #CPUS + 2 workers to build
+the extension. This may use up too many resources on some systems. One
+can control the number of workers by setting the <cite>MAX_JOBS</cite> environment
+variable to a non-negative number.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.utils.cpp_extension.include_paths">
+<span class="sig-prename descclassname"><span class="pre">torch.utils.cpp_extension.</span></span><span class="sig-name descname"><span class="pre">include_paths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/utils/cpp_extension.html#include_paths"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/utils/cpp_extension.py#L1209"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.utils.cpp_extension.include_paths" title="Link to this definition">#</a></dt>
+<dd><p>Get the include paths required to build a C++ or CUDA or SYCL extension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>device_type</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – Defaults to “cpu”.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of include path strings.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.utils.cpp_extension.get_compiler_abi_compatibility_and_version">
+<span class="sig-prename descclassname"><span class="pre">torch.utils.cpp_extension.</span></span><span class="sig-name descname"><span class="pre">get_compiler_abi_compatibility_and_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">compiler</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/utils/cpp_extension.html#get_compiler_abi_compatibility_and_version"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/utils/cpp_extension.py#L382"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.utils.cpp_extension.get_compiler_abi_compatibility_and_version" title="Link to this definition">#</a></dt>
+<dd><p>Determine if the given compiler is ABI-compatible with PyTorch alongside its version.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>compiler</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The compiler executable name to check (e.g. <code class="docutils literal notranslate"><span class="pre">g++</span></code>).
+Must be executable in a shell process.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple that contains a boolean that defines if the compiler is (likely) ABI-incompatible with PyTorch,
+followed by a <cite>TorchVersion</cite> string that contains the compiler version separated by dots.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)">tuple</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a>, <em>TorchVersion</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.utils.cpp_extension.verify_ninja_availability">
+<span class="sig-prename descclassname"><span class="pre">torch.utils.cpp_extension.</span></span><span class="sig-name descname"><span class="pre">verify_ninja_availability</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/utils/cpp_extension.html#verify_ninja_availability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/utils/cpp_extension.py#L1951"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.utils.cpp_extension.verify_ninja_availability" title="Link to this definition">#</a></dt>
+<dd><p>Raise <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code> if <a class="reference external" href="https://ninja-build.org/">ninja</a> build system is not available on the system, does nothing otherwise.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.utils.cpp_extension.is_ninja_available">
+<span class="sig-prename descclassname"><span class="pre">torch.utils.cpp_extension.</span></span><span class="sig-name descname"><span class="pre">is_ninja_available</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/utils/cpp_extension.html#is_ninja_available"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/utils/cpp_extension.py#L1941"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.utils.cpp_extension.is_ninja_available" title="Link to this definition">#</a></dt>
+<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the <a class="reference external" href="https://ninja-build.org/">ninja</a> build system is available on the system, <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc">
+<div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.utils.cpp_extension.CppExtension"><code class="docutils literal notranslate"><span class="pre">CppExtension()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.utils.cpp_extension.CUDAExtension"><code class="docutils literal notranslate"><span class="pre">CUDAExtension()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.utils.cpp_extension.BuildExtension"><code class="docutils literal notranslate"><span class="pre">BuildExtension()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.utils.cpp_extension.load"><code class="docutils literal notranslate"><span class="pre">load()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.utils.cpp_extension.load_inline"><code class="docutils literal notranslate"><span class="pre">load_inline()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.utils.cpp_extension.include_paths"><code class="docutils literal notranslate"><span class="pre">include_paths()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.utils.cpp_extension.get_compiler_abi_compatibility_and_version"><code class="docutils literal notranslate"><span class="pre">get_compiler_abi_compatibility_and_version()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.utils.cpp_extension.verify_ninja_availability"><code class="docutils literal notranslate"><span class="pre">verify_ninja_availability()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.utils.cpp_extension.is_ninja_available"><code class="docutils literal notranslate"><span class="pre">is_ninja_available()</span></code></a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/python-api/cpp_extension.rst">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div>
+<div class="sidebar-secondary-item"> 
+</div>
+<div class="sidebar-secondary-item">
+ <p>PyTorch Libraries</p>
+ <ul>
+ 
+  <li><a href="https://pytorch.org/vision">torchvision</a></li>
+ 
+  <li><a href="https://pytorch.org/executorch">ExecuTorch</a></li>
+ 
+  <li><a href="https://https://pytorch.org/ao">torchao</a></li>
+ 
+  <li><a href="https://https://pytorch.org/audio">torchaudio</a></li>
+ 
+  <li><a href="https://https://pytorch.org/torchrec">torchrec</a></li>
+ 
+  <li><a href="https://https://pytorch.org/serve">torchserve</a></li>
+ 
+  <li><a href="https://https://pytorch.org/data">torchdata</a></li>
+ 
+  <li><a href="https://https://pytorch.org/xla">PyTorch on XLA devices</a></li>
+ 
+ </ul>
+</div>
+</div>
+
+</div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright PyTorch Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

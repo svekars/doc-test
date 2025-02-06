@@ -1,0 +1,1000 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>torch.utils.checkpoint &#8212; PyTorch main documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/katex-math.css?v=91adb8b6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/jit.css?v=8de1ea5d" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3ccf5357" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=189c4a6a" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=940804e7"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'python-api/checkpoint';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+<div class="container-fluid header-holder tutorials-header" id="header-holder">
+  <div class="container">
+    <div class="header-container">
+      <a class="header-logo" href="" aria-label="PyTorch"></a>
+
+      <div class="main-menu">
+        <ul>
+
+          <li class="main-menu-item">
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Learn
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Get Started</span>
+                  <p>Run PyTorch locally or get started quickly with one of the supported cloud platforms</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Tutorials</span>
+                  <p>Whats new in PyTorch tutorials</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Learn the Basics</span>
+                  <p>Familiarize yourself with PyTorch concepts and modules</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Recipes</span>
+                  <p>Bite-size, ready-to-deploy PyTorch code examples</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Intro to PyTorch - YouTube Series</span>
+                  <p>Master PyTorch basics with our engaging YouTube tutorial series</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Ecosystem
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Tools</span>
+                  <p>Learn about the tools and frameworks in the PyTorch Ecosystem</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Community</span>
+                  <p>Join the PyTorch developer community to contribute, learn, and get your questions answered</p>
+                </a>
+                <a class="nav-dropdown-item" href="" target="_blank">
+                  <span class=dropdown-title>Forums</span>
+                  <p>A place to discuss PyTorch code, issues, install, research</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Developer Resources</span>
+                  <p>Find resources and get questions answered</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Contributor Awards - 2024</span>
+                  <p>Award winners announced at this year's PyTorch Conference</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Edge
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">About PyTorch Edge</span>
+                  <p>Build innovative and privacy-aware AI experiences for edge devices</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">ExecuTorch</span>
+                  <p>End-to-end solution for enabling on-device inference capabilities across mobile and edge devices</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">ExecuTorch Docs</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="main-menu-item">
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Docs
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch</span>
+                  <p>Explore the documentation for comprehensive guidance on how to use PyTorch</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Domains</span>
+                  <p>Read the PyTorch Domains documentation to learn more about domain-specific libraries</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Blogs & News
+              lnhetrlnle</a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Blog</span>
+                  <p>Catch up on the latest technical news and happenings</p>
+                </a>
+                 <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Community Blog</span>
+                  <p>Stories from the PyTorch ecosystem</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Videos</span>
+                  <p>Learn about the latest PyTorch tutorials, new, and more </p>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Community Stories</span>
+                  <p>Learn how our community solves real, everyday machine learning problems with PyTorch</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Events</span>
+                  <p>Find events, webinars, and podcasts</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Newsletter</span>
+                  <p>Stay up-to-date with the latest updates</p>
+                </a>
+            </div>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                About
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Foundation</span>
+                  <p>Learn more about the PyTorch Foundation</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Governing Board</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Cloud Credit Program</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Technical Advisory Council</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Staff</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Contact Us</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="main-menu-item">
+            <div class="no-dropdown">
+              <a href="" data-cta="join">
+                Become a Member
+              </a>
+            </div>
+          </li>
+          <li>
+           <div class="main-menu-item">
+             <a href="" class="github-icon">
+             </a>
+           </div>
+          </li>
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <li>
+            <div class="main-menu-item">
+             <a href="" class="search-icon">
+             </a>
+            </div>
+          </li>
+          --->
+        </ul>
+      </div>
+
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+    </div>
+  </div>
+</div>
+
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
+    <div class="navbar-item">
+      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
+    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="index.html">
+    Python API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../notes/index.html">
+    Developer Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../community/index.html">
+    Community
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../lang-bindings/index.html">
+    Language Bindings
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="index.html">
+    Python API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../notes/index.html">
+    Developer Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../community/index.html">
+    Community
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../lang-bindings/index.html">
+    Language Bindings
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">torch.utils.checkpoint</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="torch-utils-checkpoint">
+<h1>torch.utils.checkpoint<a class="headerlink" href="#torch-utils-checkpoint" title="Link to this heading">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Checkpointing is implemented by rerunning a forward-pass segment for
+each checkpointed segment during backward propagation.  This can cause persistent
+states like the RNG state to be more advanced than they would without
+checkpointing.  By default, checkpointing includes logic to juggle
+the RNG state such that checkpointed passes making use of RNG
+(through dropout for example) have deterministic output as
+compared to non-checkpointed passes.  The logic to stash and restore
+RNG states can incur a moderate performance hit depending on the runtime
+of checkpointed operations.  If deterministic output compared to
+non-checkpointed passes is not required, supply <code class="docutils literal notranslate"><span class="pre">preserve_rng_state=False</span></code>
+to <code class="docutils literal notranslate"><span class="pre">checkpoint</span></code> or <code class="docutils literal notranslate"><span class="pre">checkpoint_sequential</span></code> to omit stashing and
+restoring the RNG state during each checkpoint.</p>
+<p>The stashing logic saves and restores the RNG state for CPU and another
+device type (infer the device type from Tensor arguments excluding CPU
+tensors by <code class="docutils literal notranslate"><span class="pre">_infer_device_type</span></code>) to the <code class="docutils literal notranslate"><span class="pre">run_fn</span></code>. If there are multiple
+device, device state will only be saved for devices of a single device type,
+and the remaining devices will be ignored. Consequently, if any checkpointed
+functions involve randomness, this may result in incorrect gradients. (Note
+that if CUDA devices are among the devices detected, it will be prioritized;
+otherwise, the first device encountered will be selected.) If there are no
+CPU-tensors, the default device type state (default value is <cite>cuda</cite>, and it
+could be set to other device by <code class="docutils literal notranslate"><span class="pre">DefaultDeviceType</span></code>) will be saved and restored.
+However, the logic has no way to anticipate if the user will move
+Tensors to a new device within the <code class="docutils literal notranslate"><span class="pre">run_fn</span></code> itself.  Therefore, if you move
+Tensors to a new device (“new” meaning not belonging to the set of
+[current device + devices of Tensor arguments]) within <code class="docutils literal notranslate"><span class="pre">run_fn</span></code>, deterministic
+output compared to non-checkpointed passes is never guaranteed.</p>
+</div>
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.utils.checkpoint.checkpoint">
+<span class="sig-prename descclassname"><span class="pre">torch.utils.checkpoint.</span></span><span class="sig-name descname"><span class="pre">checkpoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_reentrant=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context_fn=&lt;function</span> <span class="pre">noop_context_fn&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">determinism_check='default'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/utils/checkpoint.html#checkpoint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/utils/checkpoint.py#L342"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.utils.checkpoint.checkpoint" title="Link to this definition">#</a></dt>
+<dd><p>Checkpoint a model or part of the model.</p>
+<p>Activation checkpointing is a technique that trades compute for memory.
+Instead of keeping tensors needed for backward alive until they are used in
+gradient computation during backward, forward computation in checkpointed
+regions omits saving tensors for backward and recomputes them during the
+backward pass. Activation checkpointing can be applied to any part of a
+model.</p>
+<p>There are currently two checkpointing implementations available, determined
+by the <code class="xref py py-attr docutils literal notranslate"><span class="pre">use_reentrant</span></code> parameter. It is recommended that you use
+<code class="docutils literal notranslate"><span class="pre">use_reentrant=False</span></code>. Please refer the note below for a discussion of
+their differences.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If the <code class="xref py py-attr docutils literal notranslate"><span class="pre">function</span></code> invocation during the backward pass differs
+from the forward pass, e.g., due to a global variable, the checkpointed
+version may not be equivalent, potentially causing an
+error being raised or leading to silently incorrect gradients.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">use_reentrant</span></code> parameter should be passed explicitly. In version
+2.4 we will raise an exception if <code class="docutils literal notranslate"><span class="pre">use_reentrant</span></code> is not passed.
+If you are using the <code class="docutils literal notranslate"><span class="pre">use_reentrant=True</span></code> variant, please refer to the
+note below for important considerations and potential limitations.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The reentrant variant of checkpoint (<code class="docutils literal notranslate"><span class="pre">use_reentrant=True</span></code>) and
+the non-reentrant variant of checkpoint (<code class="docutils literal notranslate"><span class="pre">use_reentrant=False</span></code>)
+differ in the following ways:</p>
+<ul class="simple">
+<li><p>Non-reentrant checkpoint stops recomputation as soon as all needed
+intermediate activations have been recomputed. This feature is enabled
+by default, but can be disabled with <code class="xref py py-func docutils literal notranslate"><span class="pre">set_checkpoint_early_stop()</span></code>.
+Reentrant checkpoint always recomputes <code class="xref py py-attr docutils literal notranslate"><span class="pre">function</span></code> in its
+entirety during the backward pass.</p></li>
+<li><p>The reentrant variant does not record the autograd graph during the
+forward pass, as it runs with the forward pass under
+<a class="reference internal" href="generated/torch.no_grad.html#torch.no_grad" title="torch.no_grad"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.no_grad()</span></code></a>. The non-reentrant version does record the
+autograd graph, allowing one to perform backward on the graph within
+checkpointed regions.</p></li>
+<li><p>The reentrant checkpoint only supports the
+<a class="reference internal" href="generated/torch.autograd.backward.html#torch.autograd.backward" title="torch.autograd.backward"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.autograd.backward()</span></code></a> API for the backward pass without its
+<cite>inputs</cite> argument, while the non-reentrant version supports all ways
+of performing the backward pass.</p></li>
+<li><p>At least one input and output must have <code class="docutils literal notranslate"><span class="pre">requires_grad=True</span></code> for the
+reentrant variant. If this condition is unmet, the checkpointed part
+of the model will not have gradients. The non-reentrant version does
+not have this requirement.</p></li>
+<li><p>The reentrant version does not consider tensors in nested structures
+(e.g., custom objects, lists, dicts, etc) as participating in
+autograd, while the non-reentrant version does.</p></li>
+<li><p>The reentrant checkpoint does not support checkpointed regions with
+detached tensors from the computational graph, whereas the
+non-reentrant version does. For the reentrant variant, if the
+checkpointed segment contains tensors detached using <code class="docutils literal notranslate"><span class="pre">detach()</span></code> or
+with <a class="reference internal" href="generated/torch.no_grad.html#torch.no_grad" title="torch.no_grad"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.no_grad()</span></code></a>, the backward pass will raise an error.
+This is because <code class="docutils literal notranslate"><span class="pre">checkpoint</span></code> makes all the outputs require gradients
+and this causes issues when a tensor is defined to have no gradient in
+the model. To avoid this, detach the tensors outside of the
+<code class="docutils literal notranslate"><span class="pre">checkpoint</span></code> function.</p></li>
+</ul>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>function</strong> – describes what to run in the forward pass of the model or
+part of the model. It should also know how to handle the inputs
+passed as the tuple. For example, in LSTM, if user passes
+<code class="docutils literal notranslate"><span class="pre">(activation,</span> <span class="pre">hidden)</span></code>, <code class="xref py py-attr docutils literal notranslate"><span class="pre">function</span></code> should correctly use the
+first input as <code class="docutils literal notranslate"><span class="pre">activation</span></code> and the second input as <code class="docutils literal notranslate"><span class="pre">hidden</span></code></p></li>
+<li><p><strong>preserve_rng_state</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>optional</em>) – Omit stashing and restoring
+the RNG state during each checkpoint. Note that under torch.compile,
+this flag doesn’t take effect and we always preserve RNG state.
+Default: <code class="docutils literal notranslate"><span class="pre">True</span></code></p></li>
+<li><p><strong>use_reentrant</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – specify whether to use the activation checkpoint variant that
+requires reentrant autograd. This parameter should be passed
+explicitly. In version 2.5 we will raise an exception if
+<code class="docutils literal notranslate"><span class="pre">use_reentrant</span></code> is not passed. If <code class="docutils literal notranslate"><span class="pre">use_reentrant=False</span></code>,
+<code class="docutils literal notranslate"><span class="pre">checkpoint</span></code> will use an implementation that does not require
+reentrant autograd. This allows <code class="docutils literal notranslate"><span class="pre">checkpoint</span></code> to support additional
+functionality, such as working as expected with
+<code class="docutils literal notranslate"><span class="pre">torch.autograd.grad</span></code> and support for keyword arguments input into
+the checkpointed function.</p></li>
+<li><p><strong>context_fn</strong> (<em>Callable</em><em>, </em><em>optional</em>) – A callable returning a tuple of two
+context managers. The function and its recomputation will be run
+under the first and second context managers respectively.
+This argument is only supported if <code class="docutils literal notranslate"><span class="pre">use_reentrant=False</span></code>.</p></li>
+<li><p><strong>determinism_check</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>optional</em>) – A string specifying the determinism
+check to perform. By default it is set to <code class="docutils literal notranslate"><span class="pre">&quot;default&quot;</span></code> which
+compares the shapes, dtypes, and devices of the recomputed tensors
+against those the saved tensors. To turn off this check, specify
+<code class="docutils literal notranslate"><span class="pre">&quot;none&quot;</span></code>. Currently these are the only two supported values.
+Please open an issue if you would like to see more determinism
+checks. This argument is only supported if <code class="docutils literal notranslate"><span class="pre">use_reentrant=False</span></code>,
+if <code class="docutils literal notranslate"><span class="pre">use_reentrant=True</span></code>, the determinism check is always disabled.</p></li>
+<li><p><strong>debug</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>optional</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, error messages will also include
+a trace of the operators ran during the original forward computation
+as well as the recomputation. This argument is only supported if
+<code class="docutils literal notranslate"><span class="pre">use_reentrant=False</span></code>.</p></li>
+<li><p><strong>args</strong> – tuple containing inputs to the <code class="xref py py-attr docutils literal notranslate"><span class="pre">function</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Output of running <code class="xref py py-attr docutils literal notranslate"><span class="pre">function</span></code> on <code class="xref py py-attr docutils literal notranslate"><span class="pre">*args</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.utils.checkpoint.checkpoint_sequential">
+<span class="sig-prename descclassname"><span class="pre">torch.utils.checkpoint.</span></span><span class="sig-name descname"><span class="pre">checkpoint_sequential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">functions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">segments</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_reentrant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/utils/checkpoint.html#checkpoint_sequential"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/utils/checkpoint.py#L503"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.utils.checkpoint.checkpoint_sequential" title="Link to this definition">#</a></dt>
+<dd><p>Checkpoint a sequential model to save memory.</p>
+<p>Sequential models execute a list of modules/functions in order
+(sequentially). Therefore, we can divide such a model in various segments
+and checkpoint each segment. All segments except the last will not store
+the intermediate activations. The inputs of each checkpointed segment will
+be saved for re-running the segment in the backward pass.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">use_reentrant</span></code> parameter should be passed explicitly. In version
+2.4 we will raise an exception if <code class="docutils literal notranslate"><span class="pre">use_reentrant</span></code> is not passed.
+If you are using the <code class="docutils literal notranslate"><span class="pre">use_reentrant=True`</span> <span class="pre">variant,</span> <span class="pre">please</span> <span class="pre">see</span>
+<span class="pre">:func:`~torch.utils.checkpoint.checkpoint`</span> <span class="pre">for</span>
+<span class="pre">the</span> <span class="pre">important</span> <span class="pre">considerations</span> <span class="pre">and</span> <span class="pre">limitations</span> <span class="pre">of</span> <span class="pre">this</span> <span class="pre">variant.</span> <span class="pre">It</span> <span class="pre">is</span>
+<span class="pre">recommended</span> <span class="pre">that</span> <span class="pre">you</span> <span class="pre">use</span> <span class="pre">``use_reentrant=False</span></code>.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>functions</strong> – A <a class="reference internal" href="generated/torch.nn.Sequential.html#torch.nn.Sequential" title="torch.nn.Sequential"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.Sequential</span></code></a> or the list of modules or
+functions (comprising the model) to run sequentially.</p></li>
+<li><p><strong>segments</strong> – Number of chunks to create in the model</p></li>
+<li><p><strong>input</strong> – A Tensor that is input to <code class="xref py py-attr docutils literal notranslate"><span class="pre">functions</span></code></p></li>
+<li><p><strong>preserve_rng_state</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>optional</em>) – Omit stashing and restoring
+the RNG state during each checkpoint.
+Default: <code class="docutils literal notranslate"><span class="pre">True</span></code></p></li>
+<li><p><strong>use_reentrant</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – specify whether to use the activation checkpoint variant that
+requires reentrant autograd. This parameter should be passed
+explicitly. In version 2.5 we will raise an exception if
+<code class="docutils literal notranslate"><span class="pre">use_reentrant</span></code> is not passed. If <code class="docutils literal notranslate"><span class="pre">use_reentrant=False</span></code>,
+<code class="docutils literal notranslate"><span class="pre">checkpoint</span></code> will use an implementation that does not require
+reentrant autograd. This allows <code class="docutils literal notranslate"><span class="pre">checkpoint</span></code> to support additional
+functionality, such as working as expected with
+<code class="docutils literal notranslate"><span class="pre">torch.autograd.grad</span></code> and support for keyword arguments input into
+the checkpointed function.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Output of running <code class="xref py py-attr docutils literal notranslate"><span class="pre">functions</span></code> sequentially on <code class="xref py py-attr docutils literal notranslate"><span class="pre">*inputs</span></code></p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">model</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">input_var</span> <span class="o">=</span> <span class="n">checkpoint_sequential</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">chunks</span><span class="p">,</span> <span class="n">input_var</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.utils.checkpoint.set_checkpoint_debug_enabled">
+<span class="sig-prename descclassname"><span class="pre">torch.utils.checkpoint.</span></span><span class="sig-name descname"><span class="pre">set_checkpoint_debug_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/utils/checkpoint.html#set_checkpoint_debug_enabled"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/utils/checkpoint.py#L43"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.utils.checkpoint.set_checkpoint_debug_enabled" title="Link to this definition">#</a></dt>
+<dd><p>Context manager that sets whether checkpoint should print additional debug
+information when running. See the <code class="docutils literal notranslate"><span class="pre">debug</span></code> flag for
+<a class="reference internal" href="#torch.utils.checkpoint.checkpoint" title="torch.utils.checkpoint.checkpoint"><code class="xref py py-func docutils literal notranslate"><span class="pre">checkpoint()</span></code></a> for more information. Note that
+when set, this context manager overrides the value of <code class="docutils literal notranslate"><span class="pre">debug</span></code> passed to
+checkpoint. To defer to the local setting, pass <code class="docutils literal notranslate"><span class="pre">None</span></code> to this context.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>enabled</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – Whether checkpoint should print debug information.
+Default is ‘None’.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="torch.utils.checkpoint.CheckpointPolicy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.utils.checkpoint.</span></span><span class="sig-name descname"><span class="pre">CheckpointPolicy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/utils/checkpoint.html#CheckpointPolicy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/utils/checkpoint.py#L1225"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.utils.checkpoint.CheckpointPolicy" title="Link to this definition">#</a></dt>
+<dd><p>Enum for specifying the policy for checkpointing during backpropagation.</p>
+<p>The following policies are supported:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">{MUST,PREFER}_SAVE</span></code>: The operation’s output will be saved during the forward
+pass and will not be recomputed during the backward pass</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{MUST,PREFER}_RECOMPUTE</span></code>: The operation’s output will not be saved during the
+forward pass and will be recomputed during the backward pass</p></li>
+</ul>
+<p>Use <code class="docutils literal notranslate"><span class="pre">MUST_*</span></code> over <code class="docutils literal notranslate"><span class="pre">PREFER_*</span></code> to indicate that the policy should not be overridden
+by other subsystems like <cite>torch.compile</cite>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A policy function that always returns <code class="docutils literal notranslate"><span class="pre">PREFER_RECOMPUTE</span></code> is
+equivalent to vanilla checkpointing.</p>
+<p>A policy function that returns <code class="docutils literal notranslate"><span class="pre">PREFER_SAVE</span></code> every op is
+NOT equivalent to not using checkpointing. Using such a policy would
+save additional tensors not limited to ones that are actually needed for
+gradient computation.</p>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="torch.utils.checkpoint.SelectiveCheckpointContext">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.utils.checkpoint.</span></span><span class="sig-name descname"><span class="pre">SelectiveCheckpointContext</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_recompute</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/utils/checkpoint.html#SelectiveCheckpointContext"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/utils/checkpoint.py#L1199"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.utils.checkpoint.SelectiveCheckpointContext" title="Link to this definition">#</a></dt>
+<dd><p>Context passed to policy function during selective checkpointing.</p>
+<p>This class is used to pass relevant metadata to the policy function during
+selective checkpointing. The metadata includes whether the current invocation
+of the policy function is during recomputation or not.</p>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">policy_fn</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">op</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">is_recompute</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">context_fn</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">create_selective_checkpoint_contexts</span><span class="p">,</span> <span class="n">policy_fn</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">checkpoint</span><span class="o">.</span><span class="n">checkpoint</span><span class="p">(</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">fn</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">use_reentrant</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">context_fn</span><span class="o">=</span><span class="n">context_fn</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.utils.checkpoint.create_selective_checkpoint_contexts">
+<span class="sig-prename descclassname"><span class="pre">torch.utils.checkpoint.</span></span><span class="sig-name descname"><span class="pre">create_selective_checkpoint_contexts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">policy_fn_or_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_cache_entry_mutation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/utils/checkpoint.html#create_selective_checkpoint_contexts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/utils/checkpoint.py#L1333"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.utils.checkpoint.create_selective_checkpoint_contexts" title="Link to this definition">#</a></dt>
+<dd><p>Helper to avoid recomputing certain ops during activation checkpointing.</p>
+<p>Use this with <cite>torch.utils.checkpoint.checkpoint</cite> to control which
+operations are recomputed during the backward pass.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>policy_fn_or_list</strong> (<em>Callable</em><em> or </em><em>List</em>) – <ul>
+<li><p>If a policy function is provided, it should accept a
+<a class="reference internal" href="#torch.utils.checkpoint.SelectiveCheckpointContext" title="torch.utils.checkpoint.SelectiveCheckpointContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectiveCheckpointContext</span></code></a>, the <code class="xref py py-class docutils literal notranslate"><span class="pre">OpOverload</span></code>, args and
+kwargs to the op, and return a <a class="reference internal" href="#torch.utils.checkpoint.CheckpointPolicy" title="torch.utils.checkpoint.CheckpointPolicy"><code class="xref py py-class docutils literal notranslate"><span class="pre">CheckpointPolicy</span></code></a> enum value
+indicating whether the execution of the op should be recomputed or not.</p></li>
+<li><p>If a list of operations is provided, it is equivalent to a policy
+returning <cite>CheckpointPolicy.MUST_SAVE</cite> for the specified
+operations and <cite>CheckpointPolicy.PREFER_RECOMPUTE</cite> for all other
+operations.</p></li>
+</ul>
+</p></li>
+<li><p><strong>allow_cache_entry_mutation</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>optional</em>) – By default, an error is
+raised if any tensors cached by selective activation checkpoint are
+mutated in order to ensure correctness. If set to <cite>True</cite>, this check
+is disabled.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple of two context managers.</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">functools</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ops_to_save</span> <span class="o">=</span> <span class="p">[</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">torch</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">aten</span><span class="o">.</span><span class="n">mm</span><span class="o">.</span><span class="n">default</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">policy_fn</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">op</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="k">if</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">ops_to_save</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>       <span class="k">return</span> <span class="n">CheckpointPolicy</span><span class="o">.</span><span class="n">MUST_SAVE</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="k">else</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>       <span class="k">return</span> <span class="n">CheckpointPolicy</span><span class="o">.</span><span class="n">PREFER_RECOMPUTE</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">context_fn</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">create_selective_checkpoint_contexts</span><span class="p">,</span> <span class="n">policy_fn</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># or equivalently</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">context_fn</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">create_selective_checkpoint_contexts</span><span class="p">,</span> <span class="n">ops_to_save</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">fn</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">sigmoid</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">y</span><span class="p">))</span> <span class="o">*</span> <span class="n">y</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">out</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">checkpoint</span><span class="o">.</span><span class="n">checkpoint</span><span class="p">(</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">fn</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">use_reentrant</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">context_fn</span><span class="o">=</span><span class="n">context_fn</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc">
+<div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.utils.checkpoint.checkpoint"><code class="docutils literal notranslate"><span class="pre">checkpoint()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.utils.checkpoint.checkpoint_sequential"><code class="docutils literal notranslate"><span class="pre">checkpoint_sequential()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.utils.checkpoint.set_checkpoint_debug_enabled"><code class="docutils literal notranslate"><span class="pre">set_checkpoint_debug_enabled()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.utils.checkpoint.CheckpointPolicy"><code class="docutils literal notranslate"><span class="pre">CheckpointPolicy</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.utils.checkpoint.SelectiveCheckpointContext"><code class="docutils literal notranslate"><span class="pre">SelectiveCheckpointContext</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.utils.checkpoint.create_selective_checkpoint_contexts"><code class="docutils literal notranslate"><span class="pre">create_selective_checkpoint_contexts()</span></code></a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/python-api/checkpoint.rst">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div>
+<div class="sidebar-secondary-item"> 
+</div>
+<div class="sidebar-secondary-item">
+ <p>PyTorch Libraries</p>
+ <ul>
+ 
+  <li><a href="https://pytorch.org/vision">torchvision</a></li>
+ 
+  <li><a href="https://pytorch.org/executorch">ExecuTorch</a></li>
+ 
+  <li><a href="https://https://pytorch.org/ao">torchao</a></li>
+ 
+  <li><a href="https://https://pytorch.org/audio">torchaudio</a></li>
+ 
+  <li><a href="https://https://pytorch.org/torchrec">torchrec</a></li>
+ 
+  <li><a href="https://https://pytorch.org/serve">torchserve</a></li>
+ 
+  <li><a href="https://https://pytorch.org/data">torchdata</a></li>
+ 
+  <li><a href="https://https://pytorch.org/xla">PyTorch on XLA devices</a></li>
+ 
+ </ul>
+</div>
+</div>
+
+</div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright PyTorch Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

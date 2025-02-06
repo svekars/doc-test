@@ -1,0 +1,19 @@
+[
+    {
+        "name": "v2.6 (stable)",
+        "version": "2.6",
+        "url": "https://pytorch.org/docs/stable/"
+    },
+    {
+        "version": "2.5",
+        "url": "https://pytorch.org/docs/2.5/"
+    },
+    {
+        "version": "2.4",
+        "url": "https://pytorch.org/docs/2.4/"
+    },
+    {
+        "version": "2.3",
+        "url": "https://pytorch.org/docs/2.3/"
+    }
+]

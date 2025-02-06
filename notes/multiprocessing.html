@@ -1,0 +1,965 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Multiprocessing best practices &#8212; PyTorch main documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/katex-math.css?v=91adb8b6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/jit.css?v=8de1ea5d" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3ccf5357" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=189c4a6a" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=940804e7"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notes/multiprocessing';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Extending PyTorch" href="extending.html" />
+    <link rel="prev" title="CPU threading and TorchScript inference" href="cpu_threading_torchscript_inference.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+<div class="container-fluid header-holder tutorials-header" id="header-holder">
+  <div class="container">
+    <div class="header-container">
+      <a class="header-logo" href="" aria-label="PyTorch"></a>
+
+      <div class="main-menu">
+        <ul>
+
+          <li class="main-menu-item">
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Learn
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Get Started</span>
+                  <p>Run PyTorch locally or get started quickly with one of the supported cloud platforms</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Tutorials</span>
+                  <p>Whats new in PyTorch tutorials</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Learn the Basics</span>
+                  <p>Familiarize yourself with PyTorch concepts and modules</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Recipes</span>
+                  <p>Bite-size, ready-to-deploy PyTorch code examples</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Intro to PyTorch - YouTube Series</span>
+                  <p>Master PyTorch basics with our engaging YouTube tutorial series</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Ecosystem
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Tools</span>
+                  <p>Learn about the tools and frameworks in the PyTorch Ecosystem</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Community</span>
+                  <p>Join the PyTorch developer community to contribute, learn, and get your questions answered</p>
+                </a>
+                <a class="nav-dropdown-item" href="" target="_blank">
+                  <span class=dropdown-title>Forums</span>
+                  <p>A place to discuss PyTorch code, issues, install, research</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Developer Resources</span>
+                  <p>Find resources and get questions answered</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Contributor Awards - 2024</span>
+                  <p>Award winners announced at this year's PyTorch Conference</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Edge
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">About PyTorch Edge</span>
+                  <p>Build innovative and privacy-aware AI experiences for edge devices</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">ExecuTorch</span>
+                  <p>End-to-end solution for enabling on-device inference capabilities across mobile and edge devices</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">ExecuTorch Docs</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="main-menu-item">
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Docs
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch</span>
+                  <p>Explore the documentation for comprehensive guidance on how to use PyTorch</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Domains</span>
+                  <p>Read the PyTorch Domains documentation to learn more about domain-specific libraries</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Blogs & News
+              lnhetrlnle</a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Blog</span>
+                  <p>Catch up on the latest technical news and happenings</p>
+                </a>
+                 <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Community Blog</span>
+                  <p>Stories from the PyTorch ecosystem</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Videos</span>
+                  <p>Learn about the latest PyTorch tutorials, new, and more </p>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Community Stories</span>
+                  <p>Learn how our community solves real, everyday machine learning problems with PyTorch</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Events</span>
+                  <p>Find events, webinars, and podcasts</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Newsletter</span>
+                  <p>Stay up-to-date with the latest updates</p>
+                </a>
+            </div>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                About
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Foundation</span>
+                  <p>Learn more about the PyTorch Foundation</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Governing Board</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Cloud Credit Program</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Technical Advisory Council</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Staff</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Contact Us</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="main-menu-item">
+            <div class="no-dropdown">
+              <a href="" data-cta="join">
+                Become a Member
+              </a>
+            </div>
+          </li>
+          <li>
+           <div class="main-menu-item">
+             <a href="" class="github-icon">
+             </a>
+           </div>
+          </li>
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <li>
+            <div class="main-menu-item">
+             <a href="" class="search-icon">
+             </a>
+            </div>
+          </li>
+          --->
+        </ul>
+      </div>
+
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+    </div>
+  </div>
+</div>
+
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
+    <div class="navbar-item">
+      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
+    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../python-api/index.html">
+    Python API
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Developer Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../community/index.html">
+    Community
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../lang-bindings/index.html">
+    Language Bindings
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../python-api/index.html">
+    Python API
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Developer Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../community/index.html">
+    Community
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../lang-bindings/index.html">
+    Language Bindings
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Core Concepts</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="autograd.html">Autograd mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gradcheck.html">Gradcheck mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Device and Hardware Support</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cuda.html">CUDA semantics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hip.html">HIP (ROCm) semantics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mps.html">MPS backend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_start_xpu.html">Getting Started on Intel GPU</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Distributed Training and Deployment</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ddp.html">Distributed Data Parallel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fsdp.html">FSDP Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large_scale_deployments.html">Features for large-scale deployments</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization and Performance</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="amp_examples.html">Automatic Mixed Precision examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cpu_threading_torchscript_inference.html">CPU threading and TorchScript inference</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Multiprocessing best practices</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extending PyTorch</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="extending.html">Extending PyTorch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extending.func.html">Extending torch.func with autograd.Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_operators.html">PyTorch Custom Operators Landing Page</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Numerical Considerations</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="broadcasting.html">Broadcasting semantics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numerical_accuracy.html">Numerical accuracy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="randomness.html">Reproducibility</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Serialization and Storage</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="serialization.html">Serialization semantics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FAQs</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="windows.html">Windows FAQ</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Developer Notes</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Multiprocessing best practices</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="multiprocessing-best-practices">
+<span id="id1"></span><h1>Multiprocessing best practices<a class="headerlink" href="#multiprocessing-best-practices" title="Link to this heading">#</a></h1>
+<p><a class="reference internal" href="../python-api/multiprocessing.html#module-torch.multiprocessing" title="torch.multiprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.multiprocessing</span></code></a> is a drop in replacement for Python’s
+<a class="reference external" href="https://docs.python.org/3/library/multiprocessing.html#module-multiprocessing" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">multiprocessing</span></code></a> module. It supports the exact same operations,
+but extends it, so that all tensors sent through a
+<a class="reference external" href="https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Queue" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">multiprocessing.Queue</span></code></a>, will have their data moved into shared
+memory and will only send a handle to another process.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When a <a class="reference internal" href="../python-api/tensors.html#torch.Tensor" title="torch.Tensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code></a> is sent to another process, the
+<a class="reference internal" href="../python-api/tensors.html#torch.Tensor" title="torch.Tensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code></a> data is shared. If <a class="reference internal" href="../python-api/generated/torch.Tensor.grad.html#torch.Tensor.grad" title="torch.Tensor.grad"><code class="xref py py-attr docutils literal notranslate"><span class="pre">torch.Tensor.grad</span></code></a> is
+not <code class="docutils literal notranslate"><span class="pre">None</span></code>, it is also shared. After a <a class="reference internal" href="../python-api/tensors.html#torch.Tensor" title="torch.Tensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code></a> without
+a <a class="reference internal" href="../python-api/generated/torch.Tensor.grad.html#torch.Tensor.grad" title="torch.Tensor.grad"><code class="xref py py-attr docutils literal notranslate"><span class="pre">torch.Tensor.grad</span></code></a> field is sent to the other process, it
+creates a standard process-specific <code class="docutils literal notranslate"><span class="pre">.grad</span></code> <a class="reference internal" href="../python-api/tensors.html#torch.Tensor" title="torch.Tensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code></a> that
+is not automatically shared across all processes, unlike how the
+<a class="reference internal" href="../python-api/tensors.html#torch.Tensor" title="torch.Tensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code></a>’s data has been shared.</p>
+</div>
+<p>This allows to implement various training methods, like Hogwild, A3C, or any
+others that require asynchronous operation.</p>
+<section id="cuda-in-multiprocessing">
+<span id="multiprocessing-cuda-note"></span><h2>CUDA in multiprocessing<a class="headerlink" href="#cuda-in-multiprocessing" title="Link to this heading">#</a></h2>
+<p>The CUDA runtime does not support the <code class="docutils literal notranslate"><span class="pre">fork</span></code> start method; either the <code class="docutils literal notranslate"><span class="pre">spawn</span></code> or <code class="docutils literal notranslate"><span class="pre">forkserver</span></code> start method are
+required to use CUDA in subprocesses.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The start method can be set via either creating a context with
+<code class="docutils literal notranslate"><span class="pre">multiprocessing.get_context(...)</span></code> or directly using
+<code class="docutils literal notranslate"><span class="pre">multiprocessing.set_start_method(...)</span></code>.</p>
+</div>
+<p>Unlike CPU tensors, the sending process is required to keep the original tensor
+as long as the receiving process retains a copy of the tensor. It is implemented
+under the hood but requires users to follow the best practices for the program
+to run correctly. For example, the sending process must stay alive as long as
+the consumer process has references to the tensor, and the refcounting can not
+save you if the consumer process exits abnormally via a fatal signal. See
+<a class="reference internal" href="../python-api/multiprocessing.html#multiprocessing-cuda-sharing-details"><span class="std std-ref">this section</span></a>.</p>
+<p>See also: <a class="reference internal" href="cuda.html#cuda-nn-ddp-instead"><span class="std std-ref">Use nn.parallel.DistributedDataParallel instead of multiprocessing or nn.DataParallel</span></a></p>
+</section>
+<section id="best-practices-and-tips">
+<h2>Best practices and tips<a class="headerlink" href="#best-practices-and-tips" title="Link to this heading">#</a></h2>
+<section id="avoiding-and-fighting-deadlocks">
+<h3>Avoiding and fighting deadlocks<a class="headerlink" href="#avoiding-and-fighting-deadlocks" title="Link to this heading">#</a></h3>
+<p>There are a lot of things that can go wrong when a new process is spawned, with
+the most common cause of deadlocks being background threads. If there’s any
+thread that holds a lock or imports a module, and <code class="docutils literal notranslate"><span class="pre">fork</span></code> is called, it’s very
+likely that the subprocess will be in a corrupted state and will deadlock or
+fail in a different way. Note that even if you don’t, Python built in
+libraries do - no need to look further than <a class="reference external" href="https://docs.python.org/3/library/multiprocessing.html#module-multiprocessing" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">multiprocessing</span></code></a>.
+<a class="reference external" href="https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Queue" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">multiprocessing.Queue</span></code></a> is actually a very complex class, that
+spawns multiple threads used to serialize, send and receive objects, and they
+can cause aforementioned problems too. If you find yourself in such situation
+try using a <code class="xref py py-class docutils literal notranslate"><span class="pre">SimpleQueue</span></code>, that doesn’t
+use any additional threads.</p>
+<p>We’re trying our best to make it easy for you and ensure these deadlocks don’t
+happen but some things are out of our control. If you have any issues you can’t
+cope with for a while, try reaching out on forums, and we’ll see if it’s an
+issue we can fix.</p>
+</section>
+<section id="reuse-buffers-passed-through-a-queue">
+<h3>Reuse buffers passed through a Queue<a class="headerlink" href="#reuse-buffers-passed-through-a-queue" title="Link to this heading">#</a></h3>
+<p>Remember that each time you put a <a class="reference internal" href="../python-api/tensors.html#torch.Tensor" title="torch.Tensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code></a> into a
+<a class="reference external" href="https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Queue" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">multiprocessing.Queue</span></code></a>, it has to be moved into shared memory.
+If it’s already shared, it is a no-op, otherwise it will incur an additional
+memory copy that can slow down the whole process. Even if you have a pool of
+processes sending data to a single one, make it send the buffers back - this
+is nearly free and will let you avoid a copy when sending next batch.</p>
+</section>
+<section id="asynchronous-multiprocess-training-e-g-hogwild">
+<h3>Asynchronous multiprocess training (e.g. Hogwild)<a class="headerlink" href="#asynchronous-multiprocess-training-e-g-hogwild" title="Link to this heading">#</a></h3>
+<p>Using <a class="reference internal" href="../python-api/multiprocessing.html#module-torch.multiprocessing" title="torch.multiprocessing"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.multiprocessing</span></code></a>, it is possible to train a model
+asynchronously, with parameters either shared all the time, or being
+periodically synchronized. In the first case, we recommend sending over the whole
+model object, while in the latter, we advise to only send the
+<a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.state_dict" title="torch.nn.Module.state_dict"><code class="xref py py-meth docutils literal notranslate"><span class="pre">state_dict()</span></code></a>.</p>
+<p>We recommend using <a class="reference external" href="https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Queue" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">multiprocessing.Queue</span></code></a> for passing all kinds
+of PyTorch objects between processes. It is possible to e.g. inherit the tensors
+and storages already in shared memory, when using the <code class="docutils literal notranslate"><span class="pre">fork</span></code> start method,
+however it is very bug prone and should be used with care, and only by advanced
+users. Queues, even though they’re sometimes a less elegant solution, will work
+properly in all cases.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You should be careful about having global statements, that are not guarded
+with an <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">'__main__'</span></code>. If a different start method than
+<code class="docutils literal notranslate"><span class="pre">fork</span></code> is used, they will be executed in all subprocesses.</p>
+</div>
+<section id="hogwild">
+<h4>Hogwild<a class="headerlink" href="#hogwild" title="Link to this heading">#</a></h4>
+<p>A concrete Hogwild implementation can be found in the <a class="reference external" href="https://github.com/pytorch/examples/tree/master/mnist_hogwild">examples repository</a>,
+but to showcase the overall structure of the code, there’s also a minimal
+example below as well:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">torch.multiprocessing</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mp</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">model</span><span class="w"> </span><span class="kn">import</span> <span class="n">MyModel</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">train</span><span class="p">(</span><span class="n">model</span><span class="p">):</span>
+    <span class="c1"># Construct data_loader, optimizer, etc.</span>
+    <span class="k">for</span> <span class="n">data</span><span class="p">,</span> <span class="n">labels</span> <span class="ow">in</span> <span class="n">data_loader</span><span class="p">:</span>
+        <span class="n">optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+        <span class="n">loss_fn</span><span class="p">(</span><span class="n">model</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">labels</span><span class="p">)</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+        <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>  <span class="c1"># This will update the shared parameters</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">num_processes</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">MyModel</span><span class="p">()</span>
+    <span class="c1"># NOTE: this is required for the ``fork`` method to work</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">share_memory</span><span class="p">()</span>
+    <span class="n">processes</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">rank</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_processes</span><span class="p">):</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">mp</span><span class="o">.</span><span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">train</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">model</span><span class="p">,))</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+        <span class="n">processes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">processes</span><span class="p">:</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="cpu-in-multiprocessing">
+<h2>CPU in multiprocessing<a class="headerlink" href="#cpu-in-multiprocessing" title="Link to this heading">#</a></h2>
+<p>Inappropriate multiprocessing can lead to CPU oversubscription, causing
+different processes to compete for CPU resources, resulting in low
+efficiency.</p>
+<p>This tutorial will explain what CPU oversubscription is and how to
+avoid it.</p>
+<section id="cpu-oversubscription">
+<h3>CPU oversubscription<a class="headerlink" href="#cpu-oversubscription" title="Link to this heading">#</a></h3>
+<p>CPU oversubscription is a technical term that refers to a situation
+where the total number of vCPUs allocated to a system exceeds the total
+number of vCPUs available on the hardware.</p>
+<p>This leads to severe contention for CPU resources. In such cases, there
+is frequent switching between processes, which increases processes
+switching overhead and decreases overall system efficiency.</p>
+<p>See CPU oversubscription with the code examples in the Hogwild
+implementation found in the <a class="reference external" href="https://github.com/pytorch/examples/tree/main/mnist_hogwild">example
+repository</a>.</p>
+<p>When running the training example with the following command on CPU
+using 4 processes:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>main.py<span class="w"> </span>--num-processes<span class="w"> </span><span class="m">4</span>
+</pre></div>
+</div>
+<p>Assuming there are N vCPUs available on the machine, executing the above
+command will generate 4 subprocesses. Each subprocess will allocate N
+vCPUs for itself, resulting in a requirement of 4*N vCPUs. However, the
+machine only has N vCPUs available. Consequently, the different
+processes will compete for resources, leading to frequent process
+switching.</p>
+<p>The following observations indicate the presence of CPU over
+subscription:</p>
+<ol class="arabic simple">
+<li><p>High CPU Utilization: By using the <code class="docutils literal notranslate"><span class="pre">htop</span></code> command, you can observe
+that the CPU utilization is consistently high, often reaching or
+exceeding its maximum capacity. This indicates that the demand for
+CPU resources exceeds the available physical cores, causing
+contention and competition among processes for CPU time.</p></li>
+<li><p>Frequent Context Switching with Low System Efficiency: In an
+oversubscribed CPU scenario, processes compete for CPU time, and the
+operating system needs to rapidly switch between different processes
+to allocate resources fairly. This frequent context switching adds
+overhead and reduces the overall system efficiency.</p></li>
+</ol>
+</section>
+<section id="avoid-cpu-oversubscription">
+<h3>Avoid CPU oversubscription<a class="headerlink" href="#avoid-cpu-oversubscription" title="Link to this heading">#</a></h3>
+<p>A good way to avoid CPU oversubscription is proper resource allocation.
+Ensure that the number of processes or threads running concurrently does
+not exceed the available CPU resources.</p>
+<p>In this case, a solution would be to specify the appropriate number of
+threads in the subprocesses. This can be achieved by setting the number
+of threads for each process using the <code class="docutils literal notranslate"><span class="pre">torch.set_num_threads(int)</span></code>
+function in subprocess.</p>
+<p>Assuming there are N vCPUs on the machine and M processes will be
+generated, the maximum <code class="docutils literal notranslate"><span class="pre">num_threads</span></code> value used by each process would
+be <code class="docutils literal notranslate"><span class="pre">floor(N/M)</span></code>. To avoid CPU oversubscription in the mnist_hogwild
+example, the following changes are needed for the file <code class="docutils literal notranslate"><span class="pre">train.py</span></code> in
+<a class="reference external" href="https://github.com/pytorch/examples/tree/main/mnist_hogwild">example
+repository</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">train</span><span class="p">(</span><span class="n">rank</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">device</span><span class="p">,</span> <span class="n">dataset</span><span class="p">,</span> <span class="n">dataloader_kwargs</span><span class="p">):</span>
+    <span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">seed</span> <span class="o">+</span> <span class="n">rank</span><span class="p">)</span>
+
+    <span class="c1">#### define the num threads used in current sub-processes</span>
+    <span class="n">torch</span><span class="o">.</span><span class="n">set_num_threads</span><span class="p">(</span><span class="n">floor</span><span class="p">(</span><span class="n">N</span><span class="o">/</span><span class="n">M</span><span class="p">))</span>
+
+    <span class="n">train_loader</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="o">**</span><span class="n">dataloader_kwargs</span><span class="p">)</span>
+
+    <span class="n">optimizer</span> <span class="o">=</span> <span class="n">optim</span><span class="o">.</span><span class="n">SGD</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">lr</span><span class="p">,</span> <span class="n">momentum</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">momentum</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">epochs</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">train_epoch</span><span class="p">(</span><span class="n">epoch</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">device</span><span class="p">,</span> <span class="n">train_loader</span><span class="p">,</span> <span class="n">optimizer</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Set <code class="docutils literal notranslate"><span class="pre">num_thread</span></code> for each process using
+<code class="docutils literal notranslate"><span class="pre">torch.set_num_threads(floor(N/M))</span></code>. where you replace N with the
+number of vCPUs available and M with the chosen number of processes. The
+appropriate <code class="docutils literal notranslate"><span class="pre">num_thread</span></code> value will vary depending on the specific
+task at hand. However, as a general guideline, the maximum value for the
+<code class="docutils literal notranslate"><span class="pre">num_thread</span></code> should be <code class="docutils literal notranslate"><span class="pre">floor(N/M)</span></code> to avoid CPU oversubscription.
+In the <a class="reference external" href="https://github.com/pytorch/examples/tree/main/mnist_hogwild">mnist_hogwild</a> training example, after avoiding CPU over
+subscription, you can achieve a 30x performance boost.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="cpu_threading_torchscript_inference.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">CPU threading and TorchScript inference</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="extending.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Extending PyTorch</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc">
+<div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cuda-in-multiprocessing">CUDA in multiprocessing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices-and-tips">Best practices and tips</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avoiding-and-fighting-deadlocks">Avoiding and fighting deadlocks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reuse-buffers-passed-through-a-queue">Reuse buffers passed through a Queue</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asynchronous-multiprocess-training-e-g-hogwild">Asynchronous multiprocess training (e.g. Hogwild)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hogwild">Hogwild</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cpu-in-multiprocessing">CPU in multiprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cpu-oversubscription">CPU oversubscription</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avoid-cpu-oversubscription">Avoid CPU oversubscription</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/notes/multiprocessing.rst">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div>
+<div class="sidebar-secondary-item"> 
+</div>
+<div class="sidebar-secondary-item">
+ <p>PyTorch Libraries</p>
+ <ul>
+ 
+  <li><a href="https://pytorch.org/vision">torchvision</a></li>
+ 
+  <li><a href="https://pytorch.org/executorch">ExecuTorch</a></li>
+ 
+  <li><a href="https://https://pytorch.org/ao">torchao</a></li>
+ 
+  <li><a href="https://https://pytorch.org/audio">torchaudio</a></li>
+ 
+  <li><a href="https://https://pytorch.org/torchrec">torchrec</a></li>
+ 
+  <li><a href="https://https://pytorch.org/serve">torchserve</a></li>
+ 
+  <li><a href="https://https://pytorch.org/data">torchdata</a></li>
+ 
+  <li><a href="https://https://pytorch.org/xla">PyTorch on XLA devices</a></li>
+ 
+ </ul>
+</div>
+</div>
+
+</div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright PyTorch Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

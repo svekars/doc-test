@@ -1,0 +1,1193 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>torch.amp.autocast_mode &#8212; PyTorch main documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=949a1ff5" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/katex-math.css?v=91adb8b6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/jit.css?v=8de1ea5d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=3ccf5357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom2.css?v=189c4a6a" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=940804e7"></script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs"></script>
+    <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";import elkLayouts from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs";mermaid.registerLayoutLoaders(elkLayouts);mermaid.initialize({startOnLoad:false});</script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";
+window.addEventListener("load", () => mermaid.run());
+</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/torch/amp/autocast_mode';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+<div class="container-fluid header-holder tutorials-header" id="header-holder">
+  <div class="container">
+    <div class="header-container">
+      <a class="header-logo" href="" aria-label="PyTorch"></a>
+
+      <div class="main-menu">
+        <ul>
+
+          <li class="main-menu-item">
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Learn
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Get Started</span>
+                  <p>Run PyTorch locally or get started quickly with one of the supported cloud platforms</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Tutorials</span>
+                  <p>Whats new in PyTorch tutorials</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Learn the Basics</span>
+                  <p>Familiarize yourself with PyTorch concepts and modules</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Recipes</span>
+                  <p>Bite-size, ready-to-deploy PyTorch code examples</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Intro to PyTorch - YouTube Series</span>
+                  <p>Master PyTorch basics with our engaging YouTube tutorial series</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Ecosystem
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Tools</span>
+                  <p>Learn about the tools and frameworks in the PyTorch Ecosystem</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Community</span>
+                  <p>Join the PyTorch developer community to contribute, learn, and get your questions answered</p>
+                </a>
+                <a class="nav-dropdown-item" href="" target="_blank">
+                  <span class=dropdown-title>Forums</span>
+                  <p>A place to discuss PyTorch code, issues, install, research</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Developer Resources</span>
+                  <p>Find resources and get questions answered</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Contributor Awards - 2024</span>
+                  <p>Award winners announced at this year's PyTorch Conference</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Edge
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">About PyTorch Edge</span>
+                  <p>Build innovative and privacy-aware AI experiences for edge devices</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">ExecuTorch</span>
+                  <p>End-to-end solution for enabling on-device inference capabilities across mobile and edge devices</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">ExecuTorch Docs</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="main-menu-item">
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Docs
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch</span>
+                  <p>Explore the documentation for comprehensive guidance on how to use PyTorch</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Domains</span>
+                  <p>Read the PyTorch Domains documentation to learn more about domain-specific libraries</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Blogs & News
+              lnhetrlnle</a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Blog</span>
+                  <p>Catch up on the latest technical news and happenings</p>
+                </a>
+                 <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Community Blog</span>
+                  <p>Stories from the PyTorch ecosystem</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Videos</span>
+                  <p>Learn about the latest PyTorch tutorials, new, and more </p>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Community Stories</span>
+                  <p>Learn how our community solves real, everyday machine learning problems with PyTorch</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Events</span>
+                  <p>Find events, webinars, and podcasts</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Newsletter</span>
+                  <p>Stay up-to-date with the latest updates</p>
+                </a>
+            </div>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                About
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Foundation</span>
+                  <p>Learn more about the PyTorch Foundation</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Governing Board</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Cloud Credit Program</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Technical Advisory Council</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Staff</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Contact Us</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="main-menu-item">
+            <div class="no-dropdown">
+              <a href="" data-cta="join">
+                Become a Member
+              </a>
+            </div>
+          </li>
+          <li>
+           <div class="main-menu-item">
+             <a href="" class="github-icon">
+             </a>
+           </div>
+          </li>
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <li>
+            <div class="main-menu-item">
+             <a href="" class="search-icon">
+             </a>
+            </div>
+          </li>
+          --->
+        </ul>
+      </div>
+
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+    </div>
+  </div>
+</div>
+
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
+    <div class="navbar-item">
+      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
+    <img src="../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../python-api/index.html">
+    Python API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../notes/index.html">
+    Developer Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../community/index.html">
+    Community
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../lang-bindings/index.html">
+    Language Bindings
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../python-api/index.html">
+    Python API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../notes/index.html">
+    Developer Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../community/index.html">
+    Community
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../lang-bindings/index.html">
+    Language Bindings
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../../torch.html" class="nav-link">torch</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">torch.amp.autocast_mode</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for torch.amp.autocast_mode</h1><div class="highlight"><pre>
+<span></span><span class="c1"># mypy: allow-untyped-defs</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">collections</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">functools</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Optional</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">torch.types</span><span class="w"> </span><span class="kn">import</span> <span class="n">_dtype</span>
+
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+    <span class="n">HAS_NUMPY</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">except</span> <span class="ne">ModuleNotFoundError</span><span class="p">:</span>
+    <span class="n">HAS_NUMPY</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">np</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: ignore[assignment]</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;autocast_decorator&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;autocast&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;is_autocast_available&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;custom_fwd&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;custom_bwd&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+
+<div class="viewcode-block" id="is_autocast_available">
+<a class="viewcode-back" href="../../../python-api/amp.html#torch.amp.autocast_mode.is_autocast_available">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">is_autocast_available</span><span class="p">(</span><span class="n">device_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return a bool indicating if autocast is available on :attr:`device_type`.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        device_type(str):  Device type to use. Possible values are: &#39;cuda&#39;, &#39;cpu&#39;, &#39;xpu&#39; and so on.</span>
+<span class="sd">            The type is the same as the `type` attribute of a :class:`torch.device`.</span>
+<span class="sd">            Thus, you may obtain the device type of a tensor using `Tensor.device.type`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">_is_autocast_available</span><span class="p">(</span><span class="n">device_type</span><span class="p">)</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">autocast_decorator</span><span class="p">(</span><span class="n">autocast_instance</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
+    <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">decorate_autocast</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">with</span> <span class="n">autocast_instance</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="n">decorate_autocast</span><span class="o">.</span><span class="n">__script_unsupported</span> <span class="o">=</span> <span class="s2">&quot;@autocast() decorator is not supported in script mode&quot;</span>  <span class="c1"># type: ignore[attr-defined]</span>
+    <span class="k">return</span> <span class="n">decorate_autocast</span>
+
+
+<div class="viewcode-block" id="autocast">
+<a class="viewcode-back" href="../../../python-api/amp.html#torch.amp.autocast_mode.autocast">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">autocast</span><span class="p">:</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Instances of :class:`autocast` serve as context managers or decorators that</span>
+<span class="sd">    allow regions of your script to run in mixed precision.</span>
+
+<span class="sd">    In these regions, ops run in an op-specific dtype chosen by autocast</span>
+<span class="sd">    to improve performance while maintaining accuracy.</span>
+<span class="sd">    See the :ref:`Autocast Op Reference&lt;autocast-op-reference&gt;` for details.</span>
+
+<span class="sd">    When entering an autocast-enabled region, Tensors may be any type.</span>
+<span class="sd">    You should not call ``half()`` or ``bfloat16()`` on your model(s) or inputs when using autocasting.</span>
+
+<span class="sd">    :class:`autocast` should wrap only the forward pass(es) of your network, including the loss</span>
+<span class="sd">    computation(s).  Backward passes under autocast are not recommended.</span>
+<span class="sd">    Backward ops run in the same type that autocast used for corresponding forward ops.</span>
+
+<span class="sd">    Example for CUDA Devices::</span>
+
+<span class="sd">        # Creates model and optimizer in default precision</span>
+<span class="sd">        model = Net().cuda()</span>
+<span class="sd">        optimizer = optim.SGD(model.parameters(), ...)</span>
+
+<span class="sd">        for input, target in data:</span>
+<span class="sd">            optimizer.zero_grad()</span>
+
+<span class="sd">            # Enables autocasting for the forward pass (model + loss)</span>
+<span class="sd">            with torch.autocast(device_type=&quot;cuda&quot;):</span>
+<span class="sd">                output = model(input)</span>
+<span class="sd">                loss = loss_fn(output, target)</span>
+
+<span class="sd">            # Exits the context manager before backward()</span>
+<span class="sd">            loss.backward()</span>
+<span class="sd">            optimizer.step()</span>
+
+<span class="sd">    See the :ref:`Automatic Mixed Precision examples&lt;amp-examples&gt;` for usage (along with gradient scaling)</span>
+<span class="sd">    in more complex scenarios (e.g., gradient penalty, multiple models/losses, custom autograd functions).</span>
+
+<span class="sd">    :class:`autocast` can also be used as a decorator, e.g., on the ``forward`` method of your model::</span>
+
+<span class="sd">        class AutocastModel(nn.Module):</span>
+<span class="sd">            ...</span>
+<span class="sd">            @torch.autocast(device_type=&quot;cuda&quot;)</span>
+<span class="sd">            def forward(self, input):</span>
+<span class="sd">                ...</span>
+
+<span class="sd">    Floating-point Tensors produced in an autocast-enabled region may be ``float16``.</span>
+<span class="sd">    After returning to an autocast-disabled region, using them with floating-point</span>
+<span class="sd">    Tensors of different dtypes may cause type mismatch errors.  If so, cast the Tensor(s)</span>
+<span class="sd">    produced in the autocast region back to ``float32`` (or other dtype if desired).</span>
+<span class="sd">    If a Tensor from the autocast region is already ``float32``, the cast is a no-op,</span>
+<span class="sd">    and incurs no additional overhead.</span>
+<span class="sd">    CUDA Example::</span>
+
+<span class="sd">        # Creates some tensors in default dtype (here assumed to be float32)</span>
+<span class="sd">        a_float32 = torch.rand((8, 8), device=&quot;cuda&quot;)</span>
+<span class="sd">        b_float32 = torch.rand((8, 8), device=&quot;cuda&quot;)</span>
+<span class="sd">        c_float32 = torch.rand((8, 8), device=&quot;cuda&quot;)</span>
+<span class="sd">        d_float32 = torch.rand((8, 8), device=&quot;cuda&quot;)</span>
+
+<span class="sd">        with torch.autocast(device_type=&quot;cuda&quot;):</span>
+<span class="sd">            # torch.mm is on autocast&#39;s list of ops that should run in float16.</span>
+<span class="sd">            # Inputs are float32, but the op runs in float16 and produces float16 output.</span>
+<span class="sd">            # No manual casts are required.</span>
+<span class="sd">            e_float16 = torch.mm(a_float32, b_float32)</span>
+<span class="sd">            # Also handles mixed input types</span>
+<span class="sd">            f_float16 = torch.mm(d_float32, e_float16)</span>
+
+<span class="sd">        # After exiting autocast, calls f_float16.float() to use with d_float32</span>
+<span class="sd">        g_float32 = torch.mm(d_float32, f_float16.float())</span>
+
+<span class="sd">    CPU Training Example::</span>
+
+<span class="sd">        # Creates model and optimizer in default precision</span>
+<span class="sd">        model = Net()</span>
+<span class="sd">        optimizer = optim.SGD(model.parameters(), ...)</span>
+
+<span class="sd">        for epoch in epochs:</span>
+<span class="sd">            for input, target in data:</span>
+<span class="sd">                optimizer.zero_grad()</span>
+
+<span class="sd">                # Runs the forward pass with autocasting.</span>
+<span class="sd">                with torch.autocast(device_type=&quot;cpu&quot;, dtype=torch.bfloat16):</span>
+<span class="sd">                    output = model(input)</span>
+<span class="sd">                    loss = loss_fn(output, target)</span>
+
+<span class="sd">                loss.backward()</span>
+<span class="sd">                optimizer.step()</span>
+
+
+<span class="sd">    CPU Inference Example::</span>
+
+<span class="sd">        # Creates model in default precision</span>
+<span class="sd">        model = Net().eval()</span>
+
+<span class="sd">        with torch.autocast(device_type=&quot;cpu&quot;, dtype=torch.bfloat16):</span>
+<span class="sd">            for input in data:</span>
+<span class="sd">                # Runs the forward pass with autocasting.</span>
+<span class="sd">                output = model(input)</span>
+
+<span class="sd">    CPU Inference Example with Jit Trace::</span>
+
+<span class="sd">        class TestModel(nn.Module):</span>
+<span class="sd">            def __init__(self, input_size, num_classes):</span>
+<span class="sd">                super().__init__()</span>
+<span class="sd">                self.fc1 = nn.Linear(input_size, num_classes)</span>
+<span class="sd">            def forward(self, x):</span>
+<span class="sd">                return self.fc1(x)</span>
+
+<span class="sd">        input_size = 2</span>
+<span class="sd">        num_classes = 2</span>
+<span class="sd">        model = TestModel(input_size, num_classes).eval()</span>
+
+<span class="sd">        # For now, we suggest to disable the Jit Autocast Pass,</span>
+<span class="sd">        # As the issue: https://github.com/pytorch/pytorch/issues/75956</span>
+<span class="sd">        torch._C._jit_set_autocast_mode(False)</span>
+
+<span class="sd">        with torch.cpu.amp.autocast(cache_enabled=False):</span>
+<span class="sd">            model = torch.jit.trace(model, torch.randn(1, input_size))</span>
+<span class="sd">        model = torch.jit.freeze(model)</span>
+<span class="sd">        # Models Run</span>
+<span class="sd">        for _ in range(3):</span>
+<span class="sd">            model(torch.randn(1, input_size))</span>
+
+<span class="sd">    Type mismatch errors *in* an autocast-enabled region are a bug; if this is what you observe,</span>
+<span class="sd">    please file an issue.</span>
+
+<span class="sd">    ``autocast(enabled=False)`` subregions can be nested in autocast-enabled regions.</span>
+<span class="sd">    Locally disabling autocast can be useful, for example, if you want to force a subregion</span>
+<span class="sd">    to run in a particular ``dtype``.  Disabling autocast gives you explicit control over</span>
+<span class="sd">    the execution type.  In the subregion, inputs from the surrounding region</span>
+<span class="sd">    should be cast to ``dtype`` before use::</span>
+
+<span class="sd">        # Creates some tensors in default dtype (here assumed to be float32)</span>
+<span class="sd">        a_float32 = torch.rand((8, 8), device=&quot;cuda&quot;)</span>
+<span class="sd">        b_float32 = torch.rand((8, 8), device=&quot;cuda&quot;)</span>
+<span class="sd">        c_float32 = torch.rand((8, 8), device=&quot;cuda&quot;)</span>
+<span class="sd">        d_float32 = torch.rand((8, 8), device=&quot;cuda&quot;)</span>
+
+<span class="sd">        with torch.autocast(device_type=&quot;cuda&quot;):</span>
+<span class="sd">            e_float16 = torch.mm(a_float32, b_float32)</span>
+<span class="sd">            with torch.autocast(device_type=&quot;cuda&quot;, enabled=False):</span>
+<span class="sd">                # Calls e_float16.float() to ensure float32 execution</span>
+<span class="sd">                # (necessary because e_float16 was created in an autocasted region)</span>
+<span class="sd">                f_float32 = torch.mm(c_float32, e_float16.float())</span>
+
+<span class="sd">            # No manual casts are required when re-entering the autocast-enabled region.</span>
+<span class="sd">            # torch.mm again runs in float16 and produces float16 output, regardless of input types.</span>
+<span class="sd">            g_float16 = torch.mm(d_float32, f_float32)</span>
+
+<span class="sd">    The autocast state is thread-local.  If you want it enabled in a new thread, the context manager or decorator</span>
+<span class="sd">    must be invoked in that thread.  This affects :class:`torch.nn.DataParallel` and</span>
+<span class="sd">    :class:`torch.nn.parallel.DistributedDataParallel` when used with more than one GPU per process</span>
+<span class="sd">    (see :ref:`Working with Multiple GPUs&lt;amp-multigpu&gt;`).</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        device_type(str, required):  Device type to use. Possible values are: &#39;cuda&#39;, &#39;cpu&#39;, &#39;xpu&#39; and &#39;hpu&#39;.</span>
+<span class="sd">                                     The type is the same as the `type` attribute of a :class:`torch.device`.</span>
+<span class="sd">                                     Thus, you may obtain the device type of a tensor using `Tensor.device.type`.</span>
+<span class="sd">        enabled(bool, optional):  Whether autocasting should be enabled in the region.</span>
+<span class="sd">            Default: ``True``</span>
+<span class="sd">        dtype(torch_dtype, optional):  Data type for ops run in autocast. It uses the default value</span>
+<span class="sd">            (``torch.float16`` for CUDA and ``torch.bfloat16`` for CPU), given by</span>
+<span class="sd">            :func:`~torch.get_autocast_dtype`, if :attr:`dtype` is ``None``.</span>
+<span class="sd">            Default: ``None``</span>
+<span class="sd">        cache_enabled(bool, optional):  Whether the weight cache inside autocast should be enabled.</span>
+<span class="sd">            Default: ``True``</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">device_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">dtype</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">_dtype</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">enabled</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">cache_enabled</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">device_type</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Expected `device_type` of type `str`, got: `</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">device_type</span><span class="p">)</span><span class="si">}</span><span class="s2">`&quot;</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="n">dtype</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dtype</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">get_autocast_dtype</span><span class="p">(</span><span class="n">device_type</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">_jit_internal</span><span class="o">.</span><span class="n">is_scripting</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_enabled</span> <span class="o">=</span> <span class="n">enabled</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">device</span> <span class="o">=</span> <span class="n">device_type</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fast_dtype</span> <span class="o">=</span> <span class="n">dtype</span>
+            <span class="k">assert</span> <span class="n">dtype</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="k">return</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">device</span> <span class="o">=</span> <span class="n">device_type</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">is_autocast_available</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;User specified an unsupported autocast device_type &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
+            <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">custom_backend_name</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">_get_privateuse1_backend_name</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fast_dtype</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">get_autocast_dtype</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">device</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">custom_backend_name</span><span class="p">:</span>
+            <span class="n">necessary_funcs</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="s2">&quot;get_amp_supported_dtype&quot;</span><span class="p">,</span>
+            <span class="p">]</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Tried to use AMP with the `</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">custom_backend_name</span><span class="si">}</span><span class="s2">` backend, but the backend has not &quot;</span>
+            <span class="n">message</span> <span class="o">+=</span> <span class="s2">&quot;registered a module or  the module miss some necessary funcs. The backend should register &quot;</span>
+            <span class="n">message</span> <span class="o">+=</span> <span class="s2">&quot;a module by `torch._register_device_module`, and the module must have these funcs: </span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="n">message</span> <span class="o">+=</span> <span class="s2">&quot;`get_amp_supported_dtype() -&gt; List[torch.dtype]`. </span><span class="se">\n</span><span class="s2">&quot;</span>
+
+            <span class="k">assert</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">torch</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">custom_backend_name</span><span class="p">),</span> <span class="n">message</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">custom_device_mod</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">torch</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">custom_backend_name</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">necessary_funcs</span><span class="p">:</span>
+                <span class="k">assert</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">custom_device_mod</span><span class="p">,</span> <span class="n">func</span><span class="p">),</span> <span class="p">(</span>
+                    <span class="n">message</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;But the func `</span><span class="si">{</span><span class="n">func</span><span class="si">}</span><span class="s2">` is missing. </span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cache_enabled</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">is_autocast_cache_enabled</span><span class="p">()</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="n">enabled</span>
+            <span class="ow">and</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">amp</span><span class="o">.</span><span class="n">common</span><span class="o">.</span><span class="n">amp_definitely_not_available</span><span class="p">()</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">device</span> <span class="o">==</span> <span class="s2">&quot;cuda&quot;</span>
+        <span class="p">):</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                <span class="s2">&quot;User provided device_type of &#39;cuda&#39;, but CUDA is not available. Disabling&quot;</span>
+            <span class="p">)</span>
+            <span class="n">enabled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="n">dtype</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fast_dtype</span> <span class="o">=</span> <span class="n">dtype</span>
+        <span class="k">if</span> <span class="n">cache_enabled</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_cache_enabled</span> <span class="o">=</span> <span class="n">cache_enabled</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">device</span> <span class="o">==</span> <span class="s2">&quot;cpu&quot;</span><span class="p">:</span>
+            <span class="n">supported_dtype</span> <span class="o">=</span> <span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">bfloat16</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">float16</span><span class="p">]</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fast_dtype</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">supported_dtype</span> <span class="ow">and</span> <span class="n">enabled</span><span class="p">:</span>
+                <span class="n">error_message</span> <span class="o">=</span> <span class="s2">&quot;In CPU autocast, but the target dtype is not supported. Disabling autocast.</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="n">error_message</span> <span class="o">+=</span> <span class="s2">&quot;CPU Autocast only supports dtype of &quot;</span>
+                <span class="n">error_message</span> <span class="o">+=</span> <span class="p">(</span>
+                    <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span> <span class="k">for</span> <span class="n">dtype</span> <span class="ow">in</span> <span class="n">supported_dtype</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; currently.&quot;</span>
+                <span class="p">)</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">error_message</span><span class="p">)</span>
+                <span class="n">enabled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">device</span> <span class="o">==</span> <span class="s2">&quot;xpu&quot;</span><span class="p">:</span>
+            <span class="n">supported_dtype</span> <span class="o">=</span> <span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">bfloat16</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">float16</span><span class="p">]</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fast_dtype</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">supported_dtype</span><span class="p">:</span>
+                <span class="n">error_message</span> <span class="o">=</span> <span class="s2">&quot;In XPU autocast, but the target dtype is not supported. Disabling autocast.</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="n">error_message</span> <span class="o">+=</span> <span class="s2">&quot;XPU Autocast only supports dtypes of torch.bfloat16 and torch.float16 currently.&quot;</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">error_message</span><span class="p">)</span>
+                <span class="n">enabled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">device</span> <span class="o">==</span> <span class="s2">&quot;ipu&quot;</span><span class="p">:</span>
+            <span class="n">supported_dtypes</span> <span class="o">=</span> <span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">bfloat16</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">float16</span><span class="p">]</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fast_dtype</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">supported_dtypes</span><span class="p">:</span>
+                <span class="n">error_message</span> <span class="o">=</span> <span class="s2">&quot;In IPU autocast, but the target dtype is not supported. Disabling autocast.</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="n">error_message</span> <span class="o">+=</span> <span class="s2">&quot;IPU Autocast only supports dtypes of torch.bfloat16 and torch.float16 currently.&quot;</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">error_message</span><span class="p">)</span>
+                <span class="n">enabled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">device</span> <span class="o">==</span> <span class="s2">&quot;hpu&quot;</span><span class="p">:</span>
+            <span class="n">supported_dtype</span> <span class="o">=</span> <span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">bfloat16</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">float16</span><span class="p">]</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fast_dtype</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">supported_dtype</span><span class="p">:</span>
+                <span class="n">error_message</span> <span class="o">=</span> <span class="s2">&quot;In HPU autocast, but the target dtype is not supported. Disabling autocast.</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="n">error_message</span> <span class="o">+=</span> <span class="s2">&quot;HPU Autocast only supports dtypes of torch.bfloat16 and torch.float16 currently.&quot;</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">error_message</span><span class="p">)</span>
+                <span class="n">enabled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">device</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">custom_backend_name</span><span class="p">:</span>
+            <span class="n">supported_dtype</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">custom_device_mod</span><span class="o">.</span><span class="n">get_amp_supported_dtype</span><span class="p">()</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fast_dtype</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">supported_dtype</span><span class="p">:</span>
+                <span class="n">error_message</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;In </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">custom_backend_name</span><span class="si">}</span><span class="s2"> autocast, but the target dtype is not supported. &quot;</span>
+                <span class="n">error_message</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;Disabling autocast.</span><span class="se">\n</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">custom_backend_name</span><span class="si">}</span><span class="s2"> Autocast only supports dtypes of &quot;</span>
+                <span class="n">error_message</span> <span class="o">+=</span> <span class="p">(</span>
+                    <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span> <span class="k">for</span> <span class="n">dtype</span> <span class="ow">in</span> <span class="n">supported_dtype</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; currently.&quot;</span>
+                <span class="p">)</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">error_message</span><span class="p">)</span>
+                <span class="n">enabled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">device</span> <span class="o">==</span> <span class="s2">&quot;cuda&quot;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span>
+                <span class="n">enabled</span>
+                <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">fast_dtype</span> <span class="o">==</span> <span class="n">torch</span><span class="o">.</span><span class="n">bfloat16</span>
+                <span class="ow">and</span> <span class="ow">not</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_bf16_supported</span><span class="p">()</span>
+            <span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
+                    <span class="s2">&quot;Current CUDA Device does not support bfloat16. Please switch dtype to float16.&quot;</span>
+                <span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">device</span> <span class="o">==</span> <span class="s2">&quot;mps&quot;</span><span class="p">:</span>
+            <span class="n">supported_dtype</span> <span class="o">=</span> <span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">bfloat16</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">float16</span><span class="p">]</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fast_dtype</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">supported_dtype</span><span class="p">:</span>
+                <span class="n">error_message</span> <span class="o">=</span> <span class="p">(</span>
+                    <span class="s2">&quot;In MPS autocast, but the target dtype is not supported. Disabling autocast.</span><span class="se">\n</span><span class="s2">&quot;</span>
+                    <span class="s2">&quot;MPS Autocast only supports dtype of torch.bfloat16 and torch.float16 currently.&quot;</span>
+                <span class="p">)</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">error_message</span><span class="p">)</span>
+                <span class="n">enabled</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">fast_dtype</span> <span class="o">==</span> <span class="n">torch</span><span class="o">.</span><span class="n">bfloat16</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">torch</span><span class="o">.</span><span class="n">backends</span><span class="o">.</span><span class="n">mps</span><span class="o">.</span><span class="n">is_macos_or_newer</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span>
+                    <span class="n">error_message</span> <span class="o">=</span> <span class="p">(</span>
+                        <span class="s2">&quot;In MPS autocast, but the target dtype torch.bfloat16 is not supported &quot;</span>
+                        <span class="s2">&quot;on macOS versions below 14. Disabling autocast.&quot;</span>
+                    <span class="p">)</span>
+                    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">error_message</span><span class="p">)</span>
+                    <span class="n">enabled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">device</span> <span class="o">==</span> <span class="s2">&quot;xla&quot;</span><span class="p">:</span>
+            <span class="n">supported_dtype</span> <span class="o">=</span> <span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">float16</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">bfloat16</span><span class="p">]</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fast_dtype</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">supported_dtype</span><span class="p">:</span>
+                <span class="n">error_message</span> <span class="o">=</span> <span class="s2">&quot;In XLA autocast, but the target dtype is not supported. Disabling autocast.</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="n">error_message</span> <span class="o">+=</span> <span class="p">(</span>
+                    <span class="s2">&quot;XLA Autocast only supports dtype of torch.bfloat16 currently.&quot;</span>
+                <span class="p">)</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">error_message</span><span class="p">)</span>
+                <span class="n">enabled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_enabled</span> <span class="o">=</span> <span class="n">enabled</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">_jit_internal</span><span class="o">.</span><span class="n">is_scripting</span><span class="p">():</span>
+            <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">fast_dtype</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="k">return</span> <span class="bp">self</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">prev_cache_enabled</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">is_autocast_cache_enabled</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prev</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">is_autocast_enabled</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prev_fastdtype</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">get_autocast_dtype</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">set_autocast_enabled</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_enabled</span><span class="p">)</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">set_autocast_dtype</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fast_dtype</span><span class="p">)</span>  <span class="c1"># type: ignore[arg-type]</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">autocast_increment_nesting</span><span class="p">()</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">set_autocast_cache_enabled</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cache_enabled</span><span class="p">)</span>
+
+        <span class="c1"># only dispatch to PreDispatchTorchFunctionMode to avoid exposing this</span>
+        <span class="c1"># API to other functional modes. We only expose to PreDispatchTorchFunctionMode</span>
+        <span class="c1"># for preserving autocast in torch.export.export.</span>
+        <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">_is_torch_function_mode_enabled</span><span class="p">():</span>
+            <span class="n">stacks</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">overrides</span><span class="o">.</span><span class="n">_get_current_function_mode_stack</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">mode</span> <span class="ow">in</span> <span class="n">stacks</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span>
+                    <span class="n">mode</span><span class="p">,</span>
+                    <span class="n">torch</span><span class="o">.</span><span class="n">fx</span><span class="o">.</span><span class="n">experimental</span><span class="o">.</span><span class="n">proxy_tensor</span><span class="o">.</span><span class="n">PreDispatchTorchFunctionMode</span><span class="p">,</span>
+                <span class="p">):</span>
+                    <span class="n">args</span> <span class="o">=</span> <span class="p">(</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">fast_dtype</span><span class="p">,</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_enabled</span><span class="p">,</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_cache_enabled</span><span class="p">,</span>
+                    <span class="p">)</span>
+                    <span class="k">return</span> <span class="n">mode</span><span class="o">.</span><span class="n">__torch_function__</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">amp</span><span class="o">.</span><span class="n">_enter_autocast</span><span class="p">,</span> <span class="p">(),</span> <span class="n">args</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_type</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">exc_val</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">exc_tb</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>  <span class="c1"># type: ignore[override]</span>
+        <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">_jit_internal</span><span class="o">.</span><span class="n">is_scripting</span><span class="p">():</span>
+            <span class="k">return</span>
+
+        <span class="c1"># Drop the cache when we exit to a nesting level that&#39;s outside any instance of autocast.</span>
+        <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">autocast_decrement_nesting</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">torch</span><span class="o">.</span><span class="n">clear_autocast_cache</span><span class="p">()</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">set_autocast_enabled</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">prev</span><span class="p">)</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">set_autocast_dtype</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">prev_fastdtype</span><span class="p">)</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">set_autocast_cache_enabled</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">prev_cache_enabled</span><span class="p">)</span>
+
+        <span class="c1"># only dispatch to PreDispatchTorchFunctionMode to avoid exposing this</span>
+        <span class="c1"># API to other functional modes. We only expose to PreDispatchTorchFunctionMode</span>
+        <span class="c1"># for preserving autocast in torch.export.export.</span>
+        <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">_is_torch_function_mode_enabled</span><span class="p">():</span>
+            <span class="n">stacks</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">overrides</span><span class="o">.</span><span class="n">_get_current_function_mode_stack</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">mode</span> <span class="ow">in</span> <span class="n">stacks</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span>
+                    <span class="n">mode</span><span class="p">,</span>
+                    <span class="n">torch</span><span class="o">.</span><span class="n">fx</span><span class="o">.</span><span class="n">experimental</span><span class="o">.</span><span class="n">proxy_tensor</span><span class="o">.</span><span class="n">PreDispatchTorchFunctionMode</span><span class="p">,</span>
+                <span class="p">):</span>
+                    <span class="k">return</span> <span class="n">mode</span><span class="o">.</span><span class="n">__torch_function__</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">amp</span><span class="o">.</span><span class="n">_exit_autocast</span><span class="p">,</span> <span class="p">(),</span> <span class="p">())</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">_jit_internal</span><span class="o">.</span><span class="n">is_scripting</span><span class="p">():</span>
+            <span class="k">return</span> <span class="n">func</span>
+        <span class="k">return</span> <span class="n">autocast_decorator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">)</span></div>
+
+
+
+<span class="c1"># These functions aren&#39;t meant for public usage.</span>
+<span class="c1"># They are what we trace into a graph during pre_dispatch tracing</span>
+<span class="c1"># when we encounter an autocast context manager.</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_enter_autocast</span><span class="p">(</span><span class="o">*</span><span class="n">vals</span><span class="p">):</span>
+    <span class="c1"># For pre-dispatch tracing, if a TorchFunction mode is active, we&#39;ll want to trace this into a graph.</span>
+    <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">_is_torch_function_mode_enabled</span><span class="p">():</span>
+        <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">overrides</span><span class="o">.</span><span class="n">handle_torch_function</span><span class="p">(</span>
+            <span class="n">torch</span><span class="o">.</span><span class="n">amp</span><span class="o">.</span><span class="n">_enter_autocast</span><span class="p">,</span> <span class="p">[],</span> <span class="o">*</span><span class="n">vals</span>
+        <span class="p">)</span>
+    <span class="n">mode</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">amp</span><span class="o">.</span><span class="n">autocast</span><span class="p">(</span><span class="o">*</span><span class="n">vals</span><span class="p">)</span>
+    <span class="n">mode</span><span class="o">.</span><span class="fm">__enter__</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">mode</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_exit_autocast</span><span class="p">(</span><span class="n">mode</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">_is_torch_function_mode_enabled</span><span class="p">():</span>
+        <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">overrides</span><span class="o">.</span><span class="n">handle_torch_function</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">amp</span><span class="o">.</span><span class="n">_exit_autocast</span><span class="p">,</span> <span class="p">[],</span> <span class="n">mode</span><span class="p">)</span>
+    <span class="n">mode</span><span class="o">.</span><span class="fm">__exit__</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+
+<span class="c1"># Casts Tensors and containers of Tensors.  Special-cases passthroughs for strings and np.ndarrays, which</span>
+<span class="c1"># may be falsely detected as &quot;Iterables.&quot;</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_cast</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">device_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">_dtype</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">):</span>
+        <span class="n">is_eligible</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">value</span><span class="o">.</span><span class="n">is_floating_point</span><span class="p">()</span>
+            <span class="ow">and</span> <span class="n">value</span><span class="o">.</span><span class="n">device</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">device_type</span>
+            <span class="ow">and</span> <span class="p">(</span><span class="n">value</span><span class="o">.</span><span class="n">dtype</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">torch</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span> <span class="k">if</span> <span class="n">is_eligible</span> <span class="k">else</span> <span class="n">value</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">)):</span>
+        <span class="k">return</span> <span class="n">value</span>
+    <span class="k">elif</span> <span class="n">HAS_NUMPY</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">value</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">collections</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Mapping</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="n">_cast</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">device_type</span><span class="p">,</span> <span class="n">dtype</span><span class="p">):</span> <span class="n">_cast</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">device_type</span><span class="p">,</span> <span class="n">dtype</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+        <span class="p">}</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">collections</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Iterable</span><span class="p">):</span>
+        <span class="n">iterable</span> <span class="o">=</span> <span class="p">(</span><span class="n">_cast</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">device_type</span><span class="p">,</span> <span class="n">dtype</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">value</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)):</span>
+            <span class="k">return</span> <span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)(</span><span class="n">iterable</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">iterable</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">value</span>
+
+
+<div class="viewcode-block" id="custom_fwd">
+<a class="viewcode-back" href="../../../python-api/amp.html#torch.amp.autocast_mode.custom_fwd">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">custom_fwd</span><span class="p">(</span>
+    <span class="n">fwd</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">device_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">cast_inputs</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">_dtype</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create a helper decorator for ``forward`` methods of custom autograd functions.</span>
+
+<span class="sd">    Autograd functions are subclasses of :class:`torch.autograd.Function`.</span>
+<span class="sd">    See the :ref:`example page&lt;amp-custom-examples&gt;` for more detail.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        device_type(str):  Device type to use. &#39;cuda&#39;, &#39;cpu&#39;, &#39;xpu&#39; and so on.</span>
+<span class="sd">            The type is the same as the `type` attribute of a :class:`torch.device`.</span>
+<span class="sd">            Thus, you may obtain the device type of a tensor using `Tensor.device.type`.</span>
+<span class="sd">        cast_inputs (:class:`torch.dtype` or None, optional, default=None):  If not ``None``,</span>
+<span class="sd">            when ``forward`` runs in an autocast-enabled region, casts incoming</span>
+<span class="sd">            floating-point Tensors to the target dtype (non-floating-point Tensors are not affected),</span>
+<span class="sd">            then executes ``forward`` with autocast disabled.</span>
+<span class="sd">            If ``None``, ``forward``&#39;s internal ops execute with the current autocast state.</span>
+
+<span class="sd">    .. note::</span>
+<span class="sd">        If the decorated ``forward`` is called outside an autocast-enabled region,</span>
+<span class="sd">        :func:`custom_fwd&lt;custom_fwd&gt;` is a no-op and ``cast_inputs`` has no effect.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">device_type</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Expected `device_type` of type `str`, got: `</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">device_type</span><span class="p">)</span><span class="si">}</span><span class="s2">`&quot;</span>
+        <span class="p">)</span>
+    <span class="k">if</span> <span class="n">fwd</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span>
+            <span class="n">custom_fwd</span><span class="p">,</span> <span class="n">device_type</span><span class="o">=</span><span class="n">device_type</span><span class="p">,</span> <span class="n">cast_inputs</span><span class="o">=</span><span class="n">cast_inputs</span>
+        <span class="p">)</span>
+
+    <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">fwd</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">decorate_fwd</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">_dtype</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">get_autocast_dtype</span><span class="p">(</span><span class="n">device_type</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cast_inputs</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">_fwd_used_autocast</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">is_autocast_enabled</span><span class="p">(</span><span class="n">device_type</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">fwd</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">autocast_context</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">is_autocast_enabled</span><span class="p">(</span><span class="n">device_type</span><span class="p">)</span>
+            <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">_fwd_used_autocast</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">if</span> <span class="n">autocast_context</span><span class="p">:</span>
+                <span class="k">with</span> <span class="n">autocast</span><span class="p">(</span><span class="n">device_type</span><span class="o">=</span><span class="n">device_type</span><span class="p">,</span> <span class="n">enabled</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="n">fwd</span><span class="p">(</span>
+                        <span class="o">*</span><span class="n">_cast</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">device_type</span><span class="p">,</span> <span class="n">cast_inputs</span><span class="p">),</span>
+                        <span class="o">**</span><span class="n">_cast</span><span class="p">(</span><span class="n">kwargs</span><span class="p">,</span> <span class="n">device_type</span><span class="p">,</span> <span class="n">cast_inputs</span><span class="p">),</span>
+                    <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">fwd</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">decorate_fwd</span></div>
+
+
+
+<span class="c1"># Autograd ensures incoming gradients are the same type as forward outputs.  Allowing a separate</span>
+<span class="c1"># cast_inputs argument on custom_bwd is unnecessary and could cause errors if it doesn&#39;t match</span>
+<span class="c1"># cast_inputs supplied to custom_fwd.</span>
+<div class="viewcode-block" id="custom_bwd">
+<a class="viewcode-back" href="../../../python-api/amp.html#torch.amp.autocast_mode.custom_bwd">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">custom_bwd</span><span class="p">(</span><span class="n">bwd</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">device_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a helper decorator for backward methods of custom autograd functions.</span>
+
+<span class="sd">    Autograd functions are subclasses of :class:`torch.autograd.Function`.</span>
+<span class="sd">    Ensures that ``backward`` executes with the same autocast state as ``forward``.</span>
+<span class="sd">    See the :ref:`example page&lt;amp-custom-examples&gt;` for more detail.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        device_type(str):  Device type to use. &#39;cuda&#39;, &#39;cpu&#39;, &#39;xpu&#39; and so on.</span>
+<span class="sd">            The type is the same as the `type` attribute of a :class:`torch.device`.</span>
+<span class="sd">            Thus, you may obtain the device type of a tensor using `Tensor.device.type`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">device_type</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Expected `device_type` of type `str`, got: `</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">device_type</span><span class="p">)</span><span class="si">}</span><span class="s2">`&quot;</span>
+        <span class="p">)</span>
+    <span class="k">if</span> <span class="n">bwd</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">custom_bwd</span><span class="p">,</span> <span class="n">device_type</span><span class="o">=</span><span class="n">device_type</span><span class="p">)</span>
+
+    <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">bwd</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">decorate_bwd</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">with</span> <span class="n">autocast</span><span class="p">(</span>
+            <span class="n">device_type</span><span class="o">=</span><span class="n">device_type</span><span class="p">,</span>
+            <span class="n">enabled</span><span class="o">=</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">_fwd_used_autocast</span><span class="p">,</span>
+            <span class="n">dtype</span><span class="o">=</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">_dtype</span><span class="p">,</span>
+        <span class="p">):</span>
+            <span class="k">return</span> <span class="n">bwd</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">decorate_bwd</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright PyTorch Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

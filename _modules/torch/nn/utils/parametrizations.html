@@ -1,0 +1,1267 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>torch.nn.utils.parametrizations &#8212; PyTorch main documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=949a1ff5" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/katex-math.css?v=91adb8b6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/jit.css?v=8de1ea5d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=3ccf5357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom2.css?v=189c4a6a" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=940804e7"></script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs"></script>
+    <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";import elkLayouts from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs";mermaid.registerLayoutLoaders(elkLayouts);mermaid.initialize({startOnLoad:false});</script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";
+window.addEventListener("load", () => mermaid.run());
+</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/torch/nn/utils/parametrizations';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+<div class="container-fluid header-holder tutorials-header" id="header-holder">
+  <div class="container">
+    <div class="header-container">
+      <a class="header-logo" href="" aria-label="PyTorch"></a>
+
+      <div class="main-menu">
+        <ul>
+
+          <li class="main-menu-item">
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Learn
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Get Started</span>
+                  <p>Run PyTorch locally or get started quickly with one of the supported cloud platforms</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Tutorials</span>
+                  <p>Whats new in PyTorch tutorials</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Learn the Basics</span>
+                  <p>Familiarize yourself with PyTorch concepts and modules</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Recipes</span>
+                  <p>Bite-size, ready-to-deploy PyTorch code examples</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Intro to PyTorch - YouTube Series</span>
+                  <p>Master PyTorch basics with our engaging YouTube tutorial series</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Ecosystem
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Tools</span>
+                  <p>Learn about the tools and frameworks in the PyTorch Ecosystem</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Community</span>
+                  <p>Join the PyTorch developer community to contribute, learn, and get your questions answered</p>
+                </a>
+                <a class="nav-dropdown-item" href="" target="_blank">
+                  <span class=dropdown-title>Forums</span>
+                  <p>A place to discuss PyTorch code, issues, install, research</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Developer Resources</span>
+                  <p>Find resources and get questions answered</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Contributor Awards - 2024</span>
+                  <p>Award winners announced at this year's PyTorch Conference</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Edge
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">About PyTorch Edge</span>
+                  <p>Build innovative and privacy-aware AI experiences for edge devices</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">ExecuTorch</span>
+                  <p>End-to-end solution for enabling on-device inference capabilities across mobile and edge devices</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">ExecuTorch Docs</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="main-menu-item">
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Docs
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch</span>
+                  <p>Explore the documentation for comprehensive guidance on how to use PyTorch</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Domains</span>
+                  <p>Read the PyTorch Domains documentation to learn more about domain-specific libraries</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Blogs & News
+              lnhetrlnle</a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Blog</span>
+                  <p>Catch up on the latest technical news and happenings</p>
+                </a>
+                 <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Community Blog</span>
+                  <p>Stories from the PyTorch ecosystem</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Videos</span>
+                  <p>Learn about the latest PyTorch tutorials, new, and more </p>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Community Stories</span>
+                  <p>Learn how our community solves real, everyday machine learning problems with PyTorch</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Events</span>
+                  <p>Find events, webinars, and podcasts</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Newsletter</span>
+                  <p>Stay up-to-date with the latest updates</p>
+                </a>
+            </div>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                About
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Foundation</span>
+                  <p>Learn more about the PyTorch Foundation</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Governing Board</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Cloud Credit Program</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Technical Advisory Council</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Staff</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Contact Us</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="main-menu-item">
+            <div class="no-dropdown">
+              <a href="" data-cta="join">
+                Become a Member
+              </a>
+            </div>
+          </li>
+          <li>
+           <div class="main-menu-item">
+             <a href="" class="github-icon">
+             </a>
+           </div>
+          </li>
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <li>
+            <div class="main-menu-item">
+             <a href="" class="search-icon">
+             </a>
+            </div>
+          </li>
+          --->
+        </ul>
+      </div>
+
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+    </div>
+  </div>
+</div>
+
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
+    <div class="navbar-item">
+      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
+    <img src="../../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../python-api/index.html">
+    Python API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../notes/index.html">
+    Developer Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../community/index.html">
+    Community
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../lang-bindings/index.html">
+    Language Bindings
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../python-api/index.html">
+    Python API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../notes/index.html">
+    Developer Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../community/index.html">
+    Community
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../lang-bindings/index.html">
+    Language Bindings
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Module code</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../../../torch.html" class="nav-link">torch</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">torch.nn.utils.parametrizations</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for torch.nn.utils.parametrizations</h1><div class="highlight"><pre>
+<span></span><span class="c1"># mypy: allow-untyped-defs</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">auto</span><span class="p">,</span> <span class="n">Enum</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Optional</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn.functional</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">F</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">torch</span><span class="w"> </span><span class="kn">import</span> <span class="n">Tensor</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">torch.nn.modules</span><span class="w"> </span><span class="kn">import</span> <span class="n">Module</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">torch.nn.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">parametrize</span>
+
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;orthogonal&quot;</span><span class="p">,</span> <span class="s2">&quot;spectral_norm&quot;</span><span class="p">,</span> <span class="s2">&quot;weight_norm&quot;</span><span class="p">]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_is_orthogonal</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">eps</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">n</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">Q</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">),</span> <span class="n">Q</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">Id</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">Q</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">Q</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+    <span class="c1"># A reasonable eps, but not too large</span>
+    <span class="n">eps</span> <span class="o">=</span> <span class="mf">10.0</span> <span class="o">*</span> <span class="n">n</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">finfo</span><span class="p">(</span><span class="n">Q</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span><span class="o">.</span><span class="n">eps</span>
+    <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">Q</span><span class="o">.</span><span class="n">mH</span> <span class="o">@</span> <span class="n">Q</span><span class="p">,</span> <span class="n">Id</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="n">eps</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_make_orthogonal</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Assume that A is a tall matrix.</span>
+
+<span class="sd">    Compute the Q factor s.t. A = QR (A may be complex) and diag(R) is real and non-negative.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">tau</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">geqrf</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+    <span class="n">Q</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">householder_product</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">tau</span><span class="p">)</span>
+    <span class="c1"># The diagonal of X is the diagonal of R (which is always real) so we normalise by its signs</span>
+    <span class="n">Q</span> <span class="o">*=</span> <span class="n">X</span><span class="o">.</span><span class="n">diagonal</span><span class="p">(</span><span class="n">dim1</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">dim2</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sgn</span><span class="p">()</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Q</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">_OrthMaps</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">matrix_exp</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+    <span class="n">cayley</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+    <span class="n">householder</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">_Orthogonal</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+    <span class="n">base</span><span class="p">:</span> <span class="n">Tensor</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">orthogonal_map</span><span class="p">:</span> <span class="n">_OrthMaps</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">use_trivialization</span><span class="o">=</span><span class="kc">True</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+        <span class="c1"># Note [Householder complex]</span>
+        <span class="c1"># For complex tensors, it is not possible to compute the tensor `tau` necessary for</span>
+        <span class="c1"># linalg.householder_product from the reflectors.</span>
+        <span class="c1"># To see this, note that the reflectors have a shape like:</span>
+        <span class="c1"># 0 0 0</span>
+        <span class="c1"># * 0 0</span>
+        <span class="c1"># * * 0</span>
+        <span class="c1"># which, for complex matrices, give n(n-1) (real) parameters. Now, you need n^2 parameters</span>
+        <span class="c1"># to parametrize the unitary matrices. Saving tau on its own does not work either, because</span>
+        <span class="c1"># not every combination of `(A, tau)` gives a unitary matrix, meaning that if we optimise</span>
+        <span class="c1"># them as independent tensors we would not maintain the constraint</span>
+        <span class="c1"># An equivalent reasoning holds for rectangular matrices</span>
+        <span class="k">if</span> <span class="n">weight</span><span class="o">.</span><span class="n">is_complex</span><span class="p">()</span> <span class="ow">and</span> <span class="n">orthogonal_map</span> <span class="o">==</span> <span class="n">_OrthMaps</span><span class="o">.</span><span class="n">householder</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;The householder parametrization does not support complex tensors.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="n">weight</span><span class="o">.</span><span class="n">shape</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">orthogonal_map</span> <span class="o">=</span> <span class="n">orthogonal_map</span>
+        <span class="k">if</span> <span class="n">use_trivialization</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">register_buffer</span><span class="p">(</span><span class="s2">&quot;base&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+        <span class="n">n</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">),</span> <span class="n">X</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">transposed</span> <span class="o">=</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">k</span>
+        <span class="k">if</span> <span class="n">transposed</span><span class="p">:</span>
+            <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">mT</span>
+            <span class="n">n</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">k</span><span class="p">,</span> <span class="n">n</span>
+        <span class="c1"># Here n &gt; k and X is a tall matrix</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">orthogonal_map</span> <span class="o">==</span> <span class="n">_OrthMaps</span><span class="o">.</span><span class="n">matrix_exp</span>
+            <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">orthogonal_map</span> <span class="o">==</span> <span class="n">_OrthMaps</span><span class="o">.</span><span class="n">cayley</span>
+        <span class="p">):</span>
+            <span class="c1"># We just need n x k - k(k-1)/2 parameters</span>
+            <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">tril</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">n</span> <span class="o">!=</span> <span class="n">k</span><span class="p">:</span>
+                <span class="c1"># Embed into a square matrix</span>
+                <span class="n">X</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">(</span>
+                    <span class="p">[</span><span class="n">X</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">new_zeros</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="n">k</span><span class="p">)</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="o">*</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span>
+                <span class="p">)</span>
+            <span class="n">A</span> <span class="o">=</span> <span class="n">X</span> <span class="o">-</span> <span class="n">X</span><span class="o">.</span><span class="n">mH</span>
+            <span class="c1"># A is skew-symmetric (or skew-hermitian)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">orthogonal_map</span> <span class="o">==</span> <span class="n">_OrthMaps</span><span class="o">.</span><span class="n">matrix_exp</span><span class="p">:</span>
+                <span class="n">Q</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">matrix_exp</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">orthogonal_map</span> <span class="o">==</span> <span class="n">_OrthMaps</span><span class="o">.</span><span class="n">cayley</span><span class="p">:</span>
+                <span class="c1"># Computes the Cayley retraction (I+A/2)(I-A/2)^{-1}</span>
+                <span class="n">Id</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">A</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+                <span class="n">Q</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span>
+                    <span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Id</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=-</span><span class="mf">0.5</span><span class="p">),</span> <span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Id</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+                <span class="p">)</span>
+            <span class="c1"># Q is now orthogonal (or unitary) of size (..., n, n)</span>
+            <span class="k">if</span> <span class="n">n</span> <span class="o">!=</span> <span class="n">k</span><span class="p">:</span>
+                <span class="n">Q</span> <span class="o">=</span> <span class="n">Q</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="p">:</span><span class="n">k</span><span class="p">]</span>
+            <span class="c1"># Q is now the size of the X (albeit perhaps transposed)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># X is real here, as we do not support householder with complex numbers</span>
+            <span class="n">A</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">tril</span><span class="p">(</span><span class="n">diagonal</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">tau</span> <span class="o">=</span> <span class="mf">2.0</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="p">(</span><span class="n">A</span> <span class="o">*</span> <span class="n">A</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=-</span><span class="mi">2</span><span class="p">))</span>
+            <span class="n">Q</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">householder_product</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">tau</span><span class="p">)</span>
+            <span class="c1"># The diagonal of X is 1&#39;s and -1&#39;s</span>
+            <span class="c1"># We do not want to differentiate through this or update the diagonal of X hence the casting</span>
+            <span class="n">Q</span> <span class="o">=</span> <span class="n">Q</span> <span class="o">*</span> <span class="n">X</span><span class="o">.</span><span class="n">diagonal</span><span class="p">(</span><span class="n">dim1</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">dim2</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">int</span><span class="p">()</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;base&quot;</span><span class="p">):</span>
+            <span class="n">Q</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base</span> <span class="o">@</span> <span class="n">Q</span>
+        <span class="k">if</span> <span class="n">transposed</span><span class="p">:</span>
+            <span class="n">Q</span> <span class="o">=</span> <span class="n">Q</span><span class="o">.</span><span class="n">mT</span>
+        <span class="k">return</span> <span class="n">Q</span>  <span class="c1"># type: ignore[possibly-undefined]</span>
+
+    <span class="nd">@torch</span><span class="o">.</span><span class="n">autograd</span><span class="o">.</span><span class="n">no_grad</span><span class="p">()</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">right_inverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Q</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">Q</span><span class="o">.</span><span class="n">shape</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Expected a matrix or batch of matrices of shape </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">. &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;Got a tensor of shape </span><span class="si">{</span><span class="n">Q</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="n">Q_init</span> <span class="o">=</span> <span class="n">Q</span>
+        <span class="n">n</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">Q</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">),</span> <span class="n">Q</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">transpose</span> <span class="o">=</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">k</span>
+        <span class="k">if</span> <span class="n">transpose</span><span class="p">:</span>
+            <span class="n">Q</span> <span class="o">=</span> <span class="n">Q</span><span class="o">.</span><span class="n">mT</span>
+            <span class="n">n</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">k</span><span class="p">,</span> <span class="n">n</span>
+
+        <span class="c1"># We always make sure to always copy Q in every path</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;base&quot;</span><span class="p">):</span>
+            <span class="c1"># Note [right_inverse expm cayley]</span>
+            <span class="c1"># If we do not have use_trivialization=True, we just implement the inverse of the forward</span>
+            <span class="c1"># map for the Householder. To see why, think that for the Cayley map,</span>
+            <span class="c1"># we would need to find the matrix X \in R^{n x k} such that:</span>
+            <span class="c1"># Y = torch.cat([X.tril(), X.new_zeros(n, n - k).expand(*X.shape[:-2], -1, -1)], dim=-1)</span>
+            <span class="c1"># A = Y - Y.mH</span>
+            <span class="c1"># cayley(A)[:, :k]</span>
+            <span class="c1"># gives the original tensor. It is not clear how to do this.</span>
+            <span class="c1"># Perhaps via some algebraic manipulation involving the QR like that of</span>
+            <span class="c1"># Corollary 2.2 in Edelman, Arias and Smith?</span>
+            <span class="k">if</span> <span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">orthogonal_map</span> <span class="o">==</span> <span class="n">_OrthMaps</span><span class="o">.</span><span class="n">cayley</span>
+                <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">orthogonal_map</span> <span class="o">==</span> <span class="n">_OrthMaps</span><span class="o">.</span><span class="n">matrix_exp</span>
+            <span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+                    <span class="s2">&quot;It is not possible to assign to the matrix exponential &quot;</span>
+                    <span class="s2">&quot;or the Cayley parametrizations when use_trivialization=False.&quot;</span>
+                <span class="p">)</span>
+
+            <span class="c1"># If parametrization == _OrthMaps.householder, make Q orthogonal via the QR decomposition.</span>
+            <span class="c1"># Here Q is always real because we do not support householder and complex matrices.</span>
+            <span class="c1"># See note [Householder complex]</span>
+            <span class="n">A</span><span class="p">,</span> <span class="n">tau</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">geqrf</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>
+            <span class="c1"># We want to have a decomposition X = QR with diag(R) &gt; 0, as otherwise we could</span>
+            <span class="c1"># decompose an orthogonal matrix Q as Q = (-Q)@(-Id), which is a valid QR decomposition</span>
+            <span class="c1"># The diagonal of Q is the diagonal of R from the qr decomposition</span>
+            <span class="n">A</span><span class="o">.</span><span class="n">diagonal</span><span class="p">(</span><span class="n">dim1</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">dim2</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sign_</span><span class="p">()</span>
+            <span class="c1"># Equality with zero is ok because LAPACK returns exactly zero when it does not want</span>
+            <span class="c1"># to use a particular reflection</span>
+            <span class="n">A</span><span class="o">.</span><span class="n">diagonal</span><span class="p">(</span><span class="n">dim1</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">dim2</span><span class="o">=-</span><span class="mi">1</span><span class="p">)[</span><span class="n">tau</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">]</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="k">return</span> <span class="n">A</span><span class="o">.</span><span class="n">mT</span> <span class="k">if</span> <span class="n">transpose</span> <span class="k">else</span> <span class="n">A</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="n">k</span><span class="p">:</span>
+                <span class="c1"># We check whether Q is orthogonal</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">_is_orthogonal</span><span class="p">(</span><span class="n">Q</span><span class="p">):</span>
+                    <span class="n">Q</span> <span class="o">=</span> <span class="n">_make_orthogonal</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>  <span class="c1"># Is orthogonal</span>
+                    <span class="n">Q</span> <span class="o">=</span> <span class="n">Q</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># Complete Q into a full n x n orthogonal matrix</span>
+                <span class="n">N</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span>
+                    <span class="o">*</span><span class="p">(</span><span class="n">Q</span><span class="o">.</span><span class="n">size</span><span class="p">()[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="n">k</span><span class="p">)),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">Q</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">Q</span><span class="o">.</span><span class="n">device</span>
+                <span class="p">)</span>
+                <span class="n">Q</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">Q</span><span class="p">,</span> <span class="n">N</span><span class="p">],</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+                <span class="n">Q</span> <span class="o">=</span> <span class="n">_make_orthogonal</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">base</span> <span class="o">=</span> <span class="n">Q</span>
+
+            <span class="c1"># It is necessary to return the -Id, as we use the diagonal for the</span>
+            <span class="c1"># Householder parametrization. Using -Id makes:</span>
+            <span class="c1"># householder(torch.zeros(m,n)) == torch.eye(m,n)</span>
+            <span class="c1"># Poor man&#39;s version of eye_like</span>
+            <span class="n">neg_Id</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">Q_init</span><span class="p">)</span>
+            <span class="n">neg_Id</span><span class="o">.</span><span class="n">diagonal</span><span class="p">(</span><span class="n">dim1</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">dim2</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">fill_</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">neg_Id</span>
+
+
+<div class="viewcode-block" id="orthogonal">
+<a class="viewcode-back" href="../../../../python-api/torch.nn.utils.parametrizations.orthogonal.html#torch.nn.utils.parametrizations.orthogonal">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">orthogonal</span><span class="p">(</span>
+    <span class="n">module</span><span class="p">:</span> <span class="n">Module</span><span class="p">,</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;weight&quot;</span><span class="p">,</span>
+    <span class="n">orthogonal_map</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">use_trivialization</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Apply an orthogonal or unitary parametrization to a matrix or a batch of matrices.</span>
+
+<span class="sd">    Letting :math:`\mathbb{K}` be :math:`\mathbb{R}` or :math:`\mathbb{C}`, the parametrized</span>
+<span class="sd">    matrix :math:`Q \in \mathbb{K}^{m \times n}` is **orthogonal** as</span>
+
+<span class="sd">    .. math::</span>
+
+<span class="sd">        \begin{align*}</span>
+<span class="sd">            Q^{\text{H}}Q &amp;= \mathrm{I}_n \mathrlap{\qquad \text{if }m \geq n}\\</span>
+<span class="sd">            QQ^{\text{H}} &amp;= \mathrm{I}_m \mathrlap{\qquad \text{if }m &lt; n}</span>
+<span class="sd">        \end{align*}</span>
+
+<span class="sd">    where :math:`Q^{\text{H}}` is the conjugate transpose when :math:`Q` is complex</span>
+<span class="sd">    and the transpose when :math:`Q` is real-valued, and</span>
+<span class="sd">    :math:`\mathrm{I}_n` is the `n`-dimensional identity matrix.</span>
+<span class="sd">    In plain words, :math:`Q` will have orthonormal columns whenever :math:`m \geq n`</span>
+<span class="sd">    and orthonormal rows otherwise.</span>
+
+<span class="sd">    If the tensor has more than two dimensions, we consider it as a batch of matrices of shape `(..., m, n)`.</span>
+
+<span class="sd">    The matrix :math:`Q` may be parametrized via three different ``orthogonal_map`` in terms of the original tensor:</span>
+
+<span class="sd">    - ``&quot;matrix_exp&quot;``/``&quot;cayley&quot;``:</span>
+<span class="sd">      the :func:`~torch.matrix_exp` :math:`Q = \exp(A)` and the `Cayley map`_</span>
+<span class="sd">      :math:`Q = (\mathrm{I}_n + A/2)(\mathrm{I}_n - A/2)^{-1}` are applied to a skew-symmetric</span>
+<span class="sd">      :math:`A` to give an orthogonal matrix.</span>
+<span class="sd">    - ``&quot;householder&quot;``: computes a product of Householder reflectors</span>
+<span class="sd">      (:func:`~torch.linalg.householder_product`).</span>
+
+<span class="sd">    ``&quot;matrix_exp&quot;``/``&quot;cayley&quot;`` often make the parametrized weight converge faster than</span>
+<span class="sd">    ``&quot;householder&quot;``, but they are slower to compute for very thin or very wide matrices.</span>
+
+<span class="sd">    If ``use_trivialization=True`` (default), the parametrization implements the &quot;Dynamic Trivialization Framework&quot;,</span>
+<span class="sd">    where an extra matrix :math:`B \in \mathbb{K}^{n \times n}` is stored under</span>
+<span class="sd">    ``module.parametrizations.weight[0].base``. This helps the</span>
+<span class="sd">    convergence of the parametrized layer at the expense of some extra memory use.</span>
+<span class="sd">    See `Trivializations for Gradient-Based Optimization on Manifolds`_ .</span>
+
+<span class="sd">    Initial value of :math:`Q`:</span>
+<span class="sd">    If the original tensor is not parametrized and ``use_trivialization=True`` (default), the initial value</span>
+<span class="sd">    of :math:`Q` is that of the original tensor if it is orthogonal (or unitary in the complex case)</span>
+<span class="sd">    and it is orthogonalized via the QR decomposition otherwise (see :func:`torch.linalg.qr`).</span>
+<span class="sd">    Same happens when it is not parametrized and ``orthogonal_map=&quot;householder&quot;`` even when ``use_trivialization=False``.</span>
+<span class="sd">    Otherwise, the initial value is the result of the composition of all the registered</span>
+<span class="sd">    parametrizations applied to the original tensor.</span>
+
+<span class="sd">    .. note::</span>
+<span class="sd">        This function is implemented using the parametrization functionality</span>
+<span class="sd">        in :func:`~torch.nn.utils.parametrize.register_parametrization`.</span>
+
+
+<span class="sd">    .. _`Cayley map`: https://en.wikipedia.org/wiki/Cayley_transform#Matrix_map</span>
+<span class="sd">    .. _`Trivializations for Gradient-Based Optimization on Manifolds`: https://arxiv.org/abs/1909.09501</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        module (nn.Module): module on which to register the parametrization.</span>
+<span class="sd">        name (str, optional): name of the tensor to make orthogonal. Default: ``&quot;weight&quot;``.</span>
+<span class="sd">        orthogonal_map (str, optional): One of the following: ``&quot;matrix_exp&quot;``, ``&quot;cayley&quot;``, ``&quot;householder&quot;``.</span>
+<span class="sd">            Default: ``&quot;matrix_exp&quot;`` if the matrix is square or complex, ``&quot;householder&quot;`` otherwise.</span>
+<span class="sd">        use_trivialization (bool, optional): whether to use the dynamic trivialization framework.</span>
+<span class="sd">            Default: ``True``.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The original module with an orthogonal parametrization registered to the specified</span>
+<span class="sd">        weight</span>
+
+<span class="sd">    Example::</span>
+
+<span class="sd">        &gt;&gt;&gt; # xdoctest: +REQUIRES(env:TORCH_DOCTEST_LAPACK)</span>
+<span class="sd">        &gt;&gt;&gt; orth_linear = orthogonal(nn.Linear(20, 40))</span>
+<span class="sd">        &gt;&gt;&gt; orth_linear</span>
+<span class="sd">        ParametrizedLinear(</span>
+<span class="sd">        in_features=20, out_features=40, bias=True</span>
+<span class="sd">        (parametrizations): ModuleDict(</span>
+<span class="sd">            (weight): ParametrizationList(</span>
+<span class="sd">            (0): _Orthogonal()</span>
+<span class="sd">            )</span>
+<span class="sd">        )</span>
+<span class="sd">        )</span>
+<span class="sd">        &gt;&gt;&gt; # xdoctest: +IGNORE_WANT</span>
+<span class="sd">        &gt;&gt;&gt; Q = orth_linear.weight</span>
+<span class="sd">        &gt;&gt;&gt; torch.dist(Q.T @ Q, torch.eye(20))</span>
+<span class="sd">        tensor(4.9332e-07)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">weight</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">weight</span><span class="p">,</span> <span class="n">Tensor</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Module &#39;</span><span class="si">{</span><span class="n">module</span><span class="si">}</span><span class="s2">&#39; has no parameter or buffer with name &#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
+        <span class="p">)</span>
+
+    <span class="c1"># We could implement this for 1-dim tensors as the maps on the sphere</span>
+    <span class="c1"># but I believe it&#39;d bite more people than it&#39;d help</span>
+    <span class="k">if</span> <span class="n">weight</span><span class="o">.</span><span class="n">ndim</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;Expected a matrix or batch of matrices. &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;Got a tensor of </span><span class="si">{</span><span class="n">weight</span><span class="o">.</span><span class="n">ndim</span><span class="si">}</span><span class="s2"> dimensions.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">orthogonal_map</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">orthogonal_map</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="s2">&quot;matrix_exp&quot;</span>
+            <span class="k">if</span> <span class="n">weight</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="n">weight</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="ow">or</span> <span class="n">weight</span><span class="o">.</span><span class="n">is_complex</span><span class="p">()</span>
+            <span class="k">else</span> <span class="s2">&quot;householder&quot;</span>
+        <span class="p">)</span>
+
+    <span class="n">orth_enum</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">_OrthMaps</span><span class="p">,</span> <span class="n">orthogonal_map</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">orth_enum</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s1">&#39;orthogonal_map has to be one of &quot;matrix_exp&quot;, &quot;cayley&quot;, &quot;householder&quot;. &#39;</span>
+            <span class="sa">f</span><span class="s2">&quot;Got: </span><span class="si">{</span><span class="n">orthogonal_map</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+    <span class="n">orth</span> <span class="o">=</span> <span class="n">_Orthogonal</span><span class="p">(</span><span class="n">weight</span><span class="p">,</span> <span class="n">orth_enum</span><span class="p">,</span> <span class="n">use_trivialization</span><span class="o">=</span><span class="n">use_trivialization</span><span class="p">)</span>
+    <span class="n">parametrize</span><span class="o">.</span><span class="n">register_parametrization</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">orth</span><span class="p">,</span> <span class="n">unsafe</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">module</span></div>
+
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">_WeightNorm</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">dim</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">dim</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dim</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dim</span> <span class="o">=</span> <span class="n">dim</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">weight_g</span><span class="p">,</span> <span class="n">weight_v</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">_weight_norm</span><span class="p">(</span><span class="n">weight_v</span><span class="p">,</span> <span class="n">weight_g</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dim</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">right_inverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">weight</span><span class="p">):</span>
+        <span class="n">weight_g</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">norm_except_dim</span><span class="p">(</span><span class="n">weight</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dim</span><span class="p">)</span>
+        <span class="n">weight_v</span> <span class="o">=</span> <span class="n">weight</span>
+
+        <span class="k">return</span> <span class="n">weight_g</span><span class="p">,</span> <span class="n">weight_v</span>
+
+
+<div class="viewcode-block" id="weight_norm">
+<a class="viewcode-back" href="../../../../python-api/torch.nn.utils.parametrizations.weight_norm.html#torch.nn.utils.parametrizations.weight_norm">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">weight_norm</span><span class="p">(</span><span class="n">module</span><span class="p">:</span> <span class="n">Module</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;weight&quot;</span><span class="p">,</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Apply weight normalization to a parameter in the given module.</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">         \mathbf{w} = g \dfrac{\mathbf{v}}{\|\mathbf{v}\|}</span>
+
+<span class="sd">    Weight normalization is a reparameterization that decouples the magnitude</span>
+<span class="sd">    of a weight tensor from its direction. This replaces the parameter specified</span>
+<span class="sd">    by :attr:`name` with two parameters: one specifying the magnitude</span>
+<span class="sd">    and one specifying the direction.</span>
+
+<span class="sd">    By default, with ``dim=0``, the norm is computed independently per output</span>
+<span class="sd">    channel/plane. To compute a norm over the entire weight tensor, use</span>
+<span class="sd">    ``dim=None``.</span>
+
+<span class="sd">    See https://arxiv.org/abs/1602.07868</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        module (Module): containing module</span>
+<span class="sd">        name (str, optional): name of weight parameter</span>
+<span class="sd">        dim (int, optional): dimension over which to compute the norm</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The original module with the weight norm hook</span>
+
+<span class="sd">    Example::</span>
+
+<span class="sd">        &gt;&gt;&gt; m = weight_norm(nn.Linear(20, 40), name=&#39;weight&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; m</span>
+<span class="sd">        ParametrizedLinear(</span>
+<span class="sd">          in_features=20, out_features=40, bias=True</span>
+<span class="sd">          (parametrizations): ModuleDict(</span>
+<span class="sd">            (weight): ParametrizationList(</span>
+<span class="sd">              (0): _WeightNorm()</span>
+<span class="sd">            )</span>
+<span class="sd">          )</span>
+<span class="sd">        )</span>
+<span class="sd">        &gt;&gt;&gt; m.parametrizations.weight.original0.size()</span>
+<span class="sd">        torch.Size([40, 1])</span>
+<span class="sd">        &gt;&gt;&gt; m.parametrizations.weight.original1.size()</span>
+<span class="sd">        torch.Size([40, 20])</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_weight_norm</span> <span class="o">=</span> <span class="n">_WeightNorm</span><span class="p">(</span><span class="n">dim</span><span class="p">)</span>
+    <span class="n">parametrize</span><span class="o">.</span><span class="n">register_parametrization</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">_weight_norm</span><span class="p">,</span> <span class="n">unsafe</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_weight_norm_compat_hook</span><span class="p">(</span>
+        <span class="n">state_dict</span><span class="p">,</span>
+        <span class="n">prefix</span><span class="p">,</span>
+        <span class="n">local_metadata</span><span class="p">,</span>
+        <span class="n">strict</span><span class="p">,</span>
+        <span class="n">missing_keys</span><span class="p">,</span>
+        <span class="n">unexpected_keys</span><span class="p">,</span>
+        <span class="n">error_msgs</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="n">g_key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prefix</span><span class="si">}{</span><span class="n">name</span><span class="si">}</span><span class="s2">_g&quot;</span>
+        <span class="n">v_key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prefix</span><span class="si">}{</span><span class="n">name</span><span class="si">}</span><span class="s2">_v&quot;</span>
+        <span class="k">if</span> <span class="n">g_key</span> <span class="ow">in</span> <span class="n">state_dict</span> <span class="ow">and</span> <span class="n">v_key</span> <span class="ow">in</span> <span class="n">state_dict</span><span class="p">:</span>
+            <span class="n">original0</span> <span class="o">=</span> <span class="n">state_dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">g_key</span><span class="p">)</span>
+            <span class="n">original1</span> <span class="o">=</span> <span class="n">state_dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">v_key</span><span class="p">)</span>
+            <span class="n">state_dict</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prefix</span><span class="si">}</span><span class="s2">parametrizations.</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">.original0&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">original0</span>
+            <span class="n">state_dict</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prefix</span><span class="si">}</span><span class="s2">parametrizations.</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">.original1&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">original1</span>
+
+    <span class="n">module</span><span class="o">.</span><span class="n">_register_load_state_dict_pre_hook</span><span class="p">(</span><span class="n">_weight_norm_compat_hook</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">module</span></div>
+
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">_SpectralNorm</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">weight</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span>
+        <span class="n">n_power_iterations</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">eps</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-12</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="n">ndim</span> <span class="o">=</span> <span class="n">weight</span><span class="o">.</span><span class="n">ndim</span>
+        <span class="k">if</span> <span class="n">dim</span> <span class="o">&gt;=</span> <span class="n">ndim</span> <span class="ow">or</span> <span class="n">dim</span> <span class="o">&lt;</span> <span class="o">-</span><span class="n">ndim</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span>
+                <span class="s2">&quot;Dimension out of range (expected to be in range of &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;[-</span><span class="si">{</span><span class="n">ndim</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">ndim</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">] but got </span><span class="si">{</span><span class="n">dim</span><span class="si">}</span><span class="s2">)&quot;</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">n_power_iterations</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;Expected n_power_iterations to be positive, but &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;got n_power_iterations=</span><span class="si">{</span><span class="n">n_power_iterations</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dim</span> <span class="o">=</span> <span class="n">dim</span> <span class="k">if</span> <span class="n">dim</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">dim</span> <span class="o">+</span> <span class="n">ndim</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eps</span> <span class="o">=</span> <span class="n">eps</span>
+        <span class="k">if</span> <span class="n">ndim</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="c1"># For ndim == 1 we do not need to approximate anything (see _SpectralNorm.forward)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">n_power_iterations</span> <span class="o">=</span> <span class="n">n_power_iterations</span>
+            <span class="n">weight_mat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reshape_weight_to_matrix</span><span class="p">(</span><span class="n">weight</span><span class="p">)</span>
+            <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">weight_mat</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+
+            <span class="n">u</span> <span class="o">=</span> <span class="n">weight_mat</span><span class="o">.</span><span class="n">new_empty</span><span class="p">(</span><span class="n">h</span><span class="p">)</span><span class="o">.</span><span class="n">normal_</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="n">weight_mat</span><span class="o">.</span><span class="n">new_empty</span><span class="p">(</span><span class="n">w</span><span class="p">)</span><span class="o">.</span><span class="n">normal_</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">register_buffer</span><span class="p">(</span><span class="s2">&quot;_u&quot;</span><span class="p">,</span> <span class="n">F</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">eps</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">eps</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">register_buffer</span><span class="p">(</span><span class="s2">&quot;_v&quot;</span><span class="p">,</span> <span class="n">F</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">eps</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">eps</span><span class="p">))</span>
+
+            <span class="c1"># Start with u, v initialized to some reasonable values by performing a number</span>
+            <span class="c1"># of iterations of the power method</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_power_method</span><span class="p">(</span><span class="n">weight_mat</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_reshape_weight_to_matrix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">weight</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+        <span class="c1"># Precondition</span>
+        <span class="k">assert</span> <span class="n">weight</span><span class="o">.</span><span class="n">ndim</span> <span class="o">&gt;</span> <span class="mi">1</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dim</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># permute dim to front</span>
+            <span class="n">weight</span> <span class="o">=</span> <span class="n">weight</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">dim</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">d</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">weight</span><span class="o">.</span><span class="n">dim</span><span class="p">())</span> <span class="k">if</span> <span class="n">d</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dim</span><span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">weight</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="nd">@torch</span><span class="o">.</span><span class="n">autograd</span><span class="o">.</span><span class="n">no_grad</span><span class="p">()</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_power_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">weight_mat</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">n_power_iterations</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># See original note at torch/nn/utils/spectral_norm.py</span>
+        <span class="c1"># NB: If `do_power_iteration` is set, the `u` and `v` vectors are</span>
+        <span class="c1">#     updated in power iteration **in-place**. This is very important</span>
+        <span class="c1">#     because in `DataParallel` forward, the vectors (being buffers) are</span>
+        <span class="c1">#     broadcast from the parallelized module to each module replica,</span>
+        <span class="c1">#     which is a new module object created on the fly. And each replica</span>
+        <span class="c1">#     runs its own spectral norm power iteration. So simply assigning</span>
+        <span class="c1">#     the updated vectors to the module this function runs on will cause</span>
+        <span class="c1">#     the update to be lost forever. And the next time the parallelized</span>
+        <span class="c1">#     module is replicated, the same randomly initialized vectors are</span>
+        <span class="c1">#     broadcast and used!</span>
+        <span class="c1">#</span>
+        <span class="c1">#     Therefore, to make the change propagate back, we rely on two</span>
+        <span class="c1">#     important behaviors (also enforced via tests):</span>
+        <span class="c1">#       1. `DataParallel` doesn&#39;t clone storage if the broadcast tensor</span>
+        <span class="c1">#          is already on correct device; and it makes sure that the</span>
+        <span class="c1">#          parallelized module is already on `device[0]`.</span>
+        <span class="c1">#       2. If the out tensor in `out=` kwarg has correct shape, it will</span>
+        <span class="c1">#          just fill in the values.</span>
+        <span class="c1">#     Therefore, since the same power iteration is performed on all</span>
+        <span class="c1">#     devices, simply updating the tensors in-place will make sure that</span>
+        <span class="c1">#     the module replica on `device[0]` will update the _u vector on the</span>
+        <span class="c1">#     parallelized module (by shared storage).</span>
+        <span class="c1">#</span>
+        <span class="c1">#    However, after we update `u` and `v` in-place, we need to **clone**</span>
+        <span class="c1">#    them before using them to normalize the weight. This is to support</span>
+        <span class="c1">#    backproping through two forward passes, e.g., the common pattern in</span>
+        <span class="c1">#    GAN training: loss = D(real) - D(fake). Otherwise, engine will</span>
+        <span class="c1">#    complain that variables needed to do backward for the first forward</span>
+        <span class="c1">#    (i.e., the `u` and `v` vectors) are changed in the second forward.</span>
+
+        <span class="c1"># Precondition</span>
+        <span class="k">assert</span> <span class="n">weight_mat</span><span class="o">.</span><span class="n">ndim</span> <span class="o">&gt;</span> <span class="mi">1</span>
+
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_power_iterations</span><span class="p">):</span>
+            <span class="c1"># Spectral norm of weight equals to `u^T W v`, where `u` and `v`</span>
+            <span class="c1"># are the first left and right singular vectors.</span>
+            <span class="c1"># This power iteration produces approximations of `u` and `v`.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_u</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span>
+                <span class="n">torch</span><span class="o">.</span><span class="n">mv</span><span class="p">(</span><span class="n">weight_mat</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_v</span><span class="p">),</span>  <span class="c1"># type: ignore[has-type]</span>
+                <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                <span class="n">eps</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">eps</span><span class="p">,</span>
+                <span class="n">out</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_u</span><span class="p">,</span>  <span class="c1"># type: ignore[has-type]</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_v</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span>
+                <span class="n">torch</span><span class="o">.</span><span class="n">mv</span><span class="p">(</span><span class="n">weight_mat</span><span class="o">.</span><span class="n">H</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_u</span><span class="p">),</span>  <span class="c1"># type: ignore[has-type]</span>
+                <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                <span class="n">eps</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">eps</span><span class="p">,</span>
+                <span class="n">out</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_v</span><span class="p">,</span>  <span class="c1"># type: ignore[has-type]</span>
+            <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">weight</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">weight</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="c1"># Faster and more exact path, no need to approximate anything</span>
+            <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">weight</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">eps</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">eps</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">weight_mat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reshape_weight_to_matrix</span><span class="p">(</span><span class="n">weight</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">training</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_power_method</span><span class="p">(</span><span class="n">weight_mat</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_power_iterations</span><span class="p">)</span>
+            <span class="c1"># See above on why we need to clone</span>
+            <span class="n">u</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_u</span><span class="o">.</span><span class="n">clone</span><span class="p">(</span><span class="n">memory_format</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">contiguous_format</span><span class="p">)</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_v</span><span class="o">.</span><span class="n">clone</span><span class="p">(</span><span class="n">memory_format</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">contiguous_format</span><span class="p">)</span>
+            <span class="c1"># The proper way of computing this should be through F.bilinear, but</span>
+            <span class="c1"># it seems to have some efficiency issues:</span>
+            <span class="c1"># https://github.com/pytorch/pytorch/issues/58093</span>
+            <span class="n">sigma</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">vdot</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">mv</span><span class="p">(</span><span class="n">weight_mat</span><span class="p">,</span> <span class="n">v</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">weight</span> <span class="o">/</span> <span class="n">sigma</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">right_inverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
+        <span class="c1"># we may want to assert here that the passed value already</span>
+        <span class="c1"># satisfies constraints</span>
+        <span class="k">return</span> <span class="n">value</span>
+
+
+<div class="viewcode-block" id="spectral_norm">
+<a class="viewcode-back" href="../../../../python-api/torch.nn.utils.parametrizations.spectral_norm.html#torch.nn.utils.parametrizations.spectral_norm">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">spectral_norm</span><span class="p">(</span>
+    <span class="n">module</span><span class="p">:</span> <span class="n">Module</span><span class="p">,</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;weight&quot;</span><span class="p">,</span>
+    <span class="n">n_power_iterations</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">eps</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-12</span><span class="p">,</span>
+    <span class="n">dim</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Module</span><span class="p">:</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Apply spectral normalization to a parameter in the given module.</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        \mathbf{W}_{SN} = \dfrac{\mathbf{W}}{\sigma(\mathbf{W})},</span>
+<span class="sd">        \sigma(\mathbf{W}) = \max_{\mathbf{h}: \mathbf{h} \ne 0} \dfrac{\|\mathbf{W} \mathbf{h}\|_2}{\|\mathbf{h}\|_2}</span>
+
+<span class="sd">    When applied on a vector, it simplifies to</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        \mathbf{x}_{SN} = \dfrac{\mathbf{x}}{\|\mathbf{x}\|_2}</span>
+
+<span class="sd">    Spectral normalization stabilizes the training of discriminators (critics)</span>
+<span class="sd">    in Generative Adversarial Networks (GANs) by reducing the Lipschitz constant</span>
+<span class="sd">    of the model. :math:`\sigma` is approximated performing one iteration of the</span>
+<span class="sd">    `power method`_ every time the weight is accessed. If the dimension of the</span>
+<span class="sd">    weight tensor is greater than 2, it is reshaped to 2D in power iteration</span>
+<span class="sd">    method to get spectral norm.</span>
+
+
+<span class="sd">    See `Spectral Normalization for Generative Adversarial Networks`_ .</span>
+
+<span class="sd">    .. _`power method`: https://en.wikipedia.org/wiki/Power_iteration</span>
+<span class="sd">    .. _`Spectral Normalization for Generative Adversarial Networks`: https://arxiv.org/abs/1802.05957</span>
+
+<span class="sd">    .. note::</span>
+<span class="sd">        This function is implemented using the parametrization functionality</span>
+<span class="sd">        in :func:`~torch.nn.utils.parametrize.register_parametrization`. It is a</span>
+<span class="sd">        reimplementation of :func:`torch.nn.utils.spectral_norm`.</span>
+
+<span class="sd">    .. note::</span>
+<span class="sd">        When this constraint is registered, the singular vectors associated to the largest</span>
+<span class="sd">        singular value are estimated rather than sampled at random. These are then updated</span>
+<span class="sd">        performing :attr:`n_power_iterations` of the `power method`_ whenever the tensor</span>
+<span class="sd">        is accessed with the module on `training` mode.</span>
+
+<span class="sd">    .. note::</span>
+<span class="sd">        If the `_SpectralNorm` module, i.e., `module.parametrization.weight[idx]`,</span>
+<span class="sd">        is in training mode on removal, it will perform another power iteration.</span>
+<span class="sd">        If you&#39;d like to avoid this iteration, set the module to eval mode</span>
+<span class="sd">        before its removal.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        module (nn.Module): containing module</span>
+<span class="sd">        name (str, optional): name of weight parameter. Default: ``&quot;weight&quot;``.</span>
+<span class="sd">        n_power_iterations (int, optional): number of power iterations to</span>
+<span class="sd">            calculate spectral norm. Default: ``1``.</span>
+<span class="sd">        eps (float, optional): epsilon for numerical stability in</span>
+<span class="sd">            calculating norms. Default: ``1e-12``.</span>
+<span class="sd">        dim (int, optional): dimension corresponding to number of outputs.</span>
+<span class="sd">            Default: ``0``, except for modules that are instances of</span>
+<span class="sd">            ConvTranspose{1,2,3}d, when it is ``1``</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The original module with a new parametrization registered to the specified</span>
+<span class="sd">        weight</span>
+
+<span class="sd">    Example::</span>
+
+<span class="sd">        &gt;&gt;&gt; # xdoctest: +REQUIRES(env:TORCH_DOCTEST_LAPACK)</span>
+<span class="sd">        &gt;&gt;&gt; # xdoctest: +IGNORE_WANT(&quot;non-deterministic&quot;)</span>
+<span class="sd">        &gt;&gt;&gt; snm = spectral_norm(nn.Linear(20, 40))</span>
+<span class="sd">        &gt;&gt;&gt; snm</span>
+<span class="sd">        ParametrizedLinear(</span>
+<span class="sd">          in_features=20, out_features=40, bias=True</span>
+<span class="sd">          (parametrizations): ModuleDict(</span>
+<span class="sd">            (weight): ParametrizationList(</span>
+<span class="sd">              (0): _SpectralNorm()</span>
+<span class="sd">            )</span>
+<span class="sd">          )</span>
+<span class="sd">        )</span>
+<span class="sd">        &gt;&gt;&gt; torch.linalg.matrix_norm(snm.weight, 2)</span>
+<span class="sd">        tensor(1.0081, grad_fn=&lt;AmaxBackward0&gt;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">weight</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">weight</span><span class="p">,</span> <span class="n">Tensor</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Module &#39;</span><span class="si">{</span><span class="n">module</span><span class="si">}</span><span class="s2">&#39; has no parameter or buffer with name &#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
+        <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">dim</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span>
+            <span class="n">module</span><span class="p">,</span>
+            <span class="p">(</span>
+                <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">ConvTranspose1d</span><span class="p">,</span>
+                <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">ConvTranspose2d</span><span class="p">,</span>
+                <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">ConvTranspose3d</span><span class="p">,</span>
+            <span class="p">),</span>
+        <span class="p">):</span>
+            <span class="n">dim</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dim</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">parametrize</span><span class="o">.</span><span class="n">register_parametrization</span><span class="p">(</span>
+        <span class="n">module</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">_SpectralNorm</span><span class="p">(</span><span class="n">weight</span><span class="p">,</span> <span class="n">n_power_iterations</span><span class="p">,</span> <span class="n">dim</span><span class="p">,</span> <span class="n">eps</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">module</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright PyTorch Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

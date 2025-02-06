@@ -1,0 +1,1143 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>torch.profiler &#8212; PyTorch main documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/katex-math.css?v=91adb8b6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/jit.css?v=8de1ea5d" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3ccf5357" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=189c4a6a" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=940804e7"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'python-api/profiler';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+<div class="container-fluid header-holder tutorials-header" id="header-holder">
+  <div class="container">
+    <div class="header-container">
+      <a class="header-logo" href="" aria-label="PyTorch"></a>
+
+      <div class="main-menu">
+        <ul>
+
+          <li class="main-menu-item">
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Learn
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Get Started</span>
+                  <p>Run PyTorch locally or get started quickly with one of the supported cloud platforms</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Tutorials</span>
+                  <p>Whats new in PyTorch tutorials</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Learn the Basics</span>
+                  <p>Familiarize yourself with PyTorch concepts and modules</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Recipes</span>
+                  <p>Bite-size, ready-to-deploy PyTorch code examples</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Intro to PyTorch - YouTube Series</span>
+                  <p>Master PyTorch basics with our engaging YouTube tutorial series</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Ecosystem
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Tools</span>
+                  <p>Learn about the tools and frameworks in the PyTorch Ecosystem</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Community</span>
+                  <p>Join the PyTorch developer community to contribute, learn, and get your questions answered</p>
+                </a>
+                <a class="nav-dropdown-item" href="" target="_blank">
+                  <span class=dropdown-title>Forums</span>
+                  <p>A place to discuss PyTorch code, issues, install, research</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Developer Resources</span>
+                  <p>Find resources and get questions answered</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Contributor Awards - 2024</span>
+                  <p>Award winners announced at this year's PyTorch Conference</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Edge
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">About PyTorch Edge</span>
+                  <p>Build innovative and privacy-aware AI experiences for edge devices</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">ExecuTorch</span>
+                  <p>End-to-end solution for enabling on-device inference capabilities across mobile and edge devices</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">ExecuTorch Docs</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="main-menu-item">
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Docs
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch</span>
+                  <p>Explore the documentation for comprehensive guidance on how to use PyTorch</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Domains</span>
+                  <p>Read the PyTorch Domains documentation to learn more about domain-specific libraries</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Blogs & News
+              lnhetrlnle</a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Blog</span>
+                  <p>Catch up on the latest technical news and happenings</p>
+                </a>
+                 <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Community Blog</span>
+                  <p>Stories from the PyTorch ecosystem</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Videos</span>
+                  <p>Learn about the latest PyTorch tutorials, new, and more </p>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Community Stories</span>
+                  <p>Learn how our community solves real, everyday machine learning problems with PyTorch</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Events</span>
+                  <p>Find events, webinars, and podcasts</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Newsletter</span>
+                  <p>Stay up-to-date with the latest updates</p>
+                </a>
+            </div>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                About
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Foundation</span>
+                  <p>Learn more about the PyTorch Foundation</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Governing Board</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Cloud Credit Program</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Technical Advisory Council</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Staff</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Contact Us</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="main-menu-item">
+            <div class="no-dropdown">
+              <a href="" data-cta="join">
+                Become a Member
+              </a>
+            </div>
+          </li>
+          <li>
+           <div class="main-menu-item">
+             <a href="" class="github-icon">
+             </a>
+           </div>
+          </li>
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <li>
+            <div class="main-menu-item">
+             <a href="" class="search-icon">
+             </a>
+            </div>
+          </li>
+          --->
+        </ul>
+      </div>
+
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+    </div>
+  </div>
+</div>
+
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
+    <div class="navbar-item">
+      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
+    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="index.html">
+    Python API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../notes/index.html">
+    Developer Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../community/index.html">
+    Community
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../lang-bindings/index.html">
+    Language Bindings
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="index.html">
+    Python API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../notes/index.html">
+    Developer Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../community/index.html">
+    Community
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../lang-bindings/index.html">
+    Language Bindings
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">torch.profiler</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="torch-profiler">
+<h1>torch.profiler<a class="headerlink" href="#torch-profiler" title="Link to this heading">#</a></h1>
+<section id="module-torch.profiler">
+<span id="overview"></span><h2>Overview<a class="headerlink" href="#module-torch.profiler" title="Link to this heading">#</a></h2>
+<p>PyTorch Profiler is a tool that allows the collection of performance metrics during training and inference.
+Profiler’s context manager API can be used to better understand what model operators are the most expensive,
+examine their input shapes and stack traces, study device kernel activity and visualize the execution trace.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>An earlier version of the API in <a class="reference internal" href="autograd.html#module-torch.autograd" title="torch.autograd"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.autograd</span></code></a> module is considered legacy and will be deprecated.</p>
+</div>
+</section>
+<section id="api-reference">
+<h2>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="torch.profiler._KinetoProfile">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.profiler.</span></span><span class="sig-name descname"><span class="pre">_KinetoProfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activities</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record_shapes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profile_memory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_stack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_flops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_modules</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">experimental_config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">execution_trace_observer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acc_events</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_trace_id_callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/profiler/profiler.html#_KinetoProfile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/profiler/profiler.py#L94"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.profiler._KinetoProfile" title="Link to this definition">#</a></dt>
+<dd><p>Low-level profiler wrap the autograd profile</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>activities</strong> (<em>iterable</em>) – list of activity groups (CPU, CUDA) to use in profiling, supported values:
+<code class="docutils literal notranslate"><span class="pre">torch.profiler.ProfilerActivity.CPU</span></code>, <code class="docutils literal notranslate"><span class="pre">torch.profiler.ProfilerActivity.CUDA</span></code>,
+<code class="docutils literal notranslate"><span class="pre">torch.profiler.ProfilerActivity.XPU</span></code>.
+Default value: ProfilerActivity.CPU and (when available) ProfilerActivity.CUDA
+or (when available) ProfilerActivity.XPU.</p></li>
+<li><p><strong>record_shapes</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – save information about operator’s input shapes.</p></li>
+<li><p><strong>profile_memory</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – track tensor memory allocation/deallocation (see <code class="docutils literal notranslate"><span class="pre">export_memory_timeline</span></code>
+for more details).</p></li>
+<li><p><strong>with_stack</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – record source information (file and line number) for the ops.</p></li>
+<li><p><strong>with_flops</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – use formula to estimate the FLOPS of specific operators
+(matrix multiplication and 2D convolution).</p></li>
+<li><p><strong>with_modules</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – record module hierarchy (including function names)
+corresponding to the callstack of the op. e.g. If module A’s forward call’s
+module B’s forward which contains an aten::add op,
+then aten::add’s module hierarchy is A.B
+Note that this support exist, at the moment, only for TorchScript models
+and not eager mode models.</p></li>
+<li><p><strong>experimental_config</strong> (<em>_ExperimentalConfig</em>) – A set of experimental options
+used by profiler libraries like Kineto. Note, backward compatibility is not guaranteed.</p></li>
+<li><p><strong>execution_trace_observer</strong> (<em>ExecutionTraceObserver</em>) – A PyTorch Execution Trace Observer object.
+<a class="reference external" href="https://arxiv.org/pdf/2305.14516.pdf">PyTorch Execution Traces</a> offer a graph based
+representation of AI/ML workloads and enable replay benchmarks, simulators, and emulators.
+When this argument is included the observer start() and stop() will be called for the
+same time window as PyTorch profiler.</p></li>
+<li><p><strong>acc_events</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – Enable the accumulation of FunctionEvents across multiple profiling cycles</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This API is experimental and subject to change in the future.</p>
+<p>Enabling shape and stack tracing results in additional overhead.
+When record_shapes=True is specified, profiler will temporarily hold references to the tensors;
+that may further prevent certain optimizations that depend on the reference count and introduce
+extra tensor copies.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="torch.profiler._KinetoProfile.add_metadata">
+<span class="sig-name descname"><span class="pre">add_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/profiler/profiler.html#_KinetoProfile.add_metadata"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/profiler/profiler.py#L325"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.profiler._KinetoProfile.add_metadata" title="Link to this definition">#</a></dt>
+<dd><p>Adds a user defined metadata with a string key and a string value
+into the trace file</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torch.profiler._KinetoProfile.add_metadata_json">
+<span class="sig-name descname"><span class="pre">add_metadata_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/profiler/profiler.html#_KinetoProfile.add_metadata_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/profiler/profiler.py#L333"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.profiler._KinetoProfile.add_metadata_json" title="Link to this definition">#</a></dt>
+<dd><p>Adds a user defined metadata with a string key and a valid json value
+into the trace file</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torch.profiler._KinetoProfile.events">
+<span class="sig-name descname"><span class="pre">events</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/profiler/profiler.html#_KinetoProfile.events"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/profiler/profiler.py#L317"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.profiler._KinetoProfile.events" title="Link to this definition">#</a></dt>
+<dd><p>Returns the list of unaggregated profiler events,
+to be used in the trace callback or after the profiling is finished</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torch.profiler._KinetoProfile.export_chrome_trace">
+<span class="sig-name descname"><span class="pre">export_chrome_trace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/profiler/profiler.html#_KinetoProfile.export_chrome_trace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/profiler/profiler.py#L243"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.profiler._KinetoProfile.export_chrome_trace" title="Link to this definition">#</a></dt>
+<dd><p>Exports the collected trace in Chrome JSON format. If kineto is enabled, only
+last cycle in schedule is exported.</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torch.profiler._KinetoProfile.export_memory_timeline">
+<span class="sig-name descname"><span class="pre">export_memory_timeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/profiler/profiler.html#_KinetoProfile.export_memory_timeline"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/profiler/profiler.py#L376"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.profiler._KinetoProfile.export_memory_timeline" title="Link to this definition">#</a></dt>
+<dd><p>Export memory event information from the profiler collected
+tree for a given device, and export a timeline plot. There are 3
+exportable files using <code class="docutils literal notranslate"><span class="pre">export_memory_timeline</span></code>, each controlled by the
+<code class="docutils literal notranslate"><span class="pre">path</span></code>’s suffix.</p>
+<ul class="simple">
+<li><p>For an HTML compatible plot, use the suffix <code class="docutils literal notranslate"><span class="pre">.html</span></code>, and a memory timeline
+plot will be embedded as a PNG file in the HTML file.</p></li>
+<li><p>For plot points consisting of <code class="docutils literal notranslate"><span class="pre">[times,</span> <span class="pre">[sizes</span> <span class="pre">by</span> <span class="pre">category]]</span></code>, where
+<code class="docutils literal notranslate"><span class="pre">times</span></code> are timestamps and <code class="docutils literal notranslate"><span class="pre">sizes</span></code> are memory usage for each category.
+The memory timeline plot will be saved a JSON (<code class="docutils literal notranslate"><span class="pre">.json</span></code>) or gzipped JSON
+(<code class="docutils literal notranslate"><span class="pre">.json.gz</span></code>) depending on the suffix.</p></li>
+<li><p>For raw memory points, use the suffix <code class="docutils literal notranslate"><span class="pre">.raw.json.gz</span></code>. Each raw memory
+event will consist of <code class="docutils literal notranslate"><span class="pre">(timestamp,</span> <span class="pre">action,</span> <span class="pre">numbytes,</span> <span class="pre">category)</span></code>, where
+<code class="docutils literal notranslate"><span class="pre">action</span></code> is one of <code class="docutils literal notranslate"><span class="pre">[PREEXISTING,</span> <span class="pre">CREATE,</span> <span class="pre">INCREMENT_VERSION,</span> <span class="pre">DESTROY]</span></code>,
+and <code class="docutils literal notranslate"><span class="pre">category</span></code> is one of the enums from
+<code class="docutils literal notranslate"><span class="pre">torch.profiler._memory_profiler.Category</span></code>.</p></li>
+</ul>
+<p>Output: Memory timeline written as gzipped JSON, JSON, or HTML.</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torch.profiler._KinetoProfile.export_stacks">
+<span class="sig-name descname"><span class="pre">export_stacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'self_cpu_time_total'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/profiler/profiler.html#_KinetoProfile.export_stacks"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/profiler/profiler.py#L261"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.profiler._KinetoProfile.export_stacks" title="Link to this definition">#</a></dt>
+<dd><p>Save stack traces to a file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – save stacks file to this location;</p></li>
+<li><p><strong>metric</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – metric to use: “self_cpu_time_total” or “self_cuda_time_total”</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torch.profiler._KinetoProfile.key_averages">
+<span class="sig-name descname"><span class="pre">key_averages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group_by_input_shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_by_stack_n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/profiler/profiler.html#_KinetoProfile.key_averages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/profiler/profiler.py#L304"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.profiler._KinetoProfile.key_averages" title="Link to this definition">#</a></dt>
+<dd><p>Averages events, grouping them by operator name and (optionally) input shapes and
+stack.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To use shape/stack functionality make sure to set record_shapes/with_stack
+when creating profiler context manager.</p>
+</div>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torch.profiler._KinetoProfile.preset_metadata_json">
+<span class="sig-name descname"><span class="pre">preset_metadata_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/profiler/profiler.html#_KinetoProfile.preset_metadata_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/profiler/profiler.py#L340"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.profiler._KinetoProfile.preset_metadata_json" title="Link to this definition">#</a></dt>
+<dd><p>Preset a user defined metadata when the profiler is not started
+and added into the trace file later.
+Metadata is in the format of a string key and a valid json value</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torch.profiler._KinetoProfile.toggle_collection_dynamic">
+<span class="sig-name descname"><span class="pre">toggle_collection_dynamic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activities</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/profiler/profiler.html#_KinetoProfile.toggle_collection_dynamic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/profiler/profiler.py#L271"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.profiler._KinetoProfile.toggle_collection_dynamic" title="Link to this definition">#</a></dt>
+<dd><p>Toggle collection of activities on/off at any point of collection. Currently supports toggling Torch Ops
+(CPU) and CUDA activity supported in Kineto</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>activities</strong> (<em>iterable</em>) – list of activity groups to use in profiling, supported values:
+<code class="docutils literal notranslate"><span class="pre">torch.profiler.ProfilerActivity.CPU</span></code>, <code class="docutils literal notranslate"><span class="pre">torch.profiler.ProfilerActivity.CUDA</span></code></p>
+</dd>
+</dl>
+<p>Examples:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">profiler</span><span class="o">.</span><span class="n">profile</span><span class="p">(</span>
+    <span class="n">activities</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">profiler</span><span class="o">.</span><span class="n">ProfilerActivity</span><span class="o">.</span><span class="n">CPU</span><span class="p">,</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">profiler</span><span class="o">.</span><span class="n">ProfilerActivity</span><span class="o">.</span><span class="n">CUDA</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">)</span> <span class="k">as</span> <span class="n">p</span><span class="p">:</span>
+    <span class="n">code_to_profile_0</span><span class="p">()</span>
+    <span class="o">//</span> <span class="n">turn</span> <span class="n">off</span> <span class="n">collection</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">CUDA</span> <span class="n">activity</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">toggle_collection_dynamic</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">profiler</span><span class="o">.</span><span class="n">ProfilerActivity</span><span class="o">.</span><span class="n">CUDA</span><span class="p">])</span>
+    <span class="n">code_to_profile_1</span><span class="p">()</span>
+    <span class="o">//</span> <span class="n">turn</span> <span class="n">on</span> <span class="n">collection</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">CUDA</span> <span class="n">activity</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">toggle_collection_dynamic</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">profiler</span><span class="o">.</span><span class="n">ProfilerActivity</span><span class="o">.</span><span class="n">CUDA</span><span class="p">])</span>
+    <span class="n">code_to_profile_2</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">key_averages</span><span class="p">()</span><span class="o">.</span><span class="n">table</span><span class="p">(</span>
+    <span class="n">sort_by</span><span class="o">=</span><span class="s2">&quot;self_cuda_time_total&quot;</span><span class="p">,</span> <span class="n">row_limit</span><span class="o">=-</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="torch.profiler.profile">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.profiler.</span></span><span class="sig-name descname"><span class="pre">profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activities</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schedule</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">on_trace_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record_shapes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profile_memory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_stack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_flops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_modules</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">experimental_config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">execution_trace_observer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acc_events</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_cuda</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_trace_id_callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/profiler/profiler.html#profile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/profiler/profiler.py#L533"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.profiler.profile" title="Link to this definition">#</a></dt>
+<dd><p>Profiler context manager.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>activities</strong> (<em>iterable</em>) – list of activity groups (CPU, CUDA) to use in profiling, supported values:
+<code class="docutils literal notranslate"><span class="pre">torch.profiler.ProfilerActivity.CPU</span></code>, <code class="docutils literal notranslate"><span class="pre">torch.profiler.ProfilerActivity.CUDA</span></code>,
+<code class="docutils literal notranslate"><span class="pre">torch.profiler.ProfilerActivity.XPU</span></code>.
+Default value: ProfilerActivity.CPU and (when available) ProfilerActivity.CUDA
+or (when available) ProfilerActivity.XPU.</p></li>
+<li><p><strong>schedule</strong> (<em>Callable</em>) – callable that takes step (int) as a single parameter and returns
+<code class="docutils literal notranslate"><span class="pre">ProfilerAction</span></code> value that specifies the profiler action to perform at each step.</p></li>
+<li><p><strong>on_trace_ready</strong> (<em>Callable</em>) – callable that is called at each step when <code class="docutils literal notranslate"><span class="pre">schedule</span></code>
+returns <code class="docutils literal notranslate"><span class="pre">ProfilerAction.RECORD_AND_SAVE</span></code> during the profiling.</p></li>
+<li><p><strong>record_shapes</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – save information about operator’s input shapes.</p></li>
+<li><p><strong>profile_memory</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – track tensor memory allocation/deallocation.</p></li>
+<li><p><strong>with_stack</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – record source information (file and line number) for the ops.</p></li>
+<li><p><strong>with_flops</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – use formula to estimate the FLOPs (floating point operations) of specific operators
+(matrix multiplication and 2D convolution).</p></li>
+<li><p><strong>with_modules</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – record module hierarchy (including function names)
+corresponding to the callstack of the op. e.g. If module A’s forward call’s
+module B’s forward which contains an aten::add op,
+then aten::add’s module hierarchy is A.B
+Note that this support exist, at the moment, only for TorchScript models
+and not eager mode models.</p></li>
+<li><p><strong>experimental_config</strong> (<em>_ExperimentalConfig</em>) – A set of experimental options
+used for Kineto library features. Note, backward compatibility is not guaranteed.</p></li>
+<li><p><strong>execution_trace_observer</strong> (<em>ExecutionTraceObserver</em>) – A PyTorch Execution Trace Observer object.
+<a class="reference external" href="https://arxiv.org/pdf/2305.14516.pdf">PyTorch Execution Traces</a> offer a graph based
+representation of AI/ML workloads and enable replay benchmarks, simulators, and emulators.
+When this argument is included the observer start() and stop() will be called for the
+same time window as PyTorch profiler. See the examples section below for a code sample.</p></li>
+<li><p><strong>acc_events</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – Enable the accumulation of FunctionEvents across multiple profiling cycles</p></li>
+<li><p><strong>use_cuda</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – <div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 1.8.1: </span>use <code class="docutils literal notranslate"><span class="pre">activities</span></code> instead.</p>
+</div>
+</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use <a class="reference internal" href="#torch.profiler.schedule" title="torch.profiler.schedule"><code class="xref py py-func docutils literal notranslate"><span class="pre">schedule()</span></code></a> to generate the callable schedule.
+Non-default schedules are useful when profiling long training jobs
+and allow the user to obtain multiple traces at the different iterations
+of the training process.
+The default schedule simply records all the events continuously for the
+duration of the context manager.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use <a class="reference internal" href="#torch.profiler.tensorboard_trace_handler" title="torch.profiler.tensorboard_trace_handler"><code class="xref py py-func docutils literal notranslate"><span class="pre">tensorboard_trace_handler()</span></code></a> to generate result files for TensorBoard:</p>
+<p><code class="docutils literal notranslate"><span class="pre">on_trace_ready=torch.profiler.tensorboard_trace_handler(dir_name)</span></code></p>
+<p>After profiling, result files can be found in the specified directory. Use the command:</p>
+<p><code class="docutils literal notranslate"><span class="pre">tensorboard</span> <span class="pre">--logdir</span> <span class="pre">dir_name</span></code></p>
+<p>to see the results in TensorBoard.
+For more information, see
+<a class="reference external" href="https://github.com/pytorch/kineto/tree/master/tb_plugin">PyTorch Profiler TensorBoard Plugin</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Enabling shape and stack tracing results in additional overhead.
+When record_shapes=True is specified, profiler will temporarily hold references to the tensors;
+that may further prevent certain optimizations that depend on the reference count and introduce
+extra tensor copies.</p>
+</div>
+<p>Examples:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">profiler</span><span class="o">.</span><span class="n">profile</span><span class="p">(</span>
+    <span class="n">activities</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">profiler</span><span class="o">.</span><span class="n">ProfilerActivity</span><span class="o">.</span><span class="n">CPU</span><span class="p">,</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">profiler</span><span class="o">.</span><span class="n">ProfilerActivity</span><span class="o">.</span><span class="n">CUDA</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">)</span> <span class="k">as</span> <span class="n">p</span><span class="p">:</span>
+    <span class="n">code_to_profile</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">key_averages</span><span class="p">()</span><span class="o">.</span><span class="n">table</span><span class="p">(</span>
+    <span class="n">sort_by</span><span class="o">=</span><span class="s2">&quot;self_cuda_time_total&quot;</span><span class="p">,</span> <span class="n">row_limit</span><span class="o">=-</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Using the profiler’s <code class="docutils literal notranslate"><span class="pre">schedule</span></code>, <code class="docutils literal notranslate"><span class="pre">on_trace_ready</span></code> and <code class="docutils literal notranslate"><span class="pre">step</span></code> functions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Non-default profiler schedule allows user to turn profiler on and off</span>
+<span class="c1"># on different iterations of the training loop;</span>
+<span class="c1"># trace_handler is called every time a new trace becomes available</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">trace_handler</span><span class="p">(</span><span class="n">prof</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">prof</span><span class="o">.</span><span class="n">key_averages</span><span class="p">()</span><span class="o">.</span><span class="n">table</span><span class="p">(</span>
+        <span class="n">sort_by</span><span class="o">=</span><span class="s2">&quot;self_cuda_time_total&quot;</span><span class="p">,</span> <span class="n">row_limit</span><span class="o">=-</span><span class="mi">1</span><span class="p">))</span>
+    <span class="c1"># prof.export_chrome_trace(&quot;/tmp/test_trace_&quot; + str(prof.step_num) + &quot;.json&quot;)</span>
+
+<span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">profiler</span><span class="o">.</span><span class="n">profile</span><span class="p">(</span>
+    <span class="n">activities</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">profiler</span><span class="o">.</span><span class="n">ProfilerActivity</span><span class="o">.</span><span class="n">CPU</span><span class="p">,</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">profiler</span><span class="o">.</span><span class="n">ProfilerActivity</span><span class="o">.</span><span class="n">CUDA</span><span class="p">,</span>
+    <span class="p">],</span>
+
+    <span class="c1"># In this example with wait=1, warmup=1, active=2, repeat=1,</span>
+    <span class="c1"># profiler will skip the first step/iteration,</span>
+    <span class="c1"># start warming up on the second, record</span>
+    <span class="c1"># the third and the forth iterations,</span>
+    <span class="c1"># after which the trace will become available</span>
+    <span class="c1"># and on_trace_ready (when set) is called;</span>
+    <span class="c1"># the cycle repeats starting with the next step</span>
+
+    <span class="n">schedule</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">profiler</span><span class="o">.</span><span class="n">schedule</span><span class="p">(</span>
+        <span class="n">wait</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">warmup</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">active</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">repeat</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+    <span class="n">on_trace_ready</span><span class="o">=</span><span class="n">trace_handler</span>
+    <span class="c1"># on_trace_ready=torch.profiler.tensorboard_trace_handler(&#39;./log&#39;)</span>
+    <span class="c1"># used when outputting for tensorboard</span>
+    <span class="p">)</span> <span class="k">as</span> <span class="n">p</span><span class="p">:</span>
+        <span class="k">for</span> <span class="nb">iter</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+            <span class="n">code_iteration_to_profile</span><span class="p">(</span><span class="nb">iter</span><span class="p">)</span>
+            <span class="c1"># send a signal to the profiler that the next iteration has started</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The following sample shows how to setup up an Execution Trace Observer (<cite>execution_trace_observer</cite>)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">profiler</span><span class="o">.</span><span class="n">profile</span><span class="p">(</span>
+    <span class="o">...</span>
+    <span class="n">execution_trace_observer</span><span class="o">=</span><span class="p">(</span>
+        <span class="n">ExecutionTraceObserver</span><span class="p">()</span><span class="o">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;./execution_trace.json&quot;</span><span class="p">)</span>
+    <span class="p">),</span>
+<span class="p">)</span> <span class="k">as</span> <span class="n">p</span><span class="p">:</span>
+    <span class="k">for</span> <span class="nb">iter</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+        <span class="n">code_iteration_to_profile</span><span class="p">(</span><span class="nb">iter</span><span class="p">)</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>You can also refer to test_execution_trace_with_kineto() in tests/profiler/test_profiler.py.
+Note: One can also pass any object satisfying the _ITraceObserver interface.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="torch.profiler.profile.get_trace_id">
+<span class="sig-name descname"><span class="pre">get_trace_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/profiler/profiler.html#profile.get_trace_id"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/profiler/profiler.py#L843"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.profiler.profile.get_trace_id" title="Link to this definition">#</a></dt>
+<dd><p>Returns the current trace ID.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torch.profiler.profile.set_custom_trace_id_callback">
+<span class="sig-name descname"><span class="pre">set_custom_trace_id_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/profiler/profiler.html#profile.set_custom_trace_id_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/profiler/profiler.py#L837"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.profiler.profile.set_custom_trace_id_callback" title="Link to this definition">#</a></dt>
+<dd><p>Sets a callback to be called when a new trace ID is generated.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torch.profiler.profile.step">
+<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/profiler/profiler.html#profile.step"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/profiler/profiler.py#L815"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.profiler.profile.step" title="Link to this definition">#</a></dt>
+<dd><p>Signals the profiler that the next profiling step has started.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="torch.profiler.ProfilerAction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.profiler.</span></span><span class="sig-name descname"><span class="pre">ProfilerAction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/profiler/profiler.html#ProfilerAction"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/profiler/profiler.py#L427"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.profiler.ProfilerAction" title="Link to this definition">#</a></dt>
+<dd><p>Profiler actions that can be taken at the specified intervals</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="torch.profiler.ProfilerActivity">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.profiler.</span></span><span class="sig-name descname"><span class="pre">ProfilerActivity</span></span><a class="headerlink" href="#torch.profiler.ProfilerActivity" title="Link to this definition">#</a></dt>
+<dd><p>Members:</p>
+<p>CPU</p>
+<p>XPU</p>
+<p>MTIA</p>
+<p>CUDA</p>
+<p>PrivateUse1</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="torch.profiler.ProfilerActivity.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#torch.profiler.ProfilerActivity.name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.profiler.schedule">
+<span class="sig-prename descclassname"><span class="pre">torch.profiler.</span></span><span class="sig-name descname"><span class="pre">schedule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">warmup</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">active</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_first</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_first_wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/profiler/profiler.html#schedule"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/profiler/profiler.py#L438"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.profiler.schedule" title="Link to this definition">#</a></dt>
+<dd><p>Returns a callable that can be used as profiler <code class="docutils literal notranslate"><span class="pre">schedule</span></code> argument. The profiler will skip
+the first <code class="docutils literal notranslate"><span class="pre">skip_first</span></code> steps, then wait for <code class="docutils literal notranslate"><span class="pre">wait</span></code> steps, then do the warmup for the next <code class="docutils literal notranslate"><span class="pre">warmup</span></code> steps,
+then do the active recording for the next <code class="docutils literal notranslate"><span class="pre">active</span></code> steps and then repeat the cycle starting with <code class="docutils literal notranslate"><span class="pre">wait</span></code> steps.
+The optional number of cycles is specified with the <code class="docutils literal notranslate"><span class="pre">repeat</span></code> parameter, the zero value means that
+the cycles will continue until the profiling is finished.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">skip_first_wait</span></code> parameter controls whether the first <code class="docutils literal notranslate"><span class="pre">wait</span></code> stage should be skipped.
+This can be useful if a user wants to wait longer than <code class="docutils literal notranslate"><span class="pre">skip_first</span></code> between cycles, but not
+for the first profile. For example, if <code class="docutils literal notranslate"><span class="pre">skip_first</span></code> is 10 and <code class="docutils literal notranslate"><span class="pre">wait</span></code> is 20, the first cycle will
+wait 10 + 20 = 30 steps before warmup if <code class="docutils literal notranslate"><span class="pre">skip_first_wait</span></code> is zero, but will wait only 10
+steps if <code class="docutils literal notranslate"><span class="pre">skip_first_wait</span></code> is non-zero. All subsequent cycles will then wait 20 steps between the
+last active and warmup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.13)"><em>Callable</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.profiler.tensorboard_trace_handler">
+<span class="sig-prename descclassname"><span class="pre">torch.profiler.</span></span><span class="sig-name descname"><span class="pre">tensorboard_trace_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dir_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">worker_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_gzip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/profiler/profiler.html#tensorboard_trace_handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/profiler/profiler.py#L502"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.profiler.tensorboard_trace_handler" title="Link to this definition">#</a></dt>
+<dd><p>Outputs tracing files to directory of <code class="docutils literal notranslate"><span class="pre">dir_name</span></code>, then that directory can be
+directly delivered to tensorboard as logdir.
+<code class="docutils literal notranslate"><span class="pre">worker_name</span></code> should be unique for each worker in distributed scenario,
+it will be set to ‘[hostname]_[pid]’ by default.</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+</section>
+<section id="intel-instrumentation-and-tracing-technology-apis">
+<h2>Intel Instrumentation and Tracing Technology APIs<a class="headerlink" href="#intel-instrumentation-and-tracing-technology-apis" title="Link to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.profiler.itt.is_available">
+<span class="sig-prename descclassname"><span class="pre">torch.profiler.itt.</span></span><span class="sig-name descname"><span class="pre">is_available</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/profiler/itt.html#is_available"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/profiler/itt.py#L30"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.profiler.itt.is_available" title="Link to this definition">#</a></dt>
+<dd><p>Check if ITT feature is available or not</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.profiler.itt.mark">
+<span class="sig-prename descclassname"><span class="pre">torch.profiler.itt.</span></span><span class="sig-name descname"><span class="pre">mark</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/profiler/itt.html#mark"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/profiler/itt.py#L56"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.profiler.itt.mark" title="Link to this definition">#</a></dt>
+<dd><p>Describe an instantaneous event that occurred at some point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>msg</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – ASCII message to associate with the event.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.profiler.itt.range_push">
+<span class="sig-prename descclassname"><span class="pre">torch.profiler.itt.</span></span><span class="sig-name descname"><span class="pre">range_push</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/profiler/itt.html#range_push"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/profiler/itt.py#L37"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.profiler.itt.range_push" title="Link to this definition">#</a></dt>
+<dd><p>Pushes a range onto a stack of nested range span.  Returns zero-based
+depth of the range that is started.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>msg</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – ASCII message to associate with range</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.profiler.itt.range_pop">
+<span class="sig-prename descclassname"><span class="pre">torch.profiler.itt.</span></span><span class="sig-name descname"><span class="pre">range_pop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/profiler/itt.html#range_pop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/profiler/itt.py#L48"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.profiler.itt.range_pop" title="Link to this definition">#</a></dt>
+<dd><p>Pops a range off of a stack of nested range spans. Returns the
+zero-based depth of the range that is ended.</p>
+</dd></dl>
+
+<span class="target" id="module-torch.profiler.python_tracer"><span id="module-torch.profiler.profiler"></span><span id="module-torch.profiler.itt"></span></span></section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc">
+<div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-torch.profiler">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#api-reference">API Reference</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.profiler._KinetoProfile"><code class="docutils literal notranslate"><span class="pre">_KinetoProfile</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.profiler._KinetoProfile.add_metadata"><code class="docutils literal notranslate"><span class="pre">_KinetoProfile.add_metadata()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.profiler._KinetoProfile.add_metadata_json"><code class="docutils literal notranslate"><span class="pre">_KinetoProfile.add_metadata_json()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.profiler._KinetoProfile.events"><code class="docutils literal notranslate"><span class="pre">_KinetoProfile.events()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.profiler._KinetoProfile.export_chrome_trace"><code class="docutils literal notranslate"><span class="pre">_KinetoProfile.export_chrome_trace()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.profiler._KinetoProfile.export_memory_timeline"><code class="docutils literal notranslate"><span class="pre">_KinetoProfile.export_memory_timeline()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.profiler._KinetoProfile.export_stacks"><code class="docutils literal notranslate"><span class="pre">_KinetoProfile.export_stacks()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.profiler._KinetoProfile.key_averages"><code class="docutils literal notranslate"><span class="pre">_KinetoProfile.key_averages()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.profiler._KinetoProfile.preset_metadata_json"><code class="docutils literal notranslate"><span class="pre">_KinetoProfile.preset_metadata_json()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.profiler._KinetoProfile.toggle_collection_dynamic"><code class="docutils literal notranslate"><span class="pre">_KinetoProfile.toggle_collection_dynamic()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.profiler.profile"><code class="docutils literal notranslate"><span class="pre">profile</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.profiler.profile.get_trace_id"><code class="docutils literal notranslate"><span class="pre">profile.get_trace_id()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.profiler.profile.set_custom_trace_id_callback"><code class="docutils literal notranslate"><span class="pre">profile.set_custom_trace_id_callback()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.profiler.profile.step"><code class="docutils literal notranslate"><span class="pre">profile.step()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.profiler.ProfilerAction"><code class="docutils literal notranslate"><span class="pre">ProfilerAction</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.profiler.ProfilerActivity"><code class="docutils literal notranslate"><span class="pre">ProfilerActivity</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.profiler.ProfilerActivity.name"><code class="docutils literal notranslate"><span class="pre">ProfilerActivity.name</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.profiler.schedule"><code class="docutils literal notranslate"><span class="pre">schedule()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.profiler.tensorboard_trace_handler"><code class="docutils literal notranslate"><span class="pre">tensorboard_trace_handler()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intel-instrumentation-and-tracing-technology-apis">Intel Instrumentation and Tracing Technology APIs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.profiler.itt.is_available"><code class="docutils literal notranslate"><span class="pre">is_available()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.profiler.itt.mark"><code class="docutils literal notranslate"><span class="pre">mark()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.profiler.itt.range_push"><code class="docutils literal notranslate"><span class="pre">range_push()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.profiler.itt.range_pop"><code class="docutils literal notranslate"><span class="pre">range_pop()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/python-api/profiler.rst">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div>
+<div class="sidebar-secondary-item"> 
+</div>
+<div class="sidebar-secondary-item">
+ <p>PyTorch Libraries</p>
+ <ul>
+ 
+  <li><a href="https://pytorch.org/vision">torchvision</a></li>
+ 
+  <li><a href="https://pytorch.org/executorch">ExecuTorch</a></li>
+ 
+  <li><a href="https://https://pytorch.org/ao">torchao</a></li>
+ 
+  <li><a href="https://https://pytorch.org/audio">torchaudio</a></li>
+ 
+  <li><a href="https://https://pytorch.org/torchrec">torchrec</a></li>
+ 
+  <li><a href="https://https://pytorch.org/serve">torchserve</a></li>
+ 
+  <li><a href="https://https://pytorch.org/data">torchdata</a></li>
+ 
+  <li><a href="https://https://pytorch.org/xla">PyTorch on XLA devices</a></li>
+ 
+ </ul>
+</div>
+</div>
+
+</div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright PyTorch Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
