@@ -49,9 +49,7 @@
 .header-container:after {
   clear: both;
 }
-.header-container {
-  *zoom: 1;
-}
+
 @media screen and (min-width: 1200px) {
   .header-container {
     display: block;
@@ -110,7 +108,7 @@
     -webkit-box-pack: end;
         -ms-flex-pack: end;
     padding-left: 110px;
-        
+
   }
 }
 .header-holder .main-menu ul {
@@ -210,9 +208,6 @@
 .mobile-main-menu .container-fluid:after {
   clear: both;
 }
-.mobile-main-menu .container-fluid {
-  *zoom: 1;
-}
 
 .mobile-main-menu.open ul {
   list-style-type: none;
@@ -268,7 +263,7 @@
 
 .mobile-main-menu-links-container ul.resources-mobile-menu-items li a {
   font-size: 18px;
-  line-height: 34px;    
+  line-height: 34px;
 }
 
 .site-footer {
@@ -466,6 +461,7 @@ html[data-theme="light"] {
     --bs-link-hover-color: #ee4c2c;
     --bs-emphasis-color-rgb: #ee4c2c;
     --bs-emphasis-color: #ee4c2c;
+}
 
 html[data-theme="dark"] {
     --pst-color-primary: #11b3d3;
@@ -475,6 +471,7 @@ html[data-theme="dark"] {
     --bs-emphasis-color-rgb: #11b3d3;
     --bs-emphasis-color: #11b3d3;
     --pst-color-inline-code: #F4A623;
+}
 
 /* End of theme colors */
 
@@ -488,7 +485,7 @@ html[data-theme="dark"] {
   .bd-header {
     top: 70px !important;
   }
-
+}
 
 .bd-sidebar-primary {
   top: 150px !important;
@@ -496,8 +493,4 @@ html[data-theme="dark"] {
 
 .bd-sidebar-secondary {
   top: 150px !important;
-}
-
-.navbar-brand img {
-  height: 50%;
 }
