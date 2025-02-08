@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../../../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../../../../../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../../../../../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -44,7 +44,7 @@
   <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../../../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../../../../../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -63,7 +63,7 @@ window.addEventListener("load", () => mermaid.run());
     <link rel="search" title="Search" href="../../../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -72,7 +72,6 @@ window.addEventListener("load", () => mermaid.run());
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -159,7 +158,7 @@ window.addEventListener("load", () => mermaid.run());
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -183,8 +182,8 @@ window.addEventListener("load", () => mermaid.run());
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -254,7 +253,7 @@ window.addEventListener("load", () => mermaid.run());
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -269,7 +268,6 @@ window.addEventListener("load", () => mermaid.run());
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -309,9 +307,27 @@ window.addEventListener("load", () => mermaid.run());
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -325,20 +341,14 @@ window.addEventListener("load", () => mermaid.run());
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../../../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -399,6 +409,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -489,6 +539,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
         
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
       </div>
     
   </div>
@@ -559,7 +649,7 @@ window.addEventListener("load", () => mermaid.run());
 <span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Optional</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Type</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">torch.ao.quantization</span><span class="w"> </span><span class="kn">import</span> <span class="n">QConfigMapping</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">torch.ao.quantization.backend_config</span><span class="w"> </span><span class="kn">import</span> <span class="n">BackendConfig</span>
@@ -591,20 +681,20 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="StandaloneModuleConfigEntry">
-<a class="viewcode-back" href="../../../../../python-api/torch.ao.quantization.fx.custom_config.StandaloneModuleConfigEntry.html#torch.ao.quantization.fx.custom_config.StandaloneModuleConfigEntry">[docs]</a>
+<a class="viewcode-back" href="../../../../../python-api/generated/torch.ao.quantization.fx.custom_config.StandaloneModuleConfigEntry.html#torch.ao.quantization.fx.custom_config.StandaloneModuleConfigEntry">[docs]</a>
 <span class="nd">@dataclass</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">StandaloneModuleConfigEntry</span><span class="p">:</span>
     <span class="c1"># qconfig_mapping for the prepare function called in the submodule,</span>
     <span class="c1"># None means use qconfig from parent qconfig_mapping</span>
     <span class="n">qconfig_mapping</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">QConfigMapping</span><span class="p">]</span>
-    <span class="n">example_inputs</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+    <span class="n">example_inputs</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
     <span class="n">prepare_custom_config</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PrepareCustomConfig</span><span class="p">]</span>
     <span class="n">backend_config</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">BackendConfig</span><span class="p">]</span></div>
 
 
 
 <div class="viewcode-block" id="PrepareCustomConfig">
-<a class="viewcode-back" href="../../../../../python-api/torch.ao.quantization.fx.custom_config.PrepareCustomConfig.html#torch.ao.quantization.fx.custom_config.PrepareCustomConfig">[docs]</a>
+<a class="viewcode-back" href="../../../../../python-api/generated/torch.ao.quantization.fx.custom_config.PrepareCustomConfig.html#torch.ao.quantization.fx.custom_config.PrepareCustomConfig">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">PrepareCustomConfig</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Custom configuration for :func:`~torch.ao.quantization.quantize_fx.prepare_fx` and</span>
@@ -626,26 +716,26 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">standalone_module_names</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">StandaloneModuleConfigEntry</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">standalone_module_classes</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">type</span><span class="p">,</span> <span class="n">StandaloneModuleConfigEntry</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">float_to_observed_mapping</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="n">QuantType</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">type</span><span class="p">,</span> <span class="nb">type</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">non_traceable_module_names</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">non_traceable_module_classes</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">type</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">input_quantized_indexes</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">output_quantized_indexes</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">preserved_attributes</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">standalone_module_names</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">StandaloneModuleConfigEntry</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">standalone_module_classes</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Type</span><span class="p">,</span> <span class="n">StandaloneModuleConfigEntry</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">float_to_observed_mapping</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">QuantType</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Type</span><span class="p">,</span> <span class="n">Type</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">non_traceable_module_names</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">non_traceable_module_classes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Type</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">input_quantized_indexes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output_quantized_indexes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">preserved_attributes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">dict_nonempty</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">}</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;PrepareCustomConfig(</span><span class="si">{</span><span class="n">dict_nonempty</span><span class="si">}</span><span class="s2">)&quot;</span>
 
 <div class="viewcode-block" id="PrepareCustomConfig.set_standalone_module_name">
-<a class="viewcode-back" href="../../../../../python-api/torch.ao.quantization.fx.custom_config.PrepareCustomConfig.html#torch.ao.quantization.fx.custom_config.PrepareCustomConfig.set_standalone_module_name">[docs]</a>
+<a class="viewcode-back" href="../../../../../python-api/generated/torch.ao.quantization.fx.custom_config.PrepareCustomConfig.html#torch.ao.quantization.fx.custom_config.PrepareCustomConfig.set_standalone_module_name">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">set_standalone_module_name</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">module_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
         <span class="n">qconfig_mapping</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">QConfigMapping</span><span class="p">],</span>
-        <span class="n">example_inputs</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span>
+        <span class="n">example_inputs</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span>
         <span class="n">prepare_custom_config</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PrepareCustomConfig</span><span class="p">],</span>
         <span class="n">backend_config</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">BackendConfig</span><span class="p">],</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PrepareCustomConfig</span><span class="p">:</span>
@@ -663,12 +753,12 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="PrepareCustomConfig.set_standalone_module_class">
-<a class="viewcode-back" href="../../../../../python-api/torch.ao.quantization.fx.custom_config.PrepareCustomConfig.html#torch.ao.quantization.fx.custom_config.PrepareCustomConfig.set_standalone_module_class">[docs]</a>
+<a class="viewcode-back" href="../../../../../python-api/generated/torch.ao.quantization.fx.custom_config.PrepareCustomConfig.html#torch.ao.quantization.fx.custom_config.PrepareCustomConfig.set_standalone_module_class">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">set_standalone_module_class</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
-        <span class="n">module_class</span><span class="p">:</span> <span class="nb">type</span><span class="p">,</span>
+        <span class="n">module_class</span><span class="p">:</span> <span class="n">Type</span><span class="p">,</span>
         <span class="n">qconfig_mapping</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">QConfigMapping</span><span class="p">],</span>
-        <span class="n">example_inputs</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span>
+        <span class="n">example_inputs</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span>
         <span class="n">prepare_custom_config</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PrepareCustomConfig</span><span class="p">],</span>
         <span class="n">backend_config</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">BackendConfig</span><span class="p">],</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PrepareCustomConfig</span><span class="p">:</span>
@@ -686,11 +776,11 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="PrepareCustomConfig.set_float_to_observed_mapping">
-<a class="viewcode-back" href="../../../../../python-api/torch.ao.quantization.fx.custom_config.PrepareCustomConfig.html#torch.ao.quantization.fx.custom_config.PrepareCustomConfig.set_float_to_observed_mapping">[docs]</a>
+<a class="viewcode-back" href="../../../../../python-api/generated/torch.ao.quantization.fx.custom_config.PrepareCustomConfig.html#torch.ao.quantization.fx.custom_config.PrepareCustomConfig.set_float_to_observed_mapping">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">set_float_to_observed_mapping</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
-        <span class="n">float_class</span><span class="p">:</span> <span class="nb">type</span><span class="p">,</span>
-        <span class="n">observed_class</span><span class="p">:</span> <span class="nb">type</span><span class="p">,</span>
+        <span class="n">float_class</span><span class="p">:</span> <span class="n">Type</span><span class="p">,</span>
+        <span class="n">observed_class</span><span class="p">:</span> <span class="n">Type</span><span class="p">,</span>
         <span class="n">quant_type</span><span class="p">:</span> <span class="n">QuantType</span> <span class="o">=</span> <span class="n">QuantType</span><span class="o">.</span><span class="n">STATIC</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PrepareCustomConfig</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -710,9 +800,9 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="PrepareCustomConfig.set_non_traceable_module_names">
-<a class="viewcode-back" href="../../../../../python-api/torch.ao.quantization.fx.custom_config.PrepareCustomConfig.html#torch.ao.quantization.fx.custom_config.PrepareCustomConfig.set_non_traceable_module_names">[docs]</a>
+<a class="viewcode-back" href="../../../../../python-api/generated/torch.ao.quantization.fx.custom_config.PrepareCustomConfig.html#torch.ao.quantization.fx.custom_config.PrepareCustomConfig.set_non_traceable_module_names">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">set_non_traceable_module_names</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span> <span class="n">module_names</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">module_names</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PrepareCustomConfig</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the modules that are not symbolically traceable, identified by name.</span>
@@ -722,9 +812,9 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="PrepareCustomConfig.set_non_traceable_module_classes">
-<a class="viewcode-back" href="../../../../../python-api/torch.ao.quantization.fx.custom_config.PrepareCustomConfig.html#torch.ao.quantization.fx.custom_config.PrepareCustomConfig.set_non_traceable_module_classes">[docs]</a>
+<a class="viewcode-back" href="../../../../../python-api/generated/torch.ao.quantization.fx.custom_config.PrepareCustomConfig.html#torch.ao.quantization.fx.custom_config.PrepareCustomConfig.set_non_traceable_module_classes">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">set_non_traceable_module_classes</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span> <span class="n">module_classes</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">type</span><span class="p">]</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">module_classes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Type</span><span class="p">]</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PrepareCustomConfig</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the modules that are not symbolically traceable, identified by class.</span>
@@ -734,8 +824,8 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="PrepareCustomConfig.set_input_quantized_indexes">
-<a class="viewcode-back" href="../../../../../python-api/torch.ao.quantization.fx.custom_config.PrepareCustomConfig.html#torch.ao.quantization.fx.custom_config.PrepareCustomConfig.set_input_quantized_indexes">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">set_input_quantized_indexes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indexes</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">PrepareCustomConfig</span><span class="p">:</span>
+<a class="viewcode-back" href="../../../../../python-api/generated/torch.ao.quantization.fx.custom_config.PrepareCustomConfig.html#torch.ao.quantization.fx.custom_config.PrepareCustomConfig.set_input_quantized_indexes">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_input_quantized_indexes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indexes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">PrepareCustomConfig</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the indexes of the inputs of the graph that should be quantized.</span>
 <span class="sd">        Inputs are otherwise assumed to be in fp32 by default instead.</span>
@@ -745,8 +835,8 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="PrepareCustomConfig.set_output_quantized_indexes">
-<a class="viewcode-back" href="../../../../../python-api/torch.ao.quantization.fx.custom_config.PrepareCustomConfig.html#torch.ao.quantization.fx.custom_config.PrepareCustomConfig.set_output_quantized_indexes">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">set_output_quantized_indexes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indexes</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">PrepareCustomConfig</span><span class="p">:</span>
+<a class="viewcode-back" href="../../../../../python-api/generated/torch.ao.quantization.fx.custom_config.PrepareCustomConfig.html#torch.ao.quantization.fx.custom_config.PrepareCustomConfig.set_output_quantized_indexes">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_output_quantized_indexes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indexes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">PrepareCustomConfig</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the indexes of the outputs of the graph that should be quantized.</span>
 <span class="sd">        Outputs are otherwise assumed to be in fp32 by default instead.</span>
@@ -756,8 +846,8 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="PrepareCustomConfig.set_preserved_attributes">
-<a class="viewcode-back" href="../../../../../python-api/torch.ao.quantization.fx.custom_config.PrepareCustomConfig.html#torch.ao.quantization.fx.custom_config.PrepareCustomConfig.set_preserved_attributes">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">set_preserved_attributes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attributes</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">PrepareCustomConfig</span><span class="p">:</span>
+<a class="viewcode-back" href="../../../../../python-api/generated/torch.ao.quantization.fx.custom_config.PrepareCustomConfig.html#torch.ao.quantization.fx.custom_config.PrepareCustomConfig.set_preserved_attributes">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_preserved_attributes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attributes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">PrepareCustomConfig</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the names of the attributes that will persist in the graph module even if they are not used in</span>
 <span class="sd">        the model&#39;s ``forward`` method.</span>
@@ -768,10 +858,10 @@ window.addEventListener("load", () => mermaid.run());
 
     <span class="c1"># TODO: remove this</span>
 <div class="viewcode-block" id="PrepareCustomConfig.from_dict">
-<a class="viewcode-back" href="../../../../../python-api/torch.ao.quantization.fx.custom_config.PrepareCustomConfig.html#torch.ao.quantization.fx.custom_config.PrepareCustomConfig.from_dict">[docs]</a>
+<a class="viewcode-back" href="../../../../../python-api/generated/torch.ao.quantization.fx.custom_config.PrepareCustomConfig.html#torch.ao.quantization.fx.custom_config.PrepareCustomConfig.from_dict">[docs]</a>
     <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">from_dict</span><span class="p">(</span>
-        <span class="bp">cls</span><span class="p">,</span> <span class="n">prepare_custom_config_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>
+        <span class="bp">cls</span><span class="p">,</span> <span class="n">prepare_custom_config_dict</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PrepareCustomConfig</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Create a ``PrepareCustomConfig`` from a dictionary with the following items:</span>
@@ -801,7 +891,7 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">QConfigMapping</span><span class="p">)</span> <span class="ow">or</span> <span class="n">obj</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="k">return</span> <span class="n">obj</span>
-            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">Dict</span><span class="p">):</span>
                 <span class="k">return</span> <span class="n">QConfigMapping</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
                 <span class="sa">f</span><span class="s2">&quot;Expected QConfigMapping in prepare_custom_config_dict[</span><span class="se">\&quot;</span><span class="si">{</span><span class="n">dict_key</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">], got &#39;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
@@ -815,7 +905,7 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">PrepareCustomConfig</span><span class="p">)</span> <span class="ow">or</span> <span class="n">obj</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="k">return</span> <span class="n">obj</span>
-            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">Dict</span><span class="p">):</span>
                 <span class="k">return</span> <span class="n">PrepareCustomConfig</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
                 <span class="sa">f</span><span class="s2">&quot;Expected PrepareCustomConfig in prepare_custom_config_dict[</span><span class="se">\&quot;</span><span class="si">{</span><span class="n">dict_key</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">], got &#39;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
@@ -827,7 +917,7 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sd">            &quot;&quot;&quot;</span>
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">BackendConfig</span><span class="p">)</span> <span class="ow">or</span> <span class="n">obj</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="k">return</span> <span class="n">obj</span>
-            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">Dict</span><span class="p">):</span>
                 <span class="k">return</span> <span class="n">BackendConfig</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
                 <span class="sa">f</span><span class="s2">&quot;Expected BackendConfig in prepare_custom_config_dict[</span><span class="se">\&quot;</span><span class="si">{</span><span class="n">dict_key</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">], got &#39;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
@@ -907,8 +997,8 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="PrepareCustomConfig.to_dict">
-<a class="viewcode-back" href="../../../../../python-api/torch.ao.quantization.fx.custom_config.PrepareCustomConfig.html#torch.ao.quantization.fx.custom_config.PrepareCustomConfig.to_dict">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<a class="viewcode-back" href="../../../../../python-api/generated/torch.ao.quantization.fx.custom_config.PrepareCustomConfig.html#torch.ao.quantization.fx.custom_config.PrepareCustomConfig.to_dict">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Convert this ``PrepareCustomConfig`` to a dictionary with the items described in</span>
 <span class="sd">        :func:`~torch.ao.quantization.fx.custom_config.PrepareCustomConfig.from_dict`.</span>
@@ -927,7 +1017,7 @@ window.addEventListener("load", () => mermaid.run());
                 <span class="n">e</span><span class="o">.</span><span class="n">backend_config</span><span class="p">,</span>
             <span class="p">)</span>
 
-        <span class="n">d</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">d</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">for</span> <span class="n">module_name</span><span class="p">,</span> <span class="n">sm_config_entry</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">standalone_module_names</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="k">if</span> <span class="n">STANDALONE_MODULE_NAME_DICT_KEY</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
                 <span class="n">d</span><span class="p">[</span><span class="n">STANDALONE_MODULE_NAME_DICT_KEY</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
@@ -965,7 +1055,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="ConvertCustomConfig">
-<a class="viewcode-back" href="../../../../../python-api/torch.ao.quantization.fx.custom_config.ConvertCustomConfig.html#torch.ao.quantization.fx.custom_config.ConvertCustomConfig">[docs]</a>
+<a class="viewcode-back" href="../../../../../python-api/generated/torch.ao.quantization.fx.custom_config.ConvertCustomConfig.html#torch.ao.quantization.fx.custom_config.ConvertCustomConfig">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">ConvertCustomConfig</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Custom configuration for :func:`~torch.ao.quantization.quantize_fx.convert_fx`.</span>
@@ -978,19 +1068,19 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">observed_to_quantized_mapping</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="n">QuantType</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">type</span><span class="p">,</span> <span class="nb">type</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">preserved_attributes</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">observed_to_quantized_mapping</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">QuantType</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Type</span><span class="p">,</span> <span class="n">Type</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">preserved_attributes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">dict_nonempty</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">}</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;ConvertCustomConfig(</span><span class="si">{</span><span class="n">dict_nonempty</span><span class="si">}</span><span class="s2">)&quot;</span>
 
 <div class="viewcode-block" id="ConvertCustomConfig.set_observed_to_quantized_mapping">
-<a class="viewcode-back" href="../../../../../python-api/torch.ao.quantization.fx.custom_config.ConvertCustomConfig.html#torch.ao.quantization.fx.custom_config.ConvertCustomConfig.set_observed_to_quantized_mapping">[docs]</a>
+<a class="viewcode-back" href="../../../../../python-api/generated/torch.ao.quantization.fx.custom_config.ConvertCustomConfig.html#torch.ao.quantization.fx.custom_config.ConvertCustomConfig.set_observed_to_quantized_mapping">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">set_observed_to_quantized_mapping</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
-        <span class="n">observed_class</span><span class="p">:</span> <span class="nb">type</span><span class="p">,</span>
-        <span class="n">quantized_class</span><span class="p">:</span> <span class="nb">type</span><span class="p">,</span>
+        <span class="n">observed_class</span><span class="p">:</span> <span class="n">Type</span><span class="p">,</span>
+        <span class="n">quantized_class</span><span class="p">:</span> <span class="n">Type</span><span class="p">,</span>
         <span class="n">quant_type</span><span class="p">:</span> <span class="n">QuantType</span> <span class="o">=</span> <span class="n">QuantType</span><span class="o">.</span><span class="n">STATIC</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ConvertCustomConfig</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -1006,8 +1096,8 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="ConvertCustomConfig.set_preserved_attributes">
-<a class="viewcode-back" href="../../../../../python-api/torch.ao.quantization.fx.custom_config.ConvertCustomConfig.html#torch.ao.quantization.fx.custom_config.ConvertCustomConfig.set_preserved_attributes">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">set_preserved_attributes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attributes</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ConvertCustomConfig</span><span class="p">:</span>
+<a class="viewcode-back" href="../../../../../python-api/generated/torch.ao.quantization.fx.custom_config.ConvertCustomConfig.html#torch.ao.quantization.fx.custom_config.ConvertCustomConfig.set_preserved_attributes">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_preserved_attributes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attributes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ConvertCustomConfig</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the names of the attributes that will persist in the graph module even if they are not used in</span>
 <span class="sd">        the model&#39;s ``forward`` method.</span>
@@ -1018,10 +1108,10 @@ window.addEventListener("load", () => mermaid.run());
 
     <span class="c1"># TODO: remove this</span>
 <div class="viewcode-block" id="ConvertCustomConfig.from_dict">
-<a class="viewcode-back" href="../../../../../python-api/torch.ao.quantization.fx.custom_config.ConvertCustomConfig.html#torch.ao.quantization.fx.custom_config.ConvertCustomConfig.from_dict">[docs]</a>
+<a class="viewcode-back" href="../../../../../python-api/generated/torch.ao.quantization.fx.custom_config.ConvertCustomConfig.html#torch.ao.quantization.fx.custom_config.ConvertCustomConfig.from_dict">[docs]</a>
     <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">from_dict</span><span class="p">(</span>
-        <span class="bp">cls</span><span class="p">,</span> <span class="n">convert_custom_config_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>
+        <span class="bp">cls</span><span class="p">,</span> <span class="n">convert_custom_config_dict</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ConvertCustomConfig</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Create a ``ConvertCustomConfig`` from a dictionary with the following items:</span>
@@ -1053,13 +1143,13 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="ConvertCustomConfig.to_dict">
-<a class="viewcode-back" href="../../../../../python-api/torch.ao.quantization.fx.custom_config.ConvertCustomConfig.html#torch.ao.quantization.fx.custom_config.ConvertCustomConfig.to_dict">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<a class="viewcode-back" href="../../../../../python-api/generated/torch.ao.quantization.fx.custom_config.ConvertCustomConfig.html#torch.ao.quantization.fx.custom_config.ConvertCustomConfig.to_dict">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Convert this ``ConvertCustomConfig`` to a dictionary with the items described in</span>
 <span class="sd">        :func:`~torch.ao.quantization.fx.custom_config.ConvertCustomConfig.from_dict`.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">d</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">d</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">for</span> <span class="p">(</span>
             <span class="n">quant_type</span><span class="p">,</span>
             <span class="n">observed_to_quantized_mapping</span><span class="p">,</span>
@@ -1077,7 +1167,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="FuseCustomConfig">
-<a class="viewcode-back" href="../../../../../python-api/torch.ao.quantization.fx.custom_config.FuseCustomConfig.html#torch.ao.quantization.fx.custom_config.FuseCustomConfig">[docs]</a>
+<a class="viewcode-back" href="../../../../../python-api/generated/torch.ao.quantization.fx.custom_config.FuseCustomConfig.html#torch.ao.quantization.fx.custom_config.FuseCustomConfig">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">FuseCustomConfig</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Custom configuration for :func:`~torch.ao.quantization.quantize_fx.fuse_fx`.</span>
@@ -1088,15 +1178,15 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">preserved_attributes</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">preserved_attributes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">dict_nonempty</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">}</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;FuseCustomConfig(</span><span class="si">{</span><span class="n">dict_nonempty</span><span class="si">}</span><span class="s2">)&quot;</span>
 
 <div class="viewcode-block" id="FuseCustomConfig.set_preserved_attributes">
-<a class="viewcode-back" href="../../../../../python-api/torch.ao.quantization.fx.custom_config.FuseCustomConfig.html#torch.ao.quantization.fx.custom_config.FuseCustomConfig.set_preserved_attributes">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">set_preserved_attributes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attributes</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">FuseCustomConfig</span><span class="p">:</span>
+<a class="viewcode-back" href="../../../../../python-api/generated/torch.ao.quantization.fx.custom_config.FuseCustomConfig.html#torch.ao.quantization.fx.custom_config.FuseCustomConfig.set_preserved_attributes">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_preserved_attributes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attributes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">FuseCustomConfig</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the names of the attributes that will persist in the graph module even if they are not used in</span>
 <span class="sd">        the model&#39;s ``forward`` method.</span>
@@ -1107,9 +1197,9 @@ window.addEventListener("load", () => mermaid.run());
 
     <span class="c1"># TODO: remove this</span>
 <div class="viewcode-block" id="FuseCustomConfig.from_dict">
-<a class="viewcode-back" href="../../../../../python-api/torch.ao.quantization.fx.custom_config.FuseCustomConfig.html#torch.ao.quantization.fx.custom_config.FuseCustomConfig.from_dict">[docs]</a>
+<a class="viewcode-back" href="../../../../../python-api/generated/torch.ao.quantization.fx.custom_config.FuseCustomConfig.html#torch.ao.quantization.fx.custom_config.FuseCustomConfig.from_dict">[docs]</a>
     <span class="nd">@classmethod</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">from_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">fuse_custom_config_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">FuseCustomConfig</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">fuse_custom_config_dict</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">FuseCustomConfig</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Create a ``ConvertCustomConfig`` from a dictionary with the following items:</span>
 
@@ -1125,13 +1215,13 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="FuseCustomConfig.to_dict">
-<a class="viewcode-back" href="../../../../../python-api/torch.ao.quantization.fx.custom_config.FuseCustomConfig.html#torch.ao.quantization.fx.custom_config.FuseCustomConfig.to_dict">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<a class="viewcode-back" href="../../../../../python-api/generated/torch.ao.quantization.fx.custom_config.FuseCustomConfig.html#torch.ao.quantization.fx.custom_config.FuseCustomConfig.to_dict">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Convert this ``FuseCustomConfig`` to a dictionary with the items described in</span>
 <span class="sd">        :func:`~torch.ao.quantization.fx.custom_config.ConvertCustomConfig.from_dict`.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">d</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">d</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">preserved_attributes</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">d</span><span class="p">[</span><span class="n">PRESERVED_ATTRIBUTES_DICT_KEY</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">preserved_attributes</span>
         <span class="k">return</span> <span class="n">d</span></div>
@@ -1168,7 +1258,6 @@ window.addEventListener("load", () => mermaid.run());
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

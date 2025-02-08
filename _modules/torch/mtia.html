@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -44,7 +44,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -63,7 +63,7 @@ window.addEventListener("load", () => mermaid.run());
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -72,7 +72,6 @@ window.addEventListener("load", () => mermaid.run());
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -159,7 +158,7 @@ window.addEventListener("load", () => mermaid.run());
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -183,8 +182,8 @@ window.addEventListener("load", () => mermaid.run());
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -254,7 +253,7 @@ window.addEventListener("load", () => mermaid.run());
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -269,7 +268,6 @@ window.addEventListener("load", () => mermaid.run());
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -309,9 +307,27 @@ window.addEventListener("load", () => mermaid.run());
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -325,20 +341,14 @@ window.addEventListener("load", () => mermaid.run());
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -399,6 +409,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -489,6 +539,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
         
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
       </div>
     
   </div>
@@ -576,8 +666,8 @@ window.addEventListener("load", () => mermaid.run());
 <span class="n">Stream</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">Stream</span>
 
 <span class="n">_initialized</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="n">_queued_calls</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span>
-    <span class="nb">tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[],</span> <span class="kc">None</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span>
+<span class="n">_queued_calls</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span>
+    <span class="n">Tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[],</span> <span class="kc">None</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span>
 <span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># don&#39;t invoke these until initialization occurs</span>
 <span class="n">_tls</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">local</span><span class="p">()</span>
 <span class="n">_initialization_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
@@ -585,14 +675,14 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="init">
-<a class="viewcode-back" href="../../generated/torch.mtia.init.html#torch.mtia.init">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.mtia.init.html#torch.mtia.init">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">init</span><span class="p">():</span>
     <span class="n">_lazy_init</span><span class="p">()</span></div>
 
 
 
 <div class="viewcode-block" id="is_initialized">
-<a class="viewcode-back" href="../../python-api/torch.mtia.is_initialized.html#torch.mtia.is_initialized">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.mtia.is_initialized.html#torch.mtia.is_initialized">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">is_initialized</span><span class="p">():</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return whether PyTorch&#39;s MTIA state has been initialized.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">_initialized</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">_is_in_bad_fork</span><span class="p">()</span></div>
@@ -626,7 +716,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="k">if</span> <span class="ow">not</span> <span class="n">_is_compiled</span><span class="p">():</span>
             <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span>
                 <span class="s2">&quot;Torch not compiled with MTIA enabled. &quot;</span>
-                <span class="s2">&quot;Ensure you have `import mtia.host_runtime.torch_mtia.dynamic_library` in your python &quot;</span>
+                <span class="s2">&quot;Ensure you have `import mtia.host_runtime.torch_mtia` in your python &quot;</span>
                 <span class="s2">&quot;src file and include `//mtia/host_runtime/torch_mtia:torch_mtia` as &quot;</span>
                 <span class="s2">&quot;your target dependency!&quot;</span>
             <span class="p">)</span>
@@ -655,7 +745,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="DeferredMtiaCallError">
-<a class="viewcode-back" href="../../generated/torch.mtia.DeferredMtiaCallError.html#torch.mtia.DeferredMtiaCallError">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.mtia.DeferredMtiaCallError.html#torch.mtia.DeferredMtiaCallError">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">DeferredMtiaCallError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
     <span class="k">pass</span></div>
 
@@ -667,7 +757,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="is_available">
-<a class="viewcode-back" href="../../python-api/torch.mtia.is_available.html#torch.mtia.is_available">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.mtia.is_available.html#torch.mtia.is_available">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">is_available</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return true if MTIA device is available&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">_is_compiled</span><span class="p">():</span>
@@ -678,7 +768,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="synchronize">
-<a class="viewcode-back" href="../../python-api/torch.mtia.synchronize.html#torch.mtia.synchronize">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.mtia.synchronize.html#torch.mtia.synchronize">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">synchronize</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">_device_t</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Waits for all jobs in all streams on a MTIA device to complete.&quot;&quot;&quot;</span>
     <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">mtia</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="n">device</span><span class="p">):</span>
@@ -687,16 +777,15 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="device_count">
-<a class="viewcode-back" href="../../generated/torch.mtia.device_count.html#torch.mtia.device_count">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.mtia.device_count.html#torch.mtia.device_count">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">device_count</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the number of MTIA devices available.&quot;&quot;&quot;</span>
-    <span class="c1"># TODO: Update _accelerator_hooks_device_count to abstract a MTIA device count API</span>
-    <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">_mtia_getDeviceCount</span><span class="p">()</span></div>
+    <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">_accelerator_hooks_device_count</span><span class="p">()</span></div>
 
 
 
 <div class="viewcode-block" id="current_device">
-<a class="viewcode-back" href="../../generated/torch.mtia.current_device.html#torch.mtia.current_device">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.mtia.current_device.html#torch.mtia.current_device">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">current_device</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the index of a currently selected device.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">_accelerator_hooks_get_current_device</span><span class="p">()</span></div>
@@ -704,7 +793,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="current_stream">
-<a class="viewcode-back" href="../../python-api/torch.mtia.current_stream.html#torch.mtia.current_stream">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.mtia.current_stream.html#torch.mtia.current_stream">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">current_stream</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">_device_t</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Stream</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the currently selected :class:`Stream` for a given device.</span>
 
@@ -719,7 +808,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="default_stream">
-<a class="viewcode-back" href="../../python-api/torch.mtia.default_stream.html#torch.mtia.default_stream">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.mtia.default_stream.html#torch.mtia.default_stream">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">default_stream</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">_device_t</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Stream</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the default :class:`Stream` for a given device.</span>
 
@@ -733,40 +822,9 @@ window.addEventListener("load", () => mermaid.run());
 
 
 
-<div class="viewcode-block" id="record_memory_history">
-<a class="viewcode-back" href="../../generated/torch.mtia.record_memory_history.html#torch.mtia.record_memory_history">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">record_memory_history</span><span class="p">(</span>
-    <span class="n">enabled</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span><span class="p">,</span> <span class="n">stacks</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="n">max_entries</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Enable/Disable the memory profiler on MTIA allocator</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">        enabled (all or state, optional) selected device. Returns</span>
-<span class="sd">            statistics for the current device, given by current_device(),</span>
-<span class="sd">            if device is None (default).</span>
-
-<span class="sd">        stacks (&quot;python&quot; or &quot;cpp&quot;, optional). Select the stack trace to record.</span>
-
-<span class="sd">        max_entries (int, optional). Maximum number of entries to record.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">is_initialized</span><span class="p">():</span>
-        <span class="k">return</span>
-    <span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">_mtia_recordMemoryHistory</span><span class="p">(</span><span class="n">enabled</span><span class="p">,</span> <span class="n">stacks</span><span class="p">,</span> <span class="n">max_entries</span><span class="p">)</span></div>
-
-
-
-<div class="viewcode-block" id="snapshot">
-<a class="viewcode-back" href="../../python-api/torch.mtia.snapshot.html#torch.mtia.snapshot">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">snapshot</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
-<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return a dictionary of MTIA memory allocator history&quot;&quot;&quot;</span>
-
-    <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">_mtia_memorySnapshot</span><span class="p">()</span></div>
-
-
-
 <div class="viewcode-block" id="get_device_capability">
-<a class="viewcode-back" href="../../python-api/torch.mtia.get_device_capability.html#torch.mtia.get_device_capability">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">get_device_capability</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">_device_t</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<a class="viewcode-back" href="../../python-api/generated/torch.mtia.get_device_capability.html#torch.mtia.get_device_capability">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_device_capability</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">_device_t</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return capability of a given device as a tuple of (major version, minor version).</span>
 
 <span class="sd">    Args:</span>
@@ -779,7 +837,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="empty_cache">
-<a class="viewcode-back" href="../../python-api/torch.mtia.empty_cache.html#torch.mtia.empty_cache">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.mtia.empty_cache.html#torch.mtia.empty_cache">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">empty_cache</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Empty the MTIA device cache.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">_mtia_emptyCache</span><span class="p">()</span></div>
@@ -787,7 +845,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="set_stream">
-<a class="viewcode-back" href="../../python-api/torch.mtia.set_stream.html#torch.mtia.set_stream">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.mtia.set_stream.html#torch.mtia.set_stream">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">set_stream</span><span class="p">(</span><span class="n">stream</span><span class="p">:</span> <span class="n">Stream</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Set the current stream.This is a wrapper API to set the stream.</span>
 <span class="sd">        Usage of this function is discouraged in favor of the ``stream``</span>
@@ -804,7 +862,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="set_device">
-<a class="viewcode-back" href="../../python-api/torch.mtia.set_device.html#torch.mtia.set_device">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.mtia.set_device.html#torch.mtia.set_device">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">set_device</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">_device_t</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Set the current device.</span>
 
@@ -819,7 +877,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="device">
-<a class="viewcode-back" href="../../python-api/torch.mtia.device.html#torch.mtia.device">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.mtia.device.html#torch.mtia.device">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">device</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Context-manager that changes the selected device.</span>
 
@@ -842,7 +900,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="StreamContext">
-<a class="viewcode-back" href="../../python-api/torch.mtia.StreamContext.html#torch.mtia.StreamContext">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.mtia.StreamContext.html#torch.mtia.StreamContext">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">StreamContext</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Context-manager that selects a given stream.</span>
 
@@ -903,21 +961,21 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="stream">
-<a class="viewcode-back" href="../../generated/torch.mtia.Stream.html#torch.mtia.stream">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.mtia.Stream.html#torch.mtia.stream">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">stream</span><span class="p">(</span><span class="n">stream</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="s2">&quot;torch.mtia.Stream&quot;</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">StreamContext</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Wrap around the Context-manager StreamContext that selects a given stream.</span>
 
 <span class="sd">    Arguments:</span>
 <span class="sd">        stream (Stream): selected stream. This manager is a no-op if it&#39;s</span>
 <span class="sd">            ``None``.</span>
-<span class="sd">    .. note:: In eager mode stream is of type Stream class while in JIT it doesn&#39;t support torch.mtia.stream</span>
+<span class="sd">    ..Note:: In eager mode stream is of type Stream class while in JIT it doesn&#39;t support torch.mtia.stream</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">StreamContext</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span></div>
 
 
 
 <div class="viewcode-block" id="get_rng_state">
-<a class="viewcode-back" href="../../generated/torch.mtia.get_rng_state.html#torch.mtia.get_rng_state">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.mtia.get_rng_state.html#torch.mtia.get_rng_state">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">get_rng_state</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;mtia&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Returns the random number generator state as a ByteTensor.</span>
 
@@ -935,7 +993,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="set_rng_state">
-<a class="viewcode-back" href="../../python-api/torch.mtia.set_rng_state.html#torch.mtia.set_rng_state">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.mtia.set_rng_state.html#torch.mtia.set_rng_state">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">set_rng_state</span><span class="p">(</span>
     <span class="n">new_state</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span> <span class="n">device</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;mtia&quot;</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -969,8 +1027,6 @@ window.addEventListener("load", () => mermaid.run());
     <span class="s2">&quot;memory_stats&quot;</span><span class="p">,</span>
     <span class="s2">&quot;max_memory_allocated&quot;</span><span class="p">,</span>
     <span class="s2">&quot;get_device_capability&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;record_memory_history&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;snapshot&quot;</span><span class="p">,</span>
     <span class="s2">&quot;empty_cache&quot;</span><span class="p">,</span>
     <span class="s2">&quot;set_device&quot;</span><span class="p">,</span>
     <span class="s2">&quot;set_stream&quot;</span><span class="p">,</span>
@@ -1010,7 +1066,6 @@ window.addEventListener("load", () => mermaid.run());
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

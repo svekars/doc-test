@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -44,7 +44,7 @@
   <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../../../../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -63,7 +63,7 @@ window.addEventListener("load", () => mermaid.run());
     <link rel="search" title="Search" href="../../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -72,7 +72,6 @@ window.addEventListener("load", () => mermaid.run());
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -159,7 +158,7 @@ window.addEventListener("load", () => mermaid.run());
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -183,8 +182,8 @@ window.addEventListener("load", () => mermaid.run());
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -254,7 +253,7 @@ window.addEventListener("load", () => mermaid.run());
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -269,7 +268,6 @@ window.addEventListener("load", () => mermaid.run());
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -309,9 +307,27 @@ window.addEventListener("load", () => mermaid.run());
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -325,20 +341,14 @@ window.addEventListener("load", () => mermaid.run());
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -399,6 +409,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -489,6 +539,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
         
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
       </div>
     
   </div>
@@ -554,7 +644,7 @@ window.addEventListener("load", () => mermaid.run());
   <h1>Source code for torch.nn.modules.activation</h1><div class="highlight"><pre>
 <span></span><span class="c1"># mypy: allow-untyped-defs</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Optional</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn.functional</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">F</span>
@@ -600,7 +690,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Threshold">
-<a class="viewcode-back" href="../../../../generated/torch.nn.Threshold.html#torch.nn.Threshold">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Threshold.html#torch.nn.Threshold">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">Threshold</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Thresholds each element of the input Tensor.</span>
 
@@ -652,7 +742,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="ReLU">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.ReLU.html#torch.nn.ReLU">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.ReLU.html#torch.nn.ReLU">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">ReLU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the rectified linear unit function element-wise.</span>
 
@@ -698,7 +788,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="RReLU">
-<a class="viewcode-back" href="../../../../generated/torch.nn.RReLU.html#torch.nn.RReLU">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.RReLU.html#torch.nn.RReLU">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">RReLU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the randomized leaky rectified linear unit function, element-wise.</span>
 
@@ -761,7 +851,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Hardtanh">
-<a class="viewcode-back" href="../../../../generated/torch.nn.Hardtanh.html#torch.nn.Hardtanh">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Hardtanh.html#torch.nn.Hardtanh">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">Hardtanh</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the HardTanh function element-wise.</span>
 
@@ -840,7 +930,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="ReLU6">
-<a class="viewcode-back" href="../../../../generated/torch.nn.ReLU6.html#torch.nn.ReLU6">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.ReLU6.html#torch.nn.ReLU6">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">ReLU6</span><span class="p">(</span><span class="n">Hardtanh</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the ReLU6 function element-wise.</span>
 
@@ -873,7 +963,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Sigmoid">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Sigmoid.html#torch.nn.Sigmoid">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Sigmoid.html#torch.nn.Sigmoid">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">Sigmoid</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the Sigmoid function element-wise.</span>
 
@@ -900,7 +990,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Hardsigmoid">
-<a class="viewcode-back" href="../../../../generated/torch.nn.Hardsigmoid.html#torch.nn.Hardsigmoid">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Hardsigmoid.html#torch.nn.Hardsigmoid">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">Hardsigmoid</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the Hardsigmoid function element-wise.</span>
 
@@ -943,7 +1033,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Tanh">
-<a class="viewcode-back" href="../../../../generated/torch.nn.Tanh.html#torch.nn.Tanh">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Tanh.html#torch.nn.Tanh">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">Tanh</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the Hyperbolic Tangent (Tanh) function element-wise.</span>
 
@@ -971,7 +1061,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="SiLU">
-<a class="viewcode-back" href="../../../../generated/torch.nn.SiLU.html#torch.nn.SiLU">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.SiLU.html#torch.nn.SiLU">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">SiLU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the Sigmoid Linear Unit (SiLU) function, element-wise.</span>
 
@@ -1018,7 +1108,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Mish">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Mish.html#torch.nn.Mish">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Mish.html#torch.nn.Mish">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">Mish</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the Mish function, element-wise.</span>
 
@@ -1060,7 +1150,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Hardswish">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Hardswish.html#torch.nn.Hardswish">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Hardswish.html#torch.nn.Hardswish">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">Hardswish</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the Hardswish function, element-wise.</span>
 
@@ -1105,7 +1195,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="ELU">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.ELU.html#torch.nn.ELU">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.ELU.html#torch.nn.ELU">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">ELU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the Exponential Linear Unit (ELU) function, element-wise.</span>
 
@@ -1156,7 +1246,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="CELU">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.CELU.html#torch.nn.CELU">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.CELU.html#torch.nn.CELU">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">CELU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the CELU function element-wise.</span>
 
@@ -1204,7 +1294,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="SELU">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.SELU.html#torch.nn.SELU">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.SELU.html#torch.nn.SELU">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">SELU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the SELU function element-wise.</span>
 
@@ -1257,7 +1347,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="GLU">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.GLU.html#torch.nn.GLU">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.GLU.html#torch.nn.GLU">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">GLU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the gated linear unit function.</span>
 
@@ -1295,7 +1385,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="GELU">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.GELU.html#torch.nn.GELU">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.GELU.html#torch.nn.GELU">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">GELU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the Gaussian Error Linear Units function.</span>
 
@@ -1340,7 +1430,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Hardshrink">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Hardshrink.html#torch.nn.Hardshrink">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Hardshrink.html#torch.nn.Hardshrink">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">Hardshrink</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the Hard Shrinkage (Hardshrink) function element-wise.</span>
 
@@ -1386,7 +1476,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="LeakyReLU">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.LeakyReLU.html#torch.nn.LeakyReLU">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.LeakyReLU.html#torch.nn.LeakyReLU">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">LeakyReLU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the LeakyReLU function element-wise.</span>
 
@@ -1441,7 +1531,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="LogSigmoid">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.LogSigmoid.html#torch.nn.LogSigmoid">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.LogSigmoid.html#torch.nn.LogSigmoid">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">LogSigmoid</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the Logsigmoid function element-wise.</span>
 
@@ -1467,7 +1557,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Softplus">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Softplus.html#torch.nn.Softplus">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Softplus.html#torch.nn.Softplus">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">Softplus</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the Softplus function element-wise.</span>
 
@@ -1515,7 +1605,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Softshrink">
-<a class="viewcode-back" href="../../../../generated/torch.nn.Softshrink.html#torch.nn.Softshrink">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Softshrink.html#torch.nn.Softshrink">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">Softshrink</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the soft shrinkage function element-wise.</span>
 
@@ -1588,7 +1678,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="MultiheadAttention">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.MultiheadAttention.html#torch.nn.MultiheadAttention">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.MultiheadAttention.html#torch.nn.MultiheadAttention">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MultiheadAttention</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Allows the model to jointly attend to information from different representation subspaces.</span>
 
@@ -1756,7 +1846,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">__setstate__</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
 
 <div class="viewcode-block" id="MultiheadAttention.forward">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.MultiheadAttention.html#torch.nn.MultiheadAttention.forward">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.MultiheadAttention.html#torch.nn.MultiheadAttention.forward">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">query</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span>
@@ -1767,7 +1857,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="n">attn_mask</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Tensor</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">average_attn_weights</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
         <span class="n">is_causal</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Tensor</span><span class="p">]]:</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Tensor</span><span class="p">]]:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Compute attention outputs using query, key, and value embeddings.</span>
 
 <span class="sd">            Supports optional parameters for padding, masks and attention weights.</span>
@@ -2019,13 +2109,13 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="MultiheadAttention.merge_masks">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.MultiheadAttention.html#torch.nn.MultiheadAttention.merge_masks">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.MultiheadAttention.html#torch.nn.MultiheadAttention.merge_masks">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">merge_masks</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">attn_mask</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Tensor</span><span class="p">],</span>
         <span class="n">key_padding_mask</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Tensor</span><span class="p">],</span>
         <span class="n">query</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Optional</span><span class="p">[</span><span class="n">Tensor</span><span class="p">],</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Optional</span><span class="p">[</span><span class="n">Tensor</span><span class="p">],</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Determine mask type and combine masks if necessary.</span>
 
 <span class="sd">        If only one mask is provided, that mask</span>
@@ -2074,7 +2164,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="PReLU">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.PReLU.html#torch.nn.PReLU">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.PReLU.html#torch.nn.PReLU">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">PReLU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the element-wise PReLU function.</span>
 
@@ -2150,7 +2240,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Softsign">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Softsign.html#torch.nn.Softsign">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Softsign.html#torch.nn.Softsign">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">Softsign</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the element-wise Softsign function.</span>
 
@@ -2176,7 +2266,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Tanhshrink">
-<a class="viewcode-back" href="../../../../generated/torch.nn.Tanhshrink.html#torch.nn.Tanhshrink">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Tanhshrink.html#torch.nn.Tanhshrink">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">Tanhshrink</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the element-wise Tanhshrink function.</span>
 
@@ -2202,7 +2292,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Softmin">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Softmin.html#torch.nn.Softmin">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Softmin.html#torch.nn.Softmin">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">Softmin</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the Softmin function to an n-dimensional input Tensor.</span>
 
@@ -2255,7 +2345,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Softmax">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Softmax.html#torch.nn.Softmax">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Softmax.html#torch.nn.Softmax">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">Softmax</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the Softmax function to an n-dimensional input Tensor.</span>
 
@@ -2317,7 +2407,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Softmax2d">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Softmax2d.html#torch.nn.Softmax2d">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Softmax2d.html#torch.nn.Softmax2d">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">Softmax2d</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies SoftMax over features to each spatial location.</span>
 
@@ -2350,7 +2440,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="LogSoftmax">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.LogSoftmax.html#torch.nn.LogSoftmax">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.LogSoftmax.html#torch.nn.LogSoftmax">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">LogSoftmax</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the :math:`\log(\text{Softmax}(x))` function to an n-dimensional input Tensor.</span>
 
@@ -2427,7 +2517,6 @@ window.addEventListener("load", () => mermaid.run());
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

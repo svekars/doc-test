@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -58,7 +58,7 @@
     <link rel="prev" title="Tensor Views" href="tensor_view.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -67,7 +67,6 @@
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -154,7 +153,7 @@
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -178,8 +177,8 @@
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -249,7 +248,7 @@
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -264,7 +263,6 @@
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -304,9 +302,27 @@
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -320,20 +336,14 @@
   
   
   
-    
-    
-      
-    
-    
-    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -394,6 +404,46 @@
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -485,6 +535,46 @@
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
         
       </div>
     
@@ -1942,7 +2032,6 @@
 <li class="toctree-l2"><a class="reference internal" href="generated/torch.cuda.get_device_name.html">torch.cuda.get_device_name</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/torch.cuda.get_device_properties.html">torch.cuda.get_device_properties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/torch.cuda.get_gencode_flags.html">torch.cuda.get_gencode_flags</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/torch.cuda.get_stream_from_external.html">torch.cuda.get_stream_from_external</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/torch.cuda.get_sync_debug_mode.html">torch.cuda.get_sync_debug_mode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/torch.cuda.init.html">torch.cuda.init</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/torch.cuda.ipc_collect.html">torch.cuda.ipc_collect</a></li>
@@ -2041,9 +2130,6 @@
 <li class="toctree-l2"><a class="reference internal" href="generated/torch.mps.profiler.start.html">torch.mps.profiler.start</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/torch.mps.profiler.stop.html">torch.mps.profiler.stop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/torch.mps.profiler.profile.html">torch.mps.profiler.profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/torch.mps.profiler.is_capturing_metal.html">torch.mps.profiler.is_capturing_metal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/torch.mps.profiler.is_metal_capture_enabled.html">torch.mps.profiler.is_metal_capture_enabled</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/torch.mps.profiler.metal_capture.html">torch.mps.profiler.metal_capture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/torch.mps.event.Event.html">Event</a></li>
 </ul>
 </details></li>
@@ -2059,7 +2145,6 @@
 <li class="toctree-l2"><a class="reference internal" href="generated/torch.xpu.get_device_name.html">torch.xpu.get_device_name</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/torch.xpu.get_device_properties.html">torch.xpu.get_device_properties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/torch.xpu.get_gencode_flags.html">torch.xpu.get_gencode_flags</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/torch.xpu.get_stream_from_external.html">torch.xpu.get_stream_from_external</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/torch.xpu.init.html">torch.xpu.init</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/torch.xpu.is_available.html">torch.xpu.is_available</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/torch.xpu.is_initialized.html">torch.xpu.is_initialized</a></li>
@@ -2114,8 +2199,6 @@
 <li class="toctree-l2"><a class="reference internal" href="generated/torch.mtia.memory_stats.html">torch.mtia.memory_stats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/torch.mtia.get_device_capability.html">torch.mtia.get_device_capability</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/torch.mtia.empty_cache.html">torch.mtia.empty_cache</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/torch.mtia.record_memory_history.html">torch.mtia.record_memory_history</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/torch.mtia.snapshot.html">torch.mtia.snapshot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/torch.mtia.set_device.html">torch.mtia.set_device</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/torch.mtia.set_stream.html">torch.mtia.set_stream</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/torch.mtia.synchronize.html">torch.mtia.synchronize</a></li>
@@ -2209,7 +2292,6 @@
 <li class="toctree-l3"><a class="reference internal" href="generated/torch.compiler.cudagraph_mark_step_begin.html">torch.compiler.cudagraph_mark_step_begin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/torch.compiler.is_compiling.html">torch.compiler.is_compiling</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/torch.compiler.is_dynamo_compiling.html">torch.compiler.is_dynamo_compiling</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/torch.compiler.is_exporting.html">torch.compiler.is_exporting</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="torch.compiler.config.html">torch.compiler.config</a></li>
@@ -2573,7 +2655,7 @@ like the following:</p>
 <h2><span class="hidden-section">Function</span><a class="headerlink" href="#function" title="Link to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="torch.autograd.Function">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.autograd.</span></span><span class="sig-name descname"><span class="pre">Function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/autograd/function.html#Function"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/autograd/function.py#L464"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.Function" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.autograd.</span></span><span class="sig-name descname"><span class="pre">Function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/autograd/function.html#Function"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/autograd/function.py#L464"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.Function" title="Link to this definition">#</a></dt>
 <dd><p>Base class to create custom <cite>autograd.Function</cite>.</p>
 <p>To create a custom <cite>autograd.Function</cite>, subclass this class and implement
 the <a class="reference internal" href="generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> and <a class="reference internal" href="generated/torch.autograd.backward.html#torch.autograd.backward" title="torch.autograd.backward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">backward()</span></code></a> static methods. Then, to use your custom
@@ -2696,7 +2778,7 @@ and vtune profiler based using
 <a class="reference internal" href="#torch.autograd.profiler.emit_itt" title="torch.autograd.profiler.emit_itt"><code class="xref py py-class docutils literal notranslate"><span class="pre">emit_itt</span></code></a>.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="torch.autograd.profiler.profile">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.autograd.profiler.</span></span><span class="sig-name descname"><span class="pre">profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_cuda</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record_shapes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_flops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profile_memory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_stack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_modules</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_kineto</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_cpu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">experimental_config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acc_events</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_trace_id_callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/autograd/profiler.html#profile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/autograd/profiler.py#L107"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.profiler.profile" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.autograd.profiler.</span></span><span class="sig-name descname"><span class="pre">profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_cuda</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record_shapes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_flops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profile_memory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_stack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_modules</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_kineto</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_cpu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">experimental_config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acc_events</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_trace_id_callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/autograd/profiler.html#profile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/autograd/profiler.py#L106"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.profiler.profile" title="Link to this definition">#</a></dt>
 <dd><p>Context manager that manages autograd profiler state and holds a summary of results.</p>
 <p>Under the hood it just records events of functions being executed in C++ and
 exposes those events to Python. You can wrap any code into it and it will
@@ -2806,7 +2888,7 @@ used by profiler libraries like Kineto. Note, backward compatibility is not guar
 </div>
 <dl class="py class">
 <dt class="sig sig-object py" id="torch.autograd.profiler.emit_nvtx">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.autograd.profiler.</span></span><span class="sig-name descname"><span class="pre">emit_nvtx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record_shapes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/autograd/profiler.html#emit_nvtx"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/autograd/profiler.py#L890"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.profiler.emit_nvtx" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.autograd.profiler.</span></span><span class="sig-name descname"><span class="pre">emit_nvtx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record_shapes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/autograd/profiler.html#emit_nvtx"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/autograd/profiler.py#L889"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.profiler.emit_nvtx" title="Link to this definition">#</a></dt>
 <dd><p>Context manager that makes every autograd operation emit an NVTX range.</p>
 <p>It is useful when running the program under nvprof:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nvprof</span> <span class="o">--</span><span class="n">profile</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">start</span> <span class="n">off</span> <span class="o">-</span><span class="n">o</span> <span class="n">trace_name</span><span class="o">.</span><span class="n">prof</span> <span class="o">--</span> <span class="o">&lt;</span><span class="n">regular</span> <span class="n">command</span> <span class="n">here</span><span class="o">&gt;</span>
@@ -2875,7 +2957,7 @@ numbers, which can be compared to <cite>seq</cite> numbers from the backward pas
 
 <dl class="py class">
 <dt class="sig sig-object py" id="torch.autograd.profiler.emit_itt">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.autograd.profiler.</span></span><span class="sig-name descname"><span class="pre">emit_itt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record_shapes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/autograd/profiler.html#emit_itt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/autograd/profiler.py#L819"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.profiler.emit_itt" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.autograd.profiler.</span></span><span class="sig-name descname"><span class="pre">emit_itt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record_shapes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/autograd/profiler.html#emit_itt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/autograd/profiler.py#L818"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.profiler.emit_itt" title="Link to this definition">#</a></dt>
 <dd><p>Context manager that makes every autograd operation emit an ITT range.</p>
 <p>It is useful when running the program under Intel(R) VTune Profiler:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vtune</span> <span class="o">&lt;--</span><span class="n">vtune</span><span class="o">-</span><span class="n">flags</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">regular</span> <span class="n">command</span> <span class="n">here</span><span class="o">&gt;</span>
@@ -2922,7 +3004,7 @@ Default: <code class="docutils literal notranslate"><span class="pre">False</spa
 <h2>Debugging and anomaly detection<a class="headerlink" href="#debugging-and-anomaly-detection" title="Link to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="torch.autograd.detect_anomaly">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.autograd.</span></span><span class="sig-name descname"><span class="pre">detect_anomaly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">check_nan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/autograd/anomaly_mode.html#detect_anomaly"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/autograd/anomaly_mode.py#L11"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.detect_anomaly" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.autograd.</span></span><span class="sig-name descname"><span class="pre">detect_anomaly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">check_nan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/autograd/anomaly_mode.html#detect_anomaly"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/autograd/anomaly_mode.py#L11"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.detect_anomaly" title="Link to this definition">#</a></dt>
 <dd><p>Context-manager that enable anomaly detection for the autograd engine.</p>
 <p>This does two things:</p>
 <ul class="simple">
@@ -2992,7 +3074,7 @@ will slow down your program execution.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="torch.autograd.set_detect_anomaly">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.autograd.</span></span><span class="sig-name descname"><span class="pre">set_detect_anomaly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_nan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/autograd/anomaly_mode.html#set_detect_anomaly"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/autograd/anomaly_mode.py#L95"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.set_detect_anomaly" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.autograd.</span></span><span class="sig-name descname"><span class="pre">set_detect_anomaly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_nan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/autograd/anomaly_mode.html#set_detect_anomaly"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/autograd/anomaly_mode.py#L95"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.set_detect_anomaly" title="Link to this definition">#</a></dt>
 <dd><p>Context-manager that sets the anomaly detection for the autograd engine on or off.</p>
 <p><code class="docutils literal notranslate"><span class="pre">set_detect_anomaly</span></code> will enable or disable the autograd anomaly detection
 based on its argument <code class="xref py py-attr docutils literal notranslate"><span class="pre">mode</span></code>.
@@ -3070,7 +3152,7 @@ notice your model fits on GPU during evaluation, but not training.
 Also see <a class="reference internal" href="../notes/autograd.html#saved-tensors-hooks-doc"><span class="std std-ref">Hooks for saved tensors</span></a>.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="torch.autograd.graph.saved_tensors_hooks">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.autograd.graph.</span></span><span class="sig-name descname"><span class="pre">saved_tensors_hooks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pack_hook</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unpack_hook</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/autograd/graph.html#saved_tensors_hooks"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/autograd/graph.py#L238"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.graph.saved_tensors_hooks" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.autograd.graph.</span></span><span class="sig-name descname"><span class="pre">saved_tensors_hooks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pack_hook</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unpack_hook</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/autograd/graph.html#saved_tensors_hooks"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/autograd/graph.py#L247"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.graph.saved_tensors_hooks" title="Link to this definition">#</a></dt>
 <dd><p>Context-manager that sets a pair of pack / unpack hooks for saved tensors.</p>
 <p>Use this context-manager to define how intermediary results of an operation
 should be packed before saving, and unpacked on retrieval.</p>
@@ -3131,7 +3213,7 @@ context-manager, only the inner-most pair of hooks will be applied.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="torch.autograd.graph.save_on_cpu">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.autograd.graph.</span></span><span class="sig-name descname"><span class="pre">save_on_cpu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pin_memory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cuda'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/autograd/graph.html#save_on_cpu"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/autograd/graph.py#L317"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.graph.save_on_cpu" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.autograd.graph.</span></span><span class="sig-name descname"><span class="pre">save_on_cpu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pin_memory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cuda'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/autograd/graph.html#save_on_cpu"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/autograd/graph.py#L326"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.graph.save_on_cpu" title="Link to this definition">#</a></dt>
 <dd><p>Context manager under which tensors saved by the forward pass will be stored on cpu, then retrieved for backward.</p>
 <p>When performing operations within this context manager, intermediary
 results saved in the graph during the forward pass will be moved to CPU,
@@ -3171,7 +3253,7 @@ Also see <a class="reference internal" href="../notes/cuda.html#cuda-memory-pinn
 
 <dl class="py class">
 <dt class="sig sig-object py" id="torch.autograd.graph.disable_saved_tensors_hooks">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.autograd.graph.</span></span><span class="sig-name descname"><span class="pre">disable_saved_tensors_hooks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">error_message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/autograd/graph.html#disable_saved_tensors_hooks"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/autograd/graph.py#L380"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.graph.disable_saved_tensors_hooks" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.autograd.graph.</span></span><span class="sig-name descname"><span class="pre">disable_saved_tensors_hooks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">error_message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/autograd/graph.html#disable_saved_tensors_hooks"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/autograd/graph.py#L389"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.graph.disable_saved_tensors_hooks" title="Link to this definition">#</a></dt>
 <dd><p>Context-manager that disables the saved tensors default hooks feature.</p>
 <p>Useful for if you are creating a feature that does not work with saved
 tensors default hooks.</p>
@@ -3182,7 +3264,7 @@ have been are disabled, a RuntimeError with this
 error message gets raised.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Generator" title="(in Python v3.13)"><em>Generator</em></a>[None, None, None]</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Generator" title="(in Python v3.13)"><em>Generator</em></a>[None, None, None]</p>
 </dd>
 </dl>
 <p>Example:</p>
@@ -3197,7 +3279,7 @@ error message gets raised.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="torch.autograd.graph.register_multi_grad_hook">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.autograd.graph.</span></span><span class="sig-name descname"><span class="pre">register_multi_grad_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tensors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/autograd/graph.html#register_multi_grad_hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/autograd/graph.py#L433"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.graph.register_multi_grad_hook" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.autograd.graph.</span></span><span class="sig-name descname"><span class="pre">register_multi_grad_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tensors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/autograd/graph.html#register_multi_grad_hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/autograd/graph.py#L442"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.graph.register_multi_grad_hook" title="Link to this definition">#</a></dt>
 <dd><p>Register a multi-grad backward hook.</p>
 <p>There are two supported modes: <code class="docutils literal notranslate"><span class="pre">&quot;all&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;any&quot;</span></code>.</p>
 <p>Under the <code class="docutils literal notranslate"><span class="pre">&quot;all&quot;</span></code> mode, the hook will be called after gradients with respect to every tensor in
@@ -3248,7 +3330,7 @@ is executed, and how its execution is ordered relative to other hooks.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="torch.autograd.graph.allow_mutation_on_saved_tensors">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.autograd.graph.</span></span><span class="sig-name descname"><span class="pre">allow_mutation_on_saved_tensors</span></span><a class="reference internal" href="../_modules/torch/autograd/graph.html#allow_mutation_on_saved_tensors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/autograd/graph.py#L707"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.graph.allow_mutation_on_saved_tensors" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.autograd.graph.</span></span><span class="sig-name descname"><span class="pre">allow_mutation_on_saved_tensors</span></span><a class="reference internal" href="../_modules/torch/autograd/graph.html#allow_mutation_on_saved_tensors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/autograd/graph.py#L716"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.graph.allow_mutation_on_saved_tensors" title="Link to this definition">#</a></dt>
 <dd><p>Context manager under which mutating tensors saved for backward is allowed.</p>
 <p>Under this context manager, tensors saved for backward are cloned on mutation,
 so the original version can still be used during backward. Normally, mutating a tensor
@@ -3262,7 +3344,7 @@ context manager. This object can be useful for debugging purposes. The state
 managed by the context manager is automatically cleared upon exiting.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Generator" title="(in Python v3.13)"><em>Generator</em></a>[<em>_AllowMutationOnSavedContext</em>, None, None]</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Generator" title="(in Python v3.13)"><em>Generator</em></a>[<em>_AllowMutationOnSavedContext</em>, None, None]</p>
 </dd>
 </dl>
 <p>Example:</p>
@@ -3284,7 +3366,7 @@ managed by the context manager is automatically cleared upon exiting.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="torch.autograd.graph.GradientEdge">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.autograd.graph.</span></span><span class="sig-name descname"><span class="pre">GradientEdge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_nr</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/autograd/graph.html#GradientEdge"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/autograd/graph.py#L188"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.graph.GradientEdge" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.autograd.graph.</span></span><span class="sig-name descname"><span class="pre">GradientEdge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_nr</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/autograd/graph.html#GradientEdge"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/autograd/graph.py#L197"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.graph.GradientEdge" title="Link to this definition">#</a></dt>
 <dd><p>Object representing a given gradient edge within the autograd graph.</p>
 <p>To get the gradient edge where a given Tensor gradient will be computed,
 you can do <code class="docutils literal notranslate"><span class="pre">edge</span> <span class="pre">=</span> <span class="pre">autograd.graph.get_gradient_edge(tensor)</span></code>.</p>
@@ -3294,7 +3376,7 @@ you can do <code class="docutils literal notranslate"><span class="pre">edge</sp
 
 <dl class="py function">
 <dt class="sig sig-object py" id="torch.autograd.graph.get_gradient_edge">
-<span class="sig-prename descclassname"><span class="pre">torch.autograd.graph.</span></span><span class="sig-name descname"><span class="pre">get_gradient_edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tensor</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/autograd/graph.html#get_gradient_edge"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/autograd/graph.py#L199"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.graph.get_gradient_edge" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">torch.autograd.graph.</span></span><span class="sig-name descname"><span class="pre">get_gradient_edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tensor</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/autograd/graph.html#get_gradient_edge"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/autograd/graph.py#L208"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.autograd.graph.get_gradient_edge" title="Link to this definition">#</a></dt>
 <dd><p>Get the gradient edge for computing the gradient of the given Tensor.</p>
 <p>In particular, it is equivalent to call
 <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">=</span> <span class="pre">autograd.grad(loss,</span> <span class="pre">input)</span></code> and <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">=</span> <span class="pre">autograd.grad(loss,</span> <span class="pre">get_gradient_edge(input))</span></code>.</p>
@@ -3344,8 +3426,8 @@ you can do <code class="docutils literal notranslate"><span class="pre">edge</sp
             
               
                 <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc">
-<div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
 <div
@@ -3403,41 +3485,29 @@ you can do <code class="docutils literal notranslate"><span class="pre">edge</sp
 
   <div class="sidebar-secondary-item">
 
-  <div class="tocsection sourcelink">
-    <a href="../_sources/python-api/autograd.rst">
-      <i class="fa-solid fa-file-lines"></i> Show Source
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/pytorch/pytorch/edit/main/docs/source/python-api/autograd.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
     </a>
   </div>
 </div>
 
-</div>
-<div class="sidebar-secondary-item"> 
-</div>
-<div class="sidebar-secondary-item">
- <p>PyTorch Libraries</p>
- <ul>
- 
-  <li><a href="https://pytorch.org/vision">torchvision</a></li>
- 
-  <li><a href="https://pytorch.org/executorch">ExecuTorch</a></li>
- 
-  <li><a href="https://https://pytorch.org/ao">torchao</a></li>
- 
-  <li><a href="https://https://pytorch.org/audio">torchaudio</a></li>
- 
-  <li><a href="https://https://pytorch.org/torchrec">torchrec</a></li>
- 
-  <li><a href="https://https://pytorch.org/serve">torchserve</a></li>
- 
-  <li><a href="https://https://pytorch.org/data">torchdata</a></li>
- 
-  <li><a href="https://https://pytorch.org/xla">PyTorch on XLA devices</a></li>
- 
- </ul>
-</div>
+  <div class="sidebar-secondary-item">
+    <div class="tocsection sourcelink">
+      <a href="../_sources/python-api/autograd.rst.txt">
+        <i class="fa-solid fa-file-lines"></i> Show Source
+      </a>
+    </div>
 </div>
 
-</div>
+</div></div>
               
             
           </div>
@@ -3452,7 +3522,6 @@ you can do <code class="docutils literal notranslate"><span class="pre">edge</sp
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

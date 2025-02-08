@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -56,7 +56,7 @@
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -65,7 +65,6 @@
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -152,7 +151,7 @@
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -176,8 +175,8 @@
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -247,7 +246,7 @@
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -262,7 +261,6 @@
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -302,9 +300,27 @@
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -318,20 +334,14 @@
   
   
   
-    
-    
-      
-    
-    
-    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -392,6 +402,46 @@
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -483,6 +533,46 @@
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
         
       </div>
     
@@ -602,18 +692,6 @@
 <li class="toctree-l1"><a class="reference internal" href="generated/torch.ao.quantization.observer.default_per_channel_weight_observer.html">default_per_channel_weight_observer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="generated/torch.ao.quantization.observer.default_dynamic_quant_observer.html">default_dynamic_quant_observer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="generated/torch.ao.quantization.observer.default_float_qparams_observer.html">default_float_qparams_observer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="generated/torch.ao.quantization.observer.AffineQuantizedObserverBase.html">AffineQuantizedObserverBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="generated/torch.ao.quantization.observer.Granularity.html">Granularity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="generated/torch.ao.quantization.observer.MappingType.html">MappingType</a></li>
-<li class="toctree-l1"><a class="reference internal" href="generated/torch.ao.quantization.observer.PerAxis.html">PerAxis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="generated/torch.ao.quantization.observer.PerBlock.html">PerBlock</a></li>
-<li class="toctree-l1"><a class="reference internal" href="generated/torch.ao.quantization.observer.PerGroup.html">PerGroup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="generated/torch.ao.quantization.observer.PerRow.html">PerRow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="generated/torch.ao.quantization.observer.PerTensor.html">PerTensor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="generated/torch.ao.quantization.observer.PerToken.html">PerToken</a></li>
-<li class="toctree-l1"><a class="reference internal" href="generated/torch.ao.quantization.observer.TorchAODType.html">TorchAODType</a></li>
-<li class="toctree-l1"><a class="reference internal" href="generated/torch.ao.quantization.observer.ZeroPointDomain.html">ZeroPointDomain</a></li>
-<li class="toctree-l1"><a class="reference internal" href="generated/torch.ao.quantization.observer.get_block_size.html">get_block_size</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="generated/torch.ao.quantization.fake_quantize.FakeQuantizeBase.html">FakeQuantizeBase</a></li>
@@ -1023,7 +1101,7 @@ Quantization to work with this as well.</p>
 <tr class="row-even"><td><p><p id="torch.quantize_per_channel"/><p id="torch.quantize_per_channel"/><a class="reference internal" href="generated/torch.quantize_per_channel.html#torch.quantize_per_channel" title="torch.quantize_per_channel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quantize_per_channel</span></code></a></p></td>
 <td><p>Converts a float tensor to a per-channel quantized tensor with given scales and zero points.</p></td>
 </tr>
-<tr class="row-odd"><td><p><p id="torch.dequantize"/><p id="torch.dequantize"/><a class="reference internal" href="generated/torch.Tensor.dequantize.html#torch.dequantize" title="torch.dequantize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dequantize</span></code></a></p></td>
+<tr class="row-odd"><td><p><p id="torch.dequantize"/><p id="torch.dequantize"/><a class="reference internal" href="generated/torch.dequantize.html#torch.dequantize" title="torch.dequantize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dequantize</span></code></a></p></td>
 <td><p>Returns an fp32 Tensor by dequantizing a quantized Tensor</p></td>
 </tr>
 </tbody>
@@ -1040,13 +1118,13 @@ regular full-precision tensor.</p>
 <td><p>Returns a new tensor with the same data as the <code class="xref py py-attr docutils literal notranslate"><span class="pre">self</span></code> tensor but of a different <a class="reference internal" href="generated/torch.Tensor.shape.html#torch.Tensor.shape" title="torch.Tensor.shape"><code class="xref py py-attr docutils literal notranslate"><span class="pre">shape</span></code></a>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">as_strided</span></code></p></td>
-<td><p>See <a class="reference internal" href="generated/torch.Tensor.as_strided.html#torch.as_strided" title="torch.as_strided"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.as_strided()</span></code></a></p></td>
+<td><p>See <a class="reference internal" href="generated/torch.as_strided.html#torch.as_strided" title="torch.as_strided"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.as_strided()</span></code></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">expand</span></code></p></td>
 <td><p>Returns a new view of the <code class="xref py py-attr docutils literal notranslate"><span class="pre">self</span></code> tensor with singleton dimensions expanded to a larger size.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">flatten</span></code></p></td>
-<td><p>See <a class="reference internal" href="generated/torch.Tensor.flatten.html#torch.flatten" title="torch.flatten"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.flatten()</span></code></a></p></td>
+<td><p>See <a class="reference internal" href="generated/torch.flatten.html#torch.flatten" title="torch.flatten"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.flatten()</span></code></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">select</span></code></p></td>
 <td><p>See <a class="reference internal" href="generated/torch.Tensor.select.html#torch.select" title="torch.select"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.select()</span></code></a></p></td>
@@ -1055,43 +1133,43 @@ regular full-precision tensor.</p>
 <td><p>See <a class="reference internal" href="generated/torch.Tensor.ne.html#torch.ne" title="torch.ne"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.ne()</span></code></a>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">eq</span></code></p></td>
-<td><p>See <a class="reference internal" href="generated/torch.Tensor.eq.html#torch.eq" title="torch.eq"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.eq()</span></code></a></p></td>
+<td><p>See <a class="reference internal" href="generated/torch.eq.html#torch.eq" title="torch.eq"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.eq()</span></code></a></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ge</span></code></p></td>
-<td><p>See <a class="reference internal" href="generated/torch.Tensor.ge.html#torch.ge" title="torch.ge"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.ge()</span></code></a>.</p></td>
+<td><p>See <a class="reference internal" href="generated/torch.ge.html#torch.ge" title="torch.ge"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.ge()</span></code></a>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">le</span></code></p></td>
-<td><p>See <a class="reference internal" href="generated/torch.Tensor.le.html#torch.le" title="torch.le"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.le()</span></code></a>.</p></td>
+<td><p>See <a class="reference internal" href="generated/torch.le.html#torch.le" title="torch.le"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.le()</span></code></a>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">gt</span></code></p></td>
-<td><p>See <a class="reference internal" href="generated/torch.Tensor.gt.html#torch.gt" title="torch.gt"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.gt()</span></code></a>.</p></td>
+<td><p>See <a class="reference internal" href="generated/torch.gt.html#torch.gt" title="torch.gt"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.gt()</span></code></a>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">lt</span></code></p></td>
-<td><p>See <a class="reference internal" href="generated/torch.Tensor.lt.html#torch.lt" title="torch.lt"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.lt()</span></code></a>.</p></td>
+<td><p>See <a class="reference internal" href="generated/torch.lt.html#torch.lt" title="torch.lt"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.lt()</span></code></a>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy_</span></code></p></td>
 <td><p>Copies the elements from <code class="xref py py-attr docutils literal notranslate"><span class="pre">src</span></code> into <code class="xref py py-attr docutils literal notranslate"><span class="pre">self</span></code> tensor and returns <code class="xref py py-attr docutils literal notranslate"><span class="pre">self</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">clone</span></code></p></td>
-<td><p>See <a class="reference internal" href="generated/torch.Tensor.clone.html#torch.clone" title="torch.clone"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.clone()</span></code></a></p></td>
+<td><p>See <a class="reference internal" href="generated/torch.clone.html#torch.clone" title="torch.clone"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.clone()</span></code></a></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">dequantize</span></code></p></td>
 <td><p>Given a quantized Tensor, dequantize it and return the dequantized float Tensor.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">equal</span></code></p></td>
-<td><p>See <a class="reference internal" href="generated/torch.Tensor.equal.html#torch.equal" title="torch.equal"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.equal()</span></code></a></p></td>
+<td><p>See <a class="reference internal" href="generated/torch.equal.html#torch.equal" title="torch.equal"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.equal()</span></code></a></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">int_repr</span></code></p></td>
 <td><p>Given a quantized Tensor, <code class="docutils literal notranslate"><span class="pre">self.int_repr()</span></code> returns a CPU Tensor with uint8_t as data type that stores the underlying uint8_t values of the given Tensor.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">max</span></code></p></td>
-<td><p>See <a class="reference internal" href="generated/torch.Tensor.max.html#torch.max" title="torch.max"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.max()</span></code></a></p></td>
+<td><p>See <a class="reference internal" href="generated/torch.max.html#torch.max" title="torch.max"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.max()</span></code></a></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">mean</span></code></p></td>
-<td><p>See <a class="reference internal" href="generated/torch.Tensor.mean.html#torch.mean" title="torch.mean"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.mean()</span></code></a></p></td>
+<td><p>See <a class="reference internal" href="generated/torch.mean.html#torch.mean" title="torch.mean"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.mean()</span></code></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">min</span></code></p></td>
-<td><p>See <a class="reference internal" href="generated/torch.Tensor.min.html#torch.min" title="torch.min"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.min()</span></code></a></p></td>
+<td><p>See <a class="reference internal" href="generated/torch.min.html#torch.min" title="torch.min"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.min()</span></code></a></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">q_scale</span></code></p></td>
 <td><p>Given a Tensor quantized by linear(affine) quantization, returns the scale of the underlying quantizer().</p></td>
@@ -1183,42 +1261,6 @@ the values observed during calibration (PTQ) or training (QAT).</p>
 </tr>
 <tr class="row-odd"><td><p><p id="torch.ao.quantization.observer.default_float_qparams_observer"/><p id="torch.ao.quantization.observer.default_float_qparams_observer"/><a class="reference internal" href="generated/torch.ao.quantization.observer.default_float_qparams_observer.html#torch.ao.quantization.observer.default_float_qparams_observer" title="torch.ao.quantization.observer.default_float_qparams_observer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">default_float_qparams_observer</span></code></a></p></td>
 <td><p>Default observer for a floating point zero-point.</p></td>
-</tr>
-<tr class="row-even"><td><p><p id="torch.ao.quantization.observer.AffineQuantizedObserverBase"/><p id="torch.ao.quantization.observer.AffineQuantizedObserverBase"/><a class="reference internal" href="generated/torch.ao.quantization.observer.AffineQuantizedObserverBase.html#torch.ao.quantization.observer.AffineQuantizedObserverBase" title="torch.ao.quantization.observer.AffineQuantizedObserverBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AffineQuantizedObserverBase</span></code></a></p></td>
-<td><p>Observer module for affine quantization (<a class="github reference external" href="https://github.com/pytorch/ao/tree/main/torchao/quantization#affine-quantization">pytorch/ao</a>)</p></td>
-</tr>
-<tr class="row-odd"><td><p><p id="torch.ao.quantization.observer.Granularity"/><p id="torch.ao.quantization.observer.Granularity"/><a class="reference internal" href="generated/torch.ao.quantization.observer.Granularity.html#torch.ao.quantization.observer.Granularity" title="torch.ao.quantization.observer.Granularity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Granularity</span></code></a></p></td>
-<td><p>Base class for representing the granularity of quantization.</p></td>
-</tr>
-<tr class="row-even"><td><p><p id="torch.ao.quantization.observer.MappingType"/><p id="torch.ao.quantization.observer.MappingType"/><a class="reference internal" href="generated/torch.ao.quantization.observer.MappingType.html#torch.ao.quantization.observer.MappingType" title="torch.ao.quantization.observer.MappingType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MappingType</span></code></a></p></td>
-<td><p>How floating point number is mapped to integer number</p></td>
-</tr>
-<tr class="row-odd"><td><p><p id="torch.ao.quantization.observer.PerAxis"/><p id="torch.ao.quantization.observer.PerAxis"/><a class="reference internal" href="generated/torch.ao.quantization.observer.PerAxis.html#torch.ao.quantization.observer.PerAxis" title="torch.ao.quantization.observer.PerAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PerAxis</span></code></a></p></td>
-<td><p>Represents per-axis granularity in quantization.</p></td>
-</tr>
-<tr class="row-even"><td><p><p id="torch.ao.quantization.observer.PerBlock"/><p id="torch.ao.quantization.observer.PerBlock"/><a class="reference internal" href="generated/torch.ao.quantization.observer.PerBlock.html#torch.ao.quantization.observer.PerBlock" title="torch.ao.quantization.observer.PerBlock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PerBlock</span></code></a></p></td>
-<td><p>Represents per-block granularity in quantization.</p></td>
-</tr>
-<tr class="row-odd"><td><p><p id="torch.ao.quantization.observer.PerGroup"/><p id="torch.ao.quantization.observer.PerGroup"/><a class="reference internal" href="generated/torch.ao.quantization.observer.PerGroup.html#torch.ao.quantization.observer.PerGroup" title="torch.ao.quantization.observer.PerGroup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PerGroup</span></code></a></p></td>
-<td><p>Represents per-channel group granularity in quantization.</p></td>
-</tr>
-<tr class="row-even"><td><p><p id="torch.ao.quantization.observer.PerRow"/><p id="torch.ao.quantization.observer.PerRow"/><a class="reference internal" href="generated/torch.ao.quantization.observer.PerRow.html#torch.ao.quantization.observer.PerRow" title="torch.ao.quantization.observer.PerRow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PerRow</span></code></a></p></td>
-<td><p>Represents row-wise granularity in quantization.</p></td>
-</tr>
-<tr class="row-odd"><td><p><p id="torch.ao.quantization.observer.PerTensor"/><p id="torch.ao.quantization.observer.PerTensor"/><a class="reference internal" href="generated/torch.ao.quantization.observer.PerTensor.html#torch.ao.quantization.observer.PerTensor" title="torch.ao.quantization.observer.PerTensor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PerTensor</span></code></a></p></td>
-<td><p>Represents per-tensor granularity in quantization.</p></td>
-</tr>
-<tr class="row-even"><td><p><p id="torch.ao.quantization.observer.PerToken"/><p id="torch.ao.quantization.observer.PerToken"/><a class="reference internal" href="generated/torch.ao.quantization.observer.PerToken.html#torch.ao.quantization.observer.PerToken" title="torch.ao.quantization.observer.PerToken"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PerToken</span></code></a></p></td>
-<td><p>Represents per-token granularity in quantization.</p></td>
-</tr>
-<tr class="row-odd"><td><p><p id="torch.ao.quantization.observer.TorchAODType"/><p id="torch.ao.quantization.observer.TorchAODType"/><a class="reference internal" href="generated/torch.ao.quantization.observer.TorchAODType.html#torch.ao.quantization.observer.TorchAODType" title="torch.ao.quantization.observer.TorchAODType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TorchAODType</span></code></a></p></td>
-<td><p>Placeholder for dtypes that do not exist in PyTorch core yet.</p></td>
-</tr>
-<tr class="row-even"><td><p><p id="torch.ao.quantization.observer.ZeroPointDomain"/><p id="torch.ao.quantization.observer.ZeroPointDomain"/><a class="reference internal" href="generated/torch.ao.quantization.observer.ZeroPointDomain.html#torch.ao.quantization.observer.ZeroPointDomain" title="torch.ao.quantization.observer.ZeroPointDomain"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ZeroPointDomain</span></code></a></p></td>
-<td><p>Enum that indicate whether zero_point is in integer domain or floating point domain</p></td>
-</tr>
-<tr class="row-odd"><td><p><p id="torch.ao.quantization.observer.get_block_size"/><p id="torch.ao.quantization.observer.get_block_size"/><a class="reference internal" href="generated/torch.ao.quantization.observer.get_block_size.html#torch.ao.quantization.observer.get_block_size" title="torch.ao.quantization.observer.get_block_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_block_size</span></code></a></p></td>
-<td><p>Get the block size based on the input shape and granularity type.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1803,8 +1845,8 @@ while adding an import statement here.</p>
             
               
                 <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc">
-<div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
 <div
@@ -1849,41 +1891,29 @@ while adding an import statement here.</p>
 
   <div class="sidebar-secondary-item">
 
-  <div class="tocsection sourcelink">
-    <a href="../_sources/python-api/quantization-support.rst">
-      <i class="fa-solid fa-file-lines"></i> Show Source
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/pytorch/pytorch/edit/main/docs/source/python-api/quantization-support.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
     </a>
   </div>
 </div>
 
-</div>
-<div class="sidebar-secondary-item"> 
-</div>
-<div class="sidebar-secondary-item">
- <p>PyTorch Libraries</p>
- <ul>
- 
-  <li><a href="https://pytorch.org/vision">torchvision</a></li>
- 
-  <li><a href="https://pytorch.org/executorch">ExecuTorch</a></li>
- 
-  <li><a href="https://https://pytorch.org/ao">torchao</a></li>
- 
-  <li><a href="https://https://pytorch.org/audio">torchaudio</a></li>
- 
-  <li><a href="https://https://pytorch.org/torchrec">torchrec</a></li>
- 
-  <li><a href="https://https://pytorch.org/serve">torchserve</a></li>
- 
-  <li><a href="https://https://pytorch.org/data">torchdata</a></li>
- 
-  <li><a href="https://https://pytorch.org/xla">PyTorch on XLA devices</a></li>
- 
- </ul>
-</div>
+  <div class="sidebar-secondary-item">
+    <div class="tocsection sourcelink">
+      <a href="../_sources/python-api/quantization-support.rst.txt">
+        <i class="fa-solid fa-file-lines"></i> Show Source
+      </a>
+    </div>
 </div>
 
-</div>
+</div></div>
               
             
           </div>
@@ -1898,7 +1928,6 @@ while adding an import statement here.</p>
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

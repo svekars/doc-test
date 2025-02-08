@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -44,7 +44,7 @@
   <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../../../../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -63,7 +63,7 @@ window.addEventListener("load", () => mermaid.run());
     <link rel="search" title="Search" href="../../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -72,7 +72,6 @@ window.addEventListener("load", () => mermaid.run());
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -159,7 +158,7 @@ window.addEventListener("load", () => mermaid.run());
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -183,8 +182,8 @@ window.addEventListener("load", () => mermaid.run());
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -254,7 +253,7 @@ window.addEventListener("load", () => mermaid.run());
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -269,7 +268,6 @@ window.addEventListener("load", () => mermaid.run());
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -309,9 +307,27 @@ window.addEventListener("load", () => mermaid.run());
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -325,20 +341,14 @@ window.addEventListener("load", () => mermaid.run());
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -399,6 +409,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -488,6 +538,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
         
       </div>
     
@@ -675,7 +765,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="propagate_qconfig_">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.propagate_qconfig_.html#torch.ao.quantization.propagate_qconfig_">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.ao.quantization.propagate_qconfig_.html#torch.ao.quantization.propagate_qconfig_">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">propagate_qconfig_</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">qconfig_dict</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">prepare_custom_config_dict</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Propagate qconfig through the module hierarchy and assign `qconfig`</span>
 <span class="sd">    attribute on each leaf module</span>
@@ -717,9 +807,11 @@ window.addEventListener("load", () => mermaid.run());
         <span class="n">module</span><span class="p">,</span> <span class="s2">&quot;activation_post_process&quot;</span>
     <span class="p">),</span> <span class="s2">&quot;Expect activation_post_process attribute already attached to the module&quot;</span>
     <span class="k">if</span> <span class="n">pre_hook</span><span class="p">:</span>
-        <span class="n">module</span><span class="o">.</span><span class="n">register_forward_pre_hook</span><span class="p">(</span><span class="n">_observer_forward_pre_hook</span><span class="p">,</span> <span class="n">prepend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">handle</span> <span class="o">=</span> <span class="n">module</span><span class="o">.</span><span class="n">register_forward_pre_hook</span><span class="p">(</span>
+            <span class="n">_observer_forward_pre_hook</span><span class="p">,</span> <span class="n">prepend</span><span class="o">=</span><span class="kc">True</span>
+        <span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">module</span><span class="o">.</span><span class="n">register_forward_hook</span><span class="p">(</span><span class="n">_observer_forward_hook</span><span class="p">,</span> <span class="n">prepend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">handle</span> <span class="o">=</span> <span class="n">module</span><span class="o">.</span><span class="n">register_forward_hook</span><span class="p">(</span><span class="n">_observer_forward_hook</span><span class="p">,</span> <span class="n">prepend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">_add_observer_</span><span class="p">(</span>
@@ -860,13 +952,13 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">_get_unique_devices_</span><span class="p">(</span><span class="n">module</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">{</span><span class="n">p</span><span class="o">.</span><span class="n">device</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">module</span><span class="o">.</span><span class="n">parameters</span><span class="p">()</span> <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">device</span><span class="o">.</span><span class="n">type</span> <span class="o">!=</span> <span class="s2">&quot;meta&quot;</span><span class="p">}</span> <span class="o">|</span> <span class="p">{</span>
-        <span class="n">p</span><span class="o">.</span><span class="n">device</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">module</span><span class="o">.</span><span class="n">buffers</span><span class="p">()</span> <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">device</span><span class="o">.</span><span class="n">type</span> <span class="o">!=</span> <span class="s2">&quot;meta&quot;</span>
+    <span class="k">return</span> <span class="p">{</span><span class="n">p</span><span class="o">.</span><span class="n">device</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">module</span><span class="o">.</span><span class="n">parameters</span><span class="p">()}</span> <span class="o">|</span> <span class="p">{</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">device</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">module</span><span class="o">.</span><span class="n">buffers</span><span class="p">()</span>
     <span class="p">}</span>
 
 
 <div class="viewcode-block" id="add_quant_dequant">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.add_quant_dequant.html#torch.ao.quantization.add_quant_dequant">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.ao.quantization.add_quant_dequant.html#torch.ao.quantization.add_quant_dequant">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">add_quant_dequant</span><span class="p">(</span><span class="n">module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Wrap the leaf child module in QuantWrapper if it has a valid qconfig</span>
 <span class="sd">    Note that this function will modify the children of module inplace and it</span>
@@ -896,7 +988,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="prepare">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.prepare.html#torch.ao.quantization.prepare">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.ao.quantization.prepare.html#torch.ao.quantization.prepare">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">prepare</span><span class="p">(</span>
     <span class="n">model</span><span class="p">,</span>
     <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
@@ -1009,7 +1101,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="quantize">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.quantize.html#torch.ao.quantization.quantize">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.ao.quantization.quantize.html#torch.ao.quantization.quantize">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">quantize</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">run_fn</span><span class="p">,</span> <span class="n">run_args</span><span class="p">,</span> <span class="n">mapping</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Quantize the input float model with post training static quantization.</span>
 
@@ -1041,7 +1133,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="quantize_dynamic">
-<a class="viewcode-back" href="../../../../generated/torch.ao.quantization.quantize_dynamic.html#torch.ao.quantization.quantize_dynamic">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.ao.quantization.quantize_dynamic.html#torch.ao.quantization.quantize_dynamic">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">quantize_dynamic</span><span class="p">(</span>
     <span class="n">model</span><span class="p">,</span> <span class="n">qconfig_spec</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">qint8</span><span class="p">,</span> <span class="n">mapping</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span>
 <span class="p">):</span>
@@ -1134,7 +1226,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="prepare_qat">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.prepare_qat.html#torch.ao.quantization.prepare_qat">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.ao.quantization.prepare_qat.html#torch.ao.quantization.prepare_qat">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">prepare_qat</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">mapping</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Prepares a copy of the model for quantization calibration or</span>
@@ -1166,7 +1258,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="quantize_qat">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.quantize_qat.html#torch.ao.quantization.quantize_qat">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.ao.quantization.quantize_qat.html#torch.ao.quantization.quantize_qat">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">quantize_qat</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">run_fn</span><span class="p">,</span> <span class="n">run_args</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Do quantization aware training and output a quantized model</span>
 
@@ -1192,7 +1284,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="convert">
-<a class="viewcode-back" href="../../../../generated/torch.ao.quantization.convert.html#torch.ao.quantization.convert">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.ao.quantization.convert.html#torch.ao.quantization.convert">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">convert</span><span class="p">(</span>
     <span class="n">module</span><span class="p">,</span>
     <span class="n">mapping</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -1309,7 +1401,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="swap_module">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.swap_module.html#torch.ao.quantization.swap_module">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.ao.quantization.swap_module.html#torch.ao.quantization.swap_module">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">swap_module</span><span class="p">(</span>
     <span class="n">mod</span><span class="p">,</span> <span class="n">mapping</span><span class="p">,</span> <span class="n">custom_module_class_mapping</span><span class="p">,</span> <span class="n">use_precomputed_fake_quant</span><span class="o">=</span><span class="kc">False</span>
 <span class="p">):</span>
@@ -1361,8 +1453,8 @@ window.addEventListener("load", () => mermaid.run());
 
             <span class="c1"># respect device affinity when swapping modules</span>
             <span class="n">devices</span> <span class="o">=</span> <span class="n">_get_unique_devices_</span><span class="p">(</span><span class="n">mod</span><span class="p">)</span>
-            <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">devices</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span> <span class="ow">or</span> <span class="p">(</span>
-                <span class="nb">len</span><span class="p">(</span><span class="n">devices</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s2">&quot;meta&quot;</span><span class="p">)</span> <span class="ow">in</span> <span class="n">devices</span>
+            <span class="k">assert</span> <span class="p">(</span>
+                <span class="nb">len</span><span class="p">(</span><span class="n">devices</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span>
             <span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;swap_module only works with cpu or single-device CUDA modules, but got devices </span><span class="si">{</span><span class="n">devices</span><span class="si">}</span><span class="s2">&quot;</span>
             <span class="n">device</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">devices</span><span class="p">))</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">devices</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span>
             <span class="k">if</span> <span class="n">device</span><span class="p">:</span>
@@ -1421,7 +1513,6 @@ window.addEventListener("load", () => mermaid.run());
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

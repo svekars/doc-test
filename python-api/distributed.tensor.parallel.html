@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -56,7 +56,7 @@
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -65,7 +65,6 @@
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -152,7 +151,7 @@
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -176,8 +175,8 @@
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -247,7 +246,7 @@
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -262,7 +261,6 @@
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -302,9 +300,27 @@
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -318,20 +334,14 @@
   
   
   
-    
-    
-      
-    
-    
-    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -392,6 +402,46 @@
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -486,6 +536,46 @@
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
         
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
       </div>
     
   </div>
@@ -552,11 +642,287 @@ and provides different parallelism styles: Colwise, Rowwise, and Sequence Parall
 <p>Tensor Parallelism APIs are experimental and subject to change.</p>
 </div>
 <p>The entrypoint to parallelize your <code class="docutils literal notranslate"><span class="pre">nn.Module</span></code> using Tensor Parallelism is:</p>
+<dl class="py function" id="module-torch.distributed.tensor.parallel">
+<dt class="sig sig-object py" id="torch.distributed.tensor.parallel.parallelize_module">
+<span class="sig-prename descclassname"><span class="pre">torch.distributed.tensor.parallel.</span></span><span class="sig-name descname"><span class="pre">parallelize_module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_mesh</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallelize_plan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/tensor/parallel/api.html#parallelize_module"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/tensor/parallel/api.py#L16"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.tensor.parallel.parallelize_module" title="Link to this definition">#</a></dt>
+<dd><p>Apply Tensor Parallelism in PyTorch by parallelizing modules or sub-modules based on a user-specified plan.</p>
+<p>We parallelize module or sub_modules based on a parallelize_plan. The parallelize_plan contains
+<code class="xref py py-class docutils literal notranslate"><span class="pre">ParallelStyle</span></code>, which indicates how user wants the module or sub_module
+to be parallelized.</p>
+<p>User can also specify different parallel style per module fully qualified name (FQN).</p>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">parallelize_module</span></code> only accepts a 1-D <code class="xref py py-class docutils literal notranslate"><span class="pre">DeviceMesh</span></code>, if you have a 2-D or N-D <code class="xref py py-class docutils literal notranslate"><span class="pre">DeviceMesh</span></code>,
+slice the DeviceMesh to a 1-D sub DeviceMesh first then pass to this API(i.e. <code class="docutils literal notranslate"><span class="pre">device_mesh[&quot;tp&quot;]</span></code>)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>module</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">nn.Module</span></code>) – Module to be parallelized.</p></li>
+<li><p><strong>device_mesh</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">DeviceMesh</span></code>, optional) – Object which describes the mesh topology of devices for the DTensor.
+If not specified, the call must be under a DeviceMesh context.</p></li>
+<li><p><strong>parallelize_plan</strong> (Union[<code class="xref py py-class docutils literal notranslate"><span class="pre">ParallelStyle</span></code>, Dict[str, <code class="xref py py-class docutils literal notranslate"><span class="pre">ParallelStyle</span></code>]], optional) – The plan used to parallelize the module. It can be either a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">ParallelStyle</span></code> object which contains how we prepare
+input/output for Tensor Parallelism or it can be a dict of module
+FQN and its corresponding <code class="xref py py-class docutils literal notranslate"><span class="pre">ParallelStyle</span></code> object. If not
+specified, the call will do nothing at the moment.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">nn.Module</span></code> object parallelized.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><p id="torch.nn.Module"/><p id="torch.nn.Module"/><a class="reference internal" href="generated/torch.nn.Module.html#torch.nn.Module" title="torch.nn.modules.module.Module"><em>Module</em></a></p>
+</dd>
+</dl>
+<dl>
+<dt>Example::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">torch.distributed.tensor.parallel</span><span class="w"> </span><span class="kn">import</span> <span class="n">parallelize_module</span><span class="p">,</span> <span class="n">ColwiseParallel</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">torch.distributed.device_mesh</span><span class="w"> </span><span class="kn">import</span> <span class="n">init_device_mesh</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Define the module.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tp_mesh</span> <span class="o">=</span> <span class="n">init_device_mesh</span><span class="p">(</span><span class="s2">&quot;cuda&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">8</span><span class="p">,))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="n">parallelize_module</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">tp_mesh</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;w1&quot;</span><span class="p">:</span> <span class="n">ColwiseParallel</span><span class="p">(),</span> <span class="s2">&quot;w2&quot;</span><span class="p">:</span> <span class="n">RowwiseParallel</span><span class="p">()})</span>
+<span class="gp">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For complex module architecture like Attention, MLP layers, we recommend composing
+different ParallelStyles together (i.e. <code class="docutils literal notranslate"><span class="pre">ColwiseParallel</span></code> and <code class="docutils literal notranslate"><span class="pre">RowwiseParallel</span></code>) and pass
+as a parallelize_plan, to achieves the desired sharding computation.</p>
+</div>
+</dd></dl>
+
 <p>Tensor Parallelism supports the following parallel styles:</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="torch.distributed.tensor.parallel.ColwiseParallel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.distributed.tensor.parallel.</span></span><span class="sig-name descname"><span class="pre">ColwiseParallel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_layouts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_layouts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_local_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/tensor/parallel/style.html#ColwiseParallel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/tensor/parallel/style.py#L43"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.tensor.parallel.ColwiseParallel" title="Link to this definition">#</a></dt>
+<dd><p>Partition a compatible nn.Module in a column-wise fashion. Currently supports nn.Linear and nn.Embedding.
+Users can compose it together with RowwiseParallel to achieve the sharding of more complicated modules.
+(i.e. MLP, Attention)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_layouts</strong> (<a class="reference internal" href="distributed.tensor.html#torch.distributed.tensor.placement_types.Placement" title="torch.distributed.tensor.placement_types.Placement"><em>Placement</em></a><em>, </em><em>optional</em>) – The DTensor layout of input tensor for the nn.Module, this is used to annotate the input tensor to
+become a DTensor. If not specified, we assume the input tensor to be replicated.</p></li>
+<li><p><strong>output_layouts</strong> (<a class="reference internal" href="distributed.tensor.html#torch.distributed.tensor.placement_types.Placement" title="torch.distributed.tensor.placement_types.Placement"><em>Placement</em></a><em>, </em><em>optional</em>) – The DTensor layout of the output for the nn.Module, this is used to ensure the output of the nn.Module
+with the user desired layout. If not specified, the output tensor is sharded on the last dimension.</p></li>
+<li><p><strong>use_local_output</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>optional</em>) – Whether to use local <a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Tensor</span></code></a> instead of <code class="xref py py-class docutils literal notranslate"><span class="pre">DTensor</span></code> for the module output, default: True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">ParallelStyle</span></code> object that represents Colwise sharding of the nn.Module.</p>
+</dd>
+</dl>
+<dl>
+<dt>Example::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">torch.distributed.tensor.parallel</span><span class="w"> </span><span class="kn">import</span> <span class="n">parallelize_module</span><span class="p">,</span> <span class="n">ColwiseParallel</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">torch.distributed.device_mesh</span><span class="w"> </span><span class="kn">import</span> <span class="n">init_device_mesh</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>  <span class="c1"># m is a nn.Module that contains a &quot;w1&quot; nn.Linear submodule</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tp_mesh</span> <span class="o">=</span> <span class="n">init_device_mesh</span><span class="p">(</span><span class="s2">&quot;cuda&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">8</span><span class="p">,))</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># By default, the input of the &quot;w1&quot; Linear will be converted to Replicated DTensor</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># and the output of &quot;w1&quot; will return :class:`torch.Tensor` that shards on the last dim.</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sharded_mod</span> <span class="o">=</span> <span class="n">parallelize_module</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">tp_mesh</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;w1&quot;</span><span class="p">:</span> <span class="n">ColwiseParallel</span><span class="p">()})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">...</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By default <code class="docutils literal notranslate"><span class="pre">ColwiseParallel</span></code> output is sharded on the last dimension if the <code class="docutils literal notranslate"><span class="pre">output_layouts</span></code> not
+specified, if there’re operators that require specific tensor shape (i.e. before the paired <code class="docutils literal notranslate"><span class="pre">RowwiseParallel</span></code>),
+keep in mind that if the output is sharded the operator might need to be adjusted to the sharded size.</p>
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="torch.distributed.tensor.parallel.RowwiseParallel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.distributed.tensor.parallel.</span></span><span class="sig-name descname"><span class="pre">RowwiseParallel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_layouts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_layouts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_local_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/tensor/parallel/style.html#RowwiseParallel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/tensor/parallel/style.py#L161"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.tensor.parallel.RowwiseParallel" title="Link to this definition">#</a></dt>
+<dd><p>Partition a compatible nn.Module in a row-wise fashion. Currently supports nn.Linear and nn.Embedding.
+Users can compose it with ColwiseParallel to achieve the sharding of more complicated modules.
+(i.e. MLP, Attention)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_layouts</strong> (<a class="reference internal" href="distributed.tensor.html#torch.distributed.tensor.placement_types.Placement" title="torch.distributed.tensor.placement_types.Placement"><em>Placement</em></a><em>, </em><em>optional</em>) – The DTensor layout of input tensor for the nn.Module, this is used to annotate the input tensor to
+become a DTensor. If not specified, we assume the input tensor to be sharded on the last dimension.</p></li>
+<li><p><strong>output_layouts</strong> (<a class="reference internal" href="distributed.tensor.html#torch.distributed.tensor.placement_types.Placement" title="torch.distributed.tensor.placement_types.Placement"><em>Placement</em></a><em>, </em><em>optional</em>) – The DTensor layout of the output for the nn.Module, this is used to ensure the output of the nn.Module
+with the user desired layout. If not specified, the output tensor is replicated.</p></li>
+<li><p><strong>use_local_output</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>optional</em>) – Whether to use local <a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Tensor</span></code></a> instead of <code class="xref py py-class docutils literal notranslate"><span class="pre">DTensor</span></code> for the module output, default: True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">ParallelStyle</span></code> object that represents Rowwise sharding of the nn.Module.</p>
+</dd>
+</dl>
+<dl>
+<dt>Example::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">torch.distributed.tensor.parallel</span><span class="w"> </span><span class="kn">import</span> <span class="n">parallelize_module</span><span class="p">,</span> <span class="n">RowwiseParallel</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">torch.distributed.device_mesh</span><span class="w"> </span><span class="kn">import</span> <span class="n">init_device_mesh</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>  <span class="c1"># m is a nn.Module that contains a &quot;w2&quot; nn.Linear submodule</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tp_mesh</span> <span class="o">=</span> <span class="n">init_device_mesh</span><span class="p">(</span><span class="s2">&quot;cuda&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">8</span><span class="p">,))</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># By default, the input of the &quot;w2&quot; Linear will be converted to DTensor that shards on the last dim</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># and the output of &quot;w2&quot; will return a replicated :class:`torch.Tensor`.</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sharded_mod</span> <span class="o">=</span> <span class="n">parallelize_module</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">tp_mesh</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;w2&quot;</span><span class="p">:</span> <span class="n">RowwiseParallel</span><span class="p">()}),</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">...</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="torch.distributed.tensor.parallel.SequenceParallel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.distributed.tensor.parallel.</span></span><span class="sig-name descname"><span class="pre">SequenceParallel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sequence_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_local_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/tensor/parallel/style.html#SequenceParallel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/tensor/parallel/style.py#L282"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.tensor.parallel.SequenceParallel" title="Link to this definition">#</a></dt>
+<dd><p>SequenceParallel replicates a compatible <code class="docutils literal notranslate"><span class="pre">nn.Module</span></code> parameters and runs the sharded computation with
+input sharded on the sequence dimension. This currently supports <code class="docutils literal notranslate"><span class="pre">nn.LayerNorm</span></code>, <code class="docutils literal notranslate"><span class="pre">nn.Dropout</span></code>, and the
+<a class="reference external" href="https://github.com/facebookresearch/llama/blob/main/llama/model.py#L34">RMSNorm python implementation</a></p>
+<p>This style implements the operation that is described in the paper
+<a class="reference external" href="https://arxiv.org/abs/2205.05198">Reducing Activation Recomputation in Large Transformer Models</a></p>
+<p>If the input passed in to this <code class="docutils literal notranslate"><span class="pre">nn.Module</span></code> is a <a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Tensor</span></code></a>, it assumes that the input is already sharded
+on the sequence dimension and converts the input to a <code class="xref py py-class docutils literal notranslate"><span class="pre">DTensor</span></code> sharded on the sequence dimension. If the input
+passed in to this <code class="docutils literal notranslate"><span class="pre">nn.Module</span></code> is already a <code class="xref py py-class docutils literal notranslate"><span class="pre">DTensor</span></code> but is not sharded on the sequence dimension, it would
+redistribute the input to be sharded on the sequence dimension.</p>
+<p>The output of the <code class="docutils literal notranslate"><span class="pre">nn.Module</span></code> will be sharded on the sequence dimension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sequence_dim</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><em>optional</em>) – The sequence dimension of the input tensor for the <code class="docutils literal notranslate"><span class="pre">nn.Module</span></code>, this is used to annotate the input tensor to
+become a DTensor that is sharded on the sequence dimension, default: 1.</p></li>
+<li><p><strong>use_local_output</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>optional</em>) – Whether to use local <a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Tensor</span></code></a> instead of <code class="xref py py-class docutils literal notranslate"><span class="pre">DTensor</span></code> for the module output, default: False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">ParallelStyle</span></code> object that represents Sequence Parallel of the <code class="docutils literal notranslate"><span class="pre">nn.Module</span></code>.</p>
+</dd>
+</dl>
+<dl>
+<dt>Example::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">torch.distributed.tensor.parallel</span><span class="w"> </span><span class="kn">import</span> <span class="n">parallelize_module</span><span class="p">,</span> <span class="n">SequenceParallel</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">torch.distributed.device_mesh</span><span class="w"> </span><span class="kn">import</span> <span class="n">init_device_mesh</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>  <span class="c1"># m is a nn.Module that contains a &quot;norm&quot; nn.LayerNorm submodule</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tp_mesh</span> <span class="o">=</span> <span class="n">init_device_mesh</span><span class="p">(</span><span class="s2">&quot;cuda&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">8</span><span class="p">,))</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># By default, the input of the &quot;norm&quot; will be converted to DTensor that shards on the sequence dim</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># and the output of &quot;norm&quot; will return a sharded on sequence dimension :class:`DTensor`.</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sharded_mod</span> <span class="o">=</span> <span class="n">parallelize_module</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">tp_mesh</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;norm&quot;</span><span class="p">:</span> <span class="n">SequenceParallel</span><span class="p">()}),</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">...</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>SequenceParallel style assumes ones initialization if there are weights in the nn.Module (i.e.
+<code class="docutils literal notranslate"><span class="pre">nn.LayerNorm</span></code> or <code class="docutils literal notranslate"><span class="pre">RMSNorm</span></code>, and they by default have ones initialization). If you have custom
+inits for the weights on those modules, you need to broadcast the weights before/after parallelizing
+to ensure that they are replicated.</p>
+</div>
+</dd></dl>
+
 <p>To simply configure the nn.Module’s inputs and outputs with DTensor layouts
 and perform necessary layout redistributions, without distribute the module
 parameters to DTensors, the following <code class="docutils literal notranslate"><span class="pre">ParallelStyle</span></code> s can be used in
 the <code class="docutils literal notranslate"><span class="pre">parallelize_plan</span></code> when calling <code class="docutils literal notranslate"><span class="pre">parallelize_module</span></code>:</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="torch.distributed.tensor.parallel.PrepareModuleInput">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.distributed.tensor.parallel.</span></span><span class="sig-name descname"><span class="pre">PrepareModuleInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_layouts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desired_input_layouts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_kwarg_layouts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desired_input_kwarg_layouts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_local_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/tensor/parallel/style.html#PrepareModuleInput"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/tensor/parallel/style.py#L377"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.tensor.parallel.PrepareModuleInput" title="Link to this definition">#</a></dt>
+<dd><p>Configure the nn.Module’s inputs to convert the input tensors of the nn.Module to DTensors at runtime according to
+<code class="docutils literal notranslate"><span class="pre">input_layouts</span></code>, and perform layout redistribution according to the <code class="docutils literal notranslate"><span class="pre">desired_input_layouts</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_layouts</strong> (<em>Union</em><em>[</em><a class="reference internal" href="distributed.tensor.html#torch.distributed.tensor.placement_types.Placement" title="torch.distributed.tensor.placement_types.Placement"><em>Placement</em></a><em>, </em><em>Tuple</em><em>[</em><em>Optional</em><em>[</em><a class="reference internal" href="distributed.tensor.html#torch.distributed.tensor.placement_types.Placement" title="torch.distributed.tensor.placement_types.Placement"><em>Placement</em></a><em>]</em><em>]</em><em>]</em>) – The DTensor layouts of input tensors for the nn.Module, this is used to convert the input tensors to
+DTensors. If some inputs are not torch.Tensor or no need to convert to DTensors, <code class="docutils literal notranslate"><span class="pre">None</span></code> need to be specified
+as a placeholder. default: None.</p></li>
+<li><p><strong>desired_input_layouts</strong> (<em>Union</em><em>[</em><a class="reference internal" href="distributed.tensor.html#torch.distributed.tensor.placement_types.Placement" title="torch.distributed.tensor.placement_types.Placement"><em>Placement</em></a><em>, </em><em>Tuple</em><em>[</em><em>Optional</em><em>[</em><a class="reference internal" href="distributed.tensor.html#torch.distributed.tensor.placement_types.Placement" title="torch.distributed.tensor.placement_types.Placement"><em>Placement</em></a><em>]</em><em>]</em><em>]</em>) – The desired DTensor layout of input tensors for the nn.Module, this is used to ensure the inputs of the nn.Module
+have the desired DTensor layouts. This argument needs to have the same length with <code class="docutils literal notranslate"><span class="pre">input_layouts</span></code>. default: None.</p></li>
+<li><p><strong>input_kwarg_layouts</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><a class="reference internal" href="distributed.tensor.html#torch.distributed.tensor.placement_types.Placement" title="torch.distributed.tensor.placement_types.Placement"><em>Placement</em></a><em>]</em>) – The DTensor layouts of input kwargs for the nn.Module, this is used to convert the input kwarg tensors to DTensors.
+default: None</p></li>
+<li><p><strong>desired_input_kwarg_layouts</strong> – (Dict[str, Placement]):
+The desired DTensor layout of input kwargs for the nn.Module, this is used to ensure the inputs of the nn.Module
+have the desired DTensor layouts. default: None.</p></li>
+<li><p><strong>use_local_output</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>optional</em>) – Whether to use local <a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Tensor</span></code></a> instead of <code class="xref py py-class docutils literal notranslate"><span class="pre">DTensor</span></code> for the module inputs, default: False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">ParallelStyle</span></code> object that prepares the sharding layouts of the nn.Module’s inputs.</p>
+</dd>
+</dl>
+<dl>
+<dt>Example::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">torch.distributed.tensor.parallel</span><span class="w"> </span><span class="kn">import</span> <span class="n">parallelize_module</span><span class="p">,</span> <span class="n">PrepareModuleInput</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">torch.distributed.device_mesh</span><span class="w"> </span><span class="kn">import</span> <span class="n">init_device_mesh</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">block</span> <span class="o">=</span> <span class="n">TransformerBlock</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>  <span class="c1"># block is a nn.Module that contains an &quot;attn&quot; Attention submodule</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tp_mesh</span> <span class="o">=</span> <span class="n">init_device_mesh</span><span class="p">(</span><span class="s2">&quot;cuda&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">8</span><span class="p">,))</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># According to the style specified below, the first input of attn will be annotated to Sharded DTensor</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># and then redistributed to Replicated DTensor.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">parallelize_module</span><span class="p">(</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">block</span><span class="p">,</span> <span class="c1"># this can be a submodule or module</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">tp_mesh</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">parallelize_plan</span><span class="o">=</span><span class="p">{</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="s2">&quot;attn&quot;</span><span class="p">:</span> <span class="n">PrepareModuleInput</span><span class="p">(</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">input_layouts</span><span class="o">=</span><span class="p">(</span><span class="n">Shard</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="o">...</span><span class="p">),</span>
+<span class="gp">&gt;&gt;&gt; </span>            <span class="n">desired_input_layouts</span><span class="o">=</span><span class="p">(</span><span class="n">Replicate</span><span class="p">(),</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="p">),</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="torch.distributed.tensor.parallel.PrepareModuleOutput">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.distributed.tensor.parallel.</span></span><span class="sig-name descname"><span class="pre">PrepareModuleOutput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_layouts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desired_output_layouts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_local_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/tensor/parallel/style.html#PrepareModuleOutput"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/tensor/parallel/style.py#L532"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.tensor.parallel.PrepareModuleOutput" title="Link to this definition">#</a></dt>
+<dd><p>Configure the nn.Module’s outputs to convert the output tensors of the nn.Module to DTensors at runtime according to
+<code class="docutils literal notranslate"><span class="pre">output_layouts</span></code>, and perform layout redistribution according to the <code class="docutils literal notranslate"><span class="pre">desired_output_layouts</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>output_layouts</strong> (<em>Union</em><em>[</em><a class="reference internal" href="distributed.tensor.html#torch.distributed.tensor.placement_types.Placement" title="torch.distributed.tensor.placement_types.Placement"><em>Placement</em></a><em>, </em><em>Tuple</em><em>[</em><a class="reference internal" href="distributed.tensor.html#torch.distributed.tensor.placement_types.Placement" title="torch.distributed.tensor.placement_types.Placement"><em>Placement</em></a><em>]</em><em>]</em>) – The DTensor layouts of output tensors for the nn.Module, this is used to convert the output tensors to
+DTensors if they are <a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Tensor</span></code></a>. If some outputs are not torch.Tensor or no need to convert to DTensors,
+<code class="docutils literal notranslate"><span class="pre">None</span></code> need to be specified as a placeholder.</p></li>
+<li><p><strong>desired_output_layouts</strong> (<em>Union</em><em>[</em><a class="reference internal" href="distributed.tensor.html#torch.distributed.tensor.placement_types.Placement" title="torch.distributed.tensor.placement_types.Placement"><em>Placement</em></a><em>, </em><em>Tuple</em><em>[</em><a class="reference internal" href="distributed.tensor.html#torch.distributed.tensor.placement_types.Placement" title="torch.distributed.tensor.placement_types.Placement"><em>Placement</em></a><em>]</em><em>]</em>) – The desired DTensor layouts of output tensors for the nn.Module, this is used to ensure the outputs of the nn.Module
+have the desired DTensor layouts.</p></li>
+<li><p><strong>use_local_output</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>optional</em>) – Whether to use local <a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Tensor</span></code></a> instead of <code class="xref py py-class docutils literal notranslate"><span class="pre">DTensor</span></code> for the module outputs, default: True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A ParallelStyle object that prepares the sharding layouts of the nn.Module’s outputs.</p>
+</dd>
+</dl>
+<dl>
+<dt>Example::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">torch.distributed.tensor.parallel</span><span class="w"> </span><span class="kn">import</span> <span class="n">parallelize_module</span><span class="p">,</span> <span class="n">PrepareModuleOutput</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">torch.distributed.device_mesh</span><span class="w"> </span><span class="kn">import</span> <span class="n">init_device_mesh</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">block</span> <span class="o">=</span> <span class="n">TransformerBlock</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>  <span class="c1"># block is a nn.Module that contains an &quot;attn&quot; Attention submodule</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tp_mesh</span> <span class="o">=</span> <span class="n">init_device_mesh</span><span class="p">(</span><span class="s2">&quot;cuda&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">8</span><span class="p">,))</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># According to the style specified below, the output of the TransformerBlock will be converted to Replicated DTensor</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># and then redistributed to Sharded DTensor.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">parallelize_module</span><span class="p">(</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">block</span><span class="p">,</span> <span class="c1"># this can be a submodule or module</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">tp_mesh</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">parallelize_plan</span> <span class="o">=</span> <span class="n">PrepareModuleOutput</span><span class="p">(</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="n">output_layouts</span><span class="o">=</span><span class="n">Replicate</span><span class="p">(),</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="n">desired_output_layouts</span><span class="o">=</span><span class="n">Shard</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>when using the <code class="docutils literal notranslate"><span class="pre">Shard(dim)</span></code> as the input/output layouts for the above
@@ -572,6 +938,47 @@ DTensor could track the uneven sharding information.</p>
 and <code class="docutils literal notranslate"><span class="pre">RowwiseParallel</span></code> together in the parallelize_plan for achieve the desired
 sharding for the entire model (i.e. Attention and MLP).</p>
 <p>Parallelized cross-entropy loss computation (loss parallelism), is supported via the following context manager:</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.distributed.tensor.parallel.loss_parallel">
+<span class="sig-prename descclassname"><span class="pre">torch.distributed.tensor.parallel.</span></span><span class="sig-name descname"><span class="pre">loss_parallel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/tensor/parallel/loss.html#loss_parallel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/tensor/parallel/loss.py#L29"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.tensor.parallel.loss_parallel" title="Link to this definition">#</a></dt>
+<dd><p>A context manager that enables loss parallelism, where efficient parallelized loss computation
+can be performed when the input is sharded on the class dimension. Currently only the cross-entropy
+loss is supported.</p>
+<p>Within this context manager, one can use <a class="reference internal" href="generated/torch.nn.functional.cross_entropy.html#torch.nn.functional.cross_entropy" title="torch.nn.functional.cross_entropy"><code class="xref py py-func docutils literal notranslate"><span class="pre">cross_entropy()</span></code></a> or
+<a class="reference internal" href="generated/torch.nn.CrossEntropyLoss.html#torch.nn.CrossEntropyLoss" title="torch.nn.CrossEntropyLoss"><code class="xref py py-class docutils literal notranslate"><span class="pre">CrossEntropyLoss</span></code></a> as usual, with the following assumptions on the input parameters.
+The corresponding <code class="docutils literal notranslate"><span class="pre">backward()</span></code> call, if any, also needs to happen under this context manager.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">DTensor</span></code>) – Input logits. Assumed to be sharded on the class dimension.</p></li>
+<li><p><strong>target</strong> (Union[<a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Tensor</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">DTensor</span></code>]) – Must be ground truth class indices (class probabilities currently not supported).
+Assumed to be replicated across the <code class="docutils literal notranslate"><span class="pre">DeviceMesh</span></code>.</p></li>
+<li><p><strong>weight</strong> (Union[<a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Tensor</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">DTensor</span></code>], optional) – If given, assumed to be replicated across the <code class="docutils literal notranslate"><span class="pre">DeviceMesh</span></code>.</p></li>
+<li><p><strong>label_smoothing</strong> – Currently not supported.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A replicated <code class="xref py py-class docutils literal notranslate"><span class="pre">DTensor</span></code>.</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p>A sharded DTensor is manually created here to showcase the usage.
+In practice, it is usually the output of a TP module.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">torch.distributed.tensor.parallel</span><span class="w"> </span><span class="kn">import</span> <span class="n">loss_parallel</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">torch.distributed.device_mesh</span><span class="w"> </span><span class="kn">import</span> <span class="n">init_device_mesh</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">device_mesh</span> <span class="o">=</span> <span class="n">init_device_mesh</span><span class="p">(</span><span class="s2">&quot;cuda&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">8</span><span class="p">,))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">input</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s2">&quot;cuda&quot;</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dist_input</span> <span class="o">=</span> <span class="n">distribute_tensor</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">device_mesh</span><span class="p">,</span> <span class="n">placements</span><span class="o">=</span><span class="p">[</span><span class="n">Shard</span><span class="p">(</span><span class="mi">1</span><span class="p">)])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">target</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="p">(</span><span class="mi">4</span><span class="p">,),</span> <span class="n">device</span><span class="o">=</span><span class="s2">&quot;cuda&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">loss_parallel</span><span class="p">():</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">loss</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">cross_entropy</span><span class="p">(</span><span class="n">dist_input</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">reduction</span><span class="o">=</span><span class="s2">&quot;mean&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">...</span>
+</pre></div>
+</div>
+</dd></dl>
+
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The loss_parallel API is experimental and subject to change.</p>
@@ -596,46 +1003,52 @@ sharding for the entire model (i.e. Attention and MLP).</p>
             
               
                 <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc">
-<div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.tensor.parallel.parallelize_module"><code class="docutils literal notranslate"><span class="pre">parallelize_module()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.tensor.parallel.ColwiseParallel"><code class="docutils literal notranslate"><span class="pre">ColwiseParallel</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.tensor.parallel.RowwiseParallel"><code class="docutils literal notranslate"><span class="pre">RowwiseParallel</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.tensor.parallel.SequenceParallel"><code class="docutils literal notranslate"><span class="pre">SequenceParallel</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.tensor.parallel.PrepareModuleInput"><code class="docutils literal notranslate"><span class="pre">PrepareModuleInput</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.tensor.parallel.PrepareModuleOutput"><code class="docutils literal notranslate"><span class="pre">PrepareModuleOutput</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.tensor.parallel.loss_parallel"><code class="docutils literal notranslate"><span class="pre">loss_parallel()</span></code></a></li>
+</ul>
+  </nav></div>
 
   <div class="sidebar-secondary-item">
 
-  <div class="tocsection sourcelink">
-    <a href="../_sources/python-api/distributed.tensor.parallel.rst">
-      <i class="fa-solid fa-file-lines"></i> Show Source
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/pytorch/pytorch/edit/main/docs/source/python-api/distributed.tensor.parallel.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
     </a>
   </div>
 </div>
 
-</div>
-<div class="sidebar-secondary-item"> 
-</div>
-<div class="sidebar-secondary-item">
- <p>PyTorch Libraries</p>
- <ul>
- 
-  <li><a href="https://pytorch.org/vision">torchvision</a></li>
- 
-  <li><a href="https://pytorch.org/executorch">ExecuTorch</a></li>
- 
-  <li><a href="https://https://pytorch.org/ao">torchao</a></li>
- 
-  <li><a href="https://https://pytorch.org/audio">torchaudio</a></li>
- 
-  <li><a href="https://https://pytorch.org/torchrec">torchrec</a></li>
- 
-  <li><a href="https://https://pytorch.org/serve">torchserve</a></li>
- 
-  <li><a href="https://https://pytorch.org/data">torchdata</a></li>
- 
-  <li><a href="https://https://pytorch.org/xla">PyTorch on XLA devices</a></li>
- 
- </ul>
-</div>
+  <div class="sidebar-secondary-item">
+    <div class="tocsection sourcelink">
+      <a href="../_sources/python-api/distributed.tensor.parallel.rst.txt">
+        <i class="fa-solid fa-file-lines"></i> Show Source
+      </a>
+    </div>
 </div>
 
-</div>
+</div></div>
               
             
           </div>
@@ -650,7 +1063,6 @@ sharding for the entire model (i.e. Attention and MLP).</p>
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

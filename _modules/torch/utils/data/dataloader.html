@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -44,7 +44,7 @@
   <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../../../../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -63,7 +63,7 @@ window.addEventListener("load", () => mermaid.run());
     <link rel="search" title="Search" href="../../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -72,7 +72,6 @@ window.addEventListener("load", () => mermaid.run());
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -159,7 +158,7 @@ window.addEventListener("load", () => mermaid.run());
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -183,8 +182,8 @@ window.addEventListener("load", () => mermaid.run());
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -254,7 +253,7 @@ window.addEventListener("load", () => mermaid.run());
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -269,7 +268,6 @@ window.addEventListener("load", () => mermaid.run());
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -309,9 +307,27 @@ window.addEventListener("load", () => mermaid.run());
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -325,20 +341,14 @@ window.addEventListener("load", () => mermaid.run());
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -399,6 +409,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -489,6 +539,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
         
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
       </div>
     
   </div>
@@ -571,8 +661,7 @@ window.addEventListener("load", () => mermaid.run());
 <span class="kn">import</span><span class="w"> </span><span class="nn">queue</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">collections.abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Iterable</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Generic</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">Union</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Generic</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">Union</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">torch.distributed</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dist</span>
@@ -609,7 +698,7 @@ window.addEventListener("load", () => mermaid.run());
 <span class="c1"># Ideally we would parameterize `DataLoader` by the return type of `collate_fn`, but there is currently no way to have that</span>
 <span class="c1"># type parameter set to a default value if the user doesn&#39;t pass in a custom &#39;collate_fn&#39;.</span>
 <span class="c1"># See https://github.com/python/mypy/issues/3737.</span>
-<span class="n">_collate_fn_t</span> <span class="o">=</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">list</span><span class="p">[</span><span class="n">_T</span><span class="p">]],</span> <span class="n">Any</span><span class="p">]</span>
+<span class="n">_collate_fn_t</span> <span class="o">=</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">List</span><span class="p">[</span><span class="n">_T</span><span class="p">]],</span> <span class="n">Any</span><span class="p">]</span>
 
 
 <span class="c1"># These functions used to be defined in this file. However, it was moved to</span>
@@ -743,9 +832,8 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sd">        persistent_workers (bool, optional): If ``True``, the data loader will not shut down</span>
 <span class="sd">            the worker processes after a dataset has been consumed once. This allows to</span>
 <span class="sd">            maintain the workers `Dataset` instances alive. (default: ``False``)</span>
-<span class="sd">        pin_memory_device (str, optional): the device to :attr:`pin_memory` on if ``pin_memory`` is</span>
-<span class="sd">            ``True``. If not given, the current :ref:`accelerator&lt;accelerators&gt;` will be the</span>
-<span class="sd">            default. This argument is discouraged and subject to deprecated.</span>
+<span class="sd">        pin_memory_device (str, optional): the device to :attr:`pin_memory` to if ``pin_memory`` is</span>
+<span class="sd">            ``True``.</span>
 <span class="sd">        in_order (bool, optional): If ``False``, the data loader will not enforce that batches</span>
 <span class="sd">            are returned in a first-in, first-out order. Only applies when ``num_workers &gt; 0``. (default: ``True``)</span>
 
@@ -801,7 +889,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="n">batch_size</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
         <span class="n">shuffle</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">sampler</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Sampler</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">batch_sampler</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Sampler</span><span class="p">[</span><span class="nb">list</span><span class="p">],</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">list</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">batch_sampler</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Sampler</span><span class="p">[</span><span class="n">List</span><span class="p">],</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">List</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">num_workers</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
         <span class="n">collate_fn</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">_collate_fn_t</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">pin_memory</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
@@ -1213,39 +1301,17 @@ window.addEventListener("load", () => mermaid.run());
         <span class="n">ws</span><span class="p">,</span> <span class="n">rank</span> <span class="o">=</span> <span class="n">_get_distributed_settings</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_world_size</span> <span class="o">=</span> <span class="n">ws</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_rank</span> <span class="o">=</span> <span class="n">rank</span>
-        <span class="c1"># If pin_memory_device not set, default behaviour is current accelerator.</span>
-        <span class="c1"># If pin_memory_device is set but pin_memory is not set, the default</span>
-        <span class="c1"># behaviour false.</span>
+        <span class="c1"># for other backends, pin_memory_device need to set. if not set</span>
+        <span class="c1"># default behaviour is CUDA device. if pin_memory_device is selected</span>
+        <span class="c1"># and pin_memory is not set, the default behaviour false.</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">pin_memory_device</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">loader</span><span class="o">.</span><span class="n">pin_memory</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">torch</span><span class="o">.</span><span class="n">accelerator</span><span class="o">.</span><span class="n">is_available</span><span class="p">():</span>
-                <span class="n">warn_msg</span> <span class="o">=</span> <span class="p">(</span>
-                    <span class="s2">&quot;&#39;pin_memory&#39; argument is set as true but no accelerator is found, &quot;</span>
-                    <span class="s2">&quot;then device pinned memory won&#39;t be used.&quot;</span>
-                <span class="p">)</span>
-                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">warn_msg</span><span class="p">)</span>
-
-            <span class="bp">self</span><span class="o">.</span><span class="n">_pin_memory</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">pin_memory</span> <span class="ow">and</span> <span class="n">torch</span><span class="o">.</span><span class="n">accelerator</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_pin_memory</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">pin_memory</span> <span class="ow">and</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_pin_memory_device</span> <span class="o">=</span> <span class="kc">None</span>
-            <span class="c1"># Currently, pin_memory would raise error on the MPS backend (see</span>
-            <span class="c1"># https://github.com/pytorch/pytorch/issues/86060), so forcibly</span>
-            <span class="c1"># disable pin_memory on MPS. Remove this restriction once pinned</span>
-            <span class="c1"># memory allocation for MPS is fixed.</span>
-            <span class="k">if</span> <span class="p">(</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">_pin_memory</span>
-                <span class="ow">and</span> <span class="n">torch</span><span class="o">.</span><span class="n">accelerator</span><span class="o">.</span><span class="n">current_accelerator</span><span class="p">()</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;mps&quot;</span>
-            <span class="p">):</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">_pin_memory</span> <span class="o">=</span> <span class="kc">False</span>
-                <span class="n">warn_msg</span> <span class="o">=</span> <span class="p">(</span>
-                    <span class="s2">&quot;&#39;pin_memory&#39; argument is set as true but not supported on MPS now, &quot;</span>
-                    <span class="s2">&quot;then device pinned memory won&#39;t be used.&quot;</span>
-                <span class="p">)</span>
-                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">warn_msg</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">loader</span><span class="o">.</span><span class="n">pin_memory</span><span class="p">:</span>
                 <span class="n">warn_msg</span> <span class="o">=</span> <span class="p">(</span>
-                    <span class="s2">&quot;&#39;pin_memory_device&#39; is set but &#39;pin_memory&#39; argument is not set, &quot;</span>
-                    <span class="s2">&quot;then device pinned memory won&#39;t be used.&quot;</span>
-                    <span class="s2">&quot;please set &#39;pin_memory&#39; to true, if you need to use the device pin memory&quot;</span>
+                    <span class="s2">&quot;pin memory device is set and pin_memory flag is not used then device pinned memory won&#39;t be used&quot;</span>
+                    <span class="s2">&quot;please set pin_memory to true, if you need to use the device pin memory&quot;</span>
                 <span class="p">)</span>
                 <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">warn_msg</span><span class="p">)</span>
 
@@ -1736,18 +1802,15 @@ window.addEventListener("load", () => mermaid.run());
 
             <span class="c1"># Queue is not type-annotated</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_data_queue</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">Queue</span><span class="p">()</span>  <span class="c1"># type: ignore[var-annotated]</span>
-            <span class="n">current_device</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pin_memory_device</span> <span class="o">==</span> <span class="s2">&quot;cuda&quot;</span><span class="p">:</span>
-                <span class="n">current_device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">current_device</span><span class="p">()</span>
-            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pin_memory_device</span> <span class="o">==</span> <span class="s2">&quot;xpu&quot;</span><span class="p">:</span>
-                <span class="n">current_device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">xpu</span><span class="o">.</span><span class="n">current_device</span><span class="p">()</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pin_memory_device</span> <span class="o">==</span> <span class="s2">&quot;xpu&quot;</span><span class="p">:</span>
+                <span class="n">current_device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">xpu</span><span class="o">.</span><span class="n">current_device</span><span class="p">()</span>  <span class="c1"># type: ignore[attr-defined]</span>
             <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pin_memory_device</span> <span class="o">==</span> <span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">_get_privateuse1_backend_name</span><span class="p">():</span>
                 <span class="n">custom_device_mod</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span>
                     <span class="n">torch</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">_get_privateuse1_backend_name</span><span class="p">()</span>
                 <span class="p">)</span>
                 <span class="n">current_device</span> <span class="o">=</span> <span class="n">custom_device_mod</span><span class="o">.</span><span class="n">current_device</span><span class="p">()</span>
-            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pin_memory_device</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="n">current_device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">accelerator</span><span class="o">.</span><span class="n">current_device_index</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">current_device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">current_device</span><span class="p">()</span>  <span class="c1"># choose cuda for default</span>
             <span class="n">pin_memory_thread</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span>
                 <span class="n">target</span><span class="o">=</span><span class="n">_utils</span><span class="o">.</span><span class="n">pin_memory</span><span class="o">.</span><span class="n">_pin_memory_loop</span><span class="p">,</span>
                 <span class="n">args</span><span class="o">=</span><span class="p">(</span>
@@ -1804,11 +1867,6 @@ window.addEventListener("load", () => mermaid.run());
         <span class="c1"># It does not mean that a worker is dead. In case of `_persistent_workers`,</span>
         <span class="c1"># the worker will be reset to available in the next epoch.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_workers_status</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_num_workers</span><span class="p">)]</span>
-        <span class="c1"># A list of integers representing how many tasks are outstanding for each worker</span>
-        <span class="c1"># Incremented when a task is dispatched to the worker</span>
-        <span class="c1"># Decremented when that data has been given to the main thread</span>
-        <span class="c1"># Each worker should have at most self._prefetch_factor tasks outstanding</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_workers_num_tasks</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_num_workers</span><span class="p">)]</span>
         <span class="c1"># Reset the worker queue cycle so it resumes next epoch at worker 0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_worker_queue_idx_cycle</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">cycle</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_num_workers</span><span class="p">))</span>
         <span class="c1"># We resume the prefetching in case it was enabled</span>
@@ -2042,9 +2100,9 @@ window.addEventListener("load", () => mermaid.run());
 
             <span class="c1"># Check if the next sample has already been generated</span>
             <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_task_info</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_rcvd_idx</span><span class="p">])</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-                <span class="n">worker_id</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_task_info</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_rcvd_idx</span><span class="p">)</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_task_info</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_rcvd_idx</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_rcvd_idx</span> <span class="o">+=</span> <span class="mi">1</span>
-                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_process_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">worker_id</span><span class="p">)</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_process_data</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
             <span class="k">assert</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shutdown</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tasks_outstanding</span> <span class="o">&gt;</span> <span class="mi">0</span>
             <span class="n">idx</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_data</span><span class="p">()</span>
@@ -2062,20 +2120,17 @@ window.addEventListener("load", () => mermaid.run());
             <span class="k">if</span> <span class="n">idx</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rcvd_idx</span><span class="p">:</span>
                 <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_in_order</span><span class="p">:</span>
                     <span class="c1"># don&#39;t store it for later, process now</span>
-                    <span class="c1"># delete from self._task_info immediately</span>
-                    <span class="c1"># this keeps the object size manageable</span>
-                    <span class="n">worker_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_task_info</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">idx</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-                    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_process_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">worker_id</span><span class="p">)</span>
+                    <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_task_info</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+                    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_process_data</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
                 <span class="c1"># store out-of-order samples</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_task_info</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">+=</span> <span class="p">(</span><span class="n">data</span><span class="p">,)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="n">worker_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_task_info</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">idx</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_task_info</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_rcvd_idx</span> <span class="o">+=</span> <span class="mi">1</span>
-                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_process_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">worker_id</span><span class="p">)</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_process_data</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_try_put_index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">max_tasks</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_prefetch_factor</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_num_workers</span>
-        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tasks_outstanding</span> <span class="o">&lt;</span> <span class="n">max_tasks</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tasks_outstanding</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_prefetch_factor</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_num_workers</span>
 
         <span class="k">try</span><span class="p">:</span>
             <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_next_index</span><span class="p">()</span>
@@ -2084,26 +2139,17 @@ window.addEventListener("load", () => mermaid.run());
         <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_num_workers</span><span class="p">):</span>  <span class="c1"># find the next active worker, if any</span>
             <span class="n">worker_queue_idx</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_worker_queue_idx_cycle</span><span class="p">)</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_workers_status</span><span class="p">[</span><span class="n">worker_queue_idx</span><span class="p">]:</span>
-                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_in_order</span><span class="p">:</span>
-                    <span class="k">break</span>
-                <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_workers_num_tasks</span><span class="p">[</span><span class="n">worker_queue_idx</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">max_tasks</span> <span class="o">//</span> <span class="nb">sum</span><span class="p">(</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">_workers_status</span>
-                <span class="p">):</span>
-                    <span class="c1"># when self._in_order is False, distribute work to a worker if it has capacity</span>
-                    <span class="c1"># _workers_status is updated only in this thread, so the sum is guaranteed &gt; 0</span>
-                    <span class="k">break</span>
+                <span class="k">break</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="c1"># not found (i.e., didn&#39;t break)</span>
             <span class="k">return</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_index_queues</span><span class="p">[</span><span class="n">worker_queue_idx</span><span class="p">]</span><span class="o">.</span><span class="n">put</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">_send_idx</span><span class="p">,</span> <span class="n">index</span><span class="p">))</span>  <span class="c1"># type: ignore[possibly-undefined]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_task_info</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_send_idx</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">worker_queue_idx</span><span class="p">,)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_workers_num_tasks</span><span class="p">[</span><span class="n">worker_queue_idx</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_tasks_outstanding</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_send_idx</span> <span class="o">+=</span> <span class="mi">1</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">_process_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">worker_idx</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_workers_num_tasks</span><span class="p">[</span><span class="n">worker_idx</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_process_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_try_put_index</span><span class="p">()</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">ExceptionWrapper</span><span class="p">):</span>
             <span class="n">data</span><span class="o">.</span><span class="n">reraise</span><span class="p">()</span>
@@ -2251,7 +2297,6 @@ window.addEventListener("load", () => mermaid.run());
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -44,7 +44,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -63,7 +63,7 @@ window.addEventListener("load", () => mermaid.run());
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -72,7 +72,6 @@ window.addEventListener("load", () => mermaid.run());
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -159,7 +158,7 @@ window.addEventListener("load", () => mermaid.run());
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -183,8 +182,8 @@ window.addEventListener("load", () => mermaid.run());
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -254,7 +253,7 @@ window.addEventListener("load", () => mermaid.run());
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -269,7 +268,6 @@ window.addEventListener("load", () => mermaid.run());
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -309,9 +307,27 @@ window.addEventListener("load", () => mermaid.run());
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -325,20 +341,14 @@ window.addEventListener("load", () => mermaid.run());
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -399,6 +409,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -489,6 +539,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
         
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
       </div>
     
   </div>
@@ -553,14 +643,9 @@ window.addEventListener("load", () => mermaid.run());
                   
   <h1>Source code for torch.compiler</h1><div class="highlight"><pre>
 <span></span><span class="c1"># mypy: allow-untyped-defs</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">TypeVar</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">typing_extensions</span><span class="w"> </span><span class="kn">import</span> <span class="n">ParamSpec</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">TypeVar</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
-
-
-<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
-    <span class="kn">from</span><span class="w"> </span><span class="nn">._cache</span><span class="w"> </span><span class="kn">import</span> <span class="n">CacheInfo</span>
 
 
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
@@ -576,18 +661,14 @@ window.addEventListener("load", () => mermaid.run());
     <span class="s2">&quot;wrap_numpy&quot;</span><span class="p">,</span>
     <span class="s2">&quot;is_compiling&quot;</span><span class="p">,</span>
     <span class="s2">&quot;is_dynamo_compiling&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;is_exporting&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;save_cache_artifacts&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;load_cache_artifacts&quot;</span><span class="p">,</span>
 <span class="p">]</span>
 
 
-<span class="n">_P</span> <span class="o">=</span> <span class="n">ParamSpec</span><span class="p">(</span><span class="s2">&quot;_P&quot;</span><span class="p">)</span>
-<span class="n">_R</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;_R&quot;</span><span class="p">)</span>
+<span class="n">_F</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;_F&quot;</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span>
 
 
 <div class="viewcode-block" id="compile">
-<a class="viewcode-back" href="../../python-api/torch.compiler.compile.html#torch.compiler.compile">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.compiler.compile.html#torch.compiler.compile">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">compile</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    See :func:`torch.compile` for details on the arguments for this function.</span>
@@ -597,7 +678,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="reset">
-<a class="viewcode-back" href="../../generated/torch.compiler.reset.html#torch.compiler.reset">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.compiler.reset.html#torch.compiler.reset">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">reset</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This function clears all compilation caches and restores the system to its initial state.</span>
@@ -611,7 +692,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="allow_in_graph">
-<a class="viewcode-back" href="../../python-api/torch.compiler.allow_in_graph.html#torch.compiler.allow_in_graph">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.compiler.allow_in_graph.html#torch.compiler.allow_in_graph">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">allow_in_graph</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Tells the compiler frontend (Dynamo) to skip symbolic introspection of the function</span>
@@ -695,13 +776,13 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="substitute_in_graph">
-<a class="viewcode-back" href="../../python-api/torch.compiler.substitute_in_graph.html#torch.compiler.substitute_in_graph">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.compiler.substitute_in_graph.html#torch.compiler.substitute_in_graph">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">substitute_in_graph</span><span class="p">(</span>
-    <span class="n">original_fn</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="n">_P</span><span class="p">,</span> <span class="n">_R</span><span class="p">],</span>
+    <span class="n">original_fn</span><span class="p">:</span> <span class="n">_F</span><span class="p">,</span>
     <span class="o">*</span><span class="p">,</span>
     <span class="n">can_constant_fold_through</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
     <span class="n">skip_signature_check</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Callable</span><span class="p">[</span><span class="n">_P</span><span class="p">,</span> <span class="n">_R</span><span class="p">]],</span> <span class="n">Callable</span><span class="p">[</span><span class="n">_P</span><span class="p">,</span> <span class="n">_R</span><span class="p">]]:</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">_F</span><span class="p">],</span> <span class="n">_F</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Register a polyfill handler for a function, usually a C function from the C extension, to be</span>
 <span class="sd">    used in place of the original function when inlining the original function in the graph.</span>
@@ -761,8 +842,8 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="list_backends">
-<a class="viewcode-back" href="../../python-api/torch.compiler.list_backends.html#torch.compiler.list_backends">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">list_backends</span><span class="p">(</span><span class="n">exclude_tags</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;debug&quot;</span><span class="p">,</span> <span class="s2">&quot;experimental&quot;</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<a class="viewcode-back" href="../../python-api/generated/torch.compiler.list_backends.html#torch.compiler.list_backends">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">list_backends</span><span class="p">(</span><span class="n">exclude_tags</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;debug&quot;</span><span class="p">,</span> <span class="s2">&quot;experimental&quot;</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Return valid strings that can be passed to `torch.compile(..., backend=&quot;name&quot;)`.</span>
 
@@ -776,11 +857,11 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="assume_constant_result">
-<a class="viewcode-back" href="../../python-api/torch.compiler.assume_constant_result.html#torch.compiler.assume_constant_result">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.compiler.assume_constant_result.html#torch.compiler.assume_constant_result">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">assume_constant_result</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This function is used to mark a function `fn` as having a constant result.</span>
-<span class="sd">    This allows the compiler to optimize away your function.</span>
+<span class="sd">    This allows the compiler to optimize away your function</span>
 <span class="sd">    Returns The same function `fn`</span>
 
 <span class="sd">    Args:</span>
@@ -798,11 +879,11 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="disable">
-<a class="viewcode-back" href="../../python-api/torch.compiler.disable.html#torch.compiler.disable">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.compiler.disable.html#torch.compiler.disable">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">disable</span><span class="p">(</span><span class="n">fn</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This function provides a decorator to disable compilation on a function.</span>
-<span class="sd">    It also provides the option of recursively disabling called functions.</span>
+<span class="sd">    This function provides a decorator to disable compilation on a function</span>
+<span class="sd">    It also provides the option of recursively disabling called functions</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        fn (optional): The function to disable</span>
@@ -815,7 +896,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="set_stance">
-<a class="viewcode-back" href="../../generated/torch.compiler.set_stance.html#torch.compiler.set_stance">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.compiler.set_stance.html#torch.compiler.set_stance">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">set_stance</span><span class="p">(</span>
     <span class="n">stance</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">skip_guard_eval_unsafe</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">force_backend</span><span class="o">=</span><span class="kc">None</span>
 <span class="p">):</span>
@@ -891,7 +972,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="cudagraph_mark_step_begin">
-<a class="viewcode-back" href="../../python-api/torch.compiler.cudagraph_mark_step_begin.html#torch.compiler.cudagraph_mark_step_begin">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.compiler.cudagraph_mark_step_begin.html#torch.compiler.cudagraph_mark_step_begin">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">cudagraph_mark_step_begin</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Indicates that a new iteration of inference or training is about to begin.</span>
@@ -952,11 +1033,10 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <span class="n">_is_compiling_flag</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="n">_is_exporting_flag</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
 
 
 <div class="viewcode-block" id="is_compiling">
-<a class="viewcode-back" href="../../python-api/torch.compiler.is_compiling.html#torch.compiler.is_compiling">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.compiler.is_compiling.html#torch.compiler.is_compiling">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">is_compiling</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Indicates whether a graph is executed/traced as part of torch.compile() or torch.export().</span>
@@ -981,7 +1061,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="is_dynamo_compiling">
-<a class="viewcode-back" href="../../python-api/torch.compiler.is_dynamo_compiling.html#torch.compiler.is_dynamo_compiling">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.compiler.is_dynamo_compiling.html#torch.compiler.is_dynamo_compiling">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">is_dynamo_compiling</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Indicates whether a graph is traced via TorchDynamo.</span>
@@ -999,58 +1079,6 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="kc">False</span></div>
 
-
-
-<div class="viewcode-block" id="is_exporting">
-<a class="viewcode-back" href="../../generated/torch.compiler.is_exporting.html#torch.compiler.is_exporting">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">is_exporting</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Indicated whether we&#39;re under exporting.</span>
-
-<span class="sd">    It&#39;s stricter than is_compiling() flag, as it would only be set to True when</span>
-<span class="sd">    torch.export is used.</span>
-
-<span class="sd">    Example::</span>
-
-<span class="sd">        &gt;&gt;&gt; def forward(self, x):</span>
-<span class="sd">        &gt;&gt;&gt;     if not torch.compiler.is_exporting():</span>
-<span class="sd">        &gt;&gt;&gt;        pass # ...logic that is not needed in export...</span>
-<span class="sd">        &gt;&gt;&gt;</span>
-<span class="sd">        &gt;&gt;&gt;     # ...rest of the function...</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">_is_exporting_flag</span></div>
-
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">save_cache_artifacts</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">bytes</span><span class="p">,</span> <span class="s2">&quot;CacheInfo&quot;</span><span class="p">]]:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Serializes all the cache artifacts that were created during the compilation</span>
-
-<span class="sd">    Example:</span>
-
-<span class="sd">    - Execute torch.compile</span>
-<span class="sd">    - Call torch.compiler.save_cache_artifacts()</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span><span class="w"> </span><span class="nn">._cache</span><span class="w"> </span><span class="kn">import</span> <span class="n">CacheArtifactManager</span><span class="p">,</span> <span class="n">CacheInfo</span>
-
-    <span class="k">return</span> <span class="n">CacheArtifactManager</span><span class="o">.</span><span class="n">serialize</span><span class="p">()</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">load_cache_artifacts</span><span class="p">(</span><span class="n">serialized_artifacts</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="s2">&quot;CacheInfo&quot;</span><span class="p">]:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Hot loads cache artifacts that were previously serialized via</span>
-<span class="sd">    save_cache_artifacts</span>
-
-<span class="sd">    Example:</span>
-
-<span class="sd">    # From a previous invocation</span>
-<span class="sd">    artifacts = torch.compiler.save_cache_artifacts()</span>
-
-<span class="sd">    torch.compiler.load_cache_artifacts(artifacts[0])</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span><span class="w"> </span><span class="nn">._cache</span><span class="w"> </span><span class="kn">import</span> <span class="n">CacheArtifactManager</span><span class="p">,</span> <span class="n">CacheInfo</span>
-
-    <span class="k">return</span> <span class="n">CacheArtifactManager</span><span class="o">.</span><span class="n">deserialize</span><span class="p">(</span><span class="n">serialized_artifacts</span><span class="p">)</span>
 </pre></div>
 
                 </article>
@@ -1082,7 +1110,6 @@ window.addEventListener("load", () => mermaid.run());
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

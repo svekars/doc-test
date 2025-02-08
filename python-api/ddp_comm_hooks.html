@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -56,7 +56,7 @@
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -65,7 +65,6 @@
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -152,7 +151,7 @@
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -176,8 +175,8 @@
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -247,7 +246,7 @@
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -262,7 +261,6 @@
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -302,9 +300,27 @@
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -318,20 +334,14 @@
   
   
   
-    
-    
-      
-    
-    
-    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -392,6 +402,46 @@
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -486,6 +536,46 @@
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
         
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
       </div>
     
   </div>
@@ -562,15 +652,203 @@ the hook before the training loop as below.</p>
 <p>A communication hook provides a flexible way to allreduce gradients.
 Therefore, it mainly operates on the gradients on each replica before allreduce,
 which are bucketized to increase the overlap between communication and computation.
-Particularly, <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.distributed.GradBucket</span></code> represents a bucket of gradient tensors to be allreduced.</p>
+Particularly, <a class="reference internal" href="#torch.distributed.GradBucket" title="torch.distributed.GradBucket"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.distributed.GradBucket</span></code></a> represents a bucket of gradient tensors to be allreduced.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="torch.distributed.GradBucket">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.distributed.</span></span><span class="sig-name descname"><span class="pre">GradBucket</span></span><a class="headerlink" href="#torch.distributed.GradBucket" title="Link to this definition">#</a></dt>
+<dd><p>This class mainly passes a flattened gradient tensor
+(returned by <a class="reference internal" href="#torch.distributed.GradBucket.buffer" title="torch.distributed.GradBucket.buffer"><code class="xref py py-meth docutils literal notranslate"><span class="pre">buffer()</span></code></a>)
+to DDP communication hook.
+This tensor can be further decomposed into a list of per-parameter tensors within this bucket
+(returned by <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_per_parameter_tensors()</span></code>)
+to apply layer-wise operations.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.distributed.GradBucket.index">
+<span class="sig-prename descclassname"><span class="pre">torch.distributed.GradBucket.</span></span><span class="sig-name descname"><span class="pre">index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#torch.distributed.GradBucket" title="torch._C._distributed_c10d.GradBucket"><span class="pre">torch._C._distributed_c10d.GradBucket</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span></span><a class="headerlink" href="#torch.distributed.GradBucket.index" title="Link to this definition">#</a></dt>
+<dd><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Since the buckets are rebuilt after the first iteration, should not rely on the indices at the beginning of training.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The index of a bucket that stores gradients of a few contiguous layers.
+All the gradients are bucketized.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.distributed.GradBucket.buffer">
+<span class="sig-prename descclassname"><span class="pre">torch.distributed.GradBucket.</span></span><span class="sig-name descname"><span class="pre">buffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#torch.distributed.GradBucket" title="torch._C._distributed_c10d.GradBucket"><span class="pre">torch._C._distributed_c10d.GradBucket</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><span class="pre">torch.Tensor</span></a></span></span><a class="headerlink" href="#torch.distributed.GradBucket.buffer" title="Link to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A flattened 1D <code class="docutils literal notranslate"><span class="pre">torch.Tensor</span></code> buffer,
+which can be further decomposed into a list of per-parameter tensors within this bucket.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.distributed.GradBucket.gradients">
+<span class="sig-prename descclassname"><span class="pre">torch.distributed.GradBucket.</span></span><span class="sig-name descname"><span class="pre">gradients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#torch.distributed.GradBucket" title="torch._C._distributed_c10d.GradBucket"><span class="pre">torch._C._distributed_c10d.GradBucket</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><span class="pre">torch.Tensor</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#torch.distributed.GradBucket.gradients" title="Link to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of <code class="docutils literal notranslate"><span class="pre">torch.Tensor</span></code>. Each tensor in the list corresponds to a gradient.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.distributed.GradBucket.is_last">
+<span class="sig-prename descclassname"><span class="pre">torch.distributed.GradBucket.</span></span><span class="sig-name descname"><span class="pre">is_last</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#torch.distributed.GradBucket" title="torch._C._distributed_c10d.GradBucket"><span class="pre">torch._C._distributed_c10d.GradBucket</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#torch.distributed.GradBucket.is_last" title="Link to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Whether this bucket is the last bucket to allreduce in an iteration.
+This also means that this bucket corresponds to the first few layers in the forward pass.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.distributed.GradBucket.set_buffer">
+<span class="sig-prename descclassname"><span class="pre">torch.distributed.GradBucket.</span></span><span class="sig-name descname"><span class="pre">set_buffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#torch.distributed.GradBucket" title="torch._C._distributed_c10d.GradBucket"><span class="pre">torch._C._distributed_c10d.GradBucket</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><span class="pre">torch.Tensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#torch.distributed.GradBucket.set_buffer" title="Link to this definition">#</a></dt>
+<dd><p>Replaces the tensor in the bucket with the input tensor buffer.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.distributed.GradBucket.parameters">
+<span class="sig-prename descclassname"><span class="pre">torch.distributed.GradBucket.</span></span><span class="sig-name descname"><span class="pre">parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#torch.distributed.GradBucket" title="torch._C._distributed_c10d.GradBucket"><span class="pre">torch._C._distributed_c10d.GradBucket</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><span class="pre">torch.Tensor</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#torch.distributed.GradBucket.parameters" title="Link to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of <code class="docutils literal notranslate"><span class="pre">torch.Tensor</span></code>. Each tensor in the list corresponds to a model
+parameter.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <section id="default-communication-hooks">
 <h2>Default Communication Hooks<a class="headerlink" href="#default-communication-hooks" title="Link to this heading">#</a></h2>
 <p>Default communication hooks are simple <strong>stateless</strong> hooks, so the input state
 in <code class="docutils literal notranslate"><span class="pre">register_comm_hook</span></code> is either a process group or <code class="docutils literal notranslate"><span class="pre">None</span></code>.
-The input <code class="docutils literal notranslate"><span class="pre">bucket</span></code> is a <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.distributed.GradBucket</span></code> object.</p>
-<p>Additionally, a communication hook wrapper is provided to support <code class="xref py py-meth docutils literal notranslate"><span class="pre">fp16_compress_hook()</span></code> or <code class="xref py py-meth docutils literal notranslate"><span class="pre">bf16_compress_hook()</span></code> as a wrapper,
+The input <code class="docutils literal notranslate"><span class="pre">bucket</span></code> is a <a class="reference internal" href="#torch.distributed.GradBucket" title="torch.distributed.GradBucket"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.distributed.GradBucket</span></code></a> object.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.distributed.algorithms.ddp_comm_hooks.default_hooks.allreduce_hook">
+<span class="sig-prename descclassname"><span class="pre">torch.distributed.algorithms.ddp_comm_hooks.default_hooks.</span></span><span class="sig-name descname"><span class="pre">allreduce_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">process_group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bucket</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/algorithms/ddp_comm_hooks/default_hooks.html#allreduce_hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/algorithms/ddp_comm_hooks/default_hooks.py#L33"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.ddp_comm_hooks.default_hooks.allreduce_hook" title="Link to this definition">#</a></dt>
+<dd><p>Call <code class="docutils literal notranslate"><span class="pre">allreduce</span></code> using <code class="docutils literal notranslate"><span class="pre">GradBucket</span></code> tensors.</p>
+<p>Once gradient tensors are aggregated across all workers, its <code class="docutils literal notranslate"><span class="pre">then</span></code>
+callback takes the mean and returns the result.</p>
+<p>If user registers this DDP communication hook,
+DDP results is expected to be same as the case where no hook was registered.
+Hence, this won’t change behavior of DDP and user can use this as a reference
+or modify this hook to log useful information or any other purposes while
+unaffecting DDP behavior.</p>
+<dl>
+<dt>Example::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ddp_model</span><span class="o">.</span><span class="n">register_comm_hook</span><span class="p">(</span><span class="n">process_group</span><span class="p">,</span> <span class="n">allreduce_hook</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="futures.html#torch.futures.Future" title="torch.jit.Future"><em>Future</em></a>[<a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><em>Tensor</em></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.distributed.algorithms.ddp_comm_hooks.default_hooks.fp16_compress_hook">
+<span class="sig-prename descclassname"><span class="pre">torch.distributed.algorithms.ddp_comm_hooks.default_hooks.</span></span><span class="sig-name descname"><span class="pre">fp16_compress_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">process_group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bucket</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/algorithms/ddp_comm_hooks/default_hooks.html#fp16_compress_hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/algorithms/ddp_comm_hooks/default_hooks.py#L90"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.ddp_comm_hooks.default_hooks.fp16_compress_hook" title="Link to this definition">#</a></dt>
+<dd><p>Compress by casting <code class="docutils literal notranslate"><span class="pre">GradBucket</span></code> to <code class="docutils literal notranslate"><span class="pre">torch.float16</span></code> divided by process group size.</p>
+<p>This DDP communication hook implements a simple gradient compression
+approach that casts <code class="docutils literal notranslate"><span class="pre">GradBucket</span></code> tensor to half-precision floating-point format (<code class="docutils literal notranslate"><span class="pre">torch.float16</span></code>)
+and then divides it by the process group size.
+It allreduces those <code class="docutils literal notranslate"><span class="pre">float16</span></code> gradient tensors. Once compressed gradient
+tensors are allreduced, the chained callback <code class="docutils literal notranslate"><span class="pre">decompress</span></code> casts it back to the input data type (such as <code class="docutils literal notranslate"><span class="pre">float32</span></code>).</p>
+<dl>
+<dt>Example::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ddp_model</span><span class="o">.</span><span class="n">register_comm_hook</span><span class="p">(</span><span class="n">process_group</span><span class="p">,</span> <span class="n">fp16_compress_hook</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="futures.html#torch.futures.Future" title="torch.jit.Future"><em>Future</em></a>[<a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><em>Tensor</em></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.distributed.algorithms.ddp_comm_hooks.default_hooks.bf16_compress_hook">
+<span class="sig-prename descclassname"><span class="pre">torch.distributed.algorithms.ddp_comm_hooks.default_hooks.</span></span><span class="sig-name descname"><span class="pre">bf16_compress_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">process_group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bucket</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/algorithms/ddp_comm_hooks/default_hooks.html#bf16_compress_hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/algorithms/ddp_comm_hooks/default_hooks.py#L110"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.ddp_comm_hooks.default_hooks.bf16_compress_hook" title="Link to this definition">#</a></dt>
+<dd><p>Warning: This API is experimental, and it requires NCCL version later than 2.9.6.</p>
+<p>This DDP communication hook implements a simple gradient compression
+approach that casts <code class="docutils literal notranslate"><span class="pre">GradBucket</span></code> tensor to half-precision
+<a class="reference external" href="https://en.wikipedia.org/wiki/Bfloat16_floating-point_format">Brain floating point format</a> (<code class="docutils literal notranslate"><span class="pre">torch.bfloat16</span></code>)
+and then divides it by the process group size.
+It allreduces those <code class="docutils literal notranslate"><span class="pre">bfloat16</span></code> gradient tensors. Once compressed gradient
+tensors are allreduced, the chained callback <code class="docutils literal notranslate"><span class="pre">decompress</span></code> casts it back to the input data type (such as <code class="docutils literal notranslate"><span class="pre">float32</span></code>).</p>
+<dl>
+<dt>Example::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ddp_model</span><span class="o">.</span><span class="n">register_comm_hook</span><span class="p">(</span><span class="n">process_group</span><span class="p">,</span> <span class="n">bf16_compress_hook</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="futures.html#torch.futures.Future" title="torch.jit.Future"><em>Future</em></a>[<a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><em>Tensor</em></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Additionally, a communication hook wrapper is provided to support <a class="reference internal" href="#torch.distributed.algorithms.ddp_comm_hooks.default_hooks.fp16_compress_hook" title="torch.distributed.algorithms.ddp_comm_hooks.default_hooks.fp16_compress_hook"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fp16_compress_hook()</span></code></a> or <a class="reference internal" href="#torch.distributed.algorithms.ddp_comm_hooks.default_hooks.bf16_compress_hook" title="torch.distributed.algorithms.ddp_comm_hooks.default_hooks.bf16_compress_hook"><code class="xref py py-meth docutils literal notranslate"><span class="pre">bf16_compress_hook()</span></code></a> as a wrapper,
 which can be combined with other communication hooks.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.distributed.algorithms.ddp_comm_hooks.default_hooks.fp16_compress_wrapper">
+<span class="sig-prename descclassname"><span class="pre">torch.distributed.algorithms.ddp_comm_hooks.default_hooks.</span></span><span class="sig-name descname"><span class="pre">fp16_compress_wrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hook</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/algorithms/ddp_comm_hooks/default_hooks.html#fp16_compress_wrapper"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/algorithms/ddp_comm_hooks/default_hooks.py#L131"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.ddp_comm_hooks.default_hooks.fp16_compress_wrapper" title="Link to this definition">#</a></dt>
+<dd><p>Cast input tensor to <code class="docutils literal notranslate"><span class="pre">torch.float16</span></code>, cast result of hook back to input dtype.</p>
+<p>This wrapper casts the input gradient tensor of a given DDP communication hook to half-precision
+floating point format (<code class="docutils literal notranslate"><span class="pre">torch.float16</span></code>), and casts the resulting tensor of the given hook back to
+the input data type, such as <code class="docutils literal notranslate"><span class="pre">float32</span></code>.
+Therefore, <code class="docutils literal notranslate"><span class="pre">fp16_compress_hook</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">fp16_compress_wrapper(allreduce_hook)</span></code>.</p>
+<dl>
+<dt>Example::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">state</span> <span class="o">=</span> <span class="n">PowerSGDState</span><span class="p">(</span><span class="n">process_group</span><span class="o">=</span><span class="n">process_group</span><span class="p">,</span> <span class="n">matrix_approximation_rank</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">start_powerSGD_iter</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ddp_model</span><span class="o">.</span><span class="n">register_comm_hook</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">fp16_compress_wrapper</span><span class="p">(</span><span class="n">powerSGD_hook</span><span class="p">))</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.13)"><em>Callable</em></a>[[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.13)"><em>Any</em></a>, <a class="reference internal" href="#torch.distributed.GradBucket" title="torch._C._distributed_c10d.GradBucket"><em>GradBucket</em></a>], <a class="reference internal" href="futures.html#torch.futures.Future" title="torch.jit.Future"><em>Future</em></a>[<a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><em>Tensor</em></a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.distributed.algorithms.ddp_comm_hooks.default_hooks.bf16_compress_wrapper">
+<span class="sig-prename descclassname"><span class="pre">torch.distributed.algorithms.ddp_comm_hooks.default_hooks.</span></span><span class="sig-name descname"><span class="pre">bf16_compress_wrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hook</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/algorithms/ddp_comm_hooks/default_hooks.html#bf16_compress_wrapper"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/algorithms/ddp_comm_hooks/default_hooks.py#L169"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.ddp_comm_hooks.default_hooks.bf16_compress_wrapper" title="Link to this definition">#</a></dt>
+<dd><p>Warning: This API is experimental, and it requires NCCL version later than 2.9.6.</p>
+<p>This wrapper casts the input gradient tensor of a given DDP communication hook to half-precision
+<cite>Brain floating point format &lt;https://en.wikipedia.org/wiki/Bfloat16_floating-point_format&gt; `_  (``torch.bfloat16`</cite>),
+and casts the resulting tensor of the given hook back to the input data type, such as <code class="docutils literal notranslate"><span class="pre">float32</span></code>.</p>
+<p>Therefore, <code class="docutils literal notranslate"><span class="pre">bf16_compress_hook</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">bf16_compress_wrapper(allreduce_hook)</span></code>.</p>
+<dl>
+<dt>Example::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">state</span> <span class="o">=</span> <span class="n">PowerSGDState</span><span class="p">(</span><span class="n">process_group</span><span class="o">=</span><span class="n">process_group</span><span class="p">,</span> <span class="n">matrix_approximation_rank</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">start_powerSGD_iter</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ddp_model</span><span class="o">.</span><span class="n">register_comm_hook</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">bf16_compress_wrapper</span><span class="p">(</span><span class="n">powerSGD_hook</span><span class="p">))</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.13)"><em>Callable</em></a>[[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.13)"><em>Any</em></a>, <a class="reference internal" href="#torch.distributed.GradBucket" title="torch._C._distributed_c10d.GradBucket"><em>GradBucket</em></a>], <a class="reference internal" href="futures.html#torch.futures.Future" title="torch.jit.Future"><em>Future</em></a>[<a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><em>Tensor</em></a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <section id="powersgd-communication-hook">
 <h2>PowerSGD Communication Hook<a class="headerlink" href="#powersgd-communication-hook" title="Link to this heading">#</a></h2>
@@ -582,6 +860,43 @@ state. Therefore, PowerSGD communication hook is a <strong>stateful</strong> hoo
 and the user needs to provide a state object defined as below.</p>
 <section id="powersgd-state">
 <h3>PowerSGD State<a class="headerlink" href="#powersgd-state" title="Link to this heading">#</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.PowerSGDState">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.</span></span><span class="sig-name descname"><span class="pre">PowerSGDState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">process_group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix_approximation_rank</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_powerSGD_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_compression_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_error_feedback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">warm_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orthogonalization_epsilon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression_stats_logging_frequency</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_tensors_with_same_shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/algorithms/ddp_comm_hooks/powerSGD_hook.html#PowerSGDState"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/algorithms/ddp_comm_hooks/powerSGD_hook.py#L122"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.PowerSGDState" title="Link to this definition">#</a></dt>
+<dd><p>Store both the algorithm’s hyperparameters and internal state for all gradients during training.</p>
+<p>Particularly, <code class="docutils literal notranslate"><span class="pre">matrix_approximation_rank</span></code> and <code class="docutils literal notranslate"><span class="pre">start_powerSGD_iter</span></code> are the main hyperparameters that should be tuned by the user.
+For performance, we suggest to keep binary hyperparameters <code class="docutils literal notranslate"><span class="pre">use_error_feedback</span></code> and <code class="docutils literal notranslate"><span class="pre">warm_start</span></code> on.</p>
+<ol class="arabic">
+<li><p><code class="docutils literal notranslate"><span class="pre">matrix_approximation_rank</span></code> controls the size of compressed low-rank tensors, which determines the compression rate. The lower the rank, the stronger the compression.</p>
+<blockquote>
+<div><p>1.1. If <code class="docutils literal notranslate"><span class="pre">matrix_approximation_rank</span></code> is too low, the full model quality will need more training steps to reach or will never reach and yield loss in accuracy.</p>
+<p>1.2. The increase of <code class="docutils literal notranslate"><span class="pre">matrix_approximation_rank</span></code> can substantially increase the computation costs of the compression, and the accuracy may not be further improved beyond a certain <code class="docutils literal notranslate"><span class="pre">matrix_approximation_rank</span></code> threshold.</p>
+</div></blockquote>
+</li>
+</ol>
+<p>To tune <code class="docutils literal notranslate"><span class="pre">matrix_approximation_rank</span></code>, we suggest to start from 1 and increase by factors of 2 (like an exponential grid search, 1, 2, 4, …), until a satisfactory accuracy is reached. Typically only a small value 1-4 is used. For some NLP tasks (as shown in Appendix D of the original paper), this value has been increased to 32.</p>
+<ol class="arabic simple" start="2">
+<li><p><code class="docutils literal notranslate"><span class="pre">start_powerSGD_iter</span></code> defers PowerSGD compression until step <code class="docutils literal notranslate"><span class="pre">start_powerSGD_iter</span></code>, and vanilla allreduce runs prior to step <code class="docutils literal notranslate"><span class="pre">start_powerSGD_iter</span></code>. This hybrid scheme of <strong>vanilla allreduce + PowerSGD</strong> can effectively improve the accuracy, even a relatively small <code class="docutils literal notranslate"><span class="pre">matrix_approximation_rank</span></code> is used. This is because that, the beginning of training phase is usually very sensitive to inaccurate gradients, and compressing gradients too early may make the training quickly take a suboptimal trajectory, which can result in an irrecoverable impact on the accuracy.</p></li>
+</ol>
+<p>To tune <code class="docutils literal notranslate"><span class="pre">start_powerSGD_iter</span></code>, we suggest to start with 10% of total training steps, and increase it until a satisfactory accuracy is reached. If there is a warm-up stage in the training, <code class="docutils literal notranslate"><span class="pre">start_powerSGD_iter</span></code> typically should be no less than the number of warm-up steps.</p>
+<ol class="arabic simple" start="3">
+<li><p><code class="docutils literal notranslate"><span class="pre">min_compression_rate</span></code> is the minimum compression rate required when a layer is compressed. Due to the computation overheads incurred by the compression, a tensor is worth compressing only if there can be sufficient saving in bandwidth, where <code class="docutils literal notranslate"><span class="pre">(num_rows</span> <span class="pre">+</span> <span class="pre">num_cols)</span> <span class="pre">*</span> <span class="pre">matrix_approximation_rank</span> <span class="pre">*</span> <span class="pre">min_compression_rate</span> <span class="pre">&lt;</span> <span class="pre">num_rows</span> <span class="pre">*</span> <span class="pre">num_cols</span></code>. If the specified compression rate threshold cannot be satisfied, the tensor will be directly allreduced without compression.</p></li>
+</ol>
+<p>Compression statistics are logged every <code class="docutils literal notranslate"><span class="pre">compression_stats_logging_frequency</span></code> iterations once PowerSGD compression starts.</p>
+<ol class="arabic simple" start="4">
+<li><p><code class="docutils literal notranslate"><span class="pre">orthogonalization_epsilon</span></code> can be a very small value (e.g., 1e-8) added to every normalized matrix column in orthogonalization step, to prevent div-by-zero error if any column has all 0s. If this can already be prevented (e.g., by batch normalization), an epsilon of 0 is recommended for accuracy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">batch_tensors_with_same_shape</span></code> controls whether to compress and decompress tensors with same shape in a batched operation to achieve higher parallelism. Note that you should also increase the bucket size (i.e., <code class="docutils literal notranslate"><span class="pre">bucket_cap_mb</span></code> arg in DDP constructor) to make more same-shaped tensors appear in the same bucket, however this may reduce the overlap between computation and communication, and increase the memory footprint due to stacking the tensors of the same shape. Set to <code class="docutils literal notranslate"><span class="pre">True</span></code> if the compression / decompression computation is a bottleneck.</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If error feedback or warm-up is enabled, the minimum value of <code class="docutils literal notranslate"><span class="pre">start_powerSGD_iter</span></code> allowed in DDP is 2.
+This is because there is another internal optimization that rebuilds buckets at iteration 1 in DDP,
+and this can conflict with any tensor memorized before the rebuild process.</p>
+</div>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
 </section>
 <section id="powersgd-hooks">
 <h3>PowerSGD Hooks<a class="headerlink" href="#powersgd-hooks" title="Link to this heading">#</a></h3>
@@ -597,6 +912,130 @@ compressed communication and improve accuracy.</p>
 Please use PyTorch <a class="reference external" href="https://pytorch.org/docs/stable/amp.html">native automatic mixed precision package</a>
 instead.</p>
 </div>
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.powerSGD_hook">
+<span class="sig-prename descclassname"><span class="pre">torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.</span></span><span class="sig-name descname"><span class="pre">powerSGD_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bucket</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/algorithms/ddp_comm_hooks/powerSGD_hook.html#powerSGD_hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/algorithms/ddp_comm_hooks/powerSGD_hook.py#L340"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.powerSGD_hook" title="Link to this definition">#</a></dt>
+<dd><p>Implement PowerSGD algorithm.</p>
+<p>This DDP communication hook implements PowerSGD gradient compression
+algorithm described in the <a class="reference external" href="https://arxiv.org/abs/1905.13727">paper</a>.
+Once gradient tensors are aggregated across all workers, this hook applies
+compression as follows:</p>
+<ol class="arabic">
+<li><p>Views the input flattened 1D gradient tensor as a list of per-parameter tensors, and divides all the tensors into two groups:</p>
+<blockquote>
+<div><p>1.1 The tensors that should be compressed before allreduce, because the compression can give enough saving in bandwidth.</p>
+<p>1.2 Rest of the tensors will be directly allreduced without compression, including all the vector tensors (for biases).</p>
+</div></blockquote>
+</li>
+<li><p>Handles uncompressed tensors:</p>
+<blockquote>
+<div><p>2.1. Allocate contiguous memory for those uncompressed tensors, and allreduces all the uncompressed tensors as a batch, without compression;</p>
+<p>2.2. Copies the individual uncompressed tensors from the contiguous memory back to the input tensor.</p>
+</div></blockquote>
+</li>
+<li><p>Handles the tensors that should be compressed by PowerSGD compression:</p>
+<blockquote>
+<div><p>3.1. For each tensor M, creates two low-rank tensors P and Q for decomposing M,
+such that M = PQ^T, where Q is initialized from a standard normal distribution and orthogonalized;</p>
+<p>3.2. Computes each P in Ps, which is equal to MQ;</p>
+<p>3.3. Allreduces Ps as a batch;</p>
+<p>3.4. Orthogonalizes each P in Ps;</p>
+<p>3.5. Computes each Q in Qs, which is approximately equal to M^TP;</p>
+<p>3.6. Allreduces Qs as a batch;</p>
+<p>3.7. Computes each M among all the compressed tensors, which is approximately equal to PQ^T.</p>
+</div></blockquote>
+</li>
+</ol>
+<p>Note that this communication hook enforces vanilla allreduce for the first <code class="docutils literal notranslate"><span class="pre">state.start_powerSGD_iter</span></code> iterations.
+This not only gives the user more control over the tradeoff between speedup and accuracy,
+but also helps abstract away some complexity of the internal optimization of DDP for future communication hook developers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<a class="reference internal" href="#torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.PowerSGDState" title="torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.PowerSGDState"><em>PowerSGDState</em></a>) – State information to configure the compression rate and support error feedback, warm start, etc.
+To tune the compression configs, mainly need to tune <code class="docutils literal notranslate"><span class="pre">matrix_approximation_rank</span></code>, <code class="docutils literal notranslate"><span class="pre">start_powerSGD_iter</span></code>
+and <code class="docutils literal notranslate"><span class="pre">min_compression_rate</span></code>.</p></li>
+<li><p><strong>bucket</strong> (<em>dist.GradBucket</em>) – Bucket that stores a 1D flattened gradient tensor that batches multiple per-variable tensors.
+Note that since DDP comm hook only supports single process single device mode,
+only exactly one tensor is stored in this bucket.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Future handler of the communication, which updates the gradients in place.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="futures.html#torch.futures.Future" title="torch.jit.Future"><em>Future</em></a>[<a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><em>Tensor</em></a>]</p>
+</dd>
+</dl>
+<dl>
+<dt>Example::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">state</span> <span class="o">=</span> <span class="n">PowerSGDState</span><span class="p">(</span><span class="n">process_group</span><span class="o">=</span><span class="n">process_group</span><span class="p">,</span> <span class="n">matrix_approximation_rank</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+<span class="go">                          start_powerSGD_iter=10, min_compression_rate=0.5)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ddp_model</span><span class="o">.</span><span class="n">register_comm_hook</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">powerSGD_hook</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.batched_powerSGD_hook">
+<span class="sig-prename descclassname"><span class="pre">torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.</span></span><span class="sig-name descname"><span class="pre">batched_powerSGD_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bucket</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/algorithms/ddp_comm_hooks/powerSGD_hook.html#batched_powerSGD_hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/algorithms/ddp_comm_hooks/powerSGD_hook.py#L653"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.batched_powerSGD_hook" title="Link to this definition">#</a></dt>
+<dd><p>Implement simplified PowerSGD algorithm.</p>
+<p>This DDP communication hook implements a simplified PowerSGD gradient compression
+algorithm described in the <a class="reference external" href="https://arxiv.org/abs/1905.13727">paper</a>.
+This variant does not compress the gradients layer by layer,
+but instead compresses the flattened input tensor that batches all the gradients.
+Therefore, it is <strong>faster</strong> than <a class="reference internal" href="#torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.powerSGD_hook" title="torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.powerSGD_hook"><code class="xref py py-meth docutils literal notranslate"><span class="pre">powerSGD_hook()</span></code></a>,
+but usually results in a <strong>much lower accuracy</strong>, unless <code class="docutils literal notranslate"><span class="pre">matrix_approximation_rank</span></code> is 1.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Increasing <code class="docutils literal notranslate"><span class="pre">matrix_approximation_rank</span></code> here may not necessarily increase the accuracy,
+because batching per-parameter tensors without column/row alignment can destroy low-rank structure.
+Therefore, the user should always consider <a class="reference internal" href="#torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.powerSGD_hook" title="torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.powerSGD_hook"><code class="xref py py-meth docutils literal notranslate"><span class="pre">powerSGD_hook()</span></code></a> first,
+and only consider this variant when a satisfactory accuracy can be achieved when <code class="docutils literal notranslate"><span class="pre">matrix_approximation_rank</span></code> is 1.</p>
+</div>
+<p>Once gradient tensors are aggregated across all workers, this hook applies
+compression as follows:</p>
+<ol class="arabic simple">
+<li><p>Views the input flattened 1D gradient tensor as a square-shaped tensor M with 0 paddings;</p></li>
+<li><p>Creates two low-rank tensors P and Q for decomposing M, such that M = PQ^T, where Q is initialized from a standard normal distribution and orthogonalized;</p></li>
+<li><p>Computes P, which is equal to MQ;</p></li>
+<li><p>Allreduces P;</p></li>
+<li><p>Orthogonalizes P;</p></li>
+<li><p>Computes Q, which is approximately equal to M^TP;</p></li>
+<li><p>Allreduces Q;</p></li>
+<li><p>Computes M, which is approximately equal to PQ^T.</p></li>
+<li><p>Truncates the input tensor to the original length.</p></li>
+</ol>
+<p>Note that this communication hook enforces vanilla allreduce for the first <code class="docutils literal notranslate"><span class="pre">state.start_powerSGD_iter</span></code> iterations.
+This not only gives the user more control over the tradeoff between speedup and accuracy,
+but also helps abstract away some complexity of the internal optimization of DDP for future communication hook developers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<a class="reference internal" href="#torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.PowerSGDState" title="torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.PowerSGDState"><em>PowerSGDState</em></a>) – State information to configure the compression rate and support error feedback, warm start, etc.
+To tune the compression configs, mainly need to tune <code class="docutils literal notranslate"><span class="pre">matrix_approximation_rank</span></code> and <code class="docutils literal notranslate"><span class="pre">start_powerSGD_iter</span></code>.</p></li>
+<li><p><strong>bucket</strong> (<em>dist.GradBucket</em>) – Bucket that stores a 1D flattened gradient tensor that batches multiple per-variable tensors.
+Note that since DDP comm hook only supports single process single device mode,
+only exactly one tensor is stored in this bucket.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Future handler of the communication, which updates the gradients in place.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="futures.html#torch.futures.Future" title="torch.jit.Future"><em>Future</em></a>[<a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><em>Tensor</em></a>]</p>
+</dd>
+</dl>
+<dl>
+<dt>Example::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">state</span> <span class="o">=</span> <span class="n">PowerSGDState</span><span class="p">(</span><span class="n">process_group</span><span class="o">=</span><span class="n">process_group</span><span class="p">,</span> <span class="n">matrix_approximation_rank</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ddp_model</span><span class="o">.</span><span class="n">register_comm_hook</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">batched_powerSGD_hook</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 </section>
 <section id="debugging-communication-hooks">
@@ -606,6 +1045,30 @@ instead.</p>
 <p class="admonition-title">Warning</p>
 <p>Debugging communication hooks do not necessarily output the correct results.</p>
 </div>
+<dl class="py function">
+<dt class="sig sig-object py" id="torch.distributed.algorithms.ddp_comm_hooks.debugging_hooks.noop_hook">
+<span class="sig-prename descclassname"><span class="pre">torch.distributed.algorithms.ddp_comm_hooks.debugging_hooks.</span></span><span class="sig-name descname"><span class="pre">noop_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bucket</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/algorithms/ddp_comm_hooks/debugging_hooks.html#noop_hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/algorithms/ddp_comm_hooks/debugging_hooks.py#L10"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.ddp_comm_hooks.debugging_hooks.noop_hook" title="Link to this definition">#</a></dt>
+<dd><p>Return a future that wraps the input, so it is a no-op that does not incur any communication overheads.</p>
+<p>This hook should <strong>only</strong> be used for headroom analysis of allreduce optimization,
+instead of the normal gradient synchronization.
+For example, if only less than 10% speedup of training time can be observed after this hook is registered,
+it usually implies that allreduce is not a performance bottleneck for this case.
+Such instrumentation can be particularly useful
+if GPU traces cannot be easily retrieved or the trace analysis is complicated
+some factors such as the overlap between allreduce and computation or the desynchronization across ranks.</p>
+<dl>
+<dt>Example::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ddp_model</span><span class="o">.</span><span class="n">register_comm_hook</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">noop_hook</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="futures.html#torch.futures.Future" title="torch.jit.Future"><em>Future</em></a>[<a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><em>Tensor</em></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <section id="checkpointing-of-communication-hooks">
 <h2>Checkpointing of Communication Hooks<a class="headerlink" href="#checkpointing-of-communication-hooks" title="Link to this heading">#</a></h2>
@@ -619,11 +1082,28 @@ To make a hook serializable, <code class="docutils literal notranslate"><span cl
 <p class="admonition-title">Warning</p>
 <p><code class="docutils literal notranslate"><span class="pre">__setstate__</span></code> should properly initialize non-serializable attributes, excluded from a provided <code class="docutils literal notranslate"><span class="pre">state</span></code>.</p>
 </div>
-<p><code class="xref py py-class docutils literal notranslate"><span class="pre">PowerSGDState</span></code> has <code class="docutils literal notranslate"><span class="pre">__setstate__</span></code> and <code class="docutils literal notranslate"><span class="pre">__getstate__</span></code> implemented and can be used as a reference.</p>
+<p><a class="reference internal" href="#torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.PowerSGDState" title="torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.PowerSGDState"><code class="xref py py-class docutils literal notranslate"><span class="pre">PowerSGDState</span></code></a> has <code class="docutils literal notranslate"><span class="pre">__setstate__</span></code> and <code class="docutils literal notranslate"><span class="pre">__getstate__</span></code> implemented and can be used as a reference.</p>
 <dl class="py class">
 <dt class="sig sig-object py">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.</span></span><span class="sig-name descname"><span class="pre">PowerSGDState</span></span></dt>
-<dd></dd></dl>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.</span></span><span class="sig-name descname"><span class="pre">PowerSGDState</span></span><a class="reference internal" href="../_modules/torch/distributed/algorithms/ddp_comm_hooks/powerSGD_hook.html#PowerSGDState"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/algorithms/ddp_comm_hooks/powerSGD_hook.py#L122"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><dl class="field-list simple">
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.PowerSGDState.__getstate__">
+<span class="sig-name descname"><span class="pre">__getstate__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/algorithms/ddp_comm_hooks/powerSGD_hook.html#PowerSGDState.__getstate__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/algorithms/ddp_comm_hooks/powerSGD_hook.py#L276"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.PowerSGDState.__getstate__" title="Link to this definition">#</a></dt>
+<dd><p>Return a <code class="docutils literal notranslate"><span class="pre">Dict[str,</span> <span class="pre">Any]</span></code> which will be pickled and saved.</p>
+<p><code class="docutils literal notranslate"><span class="pre">process_group</span></code> is not serializable and excluded from
+a returned state.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.PowerSGDState.__setstate__">
+<span class="sig-name descname"><span class="pre">__setstate__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/algorithms/ddp_comm_hooks/powerSGD_hook.html#PowerSGDState.__setstate__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/algorithms/ddp_comm_hooks/powerSGD_hook.py#L292"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.PowerSGDState.__setstate__" title="Link to this definition">#</a></dt>
+<dd><p>Take a provided <code class="docutils literal notranslate"><span class="pre">state</span></code> and set to this <code class="docutils literal notranslate"><span class="pre">PowerSGDState</span></code> instance.</p>
+<p><code class="docutils literal notranslate"><span class="pre">process_group</span></code> is set to default.</p>
+</dd></dl>
+
+</dd></dl>
 
 <p>Here is a simple, end-to-end example of saving and reloading PowerSGD state and hook.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
@@ -739,8 +1219,8 @@ the implementation in the original <a class="reference external" href="https://a
             
               
                 <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc">
-<div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
 <div
@@ -751,56 +1231,74 @@ the implementation in the original <a class="reference external" href="https://a
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-a-communication-hook">How to Use a Communication Hook?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-does-a-communication-hook-operate-on">What Does a Communication Hook Operate On?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#default-communication-hooks">Default Communication Hooks</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#powersgd-communication-hook">PowerSGD Communication Hook</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#powersgd-state">PowerSGD State</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#powersgd-hooks">PowerSGD Hooks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-does-a-communication-hook-operate-on">What Does a Communication Hook Operate On?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.GradBucket"><code class="docutils literal notranslate"><span class="pre">GradBucket</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.GradBucket.index"><code class="docutils literal notranslate"><span class="pre">index()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.GradBucket.buffer"><code class="docutils literal notranslate"><span class="pre">buffer()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.GradBucket.gradients"><code class="docutils literal notranslate"><span class="pre">gradients()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.GradBucket.is_last"><code class="docutils literal notranslate"><span class="pre">is_last()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.GradBucket.set_buffer"><code class="docutils literal notranslate"><span class="pre">set_buffer()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.GradBucket.parameters"><code class="docutils literal notranslate"><span class="pre">parameters()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging-communication-hooks">Debugging Communication Hooks</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checkpointing-of-communication-hooks">Checkpointing of Communication Hooks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#default-communication-hooks">Default Communication Hooks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.algorithms.ddp_comm_hooks.default_hooks.allreduce_hook"><code class="docutils literal notranslate"><span class="pre">allreduce_hook()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.algorithms.ddp_comm_hooks.default_hooks.fp16_compress_hook"><code class="docutils literal notranslate"><span class="pre">fp16_compress_hook()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.algorithms.ddp_comm_hooks.default_hooks.bf16_compress_hook"><code class="docutils literal notranslate"><span class="pre">bf16_compress_hook()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.algorithms.ddp_comm_hooks.default_hooks.fp16_compress_wrapper"><code class="docutils literal notranslate"><span class="pre">fp16_compress_wrapper()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.algorithms.ddp_comm_hooks.default_hooks.bf16_compress_wrapper"><code class="docutils literal notranslate"><span class="pre">bf16_compress_wrapper()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#powersgd-communication-hook">PowerSGD Communication Hook</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#powersgd-state">PowerSGD State</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.PowerSGDState"><code class="docutils literal notranslate"><span class="pre">PowerSGDState</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#powersgd-hooks">PowerSGD Hooks</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.powerSGD_hook"><code class="docutils literal notranslate"><span class="pre">powerSGD_hook()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.batched_powerSGD_hook"><code class="docutils literal notranslate"><span class="pre">batched_powerSGD_hook()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging-communication-hooks">Debugging Communication Hooks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.algorithms.ddp_comm_hooks.debugging_hooks.noop_hook"><code class="docutils literal notranslate"><span class="pre">noop_hook()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checkpointing-of-communication-hooks">Checkpointing of Communication Hooks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.PowerSGDState.__getstate__"><code class="docutils literal notranslate"><span class="pre">PowerSGDState.__getstate__()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook.PowerSGDState.__setstate__"><code class="docutils literal notranslate"><span class="pre">PowerSGDState.__setstate__()</span></code></a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
 </ul>
   </nav></div>
 
   <div class="sidebar-secondary-item">
 
-  <div class="tocsection sourcelink">
-    <a href="../_sources/python-api/ddp_comm_hooks.rst">
-      <i class="fa-solid fa-file-lines"></i> Show Source
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/pytorch/pytorch/edit/main/docs/source/python-api/ddp_comm_hooks.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
     </a>
   </div>
 </div>
 
-</div>
-<div class="sidebar-secondary-item"> 
-</div>
-<div class="sidebar-secondary-item">
- <p>PyTorch Libraries</p>
- <ul>
- 
-  <li><a href="https://pytorch.org/vision">torchvision</a></li>
- 
-  <li><a href="https://pytorch.org/executorch">ExecuTorch</a></li>
- 
-  <li><a href="https://https://pytorch.org/ao">torchao</a></li>
- 
-  <li><a href="https://https://pytorch.org/audio">torchaudio</a></li>
- 
-  <li><a href="https://https://pytorch.org/torchrec">torchrec</a></li>
- 
-  <li><a href="https://https://pytorch.org/serve">torchserve</a></li>
- 
-  <li><a href="https://https://pytorch.org/data">torchdata</a></li>
- 
-  <li><a href="https://https://pytorch.org/xla">PyTorch on XLA devices</a></li>
- 
- </ul>
-</div>
+  <div class="sidebar-secondary-item">
+    <div class="tocsection sourcelink">
+      <a href="../_sources/python-api/ddp_comm_hooks.rst.txt">
+        <i class="fa-solid fa-file-lines"></i> Show Source
+      </a>
+    </div>
 </div>
 
-</div>
+</div></div>
               
             
           </div>
@@ -815,7 +1313,6 @@ the implementation in the original <a class="reference external" href="https://a
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

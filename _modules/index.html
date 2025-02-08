@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -44,7 +44,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -63,7 +63,7 @@ window.addEventListener("load", () => mermaid.run());
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -72,7 +72,6 @@ window.addEventListener("load", () => mermaid.run());
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -159,7 +158,7 @@ window.addEventListener("load", () => mermaid.run());
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -183,8 +182,8 @@ window.addEventListener("load", () => mermaid.run());
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -254,7 +253,7 @@ window.addEventListener("load", () => mermaid.run());
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -269,7 +268,6 @@ window.addEventListener("load", () => mermaid.run());
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -309,9 +307,27 @@ window.addEventListener("load", () => mermaid.run());
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -325,20 +341,14 @@ window.addEventListener("load", () => mermaid.run());
   
   
   
-    
-    
-      
-    
-    
-    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -399,6 +409,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -489,6 +539,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
         
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
       </div>
     
   </div>
@@ -546,11 +636,13 @@ window.addEventListener("load", () => mermaid.run());
                 <article class="bd-article">
                   
   <h1>All modules for which code is available</h1>
-<ul><li><a href="builtins.html">builtins</a></li>
-<li><a href="collections.html">collections</a></li>
+<ul><li><a href="collections.html">collections</a></li>
 <li><a href="torch.html">torch</a></li>
 <ul><li><a href="torch/_C.html">torch._C</a></li>
-<ul><li><a href="torch/_C/_fft.html">torch._C._fft</a></li>
+<ul><li><a href="torch/_C/_distributed_autograd.html">torch._C._distributed_autograd</a></li>
+<li><a href="torch/_C/_distributed_c10d.html">torch._C._distributed_c10d</a></li>
+<li><a href="torch/_C/_distributed_rpc.html">torch._C._distributed_rpc</a></li>
+<li><a href="torch/_C/_fft.html">torch._C._fft</a></li>
 <li><a href="torch/_C/_linalg.html">torch._C._linalg</a></li>
 <li><a href="torch/_C/_monitor.html">torch._C._monitor</a></li>
 <li><a href="torch/_C/_nested.html">torch._C._nested</a></li>
@@ -643,9 +735,26 @@ window.addEventListener("load", () => mermaid.run());
 <li><a href="torch/cuda/streams.html">torch.cuda.streams</a></li>
 <li><a href="torch/cuda/tunable.html">torch.cuda.tunable</a></li>
 </ul><li><a href="torch/distributed.html">torch.distributed</a></li>
-<ul><li><a href="torch/distributed/algorithms/join.html">torch.distributed.algorithms.join</a></li>
+<ul><li><a href="torch/distributed/algorithms/ddp_comm_hooks/debugging_hooks.html">torch.distributed.algorithms.ddp_comm_hooks.debugging_hooks</a></li>
+<li><a href="torch/distributed/algorithms/ddp_comm_hooks/default_hooks.html">torch.distributed.algorithms.ddp_comm_hooks.default_hooks</a></li>
+<li><a href="torch/distributed/algorithms/ddp_comm_hooks/powerSGD_hook.html">torch.distributed.algorithms.ddp_comm_hooks.powerSGD_hook</a></li>
+<li><a href="torch/distributed/algorithms/join.html">torch.distributed.algorithms.join</a></li>
 <li><a href="torch/distributed/autograd.html">torch.distributed.autograd</a></li>
+<li><a href="torch/distributed/checkpoint/default_planner.html">torch.distributed.checkpoint.default_planner</a></li>
+<li><a href="torch/distributed/checkpoint/filesystem.html">torch.distributed.checkpoint.filesystem</a></li>
+<li><a href="torch/distributed/checkpoint/format_utils.html">torch.distributed.checkpoint.format_utils</a></li>
+<li><a href="torch/distributed/checkpoint/planner.html">torch.distributed.checkpoint.planner</a></li>
+<li><a href="torch/distributed/checkpoint/staging.html">torch.distributed.checkpoint.staging</a></li>
+<li><a href="torch/distributed/checkpoint/state_dict.html">torch.distributed.checkpoint.state_dict</a></li>
+<li><a href="torch/distributed/checkpoint/state_dict_loader.html">torch.distributed.checkpoint.state_dict_loader</a></li>
+<li><a href="torch/distributed/checkpoint/state_dict_saver.html">torch.distributed.checkpoint.state_dict_saver</a></li>
+<li><a href="torch/distributed/checkpoint/stateful.html">torch.distributed.checkpoint.stateful</a></li>
+<li><a href="torch/distributed/checkpoint/storage.html">torch.distributed.checkpoint.storage</a></li>
 <li><a href="torch/distributed/device_mesh.html">torch.distributed.device_mesh</a></li>
+<li><a href="torch/distributed/distributed_c10d.html">torch.distributed.distributed_c10d</a></li>
+<li><a href="torch/distributed/elastic/agent/server/api.html">torch.distributed.elastic.agent.server.api</a></li>
+<li><a href="torch/distributed/elastic/agent/server/health_check_server.html">torch.distributed.elastic.agent.server.health_check_server</a></li>
+<li><a href="torch/distributed/elastic/agent/server/local_elastic_agent.html">torch.distributed.elastic.agent.server.local_elastic_agent</a></li>
 <li><a href="torch/distributed/elastic/control_plane.html">torch.distributed.elastic.control_plane</a></li>
 <li><a href="torch/distributed/elastic/events.html">torch.distributed.elastic.events</a></li>
 <ul><li><a href="torch/distributed/elastic/events/api.html">torch.distributed.elastic.events.api</a></li>
@@ -657,12 +766,44 @@ window.addEventListener("load", () => mermaid.run());
 <ul><li><a href="torch/distributed/elastic/multiprocessing/errors/error_handler.html">torch.distributed.elastic.multiprocessing.errors.error_handler</a></li>
 </ul><li><a href="torch/distributed/elastic/multiprocessing/subprocess_handler/handlers.html">torch.distributed.elastic.multiprocessing.subprocess_handler.handlers</a></li>
 <li><a href="torch/distributed/elastic/multiprocessing/subprocess_handler/subprocess_handler.html">torch.distributed.elastic.multiprocessing.subprocess_handler.subprocess_handler</a></li>
-</ul><li><a href="torch/distributed/elastic/timer/api.html">torch.distributed.elastic.timer.api</a></li>
+</ul><li><a href="torch/distributed/elastic/rendezvous/api.html">torch.distributed.elastic.rendezvous.api</a></li>
+<li><a href="torch/distributed/elastic/rendezvous/c10d_rendezvous_backend.html">torch.distributed.elastic.rendezvous.c10d_rendezvous_backend</a></li>
+<li><a href="torch/distributed/elastic/rendezvous/dynamic_rendezvous.html">torch.distributed.elastic.rendezvous.dynamic_rendezvous</a></li>
+<li><a href="torch/distributed/elastic/rendezvous/etcd_rendezvous.html">torch.distributed.elastic.rendezvous.etcd_rendezvous</a></li>
+<li><a href="torch/distributed/elastic/rendezvous/etcd_rendezvous_backend.html">torch.distributed.elastic.rendezvous.etcd_rendezvous_backend</a></li>
+<li><a href="torch/distributed/elastic/rendezvous/etcd_server.html">torch.distributed.elastic.rendezvous.etcd_server</a></li>
+<li><a href="torch/distributed/elastic/rendezvous/etcd_store.html">torch.distributed.elastic.rendezvous.etcd_store</a></li>
+<li><a href="torch/distributed/elastic/timer/api.html">torch.distributed.elastic.timer.api</a></li>
 <li><a href="torch/distributed/elastic/timer/debug_info_logging.html">torch.distributed.elastic.timer.debug_info_logging</a></li>
 <li><a href="torch/distributed/elastic/timer/file_based_local_timer.html">torch.distributed.elastic.timer.file_based_local_timer</a></li>
 <li><a href="torch/distributed/elastic/timer/local_timer.html">torch.distributed.elastic.timer.local_timer</a></li>
+<li><a href="torch/distributed/fsdp.html">torch.distributed.fsdp</a></li>
+<ul><li><a href="torch/distributed/fsdp/_fully_shard/_fully_shard.html">torch.distributed.fsdp._fully_shard._fully_shard</a></li>
+<li><a href="torch/distributed/fsdp/api.html">torch.distributed.fsdp.api</a></li>
+<li><a href="torch/distributed/fsdp/fully_sharded_data_parallel.html">torch.distributed.fsdp.fully_sharded_data_parallel</a></li>
+</ul><li><a href="torch/distributed/nn/api/remote_module.html">torch.distributed.nn.api.remote_module</a></li>
+<li><a href="torch/distributed/optim/optimizer.html">torch.distributed.optim.optimizer</a></li>
+<li><a href="torch/distributed/optim/post_localSGD_optimizer.html">torch.distributed.optim.post_localSGD_optimizer</a></li>
+<li><a href="torch/distributed/optim/zero_redundancy_optimizer.html">torch.distributed.optim.zero_redundancy_optimizer</a></li>
+<li><a href="torch/distributed/pipelining/_IR.html">torch.distributed.pipelining._IR</a></li>
+<li><a href="torch/distributed/pipelining/microbatch.html">torch.distributed.pipelining.microbatch</a></li>
+<li><a href="torch/distributed/pipelining/schedules.html">torch.distributed.pipelining.schedules</a></li>
+<li><a href="torch/distributed/pipelining/stage.html">torch.distributed.pipelining.stage</a></li>
+<li><a href="torch/distributed/rpc.html">torch.distributed.rpc</a></li>
+<ul><li><a href="torch/distributed/rpc/api.html">torch.distributed.rpc.api</a></li>
+<li><a href="torch/distributed/rpc/backend_registry.html">torch.distributed.rpc.backend_registry</a></li>
 <li><a href="torch/distributed/rpc/functions.html">torch.distributed.rpc.functions</a></li>
-</ul><li><a href="torch/distributions/bernoulli.html">torch.distributions.bernoulli</a></li>
+<li><a href="torch/distributed/rpc/options.html">torch.distributed.rpc.options</a></li>
+</ul><li><a href="torch/distributed/tensor.html">torch.distributed.tensor</a></li>
+<ul><li><a href="torch/distributed/tensor/_api.html">torch.distributed.tensor._api</a></li>
+<li><a href="torch/distributed/tensor/debug.html">torch.distributed.tensor.debug</a></li>
+<ul><li><a href="torch/distributed/tensor/debug/_comm_mode.html">torch.distributed.tensor.debug._comm_mode</a></li>
+</ul><li><a href="torch/distributed/tensor/experimental.html">torch.distributed.tensor.experimental</a></li>
+<li><a href="torch/distributed/tensor/parallel/api.html">torch.distributed.tensor.parallel.api</a></li>
+<li><a href="torch/distributed/tensor/parallel/loss.html">torch.distributed.tensor.parallel.loss</a></li>
+<li><a href="torch/distributed/tensor/parallel/style.html">torch.distributed.tensor.parallel.style</a></li>
+<li><a href="torch/distributed/tensor/placement_types.html">torch.distributed.tensor.placement_types</a></li>
+</ul></ul><li><a href="torch/distributions/bernoulli.html">torch.distributions.bernoulli</a></li>
 <li><a href="torch/distributions/beta.html">torch.distributions.beta</a></li>
 <li><a href="torch/distributions/binomial.html">torch.distributions.binomial</a></li>
 <li><a href="torch/distributions/categorical.html">torch.distributions.categorical</a></li>
@@ -880,7 +1021,6 @@ window.addEventListener("load", () => mermaid.run());
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

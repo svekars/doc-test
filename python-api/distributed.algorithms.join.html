@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -56,7 +56,7 @@
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -65,7 +65,6 @@
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -152,7 +151,7 @@
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -176,8 +175,8 @@
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -247,7 +246,7 @@
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -262,7 +261,6 @@
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -302,9 +300,27 @@
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -318,20 +334,14 @@
   
   
   
-    
-    
-      
-    
-    
-    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -392,6 +402,46 @@
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -486,6 +536,46 @@
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
         
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
       </div>
     
   </div>
@@ -550,7 +640,7 @@ inputs. This page outlines the API of the relevant classes: <code class="xref py
 <a class="reference external" href="https://pytorch.org/tutorials/advanced/generic_join.html">Distributed Training with Uneven Inputs Using the Join Context Manager</a>.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="torch.distributed.algorithms.Join">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.distributed.algorithms.</span></span><span class="sig-name descname"><span class="pre">Join</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joinables</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">throw_on_early_termination</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/algorithms/join.html#Join"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/distributed/algorithms/join.py#L104"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.Join" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.distributed.algorithms.</span></span><span class="sig-name descname"><span class="pre">Join</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joinables</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">throw_on_early_termination</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/algorithms/join.html#Join"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/algorithms/join.py#L104"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.Join" title="Link to this definition">#</a></dt>
 <dd><p>This class defines the generic join context manager, which allows custom hooks to be called after a process joins.</p>
 <p>These hooks should shadow the
 collective communications of non-joined processes to prevent hanging and
@@ -613,7 +703,7 @@ exception upon detecting uneven inputs (default: <code class="docutils literal n
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="torch.distributed.algorithms.Join.notify_join_context">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">notify_join_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joinable</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/algorithms/join.html#Join.notify_join_context"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/distributed/algorithms/join.py#L296"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.Join.notify_join_context" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">notify_join_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joinable</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/algorithms/join.html#Join.notify_join_context"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/algorithms/join.py#L296"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.Join.notify_join_context" title="Link to this definition">#</a></dt>
 <dd><p>Notifies the join context manager that the calling process has not yet joined.</p>
 <p>Then, if <code class="docutils literal notranslate"><span class="pre">throw_on_early_termination=True</span></code>, checks if uneven inputs have been detected
 (i.e. if one process has already joined) and throws an exception if so.</p>
@@ -641,7 +731,7 @@ first one passed into the context manager; <code class="docutils literal notrans
 
 <dl class="py class">
 <dt class="sig sig-object py" id="torch.distributed.algorithms.Joinable">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.distributed.algorithms.</span></span><span class="sig-name descname"><span class="pre">Joinable</span></span><a class="reference internal" href="../_modules/torch/distributed/algorithms/join.html#Joinable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/distributed/algorithms/join.py#L44"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.Joinable" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.distributed.algorithms.</span></span><span class="sig-name descname"><span class="pre">Joinable</span></span><a class="reference internal" href="../_modules/torch/distributed/algorithms/join.html#Joinable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/algorithms/join.py#L44"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.Joinable" title="Link to this definition">#</a></dt>
 <dd><p>This defines an abstract base class for joinable classes.</p>
 <p>A joinable class
 (inheriting from <a class="reference internal" href="#torch.distributed.algorithms.Joinable" title="torch.distributed.algorithms.Joinable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Joinable</span></code></a>) should implement <a class="reference internal" href="#torch.distributed.algorithms.Joinable.join_hook" title="torch.distributed.algorithms.Joinable.join_hook"><code class="xref py py-meth docutils literal notranslate"><span class="pre">join_hook()</span></code></a>,
@@ -658,7 +748,7 @@ process group information, respectively.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="torch.distributed.algorithms.Joinable.join_hook">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">join_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/algorithms/join.html#Joinable.join_hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/distributed/algorithms/join.py#L60"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.Joinable.join_hook" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">join_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/algorithms/join.html#Joinable.join_hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/algorithms/join.py#L60"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.Joinable.join_hook" title="Link to this definition">#</a></dt>
 <dd><p>Return a <a class="reference internal" href="#torch.distributed.algorithms.JoinHook" title="torch.distributed.algorithms.JoinHook"><code class="xref py py-class docutils literal notranslate"><span class="pre">JoinHook</span></code></a> instance for the given <a class="reference internal" href="#torch.distributed.algorithms.Joinable" title="torch.distributed.algorithms.Joinable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Joinable</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -683,7 +773,7 @@ manager are forwarded the same value for <code class="docutils literal notransla
 
 <dl class="py class">
 <dt class="sig sig-object py" id="torch.distributed.algorithms.JoinHook">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.distributed.algorithms.</span></span><span class="sig-name descname"><span class="pre">JoinHook</span></span><a class="reference internal" href="../_modules/torch/distributed/algorithms/join.html#JoinHook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/distributed/algorithms/join.py#L14"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.JoinHook" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.distributed.algorithms.</span></span><span class="sig-name descname"><span class="pre">JoinHook</span></span><a class="reference internal" href="../_modules/torch/distributed/algorithms/join.html#JoinHook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/algorithms/join.py#L14"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.JoinHook" title="Link to this definition">#</a></dt>
 <dd><p>This defines a join hook, which provides two entry points in the join context manager.</p>
 <p>Entry points : a main hook, which is called repeatedly while there exists a non-joined
 process, and a post-hook, which is called once all processes have joined.</p>
@@ -692,7 +782,7 @@ class that inherits from <a class="reference internal" href="#torch.distributed.
 <code class="docutils literal notranslate"><span class="pre">post_hook()</span></code> as appropriate.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="torch.distributed.algorithms.JoinHook.main_hook">
-<span class="sig-name descname"><span class="pre">main_hook</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/algorithms/join.html#JoinHook.main_hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/distributed/algorithms/join.py#L26"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.JoinHook.main_hook" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">main_hook</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/algorithms/join.html#JoinHook.main_hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/algorithms/join.py#L26"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.JoinHook.main_hook" title="Link to this definition">#</a></dt>
 <dd><p>Call this hook while there exists a non-joined process to shadow collective communications in a training iteration.</p>
 <p>Training iteration i.e., in one forward pass, backward pass, and optimizer step.</p>
 <dl class="field-list simple">
@@ -701,7 +791,7 @@ class that inherits from <a class="reference internal" href="#torch.distributed.
 
 <dl class="py method">
 <dt class="sig sig-object py" id="torch.distributed.algorithms.JoinHook.post_hook">
-<span class="sig-name descname"><span class="pre">post_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">is_last_joiner</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/algorithms/join.html#JoinHook.post_hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/distributed/algorithms/join.py#L32"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.JoinHook.post_hook" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">post_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">is_last_joiner</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/torch/distributed/algorithms/join.html#JoinHook.post_hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/distributed/algorithms/join.py#L32"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.distributed.algorithms.JoinHook.post_hook" title="Link to this definition">#</a></dt>
 <dd><p>Call hook after all processes have joined.</p>
 <p>It is passed an additional <code class="docutils literal notranslate"><span class="pre">bool</span></code> argument <code class="docutils literal notranslate"><span class="pre">is_last_joiner</span></code>, which indicates if the rank is one of the last to join.</p>
 <dl class="field-list simple">
@@ -734,8 +824,8 @@ join; <code class="docutils literal notranslate"><span class="pre">False</span><
             
               
                 <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc">
-<div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
 <div
@@ -765,41 +855,29 @@ join; <code class="docutils literal notranslate"><span class="pre">False</span><
 
   <div class="sidebar-secondary-item">
 
-  <div class="tocsection sourcelink">
-    <a href="../_sources/python-api/distributed.algorithms.join.rst">
-      <i class="fa-solid fa-file-lines"></i> Show Source
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/pytorch/pytorch/edit/main/docs/source/python-api/distributed.algorithms.join.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
     </a>
   </div>
 </div>
 
-</div>
-<div class="sidebar-secondary-item"> 
-</div>
-<div class="sidebar-secondary-item">
- <p>PyTorch Libraries</p>
- <ul>
- 
-  <li><a href="https://pytorch.org/vision">torchvision</a></li>
- 
-  <li><a href="https://pytorch.org/executorch">ExecuTorch</a></li>
- 
-  <li><a href="https://https://pytorch.org/ao">torchao</a></li>
- 
-  <li><a href="https://https://pytorch.org/audio">torchaudio</a></li>
- 
-  <li><a href="https://https://pytorch.org/torchrec">torchrec</a></li>
- 
-  <li><a href="https://https://pytorch.org/serve">torchserve</a></li>
- 
-  <li><a href="https://https://pytorch.org/data">torchdata</a></li>
- 
-  <li><a href="https://https://pytorch.org/xla">PyTorch on XLA devices</a></li>
- 
- </ul>
-</div>
+  <div class="sidebar-secondary-item">
+    <div class="tocsection sourcelink">
+      <a href="../_sources/python-api/distributed.algorithms.join.rst.txt">
+        <i class="fa-solid fa-file-lines"></i> Show Source
+      </a>
+    </div>
 </div>
 
-</div>
+</div></div>
               
             
           </div>
@@ -814,7 +892,6 @@ join; <code class="docutils literal notranslate"><span class="pre">False</span><
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

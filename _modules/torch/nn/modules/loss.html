@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -44,7 +44,7 @@
   <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../../../../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -63,7 +63,7 @@ window.addEventListener("load", () => mermaid.run());
     <link rel="search" title="Search" href="../../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -72,7 +72,6 @@ window.addEventListener("load", () => mermaid.run());
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -159,7 +158,7 @@ window.addEventListener("load", () => mermaid.run());
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -183,8 +182,8 @@ window.addEventListener("load", () => mermaid.run());
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -254,7 +253,7 @@ window.addEventListener("load", () => mermaid.run());
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -269,7 +268,6 @@ window.addEventListener("load", () => mermaid.run());
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -309,9 +307,27 @@ window.addEventListener("load", () => mermaid.run());
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -325,20 +341,14 @@ window.addEventListener("load", () => mermaid.run());
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -399,6 +409,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -488,6 +538,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
         
       </div>
     
@@ -614,7 +704,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="L1Loss">
-<a class="viewcode-back" href="../../../../generated/torch.nn.L1Loss.html#torch.nn.L1Loss">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.L1Loss.html#torch.nn.L1Loss">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">L1Loss</span><span class="p">(</span><span class="n">_Loss</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Creates a criterion that measures the mean absolute error (MAE) between each element in</span>
 <span class="sd">    the input :math:`x` and target :math:`y`.</span>
@@ -686,7 +776,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="NLLLoss">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.NLLLoss.html#torch.nn.NLLLoss">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.NLLLoss.html#torch.nn.NLLLoss">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">NLLLoss</span><span class="p">(</span><span class="n">_WeightedLoss</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;The negative log likelihood loss. It is useful to train a classification</span>
 <span class="sd">    problem with `C` classes.</span>
@@ -836,7 +926,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="PoissonNLLLoss">
-<a class="viewcode-back" href="../../../../generated/torch.nn.PoissonNLLLoss.html#torch.nn.PoissonNLLLoss">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.PoissonNLLLoss.html#torch.nn.PoissonNLLLoss">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">PoissonNLLLoss</span><span class="p">(</span><span class="n">_Loss</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Negative log likelihood loss with Poisson distribution of target.</span>
 
@@ -925,7 +1015,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="GaussianNLLLoss">
-<a class="viewcode-back" href="../../../../generated/torch.nn.GaussianNLLLoss.html#torch.nn.GaussianNLLLoss">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.GaussianNLLLoss.html#torch.nn.GaussianNLLLoss">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">GaussianNLLLoss</span><span class="p">(</span><span class="n">_Loss</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Gaussian negative log likelihood loss.</span>
 
@@ -1013,7 +1103,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="KLDivLoss">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.KLDivLoss.html#torch.nn.KLDivLoss">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.KLDivLoss.html#torch.nn.KLDivLoss">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">KLDivLoss</span><span class="p">(</span><span class="n">_Loss</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;The Kullback-Leibler divergence loss.</span>
 
@@ -1115,7 +1205,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="MSELoss">
-<a class="viewcode-back" href="../../../../generated/torch.nn.MSELoss.html#torch.nn.MSELoss">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.MSELoss.html#torch.nn.MSELoss">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MSELoss</span><span class="p">(</span><span class="n">_Loss</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Creates a criterion that measures the mean squared error (squared L2 norm) between</span>
 <span class="sd">    each element in the input :math:`x` and target :math:`y`.</span>
@@ -1183,7 +1273,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="BCELoss">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.BCELoss.html#torch.nn.BCELoss">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.BCELoss.html#torch.nn.BCELoss">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">BCELoss</span><span class="p">(</span><span class="n">_WeightedLoss</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Creates a criterion that measures the Binary Cross Entropy between the target and</span>
 <span class="sd">    the input probabilities:</span>
@@ -1277,7 +1367,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="BCEWithLogitsLoss">
-<a class="viewcode-back" href="../../../../generated/torch.nn.BCEWithLogitsLoss.html#torch.nn.BCEWithLogitsLoss">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.BCEWithLogitsLoss.html#torch.nn.BCEWithLogitsLoss">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">BCEWithLogitsLoss</span><span class="p">(</span><span class="n">_Loss</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;This loss combines a `Sigmoid` layer and the `BCELoss` in one single</span>
 <span class="sd">    class. This version is more numerically stable than using a plain `Sigmoid`</span>
@@ -1406,7 +1496,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="HingeEmbeddingLoss">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.HingeEmbeddingLoss.html#torch.nn.HingeEmbeddingLoss">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.HingeEmbeddingLoss.html#torch.nn.HingeEmbeddingLoss">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">HingeEmbeddingLoss</span><span class="p">(</span><span class="n">_Loss</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Measures the loss given an input tensor :math:`x` and a labels tensor :math:`y`</span>
 <span class="sd">    (containing 1 or -1).</span>
@@ -1477,7 +1567,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="MultiLabelMarginLoss">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.MultiLabelMarginLoss.html#torch.nn.MultiLabelMarginLoss">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.MultiLabelMarginLoss.html#torch.nn.MultiLabelMarginLoss">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MultiLabelMarginLoss</span><span class="p">(</span><span class="n">_Loss</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Creates a criterion that optimizes a multi-class multi-classification</span>
 <span class="sd">    hinge loss (margin-based loss) between input :math:`x` (a 2D mini-batch `Tensor`)</span>
@@ -1544,7 +1634,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="SmoothL1Loss">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.SmoothL1Loss.html#torch.nn.SmoothL1Loss">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.SmoothL1Loss.html#torch.nn.SmoothL1Loss">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">SmoothL1Loss</span><span class="p">(</span><span class="n">_Loss</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Creates a criterion that uses a squared term if the absolute</span>
 <span class="sd">    element-wise error falls below beta and an L1 term otherwise.</span>
@@ -1630,7 +1720,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="HuberLoss">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.HuberLoss.html#torch.nn.HuberLoss">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.HuberLoss.html#torch.nn.HuberLoss">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">HuberLoss</span><span class="p">(</span><span class="n">_Loss</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Creates a criterion that uses a squared term if the absolute</span>
 <span class="sd">    element-wise error falls below delta and a delta-scaled L1 term otherwise.</span>
@@ -1693,7 +1783,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="SoftMarginLoss">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.SoftMarginLoss.html#torch.nn.SoftMarginLoss">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.SoftMarginLoss.html#torch.nn.SoftMarginLoss">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">SoftMarginLoss</span><span class="p">(</span><span class="n">_Loss</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Creates a criterion that optimizes a two-class classification</span>
 <span class="sd">    logistic loss between input tensor :math:`x` and target tensor :math:`y`</span>
@@ -1737,7 +1827,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="CrossEntropyLoss">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.CrossEntropyLoss.html#torch.nn.CrossEntropyLoss">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.CrossEntropyLoss.html#torch.nn.CrossEntropyLoss">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">CrossEntropyLoss</span><span class="p">(</span><span class="n">_WeightedLoss</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;This criterion computes the cross entropy loss between input logits</span>
 <span class="sd">    and target.</span>
@@ -1899,7 +1989,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="MultiLabelSoftMarginLoss">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.MultiLabelSoftMarginLoss.html#torch.nn.MultiLabelSoftMarginLoss">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.MultiLabelSoftMarginLoss.html#torch.nn.MultiLabelSoftMarginLoss">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MultiLabelSoftMarginLoss</span><span class="p">(</span><span class="n">_WeightedLoss</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Creates a criterion that optimizes a multi-label one-versus-all</span>
 <span class="sd">    loss based on max-entropy, between input :math:`x` and target :math:`y` of size</span>
@@ -1957,7 +2047,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="CosineEmbeddingLoss">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.CosineEmbeddingLoss.html#torch.nn.CosineEmbeddingLoss">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.CosineEmbeddingLoss.html#torch.nn.CosineEmbeddingLoss">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">CosineEmbeddingLoss</span><span class="p">(</span><span class="n">_Loss</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Creates a criterion that measures the loss given input tensors</span>
 <span class="sd">    :math:`x_1`, :math:`x_2` and a `Tensor` label :math:`y` with values 1 or -1.</span>
@@ -2030,7 +2120,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="MarginRankingLoss">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.MarginRankingLoss.html#torch.nn.MarginRankingLoss">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.MarginRankingLoss.html#torch.nn.MarginRankingLoss">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MarginRankingLoss</span><span class="p">(</span><span class="n">_Loss</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Creates a criterion that measures the loss given</span>
 <span class="sd">    inputs :math:`x1`, :math:`x2`, two 1D mini-batch or 0D `Tensors`,</span>
@@ -2098,7 +2188,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="MultiMarginLoss">
-<a class="viewcode-back" href="../../../../generated/torch.nn.MultiMarginLoss.html#torch.nn.MultiMarginLoss">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.MultiMarginLoss.html#torch.nn.MultiMarginLoss">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MultiMarginLoss</span><span class="p">(</span><span class="n">_WeightedLoss</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Creates a criterion that optimizes a multi-class classification hinge</span>
 <span class="sd">    loss (margin-based loss) between input :math:`x` (a 2D mini-batch `Tensor`) and</span>
@@ -2195,7 +2285,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="TripletMarginLoss">
-<a class="viewcode-back" href="../../../../generated/torch.nn.TripletMarginLoss.html#torch.nn.TripletMarginLoss">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.TripletMarginLoss.html#torch.nn.TripletMarginLoss">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">TripletMarginLoss</span><span class="p">(</span><span class="n">_Loss</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Creates a criterion that measures the triplet loss given an input</span>
 <span class="sd">    tensors :math:`x1`, :math:`x2`, :math:`x3` and a margin with a value greater than :math:`0`.</span>
@@ -2306,7 +2396,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="TripletMarginWithDistanceLoss">
-<a class="viewcode-back" href="../../../../generated/torch.nn.TripletMarginWithDistanceLoss.html#torch.nn.TripletMarginWithDistanceLoss">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.TripletMarginWithDistanceLoss.html#torch.nn.TripletMarginWithDistanceLoss">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">TripletMarginWithDistanceLoss</span><span class="p">(</span><span class="n">_Loss</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Creates a criterion that measures the triplet loss given input</span>
 <span class="sd">    tensors :math:`a`, :math:`p`, and :math:`n` (representing anchor,</span>
@@ -2442,7 +2532,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="CTCLoss">
-<a class="viewcode-back" href="../../../../generated/torch.nn.CTCLoss.html#torch.nn.CTCLoss">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.CTCLoss.html#torch.nn.CTCLoss">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">CTCLoss</span><span class="p">(</span><span class="n">_Loss</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;The Connectionist Temporal Classification loss.</span>
 
@@ -2641,7 +2731,6 @@ window.addEventListener("load", () => mermaid.run());
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

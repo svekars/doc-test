@@ -1,0 +1,1157 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>torch.distributed.rpc.backend_registry &#8212; PyTorch main documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=949a1ff5" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/katex-math.css?v=91adb8b6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/jit.css?v=8de1ea5d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=3ccf5357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom2.css?v=3539c01c" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../../_static/documentation_options.js?v=a8da1a53"></script>
+    <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=940804e7"></script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs"></script>
+    <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";import elkLayouts from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs";mermaid.registerLayoutLoaders(elkLayouts);mermaid.initialize({startOnLoad:false});</script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";
+window.addEventListener("load", () => mermaid.run());
+</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/torch/distributed/rpc/backend_registry';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="main (2.6.0 )" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+<div class="container-fluid header-holder tutorials-header" id="header-holder">
+  <div class="container">
+    <div class="header-container">
+      <a class="header-logo" href="" aria-label="PyTorch"></a>
+
+      <div class="main-menu">
+        <ul>
+
+          <li class="main-menu-item">
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Learn
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Get Started</span>
+                  <p>Run PyTorch locally or get started quickly with one of the supported cloud platforms</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Tutorials</span>
+                  <p>Whats new in PyTorch tutorials</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Learn the Basics</span>
+                  <p>Familiarize yourself with PyTorch concepts and modules</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Recipes</span>
+                  <p>Bite-size, ready-to-deploy PyTorch code examples</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Intro to PyTorch - YouTube Series</span>
+                  <p>Master PyTorch basics with our engaging YouTube tutorial series</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Ecosystem
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Tools</span>
+                  <p>Learn about the tools and frameworks in the PyTorch Ecosystem</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Community</span>
+                  <p>Join the PyTorch developer community to contribute, learn, and get your questions answered</p>
+                </a>
+                <a class="nav-dropdown-item" href="" target="_blank">
+                  <span class=dropdown-title>Forums</span>
+                  <p>A place to discuss PyTorch code, issues, install, research</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class=dropdown-title>Developer Resources</span>
+                  <p>Find resources and get questions answered</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Contributor Awards - 2024</span>
+                  <p>Award winners announced at this year's PyTorch Conference</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+          <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Edge
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">About PyTorch Edge</span>
+                  <p>Build innovative and privacy-aware AI experiences for edge devices</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">ExecuTorch</span>
+                  <p>End-to-end solution for enabling on-device inference capabilities across mobile and edge devices</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">ExecuTorch Docs</span>
+                </a>
+              </div>
+            </div>  
+          </li>
+
+          <li class="main-menu-item">
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Docs
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch</span>
+                  <p>Explore the documentation for comprehensive guidance on how to use PyTorch</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Domains</span>
+                  <p>Read the PyTorch Domains documentation to learn more about domain-specific libraries</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                Blogs & News 
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Blog</span>
+                  <p>Catch up on the latest technical news and happenings</p>
+                </a>
+                 <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Community Blog</span>
+                  <p>Stories from the PyTorch ecosystem</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Videos</span>
+                  <p>Learn about the latest PyTorch tutorials, new, and more </p>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Community Stories</span>
+                  <p>Learn how our community solves real, everyday machine learning problems with PyTorch</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Events</span>
+                  <p>Find events, webinars, and podcasts</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Newsletter</span>
+                  <p>Stay up-to-date with the latest updates</p>
+                </a>
+            </div>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="with-down-arrow">
+                About
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">PyTorch Foundation</span>
+                  <p>Learn more about the PyTorch Foundation</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Governing Board</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Cloud Credit Program</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Technical Advisory Council</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Staff</span>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Contact Us</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="main-menu-item">
+            <div class="no-dropdown">
+              <a href="" data-cta="join">
+                Become a Member
+              </a>
+            </div>
+          </li>
+          <li>
+           <div class="main-menu-item">
+             <a href="" class="github-icon">
+             </a>
+           </div>
+          </li>
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
+          <li>
+            <div class="main-menu-item">
+             <a href="" class="search-icon">
+             </a>
+            </div>
+          </li>
+          --->
+        </ul>
+      </div>
+
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+    </div>
+  </div>
+</div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Home</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../python-api/index.html">
+    Python API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../notes/index.html">
+    Developer Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../community/index.html">
+    Community
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../lang-bindings/index.html">
+    Language Bindings
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../python-api/index.html">
+    Python API
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../notes/index.html">
+    Developer Notes
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../community/index.html">
+    Community
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../lang-bindings/index.html">
+    Language Bindings
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Module code</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../../../torch.html" class="nav-link">torch</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../../distributed.html" class="nav-link">torch.distributed</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../rpc.html" class="nav-link">torch.distributed.rpc</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">torch.distributed.rpc.backend_registry</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for torch.distributed.rpc.backend_registry</h1><div class="highlight"><pre>
+<span></span><span class="c1"># mypy: allow-untyped-defs</span>
+
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">collections</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">enum</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">cast</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Set</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch.distributed</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dist</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">.</span><span class="w"> </span><span class="kn">import</span> <span class="n">api</span><span class="p">,</span> <span class="n">constants</span> <span class="k">as</span> <span class="n">rpc_constants</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">._utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">_group_membership_management</span><span class="p">,</span> <span class="n">_update_group_membership</span>
+
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;backend_registered&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;register_backend&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;construct_rpc_backend_options&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;init_backend&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;BackendValue&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;BackendType&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">BackendValue</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">namedtuple</span><span class="p">(</span>
+    <span class="s2">&quot;BackendValue&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;construct_rpc_backend_options_handler&quot;</span><span class="p">,</span> <span class="s2">&quot;init_backend_handler&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_backend_type_repr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s2">&quot;BackendType.&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+
+
+<span class="n">_backend_type_doc</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    An enum class of available backends.</span>
+
+<span class="s2">    PyTorch ships with a builtin ``BackendType.TENSORPIPE`` backend.</span>
+<span class="s2">    Additional ones can be registered using the</span>
+<span class="s2">    :func:`~torch.distributed.rpc.backend_registry.register_backend` function.</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="c1"># Create an enum type, `BackendType`, with empty members.</span>
+<span class="c1"># Can&#39;t handle Function Enum API (mypy bug #9079)</span>
+<span class="n">BackendType</span> <span class="o">=</span> <span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;BackendType&quot;</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">{})</span>  <span class="c1"># type: ignore[misc]</span>
+<span class="c1"># Unable to assign a function a method (mypy bug #2427)</span>
+<span class="n">BackendType</span><span class="o">.</span><span class="fm">__repr__</span> <span class="o">=</span> <span class="n">_backend_type_repr</span>  <span class="c1"># type: ignore[assignment]</span>
+
+<span class="k">if</span> <span class="n">BackendType</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">:</span>
+    <span class="n">BackendType</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="n">_backend_type_doc</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">backend_registered</span><span class="p">(</span><span class="n">backend_name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Checks if backend_name is registered as an RPC backend.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        backend_name (str): string to identify the RPC backend.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        True if the backend has been registered with ``register_backend``, else</span>
+<span class="sd">        False.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">backend_name</span> <span class="ow">in</span> <span class="n">BackendType</span><span class="o">.</span><span class="n">__members__</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">register_backend</span><span class="p">(</span>
+    <span class="n">backend_name</span><span class="p">,</span> <span class="n">construct_rpc_backend_options_handler</span><span class="p">,</span> <span class="n">init_backend_handler</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Registers a new RPC backend.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        backend_name (str): backend string to identify the handler.</span>
+<span class="sd">        construct_rpc_backend_options_handler (function):</span>
+<span class="sd">            Handler that is invoked when</span>
+<span class="sd">            rpc_backend.construct_rpc_backend_options(**dict) is called.</span>
+<span class="sd">        init_backend_handler (function): Handler that is invoked when the</span>
+<span class="sd">            `_init_rpc_backend()` function is called with a backend.</span>
+<span class="sd">             This returns the agent.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">BackendType</span>
+    <span class="k">if</span> <span class="n">backend_registered</span><span class="p">(</span><span class="n">backend_name</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RPC backend </span><span class="si">{</span><span class="n">backend_name</span><span class="si">}</span><span class="s2">: already registered&quot;</span><span class="p">)</span>
+    <span class="c1"># Create a new enum type, `BackendType`, with extended members.</span>
+    <span class="n">existing_enum_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">member</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">member</span><span class="o">.</span><span class="n">value</span> <span class="k">for</span> <span class="n">member</span> <span class="ow">in</span> <span class="n">BackendType</span><span class="p">}</span>
+    <span class="n">extended_enum_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+        <span class="p">{</span>
+            <span class="n">backend_name</span><span class="p">:</span> <span class="n">BackendValue</span><span class="p">(</span>
+                <span class="n">construct_rpc_backend_options_handler</span><span class="o">=</span><span class="n">construct_rpc_backend_options_handler</span><span class="p">,</span>
+                <span class="n">init_backend_handler</span><span class="o">=</span><span class="n">init_backend_handler</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="p">},</span>
+        <span class="o">**</span><span class="n">existing_enum_dict</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="c1"># Can&#39;t handle Function Enum API (mypy bug #9079)</span>
+    <span class="n">BackendType</span> <span class="o">=</span> <span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;BackendType&quot;</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">extended_enum_dict</span><span class="p">)</span>  <span class="c1"># type: ignore[misc]</span>
+    <span class="c1"># Unable to assign a function a method (mypy bug #2427)</span>
+    <span class="n">BackendType</span><span class="o">.</span><span class="fm">__repr__</span> <span class="o">=</span> <span class="n">_backend_type_repr</span>  <span class="c1"># type: ignore[assignment]</span>
+    <span class="k">if</span> <span class="n">BackendType</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">:</span>
+        <span class="n">BackendType</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="n">_backend_type_doc</span>
+    <span class="k">return</span> <span class="n">BackendType</span><span class="p">[</span><span class="n">backend_name</span><span class="p">]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">construct_rpc_backend_options</span><span class="p">(</span>
+    <span class="n">backend</span><span class="p">,</span>
+    <span class="n">rpc_timeout</span><span class="o">=</span><span class="n">rpc_constants</span><span class="o">.</span><span class="n">DEFAULT_RPC_TIMEOUT_SEC</span><span class="p">,</span>
+    <span class="n">init_method</span><span class="o">=</span><span class="n">rpc_constants</span><span class="o">.</span><span class="n">DEFAULT_INIT_METHOD</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="k">return</span> <span class="n">backend</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">construct_rpc_backend_options_handler</span><span class="p">(</span>
+        <span class="n">rpc_timeout</span><span class="p">,</span> <span class="n">init_method</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">init_backend</span><span class="p">(</span><span class="n">backend</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">backend</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">init_backend_handler</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_init_process_group</span><span class="p">(</span><span class="n">store</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">world_size</span><span class="p">):</span>
+    <span class="c1"># Initialize ProcessGroup.</span>
+    <span class="n">process_group_timeout</span> <span class="o">=</span> <span class="n">rpc_constants</span><span class="o">.</span><span class="n">DEFAULT_PROCESS_GROUP_TIMEOUT</span>
+
+    <span class="c1"># We&#39;re using a bunch of private APIs here since `new_group` requires the</span>
+    <span class="c1"># default group to be initialized.</span>
+    <span class="n">group</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">ProcessGroupGloo</span><span class="p">(</span><span class="n">store</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">world_size</span><span class="p">,</span> <span class="n">process_group_timeout</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">group</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;Failed to initialize default ProcessGroup.&quot;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">rank</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">rank</span> <span class="o">!=</span> <span class="n">group</span><span class="o">.</span><span class="n">rank</span><span class="p">()):</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;rank argument </span><span class="si">{</span><span class="n">rank</span><span class="si">}</span><span class="s2"> doesn&#39;t match pg rank </span><span class="si">{</span><span class="n">group</span><span class="o">.</span><span class="n">rank</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">world_size</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">world_size</span> <span class="o">!=</span> <span class="n">group</span><span class="o">.</span><span class="n">size</span><span class="p">()):</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;world_size argument </span><span class="si">{</span><span class="n">world_size</span><span class="si">}</span><span class="s2"> doesn&#39;t match pg size </span><span class="si">{</span><span class="n">group</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="n">group</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_tensorpipe_construct_rpc_backend_options_handler</span><span class="p">(</span>
+    <span class="n">rpc_timeout</span><span class="p">,</span>
+    <span class="n">init_method</span><span class="p">,</span>
+    <span class="n">num_worker_threads</span><span class="o">=</span><span class="n">rpc_constants</span><span class="o">.</span><span class="n">DEFAULT_NUM_WORKER_THREADS</span><span class="p">,</span>
+    <span class="n">_transports</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">_channels</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">.</span><span class="w"> </span><span class="kn">import</span> <span class="n">TensorPipeRpcBackendOptions</span>
+
+    <span class="k">return</span> <span class="n">TensorPipeRpcBackendOptions</span><span class="p">(</span>
+        <span class="n">rpc_timeout</span><span class="o">=</span><span class="n">rpc_timeout</span><span class="p">,</span>
+        <span class="n">init_method</span><span class="o">=</span><span class="n">init_method</span><span class="p">,</span>
+        <span class="n">num_worker_threads</span><span class="o">=</span><span class="n">num_worker_threads</span><span class="p">,</span>
+        <span class="n">_transports</span><span class="o">=</span><span class="n">_transports</span><span class="p">,</span>
+        <span class="n">_channels</span><span class="o">=</span><span class="n">_channels</span><span class="p">,</span>
+    <span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_tensorpipe_validate_devices</span><span class="p">(</span><span class="n">devices</span><span class="p">,</span> <span class="n">device_count</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">all</span><span class="p">(</span>
+        <span class="n">d</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;cpu&quot;</span> <span class="ow">or</span> <span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;cuda&quot;</span> <span class="ow">and</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">d</span><span class="o">.</span><span class="n">index</span> <span class="o">&lt;</span> <span class="n">device_count</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">devices</span>
+    <span class="p">)</span>
+
+
+<span class="c1"># detect if any worker has invalid device_map configurations, and return</span>
+<span class="c1"># reverse device maps</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_tensorpipe_exchange_and_check_all_device_maps</span><span class="p">(</span>
+    <span class="n">my_name</span><span class="p">,</span> <span class="n">my_device_count</span><span class="p">,</span> <span class="n">my_device_maps</span><span class="p">,</span> <span class="n">my_devices</span><span class="p">,</span> <span class="n">group</span>
+<span class="p">):</span>
+    <span class="n">gathered</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span>
+        <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">]],</span> <span class="n">List</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">]]</span>
+    <span class="p">]</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">{},</span> <span class="p">[])</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">group</span><span class="o">.</span><span class="n">size</span><span class="p">())]</span>
+    <span class="n">dist</span><span class="o">.</span><span class="n">all_gather_object</span><span class="p">(</span>
+        <span class="n">gathered</span><span class="p">,</span> <span class="p">(</span><span class="n">my_name</span><span class="p">,</span> <span class="n">my_device_count</span><span class="p">,</span> <span class="n">my_device_maps</span><span class="p">,</span> <span class="n">my_devices</span><span class="p">),</span> <span class="n">group</span>
+    <span class="p">)</span>
+    <span class="n">all_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">name</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">gathered</span><span class="p">]</span>
+    <span class="n">all_device_counts</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">count</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">gathered</span><span class="p">}</span>
+    <span class="n">all_device_maps</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">map_</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">map_</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">gathered</span><span class="p">}</span>
+    <span class="n">all_devices</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">devices</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">devices</span> <span class="ow">in</span> <span class="n">gathered</span><span class="p">}</span>
+
+    <span class="n">_validate_device_maps</span><span class="p">(</span><span class="n">all_names</span><span class="p">,</span> <span class="n">all_device_counts</span><span class="p">,</span> <span class="n">all_device_maps</span><span class="p">,</span> <span class="n">all_devices</span><span class="p">)</span>
+
+    <span class="c1"># passed all checked, construct reverse mapping and get list of devices handled by this agent</span>
+    <span class="n">reverse_device_maps</span> <span class="o">=</span> <span class="n">_create_reverse_mapping</span><span class="p">(</span><span class="n">my_name</span><span class="p">,</span> <span class="n">all_names</span><span class="p">,</span> <span class="n">all_device_maps</span><span class="p">)</span>
+    <span class="n">my_devices</span> <span class="o">=</span> <span class="n">_create_device_list</span><span class="p">(</span><span class="n">my_devices</span><span class="p">,</span> <span class="n">my_device_maps</span><span class="p">,</span> <span class="n">reverse_device_maps</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">reverse_device_maps</span><span class="p">,</span> <span class="n">my_devices</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_validate_device_maps</span><span class="p">(</span>
+    <span class="n">all_names</span><span class="p">,</span> <span class="n">all_device_counts</span><span class="p">,</span> <span class="n">all_device_maps</span><span class="p">,</span> <span class="n">all_devices</span><span class="p">,</span> <span class="n">is_static_group</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">):</span>
+    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">all_names</span><span class="p">:</span>
+        <span class="n">devices</span> <span class="o">=</span> <span class="n">all_devices</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">devices</span><span class="p">))</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">devices</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Node </span><span class="si">{</span><span class="n">node</span><span class="si">}</span><span class="s2"> has duplicated devices</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="sa">f</span><span class="s2">&quot;devices = </span><span class="si">{</span><span class="n">devices</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">_tensorpipe_validate_devices</span><span class="p">(</span><span class="n">devices</span><span class="p">,</span> <span class="n">all_device_counts</span><span class="p">[</span><span class="n">node</span><span class="p">]):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Node </span><span class="si">{</span><span class="n">node</span><span class="si">}</span><span class="s2"> has devices with invalid indices</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;devices = </span><span class="si">{</span><span class="n">devices</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;device count = </span><span class="si">{</span><span class="n">all_device_counts</span><span class="p">[</span><span class="n">node</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">source_node</span> <span class="ow">in</span> <span class="n">all_names</span><span class="p">:</span>
+        <span class="c1"># For dynamic group (non-static) do not check the target node name since it may not have joined yet</span>
+        <span class="k">if</span> <span class="n">is_static_group</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">set</span><span class="p">(</span><span class="n">all_device_maps</span><span class="p">[</span><span class="n">source_node</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span><span class="o">.</span><span class="n">issubset</span><span class="p">(</span>
+            <span class="n">all_names</span>
+        <span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Node </span><span class="si">{</span><span class="n">source_node</span><span class="si">}</span><span class="s2"> has invalid target node names in its device maps</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;device maps = </span><span class="si">{</span><span class="n">all_device_maps</span><span class="p">[</span><span class="n">source_node</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;node names = </span><span class="si">{</span><span class="n">all_names</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+        <span class="k">for</span> <span class="n">target_node</span><span class="p">,</span> <span class="n">map_</span> <span class="ow">in</span> <span class="n">all_device_maps</span><span class="p">[</span><span class="n">source_node</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">map_</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">map_</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Node </span><span class="si">{</span><span class="n">source_node</span><span class="si">}</span><span class="s2"> has duplicated target devices &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;in its device map for </span><span class="si">{</span><span class="n">target_node</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;device map = </span><span class="si">{</span><span class="n">map_</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="p">)</span>
+            <span class="k">if</span> <span class="n">all_devices</span><span class="p">[</span><span class="n">source_node</span><span class="p">]:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="nb">set</span><span class="p">(</span><span class="n">map_</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span><span class="o">.</span><span class="n">issubset</span><span class="p">(</span><span class="n">all_devices</span><span class="p">[</span><span class="n">source_node</span><span class="p">]):</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;Node </span><span class="si">{</span><span class="n">source_node</span><span class="si">}</span><span class="s2"> has unexpected source devices &quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;in its device map for </span><span class="si">{</span><span class="n">target_node</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;device map = </span><span class="si">{</span><span class="n">map_</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;devices = </span><span class="si">{</span><span class="n">all_devices</span><span class="p">[</span><span class="n">source_node</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+                    <span class="p">)</span>
+            <span class="k">elif</span> <span class="ow">not</span> <span class="n">_tensorpipe_validate_devices</span><span class="p">(</span>
+                <span class="n">map_</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">all_device_counts</span><span class="p">[</span><span class="n">source_node</span><span class="p">]</span>
+            <span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Node </span><span class="si">{</span><span class="n">source_node</span><span class="si">}</span><span class="s2"> has source devices with invalid indices &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;in its device map for </span><span class="si">{</span><span class="n">target_node</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;device map = </span><span class="si">{</span><span class="n">map_</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;device count = </span><span class="si">{</span><span class="n">all_device_counts</span><span class="p">[</span><span class="n">source_node</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="p">)</span>
+            <span class="k">if</span> <span class="n">all_devices</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">target_node</span><span class="p">,</span> <span class="p">[]):</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="nb">set</span><span class="p">(</span><span class="n">map_</span><span class="o">.</span><span class="n">values</span><span class="p">())</span><span class="o">.</span><span class="n">issubset</span><span class="p">(</span><span class="n">all_devices</span><span class="p">[</span><span class="n">target_node</span><span class="p">]):</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;Node </span><span class="si">{</span><span class="n">source_node</span><span class="si">}</span><span class="s2"> has unexpected target devices &quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;in its device map for </span><span class="si">{</span><span class="n">target_node</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;device map = </span><span class="si">{</span><span class="n">map_</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;devices = </span><span class="si">{</span><span class="n">all_devices</span><span class="p">[</span><span class="n">target_node</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+                    <span class="p">)</span>
+            <span class="k">elif</span> <span class="n">target_node</span> <span class="ow">in</span> <span class="n">all_device_counts</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">_tensorpipe_validate_devices</span><span class="p">(</span>
+                <span class="n">map_</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span> <span class="n">all_device_counts</span><span class="p">[</span><span class="n">target_node</span><span class="p">]</span>
+            <span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Node </span><span class="si">{</span><span class="n">source_node</span><span class="si">}</span><span class="s2"> has target devices with invalid indices &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;in its device map for </span><span class="si">{</span><span class="n">target_node</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;device map = </span><span class="si">{</span><span class="n">map_</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;device count = </span><span class="si">{</span><span class="n">all_device_counts</span><span class="p">[</span><span class="n">target_node</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_create_device_list</span><span class="p">(</span><span class="n">my_devices</span><span class="p">,</span> <span class="n">my_device_maps</span><span class="p">,</span> <span class="n">reverse_device_maps</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">my_devices</span><span class="p">:</span>
+        <span class="n">devices_set</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">map_</span> <span class="ow">in</span> <span class="n">my_device_maps</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="n">devices_set</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">map_</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+        <span class="k">for</span> <span class="n">map_</span> <span class="ow">in</span> <span class="n">reverse_device_maps</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="n">devices_set</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">map_</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+        <span class="n">devices_set</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s2">&quot;cpu&quot;</span><span class="p">))</span>
+        <span class="n">my_devices</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">devices_set</span><span class="p">)</span>
+    <span class="n">my_devices</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">my_devices</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">d</span><span class="p">:</span> <span class="n">d</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">my_devices</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_create_reverse_mapping</span><span class="p">(</span><span class="n">my_name</span><span class="p">,</span> <span class="n">all_names</span><span class="p">,</span> <span class="n">all_device_maps</span><span class="p">):</span>
+    <span class="n">reverse_device_maps</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">all_names</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">my_name</span> <span class="ow">in</span> <span class="n">all_device_maps</span><span class="p">[</span><span class="n">node</span><span class="p">]:</span>
+            <span class="n">reverse_device_maps</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="n">v</span><span class="p">:</span> <span class="n">k</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">all_device_maps</span><span class="p">[</span><span class="n">node</span><span class="p">][</span><span class="n">my_name</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+            <span class="p">}</span>
+    <span class="k">return</span> <span class="n">reverse_device_maps</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_get_device_infos</span><span class="p">():</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">.</span><span class="w"> </span><span class="kn">import</span> <span class="n">TensorPipeAgent</span>
+
+    <span class="n">agent</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">TensorPipeAgent</span><span class="p">,</span> <span class="n">api</span><span class="o">.</span><span class="n">_get_current_rpc_agent</span><span class="p">())</span>
+    <span class="n">opts</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">_get_backend_options</span><span class="p">()</span>
+    <span class="n">device_count</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">device_count</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="ow">and</span> <span class="n">opts</span><span class="o">.</span><span class="n">devices</span><span class="p">:</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">device_count</span><span class="p">,</span> <span class="n">opts</span><span class="o">.</span><span class="n">device_maps</span><span class="p">,</span> <span class="n">opts</span><span class="o">.</span><span class="n">devices</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_set_devices_and_reverse_device_map</span><span class="p">(</span><span class="n">agent</span><span class="p">):</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">.</span><span class="w"> </span><span class="kn">import</span> <span class="n">TensorPipeAgent</span>
+
+    <span class="n">agent</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">TensorPipeAgent</span><span class="p">,</span> <span class="n">agent</span><span class="p">)</span>
+    <span class="c1"># Group state is retrieved from local agent</span>
+    <span class="c1"># On initialization, tensorpipe agent retrieves information from all existing workers, so group state is valid</span>
+    <span class="n">my_worker_info</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">get_worker_info</span><span class="p">()</span>
+    <span class="n">my_name</span> <span class="o">=</span> <span class="n">my_worker_info</span><span class="o">.</span><span class="n">name</span>
+    <span class="n">all_worker_infos</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">get_worker_infos</span><span class="p">()</span>
+    <span class="c1"># One round to get device_maps of all workers and construct reverse device maps</span>
+    <span class="n">all_device_counts</span><span class="p">,</span> <span class="n">all_device_maps</span><span class="p">,</span> <span class="n">all_devices</span><span class="p">,</span> <span class="n">all_names</span> <span class="o">=</span> <span class="p">{},</span> <span class="p">{},</span> <span class="p">{},</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">worker_info</span> <span class="ow">in</span> <span class="n">all_worker_infos</span><span class="p">:</span>
+        <span class="n">worker_name</span> <span class="o">=</span> <span class="n">worker_info</span><span class="o">.</span><span class="n">name</span>
+        <span class="k">if</span> <span class="n">worker_name</span> <span class="o">!=</span> <span class="n">my_name</span><span class="p">:</span>
+            <span class="c1"># TODO: make async?</span>
+            <span class="n">device_count</span><span class="p">,</span> <span class="n">device_map</span><span class="p">,</span> <span class="n">devices</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">rpc_sync</span><span class="p">(</span>
+                <span class="n">worker_name</span><span class="p">,</span> <span class="n">_get_device_infos</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">opts</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">_get_backend_options</span><span class="p">()</span>
+            <span class="n">device_count</span><span class="p">,</span> <span class="n">device_map</span><span class="p">,</span> <span class="n">devices</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">device_count</span><span class="p">(),</span>
+                <span class="n">opts</span><span class="o">.</span><span class="n">device_maps</span><span class="p">,</span>
+                <span class="n">opts</span><span class="o">.</span><span class="n">devices</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="n">all_device_counts</span><span class="p">[</span><span class="n">worker_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">device_count</span>
+        <span class="n">all_device_maps</span><span class="p">[</span><span class="n">worker_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">device_map</span>
+        <span class="n">all_devices</span><span class="p">[</span><span class="n">worker_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">devices</span>
+        <span class="n">all_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">worker_name</span><span class="p">)</span>
+
+    <span class="n">_validate_device_maps</span><span class="p">(</span>
+        <span class="n">all_names</span><span class="p">,</span>
+        <span class="n">all_device_counts</span><span class="p">,</span>
+        <span class="n">all_device_maps</span><span class="p">,</span>
+        <span class="n">all_devices</span><span class="p">,</span>
+        <span class="n">is_static_group</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">reverse_device_maps</span> <span class="o">=</span> <span class="n">_create_reverse_mapping</span><span class="p">(</span><span class="n">my_name</span><span class="p">,</span> <span class="n">all_names</span><span class="p">,</span> <span class="n">all_device_maps</span><span class="p">)</span>
+
+    <span class="c1"># Perform RPC call to all workers, including itself, to include newly joined worker information and device maps</span>
+    <span class="k">for</span> <span class="n">worker_name</span> <span class="ow">in</span> <span class="n">all_names</span><span class="p">:</span>
+        <span class="c1"># Set device list for each worker</span>
+        <span class="n">all_devices</span><span class="p">[</span><span class="n">worker_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">_create_device_list</span><span class="p">(</span>
+            <span class="n">all_devices</span><span class="p">[</span><span class="n">worker_name</span><span class="p">],</span> <span class="n">all_device_maps</span><span class="p">[</span><span class="n">worker_name</span><span class="p">],</span> <span class="n">reverse_device_maps</span>
+        <span class="p">)</span>
+        <span class="n">api</span><span class="o">.</span><span class="n">rpc_sync</span><span class="p">(</span>
+            <span class="n">worker_name</span><span class="p">,</span>
+            <span class="n">_update_group_membership</span><span class="p">,</span>
+            <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">my_worker_info</span><span class="p">,</span> <span class="n">all_devices</span><span class="p">[</span><span class="n">worker_name</span><span class="p">],</span> <span class="n">reverse_device_maps</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+        <span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_tensorpipe_init_backend_handler</span><span class="p">(</span>
+    <span class="n">store</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">world_size</span><span class="p">,</span> <span class="n">rpc_backend_options</span>
+<span class="p">):</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">.</span><span class="w"> </span><span class="kn">import</span> <span class="n">TensorPipeAgent</span><span class="p">,</span> <span class="n">TensorPipeRpcBackendOptions</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">store</span><span class="p">,</span> <span class="n">dist</span><span class="o">.</span><span class="n">Store</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;`store` must be a c10d::Store. </span><span class="si">{</span><span class="n">store</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">rpc_backend_options</span><span class="p">,</span> <span class="n">TensorPipeRpcBackendOptions</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;`rpc_backend_options` must be a `TensorPipeRpcBackendOptions`. </span><span class="si">{</span><span class="n">rpc_backend_options</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+
+    <span class="n">device_count</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">device_count</span><span class="p">()</span>
+
+    <span class="n">is_static_group</span> <span class="o">=</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">world_size</span> <span class="k">else</span> <span class="kc">False</span>
+    <span class="c1"># world_size is specified so this is a static group (ranks cannot join and leave)</span>
+    <span class="k">if</span> <span class="n">is_static_group</span><span class="p">:</span>
+        <span class="c1"># The agent&#39;s join method is required to behave like a barrier and perform</span>
+        <span class="c1"># collective operations, for which it relies on a process group, instead of</span>
+        <span class="c1"># re-implementing this on top of RPCs.</span>
+        <span class="n">group</span> <span class="o">=</span> <span class="n">_init_process_group</span><span class="p">(</span><span class="n">store</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">world_size</span><span class="p">)</span>
+
+        <span class="n">reverse_device_maps</span><span class="p">,</span> <span class="n">devices</span> <span class="o">=</span> <span class="n">_tensorpipe_exchange_and_check_all_device_maps</span><span class="p">(</span>
+            <span class="n">name</span><span class="p">,</span>
+            <span class="n">device_count</span><span class="p">,</span>
+            <span class="n">rpc_backend_options</span><span class="o">.</span><span class="n">device_maps</span><span class="p">,</span>
+            <span class="n">rpc_backend_options</span><span class="o">.</span><span class="n">devices</span><span class="p">,</span>
+            <span class="n">group</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="ow">and</span> <span class="n">devices</span><span class="p">:</span>
+            <span class="c1"># It&#39;s necessary to initialize PyTorch CUDA states here (e.g.,</span>
+            <span class="c1"># CUDACachingAllocator). If this is missing, we could hit errors like</span>
+            <span class="c1"># &quot;allocator not initialized&quot;, because other processes might send</span>
+            <span class="c1"># CUDA-related RPC request to this process before user code in this</span>
+            <span class="c1"># process initializes its PyTorch CUDA states.</span>
+            <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+
+        <span class="c1"># TODO: add try-except and destroy _agent in all processes if any fails.</span>
+        <span class="n">agent</span> <span class="o">=</span> <span class="n">TensorPipeAgent</span><span class="p">(</span>
+            <span class="n">store</span><span class="p">,</span>
+            <span class="n">name</span><span class="p">,</span>
+            <span class="n">rank</span><span class="p">,</span>
+            <span class="n">world_size</span><span class="p">,</span>
+            <span class="n">rpc_backend_options</span><span class="p">,</span>
+            <span class="n">reverse_device_maps</span><span class="p">,</span>
+            <span class="n">devices</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="n">api</span><span class="o">.</span><span class="n">_init_rpc_states</span><span class="p">(</span><span class="n">agent</span><span class="p">)</span>
+
+        <span class="c1"># Run one dummy round of RPC to initialize channels/transports. Without</span>
+        <span class="c1"># this, it&#39;s easy to hit timeout in rpc.shutdown() if there is no other RPC</span>
+        <span class="c1"># on that process before rpc.shutdown(), as the agent initialization can</span>
+        <span class="c1"># take longer than 5s.</span>
+        <span class="n">api</span><span class="o">.</span><span class="n">_all_gather</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">rpc_backend_options</span><span class="o">.</span><span class="n">rpc_timeout</span><span class="p">)</span>
+        <span class="c1"># Need a barrier here to make sure no peers leave before the rank0 finishes</span>
+        <span class="c1"># _all_gather</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">barrier</span><span class="p">()</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">agent</span>
+    <span class="c1"># initialization for dynamic rpc (ranks can join and leave)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">_group_membership_management</span><span class="p">(</span><span class="n">store</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="kc">True</span><span class="p">):</span>
+            <span class="c1"># Construct TPAgent with empty reverse_device_map and devices</span>
+            <span class="c1"># these properties will be updated after initialization</span>
+            <span class="n">agent</span> <span class="o">=</span> <span class="n">TensorPipeAgent</span><span class="p">(</span>
+                <span class="n">store</span><span class="p">,</span>
+                <span class="n">name</span><span class="p">,</span>
+                <span class="n">rank</span><span class="p">,</span>
+                <span class="n">world_size</span><span class="p">,</span>
+                <span class="n">rpc_backend_options</span><span class="p">,</span>
+                <span class="p">{},</span>
+                <span class="p">[],</span>
+            <span class="p">)</span>
+            <span class="n">api</span><span class="o">.</span><span class="n">_init_rpc_states</span><span class="p">(</span><span class="n">agent</span><span class="p">)</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="c1"># Notify all workers in group this rank has joined and set devices and reverse_device_map</span>
+                <span class="c1"># This is a synchronous operation that completes once all existing ranks are updated</span>
+                <span class="n">_set_devices_and_reverse_device_map</span><span class="p">(</span><span class="n">agent</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+                <span class="n">api</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+                <span class="k">raise</span>
+            <span class="k">return</span> <span class="n">agent</span>
+
+
+<span class="n">register_backend</span><span class="p">(</span>
+    <span class="s2">&quot;TENSORPIPE&quot;</span><span class="p">,</span>
+    <span class="n">_tensorpipe_construct_rpc_backend_options_handler</span><span class="p">,</span>
+    <span class="n">_tensorpipe_init_backend_handler</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright PyTorch Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

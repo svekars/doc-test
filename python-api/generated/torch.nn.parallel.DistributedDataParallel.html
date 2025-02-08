@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -58,7 +58,7 @@
     <link rel="prev" title="DataParallel" href="torch.nn.DataParallel.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -67,7 +67,6 @@
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -154,7 +153,7 @@
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -178,8 +177,8 @@
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -249,7 +248,7 @@
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -264,7 +263,6 @@
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -304,9 +302,27 @@
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -320,20 +336,14 @@
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -394,6 +404,46 @@
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -485,6 +535,46 @@
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
         
       </div>
     
@@ -1942,7 +2032,6 @@
 <li class="toctree-l2"><a class="reference internal" href="torch.cuda.get_device_name.html">torch.cuda.get_device_name</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torch.cuda.get_device_properties.html">torch.cuda.get_device_properties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torch.cuda.get_gencode_flags.html">torch.cuda.get_gencode_flags</a></li>
-<li class="toctree-l2"><a class="reference internal" href="torch.cuda.get_stream_from_external.html">torch.cuda.get_stream_from_external</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torch.cuda.get_sync_debug_mode.html">torch.cuda.get_sync_debug_mode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torch.cuda.init.html">torch.cuda.init</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torch.cuda.ipc_collect.html">torch.cuda.ipc_collect</a></li>
@@ -2041,9 +2130,6 @@
 <li class="toctree-l2"><a class="reference internal" href="torch.mps.profiler.start.html">torch.mps.profiler.start</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torch.mps.profiler.stop.html">torch.mps.profiler.stop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torch.mps.profiler.profile.html">torch.mps.profiler.profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="torch.mps.profiler.is_capturing_metal.html">torch.mps.profiler.is_capturing_metal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="torch.mps.profiler.is_metal_capture_enabled.html">torch.mps.profiler.is_metal_capture_enabled</a></li>
-<li class="toctree-l2"><a class="reference internal" href="torch.mps.profiler.metal_capture.html">torch.mps.profiler.metal_capture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torch.mps.event.Event.html">Event</a></li>
 </ul>
 </details></li>
@@ -2059,7 +2145,6 @@
 <li class="toctree-l2"><a class="reference internal" href="torch.xpu.get_device_name.html">torch.xpu.get_device_name</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torch.xpu.get_device_properties.html">torch.xpu.get_device_properties</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torch.xpu.get_gencode_flags.html">torch.xpu.get_gencode_flags</a></li>
-<li class="toctree-l2"><a class="reference internal" href="torch.xpu.get_stream_from_external.html">torch.xpu.get_stream_from_external</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torch.xpu.init.html">torch.xpu.init</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torch.xpu.is_available.html">torch.xpu.is_available</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torch.xpu.is_initialized.html">torch.xpu.is_initialized</a></li>
@@ -2114,8 +2199,6 @@
 <li class="toctree-l2"><a class="reference internal" href="torch.mtia.memory_stats.html">torch.mtia.memory_stats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torch.mtia.get_device_capability.html">torch.mtia.get_device_capability</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torch.mtia.empty_cache.html">torch.mtia.empty_cache</a></li>
-<li class="toctree-l2"><a class="reference internal" href="torch.mtia.record_memory_history.html">torch.mtia.record_memory_history</a></li>
-<li class="toctree-l2"><a class="reference internal" href="torch.mtia.snapshot.html">torch.mtia.snapshot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torch.mtia.set_device.html">torch.mtia.set_device</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torch.mtia.set_stream.html">torch.mtia.set_stream</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torch.mtia.synchronize.html">torch.mtia.synchronize</a></li>
@@ -2209,7 +2292,6 @@
 <li class="toctree-l3"><a class="reference internal" href="torch.compiler.cudagraph_mark_step_begin.html">torch.compiler.cudagraph_mark_step_begin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="torch.compiler.is_compiling.html">torch.compiler.is_compiling</a></li>
 <li class="toctree-l3"><a class="reference internal" href="torch.compiler.is_dynamo_compiling.html">torch.compiler.is_dynamo_compiling</a></li>
-<li class="toctree-l3"><a class="reference internal" href="torch.compiler.is_exporting.html">torch.compiler.is_exporting</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../torch.compiler.config.html">torch.compiler.config</a></li>
@@ -2359,7 +2441,7 @@
 <h1>DistributedDataParallel<a class="headerlink" href="#distributeddataparallel" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="torch.nn.parallel.DistributedDataParallel">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.nn.parallel.</span></span><span class="sig-name descname"><span class="pre">DistributedDataParallel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">broadcast_buffers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_sync</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">process_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bucket_cap_mb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">find_unused_parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_reduction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gradient_as_bucket_view</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">static_graph</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_all_reduce_named_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_to_hook_all_reduce</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mixed_precision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_mesh</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/torch/nn/parallel/distributed.html#DistributedDataParallel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/nn/parallel/distributed.py#L326"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.nn.parallel.DistributedDataParallel" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">torch.nn.parallel.</span></span><span class="sig-name descname"><span class="pre">DistributedDataParallel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">broadcast_buffers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">process_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bucket_cap_mb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">find_unused_parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_reduction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gradient_as_bucket_view</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">static_graph</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_all_reduce_named_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_to_hook_all_reduce</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mixed_precision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_mesh</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/torch/nn/parallel/distributed.html#DistributedDataParallel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/nn/parallel/distributed.py#L326"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.nn.parallel.DistributedDataParallel" title="Link to this definition">#</a></dt>
 <dd><p>Implement distributed data parallelism based on <code class="docutils literal notranslate"><span class="pre">torch.distributed</span></code> at module level.</p>
 <p>This container provides data parallelism by synchronizing gradients
 across each model replica. The devices to synchronize across are
@@ -2371,7 +2453,7 @@ of a <code class="xref py py-class docutils literal notranslate"><span class="pr
 <p>See also: <a class="reference internal" href="../distributed.html#distributed-basics"><span class="std std-ref">Basics</span></a> and <a class="reference internal" href="../../notes/cuda.html#cuda-nn-ddp-instead"><span class="std std-ref">Use nn.parallel.DistributedDataParallel instead of multiprocessing or nn.DataParallel</span></a>.
 The same constraints on input as in <a class="reference internal" href="torch.nn.DataParallel.html#torch.nn.DataParallel" title="torch.nn.DataParallel"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.DataParallel</span></code></a> apply.</p>
 <p>Creation of this class requires that <code class="docutils literal notranslate"><span class="pre">torch.distributed</span></code> to be already
-initialized, by calling <code class="xref py py-func docutils literal notranslate"><span class="pre">torch.distributed.init_process_group()</span></code>.</p>
+initialized, by calling <a class="reference internal" href="../distributed.html#torch.distributed.init_process_group" title="torch.distributed.init_process_group"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.distributed.init_process_group()</span></code></a>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">DistributedDataParallel</span></code> is proven to be significantly faster than
 <a class="reference internal" href="torch.nn.DataParallel.html#torch.nn.DataParallel" title="torch.nn.DataParallel"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.DataParallel</span></code></a> for single-node multi-GPU data
 parallel training.</p>
@@ -2400,7 +2482,7 @@ for a brief introduction to all features related to distributed training.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><code class="docutils literal notranslate"><span class="pre">DistributedDataParallel</span></code> can be used in conjunction with
-<code class="xref py py-class docutils literal notranslate"><span class="pre">torch.distributed.optim.ZeroRedundancyOptimizer</span></code> to reduce
+<a class="reference internal" href="../distributed.optim.html#torch.distributed.optim.ZeroRedundancyOptimizer" title="torch.distributed.optim.ZeroRedundancyOptimizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.distributed.optim.ZeroRedundancyOptimizer</span></code></a> to reduce
 per-rank optimizer states memory footprint. Please refer to
 <a class="reference external" href="https://pytorch.org/tutorials/recipes/zero_redundancy_optimizer.html">ZeroRedundancyOptimizer recipe</a>
 for more details.</p>
@@ -2451,8 +2533,8 @@ by the optimizer in all processes in the same way. Buffers
 <p class="admonition-title">Note</p>
 <p>If you are using DistributedDataParallel in conjunction with the
 <a class="reference internal" href="../rpc.html#distributed-rpc-framework"><span class="std std-ref">Distributed RPC Framework</span></a>, you should always use
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.distributed.autograd.backward()</span></code> to compute gradients and
-<code class="xref py py-class docutils literal notranslate"><span class="pre">torch.distributed.optim.DistributedOptimizer</span></code> for optimizing
+<a class="reference internal" href="../rpc.html#torch.distributed.autograd.backward" title="torch.distributed.autograd.backward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.distributed.autograd.backward()</span></code></a> to compute gradients and
+<a class="reference internal" href="../distributed.optim.html#torch.distributed.optim.DistributedOptimizer" title="torch.distributed.optim.DistributedOptimizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.distributed.optim.DistributedOptimizer</span></code></a> for optimizing
 parameters.</p>
 <p>Example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">torch.distributed.autograd</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dist_autograd</span>
@@ -2592,15 +2674,9 @@ for single-device modules)</p></li>
 <li><p><strong>broadcast_buffers</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – Flag that enables syncing (broadcasting)
 buffers of the module at beginning of the <code class="docutils literal notranslate"><span class="pre">forward</span></code>
 function. (default: <code class="docutils literal notranslate"><span class="pre">True</span></code>)</p></li>
-<li><p><strong>init_sync</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – Whether to sync during initialization to verify param
-shapes and broadcast parameters and buffers.
-WARNING: if this is set to False the user is required
-to ensure themselves that the weights are the same on
-all ranks.
-(default: <code class="docutils literal notranslate"><span class="pre">True</span></code>)</p></li>
 <li><p><strong>process_group</strong> – The process group to be used for distributed data
 all-reduction. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the default process group, which
-is created by <code class="xref py py-func docutils literal notranslate"><span class="pre">torch.distributed.init_process_group()</span></code>,
+is created by <a class="reference internal" href="../distributed.html#torch.distributed.init_process_group" title="torch.distributed.init_process_group"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.distributed.init_process_group()</span></code></a>,
 will be used. (default: <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
 <li><p><strong>bucket_cap_mb</strong> – <code class="docutils literal notranslate"><span class="pre">DistributedDataParallel</span></code> will bucket parameters into
 multiple buckets so that gradient reduction of each
@@ -2683,7 +2759,7 @@ of parameters specified in <code class="docutils literal notranslate"><span clas
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="torch.nn.parallel.DistributedDataParallel.join">
-<span class="sig-name descname"><span class="pre">join</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">divide_by_initial_world_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">throw_on_early_termination</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/torch/nn/parallel/distributed.html#DistributedDataParallel.join"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/nn/parallel/distributed.py#L1753"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.nn.parallel.DistributedDataParallel.join" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">join</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">divide_by_initial_world_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">throw_on_early_termination</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/torch/nn/parallel/distributed.html#DistributedDataParallel.join"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/nn/parallel/distributed.py#L1742"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.nn.parallel.DistributedDataParallel.join" title="Link to this definition">#</a></dt>
 <dd><p>Context manager for training with uneven inputs across processes in DDP.</p>
 <p>This context manager will keep track of already-joined DDP processes,
 and “shadow” the forward and backward passes by inserting collective
@@ -2779,7 +2855,7 @@ is <code class="docutils literal notranslate"><span class="pre">False</span></co
 
 <dl class="py method">
 <dt class="sig sig-object py" id="torch.nn.parallel.DistributedDataParallel.join_hook">
-<span class="sig-name descname"><span class="pre">join_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/torch/nn/parallel/distributed.html#DistributedDataParallel.join_hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/nn/parallel/distributed.py#L1859"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.nn.parallel.DistributedDataParallel.join_hook" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">join_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/torch/nn/parallel/distributed.html#DistributedDataParallel.join_hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/nn/parallel/distributed.py#L1848"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.nn.parallel.DistributedDataParallel.join_hook" title="Link to this definition">#</a></dt>
 <dd><p>DDP join hook enables training on uneven inputs by mirroring communications in forward and backward passes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -2808,7 +2884,7 @@ Default is <code class="docutils literal notranslate"><span class="pre">True</sp
 
 <dl class="py method">
 <dt class="sig sig-object py" id="torch.nn.parallel.DistributedDataParallel.no_sync">
-<span class="sig-name descname"><span class="pre">no_sync</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/torch/nn/parallel/distributed.html#DistributedDataParallel.no_sync"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/nn/parallel/distributed.py#L1419"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.nn.parallel.DistributedDataParallel.no_sync" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">no_sync</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/torch/nn/parallel/distributed.html#DistributedDataParallel.no_sync"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/nn/parallel/distributed.py#L1408"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.nn.parallel.DistributedDataParallel.no_sync" title="Link to this definition">#</a></dt>
 <dd><p>Context manager to disable gradient synchronizations across DDP processes.</p>
 <p>Within this context, gradients will be accumulated on module
 variables, which will later be synchronized in the first
@@ -2830,7 +2906,7 @@ else gradients will still be synchronized.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="torch.nn.parallel.DistributedDataParallel.register_comm_hook">
-<span class="sig-name descname"><span class="pre">register_comm_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hook</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/torch/nn/parallel/distributed.html#DistributedDataParallel.register_comm_hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/74cfb4f3647c4eb38a5c887225fc6adc0a8b16d6/torch/nn/parallel/distributed.py#L1941"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.nn.parallel.DistributedDataParallel.register_comm_hook" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">register_comm_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hook</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/torch/nn/parallel/distributed.html#DistributedDataParallel.register_comm_hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="reference external" href="https://github.com/pytorch/pytorch/blob/2236df1770800ffea5697b11b0bb0d910b2e59e1/torch/nn/parallel/distributed.py#L1930"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#torch.nn.parallel.DistributedDataParallel.register_comm_hook" title="Link to this definition">#</a></dt>
 <dd><p>Register communication hook for user-defined DDP aggregation of gradients across multiple workers.</p>
 <p>This hook would be very useful for researchers to try out new ideas. For
 example, this hook can be used to implement several algorithms like GossipGrad
@@ -2951,8 +3027,8 @@ allreduce, and then decoded after allreduce.</p>
             
               
                 <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc">
-<div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
 <div
@@ -2974,41 +3050,29 @@ allreduce, and then decoded after allreduce.</p>
 
   <div class="sidebar-secondary-item">
 
-  <div class="tocsection sourcelink">
-    <a href="../../_sources/python-api/generated/torch.nn.parallel.DistributedDataParallel.rst">
-      <i class="fa-solid fa-file-lines"></i> Show Source
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/pytorch/pytorch/edit/main/docs/source/python-api/generated/torch.nn.parallel.DistributedDataParallel.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
     </a>
   </div>
 </div>
 
-</div>
-<div class="sidebar-secondary-item"> 
-</div>
-<div class="sidebar-secondary-item">
- <p>PyTorch Libraries</p>
- <ul>
- 
-  <li><a href="https://pytorch.org/vision">torchvision</a></li>
- 
-  <li><a href="https://pytorch.org/executorch">ExecuTorch</a></li>
- 
-  <li><a href="https://https://pytorch.org/ao">torchao</a></li>
- 
-  <li><a href="https://https://pytorch.org/audio">torchaudio</a></li>
- 
-  <li><a href="https://https://pytorch.org/torchrec">torchrec</a></li>
- 
-  <li><a href="https://https://pytorch.org/serve">torchserve</a></li>
- 
-  <li><a href="https://https://pytorch.org/data">torchdata</a></li>
- 
-  <li><a href="https://https://pytorch.org/xla">PyTorch on XLA devices</a></li>
- 
- </ul>
-</div>
+  <div class="sidebar-secondary-item">
+    <div class="tocsection sourcelink">
+      <a href="../../_sources/python-api/generated/torch.nn.parallel.DistributedDataParallel.rst.txt">
+        <i class="fa-solid fa-file-lines"></i> Show Source
+      </a>
+    </div>
 </div>
 
-</div>
+</div></div>
               
             
           </div>
@@ -3023,7 +3087,6 @@ allreduce, and then decoded after allreduce.</p>
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

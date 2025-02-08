@@ -1,29 +1,11 @@
-.container {
+/* PyTorch top nav bar */
+
+.container-fluid {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
 }
 
 .header-holder {
@@ -37,7 +19,7 @@
   left: 0;
   margin-left: auto;
   margin-right: auto;
-  position: fixed;
+  position: sticky;
   right: 0;
   top: 0;
   width: 100%;
@@ -52,7 +34,7 @@
 }
 
 .header-container {
-  position: sticky;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,43 +58,26 @@
   }
 }
 
-.container-fluid {
-  position: sticky;
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.tutorials-header .header-logo {
-  background-image: url("../img/logo-dark.svg");
-}
-.tutorials-header .main-menu ul li a {
-  color: #262626;
-}
-
-.tutorials-header .main-menu ul li a:hover {
-  color: #262626;
-}
-
-.tutorials-header .main-menu .no-dropdown {
+.header-logo {
+  height: 23px;
+  width: 93px;
+  background-image: url("../img/logo.svg");
+  background-repeat: no-repeat;
+  background-size: 93px 23px;
   display: block;
+  float: left;
+  z-index: 10;
 }
-
-.tutorials-header .main-menu .no-dropdown a {
-  color: #262626;
+@media screen and (min-width: 1200px) {
+  .header-logo {
+    background-size: 108px 27px;
+    position: absolute;
+    height: 27px;
+    width: 108px;
+    top: 4px;
+    float: none;
+  }
 }
-
-.tutorials-header .main-menu .no-dropdown a:hover {
-  color: #262626 !important;
-  border-bottom: 2px solid #262626;
-}
-
-.tutorials-header .main-menu-open-button {
-  background-image: url("../images/icon-menu-dots-dark.svg");
-}
-
 
 .main-menu-open-button {
   background-image: url("../images/icon-menu-dots.svg");
@@ -144,7 +109,8 @@
             align-items: center;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
-            justify-content: flex-end;
+    padding-left: 110px;
+        
   }
 }
 .header-holder .main-menu ul {
@@ -206,28 +172,6 @@
 @media screen and (min-width: 1200px) {
   .header-holder .main-menu ul li a:hover {
     color: #e44c2c;
-  }
-}
-
-.header-logo {
-  height: 23px;
-  width: 93px;
-  background-image: url("../images/logo.svg");
-  background-repeat: no-repeat;
-  background-size: 93px 23px;
-  display: block;
-  float: left;
-  z-index: 10;
-  left: -100px;
-}
-@media screen and (min-width: 1200px) {
-  .header-logo {
-    background-size: 108px 27px;
-    position: absolute;
-    height: 27px;
-    width: 108px;
-    top: 4px;
-    float: none;
   }
 }
 
@@ -324,7 +268,52 @@
 
 .mobile-main-menu-links-container ul.resources-mobile-menu-items li a {
   font-size: 18px;
-  line-height: 34px;
+  line-height: 34px;    
+}
+
+.site-footer {
+  padding: 2.5rem 0;
+  width: 100%;
+  background: #000000;
+  background-size: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
+  z-index: 201;
+}
+@media screen and (min-width: 768px) {
+  .site-footer {
+    padding: 5rem 0;
+  }
+}
+
+
+.tutorials-header .header-logo {
+  background-image: url("../img/logo-dark.svg");
+}
+.tutorials-header .main-menu ul li a {
+  color: #262626;
+}
+
+.tutorials-header .main-menu ul li a:hover {
+  color: #262626;
+}
+
+.tutorials-header .main-menu .no-dropdown {
+  display: block;
+}
+
+.tutorials-header .main-menu .no-dropdown a {
+  color: #262626;
+}
+
+.tutorials-header .main-menu .no-dropdown a:hover {
+  color: #262626 !important;
+  border-bottom: 2px solid #262626;
+}
+
+.tutorials-header .main-menu-open-button {
+  background-image: url("../images/icon-menu-dots-dark.svg");
 }
 
 .main-menu ul li .resources-dropdown a {
@@ -465,26 +454,10 @@
   background-color: #e44c2c;
   color: white;
 }
+/* End of PyTorch top bar styles */
 
-.bd-header {
-    position: sticky;
-    top: 90px;
-    z-index: 999;
-}
 
-.navbar-brand {
-  display: none;
-}
-
-.bd-sidebar-primary {
-  top: 150px !important;
-}
-
-.bd-sidebar-secondary {
-  top: 150px !important;
-}
-
-/* Colors */
+/* Theme colors */
 
 html[data-theme="light"] {
     --pst-color-primary: #ee4c2c;
@@ -493,7 +466,6 @@ html[data-theme="light"] {
     --bs-link-hover-color: #ee4c2c;
     --bs-emphasis-color-rgb: #ee4c2c;
     --bs-emphasis-color: #ee4c2c;
-}
 
 html[data-theme="dark"] {
     --pst-color-primary: #11b3d3;
@@ -503,5 +475,29 @@ html[data-theme="dark"] {
     --bs-emphasis-color-rgb: #11b3d3;
     --bs-emphasis-color: #11b3d3;
     --pst-color-inline-code: #F4A623;
+
+/* End of theme colors */
+
+.bd-header {
+  top: 90px !important;
+  position: sticky;
+  z-index: 999;
 }
 
+@media (max-width: 1200px) {
+  .bd-header {
+    top: 70px !important;
+  }
+
+
+.bd-sidebar-primary {
+  top: 150px !important;
+}
+
+.bd-sidebar-secondary {
+  top: 150px !important;
+}
+
+.navbar-brand img {
+  height: 50%;
+}

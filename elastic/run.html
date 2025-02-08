@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -56,7 +56,7 @@
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -65,7 +65,6 @@
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -152,7 +151,7 @@
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -176,8 +175,8 @@
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -247,7 +246,7 @@
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -262,7 +261,6 @@
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -302,9 +300,27 @@
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -318,20 +334,14 @@
   
   
   
-    
-    
-      
-    
-    
-    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -392,6 +402,46 @@
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -486,6 +536,46 @@
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
         
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
       </div>
     
   </div>
@@ -542,8 +632,367 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="torchrun-elastic-launch">
-<span id="launcher-api"></span><h1>torchrun (Elastic Launch)<a class="headerlink" href="#torchrun-elastic-launch" title="Link to this heading">#</a></h1>
+  <section id="module-torch.distributed.run">
+<span id="torchrun-elastic-launch"></span><span id="launcher-api"></span><h1>torchrun (Elastic Launch)<a class="headerlink" href="#module-torch.distributed.run" title="Link to this heading">#</a></h1>
+<p>Superset of <code class="docutils literal notranslate"><span class="pre">torch.distributed.launch</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">torchrun</span></code> provides a superset of the functionality as <code class="docutils literal notranslate"><span class="pre">torch.distributed.launch</span></code>
+with the following additional functionalities:</p>
+<ol class="arabic simple">
+<li><p>Worker failures are handled gracefully by restarting all workers.</p></li>
+<li><p>Worker <code class="docutils literal notranslate"><span class="pre">RANK</span></code> and <code class="docutils literal notranslate"><span class="pre">WORLD_SIZE</span></code> are assigned automatically.</p></li>
+<li><p>Number of nodes is allowed to change between minimum and maximum sizes (elasticity).</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">torchrun</span></code> is a python
+<a class="reference external" href="https://packaging.python.org/en/latest/specifications/entry-points/#use-for-scripts">console script</a>
+to the main module
+<a class="reference external" href="https://github.com/pytorch/pytorch/blob/master/torch/distributed/run.py">torch.distributed.run</a>
+declared in the <code class="docutils literal notranslate"><span class="pre">entry_points</span></code> configuration in
+<a class="reference external" href="https://github.com/pytorch/pytorch/blob/master/setup.py">setup.py</a>.
+It is equivalent to invoking <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">torch.distributed.run</span></code>.</p>
+</div>
+<section id="transitioning-from-torch-distributed-launch-to-torchrun">
+<h2>Transitioning from torch.distributed.launch to torchrun<a class="headerlink" href="#transitioning-from-torch-distributed-launch-to-torchrun" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">torchrun</span></code> supports the same arguments as <code class="docutils literal notranslate"><span class="pre">torch.distributed.launch</span></code> <strong>except</strong>
+for <code class="docutils literal notranslate"><span class="pre">--use-env</span></code> which is now deprecated. To migrate from <code class="docutils literal notranslate"><span class="pre">torch.distributed.launch</span></code>
+to <code class="docutils literal notranslate"><span class="pre">torchrun</span></code> follow these steps:</p>
+<ol class="arabic">
+<li><p>If your training script is already reading <code class="docutils literal notranslate"><span class="pre">local_rank</span></code> from the <code class="docutils literal notranslate"><span class="pre">LOCAL_RANK</span></code> environment variable.
+Then you need simply omit the <code class="docutils literal notranslate"><span class="pre">--use-env</span></code> flag, e.g.:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><code class="docutils literal notranslate"><span class="pre">torch.distributed.launch</span></code></p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">torchrun</span></code></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>torch.distributed.launch<span class="w"> </span>--use-env<span class="w"> </span>train_script.py
+</pre></div>
+</div>
+</td>
+<td><div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>torchrun<span class="w"> </span>train_script.py
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li><p>If your training script reads local rank from a <code class="docutils literal notranslate"><span class="pre">--local-rank</span></code> cmd argument.
+Change your training script to read from the <code class="docutils literal notranslate"><span class="pre">LOCAL_RANK</span></code> environment variable as
+demonstrated by the following code snippet:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><code class="docutils literal notranslate"><span class="pre">torch.distributed.launch</span></code></p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">torchrun</span></code></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">argparse</span>
+<span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--local-rank&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+<span class="n">local_rank</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">local_rank</span>
+</pre></div>
+</div>
+</td>
+<td><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="n">local_rank</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;LOCAL_RANK&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ol>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.0.0: </span>The launcher will pass the <code class="docutils literal notranslate"><span class="pre">--local-rank=&lt;rank&gt;</span></code> argument to your script.
+From PyTorch 2.0.0 onwards, the dashed <code class="docutils literal notranslate"><span class="pre">--local-rank</span></code> is preferred over the
+previously used underscored <code class="docutils literal notranslate"><span class="pre">--local_rank</span></code>.</p>
+<p>For backward compatibility, it may be necessary for users to handle both
+cases in their argument parsing code. This means including both <code class="docutils literal notranslate"><span class="pre">&quot;--local-rank&quot;</span></code>
+and <code class="docutils literal notranslate"><span class="pre">&quot;--local_rank&quot;</span></code> in the argument parser. If only <code class="docutils literal notranslate"><span class="pre">&quot;--local_rank&quot;</span></code> is
+provided, the launcher will trigger an error: “error: unrecognized arguments:
+–local-rank=&lt;rank&gt;”. For training code that only supports PyTorch 2.0.0+,
+including <code class="docutils literal notranslate"><span class="pre">&quot;--local-rank&quot;</span></code> should be sufficient.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">argparse</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--local-rank&quot;</span><span class="p">,</span> <span class="s2">&quot;--local_rank&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<p>The aformentioned changes suffice to migrate from <code class="docutils literal notranslate"><span class="pre">torch.distributed.launch</span></code> to <code class="docutils literal notranslate"><span class="pre">torchrun</span></code>.
+To take advantage of new features such as elasticity, fault-tolerance, and error reporting of <code class="docutils literal notranslate"><span class="pre">torchrun</span></code>
+please refer to:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="train_script.html#elastic-train-script"><span class="std std-ref">Train script</span></a> for more information on authoring training scripts that are <code class="docutils literal notranslate"><span class="pre">torchrun</span></code> compliant.</p></li>
+<li><p>the rest of this page for more information on the features of <code class="docutils literal notranslate"><span class="pre">torchrun</span></code>.</p></li>
+</ul>
+<section id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Link to this heading">#</a></h3>
+<section id="single-node-multi-worker">
+<h4>Single-node multi-worker<a class="headerlink" href="#single-node-multi-worker" title="Link to this heading">#</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>torchrun
+    --standalone
+    --nnodes=1
+    --nproc-per-node=$NUM_TRAINERS
+    YOUR_TRAINING_SCRIPT.py (--arg1 ... train script args...)
+</pre></div>
+</div>
+</section>
+<section id="stacked-single-node-multi-worker">
+<h4>Stacked single-node multi-worker<a class="headerlink" href="#stacked-single-node-multi-worker" title="Link to this heading">#</a></h4>
+<p>To run multiple instances (separate jobs) of single-node, multi-worker on the
+same host, we need to make sure that each instance (job) is
+setup on different ports to avoid port conflicts (or worse, two jobs being merged
+as a single job). To do this you have to run with <code class="docutils literal notranslate"><span class="pre">--rdzv-backend=c10d</span></code>
+and specify a different port by setting <code class="docutils literal notranslate"><span class="pre">--rdzv-endpoint=localhost:$PORT_k</span></code>.
+For <code class="docutils literal notranslate"><span class="pre">--nodes=1</span></code>, its often convenient to let <code class="docutils literal notranslate"><span class="pre">torchrun</span></code> pick a free random
+port automatically instead of manually assigning different ports for each run.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>torchrun
+    --rdzv-backend=c10d
+    --rdzv-endpoint=localhost:0
+    --nnodes=1
+    --nproc-per-node=$NUM_TRAINERS
+    YOUR_TRAINING_SCRIPT.py (--arg1 ... train script args...)
+</pre></div>
+</div>
+</section>
+<section id="fault-tolerant-fixed-sized-number-of-workers-no-elasticity-tolerates-3-failures">
+<h4>Fault tolerant (fixed sized number of workers, no elasticity, tolerates 3 failures)<a class="headerlink" href="#fault-tolerant-fixed-sized-number-of-workers-no-elasticity-tolerates-3-failures" title="Link to this heading">#</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>torchrun
+    --nnodes=$NUM_NODES
+    --nproc-per-node=$NUM_TRAINERS
+    --max-restarts=3
+    --rdzv-id=$JOB_ID
+    --rdzv-backend=c10d
+    --rdzv-endpoint=$HOST_NODE_ADDR
+    YOUR_TRAINING_SCRIPT.py (--arg1 ... train script args...)
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">HOST_NODE_ADDR</span></code>, in form &lt;host&gt;[:&lt;port&gt;] (e.g. node1.example.com:29400), specifies the node and
+the port on which the C10d rendezvous backend should be instantiated and hosted. It can be any
+node in your training cluster, but ideally you should pick a node that has a high bandwidth.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If no port number is specified <code class="docutils literal notranslate"><span class="pre">HOST_NODE_ADDR</span></code> defaults to 29400.</p>
+</div>
+</section>
+<section id="elastic-min-1-max-4-tolerates-up-to-3-membership-changes-or-failures">
+<h4>Elastic (<code class="docutils literal notranslate"><span class="pre">min=1</span></code>, <code class="docutils literal notranslate"><span class="pre">max=4</span></code>, tolerates up to 3 membership changes or failures)<a class="headerlink" href="#elastic-min-1-max-4-tolerates-up-to-3-membership-changes-or-failures" title="Link to this heading">#</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>torchrun
+    --nnodes=1:4
+    --nproc-per-node=$NUM_TRAINERS
+    --max-restarts=3
+    --rdzv-id=$JOB_ID
+    --rdzv-backend=c10d
+    --rdzv-endpoint=$HOST_NODE_ADDR
+    YOUR_TRAINING_SCRIPT.py (--arg1 ... train script args...)
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">HOST_NODE_ADDR</span></code>, in form &lt;host&gt;[:&lt;port&gt;] (e.g. node1.example.com:29400), specifies the node and
+the port on which the C10d rendezvous backend should be instantiated and hosted. It can be any
+node in your training cluster, but ideally you should pick a node that has a high bandwidth.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If no port number is specified <code class="docutils literal notranslate"><span class="pre">HOST_NODE_ADDR</span></code> defaults to 29400.</p>
+</div>
+</section>
+</section>
+<section id="note-on-rendezvous-backend">
+<h3>Note on rendezvous backend<a class="headerlink" href="#note-on-rendezvous-backend" title="Link to this heading">#</a></h3>
+<p>For multi-node training you need to specify:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--rdzv-id</span></code>: A unique job id (shared by all nodes participating in the job)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--rdzv-backend</span></code>: An implementation of
+<a class="reference internal" href="rendezvous.html#torch.distributed.elastic.rendezvous.RendezvousHandler" title="torch.distributed.elastic.rendezvous.RendezvousHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.distributed.elastic.rendezvous.RendezvousHandler</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--rdzv-endpoint</span></code>: The endpoint where the rendezvous backend is running; usually in form
+<code class="docutils literal notranslate"><span class="pre">host:port</span></code>.</p></li>
+</ol>
+<p>Currently <code class="docutils literal notranslate"><span class="pre">c10d</span></code> (recommended), <code class="docutils literal notranslate"><span class="pre">etcd-v2</span></code>, and <code class="docutils literal notranslate"><span class="pre">etcd</span></code> (legacy)  rendezvous backends are
+supported out of the box. To use <code class="docutils literal notranslate"><span class="pre">etcd-v2</span></code> or <code class="docutils literal notranslate"><span class="pre">etcd</span></code>, setup an etcd server with the <code class="docutils literal notranslate"><span class="pre">v2</span></code> api
+enabled (e.g. <code class="docutils literal notranslate"><span class="pre">--enable-v2</span></code>).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code class="docutils literal notranslate"><span class="pre">etcd-v2</span></code> and <code class="docutils literal notranslate"><span class="pre">etcd</span></code> rendezvous use etcd API v2. You MUST enable the v2 API on the etcd
+server. Our tests use etcd v3.4.3.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>For etcd-based rendezvous we recommend using <code class="docutils literal notranslate"><span class="pre">etcd-v2</span></code> over <code class="docutils literal notranslate"><span class="pre">etcd</span></code> which is functionally
+equivalent, but uses a revised implementation. <code class="docutils literal notranslate"><span class="pre">etcd</span></code> is in maintenance mode and will be
+removed in a future version.</p>
+</div>
+</section>
+<section id="definitions">
+<h3>Definitions<a class="headerlink" href="#definitions" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Node</span></code> - A physical instance or a container; maps to the unit that the job manager works with.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Worker</span></code> - A worker in the context of distributed training.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">WorkerGroup</span></code> - The set of workers that execute the same function (e.g. trainers).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LocalWorkerGroup</span></code> - A subset of the workers in the worker group running on the same node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RANK</span></code> - The rank of the worker within a worker group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">WORLD_SIZE</span></code> - The total number of workers in a worker group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LOCAL_RANK</span></code> - The rank of the worker within a local worker group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LOCAL_WORLD_SIZE</span></code> - The size of the local worker group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rdzv_id</span></code> - A user-defined id that uniquely identifies the worker group for a job. This id is
+used by each node to join as a member of a particular worker group.</p></li>
+</ol>
+<ol class="arabic simple" start="9">
+<li><p><code class="docutils literal notranslate"><span class="pre">rdzv_backend</span></code> - The backend of the rendezvous (e.g. <code class="docutils literal notranslate"><span class="pre">c10d</span></code>). This is typically a strongly
+consistent key-value store.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rdzv_endpoint</span></code> - The rendezvous backend endpoint; usually in form <code class="docutils literal notranslate"><span class="pre">&lt;host&gt;:&lt;port&gt;</span></code>.</p></li>
+</ol>
+<p>A <code class="docutils literal notranslate"><span class="pre">Node</span></code> runs <code class="docutils literal notranslate"><span class="pre">LOCAL_WORLD_SIZE</span></code> workers which comprise a <code class="docutils literal notranslate"><span class="pre">LocalWorkerGroup</span></code>. The union of
+all <code class="docutils literal notranslate"><span class="pre">LocalWorkerGroups</span></code> in the nodes in the job comprise the <code class="docutils literal notranslate"><span class="pre">WorkerGroup</span></code>.</p>
+</section>
+<section id="environment-variables">
+<h3>Environment Variables<a class="headerlink" href="#environment-variables" title="Link to this heading">#</a></h3>
+<p>The following environment variables are made available to you in your script:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">LOCAL_RANK</span></code> -  The local rank.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RANK</span></code> -  The global rank.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GROUP_RANK</span></code> - The rank of the worker group. A number between 0 and <code class="docutils literal notranslate"><span class="pre">max_nnodes</span></code>. When
+running a single worker group per node, this is the rank of the node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ROLE_RANK</span></code> -  The rank of the worker across all the workers that have the same role. The role
+of the worker is specified in the <code class="docutils literal notranslate"><span class="pre">WorkerSpec</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LOCAL_WORLD_SIZE</span></code> - The local world size (e.g. number of workers running locally); equals to
+<code class="docutils literal notranslate"><span class="pre">--nproc-per-node</span></code> specified on <code class="docutils literal notranslate"><span class="pre">torchrun</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">WORLD_SIZE</span></code> - The world size (total number of workers in the job).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ROLE_WORLD_SIZE</span></code> - The total number of workers that was launched with the same role specified
+in <code class="docutils literal notranslate"><span class="pre">WorkerSpec</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MASTER_ADDR</span></code> - The FQDN of the host that is running worker with rank 0; used to initialize
+the Torch Distributed backend.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MASTER_PORT</span></code> - The port on the <code class="docutils literal notranslate"><span class="pre">MASTER_ADDR</span></code> that can be used to host the C10d TCP store.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TORCHELASTIC_RESTART_COUNT</span></code> - The number of worker group restarts so far.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TORCHELASTIC_MAX_RESTARTS</span></code> - The configured maximum number of restarts.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TORCHELASTIC_RUN_ID</span></code> - Equal to the rendezvous <code class="docutils literal notranslate"><span class="pre">run_id</span></code> (e.g. unique job id).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PYTHON_EXEC</span></code> - System executable override. If provided, the python user script will
+use the value of <code class="docutils literal notranslate"><span class="pre">PYTHON_EXEC</span></code> as executable. The <cite>sys.executable</cite> is used by default.</p></li>
+</ol>
+</section>
+<section id="deployment">
+<h3>Deployment<a class="headerlink" href="#deployment" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>(Not needed for the C10d backend) Start the rendezvous backend server and get the endpoint (to be
+passed as <code class="docutils literal notranslate"><span class="pre">--rdzv-endpoint</span></code> to the launcher script)</p></li>
+<li><p>Single-node multi-worker: Start the launcher on the host to start the agent process which
+creates and monitors a local worker group.</p></li>
+<li><p>Multi-node multi-worker: Start the launcher with the same arguments on all the nodes
+participating in training.</p></li>
+</ol>
+<p>When using a job/cluster manager the entry point command to the multi-node job should be this
+launcher.</p>
+</section>
+<section id="failure-modes">
+<h3>Failure Modes<a class="headerlink" href="#failure-modes" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Worker failure: For a training job with <code class="docutils literal notranslate"><span class="pre">n</span></code> workers, if <code class="docutils literal notranslate"><span class="pre">k&lt;=n</span></code> workers fail all workers
+are stopped and restarted up to <code class="docutils literal notranslate"><span class="pre">max_restarts</span></code>.</p></li>
+<li><p>Agent failure: An agent failure results in a local worker group failure. It is up to the job
+manager to fail the entire job (gang semantics) or attempt to replace the node. Both behaviors
+are supported by the agent.</p></li>
+<li><p>Node failure: Same as agent failure.</p></li>
+</ol>
+</section>
+<section id="membership-changes">
+<h3>Membership Changes<a class="headerlink" href="#membership-changes" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Node departure (scale-down): The agent is notified of the departure, all existing workers are
+stopped, a new <code class="docutils literal notranslate"><span class="pre">WorkerGroup</span></code> is formed, and all workers are started with a new <code class="docutils literal notranslate"><span class="pre">RANK</span></code> and
+<code class="docutils literal notranslate"><span class="pre">WORLD_SIZE</span></code>.</p></li>
+<li><p>Node arrival (scale-up): The new node is admitted to the job, all existing workers are stopped,
+a new <code class="docutils literal notranslate"><span class="pre">WorkerGroup</span></code> is formed, and all workers are started with a new <code class="docutils literal notranslate"><span class="pre">RANK</span></code> and
+<code class="docutils literal notranslate"><span class="pre">WORLD_SIZE</span></code>.</p></li>
+</ol>
+</section>
+<section id="important-notices">
+<h3>Important Notices<a class="headerlink" href="#important-notices" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>This utility and multi-process distributed (single-node or
+multi-node) GPU training currently only achieves the best performance using
+the NCCL distributed backend. Thus NCCL backend is the recommended backend to
+use for GPU training.</p></li>
+<li><p>The environment variables necessary to initialize a Torch process group are provided to you by
+this module, no need for you to pass <code class="docutils literal notranslate"><span class="pre">RANK</span></code> manually.  To initialize a process group in your
+training script, simply run:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">torch.distributed</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dist</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dist</span><span class="o">.</span><span class="n">init_process_group</span><span class="p">(</span><span class="n">backend</span><span class="o">=</span><span class="s2">&quot;gloo|nccl&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>In your training program, you can either use regular distributed functions
+or use <a class="reference internal" href="../python-api/generated/torch.nn.parallel.DistributedDataParallel.html#torch.nn.parallel.DistributedDataParallel" title="torch.nn.parallel.DistributedDataParallel"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.nn.parallel.DistributedDataParallel()</span></code></a> module. If your
+training program uses GPUs for training and you would like to use
+<a class="reference internal" href="../python-api/generated/torch.nn.parallel.DistributedDataParallel.html#torch.nn.parallel.DistributedDataParallel" title="torch.nn.parallel.DistributedDataParallel"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.nn.parallel.DistributedDataParallel()</span></code></a> module,
+here is how to configure it.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">local_rank</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;LOCAL_RANK&quot;</span><span class="p">])</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">parallel</span><span class="o">.</span><span class="n">DistributedDataParallel</span><span class="p">(</span><span class="n">model</span><span class="p">,</span>
+                                                  <span class="n">device_ids</span><span class="o">=</span><span class="p">[</span><span class="n">local_rank</span><span class="p">],</span>
+                                                  <span class="n">output_device</span><span class="o">=</span><span class="n">local_rank</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Please ensure that <code class="docutils literal notranslate"><span class="pre">device_ids</span></code> argument is set to be the only GPU device id
+that your code will be operating on. This is generally the local rank of the
+process. In other words, the <code class="docutils literal notranslate"><span class="pre">device_ids</span></code> needs to be <code class="docutils literal notranslate"><span class="pre">[int(os.environ(&quot;LOCAL_RANK&quot;))]</span></code>,
+and <code class="docutils literal notranslate"><span class="pre">output_device</span></code> needs to be <code class="docutils literal notranslate"><span class="pre">int(os.environ(&quot;LOCAL_RANK&quot;))</span></code> in order to use this
+utility</p>
+<ol class="arabic simple" start="4">
+<li><p>On failures or membership changes ALL surviving workers are killed immediately. Make sure to
+checkpoint your progress. The frequency of checkpoints should depend on your job’s tolerance
+for lost work.</p></li>
+<li><p>This module only supports homogeneous <code class="docutils literal notranslate"><span class="pre">LOCAL_WORLD_SIZE</span></code>. That is, it is assumed that all
+nodes run the same number of local workers (per role).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RANK</span></code> is NOT stable. Between restarts, the local workers on a node can be assigned a
+different range of ranks than before. NEVER hard code any assumptions about the stable-ness of
+ranks or some correlation between <code class="docutils literal notranslate"><span class="pre">RANK</span></code> and <code class="docutils literal notranslate"><span class="pre">LOCAL_RANK</span></code>.</p></li>
+<li><p>When using elasticity (<code class="docutils literal notranslate"><span class="pre">min_size!=max_size</span></code>) DO NOT hard code assumptions about
+<code class="docutils literal notranslate"><span class="pre">WORLD_SIZE</span></code> as the world size can change as nodes are allowed to leave and join.</p></li>
+<li><p>It is recommended for your script to have the following structure:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+  <span class="n">load_checkpoint</span><span class="p">(</span><span class="n">checkpoint_path</span><span class="p">)</span>
+  <span class="n">initialize</span><span class="p">()</span>
+  <span class="n">train</span><span class="p">()</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">train</span><span class="p">():</span>
+  <span class="k">for</span> <span class="n">batch</span> <span class="ow">in</span> <span class="nb">iter</span><span class="p">(</span><span class="n">dataset</span><span class="p">):</span>
+    <span class="n">train_step</span><span class="p">(</span><span class="n">batch</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">should_checkpoint</span><span class="p">:</span>
+      <span class="n">save_checkpoint</span><span class="p">(</span><span class="n">checkpoint_path</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="9">
+<li><p>(Recommended) On worker errors, this tool will summarize the details of the error
+(e.g. time, rank, host, pid, traceback, etc). On each node, the first error (by timestamp)
+is heuristically reported as the “Root Cause” error. To get tracebacks as part of this
+error summary print out, you must decorate your main entrypoint function in your
+training script as shown in the example below. If not decorated, then the summary
+will not include the traceback of the exception and will only contain the exitcode.
+For details on torchelastic error handling see: <a class="reference external" href="https://pytorch.org/docs/stable/elastic/errors.html">https://pytorch.org/docs/stable/elastic/errors.html</a></p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">torch.distributed.elastic.multiprocessing.errors</span><span class="w"> </span><span class="kn">import</span> <span class="n">record</span>
+
+<span class="nd">@record</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># do train</span>
+    <span class="k">pass</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
 </section>
 
 
@@ -564,46 +1013,62 @@
             
               
                 <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc">
-<div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transitioning-from-torch-distributed-launch-to-torchrun">Transitioning from torch.distributed.launch to torchrun</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#single-node-multi-worker">Single-node multi-worker</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stacked-single-node-multi-worker">Stacked single-node multi-worker</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fault-tolerant-fixed-sized-number-of-workers-no-elasticity-tolerates-3-failures">Fault tolerant (fixed sized number of workers, no elasticity, tolerates 3 failures)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elastic-min-1-max-4-tolerates-up-to-3-membership-changes-or-failures">Elastic (<code class="docutils literal notranslate"><span class="pre">min=1</span></code>, <code class="docutils literal notranslate"><span class="pre">max=4</span></code>, tolerates up to 3 membership changes or failures)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#note-on-rendezvous-backend">Note on rendezvous backend</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#environment-variables">Environment Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment">Deployment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#failure-modes">Failure Modes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membership-changes">Membership Changes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-notices">Important Notices</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
 
   <div class="sidebar-secondary-item">
 
-  <div class="tocsection sourcelink">
-    <a href="../_sources/elastic/run.rst">
-      <i class="fa-solid fa-file-lines"></i> Show Source
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/pytorch/pytorch/edit/main/docs/source/elastic/run.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
     </a>
   </div>
 </div>
 
-</div>
-<div class="sidebar-secondary-item"> 
-</div>
-<div class="sidebar-secondary-item">
- <p>PyTorch Libraries</p>
- <ul>
- 
-  <li><a href="https://pytorch.org/vision">torchvision</a></li>
- 
-  <li><a href="https://pytorch.org/executorch">ExecuTorch</a></li>
- 
-  <li><a href="https://https://pytorch.org/ao">torchao</a></li>
- 
-  <li><a href="https://https://pytorch.org/audio">torchaudio</a></li>
- 
-  <li><a href="https://https://pytorch.org/torchrec">torchrec</a></li>
- 
-  <li><a href="https://https://pytorch.org/serve">torchserve</a></li>
- 
-  <li><a href="https://https://pytorch.org/data">torchdata</a></li>
- 
-  <li><a href="https://https://pytorch.org/xla">PyTorch on XLA devices</a></li>
- 
- </ul>
-</div>
+  <div class="sidebar-secondary-item">
+    <div class="tocsection sourcelink">
+      <a href="../_sources/elastic/run.rst.txt">
+        <i class="fa-solid fa-file-lines"></i> Show Source
+      </a>
+    </div>
 </div>
 
-</div>
+</div></div>
               
             
           </div>
@@ -618,7 +1083,6 @@
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

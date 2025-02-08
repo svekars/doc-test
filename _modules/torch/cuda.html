@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -44,7 +44,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -63,7 +63,7 @@ window.addEventListener("load", () => mermaid.run());
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -72,7 +72,6 @@ window.addEventListener("load", () => mermaid.run());
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -159,7 +158,7 @@ window.addEventListener("load", () => mermaid.run());
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -183,8 +182,8 @@ window.addEventListener("load", () => mermaid.run());
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -254,7 +253,7 @@ window.addEventListener("load", () => mermaid.run());
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -269,7 +268,6 @@ window.addEventListener("load", () => mermaid.run());
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -309,9 +307,27 @@ window.addEventListener("load", () => mermaid.run());
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -325,20 +341,14 @@ window.addEventListener("load", () => mermaid.run());
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -399,6 +409,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -488,6 +538,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
         
       </div>
     
@@ -599,8 +689,8 @@ window.addEventListener("load", () => mermaid.run());
 <span class="n">_initialized</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="n">_tls</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">local</span><span class="p">()</span>
 <span class="n">_initialization_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
-<span class="n">_queued_calls</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span>
-    <span class="nb">tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[],</span> <span class="kc">None</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span>
+<span class="n">_queued_calls</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span>
+    <span class="n">Tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[],</span> <span class="kc">None</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span>
 <span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># don&#39;t invoke these until initialization occurs</span>
 <span class="n">_is_in_bad_fork</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="p">,</span> <span class="s2">&quot;_cuda_isInBadFork&quot;</span><span class="p">,</span> <span class="k">lambda</span><span class="p">:</span> <span class="kc">False</span><span class="p">)</span>
 <span class="n">_device_t</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span><span class="n">_device</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
@@ -655,7 +745,7 @@ window.addEventListener("load", () => mermaid.run());
 <span class="n">has_half</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">has_magma</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">_has_magma</span>
 
-<span class="n">default_generators</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">Generator</span><span class="p">]</span> <span class="o">=</span> <span class="p">()</span>  <span class="c1"># type: ignore[assignment]</span>
+<span class="n">default_generators</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">Generator</span><span class="p">]</span> <span class="o">=</span> <span class="p">()</span>  <span class="c1"># type: ignore[assignment]</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">_is_compiled</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
@@ -668,7 +758,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="is_available">
-<a class="viewcode-back" href="../../python-api/torch.cuda.is_available.html#torch.cuda.is_available">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.is_available.html#torch.cuda.is_available">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">is_available</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return a bool indicating if CUDA is currently available.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">_is_compiled</span><span class="p">():</span>
@@ -797,7 +887,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="is_initialized">
-<a class="viewcode-back" href="../../generated/torch.cuda.is_initialized.html#torch.cuda.is_initialized">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.is_initialized.html#torch.cuda.is_initialized">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">is_initialized</span><span class="p">():</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return whether PyTorch&#39;s CUDA state has been initialized.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">_initialized</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">_is_in_bad_fork</span><span class="p">()</span></div>
@@ -805,21 +895,20 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">_lazy_call</span><span class="p">(</span><span class="nb">callable</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="k">with</span> <span class="n">_initialization_lock</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">is_initialized</span><span class="p">():</span>
-            <span class="nb">callable</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">is_initialized</span><span class="p">():</span>
+        <span class="nb">callable</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># TODO(torch_deploy): this accesses linecache, which attempts to read the</span>
+        <span class="c1"># file system to get traceback info. Patch linecache or do something</span>
+        <span class="c1"># else here if this ends up being important.</span>
+        <span class="k">global</span> <span class="n">_lazy_seed_tracker</span>
+        <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;seed_all&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+            <span class="n">_lazy_seed_tracker</span><span class="o">.</span><span class="n">queue_seed_all</span><span class="p">(</span><span class="nb">callable</span><span class="p">,</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format_stack</span><span class="p">())</span>
+        <span class="k">elif</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;seed&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+            <span class="n">_lazy_seed_tracker</span><span class="o">.</span><span class="n">queue_seed</span><span class="p">(</span><span class="nb">callable</span><span class="p">,</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format_stack</span><span class="p">())</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="c1"># TODO(torch_deploy): this accesses linecache, which attempts to read the</span>
-            <span class="c1"># file system to get traceback info. Patch linecache or do something</span>
-            <span class="c1"># else here if this ends up being important.</span>
-            <span class="k">global</span> <span class="n">_lazy_seed_tracker</span>
-            <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;seed_all&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
-                <span class="n">_lazy_seed_tracker</span><span class="o">.</span><span class="n">queue_seed_all</span><span class="p">(</span><span class="nb">callable</span><span class="p">,</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format_stack</span><span class="p">())</span>
-            <span class="k">elif</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;seed&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
-                <span class="n">_lazy_seed_tracker</span><span class="o">.</span><span class="n">queue_seed</span><span class="p">(</span><span class="nb">callable</span><span class="p">,</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format_stack</span><span class="p">())</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="c1"># Don&#39;t store the actual traceback to avoid memory cycle</span>
-                <span class="n">_queued_calls</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="nb">callable</span><span class="p">,</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format_stack</span><span class="p">()))</span>
+            <span class="c1"># Don&#39;t store the actual traceback to avoid memory cycle</span>
+            <span class="n">_queued_calls</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="nb">callable</span><span class="p">,</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format_stack</span><span class="p">()))</span>
 
 
 <span class="n">_lazy_call</span><span class="p">(</span><span class="n">_check_capability</span><span class="p">)</span>
@@ -834,7 +923,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="init">
-<a class="viewcode-back" href="../../generated/torch.cuda.init.html#torch.cuda.init">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.init.html#torch.cuda.init">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">init</span><span class="p">():</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Initialize PyTorch&#39;s CUDA state.</span>
 
@@ -904,7 +993,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="cudart">
-<a class="viewcode-back" href="../../python-api/torch.cuda.cudart.html#torch.cuda.cudart">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.cudart.html#torch.cuda.cudart">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">cudart</span><span class="p">():</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Retrieves the CUDA runtime API module.</span>
 
@@ -994,7 +1083,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="device">
-<a class="viewcode-back" href="../../generated/torch.cuda.device.html#torch.cuda.device">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.device.html#torch.cuda.device">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">device</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Context-manager that changes the selected device.</span>
 
@@ -1017,7 +1106,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="device_of">
-<a class="viewcode-back" href="../../python-api/torch.cuda.device_of.html#torch.cuda.device_of">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.device_of.html#torch.cuda.device_of">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">device_of</span><span class="p">(</span><span class="n">device</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Context-manager that changes the current device to that of given object.</span>
 
@@ -1035,7 +1124,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="set_device">
-<a class="viewcode-back" href="../../python-api/torch.cuda.set_device.html#torch.cuda.set_device">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.set_device.html#torch.cuda.set_device">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">set_device</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">_device_t</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Set the current device.</span>
 
@@ -1053,7 +1142,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="get_device_name">
-<a class="viewcode-back" href="../../generated/torch.cuda.get_device_name.html#torch.cuda.get_device_name">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.get_device_name.html#torch.cuda.get_device_name">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">get_device_name</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">_device_t</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get the name of a device.</span>
 
@@ -1071,8 +1160,8 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="get_device_capability">
-<a class="viewcode-back" href="../../python-api/torch.cuda.get_device_capability.html#torch.cuda.get_device_capability">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">get_device_capability</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">_device_t</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.get_device_capability.html#torch.cuda.get_device_capability">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_device_capability</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">_device_t</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get the cuda capability of a device.</span>
 
 <span class="sd">    Args:</span>
@@ -1091,7 +1180,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="get_device_properties">
-<a class="viewcode-back" href="../../python-api/torch.cuda.get_device_properties.html#torch.cuda.get_device_properties">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.get_device_properties.html#torch.cuda.get_device_properties">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">get_device_properties</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">_device_t</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">_CudaDeviceProperties</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get the properties of a device.</span>
 
@@ -1113,7 +1202,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="can_device_access_peer">
-<a class="viewcode-back" href="../../python-api/torch.cuda.can_device_access_peer.html#torch.cuda.can_device_access_peer">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.can_device_access_peer.html#torch.cuda.can_device_access_peer">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">can_device_access_peer</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">_device_t</span><span class="p">,</span> <span class="n">peer_device</span><span class="p">:</span> <span class="n">_device_t</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Check if peer access between two devices is possible.&quot;&quot;&quot;</span>
     <span class="n">_lazy_init</span><span class="p">()</span>
@@ -1128,7 +1217,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="StreamContext">
-<a class="viewcode-back" href="../../python-api/torch.cuda.StreamContext.html#torch.cuda.StreamContext">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.StreamContext.html#torch.cuda.StreamContext">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">StreamContext</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Context-manager that selects a given stream.</span>
 
@@ -1187,16 +1276,15 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="stream">
-<a class="viewcode-back" href="../../python-api/torch.cuda.Stream.html#torch.cuda.stream">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.Stream.html#torch.cuda.stream">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">stream</span><span class="p">(</span><span class="n">stream</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="s2">&quot;torch.cuda.Stream&quot;</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">StreamContext</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Wrap around the Context-manager StreamContext that selects a given stream.</span>
 
 <span class="sd">    Arguments:</span>
 <span class="sd">        stream (Stream): selected stream. This manager is a no-op if it&#39;s</span>
 <span class="sd">            ``None``.</span>
-<span class="sd">    .. note::</span>
-<span class="sd">        In eager mode stream is of type Stream class while in JIT it is</span>
-<span class="sd">        an object of the custom class ``torch.classes.cuda.Stream``.</span>
+<span class="sd">    ..Note:: In eager mode stream is of type Stream class while in JIT it is</span>
+<span class="sd">    an object of the custom class ``torch.classes.cuda.Stream``.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">StreamContext</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span></div>
 
@@ -1218,7 +1306,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="set_stream">
-<a class="viewcode-back" href="../../python-api/torch.cuda.set_stream.html#torch.cuda.set_stream">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.set_stream.html#torch.cuda.set_stream">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">set_stream</span><span class="p">(</span><span class="n">stream</span><span class="p">:</span> <span class="n">Stream</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Set the current stream.This is a wrapper API to set the stream.</span>
 <span class="sd">        Usage of this function is discouraged in favor of the ``stream``</span>
@@ -1238,7 +1326,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 
-<span class="k">def</span><span class="w"> </span><span class="nf">_parse_visible_devices</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_parse_visible_devices</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Parse CUDA_VISIBLE_DEVICES environment variable.&quot;&quot;&quot;</span>
     <span class="n">var</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;CUDA_VISIBLE_DEVICES&quot;</span><span class="p">)</span>
 
@@ -1279,12 +1367,12 @@ window.addEventListener("load", () => mermaid.run());
                 <span class="n">idx</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">[:</span><span class="n">idx</span><span class="p">])</span> <span class="k">if</span> <span class="n">idx</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">parse_list_with_prefix</span><span class="p">(</span><span class="n">lst</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">prefix</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-        <span class="n">rcs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">parse_list_with_prefix</span><span class="p">(</span><span class="n">lst</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">prefix</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="n">rcs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">lst</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">):</span>
             <span class="c1"># Repeated id results in empty set</span>
             <span class="k">if</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">rcs</span><span class="p">:</span>
-                <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="p">[])</span>
+                <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="p">[])</span>
             <span class="c1"># Anything other but prefix is ignored</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">elem</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">prefix</span><span class="p">):</span>
                 <span class="k">break</span>
@@ -1297,12 +1385,12 @@ window.addEventListener("load", () => mermaid.run());
         <span class="k">return</span> <span class="n">parse_list_with_prefix</span><span class="p">(</span><span class="n">var</span><span class="p">,</span> <span class="s2">&quot;MIG-&quot;</span><span class="p">)</span>
     <span class="c1"># CUDA_VISIBLE_DEVICES uses something like strtoul</span>
     <span class="c1"># which makes `1gpu2,2ampere` is equivalent to `1,2`</span>
-    <span class="n">rc</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">rc</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">var</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">):</span>
         <span class="n">x</span> <span class="o">=</span> <span class="n">_strtoul</span><span class="p">(</span><span class="n">elem</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
         <span class="c1"># Repeated ordinal results in empty set</span>
         <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">rc</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="p">[])</span>
+            <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="p">[])</span>
         <span class="c1"># Negative value aborts the sequence</span>
         <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">break</span>
@@ -1340,7 +1428,7 @@ window.addEventListener("load", () => mermaid.run());
     <span class="k">return</span> <span class="n">dev_count</span><span class="o">.</span><span class="n">value</span>
 
 
-<span class="k">def</span><span class="w"> </span><span class="nf">_raw_device_uuid_amdsmi</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_raw_device_uuid_amdsmi</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
     <span class="kn">from</span><span class="w"> </span><span class="nn">ctypes</span><span class="w"> </span><span class="kn">import</span> <span class="n">byref</span><span class="p">,</span> <span class="n">c_int</span><span class="p">,</span> <span class="n">c_void_p</span><span class="p">,</span> <span class="n">CDLL</span><span class="p">,</span> <span class="n">create_string_buffer</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">_HAS_PYNVML</span><span class="p">:</span>  <span class="c1"># If amdsmi is not available</span>
@@ -1356,7 +1444,7 @@ window.addEventListener("load", () => mermaid.run());
     <span class="k">except</span> <span class="n">amdsmi</span><span class="o">.</span><span class="n">AmdSmiException</span><span class="p">:</span>
         <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Can&#39;t get amdsmi device count&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="kc">None</span>
-    <span class="n">uuids</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">uuids</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dev_count</span><span class="p">):</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">handler</span> <span class="o">=</span> <span class="n">amdsmi</span><span class="o">.</span><span class="n">amdsmi_get_processor_handles</span><span class="p">()[</span><span class="n">idx</span><span class="p">]</span>
@@ -1376,7 +1464,7 @@ window.addEventListener("load", () => mermaid.run());
     <span class="k">return</span> <span class="n">uuids</span>
 
 
-<span class="k">def</span><span class="w"> </span><span class="nf">_raw_device_uuid_nvml</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_raw_device_uuid_nvml</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return list of device UUID as reported by NVML or None if NVM discovery/initialization failed.&quot;&quot;&quot;</span>
     <span class="kn">from</span><span class="w"> </span><span class="nn">ctypes</span><span class="w"> </span><span class="kn">import</span> <span class="n">byref</span><span class="p">,</span> <span class="n">c_int</span><span class="p">,</span> <span class="n">c_void_p</span><span class="p">,</span> <span class="n">CDLL</span><span class="p">,</span> <span class="n">create_string_buffer</span>
 
@@ -1390,7 +1478,7 @@ window.addEventListener("load", () => mermaid.run());
     <span class="k">if</span> <span class="n">rc</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Can&#39;t get nvml device count&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="kc">None</span>
-    <span class="n">uuids</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">uuids</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dev_count</span><span class="o">.</span><span class="n">value</span><span class="p">):</span>
         <span class="n">dev_id</span> <span class="o">=</span> <span class="n">c_void_p</span><span class="p">()</span>
         <span class="n">rc</span> <span class="o">=</span> <span class="n">nvml_h</span><span class="o">.</span><span class="n">nvmlDeviceGetHandleByIndex_v2</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">byref</span><span class="p">(</span><span class="n">dev_id</span><span class="p">))</span>
@@ -1408,10 +1496,10 @@ window.addEventListener("load", () => mermaid.run());
     <span class="k">return</span> <span class="n">uuids</span>
 
 
-<span class="k">def</span><span class="w"> </span><span class="nf">_transform_uuid_to_ordinals</span><span class="p">(</span><span class="n">candidates</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">uuids</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_transform_uuid_to_ordinals</span><span class="p">(</span><span class="n">candidates</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">uuids</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Given the set of partial uuids and list of known uuids builds a set of ordinals excluding ambiguous partials IDs.&quot;&quot;&quot;</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">uuid_to_ordinal</span><span class="p">(</span><span class="n">candidate</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">uuids</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">uuid_to_ordinal</span><span class="p">(</span><span class="n">candidate</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">uuids</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
         <span class="n">best_match</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
         <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">uuid</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">uuids</span><span class="p">):</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">uuid</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">candidate</span><span class="p">):</span>
@@ -1422,7 +1510,7 @@ window.addEventListener("load", () => mermaid.run());
             <span class="n">best_match</span> <span class="o">=</span> <span class="n">idx</span>
         <span class="k">return</span> <span class="n">best_match</span>
 
-    <span class="n">rc</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">rc</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">candidate</span> <span class="ow">in</span> <span class="n">candidates</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">version</span><span class="o">.</span><span class="n">hip</span><span class="p">:</span>
             <span class="n">candidate</span> <span class="o">=</span> <span class="n">candidate</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span>
@@ -1434,7 +1522,7 @@ window.addEventListener("load", () => mermaid.run());
             <span class="k">break</span>
         <span class="c1"># Duplicates result in empty set</span>
         <span class="k">if</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">rc</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="p">[])</span>
+            <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="p">[])</span>
         <span class="n">rc</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">rc</span>
 
@@ -1449,7 +1537,7 @@ window.addEventListener("load", () => mermaid.run());
             <span class="k">if</span> <span class="n">uuids</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
             <span class="c1"># Create string version of visible devices to avoid mypy warnings</span>
-            <span class="n">visible_device_str</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">visible_devices</span><span class="p">)</span>
+            <span class="n">visible_device_str</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">visible_devices</span><span class="p">)</span>
             <span class="n">visible_devices</span> <span class="o">=</span> <span class="n">_transform_uuid_to_ordinals</span><span class="p">(</span><span class="n">visible_device_str</span><span class="p">,</span> <span class="n">uuids</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">raw_cnt</span> <span class="o">=</span> <span class="n">_raw_device_count_amdsmi</span><span class="p">()</span>
@@ -1483,7 +1571,7 @@ window.addEventListener("load", () => mermaid.run());
             <span class="k">if</span> <span class="n">uuids</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
             <span class="n">visible_devices</span> <span class="o">=</span> <span class="n">_transform_uuid_to_ordinals</span><span class="p">(</span>
-                <span class="n">cast</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">visible_devices</span><span class="p">),</span> <span class="n">uuids</span>
+                <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">visible_devices</span><span class="p">),</span> <span class="n">uuids</span>
             <span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">raw_cnt</span> <span class="o">=</span> <span class="n">_raw_device_count_nvml</span><span class="p">()</span>
@@ -1509,9 +1597,9 @@ window.addEventListener("load", () => mermaid.run());
         <span class="k">if</span> <span class="n">uuids</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Can&#39;t get device UUIDs&quot;</span><span class="p">)</span>
         <span class="n">visible_devices</span> <span class="o">=</span> <span class="n">_transform_uuid_to_ordinals</span><span class="p">(</span>
-            <span class="n">cast</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">visible_devices</span><span class="p">),</span> <span class="n">uuids</span>
+            <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">visible_devices</span><span class="p">),</span> <span class="n">uuids</span>
         <span class="p">)</span>
-    <span class="n">visible_devices</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">visible_devices</span><span class="p">)</span>
+    <span class="n">visible_devices</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">visible_devices</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">idx</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">visible_devices</span><span class="p">):</span>
         <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
             <span class="sa">f</span><span class="s2">&quot;device </span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s2"> is not visible (CUDA_VISIBLE_DEVICES=</span><span class="si">{</span><span class="n">visible_devices</span><span class="si">}</span><span class="s2">)&quot;</span>
@@ -1523,7 +1611,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="device_count">
-<a class="viewcode-back" href="../../python-api/torch.cuda.device_count.html#torch.cuda.device_count">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.device_count.html#torch.cuda.device_count">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">device_count</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the number of GPUs available.&quot;&quot;&quot;</span>
     <span class="k">global</span> <span class="n">_cached_device_count</span>
@@ -1544,8 +1632,8 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="get_arch_list">
-<a class="viewcode-back" href="../../python-api/torch.cuda.get_arch_list.html#torch.cuda.get_arch_list">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">get_arch_list</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.get_arch_list.html#torch.cuda.get_arch_list">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_arch_list</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return list CUDA architectures this library was compiled for.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">is_available</span><span class="p">():</span>
         <span class="k">return</span> <span class="p">[]</span>
@@ -1557,7 +1645,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="get_gencode_flags">
-<a class="viewcode-back" href="../../python-api/torch.cuda.get_gencode_flags.html#torch.cuda.get_gencode_flags">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.get_gencode_flags.html#torch.cuda.get_gencode_flags">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">get_gencode_flags</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return NVCC gencode flags this library was compiled with.&quot;&quot;&quot;</span>
     <span class="n">arch_list</span> <span class="o">=</span> <span class="n">get_arch_list</span><span class="p">()</span>
@@ -1574,7 +1662,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="current_device">
-<a class="viewcode-back" href="../../generated/torch.cuda.current_device.html#torch.cuda.current_device">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.current_device.html#torch.cuda.current_device">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">current_device</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the index of a currently selected device.&quot;&quot;&quot;</span>
     <span class="n">_lazy_init</span><span class="p">()</span>
@@ -1583,7 +1671,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="synchronize">
-<a class="viewcode-back" href="../../generated/torch.cuda.synchronize.html#torch.cuda.synchronize">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.synchronize.html#torch.cuda.synchronize">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">synchronize</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">_device_t</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Wait for all kernels in all streams on a CUDA device to complete.</span>
 
@@ -1599,7 +1687,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="ipc_collect">
-<a class="viewcode-back" href="../../python-api/torch.cuda.ipc_collect.html#torch.cuda.ipc_collect">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.ipc_collect.html#torch.cuda.ipc_collect">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">ipc_collect</span><span class="p">():</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Force collects GPU memory after it has been released by CUDA IPC.</span>
 
@@ -1615,7 +1703,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="current_stream">
-<a class="viewcode-back" href="../../python-api/torch.cuda.current_stream.html#torch.cuda.current_stream">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.current_stream.html#torch.cuda.current_stream">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">current_stream</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">_device_t</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Stream</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the currently selected :class:`Stream` for a given device.</span>
 
@@ -1636,7 +1724,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="default_stream">
-<a class="viewcode-back" href="../../python-api/torch.cuda.default_stream.html#torch.cuda.default_stream">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.default_stream.html#torch.cuda.default_stream">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">default_stream</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">_device_t</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Stream</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the default :class:`Stream` for a given device.</span>
 
@@ -1656,39 +1744,8 @@ window.addEventListener("load", () => mermaid.run());
 
 
 
-<div class="viewcode-block" id="get_stream_from_external">
-<a class="viewcode-back" href="../../python-api/torch.cuda.get_stream_from_external.html#torch.cuda.get_stream_from_external">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">get_stream_from_external</span><span class="p">(</span>
-    <span class="n">data_ptr</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">_device_t</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Stream</span><span class="p">:</span>
-<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return a :class:`Stream` from an externally allocated CUDA stream.</span>
-
-<span class="sd">    This function is used to wrap streams allocated in other libraries in order</span>
-<span class="sd">    to facilitate data exchange and multi-library interactions.</span>
-
-<span class="sd">    .. note:: This function doesn&#39;t manage the stream life-cycle, it is the user</span>
-<span class="sd">       responsibility to keep the referenced stream alive while this returned</span>
-<span class="sd">       stream is being used.</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">        data_ptr(int): Integer representation of the `cudaStream_t` value that</span>
-<span class="sd">            is allocated externally.</span>
-<span class="sd">        device(torch.device or int, optional): the device where the stream</span>
-<span class="sd">            was originally allocated. If device is specified incorrectly,</span>
-<span class="sd">            subsequent launches using this stream may fail.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_lazy_init</span><span class="p">()</span>
-    <span class="n">streamdata</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">_cuda_getStreamFromExternal</span><span class="p">(</span>
-        <span class="n">data_ptr</span><span class="p">,</span> <span class="n">_get_device_index</span><span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="n">optional</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="p">)</span>
-    <span class="k">return</span> <span class="n">Stream</span><span class="p">(</span>
-        <span class="n">stream_id</span><span class="o">=</span><span class="n">streamdata</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">device_index</span><span class="o">=</span><span class="n">streamdata</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">device_type</span><span class="o">=</span><span class="n">streamdata</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-    <span class="p">)</span></div>
-
-
-
 <div class="viewcode-block" id="current_blas_handle">
-<a class="viewcode-back" href="../../generated/torch.cuda.current_blas_handle.html#torch.cuda.current_blas_handle">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.current_blas_handle.html#torch.cuda.current_blas_handle">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">current_blas_handle</span><span class="p">():</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return cublasHandle_t pointer to current cuBLAS handle&quot;&quot;&quot;</span>
     <span class="n">_lazy_init</span><span class="p">()</span>
@@ -1697,7 +1754,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="set_sync_debug_mode">
-<a class="viewcode-back" href="../../python-api/torch.cuda.set_sync_debug_mode.html#torch.cuda.set_sync_debug_mode">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.set_sync_debug_mode.html#torch.cuda.set_sync_debug_mode">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">set_sync_debug_mode</span><span class="p">(</span><span class="n">debug_mode</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Set the debug mode for cuda synchronizing operations.</span>
 
@@ -1727,7 +1784,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="get_sync_debug_mode">
-<a class="viewcode-back" href="../../python-api/torch.cuda.get_sync_debug_mode.html#torch.cuda.get_sync_debug_mode">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.get_sync_debug_mode.html#torch.cuda.get_sync_debug_mode">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">get_sync_debug_mode</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return current value of debug mode for cuda synchronizing operations.&quot;&quot;&quot;</span>
     <span class="n">_lazy_init</span><span class="p">()</span>
@@ -1777,10 +1834,10 @@ window.addEventListener("load", () => mermaid.run());
         <span class="k">if</span> <span class="n">uuids</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Can&#39;t get device UUIDs&quot;</span><span class="p">)</span>
         <span class="n">visible_devices_str</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span>
-            <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">visible_devices</span>
+            <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">visible_devices</span>
         <span class="p">)</span>  <span class="c1"># Create str variable for mypy</span>
         <span class="n">visible_devices</span> <span class="o">=</span> <span class="n">_transform_uuid_to_ordinals</span><span class="p">(</span><span class="n">visible_devices_str</span><span class="p">,</span> <span class="n">uuids</span><span class="p">)</span>
-    <span class="n">idx_map</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">cast</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">visible_devices</span><span class="p">)))</span>
+    <span class="n">idx_map</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">visible_devices</span><span class="p">)))</span>
     <span class="k">if</span> <span class="n">idx</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">idx_map</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
             <span class="sa">f</span><span class="s2">&quot;device </span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s2"> is not visible (HIP_VISIBLE_DEVICES=</span><span class="si">{</span><span class="n">visible_devices</span><span class="si">}</span><span class="s2">)&quot;</span>
@@ -1839,7 +1896,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="device_memory_used">
-<a class="viewcode-back" href="../../python-api/torch.cuda.device_memory_used.html#torch.cuda.device_memory_used">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.device_memory_used.html#torch.cuda.device_memory_used">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">device_memory_used</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return used global (device) memory in bytes as given by `nvidia-smi` or `amd-smi`.</span>
 
@@ -1860,7 +1917,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="memory_usage">
-<a class="viewcode-back" href="../../generated/torch.cuda.memory_usage.html#torch.cuda.memory_usage">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.memory_usage.html#torch.cuda.memory_usage">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">memory_usage</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the percent of time over the past sample period during which global (device)</span>
 <span class="sd">    memory was being read or written as given by `nvidia-smi`.</span>
@@ -1884,7 +1941,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="utilization">
-<a class="viewcode-back" href="../../python-api/torch.cuda.utilization.html#torch.cuda.utilization">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.utilization.html#torch.cuda.utilization">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">utilization</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the percent of time over the past sample period during which one or</span>
 <span class="sd">    more kernels was executing on the GPU as given by `nvidia-smi`.</span>
@@ -1908,7 +1965,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="temperature">
-<a class="viewcode-back" href="../../python-api/torch.cuda.temperature.html#torch.cuda.temperature">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.temperature.html#torch.cuda.temperature">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">temperature</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the average temperature of the GPU sensor in Degrees C (Centigrades).</span>
 
@@ -1932,7 +1989,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="power_draw">
-<a class="viewcode-back" href="../../generated/torch.cuda.power_draw.html#torch.cuda.power_draw">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.power_draw.html#torch.cuda.power_draw">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">power_draw</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the average power draw of the GPU sensor in mW (MilliWatts)</span>
 <span class="sd">        over the past sample period as given by `nvidia-smi` for Fermi or newer fully supported devices.</span>
@@ -1954,7 +2011,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="clock_rate">
-<a class="viewcode-back" href="../../python-api/torch.cuda.clock_rate.html#torch.cuda.clock_rate">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cuda.clock_rate.html#torch.cuda.clock_rate">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">clock_rate</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the clock speed of the GPU SM in Hz Hertz over the past sample period as given by `nvidia-smi`.</span>
 
@@ -2347,7 +2404,6 @@ window.addEventListener("load", () => mermaid.run());
     <span class="s2">&quot;get_per_process_memory_fraction&quot;</span><span class="p">,</span>
     <span class="s2">&quot;get_rng_state&quot;</span><span class="p">,</span>
     <span class="s2">&quot;get_rng_state_all&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;get_stream_from_external&quot;</span><span class="p">,</span>
     <span class="s2">&quot;get_sync_debug_mode&quot;</span><span class="p">,</span>
     <span class="s2">&quot;graph&quot;</span><span class="p">,</span>
     <span class="s2">&quot;graph_pool_handle&quot;</span><span class="p">,</span>
@@ -2439,7 +2495,6 @@ window.addEventListener("load", () => mermaid.run());
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

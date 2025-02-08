@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -44,7 +44,7 @@
   <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../../../../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -63,7 +63,7 @@ window.addEventListener("load", () => mermaid.run());
     <link rel="search" title="Search" href="../../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -72,7 +72,6 @@ window.addEventListener("load", () => mermaid.run());
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -159,7 +158,7 @@ window.addEventListener("load", () => mermaid.run());
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -183,8 +182,8 @@ window.addEventListener("load", () => mermaid.run());
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -254,7 +253,7 @@ window.addEventListener("load", () => mermaid.run());
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -269,7 +268,6 @@ window.addEventListener("load", () => mermaid.run());
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -309,9 +307,27 @@ window.addEventListener("load", () => mermaid.run());
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -325,20 +341,14 @@ window.addEventListener("load", () => mermaid.run());
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -399,6 +409,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -489,6 +539,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
         
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
       </div>
     
   </div>
@@ -557,9 +647,6 @@ window.addEventListener("load", () => mermaid.run());
   <h1>Source code for torch.ao.quantization.observer</h1><div class="highlight"><pre>
 <span></span><span class="c1"># mypy: allow-untyped-decorators</span>
 <span class="c1"># mypy: allow-untyped-defs</span>
-<span class="c1"># temporarily skip RUF for this file for now, we can re-enable</span>
-<span class="c1"># after move the affine quantization related things to torchao</span>
-<span class="c1"># noqa: RUF</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">This module implements observers which are used to collect statistics about</span>
 <span class="sd">the values observed during calibration (PTQ) or training (QAT).</span>
@@ -570,7 +657,7 @@ window.addEventListener("load", () => mermaid.run());
 <span class="kn">from</span><span class="w"> </span><span class="nn">abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">ABCMeta</span><span class="p">,</span> <span class="n">abstractmethod</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">OrderedDict</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">functools</span><span class="w"> </span><span class="kn">import</span> <span class="n">partial</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Optional</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nn</span>
@@ -614,18 +701,6 @@ window.addEventListener("load", () => mermaid.run());
     <span class="s2">&quot;RecordingObserver&quot;</span><span class="p">,</span>
     <span class="s2">&quot;ReuseInputObserver&quot;</span><span class="p">,</span>
     <span class="s2">&quot;UniformQuantizationObserverBase&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;AffineQuantizedObserverBase&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Granularity&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;MappingType&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;PerAxis&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;PerBlock&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;PerGroup&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;PerRow&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;PerTensor&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;PerToken&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;TorchAODType&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;ZeroPointDomain&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;get_block_size&quot;</span><span class="p">,</span>
 <span class="p">]</span>
 
 
@@ -703,7 +778,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="ObserverBase">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.observer.ObserverBase.html#torch.ao.quantization.observer.ObserverBase">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.ao.quantization.observer.ObserverBase.html#torch.ao.quantization.observer.ObserverBase">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">ObserverBase</span><span class="p">(</span><span class="n">ABC</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Base observer Module.</span>
 <span class="sd">    Any observer implementation should derive from this class.</span>
@@ -899,7 +974,7 @@ window.addEventListener("load", () => mermaid.run());
     <span class="nd">@torch</span><span class="o">.</span><span class="n">jit</span><span class="o">.</span><span class="n">export</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">_calculate_qparams</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">min_val</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">max_val</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">]:</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">]:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calculates the quantization parameters, given min and max</span>
 <span class="sd">        value tensors. Works for both per tensor and per channel cases</span>
 
@@ -989,7 +1064,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="MinMaxObserver">
-<a class="viewcode-back" href="../../../../generated/torch.ao.quantization.observer.MinMaxObserver.html#torch.ao.quantization.observer.MinMaxObserver">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.ao.quantization.observer.MinMaxObserver.html#torch.ao.quantization.observer.MinMaxObserver">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MinMaxObserver</span><span class="p">(</span><span class="n">UniformQuantizationObserverBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Observer module for computing the quantization parameters based on the</span>
 <span class="sd">    running min and max values.</span>
@@ -1108,7 +1183,7 @@ window.addEventListener("load", () => mermaid.run());
             <span class="p">)</span>
 
 <div class="viewcode-block" id="MinMaxObserver.forward">
-<a class="viewcode-back" href="../../../../generated/torch.ao.quantization.observer.MinMaxObserver.html#torch.ao.quantization.observer.MinMaxObserver.forward">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.ao.quantization.observer.MinMaxObserver.html#torch.ao.quantization.observer.MinMaxObserver.forward">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_orig</span><span class="p">):</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Records the running minimum and maximum of ``x``.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">x_orig</span><span class="o">.</span><span class="n">numel</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -1124,7 +1199,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="MinMaxObserver.calculate_qparams">
-<a class="viewcode-back" href="../../../../generated/torch.ao.quantization.observer.MinMaxObserver.html#torch.ao.quantization.observer.MinMaxObserver.calculate_qparams">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.ao.quantization.observer.MinMaxObserver.html#torch.ao.quantization.observer.MinMaxObserver.calculate_qparams">[docs]</a>
     <span class="nd">@torch</span><span class="o">.</span><span class="n">jit</span><span class="o">.</span><span class="n">export</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">calculate_qparams</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calculates the quantization parameters.&quot;&quot;&quot;</span>
@@ -1136,7 +1211,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;min_val=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">min_val</span><span class="si">}</span><span class="s2">, max_val=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">max_val</span><span class="si">}</span><span class="s2">&quot;</span>
 
 <div class="viewcode-block" id="MinMaxObserver.reset_min_max_vals">
-<a class="viewcode-back" href="../../../../generated/torch.ao.quantization.observer.MinMaxObserver.html#torch.ao.quantization.observer.MinMaxObserver.reset_min_max_vals">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.ao.quantization.observer.MinMaxObserver.html#torch.ao.quantization.observer.MinMaxObserver.reset_min_max_vals">[docs]</a>
     <span class="nd">@torch</span><span class="o">.</span><span class="n">jit</span><span class="o">.</span><span class="n">export</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">reset_min_max_vals</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Resets the min/max values.&quot;&quot;&quot;</span>
@@ -1147,7 +1222,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="MovingAverageMinMaxObserver">
-<a class="viewcode-back" href="../../../../generated/torch.ao.quantization.observer.MovingAverageMinMaxObserver.html#torch.ao.quantization.observer.MovingAverageMinMaxObserver">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.ao.quantization.observer.MovingAverageMinMaxObserver.html#torch.ao.quantization.observer.MovingAverageMinMaxObserver">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MovingAverageMinMaxObserver</span><span class="p">(</span><span class="n">MinMaxObserver</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Observer module for computing the quantization parameters based on the</span>
 <span class="sd">    moving average of the min and max values.</span>
@@ -1249,7 +1324,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="PerChannelMinMaxObserver">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.observer.PerChannelMinMaxObserver.html#torch.ao.quantization.observer.PerChannelMinMaxObserver">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.ao.quantization.observer.PerChannelMinMaxObserver.html#torch.ao.quantization.observer.PerChannelMinMaxObserver">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">PerChannelMinMaxObserver</span><span class="p">(</span><span class="n">UniformQuantizationObserverBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Observer module for computing the quantization parameters based on the</span>
 <span class="sd">    running per channel min and max values.</span>
@@ -1366,13 +1441,13 @@ window.addEventListener("load", () => mermaid.run());
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_load_from_state_dict</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
-        <span class="n">state_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+        <span class="n">state_dict</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
         <span class="n">prefix</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-        <span class="n">local_metadata</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">],</span>
+        <span class="n">local_metadata</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">],</span>
         <span class="n">strict</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
-        <span class="n">missing_keys</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
-        <span class="n">unexpected_keys</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
-        <span class="n">error_msgs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+        <span class="n">missing_keys</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+        <span class="n">unexpected_keys</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+        <span class="n">error_msgs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
     <span class="p">):</span>
         <span class="n">version</span> <span class="o">=</span> <span class="n">local_metadata</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;version&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">version</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">version</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
@@ -1426,13 +1501,13 @@ window.addEventListener("load", () => mermaid.run());
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_load_from_state_dict_script</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
-        <span class="n">state_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+        <span class="n">state_dict</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
         <span class="n">prefix</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-        <span class="n">local_metadata</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">],</span>
+        <span class="n">local_metadata</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">],</span>
         <span class="n">strict</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
-        <span class="n">missing_keys</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
-        <span class="n">unexpected_keys</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
-        <span class="n">error_msgs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+        <span class="n">missing_keys</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+        <span class="n">unexpected_keys</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+        <span class="n">error_msgs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
     <span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_load_from_state_dict</span><span class="p">(</span>
             <span class="n">state_dict</span><span class="p">,</span>
@@ -1445,7 +1520,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="p">)</span>
 
 <div class="viewcode-block" id="PerChannelMinMaxObserver.reset_min_max_vals">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.observer.PerChannelMinMaxObserver.html#torch.ao.quantization.observer.PerChannelMinMaxObserver.reset_min_max_vals">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.ao.quantization.observer.PerChannelMinMaxObserver.html#torch.ao.quantization.observer.PerChannelMinMaxObserver.reset_min_max_vals">[docs]</a>
     <span class="nd">@torch</span><span class="o">.</span><span class="n">jit</span><span class="o">.</span><span class="n">export</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">reset_min_max_vals</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Resets the min/max values.&quot;&quot;&quot;</span>
@@ -1463,7 +1538,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="MovingAveragePerChannelMinMaxObserver">
-<a class="viewcode-back" href="../../../../generated/torch.ao.quantization.observer.MovingAveragePerChannelMinMaxObserver.html#torch.ao.quantization.observer.MovingAveragePerChannelMinMaxObserver">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.ao.quantization.observer.MovingAveragePerChannelMinMaxObserver.html#torch.ao.quantization.observer.MovingAveragePerChannelMinMaxObserver">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MovingAveragePerChannelMinMaxObserver</span><span class="p">(</span><span class="n">PerChannelMinMaxObserver</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Observer module for computing the quantization parameters based on the</span>
 <span class="sd">    running per channel min and max values.</span>
@@ -1556,7 +1631,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="HistogramObserver">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.observer.HistogramObserver.html#torch.ao.quantization.observer.HistogramObserver">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.ao.quantization.observer.HistogramObserver.html#torch.ao.quantization.observer.HistogramObserver">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">HistogramObserver</span><span class="p">(</span><span class="n">UniformQuantizationObserverBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    The module records the running histogram of tensor values along with</span>
@@ -1699,7 +1774,7 @@ window.addEventListener("load", () => mermaid.run());
 
         <span class="k">return</span> <span class="n">norm</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">_non_linear_param_search</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">]:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_non_linear_param_search</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">]:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Non-linear parameter search.</span>
 
 <span class="sd">        An approximation for L2 error minimization for selecting min/max.</span>
@@ -2030,7 +2105,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="PlaceholderObserver">
-<a class="viewcode-back" href="../../../../generated/torch.ao.quantization.observer.PlaceholderObserver.html#torch.ao.quantization.observer.PlaceholderObserver">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.ao.quantization.observer.PlaceholderObserver.html#torch.ao.quantization.observer.PlaceholderObserver">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">PlaceholderObserver</span><span class="p">(</span><span class="n">ObserverBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Observer that doesn&#39;t do anything and just passes its configuration to the</span>
@@ -2104,7 +2179,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="RecordingObserver">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.observer.RecordingObserver.html#torch.ao.quantization.observer.RecordingObserver">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.ao.quantization.observer.RecordingObserver.html#torch.ao.quantization.observer.RecordingObserver">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">RecordingObserver</span><span class="p">(</span><span class="n">ObserverBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    The module is mainly for debug and records the tensor values during runtime.</span>
@@ -2114,7 +2189,7 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sd">        qscheme: Quantization scheme to be used</span>
 <span class="sd">        reduce_range: Reduces the range of the quantized data type by 1 bit</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="vm">__annotations__</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;tensor_val&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Optional</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">]]}</span>
+    <span class="vm">__annotations__</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;tensor_val&quot;</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Optional</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">]]}</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">quint8</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">is_dynamic</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -2137,7 +2212,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="NoopObserver">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.observer.NoopObserver.html#torch.ao.quantization.observer.NoopObserver">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.ao.quantization.observer.NoopObserver.html#torch.ao.quantization.observer.NoopObserver">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">NoopObserver</span><span class="p">(</span><span class="n">ObserverBase</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Observer that doesn&#39;t do anything and just passes its configuration to the</span>
@@ -2195,300 +2270,6 @@ window.addEventListener("load", () => mermaid.run());
         <span class="p">)</span>
 
 
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd"># Experimental Affine Quantization Feature START</span>
-<span class="sd">We plan to merge the following with torchao repo after we move pt2e flow to torchao</span>
-<span class="sd">copied from https://github.com/pytorch/ao/blob/main/torchao/quantization/observer.py</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">auto</span><span class="p">,</span> <span class="n">Enum</span>
-
-
-<div class="viewcode-block" id="MappingType">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.observer.MappingType.html#torch.ao.quantization.observer.MappingType">[docs]</a>
-<span class="k">class</span><span class="w"> </span><span class="nc">MappingType</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;How floating point number is mapped to integer number</span>
-
-<span class="sd">    symmetric mapping means floating point range is symmetrically mapped to integer range</span>
-<span class="sd">    let&#39;s say we have floating point range (-3.5, 10.2) and integer range (-8, 7) (int4)</span>
-<span class="sd">    we&#39;ll use (-10.2, 10.2) as the range for floating point and map that to (-8, 7)</span>
-<span class="sd">    e.g. scale = (10.2 - (-10.2)) / (7 - (-8))</span>
-
-<span class="sd">    SYMMETRIC_NO_CLIPPING_ERR is a variant of symmetric mapping, where the scale is the max of smin</span>
-<span class="sd">    and smax, where smin = min_val_neg / quant_min, and smax = max_val_pos / quant_max. By calculating</span>
-<span class="sd">    smin and smax individually, there can be less round error on negative values, and no out-of-range</span>
-<span class="sd">    of all floating point values.</span>
-
-<span class="sd">    asymmetric mapping means we just directly map the floating point range to integer range,</span>
-<span class="sd">    for the above example, we will map (-3.5, 10.2) to (-8, 7) and calculate quantization parameter</span>
-<span class="sd">    based on this mapping</span>
-<span class="sd">    e.g. scale = (10.2 - (-3.5)) / (7 - (-8))</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">SYMMETRIC</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
-    <span class="n">SYMMETRIC_NO_CLIPPING_ERR</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
-    <span class="n">ASYMMETRIC</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span></div>
-
-
-
-<div class="viewcode-block" id="ZeroPointDomain">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.observer.ZeroPointDomain.html#torch.ao.quantization.observer.ZeroPointDomain">[docs]</a>
-<span class="k">class</span><span class="w"> </span><span class="nc">ZeroPointDomain</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Enum that indicate whether zero_point is in integer domain or floating point domain</span>
-
-<span class="sd">    integer domain: quantized_val = (float_val / scale) (integer) + zero_point (integer)</span>
-<span class="sd">    float domain: quantized_val = (float_val - (zero_point (float) - scale * mid_point)) / scale</span>
-<span class="sd">    none domain: quantized_val = (float_val / scale)</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">INT</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
-    <span class="n">FLOAT</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
-    <span class="n">NONE</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span></div>
-
-
-
-<div class="viewcode-block" id="TorchAODType">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.observer.TorchAODType.html#torch.ao.quantization.observer.TorchAODType">[docs]</a>
-<span class="k">class</span><span class="w"> </span><span class="nc">TorchAODType</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Placeholder for dtypes that do not exist in PyTorch core yet.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="c1"># torch.int1 to torch.int7 will be added to PyTorch 2.6</span>
-    <span class="c1"># These will remain here for BC with older PyTorch versions</span>
-    <span class="n">INT1</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
-    <span class="n">INT2</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
-    <span class="n">INT3</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
-    <span class="n">INT4</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
-    <span class="n">INT5</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
-    <span class="n">INT6</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
-    <span class="n">INT7</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span></div>
-
-
-
-<div class="viewcode-block" id="Granularity">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.observer.Granularity.html#torch.ao.quantization.observer.Granularity">[docs]</a>
-<span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="k">class</span><span class="w"> </span><span class="nc">Granularity</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Base class for representing the granularity of quantization.</span>
-
-<span class="sd">    This class serves as a parent for specific granularity types used in</span>
-<span class="sd">    quantization operations, such as per-tensor or per-axis quantization.</span>
-<span class="sd">    &quot;&quot;&quot;</span></div>
-
-
-
-<div class="viewcode-block" id="PerBlock">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.observer.PerBlock.html#torch.ao.quantization.observer.PerBlock">[docs]</a>
-<span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="k">class</span><span class="w"> </span><span class="nc">PerBlock</span><span class="p">(</span><span class="n">Granularity</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Represents per-block granularity in quantization. See</span>
-<span class="sd">    :func:`~torchao.quantization.quant_primitives.quantize_affine` for docs for</span>
-<span class="sd">    `block_size`</span>
-
-<span class="sd">    Attributes:</span>
-<span class="sd">        block_size (Tuple[int, ...]): The size of each quantization group</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">block_size</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span></div>
-
-
-
-<div class="viewcode-block" id="PerTensor">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.observer.PerTensor.html#torch.ao.quantization.observer.PerTensor">[docs]</a>
-<span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="k">class</span><span class="w"> </span><span class="nc">PerTensor</span><span class="p">(</span><span class="n">Granularity</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Represents per-tensor granularity in quantization.</span>
-
-<span class="sd">    This granularity type calculates the quantization parameters</span>
-<span class="sd">    based off the entire tensor.</span>
-
-<span class="sd">    &quot;&quot;&quot;</span></div>
-
-
-
-<div class="viewcode-block" id="PerAxis">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.observer.PerAxis.html#torch.ao.quantization.observer.PerAxis">[docs]</a>
-<span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="k">class</span><span class="w"> </span><span class="nc">PerAxis</span><span class="p">(</span><span class="n">Granularity</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Represents per-axis granularity in quantization.</span>
-
-<span class="sd">    This granularity type calculates different quantization parameters</span>
-<span class="sd">    along a specified axis of the tensor.</span>
-
-<span class="sd">    For example if the input tensor is shape [8, 16] and axis=0, then</span>
-<span class="sd">    the quantization parameters are calculated for each row of the tensor.</span>
-<span class="sd">    Giving a total of 8 quantization parameters.</span>
-
-<span class="sd">    Attributes:</span>
-<span class="sd">        axis (int): The axis along which reduction is performed.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">axis</span><span class="p">:</span> <span class="nb">int</span></div>
-
-
-
-<div class="viewcode-block" id="PerGroup">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.observer.PerGroup.html#torch.ao.quantization.observer.PerGroup">[docs]</a>
-<span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="k">class</span><span class="w"> </span><span class="nc">PerGroup</span><span class="p">(</span><span class="n">Granularity</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Represents per-channel group granularity in quantization.</span>
-
-<span class="sd">    This granularity type calculates different quantization parameters</span>
-<span class="sd">    for each group of &lt;group_size&gt; elements.</span>
-
-<span class="sd">    For example if the input tensor is shape [8, 16], and the group size is 4, then</span>
-<span class="sd">    the input tensor is reshaped to [64, 4]</span>
-<span class="sd">    quantization parameters are calculated for each group of 4 elements,</span>
-<span class="sd">    giving a total of 64 quantization parameters.</span>
-
-<span class="sd">    Attributes:</span>
-<span class="sd">        group_size (int): The size of each quantization group</span>
-
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">group_size</span><span class="p">:</span> <span class="nb">int</span></div>
-
-
-
-<div class="viewcode-block" id="PerRow">
-<a class="viewcode-back" href="../../../../generated/torch.ao.quantization.observer.PerRow.html#torch.ao.quantization.observer.PerRow">[docs]</a>
-<span class="k">class</span><span class="w"> </span><span class="nc">PerRow</span><span class="p">(</span><span class="n">Granularity</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Represents row-wise granularity in quantization.</span>
-
-<span class="sd">    This is a special case of per-axis quantization and is unique to Float8 matmuls</span>
-<span class="sd">    where the input is quantized with a block_size of (1, ..., input.shape[-1]). And the weight</span>
-<span class="sd">    is quantized with a block_size of (1, weight.shape[1]).</span>
-<span class="sd">    &quot;&quot;&quot;</span></div>
-
-
-
-<div class="viewcode-block" id="PerToken">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.observer.PerToken.html#torch.ao.quantization.observer.PerToken">[docs]</a>
-<span class="k">class</span><span class="w"> </span><span class="nc">PerToken</span><span class="p">(</span><span class="n">Granularity</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Represents per-token granularity in quantization.</span>
-
-<span class="sd">    This granularity type calculates a different set of quantization parameters</span>
-<span class="sd">    for each token, which is represented as the last dimension of the tensor.</span>
-
-<span class="sd">    For example, if the input tensor has shape [2, 3, 4], then there are 6 tokens</span>
-<span class="sd">    with 4 elements each, and we will calculate 6 sets of quantization parameters,</span>
-<span class="sd">    one for each token.</span>
-
-<span class="sd">    If the input tensor has only two dimensions, e.g. [8, 16], then this is</span>
-<span class="sd">    equivalent to `PerAxis(axis=0)`, which yields 8 sets of quantization parameters.</span>
-<span class="sd">    &quot;&quot;&quot;</span></div>
-
-
-
-<div class="viewcode-block" id="get_block_size">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.observer.get_block_size.html#torch.ao.quantization.observer.get_block_size">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">get_block_size</span><span class="p">(</span>
-    <span class="n">input_shape</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="n">granularity</span><span class="p">:</span> <span class="n">Granularity</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="o">...</span><span class="p">]:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the block size based on the input shape and granularity type.</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">        input_shape: The input tensor shape possibly more than 2 dimensions</span>
-<span class="sd">        granularity: The granularity type of the quantization</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-        <span class="n">granularity</span><span class="p">,</span> <span class="n">Granularity</span>
-    <span class="p">),</span> <span class="s2">&quot;Please provide an instance of Granularity, not subclass of it&quot;</span>
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">granularity</span><span class="p">,</span> <span class="n">PerTensor</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">input_shape</span>
-    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">granularity</span><span class="p">,</span> <span class="n">PerAxis</span><span class="p">):</span>
-        <span class="n">block_size</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">input_shape</span><span class="p">)</span>
-        <span class="n">block_size</span><span class="p">[</span><span class="n">granularity</span><span class="o">.</span><span class="n">axis</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-        <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">block_size</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">granularity</span><span class="p">,</span> <span class="n">PerRow</span><span class="p">):</span>
-        <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="p">,)</span> <span class="o">*</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">input_shape</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">input_shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],)</span>
-    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">granularity</span><span class="p">,</span> <span class="n">PerGroup</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="p">(</span>
-            <span class="nb">len</span><span class="p">(</span><span class="n">input_shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
-        <span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;Expecting input shape dim to be 2 for per group quantization, gotinput shape: </span><span class="si">{</span><span class="n">input_shape</span><span class="si">}</span><span class="s2">&quot;</span>
-        <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">granularity</span><span class="o">.</span><span class="n">group_size</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">granularity</span><span class="p">,</span> <span class="n">PerToken</span><span class="p">):</span>
-        <span class="n">block_size</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">input_shape</span><span class="p">)</span>
-        <span class="n">block_size</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">input_shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-        <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">block_size</span><span class="p">)</span>
-    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unsupported Granularity: </span><span class="si">{</span><span class="n">granularity</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
-
-
-
-<div class="viewcode-block" id="AffineQuantizedObserverBase">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.observer.AffineQuantizedObserverBase.html#torch.ao.quantization.observer.AffineQuantizedObserverBase">[docs]</a>
-<span class="k">class</span><span class="w"> </span><span class="nc">AffineQuantizedObserverBase</span><span class="p">(</span><span class="n">ABC</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Observer module for affine quantization (https://github.com/pytorch/ao/tree/main/torchao/quantization#affine-quantization)</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">      `granularity` and `block_size`: The granularity of the quantization,</span>
-<span class="sd">        must specify at least one, if both are specified `block_size` takes precedence</span>
-<span class="sd">        Current supported granularity type are `PerTensor` and `PerAxis`</span>
-<span class="sd">      other args: please see `:class:torchao.dtypes.AffineQuantizedTensor`</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">with_args</span> <span class="o">=</span> <span class="nb">classmethod</span><span class="p">(</span><span class="n">_with_args</span><span class="p">)</span>
-
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span>
-        <span class="n">mapping_type</span><span class="p">:</span> <span class="n">MappingType</span><span class="p">,</span>
-        <span class="n">target_dtype</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span>
-        <span class="n">granularity</span><span class="p">:</span> <span class="n">Granularity</span><span class="p">,</span>
-        <span class="n">quant_min</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">quant_max</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">eps</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">scale_dtype</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">dtype</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">zero_point_dtype</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">dtype</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">preserve_zero</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="n">zero_point_domain</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ZeroPointDomain</span><span class="p">]</span> <span class="o">=</span> <span class="n">ZeroPointDomain</span><span class="o">.</span><span class="n">INT</span><span class="p">,</span>
-        <span class="c1"># there could be some extra args that&#39;s ignored</span>
-        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
-    <span class="p">):</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        <span class="k">assert</span> <span class="n">granularity</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;granularity is None&quot;</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">mapping_type</span> <span class="o">=</span> <span class="n">mapping_type</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">target_dtype</span> <span class="o">=</span> <span class="n">target_dtype</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">granularity</span> <span class="o">=</span> <span class="n">granularity</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">quant_min</span> <span class="o">=</span> <span class="n">quant_min</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">quant_max</span> <span class="o">=</span> <span class="n">quant_max</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">eps</span> <span class="o">=</span> <span class="n">eps</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">scale_dtype</span> <span class="o">=</span> <span class="n">scale_dtype</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">zero_point_dtype</span> <span class="o">=</span> <span class="n">zero_point_dtype</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">preserve_zero</span> <span class="o">=</span> <span class="n">preserve_zero</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">zero_point_domain</span> <span class="o">=</span> <span class="n">zero_point_domain</span>
-        <span class="c1"># populatd during forward</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">block_size</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">original_dtype</span> <span class="o">=</span> <span class="kc">None</span>
-
-<div class="viewcode-block" id="AffineQuantizedObserverBase.forward">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.observer.AffineQuantizedObserverBase.html#torch.ao.quantization.observer.AffineQuantizedObserverBase.forward">[docs]</a>
-    <span class="nd">@abstractmethod</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;forward function should take the input tensor</span>
-<span class="sd">        and updates internal stats and return the original input Tensor</span>
-<span class="sd">        &quot;&quot;&quot;</span></div>
-
-
-<div class="viewcode-block" id="AffineQuantizedObserverBase.calculate_qparams">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.observer.AffineQuantizedObserverBase.html#torch.ao.quantization.observer.AffineQuantizedObserverBase.calculate_qparams">[docs]</a>
-    <span class="nd">@abstractmethod</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">calculate_qparams</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculate quantization parameter based on the stats attached to the observer module</span>
-<span class="sd">        and returns a tuple of scale and zero_point Tensor</span>
-<span class="sd">        &quot;&quot;&quot;</span></div>
-</div>
-
-
-
 <span class="k">def</span><span class="w"> </span><span class="nf">_is_observer_script_module</span><span class="p">(</span><span class="n">mod</span><span class="p">,</span> <span class="n">obs_type_name</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns true if given mod is an instance of Observer script module.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mod</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">jit</span><span class="o">.</span><span class="n">RecursiveScriptModule</span><span class="p">):</span>
@@ -2499,17 +2280,10 @@ window.addEventListener("load", () => mermaid.run());
     <span class="k">return</span> <span class="kc">False</span>
 
 
-<span class="c1"># Experimental Affine Quantization Feature END</span>
-
-
 <span class="k">def</span><span class="w"> </span><span class="nf">_is_activation_post_process</span><span class="p">(</span><span class="n">module</span><span class="p">):</span>
     <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span>
         <span class="n">module</span><span class="p">,</span>
-        <span class="p">(</span>
-            <span class="n">torch</span><span class="o">.</span><span class="n">ao</span><span class="o">.</span><span class="n">quantization</span><span class="o">.</span><span class="n">ObserverBase</span><span class="p">,</span>
-            <span class="n">torch</span><span class="o">.</span><span class="n">ao</span><span class="o">.</span><span class="n">quantization</span><span class="o">.</span><span class="n">FakeQuantizeBase</span><span class="p">,</span>
-            <span class="n">AffineQuantizedObserverBase</span><span class="p">,</span>
-        <span class="p">),</span>
+        <span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">ao</span><span class="o">.</span><span class="n">quantization</span><span class="o">.</span><span class="n">ObserverBase</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">ao</span><span class="o">.</span><span class="n">quantization</span><span class="o">.</span><span class="n">FakeQuantizeBase</span><span class="p">),</span>
     <span class="p">)</span> <span class="ow">or</span> <span class="n">_is_observer_script_module</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="s2">&quot;quantization.observer&quot;</span><span class="p">)</span>
 
 
@@ -2524,7 +2298,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="get_observer_state_dict">
-<a class="viewcode-back" href="../../../../python-api/torch.ao.quantization.observer.get_observer_state_dict.html#torch.ao.quantization.observer.get_observer_state_dict">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.ao.quantization.observer.get_observer_state_dict.html#torch.ao.quantization.observer.get_observer_state_dict">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">get_observer_state_dict</span><span class="p">(</span><span class="n">mod</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns the state dict corresponding to the observer stats.</span>
@@ -2546,15 +2320,15 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="load_observer_state_dict">
-<a class="viewcode-back" href="../../../../generated/torch.ao.quantization.observer.load_observer_state_dict.html#torch.ao.quantization.observer.load_observer_state_dict">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.ao.quantization.observer.load_observer_state_dict.html#torch.ao.quantization.observer.load_observer_state_dict">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">load_observer_state_dict</span><span class="p">(</span><span class="n">mod</span><span class="p">,</span> <span class="n">obs_dict</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Given input model and a state_dict containing model observer stats,</span>
 <span class="sd">    load the stats back into the model. The observer state_dict can be saved</span>
 <span class="sd">    using torch.ao.quantization.get_observer_state_dict</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">missing_keys</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">unexpected_keys</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">missing_keys</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">unexpected_keys</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">module</span> <span class="ow">in</span> <span class="n">mod</span><span class="o">.</span><span class="n">named_modules</span><span class="p">():</span>
         <span class="n">prefix</span> <span class="o">=</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span>
         <span class="k">if</span> <span class="n">_is_activation_post_process</span><span class="p">(</span><span class="n">module</span><span class="p">):</span>
@@ -2715,7 +2489,6 @@ window.addEventListener("load", () => mermaid.run());
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

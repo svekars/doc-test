@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -44,7 +44,7 @@
   <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../../../../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -63,7 +63,7 @@ window.addEventListener("load", () => mermaid.run());
     <link rel="search" title="Search" href="../../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -72,7 +72,6 @@ window.addEventListener("load", () => mermaid.run());
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -159,7 +158,7 @@ window.addEventListener("load", () => mermaid.run());
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -183,8 +182,8 @@ window.addEventListener("load", () => mermaid.run());
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -254,7 +253,7 @@ window.addEventListener("load", () => mermaid.run());
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -269,7 +268,6 @@ window.addEventListener("load", () => mermaid.run());
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -309,9 +307,27 @@ window.addEventListener("load", () => mermaid.run());
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -325,20 +341,14 @@ window.addEventListener("load", () => mermaid.run());
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -399,6 +409,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -489,6 +539,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
         
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
       </div>
     
   </div>
@@ -552,7 +642,7 @@ window.addEventListener("load", () => mermaid.run());
                 <article class="bd-article">
                   
   <h1>Source code for torch.nn.modules.pooling</h1><div class="highlight"><pre>
-<span></span><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Optional</span>
+<span></span><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn.functional</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">F</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">torch</span><span class="w"> </span><span class="kn">import</span> <span class="n">Tensor</span>
@@ -633,7 +723,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="MaxPool1d">
-<a class="viewcode-back" href="../../../../generated/torch.nn.MaxPool1d.html#torch.nn.MaxPool1d">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.MaxPool1d.html#torch.nn.MaxPool1d">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MaxPool1d</span><span class="p">(</span><span class="n">_MaxPoolNd</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies a 1D max pooling over an input signal composed of several input planes.</span>
 
@@ -700,7 +790,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="MaxPool2d">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.MaxPool2d.html#torch.nn.MaxPool2d">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.MaxPool2d.html#torch.nn.MaxPool2d">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MaxPool2d</span><span class="p">(</span><span class="n">_MaxPoolNd</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies a 2D max pooling over an input signal composed of several input planes.</span>
 
@@ -782,7 +872,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="MaxPool3d">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.MaxPool3d.html#torch.nn.MaxPool3d">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.MaxPool3d.html#torch.nn.MaxPool3d">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MaxPool3d</span><span class="p">(</span><span class="n">_MaxPoolNd</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies a 3D max pooling over an input signal composed of several input planes.</span>
 
@@ -873,7 +963,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="MaxUnpool1d">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.MaxUnpool1d.html#torch.nn.MaxUnpool1d">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.MaxUnpool1d.html#torch.nn.MaxUnpool1d">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MaxUnpool1d</span><span class="p">(</span><span class="n">_MaxUnpoolNd</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Computes a partial inverse of :class:`MaxPool1d`.</span>
 
@@ -949,7 +1039,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="bp">self</span><span class="o">.</span><span class="n">padding</span> <span class="o">=</span> <span class="n">_single</span><span class="p">(</span><span class="n">padding</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span> <span class="n">indices</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span> <span class="n">output_size</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span> <span class="n">indices</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span> <span class="n">output_size</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">max_unpool1d</span><span class="p">(</span>
             <span class="nb">input</span><span class="p">,</span> <span class="n">indices</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stride</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">padding</span><span class="p">,</span> <span class="n">output_size</span>
@@ -958,7 +1048,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="MaxUnpool2d">
-<a class="viewcode-back" href="../../../../generated/torch.nn.MaxUnpool2d.html#torch.nn.MaxUnpool2d">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.MaxUnpool2d.html#torch.nn.MaxUnpool2d">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MaxUnpool2d</span><span class="p">(</span><span class="n">_MaxUnpoolNd</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Computes a partial inverse of :class:`MaxPool2d`.</span>
 
@@ -1047,7 +1137,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="bp">self</span><span class="o">.</span><span class="n">padding</span> <span class="o">=</span> <span class="n">_pair</span><span class="p">(</span><span class="n">padding</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span> <span class="n">indices</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span> <span class="n">output_size</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span> <span class="n">indices</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span> <span class="n">output_size</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">max_unpool2d</span><span class="p">(</span>
             <span class="nb">input</span><span class="p">,</span> <span class="n">indices</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stride</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">padding</span><span class="p">,</span> <span class="n">output_size</span>
@@ -1056,7 +1146,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="MaxUnpool3d">
-<a class="viewcode-back" href="../../../../generated/torch.nn.MaxUnpool3d.html#torch.nn.MaxUnpool3d">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.MaxUnpool3d.html#torch.nn.MaxUnpool3d">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MaxUnpool3d</span><span class="p">(</span><span class="n">_MaxUnpoolNd</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Computes a partial inverse of :class:`MaxPool3d`.</span>
 
@@ -1128,7 +1218,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="bp">self</span><span class="o">.</span><span class="n">padding</span> <span class="o">=</span> <span class="n">_triple</span><span class="p">(</span><span class="n">padding</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span> <span class="n">indices</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span> <span class="n">output_size</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span> <span class="n">indices</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span> <span class="n">output_size</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">max_unpool3d</span><span class="p">(</span>
             <span class="nb">input</span><span class="p">,</span> <span class="n">indices</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stride</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">padding</span><span class="p">,</span> <span class="n">output_size</span>
@@ -1150,7 +1240,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="AvgPool1d">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.AvgPool1d.html#torch.nn.AvgPool1d">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.AvgPool1d.html#torch.nn.AvgPool1d">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">AvgPool1d</span><span class="p">(</span><span class="n">_AvgPoolNd</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies a 1D average pooling over an input signal composed of several input planes.</span>
 
@@ -1234,7 +1324,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="AvgPool2d">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.AvgPool2d.html#torch.nn.AvgPool2d">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.AvgPool2d.html#torch.nn.AvgPool2d">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">AvgPool2d</span><span class="p">(</span><span class="n">_AvgPoolNd</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies a 2D average pooling over an input signal composed of several input planes.</span>
 
@@ -1343,7 +1433,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="AvgPool3d">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.AvgPool3d.html#torch.nn.AvgPool3d">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.AvgPool3d.html#torch.nn.AvgPool3d">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">AvgPool3d</span><span class="p">(</span><span class="n">_AvgPoolNd</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies a 3D average pooling over an input signal composed of several input planes.</span>
 
@@ -1465,7 +1555,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="FractionalMaxPool2d">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.FractionalMaxPool2d.html#torch.nn.FractionalMaxPool2d">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.FractionalMaxPool2d.html#torch.nn.FractionalMaxPool2d">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">FractionalMaxPool2d</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies a 2D fractional max pooling over an input signal composed of several input planes.</span>
 
@@ -1557,7 +1647,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="FractionalMaxPool3d">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.FractionalMaxPool3d.html#torch.nn.FractionalMaxPool3d">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.FractionalMaxPool3d.html#torch.nn.FractionalMaxPool3d">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">FractionalMaxPool3d</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies a 3D fractional max pooling over an input signal composed of several input planes.</span>
 
@@ -1675,7 +1765,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="LPPool1d">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.LPPool1d.html#torch.nn.LPPool1d">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.LPPool1d.html#torch.nn.LPPool1d">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">LPPool1d</span><span class="p">(</span><span class="n">_LPPoolNd</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies a 1D power-average pooling over an input signal composed of several input planes.</span>
 
@@ -1720,7 +1810,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="LPPool2d">
-<a class="viewcode-back" href="../../../../generated/torch.nn.LPPool2d.html#torch.nn.LPPool2d">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.LPPool2d.html#torch.nn.LPPool2d">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">LPPool2d</span><span class="p">(</span><span class="n">_LPPoolNd</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies a 2D power-average pooling over an input signal composed of several input planes.</span>
 
@@ -1778,7 +1868,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="LPPool3d">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.LPPool3d.html#torch.nn.LPPool3d">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.LPPool3d.html#torch.nn.LPPool3d">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">LPPool3d</span><span class="p">(</span><span class="n">_LPPoolNd</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies a 3D power-average pooling over an input signal composed of several input planes.</span>
 
@@ -1859,7 +1949,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="AdaptiveMaxPool1d">
-<a class="viewcode-back" href="../../../../generated/torch.nn.AdaptiveMaxPool1d.html#torch.nn.AdaptiveMaxPool1d">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.AdaptiveMaxPool1d.html#torch.nn.AdaptiveMaxPool1d">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">AdaptiveMaxPool1d</span><span class="p">(</span><span class="n">_AdaptiveMaxPoolNd</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies a 1D adaptive max pooling over an input signal composed of several input planes.</span>
 
@@ -1892,7 +1982,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="AdaptiveMaxPool2d">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.AdaptiveMaxPool2d.html#torch.nn.AdaptiveMaxPool2d">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.AdaptiveMaxPool2d.html#torch.nn.AdaptiveMaxPool2d">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">AdaptiveMaxPool2d</span><span class="p">(</span><span class="n">_AdaptiveMaxPoolNd</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies a 2D adaptive max pooling over an input signal composed of several input planes.</span>
 
@@ -1937,7 +2027,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="AdaptiveMaxPool3d">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.AdaptiveMaxPool3d.html#torch.nn.AdaptiveMaxPool3d">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.AdaptiveMaxPool3d.html#torch.nn.AdaptiveMaxPool3d">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">AdaptiveMaxPool3d</span><span class="p">(</span><span class="n">_AdaptiveMaxPoolNd</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies a 3D adaptive max pooling over an input signal composed of several input planes.</span>
 
@@ -1994,7 +2084,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="AdaptiveAvgPool1d">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.AdaptiveAvgPool1d.html#torch.nn.AdaptiveAvgPool1d">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.AdaptiveAvgPool1d.html#torch.nn.AdaptiveAvgPool1d">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">AdaptiveAvgPool1d</span><span class="p">(</span><span class="n">_AdaptiveAvgPoolNd</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies a 1D adaptive average pooling over an input signal composed of several input planes.</span>
 
@@ -2025,7 +2115,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="AdaptiveAvgPool2d">
-<a class="viewcode-back" href="../../../../generated/torch.nn.AdaptiveAvgPool2d.html#torch.nn.AdaptiveAvgPool2d">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.AdaptiveAvgPool2d.html#torch.nn.AdaptiveAvgPool2d">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">AdaptiveAvgPool2d</span><span class="p">(</span><span class="n">_AdaptiveAvgPoolNd</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies a 2D adaptive average pooling over an input signal composed of several input planes.</span>
 
@@ -2067,7 +2157,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="AdaptiveAvgPool3d">
-<a class="viewcode-back" href="../../../../generated/torch.nn.AdaptiveAvgPool3d.html#torch.nn.AdaptiveAvgPool3d">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.AdaptiveAvgPool3d.html#torch.nn.AdaptiveAvgPool3d">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">AdaptiveAvgPool3d</span><span class="p">(</span><span class="n">_AdaptiveAvgPoolNd</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies a 3D adaptive average pooling over an input signal composed of several input planes.</span>
 
@@ -2137,7 +2227,6 @@ window.addEventListener("load", () => mermaid.run());
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

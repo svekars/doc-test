@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -44,7 +44,7 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../../../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -63,7 +63,7 @@ window.addEventListener("load", () => mermaid.run());
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -72,7 +72,6 @@ window.addEventListener("load", () => mermaid.run());
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -159,7 +158,7 @@ window.addEventListener("load", () => mermaid.run());
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -183,8 +182,8 @@ window.addEventListener("load", () => mermaid.run());
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -254,7 +253,7 @@ window.addEventListener("load", () => mermaid.run());
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -269,7 +268,6 @@ window.addEventListener("load", () => mermaid.run());
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -309,9 +307,27 @@ window.addEventListener("load", () => mermaid.run());
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -325,20 +341,14 @@ window.addEventListener("load", () => mermaid.run());
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -399,6 +409,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -489,6 +539,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
         
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
       </div>
     
   </div>
@@ -562,7 +652,7 @@ window.addEventListener("load", () => mermaid.run());
 <span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">functools</span><span class="w"> </span><span class="kn">import</span> <span class="n">reduce</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">itertools</span><span class="w"> </span><span class="kn">import</span> <span class="n">chain</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">Union</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">Union</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">torch.distributed</span><span class="w"> </span><span class="kn">import</span> <span class="n">is_available</span>
@@ -622,15 +712,15 @@ window.addEventListener("load", () => mermaid.run());
 
     <span class="k">class</span><span class="w"> </span><span class="nc">_MeshEnv</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">local</span><span class="p">):</span>
         <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">mesh_stack</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">DeviceMesh</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">child_to_root_mapping</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="n">DeviceMesh</span><span class="p">,</span> <span class="n">DeviceMesh</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">mesh_dim_group_options</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span>
-                <span class="nb">int</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="n">C10dBackend</span><span class="o">.</span><span class="n">Options</span><span class="p">]]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mesh_stack</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">DeviceMesh</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">child_to_root_mapping</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">DeviceMesh</span><span class="p">,</span> <span class="n">DeviceMesh</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mesh_dim_group_options</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span>
+                <span class="nb">int</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="n">C10dBackend</span><span class="o">.</span><span class="n">Options</span><span class="p">]]</span>
             <span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">root_to_flatten_mapping</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="n">DeviceMesh</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">DeviceMesh</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">root_to_flatten_mapping</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">DeviceMesh</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">DeviceMesh</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span>
             <span class="c1"># Record flatten mesh name to its mesh dim index in root mesh.</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">flatten_name_to_root_dims</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span>
-                <span class="n">DeviceMesh</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">flatten_name_to_root_dims</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span>
+                <span class="n">DeviceMesh</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span>
             <span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">def</span><span class="w"> </span><span class="nf">get_current_mesh</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;DeviceMesh&quot;</span><span class="p">:</span>
@@ -641,8 +731,8 @@ window.addEventListener("load", () => mermaid.run());
         <span class="k">def</span><span class="w"> </span><span class="nf">create_sub_mesh</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">device_mesh</span><span class="p">:</span> <span class="s2">&quot;DeviceMesh&quot;</span><span class="p">,</span>
-            <span class="n">submesh_dim_names</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span>
-            <span class="n">submesh_dims</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="o">...</span><span class="p">]],</span>
+            <span class="n">submesh_dim_names</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span>
+            <span class="n">submesh_dims</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="o">...</span><span class="p">]],</span>
         <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;DeviceMesh&quot;</span><span class="p">:</span>
             <span class="c1"># Get the submesh dim size from the submesh_dims.</span>
             <span class="c1"># For example, if we have a 3D mesh with mesh_shape (2, 2, 2) mesh_dim_names (&quot;dp&quot;, &quot;cp&quot;, &quot;tp&quot;) and we want</span>
@@ -843,7 +933,7 @@ window.addEventListener("load", () => mermaid.run());
 
         <span class="k">def</span><span class="w"> </span><span class="nf">_get_slice_mesh_dims</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">device_mesh</span><span class="p">,</span> <span class="n">mesh_dim_names</span>
-        <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="o">...</span><span class="p">]]:</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="o">...</span><span class="p">]]:</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Validate whether the mesh_dim_names is valid for slicing the given device_mesh.</span>
 <span class="sd">            If valid, return dim indexes of the slice mesh in the device mesh.</span>
@@ -895,7 +985,7 @@ window.addEventListener("load", () => mermaid.run());
 
         <span class="k">def</span><span class="w"> </span><span class="nf">_get_all_submeshes</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">device_mesh</span><span class="p">:</span> <span class="s2">&quot;DeviceMesh&quot;</span><span class="p">,</span> <span class="n">mesh_dim_name</span><span class="p">:</span> <span class="nb">str</span>
-        <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="s2">&quot;DeviceMesh&quot;</span><span class="p">]:</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="s2">&quot;DeviceMesh&quot;</span><span class="p">]:</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Return all the submeshes of a given mesh dimension of the device mesh.</span>
 <span class="sd">            &quot;&quot;&quot;</span>
@@ -977,14 +1067,14 @@ window.addEventListener("load", () => mermaid.run());
 
         <span class="n">device_type</span><span class="p">:</span> <span class="nb">str</span>
         <span class="n">mesh</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span>
-        <span class="n">mesh_dim_names</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span>
+        <span class="n">mesh_dim_names</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span>
 
         <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">device_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
             <span class="n">mesh</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="s2">&quot;ArrayLike&quot;</span><span class="p">],</span>
             <span class="o">*</span><span class="p">,</span>
-            <span class="n">mesh_dim_names</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="n">mesh_dim_names</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">_init_backend</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
         <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">device_type</span> <span class="o">=</span> <span class="n">device_type</span>
@@ -1017,7 +1107,7 @@ window.addEventListener("load", () => mermaid.run());
                 <span class="c1"># calculate the coordinates of the current global rank on the mesh</span>
                 <span class="n">rank_coords</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mesh</span> <span class="o">==</span> <span class="n">get_rank</span><span class="p">())</span><span class="o">.</span><span class="n">nonzero</span><span class="p">()</span>
                 <span class="k">assert</span> <span class="n">rank_coords</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">_coordinate_on_dim</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_coordinate_on_dim</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="p">(</span>
                     <span class="n">rank_coords</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="k">if</span> <span class="n">rank_coords</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span>
                 <span class="p">)</span>
 
@@ -1057,7 +1147,7 @@ window.addEventListener("load", () => mermaid.run());
             <span class="c1"># TODO(yifu): remove tag and ranks once we fully migrate to native</span>
             <span class="c1"># functional collectives. See details in:</span>
             <span class="c1"># https://github.com/pytorch/pytorch/issues/93173#issuecomment-1907095208</span>
-            <span class="n">dim_group_infos</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">dim_group_infos</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[]</span>
             <span class="n">default_group</span> <span class="o">=</span> <span class="n">_get_default_group</span><span class="p">()</span>
 
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">numel</span><span class="p">()</span> <span class="o">==</span> <span class="n">get_world_size</span><span class="p">():</span>
@@ -1119,19 +1209,17 @@ window.addEventListener("load", () => mermaid.run());
                     <span class="c1"># numbers of API calls are equal to the number of subgroups for each mesh dimension. In a 2 * 4</span>
                     <span class="c1"># mesh, we need to make 2 + 4 = 6 API calls per ranks to create all the subgroups.</span>
                     <span class="n">dim_group</span> <span class="o">=</span> <span class="kc">None</span>
-                    <span class="n">has_split_group</span> <span class="o">=</span> <span class="kc">False</span>
                     <span class="k">if</span> <span class="p">(</span>
                         <span class="n">bound_device_id</span> <span class="o">:=</span> <span class="nb">getattr</span><span class="p">(</span>
                             <span class="n">default_group</span><span class="p">,</span> <span class="s2">&quot;bound_device_id&quot;</span><span class="p">,</span> <span class="kc">None</span>
                         <span class="p">)</span>
-                    <span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">():</span>
+                    <span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
                         <span class="n">dim_group</span> <span class="o">=</span> <span class="n">split_group</span><span class="p">(</span>
                             <span class="n">parent_pg</span><span class="o">=</span><span class="n">default_group</span><span class="p">,</span>
                             <span class="n">pg_options</span><span class="o">=</span><span class="n">pg_options</span><span class="p">,</span>
                             <span class="n">split_ranks</span><span class="o">=</span><span class="n">pg_ranks_by_dim</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
                             <span class="n">group_desc</span><span class="o">=</span><span class="n">group_desc</span><span class="p">,</span>
                         <span class="p">)</span>
-                        <span class="n">has_split_group</span> <span class="o">=</span> <span class="kc">True</span>
 
                     <span class="c1"># If the subgroup has been already created through `split_group`, we simply loop over `pg_ranks_by_dim`</span>
                     <span class="c1"># and append the `(group_tag, subgroup_ranks, and group_name)` tuple to the `dim_group_infos` list when</span>
@@ -1144,7 +1232,7 @@ window.addEventListener("load", () => mermaid.run());
                         <span class="c1"># We temporarily revert the re-use subgroup, since it breaks two internal tests.</span>
                         <span class="c1"># Temporarily reverting to resolve test timeout while root-causing.</span>
                         <span class="c1"># TODO: Add two tests to cover internal tests scenarios and re-enable reuse subgroup if exists.</span>
-                        <span class="k">if</span> <span class="n">bound_device_id</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">has_split_group</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">bound_device_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                             <span class="n">dim_group</span> <span class="o">=</span> <span class="n">new_group</span><span class="p">(</span>
                                 <span class="n">ranks</span><span class="o">=</span><span class="n">subgroup_ranks</span><span class="p">,</span>
                                 <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">,</span>
@@ -1216,7 +1304,7 @@ window.addEventListener("load", () => mermaid.run());
                 <span class="p">)</span>
 
         <span class="k">def</span><span class="w"> </span><span class="fm">__getitem__</span><span class="p">(</span>
-            <span class="bp">self</span><span class="p">,</span> <span class="n">mesh_dim_names</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">mesh_dim_names</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span>
         <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;DeviceMesh&quot;</span><span class="p">:</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Slice the current DeviceMesh based on the mesh_dim_names given to create a submesh.</span>
@@ -1288,6 +1376,8 @@ window.addEventListener("load", () => mermaid.run());
                     <span class="p">)</span>
                 <span class="k">return</span> <span class="n">submesh</span>
 
+<div class="viewcode-block" id="DeviceMesh.get_group">
+<a class="viewcode-back" href="../../../python-api/distributed.html#torch.distributed.device_mesh.DeviceMesh.get_group">[docs]</a>
         <span class="k">def</span><span class="w"> </span><span class="nf">get_group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_dim</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ProcessGroup</span><span class="p">:</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Returns the single ProcessGroup specified by mesh_dim, or, if mesh_dim is not specified and the</span>
@@ -1332,24 +1422,30 @@ window.addEventListener("load", () => mermaid.run());
                 <span class="p">)</span>
                 <span class="k">return</span> <span class="n">not_none</span><span class="p">(</span>
                     <span class="n">_find_pg_by_ranks_and_tag</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_dim_group_infos</span><span class="p">[</span><span class="n">mesh_dim</span><span class="p">][:</span><span class="mi">2</span><span class="p">])</span>  <span class="c1"># type: ignore[index]</span>
-                <span class="p">)</span>
+                <span class="p">)</span></div>
 
-        <span class="k">def</span><span class="w"> </span><span class="nf">get_all_groups</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">ProcessGroup</span><span class="p">]:</span>
+
+<div class="viewcode-block" id="DeviceMesh.get_all_groups">
+<a class="viewcode-back" href="../../../python-api/distributed.html#torch.distributed.device_mesh.DeviceMesh.get_all_groups">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">get_all_groups</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">ProcessGroup</span><span class="p">]:</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Returns a list of ProcessGroups for all mesh dimensions.</span>
 
 <span class="sd">            Returns:</span>
 <span class="sd">                A list of :class:`ProcessGroup` object.</span>
 <span class="sd">            &quot;&quot;&quot;</span>
-            <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">ndim</span><span class="p">)]</span>
+            <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">ndim</span><span class="p">)]</span></div>
 
+
+<div class="viewcode-block" id="DeviceMesh.from_group">
+<a class="viewcode-back" href="../../../python-api/distributed.html#torch.distributed.device_mesh.DeviceMesh.from_group">[docs]</a>
         <span class="nd">@staticmethod</span>
         <span class="k">def</span><span class="w"> </span><span class="nf">from_group</span><span class="p">(</span>
-            <span class="n">group</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">ProcessGroup</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="n">ProcessGroup</span><span class="p">]],</span>
+            <span class="n">group</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">ProcessGroup</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">ProcessGroup</span><span class="p">]],</span>
             <span class="n">device_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
             <span class="n">mesh</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="s2">&quot;ArrayLike&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="o">*</span><span class="p">,</span>
-            <span class="n">mesh_dim_names</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="n">mesh_dim_names</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;DeviceMesh&quot;</span><span class="p">:</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Constructs a :class:`DeviceMesh` with ``device_type`` from an</span>
@@ -1408,7 +1504,8 @@ window.addEventListener("load", () => mermaid.run());
                 <span class="p">)</span>
                 <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">groups</span>
             <span class="p">]</span>
-            <span class="k">return</span> <span class="n">device_mesh</span>
+            <span class="k">return</span> <span class="n">device_mesh</span></div>
+
 
         <span class="k">def</span><span class="w"> </span><span class="nf">size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_dim</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">numel</span><span class="p">()</span> <span class="k">if</span> <span class="n">mesh_dim</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">mesh_dim</span><span class="p">)</span>
@@ -1418,15 +1515,20 @@ window.addEventListener("load", () => mermaid.run());
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">ndim</span>
 
         <span class="nd">@property</span>
-        <span class="k">def</span><span class="w"> </span><span class="nf">shape</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="o">...</span><span class="p">]:</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">shape</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="o">...</span><span class="p">]:</span>
             <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 
+<div class="viewcode-block" id="DeviceMesh.get_rank">
+<a class="viewcode-back" href="../../../python-api/distributed.html#torch.distributed.device_mesh.DeviceMesh.get_rank">[docs]</a>
         <span class="k">def</span><span class="w"> </span><span class="nf">get_rank</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Returns the current global rank.</span>
 <span class="sd">            &quot;&quot;&quot;</span>
-            <span class="k">return</span> <span class="n">get_rank</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">get_rank</span><span class="p">()</span></div>
 
+
+<div class="viewcode-block" id="DeviceMesh.get_local_rank">
+<a class="viewcode-back" href="../../../python-api/distributed.html#torch.distributed.device_mesh.DeviceMesh.get_local_rank">[docs]</a>
         <span class="k">def</span><span class="w"> </span><span class="nf">get_local_rank</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_dim</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Returns the local rank of the given mesh_dim of the DeviceMesh.</span>
@@ -1467,14 +1569,18 @@ window.addEventListener("load", () => mermaid.run());
             <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
                 <span class="n">mesh_dim_group</span><span class="p">,</span> <span class="n">ProcessGroup</span>
             <span class="p">),</span> <span class="s2">&quot;We expect ProcessGroup before calling `get_rank`!&quot;</span>
-            <span class="k">return</span> <span class="n">not_none</span><span class="p">(</span><span class="n">get_rank</span><span class="p">(</span><span class="n">mesh_dim_group</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">not_none</span><span class="p">(</span><span class="n">get_rank</span><span class="p">(</span><span class="n">mesh_dim_group</span><span class="p">))</span></div>
 
-        <span class="k">def</span><span class="w"> </span><span class="nf">get_coordinate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+
+<div class="viewcode-block" id="DeviceMesh.get_coordinate">
+<a class="viewcode-back" href="../../../python-api/distributed.html#torch.distributed.device_mesh.DeviceMesh.get_coordinate">[docs]</a>
+        <span class="k">def</span><span class="w"> </span><span class="nf">get_coordinate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Return the relative indices of this rank relative to all</span>
 <span class="sd">            dimensions of the mesh. If this rank is not part of the mesh, return None.</span>
 <span class="sd">            &quot;&quot;&quot;</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_coordinate_on_dim</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_coordinate_on_dim</span> <span class="k">else</span> <span class="kc">None</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_coordinate_on_dim</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_coordinate_on_dim</span> <span class="k">else</span> <span class="kc">None</span></div>
+
 
         <span class="k">def</span><span class="w"> </span><span class="nf">_flatten</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_dim_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;DeviceMesh&quot;</span><span class="p">:</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
@@ -1501,9 +1607,9 @@ window.addEventListener("load", () => mermaid.run());
 <a class="viewcode-back" href="../../../python-api/distributed.html#torch.distributed.device_mesh.init_device_mesh">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">init_device_mesh</span><span class="p">(</span>
         <span class="n">device_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-        <span class="n">mesh_shape</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span>
+        <span class="n">mesh_shape</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span>
         <span class="o">*</span><span class="p">,</span>
-        <span class="n">mesh_dim_names</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">mesh_dim_names</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DeviceMesh</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initializes a `DeviceMesh` based on `device_type`, `mesh_shape`, and `mesh_dim_names` parameters.</span>
@@ -1603,7 +1709,6 @@ window.addEventListener("load", () => mermaid.run());
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

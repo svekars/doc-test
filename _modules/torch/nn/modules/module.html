@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -44,7 +44,7 @@
   <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../../../../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -63,7 +63,7 @@ window.addEventListener("load", () => mermaid.run());
     <link rel="search" title="Search" href="../../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -72,7 +72,6 @@ window.addEventListener("load", () => mermaid.run());
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -159,7 +158,7 @@ window.addEventListener("load", () => mermaid.run());
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -183,8 +182,8 @@ window.addEventListener("load", () => mermaid.run());
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -254,7 +253,7 @@ window.addEventListener("load", () => mermaid.run());
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -269,7 +268,6 @@ window.addEventListener("load", () => mermaid.run());
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -309,9 +307,27 @@ window.addEventListener("load", () => mermaid.run());
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -325,20 +341,14 @@ window.addEventListener("load", () => mermaid.run());
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -399,6 +409,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -489,6 +539,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
         
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
       </div>
     
   </div>
@@ -560,8 +650,20 @@ window.addEventListener("load", () => mermaid.run());
 <span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">weakref</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">namedtuple</span><span class="p">,</span> <span class="n">OrderedDict</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">collections.abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Iterator</span><span class="p">,</span> <span class="n">Mapping</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">overload</span><span class="p">,</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">Union</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">Any</span><span class="p">,</span>
+    <span class="n">Callable</span><span class="p">,</span>
+    <span class="n">Dict</span><span class="p">,</span>
+    <span class="n">Iterator</span><span class="p">,</span>
+    <span class="n">List</span><span class="p">,</span>
+    <span class="n">Mapping</span><span class="p">,</span>
+    <span class="n">Optional</span><span class="p">,</span>
+    <span class="n">overload</span><span class="p">,</span>
+    <span class="n">Set</span><span class="p">,</span>
+    <span class="n">Tuple</span><span class="p">,</span>
+    <span class="n">TypeVar</span><span class="p">,</span>
+    <span class="n">Union</span><span class="p">,</span>
+<span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">typing_extensions</span><span class="w"> </span><span class="kn">import</span> <span class="n">Self</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
@@ -584,7 +686,7 @@ window.addEventListener("load", () => mermaid.run());
     <span class="s2">&quot;Module&quot;</span><span class="p">,</span>
 <span class="p">]</span>
 
-<span class="n">_grad_t</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="n">Tensor</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="n">Tensor</span><span class="p">]</span>
+<span class="n">_grad_t</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Tensor</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="n">Tensor</span><span class="p">]</span>
 <span class="c1"># See https://mypy.readthedocs.io/en/latest/generics.html#generic-methods-and-generic-self for the use</span>
 <span class="c1"># of `T` to annotate `self`. Many methods of `Module` return `self` and we want those return values to be</span>
 <span class="c1"># the type of the subclass, not the looser type of `Module`.</span>
@@ -616,9 +718,9 @@ window.addEventListener("load", () => mermaid.run());
 
 <span class="sa">r</span><span class="sd">&quot;&quot;&quot;This tracks hooks common to all modules that are executed immediately before</span>
 <span class="sd">.registering the buffer/module/parameter&quot;&quot;&quot;</span>
-<span class="n">_global_buffer_registration_hooks</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
-<span class="n">_global_module_registration_hooks</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
-<span class="n">_global_parameter_registration_hooks</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+<span class="n">_global_buffer_registration_hooks</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+<span class="n">_global_module_registration_hooks</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+<span class="n">_global_parameter_registration_hooks</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
 
 
 <span class="k">class</span><span class="w"> </span><span class="nc">_WrappedHook</span><span class="p">:</span>
@@ -640,14 +742,14 @@ window.addEventListener("load", () => mermaid.run());
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">hook</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">hook</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">__getstate__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">__getstate__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;hook&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">hook</span><span class="p">,</span> <span class="s2">&quot;with_module&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">with_module</span><span class="p">}</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">with_module</span><span class="p">:</span>
             <span class="n">result</span><span class="p">[</span><span class="s2">&quot;module&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">module</span><span class="p">()</span>
 
         <span class="k">return</span> <span class="n">result</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">__setstate__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">__setstate__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">Dict</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">hook</span> <span class="o">=</span> <span class="n">state</span><span class="p">[</span><span class="s2">&quot;hook&quot;</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">with_module</span> <span class="o">=</span> <span class="n">state</span><span class="p">[</span><span class="s2">&quot;with_module&quot;</span><span class="p">]</span>
 
@@ -662,19 +764,19 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sa">r</span><span class="sd">&quot;&quot;&quot;This tracks hooks common to all modules that are executed before/after</span>
 <span class="sd">calling forward and backward. This is global state used for debugging/profiling</span>
 <span class="sd">purposes&quot;&quot;&quot;</span>
-<span class="n">_global_backward_pre_hooks</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
-<span class="n">_global_backward_hooks</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+<span class="n">_global_backward_pre_hooks</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+<span class="n">_global_backward_hooks</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
 <span class="n">_global_is_full_backward_hook</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="n">_global_forward_pre_hooks</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
-<span class="n">_global_forward_hooks</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
-<span class="n">_global_forward_hooks_always_called</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
-<span class="n">_global_forward_hooks_with_kwargs</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+<span class="n">_global_forward_pre_hooks</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+<span class="n">_global_forward_hooks</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+<span class="n">_global_forward_hooks_always_called</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+<span class="n">_global_forward_hooks_with_kwargs</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
 
 <span class="n">_EXTRA_STATE_KEY_SUFFIX</span> <span class="o">=</span> <span class="s2">&quot;_extra_state&quot;</span>
 
 
 <div class="viewcode-block" id="register_module_buffer_registration_hook">
-<a class="viewcode-back" href="../../../../generated/torch.nn.modules.module.register_module_buffer_registration_hook.html#torch.jit.register_module_buffer_registration_hook">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.modules.module.register_module_buffer_registration_hook.html#torch.nn.modules.module.register_module_buffer_registration_hook">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">register_module_buffer_registration_hook</span><span class="p">(</span>
     <span class="n">hook</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="kc">None</span><span class="p">],</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RemovableHandle</span><span class="p">:</span>
@@ -703,7 +805,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="register_module_module_registration_hook">
-<a class="viewcode-back" href="../../../../generated/torch.nn.modules.module.register_module_module_registration_hook.html#torch.jit.register_module_module_registration_hook">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.modules.module.register_module_module_registration_hook.html#torch.nn.modules.module.register_module_module_registration_hook">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">register_module_module_registration_hook</span><span class="p">(</span>
     <span class="n">hook</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="kc">None</span><span class="p">],</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RemovableHandle</span><span class="p">:</span>
@@ -732,7 +834,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="register_module_parameter_registration_hook">
-<a class="viewcode-back" href="../../../../generated/torch.nn.modules.module.register_module_parameter_registration_hook.html#torch.jit.register_module_parameter_registration_hook">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.modules.module.register_module_parameter_registration_hook.html#torch.nn.modules.module.register_module_parameter_registration_hook">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">register_module_parameter_registration_hook</span><span class="p">(</span>
     <span class="n">hook</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="kc">None</span><span class="p">],</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RemovableHandle</span><span class="p">:</span>
@@ -761,7 +863,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="register_module_forward_pre_hook">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.modules.module.register_module_forward_pre_hook.html#torch.jit.register_module_forward_pre_hook">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.modules.module.register_module_forward_pre_hook.html#torch.nn.modules.module.register_module_forward_pre_hook">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">register_module_forward_pre_hook</span><span class="p">(</span><span class="n">hook</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="kc">None</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">RemovableHandle</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Register a forward pre-hook common to all modules.</span>
 
@@ -796,7 +898,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="register_module_forward_hook">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.modules.module.register_module_forward_hook.html#torch.jit.register_module_forward_hook">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.modules.module.register_module_forward_hook.html#torch.nn.modules.module.register_module_forward_hook">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">register_module_forward_hook</span><span class="p">(</span>
     <span class="n">hook</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="kc">None</span><span class="p">],</span>
     <span class="o">*</span><span class="p">,</span>
@@ -846,7 +948,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="register_module_backward_hook">
-<a class="viewcode-back" href="../../../../generated/torch.nn.modules.module.register_module_backward_hook.html#torch.jit.register_module_backward_hook">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.modules.module.register_module_backward_hook.html#torch.nn.modules.module.register_module_backward_hook">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">register_module_backward_hook</span><span class="p">(</span>
     <span class="n">hook</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="s2">&quot;Module&quot;</span><span class="p">,</span> <span class="n">_grad_t</span><span class="p">,</span> <span class="n">_grad_t</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="n">_grad_t</span><span class="p">]],</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RemovableHandle</span><span class="p">:</span>
@@ -878,7 +980,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="register_module_full_backward_pre_hook">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.modules.module.register_module_full_backward_pre_hook.html#torch.jit.register_module_full_backward_pre_hook">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.modules.module.register_module_full_backward_pre_hook.html#torch.nn.modules.module.register_module_full_backward_pre_hook">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">register_module_full_backward_pre_hook</span><span class="p">(</span>
     <span class="n">hook</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="s2">&quot;Module&quot;</span><span class="p">,</span> <span class="n">_grad_t</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="n">_grad_t</span><span class="p">]],</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RemovableHandle</span><span class="p">:</span>
@@ -908,7 +1010,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="register_module_full_backward_hook">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.modules.module.register_module_full_backward_hook.html#torch.jit.register_module_full_backward_hook">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.modules.module.register_module_full_backward_hook.html#torch.nn.modules.module.register_module_full_backward_hook">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">register_module_full_backward_hook</span><span class="p">(</span>
     <span class="n">hook</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="s2">&quot;Module&quot;</span><span class="p">,</span> <span class="n">_grad_t</span><span class="p">,</span> <span class="n">_grad_t</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="n">_grad_t</span><span class="p">]],</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RemovableHandle</span><span class="p">:</span>
@@ -966,7 +1068,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">Module</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Base class for all neural network modules.</span>
 
@@ -1015,29 +1117,29 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sd">    the change.&quot;&quot;&quot;</span>
 
     <span class="n">training</span><span class="p">:</span> <span class="nb">bool</span>
-    <span class="n">_parameters</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Parameter</span><span class="p">]]</span>
-    <span class="n">_buffers</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Tensor</span><span class="p">]]</span>
-    <span class="n">_non_persistent_buffers_set</span><span class="p">:</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
-    <span class="n">_backward_pre_hooks</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span>
-    <span class="n">_backward_hooks</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span>
+    <span class="n">_parameters</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Parameter</span><span class="p">]]</span>
+    <span class="n">_buffers</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Tensor</span><span class="p">]]</span>
+    <span class="n">_non_persistent_buffers_set</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">_backward_pre_hooks</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span>
+    <span class="n">_backward_hooks</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span>
     <span class="n">_is_full_backward_hook</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span>
-    <span class="n">_forward_hooks</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span>
+    <span class="n">_forward_hooks</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span>
     <span class="c1"># Marks whether the corresponding _forward_hooks accept kwargs or not.</span>
     <span class="c1"># As JIT does not support Set[int], this dict is used as a set, where all</span>
     <span class="c1"># hooks represented in this dict accept kwargs.</span>
-    <span class="n">_forward_hooks_with_kwargs</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]</span>
+    <span class="n">_forward_hooks_with_kwargs</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]</span>
     <span class="c1"># forward hooks that should always be called even if an exception is raised</span>
-    <span class="n">_forward_hooks_always_called</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]</span>
-    <span class="n">_forward_pre_hooks</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span>
+    <span class="n">_forward_hooks_always_called</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]</span>
+    <span class="n">_forward_pre_hooks</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span>
     <span class="c1"># Marks whether the corresponding _forward_hooks accept kwargs or not.</span>
     <span class="c1"># As JIT does not support Set[int], this dict is used as a set, where all</span>
     <span class="c1"># hooks represented in this dict accept kwargs.</span>
-    <span class="n">_forward_pre_hooks_with_kwargs</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]</span>
-    <span class="n">_state_dict_hooks</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span>
-    <span class="n">_load_state_dict_pre_hooks</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span>
-    <span class="n">_state_dict_pre_hooks</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span>
-    <span class="n">_load_state_dict_post_hooks</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span>
-    <span class="n">_modules</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="s2">&quot;Module&quot;</span><span class="p">]]</span>
+    <span class="n">_forward_pre_hooks_with_kwargs</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]</span>
+    <span class="n">_state_dict_hooks</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span>
+    <span class="n">_load_state_dict_pre_hooks</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span>
+    <span class="n">_state_dict_pre_hooks</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span>
+    <span class="n">_load_state_dict_post_hooks</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Callable</span><span class="p">]</span>
+    <span class="n">_modules</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="s2">&quot;Module&quot;</span><span class="p">]]</span>
     <span class="n">call_super_init</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="n">_compiled_call_impl</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -1088,7 +1190,7 @@ window.addEventListener("load", () => mermaid.run());
     <span class="n">forward</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="n">_forward_unimplemented</span>
 
 <div class="viewcode-block" id="Module.register_buffer">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.register_buffer">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.register_buffer">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">register_buffer</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">tensor</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Tensor</span><span class="p">],</span> <span class="n">persistent</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -1153,7 +1255,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.register_parameter">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.register_parameter">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.register_parameter">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">register_parameter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">param</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Parameter</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Add a parameter to the module.</span>
 
@@ -1206,7 +1308,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.add_module">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.add_module">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.add_module">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">add_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="s2">&quot;Module&quot;</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Add a child module to the current module.</span>
 
@@ -1237,14 +1339,14 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.register_module">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.register_module">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.register_module">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">register_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="s2">&quot;Module&quot;</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Alias for :func:`add_module`.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add_module</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">module</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="Module.get_submodule">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.get_submodule">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.get_submodule">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_submodule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Module&quot;</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the submodule given by ``target`` if it exists, otherwise throw an error.</span>
 
@@ -1287,14 +1389,14 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sd">            torch.nn.Module: The submodule referenced by ``target``</span>
 
 <span class="sd">        Raises:</span>
-<span class="sd">            AttributeError: If at any point along the path resulting from</span>
-<span class="sd">                the target string the (sub)path resolves to a non-existent</span>
-<span class="sd">                attribute name or an object that is not an instance of ``nn.Module``.</span>
+<span class="sd">            AttributeError: If the target string references an invalid</span>
+<span class="sd">                path or resolves to something that is not an</span>
+<span class="sd">                ``nn.Module``</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">target</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span>
 
-        <span class="n">atoms</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">target</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+        <span class="n">atoms</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">target</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
         <span class="n">mod</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span> <span class="o">=</span> <span class="bp">self</span>
 
         <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">atoms</span><span class="p">:</span>
@@ -1312,18 +1414,10 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.set_submodule">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.set_submodule">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">set_submodule</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="s2">&quot;Module&quot;</span><span class="p">,</span> <span class="n">strict</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.set_submodule">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_submodule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="s2">&quot;Module&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the submodule given by ``target`` if it exists, otherwise throw an error.</span>
-
-<span class="sd">        .. note::</span>
-<span class="sd">            If ``strict`` is set to ``False`` (default), the method will replace an existing submodule</span>
-<span class="sd">            or create a new submodule if the parent module exists. If ``strict`` is set to ``True``,</span>
-<span class="sd">            the method will only attempt to replace an existing submodule and throw an error if</span>
-<span class="sd">            the submodule does not exist.</span>
 
 <span class="sd">        For example, let&#39;s say you have an ``nn.Module`` ``A`` that</span>
 <span class="sd">        looks like this:</span>
@@ -1333,9 +1427,9 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sd">            A(</span>
 <span class="sd">                (net_b): Module(</span>
 <span class="sd">                    (net_c): Module(</span>
-<span class="sd">                        (conv): Conv2d(3, 3, 3)</span>
+<span class="sd">                        (conv): Conv2d(16, 33, kernel_size=(3, 3), stride=(2, 2))</span>
 <span class="sd">                    )</span>
-<span class="sd">                    (linear): Linear(3, 3)</span>
+<span class="sd">                    (linear): Linear(in_features=100, out_features=200, bias=True)</span>
 <span class="sd">                )</span>
 <span class="sd">            )</span>
 
@@ -1343,60 +1437,46 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sd">        submodule ``net_b``, which itself has two submodules ``net_c``</span>
 <span class="sd">        and ``linear``. ``net_c`` then has a submodule ``conv``.)</span>
 
-<span class="sd">        To override the ``Conv2d`` with a new submodule ``Linear``, you</span>
-<span class="sd">        could call ``set_submodule(&quot;net_b.net_c.conv&quot;, nn.Linear(1, 1))``</span>
-<span class="sd">        where ``strict`` could be ``True`` or ``False``</span>
-
-<span class="sd">        To add a new submodule ``Conv2d`` to the existing ``net_b`` module,</span>
-<span class="sd">        you would call ``set_submodule(&quot;net_b.conv&quot;, nn.Conv2d(1, 1, 1))``.</span>
-
-<span class="sd">        In the above if you set ``strict=True`` and call</span>
-<span class="sd">        ``set_submodule(&quot;net_b.conv&quot;, nn.Conv2d(1, 1, 1), strict=True)``, an AttributeError</span>
-<span class="sd">        will be raised because ``net_b`` does not have a submodule named ``conv``.</span>
+<span class="sd">        To overide the ``Conv2d`` with a new submodule ``Linear``, you</span>
+<span class="sd">        would call</span>
+<span class="sd">        ``set_submodule(&quot;net_b.net_c.conv&quot;, nn.Linear(33, 16))``.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            target: The fully-qualified string name of the submodule</span>
 <span class="sd">                to look for. (See above example for how to specify a</span>
 <span class="sd">                fully-qualified string.)</span>
 <span class="sd">            module: The module to set the submodule to.</span>
-<span class="sd">            strict: If ``False``, the method will replace an existing submodule</span>
-<span class="sd">                or create a new submodule if the parent module exists. If ``True``,</span>
-<span class="sd">                the method will only attempt to replace an existing submodule and throw an error</span>
-<span class="sd">                if the submodule doesn&#39;t already exist.</span>
 
 <span class="sd">        Raises:</span>
-<span class="sd">            ValueError: If the ``target`` string is empty or if ``module`` is not an instance of ``nn.Module``.</span>
-<span class="sd">            AttributeError: If at any point along the path resulting from</span>
-<span class="sd">                the ``target`` string the (sub)path resolves to a non-existent</span>
-<span class="sd">                attribute name or an object that is not an instance of ``nn.Module``.</span>
+<span class="sd">            ValueError: If the target string is empty</span>
+<span class="sd">            AttributeError: If the target string references an invalid</span>
+<span class="sd">                path or resolves to something that is not an</span>
+<span class="sd">                ``nn.Module``</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">target</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Cannot set the submodule without a target name!&quot;</span><span class="p">)</span>
 
-        <span class="n">atoms</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">target</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-                <span class="s2">&quot;`&quot;</span> <span class="o">+</span> <span class="s2">&quot;module&quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;` is not an nn.Module, found </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">module</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
-            <span class="p">)</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">atoms</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="n">parent</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span> <span class="o">=</span> <span class="bp">self</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">parent_key</span> <span class="o">=</span> <span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">atoms</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-            <span class="n">parent</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_submodule</span><span class="p">(</span><span class="n">parent_key</span><span class="p">)</span>
+        <span class="n">atoms</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">target</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">atoms</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">mod</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span> <span class="o">=</span> <span class="bp">self</span>
 
-        <span class="k">if</span> <span class="n">strict</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">atoms</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
-            <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span>
-                <span class="n">parent</span><span class="o">.</span><span class="n">_get_name</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; has no attribute `&quot;</span> <span class="o">+</span> <span class="n">atoms</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;`&quot;</span>
-            <span class="p">)</span>
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">atoms</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
-            <span class="n">mod</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">atoms</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">atoms</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">mod</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span>
+                    <span class="n">mod</span><span class="o">.</span><span class="n">_get_name</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; has no attribute `&quot;</span> <span class="o">+</span> <span class="n">item</span> <span class="o">+</span> <span class="s2">&quot;`&quot;</span>
+                <span class="p">)</span>
+
+            <span class="n">mod</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">mod</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+
+            <span class="c1"># Use isinstance instead of type here to also handle subclass of nn.Module</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mod</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="s2">&quot;`&quot;</span> <span class="o">+</span> <span class="n">atoms</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;` is not an nn.Module&quot;</span><span class="p">)</span>
-        <span class="nb">setattr</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">atoms</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">module</span><span class="p">)</span></div>
+                <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="s2">&quot;`&quot;</span> <span class="o">+</span> <span class="n">item</span> <span class="o">+</span> <span class="s2">&quot;` is not an nn.Module&quot;</span><span class="p">)</span>
+
+        <span class="nb">setattr</span><span class="p">(</span><span class="n">mod</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">module</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="Module.get_parameter">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.get_parameter">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.get_parameter">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_parameter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Parameter&quot;</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the parameter given by ``target`` if it exists, otherwise throw an error.</span>
 
@@ -1435,7 +1515,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.get_buffer">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.get_buffer">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.get_buffer">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_buffer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Tensor&quot;</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the buffer given by ``target`` if it exists, otherwise throw an error.</span>
 
@@ -1474,7 +1554,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.get_extra_state">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.get_extra_state">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.get_extra_state">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_extra_state</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return any extra state to include in the module&#39;s state_dict.</span>
 
@@ -1498,7 +1578,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.set_extra_state">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.set_extra_state">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.set_extra_state">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">set_extra_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Set extra state contained in the loaded `state_dict`.</span>
 
@@ -1613,7 +1693,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="k">return</span> <span class="bp">self</span>
 
 <div class="viewcode-block" id="Module.apply">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.apply">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.apply">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="n">fn</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="s2">&quot;Module&quot;</span><span class="p">],</span> <span class="kc">None</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Apply ``fn`` recursively to every submodule (as returned by ``.children()``) as well as self.</span>
 
@@ -1657,7 +1737,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.cuda">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.cuda">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.cuda">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">cuda</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">device</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Move all model parameters and buffers to the GPU.</span>
 
@@ -1679,7 +1759,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.ipu">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.ipu">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.ipu">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">ipu</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">device</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Move all model parameters and buffers to the IPU.</span>
 
@@ -1701,7 +1781,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.xpu">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.xpu">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.xpu">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">xpu</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">device</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Move all model parameters and buffers to the XPU.</span>
 
@@ -1723,7 +1803,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.mtia">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.mtia">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.mtia">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">mtia</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">device</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Move all model parameters and buffers to the MTIA.</span>
 
@@ -1745,7 +1825,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.cpu">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.cpu">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.cpu">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">cpu</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Move all model parameters and buffers to the CPU.</span>
 
@@ -1759,7 +1839,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.type">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.type">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.type">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">type</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="n">dst_type</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">dtype</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Casts all parameters and buffers to :attr:`dst_type`.</span>
 
@@ -1776,7 +1856,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.float">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.float">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.float">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">float</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Casts all floating point parameters and buffers to ``float`` datatype.</span>
 
@@ -1790,7 +1870,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.double">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.double">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.double">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">double</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Casts all floating point parameters and buffers to ``double`` datatype.</span>
 
@@ -1804,7 +1884,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.half">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.half">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.half">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">half</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Casts all floating point parameters and buffers to ``half`` datatype.</span>
 
@@ -1818,7 +1898,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.bfloat16">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.bfloat16">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.bfloat16">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">bfloat16</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Casts all floating point parameters and buffers to ``bfloat16`` datatype.</span>
 
@@ -1832,7 +1912,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.to_empty">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.to_empty">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.to_empty">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_empty</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DeviceLikeType</span><span class="p">],</span> <span class="n">recurse</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
@@ -1870,7 +1950,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="o">...</span>
 
 <div class="viewcode-block" id="Module.to">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.to">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.to">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Move and/or cast the parameters and buffers.</span>
 
@@ -2002,7 +2082,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.register_full_backward_pre_hook">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.register_full_backward_pre_hook">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.register_full_backward_pre_hook">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">register_full_backward_pre_hook</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">hook</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="s2">&quot;Module&quot;</span><span class="p">,</span> <span class="n">_grad_t</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="n">_grad_t</span><span class="p">]],</span>
@@ -2054,7 +2134,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.register_backward_hook">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.register_backward_hook">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.register_backward_hook">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">register_backward_hook</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">hook</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="s2">&quot;Module&quot;</span><span class="p">,</span> <span class="n">_grad_t</span><span class="p">,</span> <span class="n">_grad_t</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="n">_grad_t</span><span class="p">]]</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RemovableHandle</span><span class="p">:</span>
@@ -2083,7 +2163,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.register_full_backward_hook">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.register_full_backward_hook">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.register_full_backward_hook">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">register_full_backward_hook</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">hook</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="s2">&quot;Module&quot;</span><span class="p">,</span> <span class="n">_grad_t</span><span class="p">,</span> <span class="n">_grad_t</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="n">_grad_t</span><span class="p">]],</span>
@@ -2153,13 +2233,13 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sd">        It returns two lists, one with the full backward hooks and one with the non-full</span>
 <span class="sd">        backward hooks.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">full_backward_hooks</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">full_backward_hooks</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">if</span> <span class="n">_global_is_full_backward_hook</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
             <span class="n">full_backward_hooks</span> <span class="o">+=</span> <span class="n">_global_backward_hooks</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_full_backward_hook</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
             <span class="n">full_backward_hooks</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_backward_hooks</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
 
-        <span class="n">non_full_backward_hooks</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">non_full_backward_hooks</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">if</span> <span class="n">_global_is_full_backward_hook</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
             <span class="n">non_full_backward_hooks</span> <span class="o">+=</span> <span class="n">_global_backward_hooks</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_full_backward_hook</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
@@ -2168,7 +2248,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="k">return</span> <span class="n">full_backward_hooks</span><span class="p">,</span> <span class="n">non_full_backward_hooks</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_get_backward_pre_hooks</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">backward_pre_hooks</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">backward_pre_hooks</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">backward_pre_hooks</span> <span class="o">+=</span> <span class="n">_global_backward_pre_hooks</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
         <span class="n">backward_pre_hooks</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_backward_pre_hooks</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
 
@@ -2246,14 +2326,14 @@ window.addEventListener("load", () => mermaid.run());
                 <span class="p">)</span>
 
 <div class="viewcode-block" id="Module.register_forward_pre_hook">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.register_forward_pre_hook">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.register_forward_pre_hook">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">register_forward_pre_hook</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">hook</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span>
-            <span class="n">Callable</span><span class="p">[[</span><span class="n">T</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="o">...</span><span class="p">]],</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]],</span>
+            <span class="n">Callable</span><span class="p">[[</span><span class="n">T</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="o">...</span><span class="p">]],</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]],</span>
             <span class="n">Callable</span><span class="p">[</span>
-                <span class="p">[</span><span class="n">T</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]],</span>
-                <span class="n">Optional</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]],</span>
+                <span class="p">[</span><span class="n">T</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]],</span>
+                <span class="n">Optional</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]],</span>
             <span class="p">],</span>
         <span class="p">],</span>
         <span class="o">*</span><span class="p">,</span>
@@ -2315,12 +2395,12 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.register_forward_hook">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.register_forward_hook">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.register_forward_hook">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">register_forward_hook</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">hook</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span>
-            <span class="n">Callable</span><span class="p">[[</span><span class="n">T</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="n">Any</span><span class="p">],</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]],</span>
-            <span class="n">Callable</span><span class="p">[[</span><span class="n">T</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">Any</span><span class="p">],</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]],</span>
+            <span class="n">Callable</span><span class="p">[[</span><span class="n">T</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="n">Any</span><span class="p">],</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]],</span>
+            <span class="n">Callable</span><span class="p">[[</span><span class="n">T</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">Any</span><span class="p">],</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]],</span>
         <span class="p">],</span>
         <span class="o">*</span><span class="p">,</span>
         <span class="n">prepend</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
@@ -2733,7 +2813,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="k">return</span> <span class="n">handle</span>
 
 <div class="viewcode-block" id="Module.register_state_dict_post_hook">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.register_state_dict_post_hook">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.register_state_dict_post_hook">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">register_state_dict_post_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hook</span><span class="p">):</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Register a post-hook for the :meth:`~torch.nn.Module.state_dict` method.</span>
 
@@ -2760,7 +2840,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.register_state_dict_pre_hook">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.register_state_dict_pre_hook">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.register_state_dict_pre_hook">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">register_state_dict_pre_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hook</span><span class="p">):</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Register a pre-hook for the :meth:`~torch.nn.Module.state_dict` method.</span>
 
@@ -2805,7 +2885,7 @@ window.addEventListener("load", () => mermaid.run());
 
     <span class="c1"># The user can pass an optional arbitrary mappable object to `state_dict`, in which case `state_dict` returns</span>
     <span class="c1"># back that same object. But if they pass nothing, an `OrderedDict` is created and returned.</span>
-    <span class="n">T_destination</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;T_destination&quot;</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span>
+    <span class="n">T_destination</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;T_destination&quot;</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span>
 
     <span class="nd">@overload</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">state_dict</span><span class="p">(</span>
@@ -2814,13 +2894,13 @@ window.addEventListener("load", () => mermaid.run());
         <span class="o">...</span>
 
     <span class="nd">@overload</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">state_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">prefix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="o">...</span><span class="p">,</span> <span class="n">keep_vars</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">state_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">prefix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="o">...</span><span class="p">,</span> <span class="n">keep_vars</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
         <span class="o">...</span>
 
     <span class="c1"># TODO: Change `*args` to `*` and remove the corresponding warning in docs when BC allows.</span>
     <span class="c1"># Also remove the logic for arg parsing together.</span>
 <div class="viewcode-block" id="Module.state_dict">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.state_dict">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.state_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">state_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">destination</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">keep_vars</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return a dictionary containing references to the whole state of the module.</span>
 
@@ -2932,7 +3012,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="k">return</span> <span class="n">handle</span>
 
 <div class="viewcode-block" id="Module.register_load_state_dict_pre_hook">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.register_load_state_dict_pre_hook">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.register_load_state_dict_pre_hook">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">register_load_state_dict_pre_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hook</span><span class="p">):</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Register a pre-hook to be run before module&#39;s :meth:`~nn.Module.load_state_dict` is called.</span>
 
@@ -2947,7 +3027,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.register_load_state_dict_post_hook">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.register_load_state_dict_post_hook">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.register_load_state_dict_post_hook">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">register_load_state_dict_post_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hook</span><span class="p">):</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Register a post-hook to be run after module&#39;s :meth:`~nn.Module.load_state_dict` is called.</span>
 
@@ -3160,7 +3240,7 @@ window.addEventListener("load", () => mermaid.run());
                         <span class="n">unexpected_keys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
 
 <div class="viewcode-block" id="Module.load_state_dict">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.load_state_dict">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.load_state_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">load_state_dict</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">state_dict</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">strict</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">assign</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="p">):</span>
@@ -3205,9 +3285,9 @@ window.addEventListener("load", () => mermaid.run());
                 <span class="sa">f</span><span class="s2">&quot;Expected state_dict to be dict-like, got </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">state_dict</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span>
             <span class="p">)</span>
 
-        <span class="n">missing_keys</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">unexpected_keys</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">error_msgs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">missing_keys</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">unexpected_keys</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">error_msgs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
 
         <span class="c1"># copy state_dict so _load_from_state_dict can modify it</span>
         <span class="n">metadata</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">state_dict</span><span class="p">,</span> <span class="s2">&quot;_metadata&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
@@ -3298,7 +3378,7 @@ window.addEventListener("load", () => mermaid.run());
                 <span class="k">yield</span> <span class="n">name</span><span class="p">,</span> <span class="n">v</span>
 
 <div class="viewcode-block" id="Module.parameters">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.parameters">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.parameters">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">recurse</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Parameter</span><span class="p">]:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return an iterator over module parameters.</span>
 
@@ -3326,10 +3406,10 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.named_parameters">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.named_parameters">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.named_parameters">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">named_parameters</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">prefix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">recurse</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">remove_duplicate</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Parameter</span><span class="p">]]:</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Parameter</span><span class="p">]]:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return an iterator over module parameters, yielding both the name of the parameter as well as the parameter itself.</span>
 
 <span class="sd">        Args:</span>
@@ -3361,7 +3441,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.buffers">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.buffers">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.buffers">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">buffers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">recurse</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tensor</span><span class="p">]:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return an iterator over module buffers.</span>
 
@@ -3387,10 +3467,10 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.named_buffers">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.named_buffers">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.named_buffers">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">named_buffers</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">prefix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">recurse</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">remove_duplicate</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Tensor</span><span class="p">]]:</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Tensor</span><span class="p">]]:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return an iterator over module buffers, yielding both the name of the buffer as well as the buffer itself.</span>
 
 <span class="sd">        Args:</span>
@@ -3421,7 +3501,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.children">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.children">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.children">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">children</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="s2">&quot;Module&quot;</span><span class="p">]:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return an iterator over immediate children modules.</span>
 
@@ -3433,8 +3513,8 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.named_children">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.named_children">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">named_children</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="s2">&quot;Module&quot;</span><span class="p">]]:</span>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.named_children">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">named_children</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="s2">&quot;Module&quot;</span><span class="p">]]:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return an iterator over immediate children modules, yielding both the name of the module as well as the module itself.</span>
 
 <span class="sd">        Yields:</span>
@@ -3456,7 +3536,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.modules">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.modules">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.modules">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">modules</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="s2">&quot;Module&quot;</span><span class="p">]:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return an iterator over all modules in the network.</span>
 
@@ -3486,10 +3566,10 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.named_modules">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.named_modules">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.named_modules">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">named_modules</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
-        <span class="n">memo</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">set</span><span class="p">[</span><span class="s2">&quot;Module&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">memo</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Set</span><span class="p">[</span><span class="s2">&quot;Module&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">prefix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
         <span class="n">remove_duplicate</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
     <span class="p">):</span>
@@ -3538,7 +3618,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.train">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.train">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.train">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">train</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Set the module in training mode.</span>
 
@@ -3563,7 +3643,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.eval">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.eval">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.eval">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">eval</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Set the module in evaluation mode.</span>
 
@@ -3584,7 +3664,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.requires_grad_">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.requires_grad_">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.requires_grad_">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">requires_grad_</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="n">requires_grad</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Change if autograd should record operations on parameters in this module.</span>
 
@@ -3610,7 +3690,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.zero_grad">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.zero_grad">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.zero_grad">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">zero_grad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">set_to_none</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Reset gradients of all model parameters.</span>
 
@@ -3641,7 +3721,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="Module.share_memory">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.share_memory">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.share_memory">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">share_memory</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;See :meth:`torch.Tensor.share_memory_`.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">share_memory_</span><span class="p">())</span></div>
@@ -3651,7 +3731,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span>
 
 <div class="viewcode-block" id="Module.extra_repr">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.extra_repr">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.extra_repr">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">extra_repr</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the extra representation of the module.</span>
 
@@ -3714,7 +3794,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="k">return</span> <span class="n">replica</span>
 
 <div class="viewcode-block" id="Module.compile">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.Module.html#torch.jit.Module.compile">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.Module.html#torch.nn.modules.module.Module.compile">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">compile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Compile this Module&#39;s forward using :func:`torch.compile`.</span>
@@ -3758,7 +3838,6 @@ window.addEventListener("load", () => mermaid.run());
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

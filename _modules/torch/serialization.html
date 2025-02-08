@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -44,7 +44,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -63,7 +63,7 @@ window.addEventListener("load", () => mermaid.run());
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -72,7 +72,6 @@ window.addEventListener("load", () => mermaid.run());
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -159,7 +158,7 @@ window.addEventListener("load", () => mermaid.run());
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -183,8 +182,8 @@ window.addEventListener("load", () => mermaid.run());
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -254,7 +253,7 @@ window.addEventListener("load", () => mermaid.run());
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -269,7 +268,6 @@ window.addEventListener("load", () => mermaid.run());
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -309,9 +307,27 @@ window.addEventListener("load", () => mermaid.run());
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -325,20 +341,14 @@ window.addEventListener("load", () => mermaid.run());
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -399,6 +409,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -489,6 +539,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
         
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
       </div>
     
   </div>
@@ -569,7 +659,19 @@ window.addEventListener("load", () => mermaid.run());
 <span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">contextlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">closing</span><span class="p">,</span> <span class="n">contextmanager</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">BinaryIO</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">cast</span><span class="p">,</span> <span class="n">IO</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">Any</span><span class="p">,</span>
+    <span class="n">BinaryIO</span><span class="p">,</span>
+    <span class="n">Callable</span><span class="p">,</span>
+    <span class="n">cast</span><span class="p">,</span>
+    <span class="n">Dict</span><span class="p">,</span>
+    <span class="n">IO</span><span class="p">,</span>
+    <span class="n">List</span><span class="p">,</span>
+    <span class="n">Optional</span><span class="p">,</span>
+    <span class="n">Tuple</span><span class="p">,</span>
+    <span class="n">Type</span><span class="p">,</span>
+    <span class="n">Union</span><span class="p">,</span>
+<span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">typing_extensions</span><span class="w"> </span><span class="kn">import</span> <span class="n">TypeAlias</span><span class="p">,</span> <span class="n">TypeIs</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
@@ -621,7 +723,7 @@ window.addEventListener("load", () => mermaid.run());
 
 <span class="n">FILE_LIKE</span><span class="p">:</span> <span class="n">TypeAlias</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">PathLike</span><span class="p">,</span> <span class="n">BinaryIO</span><span class="p">,</span> <span class="n">IO</span><span class="p">[</span><span class="nb">bytes</span><span class="p">]]</span>
 <span class="n">MAP_LOCATION</span><span class="p">:</span> <span class="n">TypeAlias</span> <span class="o">=</span> <span class="n">Optional</span><span class="p">[</span>
-    <span class="n">Union</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="n">Storage</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">Storage</span><span class="p">],</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span>
+    <span class="n">Union</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="n">Storage</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">Storage</span><span class="p">],</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span>
 <span class="p">]</span>
 <span class="n">STORAGE</span><span class="p">:</span> <span class="n">TypeAlias</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span><span class="n">Storage</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">TypedStorage</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">UntypedStorage</span><span class="p">]</span>
 
@@ -674,8 +776,8 @@ window.addEventListener("load", () => mermaid.run());
         <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 
 
-<span class="n">_package_registry</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span>
-    <span class="nb">tuple</span><span class="p">[</span>
+<span class="n">_package_registry</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span>
+    <span class="n">Tuple</span><span class="p">[</span>
         <span class="nb">int</span><span class="p">,</span>
         <span class="n">Callable</span><span class="p">[[</span><span class="n">STORAGE</span><span class="p">],</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]],</span>
         <span class="n">Callable</span><span class="p">[[</span><span class="n">STORAGE</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">Optional</span><span class="p">[</span><span class="n">STORAGE</span><span class="p">]],</span>
@@ -687,6 +789,9 @@ window.addEventListener("load", () => mermaid.run());
     <span class="n">NATIVE</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="n">LITTLE</span> <span class="o">=</span> <span class="mi">2</span>
     <span class="n">BIG</span> <span class="o">=</span> <span class="mi">3</span>
+
+
+<span class="n">_default_load_endian</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">LoadEndianness</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 
 
 <div class="viewcode-block" id="get_default_load_endianness">
@@ -702,9 +807,7 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sd">    Returns:</span>
 <span class="sd">        default_load_endian: Optional[LoadEndianness]</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.serialization</span><span class="w"> </span><span class="kn">import</span> <span class="n">config</span>
-
-    <span class="k">return</span> <span class="n">config</span><span class="o">.</span><span class="n">load</span><span class="o">.</span><span class="n">endianness</span></div>
+    <span class="k">return</span> <span class="n">_default_load_endian</span></div>
 
 
 
@@ -721,12 +824,14 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sd">    Args:</span>
 <span class="sd">        endianness: the new fallback byte order</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">_default_load_endian</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">endianness</span><span class="p">,</span> <span class="n">LoadEndianness</span><span class="p">)</span> <span class="ow">and</span> <span class="n">endianness</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid argument type in function set_default_load_endianness&quot;</span><span class="p">)</span>
-    <span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.serialization</span><span class="w"> </span><span class="kn">import</span> <span class="n">config</span>
+    <span class="n">_default_load_endian</span> <span class="o">=</span> <span class="n">endianness</span></div>
 
-    <span class="n">config</span><span class="o">.</span><span class="n">load</span><span class="o">.</span><span class="n">endianness</span> <span class="o">=</span> <span class="n">endianness</span></div>
 
+
+<span class="n">_compute_crc32</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
 
 
 <div class="viewcode-block" id="get_crc32_options">
@@ -737,9 +842,7 @@ window.addEventListener("load", () => mermaid.run());
 
 <span class="sd">    Defaults to ``True``.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.serialization</span><span class="w"> </span><span class="kn">import</span> <span class="n">config</span>
-
-    <span class="k">return</span> <span class="n">config</span><span class="o">.</span><span class="n">save</span><span class="o">.</span><span class="n">compute_crc32</span></div>
+    <span class="k">return</span> <span class="n">_compute_crc32</span></div>
 
 
 
@@ -757,15 +860,17 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sd">    Args:</span>
 <span class="sd">        compute_crc32 (bool): set crc32 compuation flag</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.serialization</span><span class="w"> </span><span class="kn">import</span> <span class="n">config</span>
+    <span class="k">global</span> <span class="n">_compute_crc32</span>
+    <span class="n">_compute_crc32</span> <span class="o">=</span> <span class="n">compute_crc32</span></div>
 
-    <span class="n">config</span><span class="o">.</span><span class="n">save</span><span class="o">.</span><span class="n">compute_crc32</span> <span class="o">=</span> <span class="n">compute_crc32</span></div>
 
+
+<span class="n">_default_mmap_options</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">MAP_PRIVATE</span>
 
 
 <div class="viewcode-block" id="get_default_mmap_options">
 <a class="viewcode-back" href="../../notes/serialization.html#torch.get_default_mmap_options">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">get_default_mmap_options</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_default_mmap_options</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Get default mmap options for :func:`torch.load` with ``mmap=True``.</span>
 
@@ -775,9 +880,7 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sd">    Returns:</span>
 <span class="sd">        default_mmap_options: int</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.serialization</span><span class="w"> </span><span class="kn">import</span> <span class="n">config</span>
-
-    <span class="k">return</span> <span class="n">config</span><span class="o">.</span><span class="n">load</span><span class="o">.</span><span class="n">mmap_flags</span></div>
+    <span class="k">return</span> <span class="n">_default_mmap_options</span></div>
 
 
 
@@ -807,19 +910,16 @@ window.addEventListener("load", () => mermaid.run());
                 <span class="s2">&quot;Invalid argument in function set_default_mmap_options, &quot;</span>
                 <span class="sa">f</span><span class="s2">&quot;expected mmap.MAP_PRIVATE or mmap.MAP_SHARED, but got </span><span class="si">{</span><span class="n">flags</span><span class="si">}</span><span class="s2">&quot;</span>
             <span class="p">)</span>
-        <span class="c1"># global config</span>
-        <span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.serialization</span><span class="w"> </span><span class="kn">import</span> <span class="n">config</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">prev</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">load</span><span class="o">.</span><span class="n">mmap_flags</span>
-        <span class="n">config</span><span class="o">.</span><span class="n">load</span><span class="o">.</span><span class="n">mmap_flags</span> <span class="o">=</span> <span class="n">flags</span>
+        <span class="k">global</span> <span class="n">_default_mmap_options</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prev</span> <span class="o">=</span> <span class="n">_default_mmap_options</span>
+        <span class="n">_default_mmap_options</span> <span class="o">=</span> <span class="n">flags</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">pass</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_type</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">exc_value</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">traceback</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.serialization</span><span class="w"> </span><span class="kn">import</span> <span class="n">config</span>
-
-        <span class="n">config</span><span class="o">.</span><span class="n">load</span><span class="o">.</span><span class="n">mmap_flags</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">prev</span></div>
+        <span class="k">global</span> <span class="n">_default_mmap_options</span>
+        <span class="n">_default_mmap_options</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">prev</span></div>
 
 
 
@@ -835,7 +935,7 @@ window.addEventListener("load", () => mermaid.run());
 
 <div class="viewcode-block" id="get_safe_globals">
 <a class="viewcode-back" href="../../notes/serialization.html#torch.get_safe_globals">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">get_safe_globals</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Callable</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]]:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_safe_globals</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Callable</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns the list of user-added globals that are safe for ``weights_only`` load.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -845,7 +945,7 @@ window.addEventListener("load", () => mermaid.run());
 
 <div class="viewcode-block" id="add_safe_globals">
 <a class="viewcode-back" href="../../notes/serialization.html#torch.add_safe_globals">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">add_safe_globals</span><span class="p">(</span><span class="n">safe_globals</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Callable</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">add_safe_globals</span><span class="p">(</span><span class="n">safe_globals</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Callable</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Marks the given globals as safe for ``weights_only`` load. For example, functions</span>
 <span class="sd">    added to this list can be called during unpickling, classes could be instantiated</span>
@@ -912,7 +1012,7 @@ window.addEventListener("load", () => mermaid.run());
 
 <div class="viewcode-block" id="get_unsafe_globals_in_checkpoint">
 <a class="viewcode-back" href="../../notes/serialization.html#torch.get_unsafe_globals_in_checkpoint">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">get_unsafe_globals_in_checkpoint</span><span class="p">(</span><span class="n">f</span><span class="p">:</span> <span class="n">FILE_LIKE</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_unsafe_globals_in_checkpoint</span><span class="p">(</span><span class="n">f</span><span class="p">:</span> <span class="n">FILE_LIKE</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns a list of strings of functions/classes in a ``torch.save`` object that are not safe for ``weights_only``.</span>
 
 <span class="sd">    For a given function or class ``f``, the corresponding string will be of the form</span>
@@ -1358,10 +1458,10 @@ window.addEventListener("load", () => mermaid.run());
             <span class="c1"># for writing out the file.</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">file_stream</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">FileIO</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
             <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
-                <span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">PyTorchFileWriter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_stream</span><span class="p">,</span> <span class="n">get_crc32_options</span><span class="p">())</span>
+                <span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">PyTorchFileWriter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_stream</span><span class="p">,</span> <span class="n">_compute_crc32</span><span class="p">)</span>
             <span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">PyTorchFileWriter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">get_crc32_options</span><span class="p">()))</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">PyTorchFileWriter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">_compute_crc32</span><span class="p">))</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">file_like</span><span class="o">.</span><span class="n">write_end_of_file</span><span class="p">()</span>
@@ -1377,7 +1477,7 @@ window.addEventListener("load", () => mermaid.run());
                 <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
             <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span> <span class="o">=</span> <span class="n">buffer</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">PyTorchFileWriter</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">get_crc32_options</span><span class="p">()))</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">PyTorchFileWriter</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">_compute_crc32</span><span class="p">))</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">file_like</span><span class="o">.</span><span class="n">write_end_of_file</span><span class="p">()</span>
@@ -1385,7 +1485,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">_open_zipfile_writer</span><span class="p">(</span><span class="n">name_or_buffer</span><span class="p">):</span>
-    <span class="n">container</span><span class="p">:</span> <span class="nb">type</span><span class="p">[</span><span class="n">_opener</span><span class="p">]</span>
+    <span class="n">container</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">_opener</span><span class="p">]</span>
     <span class="k">if</span> <span class="n">_is_path</span><span class="p">(</span><span class="n">name_or_buffer</span><span class="p">):</span>
         <span class="n">container</span> <span class="o">=</span> <span class="n">_open_zipfile_writer_file</span>
     <span class="k">else</span><span class="p">:</span>
@@ -1471,7 +1571,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="save">
-<a class="viewcode-back" href="../../python-api/torch.save.html#torch.save">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.save.html#torch.save">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">save</span><span class="p">(</span>
     <span class="n">obj</span><span class="p">:</span> <span class="nb">object</span><span class="p">,</span>
     <span class="n">f</span><span class="p">:</span> <span class="n">FILE_LIKE</span><span class="p">,</span>
@@ -1549,15 +1649,15 @@ window.addEventListener("load", () => mermaid.run());
     <span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nn</span>
 
     <span class="n">serialized_container_types</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="n">serialized_storages</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">UntypedStorage</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">dtype</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">serialized_storages</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">UntypedStorage</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">dtype</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span>
 
     <span class="c1"># Since loading storages that view the same data with different dtypes is</span>
     <span class="c1"># not supported, we need to keep track of the dtype associated with each</span>
     <span class="c1"># storage data_ptr and throw an error if the dtype is ever different.</span>
     <span class="c1"># TODO: This feature could be added in the future</span>
-    <span class="n">storage_dtypes</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">dtype</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">storage_dtypes</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">dtype</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">persistent_id</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">tuple</span><span class="p">]:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">persistent_id</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Tuple</span><span class="p">]:</span>
         <span class="c1"># FIXME: the docs say that persistent_id should only return a string</span>
         <span class="c1"># but torch store returns tuples. This works only in the binary protocol</span>
         <span class="c1"># see</span>
@@ -1616,7 +1716,7 @@ window.addEventListener("load", () => mermaid.run());
                 <span class="k">else</span><span class="p">:</span>
                     <span class="n">storage_dtypes</span><span class="p">[</span><span class="n">storage</span><span class="o">.</span><span class="n">data_ptr</span><span class="p">()]</span> <span class="o">=</span> <span class="n">storage_dtype</span>
 
-            <span class="n">view_metadata</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span>
+            <span class="n">view_metadata</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span>
 
             <span class="c1"># Offset is always 0, but we keep it for backwards compatibility</span>
             <span class="c1"># with the old serialization format (which supported storage views)</span>
@@ -1711,13 +1811,13 @@ window.addEventListener("load", () => mermaid.run());
     <span class="n">_disable_byteorder_record</span><span class="p">,</span>
 <span class="p">):</span>
     <span class="n">serialized_storages</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="n">id_map</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">id_map</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
 
     <span class="c1"># Since loading storages that view the same data with different dtypes is</span>
     <span class="c1"># not supported, we need to keep track of the dtype associated with each</span>
     <span class="c1"># storage data_ptr and throw an error if the dtype is ever different.</span>
     <span class="c1"># TODO: This feature could be added in the future</span>
-    <span class="n">storage_dtypes</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">dtype</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">storage_dtypes</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">dtype</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">persistent_id</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
         <span class="c1"># FIXME: the docs say that persistent_id should only return a string</span>
@@ -1797,28 +1897,13 @@ window.addEventListener("load", () => mermaid.run());
             <span class="c1"># this means to that to get tensors serialized, you need to implement</span>
             <span class="c1"># .cpu() on the underlying Storage</span>
             <span class="k">if</span> <span class="n">storage</span><span class="o">.</span><span class="n">device</span><span class="o">.</span><span class="n">type</span> <span class="o">!=</span> <span class="s2">&quot;cpu&quot;</span><span class="p">:</span>
-                <span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.serialization</span><span class="w"> </span><span class="kn">import</span> <span class="n">config</span>
-
-                <span class="k">if</span> <span class="p">(</span>
-                    <span class="n">config</span><span class="o">.</span><span class="n">save</span><span class="o">.</span><span class="n">use_pinned_memory_for_d2h</span>
-                    <span class="ow">and</span> <span class="n">torch</span><span class="o">.</span><span class="n">accelerator</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span>
-                    <span class="ow">and</span> <span class="n">torch</span><span class="o">.</span><span class="n">accelerator</span><span class="o">.</span><span class="n">current_accelerator</span><span class="p">()</span><span class="o">.</span><span class="n">type</span>
-                    <span class="o">==</span> <span class="n">storage</span><span class="o">.</span><span class="n">device</span><span class="o">.</span><span class="n">type</span>
-                <span class="p">):</span>
-                    <span class="n">new_storage</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span>
-                        <span class="n">num_bytes</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">uint8</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s2">&quot;cpu&quot;</span><span class="p">,</span> <span class="n">pin_memory</span><span class="o">=</span><span class="kc">True</span>
-                    <span class="p">)</span><span class="o">.</span><span class="n">untyped_storage</span><span class="p">()</span>
-                    <span class="n">new_storage</span><span class="o">.</span><span class="n">copy_</span><span class="p">(</span><span class="n">storage</span><span class="p">)</span>
-                    <span class="n">torch</span><span class="o">.</span><span class="n">accelerator</span><span class="o">.</span><span class="n">current_stream</span><span class="p">(</span><span class="n">storage</span><span class="o">.</span><span class="n">device</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">synchronize</span><span class="p">()</span>
-                    <span class="n">storage</span> <span class="o">=</span> <span class="n">new_storage</span>
-                <span class="k">else</span><span class="p">:</span>
-                    <span class="n">storage</span> <span class="o">=</span> <span class="n">storage</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span>
+                <span class="n">storage</span> <span class="o">=</span> <span class="n">storage</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span>
             <span class="c1"># Now that it is on the CPU we can directly copy it into the zip file</span>
             <span class="n">zip_file</span><span class="o">.</span><span class="n">write_record</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">storage</span><span class="p">,</span> <span class="n">num_bytes</span><span class="p">)</span>
 
 
 <div class="viewcode-block" id="load">
-<a class="viewcode-back" href="../../python-api/torch.load.html#torch.load">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.load.html#torch.load">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span>
     <span class="n">f</span><span class="p">:</span> <span class="n">FILE_LIKE</span><span class="p">,</span>
     <span class="n">map_location</span><span class="p">:</span> <span class="n">MAP_LOCATION</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -2018,9 +2103,7 @@ window.addEventListener("load", () => mermaid.run());
 
     <span class="c1"># make flipping default BC-compatible</span>
     <span class="k">if</span> <span class="n">mmap</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.serialization</span><span class="w"> </span><span class="kn">import</span> <span class="n">config</span>
-
-        <span class="n">mmap</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">load</span><span class="o">.</span><span class="n">mmap</span>
+        <span class="n">mmap</span> <span class="o">=</span> <span class="kc">False</span>
 
     <span class="n">_check_dill_version</span><span class="p">(</span><span class="n">pickle_module</span><span class="p">)</span>
 
@@ -2121,7 +2204,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">_legacy_load</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">map_location</span><span class="p">,</span> <span class="n">pickle_module</span><span class="p">,</span> <span class="o">**</span><span class="n">pickle_load_args</span><span class="p">):</span>
-    <span class="n">deserialized_objects</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">deserialized_objects</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
 
     <span class="n">restore_location</span> <span class="o">=</span> <span class="n">_get_restore_location</span><span class="p">(</span><span class="n">map_location</span><span class="p">)</span>
 
@@ -2186,7 +2269,7 @@ window.addEventListener("load", () => mermaid.run());
             <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">SourceChangeWarning</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">legacy_load</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-        <span class="n">deserialized_objects</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">deserialized_objects</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">def</span><span class="w"> </span><span class="nf">persistent_load</span><span class="p">(</span><span class="n">saved_id</span><span class="p">):</span>
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">saved_id</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
@@ -2537,7 +2620,7 @@ window.addEventListener("load", () => mermaid.run());
 
         <span class="k">return</span> <span class="n">typed_storage</span>
 
-    <span class="n">load_module_mapping</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">load_module_mapping</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
         <span class="c1"># See https://github.com/pytorch/pytorch/pull/51633</span>
         <span class="s2">&quot;torch.tensor&quot;</span><span class="p">:</span> <span class="s2">&quot;torch._tensor&quot;</span>
     <span class="p">}</span>
@@ -2610,7 +2693,6 @@ window.addEventListener("load", () => mermaid.run());
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

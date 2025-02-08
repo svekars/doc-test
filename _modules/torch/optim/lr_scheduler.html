@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -44,7 +44,7 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../../../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -63,7 +63,7 @@ window.addEventListener("load", () => mermaid.run());
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -72,7 +72,6 @@ window.addEventListener("load", () => mermaid.run());
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -159,7 +158,7 @@ window.addEventListener("load", () => mermaid.run());
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -183,8 +182,8 @@ window.addEventListener("load", () => mermaid.run());
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -254,7 +253,7 @@ window.addEventListener("load", () => mermaid.run());
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -269,7 +268,6 @@ window.addEventListener("load", () => mermaid.run());
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -309,9 +307,27 @@ window.addEventListener("load", () => mermaid.run());
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -325,20 +341,14 @@ window.addEventListener("load", () => mermaid.run());
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -399,6 +409,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -489,6 +539,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
         
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
       </div>
     
   </div>
@@ -562,14 +652,17 @@ window.addEventListener("load", () => mermaid.run());
 <span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bisect</span><span class="w"> </span><span class="kn">import</span> <span class="n">bisect_right</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">Counter</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">collections.abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">Sequence</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">functools</span><span class="w"> </span><span class="kn">import</span> <span class="n">partial</span><span class="p">,</span> <span class="n">wraps</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
     <span class="n">Any</span><span class="p">,</span>
     <span class="n">Callable</span><span class="p">,</span>
     <span class="n">cast</span><span class="p">,</span>
+    <span class="n">Dict</span><span class="p">,</span>
+    <span class="n">Iterable</span><span class="p">,</span>
+    <span class="n">List</span><span class="p">,</span>
     <span class="n">Literal</span><span class="p">,</span>
     <span class="n">Optional</span><span class="p">,</span>
+    <span class="n">Sequence</span><span class="p">,</span>
     <span class="n">SupportsFloat</span><span class="p">,</span>
     <span class="n">TypedDict</span><span class="p">,</span>
     <span class="n">Union</span><span class="p">,</span>
@@ -641,7 +734,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="LRScheduler">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.LRScheduler.html#torch.optim.lr_scheduler.LRScheduler">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.LRScheduler.html#torch.optim.lr_scheduler.LRScheduler">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">LRScheduler</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Adjusts the learning rate during optimization.&quot;&quot;&quot;</span>
 
@@ -672,7 +765,7 @@ window.addEventListener("load", () => mermaid.run());
                         <span class="s2">&quot;param &#39;initial_lr&#39; is not specified &quot;</span>
                         <span class="sa">f</span><span class="s2">&quot;in param_groups[</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">] when resuming an optimizer&quot;</span>
                     <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">base_lrs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base_lrs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
             <span class="n">group</span><span class="p">[</span><span class="s2">&quot;initial_lr&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">optimizer</span><span class="o">.</span><span class="n">param_groups</span>
         <span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">last_epoch</span> <span class="o">=</span> <span class="n">last_epoch</span>
@@ -710,7 +803,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="bp">self</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
 
 <div class="viewcode-block" id="LRScheduler.state_dict">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.LRScheduler.html#torch.optim.lr_scheduler.LRScheduler.state_dict">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.LRScheduler.html#torch.optim.lr_scheduler.LRScheduler.state_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">state_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the state of the scheduler as a :class:`dict`.</span>
 
@@ -723,8 +816,8 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="LRScheduler.load_state_dict">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.LRScheduler.html#torch.optim.lr_scheduler.LRScheduler.load_state_dict">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">load_state_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]):</span>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.LRScheduler.html#torch.optim.lr_scheduler.LRScheduler.load_state_dict">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">load_state_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_dict</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Load the scheduler&#39;s state.</span>
 
 <span class="sd">        Args:</span>
@@ -735,25 +828,25 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="LRScheduler.get_last_lr">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.LRScheduler.html#torch.optim.lr_scheduler.LRScheduler.get_last_lr">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">get_last_lr</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.LRScheduler.html#torch.optim.lr_scheduler.LRScheduler.get_last_lr">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_last_lr</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return last computed learning rate by current scheduler.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_last_lr</span></div>
 
 
 <div class="viewcode-block" id="LRScheduler.get_lr">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.LRScheduler.html#torch.optim.lr_scheduler.LRScheduler.get_lr">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">get_lr</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.LRScheduler.html#torch.optim.lr_scheduler.LRScheduler.get_lr">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_lr</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute learning rate using chainable form of the scheduler.&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
 
 
 <div class="viewcode-block" id="LRScheduler.print_lr">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.LRScheduler.html#torch.optim.lr_scheduler.LRScheduler.print_lr">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.LRScheduler.html#torch.optim.lr_scheduler.LRScheduler.print_lr">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">print_lr</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">is_verbose</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
-        <span class="n">group</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+        <span class="n">group</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
         <span class="n">lr</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
         <span class="n">epoch</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="p">):</span>
@@ -780,7 +873,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="LRScheduler.step">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.LRScheduler.html#torch.optim.lr_scheduler.LRScheduler.step">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.LRScheduler.html#torch.optim.lr_scheduler.LRScheduler.step">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">epoch</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Perform a step.&quot;&quot;&quot;</span>
         <span class="c1"># Raise a warning if old pattern is detected</span>
@@ -816,7 +909,7 @@ window.addEventListener("load", () => mermaid.run());
                 <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">EPOCH_DEPRECATION_WARNING</span><span class="p">,</span> <span class="ne">UserWarning</span><span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">last_epoch</span> <span class="o">=</span> <span class="n">epoch</span>
                 <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_get_closed_form_lr&quot;</span><span class="p">):</span>
-                    <span class="n">values</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_closed_form_lr</span><span class="p">())</span>
+                    <span class="n">values</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_closed_form_lr</span><span class="p">())</span>
                 <span class="k">else</span><span class="p">:</span>
                     <span class="n">values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_lr</span><span class="p">()</span>
 
@@ -826,7 +919,7 @@ window.addEventListener("load", () => mermaid.run());
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">param_group</span><span class="p">[</span><span class="s2">&quot;lr&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lr</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_last_lr</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_last_lr</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
             <span class="n">group</span><span class="p">[</span><span class="s2">&quot;lr&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">optimizer</span><span class="o">.</span><span class="n">param_groups</span>
         <span class="p">]</span></div>
 </div>
@@ -862,7 +955,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="LambdaLR">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.LambdaLR.html#torch.optim.lr_scheduler.LambdaLR">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.LambdaLR.html#torch.optim.lr_scheduler.LambdaLR">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">LambdaLR</span><span class="p">(</span><span class="n">LRScheduler</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Sets the initial learning rate.</span>
 
@@ -897,13 +990,13 @@ window.addEventListener("load", () => mermaid.run());
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">optimizer</span><span class="p">:</span> <span class="n">Optimizer</span><span class="p">,</span>
-        <span class="n">lr_lambda</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">float</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">float</span><span class="p">]]],</span>
+        <span class="n">lr_lambda</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">float</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">float</span><span class="p">]]],</span>
         <span class="n">last_epoch</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
         <span class="n">verbose</span><span class="o">=</span><span class="s2">&quot;deprecated&quot;</span><span class="p">,</span>
     <span class="p">):</span>  <span class="c1"># noqa: D107</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">optimizer</span> <span class="o">=</span> <span class="n">optimizer</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">lr_lambdas</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">float</span><span class="p">]]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lr_lambdas</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">float</span><span class="p">]]</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">lr_lambda</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">lr_lambda</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">lr_lambdas</span> <span class="o">=</span> <span class="p">[</span><span class="n">lr_lambda</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">optimizer</span><span class="o">.</span><span class="n">param_groups</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
@@ -915,7 +1008,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">last_epoch</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
 
 <div class="viewcode-block" id="LambdaLR.state_dict">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.LambdaLR.html#torch.optim.lr_scheduler.LambdaLR.state_dict">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.LambdaLR.html#torch.optim.lr_scheduler.LambdaLR.state_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">state_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the state of the scheduler as a :class:`dict`.</span>
 
@@ -941,7 +1034,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="LambdaLR.load_state_dict">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.LambdaLR.html#torch.optim.lr_scheduler.LambdaLR.load_state_dict">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.LambdaLR.html#torch.optim.lr_scheduler.LambdaLR.load_state_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">load_state_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_dict</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Load the scheduler&#39;s state.</span>
 
@@ -963,7 +1056,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="LambdaLR.get_lr">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.LambdaLR.html#torch.optim.lr_scheduler.LambdaLR.get_lr">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.LambdaLR.html#torch.optim.lr_scheduler.LambdaLR.get_lr">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_lr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute learning rate.&quot;&quot;&quot;</span>
         <span class="n">_warn_get_lr_called_within_step</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
@@ -977,7 +1070,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="MultiplicativeLR">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.MultiplicativeLR.html#torch.optim.lr_scheduler.MultiplicativeLR">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.MultiplicativeLR.html#torch.optim.lr_scheduler.MultiplicativeLR">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MultiplicativeLR</span><span class="p">(</span><span class="n">LRScheduler</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Multiply the learning rate of each parameter group by the factor given in the specified function.</span>
 
@@ -1009,13 +1102,13 @@ window.addEventListener("load", () => mermaid.run());
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">optimizer</span><span class="p">:</span> <span class="n">Optimizer</span><span class="p">,</span>
-        <span class="n">lr_lambda</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">float</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">float</span><span class="p">]]],</span>
+        <span class="n">lr_lambda</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">float</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">float</span><span class="p">]]],</span>
         <span class="n">last_epoch</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
         <span class="n">verbose</span><span class="o">=</span><span class="s2">&quot;deprecated&quot;</span><span class="p">,</span>
     <span class="p">):</span>  <span class="c1"># noqa: D107</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">optimizer</span> <span class="o">=</span> <span class="n">optimizer</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">lr_lambdas</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">float</span><span class="p">]]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lr_lambdas</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">float</span><span class="p">]]</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">lr_lambda</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">lr_lambda</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">lr_lambdas</span> <span class="o">=</span> <span class="p">[</span><span class="n">lr_lambda</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">optimizer</span><span class="o">.</span><span class="n">param_groups</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
@@ -1027,7 +1120,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">last_epoch</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
 
 <div class="viewcode-block" id="MultiplicativeLR.state_dict">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.MultiplicativeLR.html#torch.optim.lr_scheduler.MultiplicativeLR.state_dict">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.MultiplicativeLR.html#torch.optim.lr_scheduler.MultiplicativeLR.state_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">state_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the state of the scheduler as a :class:`dict`.</span>
 
@@ -1051,7 +1144,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="MultiplicativeLR.load_state_dict">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.MultiplicativeLR.html#torch.optim.lr_scheduler.MultiplicativeLR.load_state_dict">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.MultiplicativeLR.html#torch.optim.lr_scheduler.MultiplicativeLR.load_state_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">load_state_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_dict</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Load the scheduler&#39;s state.</span>
 
@@ -1071,7 +1164,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="MultiplicativeLR.get_lr">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.MultiplicativeLR.html#torch.optim.lr_scheduler.MultiplicativeLR.get_lr">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.MultiplicativeLR.html#torch.optim.lr_scheduler.MultiplicativeLR.get_lr">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_lr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute the learning rate of each parameter group.&quot;&quot;&quot;</span>
         <span class="n">_warn_get_lr_called_within_step</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
@@ -1088,7 +1181,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="StepLR">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.StepLR.html#torch.optim.lr_scheduler.StepLR">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.StepLR.html#torch.optim.lr_scheduler.StepLR">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">StepLR</span><span class="p">(</span><span class="n">LRScheduler</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Decays the learning rate of each parameter group by gamma every step_size epochs.</span>
 
@@ -1135,7 +1228,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">last_epoch</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
 
 <div class="viewcode-block" id="StepLR.get_lr">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.StepLR.html#torch.optim.lr_scheduler.StepLR.get_lr">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.StepLR.html#torch.optim.lr_scheduler.StepLR.get_lr">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_lr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute the learning rate of each parameter group.&quot;&quot;&quot;</span>
         <span class="n">_warn_get_lr_called_within_step</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
@@ -1154,7 +1247,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="MultiStepLR">
-<a class="viewcode-back" href="../../../generated/torch.optim.lr_scheduler.MultiStepLR.html#torch.optim.lr_scheduler.MultiStepLR">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.MultiStepLR.html#torch.optim.lr_scheduler.MultiStepLR">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MultiStepLR</span><span class="p">(</span><span class="n">LRScheduler</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Decays the learning rate of each parameter group by gamma once the number of epoch reaches one of the milestones.</span>
 
@@ -1200,7 +1293,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">last_epoch</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
 
 <div class="viewcode-block" id="MultiStepLR.get_lr">
-<a class="viewcode-back" href="../../../generated/torch.optim.lr_scheduler.MultiStepLR.html#torch.optim.lr_scheduler.MultiStepLR.get_lr">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.MultiStepLR.html#torch.optim.lr_scheduler.MultiStepLR.get_lr">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_lr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute the learning rate of each parameter group.&quot;&quot;&quot;</span>
         <span class="n">_warn_get_lr_called_within_step</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
@@ -1223,7 +1316,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="ConstantLR">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.ConstantLR.html#torch.optim.lr_scheduler.ConstantLR">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.ConstantLR.html#torch.optim.lr_scheduler.ConstantLR">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">ConstantLR</span><span class="p">(</span><span class="n">LRScheduler</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Multiply the learning rate of each parameter group by a small constant factor.</span>
 
@@ -1278,7 +1371,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">last_epoch</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
 
 <div class="viewcode-block" id="ConstantLR.get_lr">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.ConstantLR.html#torch.optim.lr_scheduler.ConstantLR.get_lr">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.ConstantLR.html#torch.optim.lr_scheduler.ConstantLR.get_lr">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_lr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute the learning rate of each parameter group.&quot;&quot;&quot;</span>
         <span class="n">_warn_get_lr_called_within_step</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
@@ -1304,7 +1397,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="LinearLR">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.LinearLR.html#torch.optim.lr_scheduler.LinearLR">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.LinearLR.html#torch.optim.lr_scheduler.LinearLR">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">LinearLR</span><span class="p">(</span><span class="n">LRScheduler</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Decays the learning rate of each parameter group by linearly changing small multiplicative factor.</span>
 
@@ -1369,7 +1462,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">last_epoch</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
 
 <div class="viewcode-block" id="LinearLR.get_lr">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.LinearLR.html#torch.optim.lr_scheduler.LinearLR.get_lr">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.LinearLR.html#torch.optim.lr_scheduler.LinearLR.get_lr">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_lr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute the learning rate.&quot;&quot;&quot;</span>
         <span class="n">_warn_get_lr_called_within_step</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
@@ -1411,7 +1504,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="ExponentialLR">
-<a class="viewcode-back" href="../../../generated/torch.optim.lr_scheduler.ExponentialLR.html#torch.optim.lr_scheduler.ExponentialLR">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.ExponentialLR.html#torch.optim.lr_scheduler.ExponentialLR">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">ExponentialLR</span><span class="p">(</span><span class="n">LRScheduler</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Decays the learning rate of each parameter group by gamma every epoch.</span>
 
@@ -1440,7 +1533,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">last_epoch</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
 
 <div class="viewcode-block" id="ExponentialLR.get_lr">
-<a class="viewcode-back" href="../../../generated/torch.optim.lr_scheduler.ExponentialLR.html#torch.optim.lr_scheduler.ExponentialLR.get_lr">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.ExponentialLR.html#torch.optim.lr_scheduler.ExponentialLR.get_lr">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_lr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute the learning rate of each parameter group.&quot;&quot;&quot;</span>
         <span class="n">_warn_get_lr_called_within_step</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
@@ -1456,7 +1549,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="SequentialLR">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.SequentialLR.html#torch.optim.lr_scheduler.SequentialLR">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.SequentialLR.html#torch.optim.lr_scheduler.SequentialLR">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">SequentialLR</span><span class="p">(</span><span class="n">LRScheduler</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Contains a list of schedulers expected to be called sequentially during the optimization process.</span>
 
@@ -1494,8 +1587,8 @@ window.addEventListener("load", () => mermaid.run());
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">optimizer</span><span class="p">:</span> <span class="n">Optimizer</span><span class="p">,</span>
-        <span class="n">schedulers</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">LRScheduler</span><span class="p">],</span>
-        <span class="n">milestones</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+        <span class="n">schedulers</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">LRScheduler</span><span class="p">],</span>
+        <span class="n">milestones</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
         <span class="n">last_epoch</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
         <span class="n">verbose</span><span class="o">=</span><span class="s2">&quot;deprecated&quot;</span><span class="p">,</span>
     <span class="p">):</span>  <span class="c1"># noqa: D107</span>
@@ -1547,7 +1640,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="bp">self</span><span class="o">.</span><span class="n">_last_lr</span> <span class="o">=</span> <span class="n">schedulers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_last_lr</span><span class="p">()</span>
 
 <div class="viewcode-block" id="SequentialLR.recursive_undo">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.SequentialLR.html#torch.optim.lr_scheduler.SequentialLR.recursive_undo">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.SequentialLR.html#torch.optim.lr_scheduler.SequentialLR.recursive_undo">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">recursive_undo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sched</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Recursively undo any step performed by the initialisation of</span>
@@ -1563,7 +1656,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="SequentialLR.step">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.SequentialLR.html#torch.optim.lr_scheduler.SequentialLR.step">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.SequentialLR.html#torch.optim.lr_scheduler.SequentialLR.step">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># type: ignore[override]</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Perform a step.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">last_epoch</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -1578,7 +1671,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="SequentialLR.state_dict">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.SequentialLR.html#torch.optim.lr_scheduler.SequentialLR.state_dict">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.SequentialLR.html#torch.optim.lr_scheduler.SequentialLR.state_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">state_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the state of the scheduler as a :class:`dict`.</span>
 
@@ -1600,7 +1693,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="SequentialLR.load_state_dict">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.SequentialLR.html#torch.optim.lr_scheduler.SequentialLR.load_state_dict">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.SequentialLR.html#torch.optim.lr_scheduler.SequentialLR.load_state_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">load_state_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_dict</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Load the scheduler&#39;s state.</span>
 
@@ -1621,7 +1714,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="PolynomialLR">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.PolynomialLR.html#torch.optim.lr_scheduler.PolynomialLR">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.PolynomialLR.html#torch.optim.lr_scheduler.PolynomialLR">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">PolynomialLR</span><span class="p">(</span><span class="n">LRScheduler</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Decays the learning rate of each parameter group using a polynomial function in the given total_iters.</span>
 
@@ -1666,7 +1759,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">last_epoch</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
 
 <div class="viewcode-block" id="PolynomialLR.get_lr">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.PolynomialLR.html#torch.optim.lr_scheduler.PolynomialLR.get_lr">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.PolynomialLR.html#torch.optim.lr_scheduler.PolynomialLR.get_lr">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_lr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute the learning rate.&quot;&quot;&quot;</span>
         <span class="n">_warn_get_lr_called_within_step</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
@@ -1694,7 +1787,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="CosineAnnealingLR">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.CosineAnnealingLR.html#torch.optim.lr_scheduler.CosineAnnealingLR">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.CosineAnnealingLR.html#torch.optim.lr_scheduler.CosineAnnealingLR">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">CosineAnnealingLR</span><span class="p">(</span><span class="n">LRScheduler</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Set the learning rate of each parameter group using a cosine annealing schedule.</span>
 
@@ -1753,7 +1846,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">last_epoch</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
 
 <div class="viewcode-block" id="CosineAnnealingLR.get_lr">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.CosineAnnealingLR.html#torch.optim.lr_scheduler.CosineAnnealingLR.get_lr">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.CosineAnnealingLR.html#torch.optim.lr_scheduler.CosineAnnealingLR.get_lr">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_lr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Retrieve the learning rate of each parameter group.&quot;&quot;&quot;</span>
         <span class="n">_warn_get_lr_called_within_step</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
@@ -1795,7 +1888,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="ChainedScheduler">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.ChainedScheduler.html#torch.optim.lr_scheduler.ChainedScheduler">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.ChainedScheduler.html#torch.optim.lr_scheduler.ChainedScheduler">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">ChainedScheduler</span><span class="p">(</span><span class="n">LRScheduler</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Chains a list of learning rate schedulers.</span>
 
@@ -1856,7 +1949,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="p">]</span>
 
 <div class="viewcode-block" id="ChainedScheduler.step">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.ChainedScheduler.html#torch.optim.lr_scheduler.ChainedScheduler.step">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.ChainedScheduler.html#torch.optim.lr_scheduler.ChainedScheduler.step">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># type: ignore[override]</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Perform a step.&quot;&quot;&quot;</span>
         <span class="k">for</span> <span class="n">scheduler</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_schedulers</span><span class="p">:</span>
@@ -1867,7 +1960,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="ChainedScheduler.state_dict">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.ChainedScheduler.html#torch.optim.lr_scheduler.ChainedScheduler.state_dict">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.ChainedScheduler.html#torch.optim.lr_scheduler.ChainedScheduler.state_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">state_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the state of the scheduler as a :class:`dict`.</span>
 
@@ -1889,7 +1982,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="ChainedScheduler.load_state_dict">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.ChainedScheduler.html#torch.optim.lr_scheduler.ChainedScheduler.load_state_dict">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.ChainedScheduler.html#torch.optim.lr_scheduler.ChainedScheduler.load_state_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">load_state_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_dict</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Load the scheduler&#39;s state.</span>
 
@@ -1910,7 +2003,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="ReduceLROnPlateau">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.ReduceLROnPlateau.html#torch.optim.lr_scheduler.ReduceLROnPlateau">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.ReduceLROnPlateau.html#torch.optim.lr_scheduler.ReduceLROnPlateau">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">ReduceLROnPlateau</span><span class="p">(</span><span class="n">LRScheduler</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Reduce learning rate when a metric has stopped improving.</span>
 
@@ -1981,7 +2074,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="n">threshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
         <span class="n">threshold_mode</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;rel&quot;</span><span class="p">,</span> <span class="s2">&quot;abs&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;rel&quot;</span><span class="p">,</span>
         <span class="n">cooldown</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="n">min_lr</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">min_lr</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
         <span class="n">eps</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-8</span><span class="p">,</span>
         <span class="n">verbose</span><span class="o">=</span><span class="s2">&quot;deprecated&quot;</span><span class="p">,</span>
     <span class="p">):</span>  <span class="c1"># noqa: D107</span>
@@ -2031,7 +2124,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="bp">self</span><span class="o">.</span><span class="n">num_bad_epochs</span> <span class="o">=</span> <span class="mi">0</span>
 
 <div class="viewcode-block" id="ReduceLROnPlateau.step">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.ReduceLROnPlateau.html#torch.optim.lr_scheduler.ReduceLROnPlateau.step">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.ReduceLROnPlateau.html#torch.optim.lr_scheduler.ReduceLROnPlateau.step">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">metrics</span><span class="p">:</span> <span class="n">SupportsFloat</span><span class="p">,</span> <span class="n">epoch</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>  <span class="c1"># type: ignore[override]</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Perform a step.&quot;&quot;&quot;</span>
         <span class="c1"># convert `metrics` to float, in case it&#39;s a zero-dim Tensor</span>
@@ -2121,7 +2214,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="p">}</span>
 
 <div class="viewcode-block" id="ReduceLROnPlateau.load_state_dict">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.ReduceLROnPlateau.html#torch.optim.lr_scheduler.ReduceLROnPlateau.load_state_dict">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.ReduceLROnPlateau.html#torch.optim.lr_scheduler.ReduceLROnPlateau.load_state_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">load_state_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_dict</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Load the scheduler&#39;s state.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">state_dict</span><span class="p">)</span>
@@ -2133,7 +2226,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="CyclicLR">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.CyclicLR.html#torch.optim.lr_scheduler.CyclicLR">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.CyclicLR.html#torch.optim.lr_scheduler.CyclicLR">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">CyclicLR</span><span class="p">(</span><span class="n">LRScheduler</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Sets the learning rate of each parameter group according to cyclical learning rate policy (CLR).</span>
 
@@ -2236,8 +2329,8 @@ window.addEventListener("load", () => mermaid.run());
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">optimizer</span><span class="p">:</span> <span class="n">Optimizer</span><span class="p">,</span>
-        <span class="n">base_lr</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]],</span>
-        <span class="n">max_lr</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]],</span>
+        <span class="n">base_lr</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]],</span>
+        <span class="n">max_lr</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]],</span>
         <span class="n">step_size_up</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">,</span>
         <span class="n">step_size_down</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">mode</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;triangular&quot;</span><span class="p">,</span> <span class="s2">&quot;triangular2&quot;</span><span class="p">,</span> <span class="s2">&quot;exp_range&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;triangular&quot;</span><span class="p">,</span>
@@ -2327,7 +2420,7 @@ window.addEventListener("load", () => mermaid.run());
             <span class="bp">self</span><span class="o">.</span><span class="n">scale_mode</span> <span class="o">=</span> <span class="s2">&quot;iterations&quot;</span>
 
 <div class="viewcode-block" id="CyclicLR.scale_fn">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.CyclicLR.html#torch.optim.lr_scheduler.CyclicLR.scale_fn">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.CyclicLR.html#torch.optim.lr_scheduler.CyclicLR.scale_fn">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">scale_fn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the scaling policy.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_scale_fn_custom</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -2349,7 +2442,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="k">return</span> <span class="n">gamma</span><span class="o">**</span><span class="n">x</span>
 
 <div class="viewcode-block" id="CyclicLR.get_lr">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.CyclicLR.html#torch.optim.lr_scheduler.CyclicLR.get_lr">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.CyclicLR.html#torch.optim.lr_scheduler.CyclicLR.get_lr">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_lr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculate the learning rate at batch index.</span>
 
@@ -2413,7 +2506,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="k">return</span> <span class="n">state</span>
 
 <div class="viewcode-block" id="CyclicLR.load_state_dict">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.CyclicLR.html#torch.optim.lr_scheduler.CyclicLR.load_state_dict">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.CyclicLR.html#torch.optim.lr_scheduler.CyclicLR.load_state_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">load_state_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_dict</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Load the scheduler&#39;s state.&quot;&quot;&quot;</span>
         <span class="n">fn</span> <span class="o">=</span> <span class="n">state_dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;_scale_fn_custom&quot;</span><span class="p">)</span>
@@ -2426,7 +2519,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="CosineAnnealingWarmRestarts">
-<a class="viewcode-back" href="../../../generated/torch.optim.lr_scheduler.CosineAnnealingWarmRestarts.html#torch.optim.lr_scheduler.CosineAnnealingWarmRestarts">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.CosineAnnealingWarmRestarts.html#torch.optim.lr_scheduler.CosineAnnealingWarmRestarts">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">CosineAnnealingWarmRestarts</span><span class="p">(</span><span class="n">LRScheduler</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Set the learning rate of each parameter group using a cosine annealing schedule.</span>
 
@@ -2486,7 +2579,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">last_epoch</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
 
 <div class="viewcode-block" id="CosineAnnealingWarmRestarts.get_lr">
-<a class="viewcode-back" href="../../../generated/torch.optim.lr_scheduler.CosineAnnealingWarmRestarts.html#torch.optim.lr_scheduler.CosineAnnealingWarmRestarts.get_lr">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.CosineAnnealingWarmRestarts.html#torch.optim.lr_scheduler.CosineAnnealingWarmRestarts.get_lr">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_lr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute the initial learning rate.&quot;&quot;&quot;</span>
         <span class="n">_warn_get_lr_called_within_step</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
@@ -2501,7 +2594,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="CosineAnnealingWarmRestarts.step">
-<a class="viewcode-back" href="../../../generated/torch.optim.lr_scheduler.CosineAnnealingWarmRestarts.html#torch.optim.lr_scheduler.CosineAnnealingWarmRestarts.step">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.CosineAnnealingWarmRestarts.html#torch.optim.lr_scheduler.CosineAnnealingWarmRestarts.step">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">epoch</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Step could be called after every batch update.</span>
 
@@ -2577,7 +2670,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="OneCycleLR">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.OneCycleLR.html#torch.optim.lr_scheduler.OneCycleLR">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.OneCycleLR.html#torch.optim.lr_scheduler.OneCycleLR">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">OneCycleLR</span><span class="p">(</span><span class="n">LRScheduler</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Sets the learning rate of each parameter group according to the 1cycle learning rate policy.</span>
 
@@ -2688,15 +2781,15 @@ window.addEventListener("load", () => mermaid.run());
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">optimizer</span><span class="p">:</span> <span class="n">Optimizer</span><span class="p">,</span>
-        <span class="n">max_lr</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]],</span>
+        <span class="n">max_lr</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]],</span>
         <span class="n">total_steps</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">epochs</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">steps_per_epoch</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">pct_start</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span>
         <span class="n">anneal_strategy</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;cos&quot;</span><span class="p">,</span> <span class="s2">&quot;linear&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;cos&quot;</span><span class="p">,</span>
         <span class="n">cycle_momentum</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="n">base_momentum</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span> <span class="o">=</span> <span class="mf">0.85</span><span class="p">,</span>
-        <span class="n">max_momentum</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span> <span class="o">=</span> <span class="mf">0.95</span><span class="p">,</span>
+        <span class="n">base_momentum</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span> <span class="o">=</span> <span class="mf">0.85</span><span class="p">,</span>
+        <span class="n">max_momentum</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span> <span class="o">=</span> <span class="mf">0.95</span><span class="p">,</span>
         <span class="n">div_factor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">25.0</span><span class="p">,</span>
         <span class="n">final_div_factor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e4</span><span class="p">,</span>
         <span class="n">three_phase</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
@@ -2728,7 +2821,7 @@ window.addEventListener("load", () => mermaid.run());
                 <span class="s2">&quot;You must define either total_steps OR (epochs AND steps_per_epoch)&quot;</span>
             <span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_schedule_phases</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">_SchedulePhase</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_schedule_phases</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">_SchedulePhase</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">three_phase</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_schedule_phases</span> <span class="o">=</span> <span class="p">[</span>
                 <span class="p">{</span>
@@ -2843,7 +2936,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="k">return</span> <span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span> <span class="o">*</span> <span class="n">pct</span> <span class="o">+</span> <span class="n">start</span>
 
 <div class="viewcode-block" id="OneCycleLR.get_lr">
-<a class="viewcode-back" href="../../../python-api/torch.optim.lr_scheduler.OneCycleLR.html#torch.optim.lr_scheduler.OneCycleLR.get_lr">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.optim.lr_scheduler.OneCycleLR.html#torch.optim.lr_scheduler.OneCycleLR.get_lr">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_lr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute the learning rate of each parameter group.&quot;&quot;&quot;</span>
         <span class="n">_warn_get_lr_called_within_step</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
@@ -2917,7 +3010,6 @@ window.addEventListener("load", () => mermaid.run());
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

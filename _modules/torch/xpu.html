@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -44,7 +44,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -63,7 +63,7 @@ window.addEventListener("load", () => mermaid.run());
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -72,7 +72,6 @@ window.addEventListener("load", () => mermaid.run());
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -159,7 +158,7 @@ window.addEventListener("load", () => mermaid.run());
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -183,8 +182,8 @@ window.addEventListener("load", () => mermaid.run());
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -254,7 +253,7 @@ window.addEventListener("load", () => mermaid.run());
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -269,7 +268,6 @@ window.addEventListener("load", () => mermaid.run());
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -309,9 +307,27 @@ window.addEventListener("load", () => mermaid.run());
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -325,20 +341,14 @@ window.addEventListener("load", () => mermaid.run());
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -399,6 +409,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -489,6 +539,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
         
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
       </div>
     
   </div>
@@ -577,13 +667,13 @@ window.addEventListener("load", () => mermaid.run());
 <span class="n">_initialized</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="n">_tls</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">local</span><span class="p">()</span>
 <span class="n">_initialization_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
-<span class="n">_queued_calls</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span>
-    <span class="nb">tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[],</span> <span class="kc">None</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span>
+<span class="n">_queued_calls</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span>
+    <span class="n">Tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[],</span> <span class="kc">None</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span>
 <span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># don&#39;t invoke these until initialization occurs</span>
 <span class="n">_is_in_bad_fork</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="p">,</span> <span class="s2">&quot;_xpu_isInBadFork&quot;</span><span class="p">,</span> <span class="k">lambda</span><span class="p">:</span> <span class="kc">False</span><span class="p">)</span>
 <span class="n">_device_t</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span><span class="n">_device</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
 <span class="n">_lazy_seed_tracker</span> <span class="o">=</span> <span class="n">_LazySeedTracker</span><span class="p">()</span>
-<span class="n">default_generators</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">Generator</span><span class="p">]</span> <span class="o">=</span> <span class="p">()</span>  <span class="c1"># type: ignore[assignment]</span>
+<span class="n">default_generators</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">Generator</span><span class="p">]</span> <span class="o">=</span> <span class="p">()</span>  <span class="c1"># type: ignore[assignment]</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">_is_compiled</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
@@ -607,7 +697,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="device_count">
-<a class="viewcode-back" href="../../python-api/torch.xpu.device_count.html#torch.xpu.device_count">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.xpu.device_count.html#torch.xpu.device_count">[docs]</a>
 <span class="nd">@lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">device_count</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the number of XPU device available.&quot;&quot;&quot;</span>
@@ -618,7 +708,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="is_available">
-<a class="viewcode-back" href="../../generated/torch.xpu.is_available.html#torch.xpu.is_available">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.xpu.is_available.html#torch.xpu.is_available">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">is_available</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return a bool indicating if XPU is currently available.&quot;&quot;&quot;</span>
     <span class="c1"># This function nerver throws.</span>
@@ -632,7 +722,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="is_initialized">
-<a class="viewcode-back" href="../../python-api/torch.xpu.is_initialized.html#torch.xpu.is_initialized">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.xpu.is_initialized.html#torch.xpu.is_initialized">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">is_initialized</span><span class="p">():</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return whether PyTorch&#39;s XPU state has been initialized.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">_initialized</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">_is_in_bad_fork</span><span class="p">()</span></div>
@@ -654,7 +744,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="init">
-<a class="viewcode-back" href="../../python-api/torch.xpu.init.html#torch.xpu.init">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.xpu.init.html#torch.xpu.init">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">init</span><span class="p">():</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Initialize PyTorch&#39;s XPU state.</span>
 <span class="sd">    This is a Python API about lazy initialization that avoids initializing</span>
@@ -719,7 +809,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="device">
-<a class="viewcode-back" href="../../generated/torch.xpu.device.html#torch.xpu.device">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.xpu.device.html#torch.xpu.device">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">device</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Context-manager that changes the selected device.</span>
 
@@ -742,7 +832,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="device_of">
-<a class="viewcode-back" href="../../python-api/torch.xpu.device_of.html#torch.xpu.device_of">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.xpu.device_of.html#torch.xpu.device_of">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">device_of</span><span class="p">(</span><span class="n">device</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Context-manager that changes the current device to that of given object.</span>
 
@@ -760,7 +850,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="set_device">
-<a class="viewcode-back" href="../../generated/torch.xpu.set_device.html#torch.xpu.set_device">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.xpu.set_device.html#torch.xpu.set_device">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">set_device</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">_device_t</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Set the current device.</span>
 
@@ -776,7 +866,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="get_device_name">
-<a class="viewcode-back" href="../../python-api/torch.xpu.get_device_name.html#torch.xpu.get_device_name">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.xpu.get_device_name.html#torch.xpu.get_device_name">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">get_device_name</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">_device_t</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get the name of a device.</span>
 
@@ -794,9 +884,9 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="get_device_capability">
-<a class="viewcode-back" href="../../python-api/torch.xpu.get_device_capability.html#torch.xpu.get_device_capability">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.xpu.get_device_capability.html#torch.xpu.get_device_capability">[docs]</a>
 <span class="nd">@lru_cache</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">get_device_capability</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">_device_t</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_device_capability</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">_device_t</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get the xpu capability of a device.</span>
 
 <span class="sd">    Args:</span>
@@ -824,7 +914,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="get_device_properties">
-<a class="viewcode-back" href="../../python-api/torch.xpu.get_device_properties.html#torch.xpu.get_device_properties">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.xpu.get_device_properties.html#torch.xpu.get_device_properties">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">get_device_properties</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">_device_t</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">_XpuDeviceProperties</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get the properties of a device.</span>
 
@@ -837,12 +927,14 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">_lazy_init</span><span class="p">()</span>
     <span class="n">device</span> <span class="o">=</span> <span class="n">_get_device_index</span><span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="n">optional</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">device</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">device</span> <span class="o">&gt;=</span> <span class="n">device_count</span><span class="p">():</span>
+        <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="s2">&quot;Invalid device index&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">_get_device_properties</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>  <span class="c1"># type: ignore[name-defined]  # noqa: F821</span></div>
 
 
 
 <div class="viewcode-block" id="current_device">
-<a class="viewcode-back" href="../../generated/torch.xpu.current_device.html#torch.xpu.current_device">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.xpu.current_device.html#torch.xpu.current_device">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">current_device</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the index of a currently selected device.&quot;&quot;&quot;</span>
     <span class="n">_lazy_init</span><span class="p">()</span>
@@ -864,7 +956,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="StreamContext">
-<a class="viewcode-back" href="../../python-api/torch.xpu.StreamContext.html#torch.xpu.StreamContext">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.xpu.StreamContext.html#torch.xpu.StreamContext">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">StreamContext</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Context-manager that selects a given stream.</span>
 
@@ -909,7 +1001,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="stream">
-<a class="viewcode-back" href="../../python-api/torch.xpu.Stream.html#torch.xpu.stream">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.xpu.Stream.html#torch.xpu.stream">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">stream</span><span class="p">(</span><span class="n">stream</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="s2">&quot;torch.xpu.Stream&quot;</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">StreamContext</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Wrap around the Context-manager StreamContext that selects a given stream.</span>
 
@@ -935,7 +1027,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="set_stream">
-<a class="viewcode-back" href="../../python-api/torch.xpu.set_stream.html#torch.xpu.set_stream">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.xpu.set_stream.html#torch.xpu.set_stream">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">set_stream</span><span class="p">(</span><span class="n">stream</span><span class="p">:</span> <span class="n">Stream</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Set the current stream.This is a wrapper API to set the stream.</span>
 <span class="sd">        Usage of this function is discouraged in favor of the ``stream``</span>
@@ -957,7 +1049,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="current_stream">
-<a class="viewcode-back" href="../../python-api/torch.xpu.current_stream.html#torch.xpu.current_stream">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.xpu.current_stream.html#torch.xpu.current_stream">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">current_stream</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">_device_t</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Stream</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the currently selected :class:`Stream` for a given device.</span>
 
@@ -977,38 +1069,8 @@ window.addEventListener("load", () => mermaid.run());
 
 
 
-<div class="viewcode-block" id="get_stream_from_external">
-<a class="viewcode-back" href="../../generated/torch.xpu.get_stream_from_external.html#torch.xpu.get_stream_from_external">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">get_stream_from_external</span><span class="p">(</span>
-    <span class="n">data_ptr</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">_device_t</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Stream</span><span class="p">:</span>
-<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return a :class:`Stream` from an external SYCL queue.</span>
-
-<span class="sd">    This function is used to wrap SYCL queue created in other libraries in order</span>
-<span class="sd">    to facilitate data exchange and multi-library interactions.</span>
-
-<span class="sd">    .. note:: This function doesn&#39;t manage the queue life-cycle, it is the user</span>
-<span class="sd">       responsibility to keep the referenced queue alive while this returned stream is</span>
-<span class="sd">       being used. The different SYCL queue pointers will result in distinct</span>
-<span class="sd">       :class:`Stream` objects, even if the SYCL queues they dereference are equivalent.</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">        data_ptr(int): Integer representation of the `sycl::queue*` value passed externally.</span>
-<span class="sd">        device(torch.device or int, optional): the device where the queue was originally created.</span>
-<span class="sd">            It is the user responsibility to ensure the device is specified correctly.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_lazy_init</span><span class="p">()</span>
-    <span class="n">streamdata</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">_C</span><span class="o">.</span><span class="n">_xpu_getStreamFromExternal</span><span class="p">(</span>
-        <span class="n">data_ptr</span><span class="p">,</span> <span class="n">_get_device_index</span><span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="n">optional</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="p">)</span>
-    <span class="k">return</span> <span class="n">Stream</span><span class="p">(</span>
-        <span class="n">stream_id</span><span class="o">=</span><span class="n">streamdata</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">device_index</span><span class="o">=</span><span class="n">streamdata</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">device_type</span><span class="o">=</span><span class="n">streamdata</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-    <span class="p">)</span></div>
-
-
-
 <div class="viewcode-block" id="synchronize">
-<a class="viewcode-back" href="../../python-api/torch.xpu.synchronize.html#torch.xpu.synchronize">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.xpu.synchronize.html#torch.xpu.synchronize">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">synchronize</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">_device_t</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Wait for all kernels in all streams on a XPU device to complete.</span>
 
@@ -1024,8 +1086,8 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="get_arch_list">
-<a class="viewcode-back" href="../../python-api/torch.xpu.get_arch_list.html#torch.xpu.get_arch_list">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">get_arch_list</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<a class="viewcode-back" href="../../python-api/generated/torch.xpu.get_arch_list.html#torch.xpu.get_arch_list">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_arch_list</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return list XPU architectures this library was compiled for.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">is_available</span><span class="p">():</span>
         <span class="k">return</span> <span class="p">[]</span>
@@ -1037,7 +1099,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="get_gencode_flags">
-<a class="viewcode-back" href="../../python-api/torch.xpu.get_gencode_flags.html#torch.xpu.get_gencode_flags">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.xpu.get_gencode_flags.html#torch.xpu.get_gencode_flags">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">get_gencode_flags</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return XPU AOT(ahead-of-time) build flags this library was compiled with.&quot;&quot;&quot;</span>
     <span class="n">arch_list</span> <span class="o">=</span> <span class="n">get_arch_list</span><span class="p">()</span>
@@ -1138,7 +1200,7 @@ window.addEventListener("load", () => mermaid.run());
     <span class="s2">&quot;get_gencode_flags&quot;</span><span class="p">,</span>
     <span class="s2">&quot;get_rng_state&quot;</span><span class="p">,</span>
     <span class="s2">&quot;get_rng_state_all&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;get_stream_from_external&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;get_stream&quot;</span><span class="p">,</span>
     <span class="s2">&quot;init&quot;</span><span class="p">,</span>
     <span class="s2">&quot;initial_seed&quot;</span><span class="p">,</span>
     <span class="s2">&quot;is_available&quot;</span><span class="p">,</span>
@@ -1196,7 +1258,6 @@ window.addEventListener("load", () => mermaid.run());
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

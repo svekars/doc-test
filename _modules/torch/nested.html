@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -44,7 +44,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -63,7 +63,7 @@ window.addEventListener("load", () => mermaid.run());
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -72,7 +72,6 @@ window.addEventListener("load", () => mermaid.run());
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -159,7 +158,7 @@ window.addEventListener("load", () => mermaid.run());
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -183,8 +182,8 @@ window.addEventListener("load", () => mermaid.run());
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -254,7 +253,7 @@ window.addEventListener("load", () => mermaid.run());
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -269,7 +268,6 @@ window.addEventListener("load", () => mermaid.run());
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -309,9 +307,27 @@ window.addEventListener("load", () => mermaid.run());
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -325,20 +341,14 @@ window.addEventListener("load", () => mermaid.run());
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -399,6 +409,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -489,6 +539,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
         
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
       </div>
     
   </div>
@@ -559,8 +649,8 @@ window.addEventListener("load", () => mermaid.run());
 <span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn.functional</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">F</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">torch</span><span class="w"> </span><span class="kn">import</span> <span class="n">SymInt</span><span class="p">,</span> <span class="n">Tensor</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">torch._C</span><span class="w"> </span><span class="kn">import</span> <span class="n">_add_docstr</span><span class="p">,</span> <span class="n">_nested</span>  <span class="c1"># type: ignore[attr-defined]</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">torch.types</span><span class="w"> </span><span class="kn">import</span> <span class="n">_device</span> <span class="k">as</span> <span class="n">Device</span><span class="p">,</span> <span class="n">_dtype</span> <span class="k">as</span> <span class="n">DType</span>
 
+<span class="kn">from</span><span class="w"> </span><span class="nn">torch.types</span><span class="w"> </span><span class="kn">import</span> <span class="n">_device</span> <span class="k">as</span> <span class="n">Device</span><span class="p">,</span> <span class="n">_dtype</span> <span class="k">as</span> <span class="n">DType</span>
 
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s2">&quot;to_padded_tensor&quot;</span><span class="p">,</span>
@@ -572,19 +662,17 @@ window.addEventListener("load", () => mermaid.run());
 <span class="p">]</span>
 
 <span class="c1"># Allowlist these for weights_only load of NJT</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">._internal.nested_tensor</span><span class="w"> </span><span class="kn">import</span> <span class="n">_rebuild_njt</span><span class="p">,</span> <span class="n">NestedTensor</span> <span class="k">as</span> <span class="n">_NestedTensor</span>
-
-
+<span class="kn">from</span><span class="w"> </span><span class="nn">._internal.nested_tensor</span><span class="w"> </span><span class="kn">import</span> <span class="n">NestedTensor</span> <span class="k">as</span> <span class="n">_NestedTensor</span><span class="p">,</span> <span class="n">_rebuild_njt</span>
 <span class="n">torch</span><span class="o">.</span><span class="n">serialization</span><span class="o">.</span><span class="n">add_safe_globals</span><span class="p">([</span><span class="n">_NestedTensor</span><span class="p">,</span> <span class="n">_rebuild_njt</span><span class="p">])</span>
 
 
 <div class="viewcode-block" id="as_nested_tensor">
 <a class="viewcode-back" href="../../python-api/nested.html#torch.nested.as_nested_tensor">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">as_nested_tensor</span><span class="p">(</span>
-    <span class="n">ts</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Tensor</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="n">Tensor</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Tensor</span><span class="p">,</span> <span class="o">...</span><span class="p">]],</span>
+    <span class="n">ts</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Tensor</span><span class="p">],</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Tensor</span><span class="p">,</span> <span class="o">...</span><span class="p">]],</span>
     <span class="n">dtype</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Device</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="n">layout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">layout</span><span class="o">=</span><span class="kc">None</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Constructs a nested tensor preserving autograd history from a tensor or a list / tuple of</span>
@@ -629,9 +717,7 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sd">        &gt;&gt;&gt; c = torch.randn(3, 5, requires_grad=True)</span>
 <span class="sd">        &gt;&gt;&gt; nt2 = torch.nested.as_nested_tensor(c)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">is_tensor_list</span> <span class="o">=</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">))</span> <span class="ow">and</span> <span class="nb">all</span><span class="p">(</span>
-        <span class="nb">isinstance</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">Tensor</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">ts</span>
-    <span class="p">)</span>
+    <span class="n">is_tensor_list</span> <span class="o">=</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">))</span> <span class="ow">and</span> <span class="nb">all</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">Tensor</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">ts</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span> <span class="n">Tensor</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">is_tensor_list</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
             <span class="s2">&quot;as_nested_tensor(): Expected first argument to be a tensor or a list / tuple of tensors &quot;</span>
@@ -641,9 +727,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="n">ts</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span> <span class="n">Tensor</span><span class="p">)</span> <span class="ow">and</span> <span class="n">ts</span><span class="o">.</span><span class="n">dim</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
-            <span class="s2">&quot;as_nested_tensor(): Expected tensor argument to have dim() &gt; 1&quot;</span>
-        <span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;as_nested_tensor(): Expected tensor argument to have dim() &gt; 1&quot;</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span> <span class="n">Tensor</span><span class="p">)</span> <span class="ow">and</span> <span class="n">ts</span><span class="o">.</span><span class="n">is_nested</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">layout</span> <span class="o">==</span> <span class="n">ts</span><span class="o">.</span><span class="n">layout</span><span class="p">:</span>
@@ -652,8 +736,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="k">else</span><span class="p">:</span>
             <span class="c1"># TODO: Just use nt.to(layout=layout) when it exists.</span>
             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
-                <span class="s2">&quot;as_nested_tensor(): Converting between nested tensor layouts is not supported&quot;</span>
-            <span class="p">)</span>
+                <span class="s2">&quot;as_nested_tensor(): Converting between nested tensor layouts is not supported&quot;</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">layout</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">layout</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">strided</span>
@@ -666,8 +749,7 @@ window.addEventListener("load", () => mermaid.run());
             <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">_nested_view_from_buffer</span><span class="p">(</span>
                 <span class="n">buffer</span><span class="p">,</span>
                 <span class="n">nested_sizes</span><span class="p">,</span>
-                <span class="o">*</span><span class="n">torch</span><span class="o">.</span><span class="n">_nested_compute_contiguous_strides_offsets</span><span class="p">(</span><span class="n">nested_sizes</span><span class="p">),</span>
-            <span class="p">)</span>
+                <span class="o">*</span><span class="n">torch</span><span class="o">.</span><span class="n">_nested_compute_contiguous_strides_offsets</span><span class="p">(</span><span class="n">nested_sizes</span><span class="p">))</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">_nested_tensor_from_tensor_list</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">device</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
@@ -681,13 +763,10 @@ window.addEventListener("load", () => mermaid.run());
             <span class="n">values</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">contiguous</span><span class="p">()</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
             <span class="n">batch_size</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
             <span class="n">seq_len</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-            <span class="n">offsets</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span>
-                <span class="mi">0</span><span class="p">,</span> <span class="n">batch_size</span> <span class="o">*</span> <span class="n">seq_len</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">seq_len</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">int64</span>
-            <span class="p">)</span>
+            <span class="n">offsets</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">batch_size</span> <span class="o">*</span> <span class="n">seq_len</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">seq_len</span><span class="p">,</span>
+                                   <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>
 
-            <span class="kn">from</span><span class="w"> </span><span class="nn">torch.nested._internal.nested_tensor</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
-                <span class="n">nested_view_from_values_offsets</span><span class="p">,</span>
-            <span class="p">)</span>
+            <span class="kn">from</span><span class="w"> </span><span class="nn">torch.nested._internal.nested_tensor</span><span class="w"> </span><span class="kn">import</span> <span class="n">nested_view_from_values_offsets</span>
 
             <span class="k">return</span> <span class="n">nested_view_from_values_offsets</span><span class="p">(</span>
                 <span class="n">values</span><span class="p">,</span> <span class="n">offsets</span><span class="p">,</span> <span class="n">min_seqlen</span><span class="o">=</span><span class="n">seq_len</span><span class="p">,</span> <span class="n">max_seqlen</span><span class="o">=</span><span class="n">seq_len</span>
@@ -699,9 +778,7 @@ window.addEventListener("load", () => mermaid.run());
             <span class="n">nt</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">jagged_from_list</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span> <span class="n">offsets</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">nt</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
-            <span class="sa">f</span><span class="s2">&quot;Specified layout is unsupported for nested tensors: </span><span class="si">{</span><span class="n">layout</span><span class="si">}</span><span class="s2">&quot;</span>
-        <span class="p">)</span></div>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Specified layout is unsupported for nested tensors: </span><span class="si">{</span><span class="n">layout</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
 
 
 
@@ -763,45 +840,36 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sd">&quot;&quot;&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 
-
 <div class="viewcode-block" id="nested_tensor">
 <a class="viewcode-back" href="../../python-api/nested.html#torch.nested.nested_tensor">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">nested_tensor</span><span class="p">(</span>
-    <span class="n">tensor_list</span><span class="p">,</span>
-    <span class="o">*</span><span class="p">,</span>
-    <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">layout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">device</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">requires_grad</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-    <span class="n">pin_memory</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">nested_tensor</span><span class="p">(</span><span class="n">tensor_list</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">pin_memory</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Constructs a nested tensor with no autograd history (also known as a &quot;leaf tensor&quot;, see</span>
-<span class="sd">    :ref:`Autograd mechanics &lt;autograd-mechanics&gt;`) from :attr:`tensor_list` a list of tensors.</span>
+<span class="sd">Constructs a nested tensor with no autograd history (also known as a &quot;leaf tensor&quot;, see</span>
+<span class="sd">:ref:`Autograd mechanics &lt;autograd-mechanics&gt;`) from :attr:`tensor_list` a list of tensors.</span>
 
-<span class="sd">    Args:</span>
-<span class="sd">        tensor_list (List[array_like]): a list of tensors, or anything that can be passed to torch.tensor,</span>
-<span class="sd">        where each element of the list has the same dimensionality.</span>
+<span class="sd">Args:</span>
+<span class="sd">    tensor_list (List[array_like]): a list of tensors, or anything that can be passed to torch.tensor,</span>
+<span class="sd">    where each element of the list has the same dimensionality.</span>
 
-<span class="sd">    Keyword arguments:</span>
-<span class="sd">        dtype (:class:`torch.dtype`, optional): the desired type of returned nested tensor.</span>
-<span class="sd">            Default: if None, same :class:`torch.dtype` as leftmost tensor in the list.</span>
-<span class="sd">        layout (:class:`torch.layout`, optional): the desired layout of returned nested tensor.</span>
-<span class="sd">            Only strided and jagged layouts are supported. Default: if None, the strided layout.</span>
-<span class="sd">        device (:class:`torch.device`, optional): the desired device of returned nested tensor.</span>
-<span class="sd">            Default: if None, same :class:`torch.device` as leftmost tensor in the list</span>
-<span class="sd">        requires_grad (bool, optional): If autograd should record operations on the</span>
-<span class="sd">            returned nested tensor. Default: ``False``.</span>
-<span class="sd">        pin_memory (bool, optional): If set, returned nested tensor would be allocated in</span>
-<span class="sd">            the pinned memory. Works only for CPU tensors. Default: ``False``.</span>
+<span class="sd">Keyword arguments:</span>
+<span class="sd">    dtype (:class:`torch.dtype`, optional): the desired type of returned nested tensor.</span>
+<span class="sd">        Default: if None, same :class:`torch.dtype` as leftmost tensor in the list.</span>
+<span class="sd">    layout (:class:`torch.layout`, optional): the desired layout of returned nested tensor.</span>
+<span class="sd">        Only strided and jagged layouts are supported. Default: if None, the strided layout.</span>
+<span class="sd">    device (:class:`torch.device`, optional): the desired device of returned nested tensor.</span>
+<span class="sd">        Default: if None, same :class:`torch.device` as leftmost tensor in the list</span>
+<span class="sd">    requires_grad (bool, optional): If autograd should record operations on the</span>
+<span class="sd">        returned nested tensor. Default: ``False``.</span>
+<span class="sd">    pin_memory (bool, optional): If set, returned nested tensor would be allocated in</span>
+<span class="sd">        the pinned memory. Works only for CPU tensors. Default: ``False``.</span>
 
-<span class="sd">    Example::</span>
+<span class="sd">Example::</span>
 
-<span class="sd">        &gt;&gt;&gt; a = torch.arange(3, dtype=torch.float, requires_grad=True)</span>
-<span class="sd">        &gt;&gt;&gt; b = torch.arange(5, dtype=torch.float, requires_grad=True)</span>
-<span class="sd">        &gt;&gt;&gt; nt = torch.nested.nested_tensor([a, b], requires_grad=True)</span>
-<span class="sd">        &gt;&gt;&gt; nt.is_leaf</span>
-<span class="sd">        True</span>
+<span class="sd">    &gt;&gt;&gt; a = torch.arange(3, dtype=torch.float, requires_grad=True)</span>
+<span class="sd">    &gt;&gt;&gt; b = torch.arange(5, dtype=torch.float, requires_grad=True)</span>
+<span class="sd">    &gt;&gt;&gt; nt = torch.nested.nested_tensor([a, b], requires_grad=True)</span>
+<span class="sd">    &gt;&gt;&gt; nt.is_leaf</span>
+<span class="sd">    True</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">layout</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">layout</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">strided</span>
@@ -811,20 +879,15 @@ window.addEventListener("load", () => mermaid.run());
             <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span>
             <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">,</span>
             <span class="n">requires_grad</span><span class="o">=</span><span class="n">requires_grad</span><span class="p">,</span>
-            <span class="n">pin_memory</span><span class="o">=</span><span class="n">pin_memory</span><span class="p">,</span>
-        <span class="p">)</span>
+            <span class="n">pin_memory</span><span class="o">=</span><span class="n">pin_memory</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">layout</span> <span class="o">==</span> <span class="n">torch</span><span class="o">.</span><span class="n">jagged</span><span class="p">:</span>
         <span class="c1"># Need to wrap lists of scalars as tensors</span>
-        <span class="n">list_of_tensors</span> <span class="o">=</span> <span class="p">[</span>
-            <span class="n">t</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">Tensor</span><span class="p">)</span> <span class="k">else</span> <span class="n">torch</span><span class="o">.</span><span class="n">as_tensor</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tensor_list</span>
-        <span class="p">]</span>
+        <span class="n">list_of_tensors</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">Tensor</span><span class="p">)</span> <span class="k">else</span> <span class="n">torch</span><span class="o">.</span><span class="n">as_tensor</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tensor_list</span><span class="p">]</span>
 
         <span class="kn">from</span><span class="w"> </span><span class="nn">torch.nested._internal.nested_tensor</span><span class="w"> </span><span class="kn">import</span> <span class="n">jagged_from_list</span>
 
         <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
-            <span class="n">nt</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">jagged_from_list</span><span class="p">(</span>
-                <span class="n">list_of_tensors</span><span class="p">,</span> <span class="n">offsets</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span>
-            <span class="p">)</span>
+            <span class="n">nt</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">jagged_from_list</span><span class="p">(</span><span class="n">list_of_tensors</span><span class="p">,</span> <span class="n">offsets</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
 
         <span class="n">nt</span><span class="o">.</span><span class="n">requires_grad_</span><span class="p">(</span><span class="n">requires_grad</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">pin_memory</span><span class="p">:</span>
@@ -832,53 +895,45 @@ window.addEventListener("load", () => mermaid.run());
 
         <span class="k">return</span> <span class="n">nt</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
-            <span class="sa">f</span><span class="s2">&quot;Specified layout is unsupported for nested tensors: </span><span class="si">{</span><span class="n">layout</span><span class="si">}</span><span class="s2">&quot;</span>
-        <span class="p">)</span></div>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Specified layout is unsupported for nested tensors: </span><span class="si">{</span><span class="n">layout</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
 
 
 
-<span class="k">def</span><span class="w"> </span><span class="nf">narrow</span><span class="p">(</span>
-    <span class="n">tensor</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span>
-    <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-    <span class="n">start</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Tensor</span><span class="p">],</span>
-    <span class="n">length</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Tensor</span><span class="p">],</span>
-    <span class="n">layout</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">strided</span><span class="p">,</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">narrow</span><span class="p">(</span><span class="n">tensor</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">start</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Tensor</span><span class="p">],</span> <span class="n">length</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Tensor</span><span class="p">],</span> <span class="n">layout</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">strided</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Constructs a nested tensor (which might be a view) from :attr:`tensor`, a strided tensor. This follows</span>
-<span class="sd">    similar semantics to torch.Tensor.narrow, where in the :attr:`dim`-th dimension the new nested tensor</span>
-<span class="sd">    shows only the elements in the interval `[start, start+length)`. As nested representations</span>
-<span class="sd">    allow for a different `start` and `length` at each &#39;row&#39; of that dimension, :attr:`start` and :attr:`length`</span>
-<span class="sd">    can also be tensors of shape `tensor.shape[0]`.</span>
+<span class="sd">Constructs a nested tensor (which might be a view) from :attr:`tensor`, a strided tensor. This follows</span>
+<span class="sd">similar semantics to torch.Tensor.narrow, where in the :attr:`dim`-th dimension the new nested tensor</span>
+<span class="sd">shows only the elements in the interval `[start, start+length)`. As nested representations</span>
+<span class="sd">allow for a different `start` and `length` at each &#39;row&#39; of that dimension, :attr:`start` and :attr:`length`</span>
+<span class="sd">can also be tensors of shape `tensor.shape[0]`.</span>
 
-<span class="sd">    There&#39;s some differences depending on the layout you use for the nested tensor. If using strided layout,</span>
-<span class="sd">    torch.narrow will do a copy of the narrowed data into a contiguous NT with strided layout, while</span>
-<span class="sd">    jagged layout narrow() will create a non-contiguous view of your original strided tensor. This particular</span>
-<span class="sd">    representation is really useful for representing kv-caches in Transformer models, as specialized</span>
-<span class="sd">    SDPA kernels can deal with format easily, resulting in performance improvements.</span>
+<span class="sd">There&#39;s some differences depending on the layout you use for the nested tensor. If using strided layout,</span>
+<span class="sd">torch.narrow will do a copy of the narrowed data into a contiguous NT with strided layout, while</span>
+<span class="sd">jagged layout narrow() will create a non-contiguous view of your original strided tensor. This particular</span>
+<span class="sd">representation is really useful for representing kv-caches in Transformer models, as specialized</span>
+<span class="sd">SDPA kernels can deal with format easily, resulting in performance improvements.</span>
 
 
-<span class="sd">    Args:</span>
-<span class="sd">        tensor (:class:`torch.Tensor`): a strided tensor, which will be used as the underlying data</span>
-<span class="sd">            for the nested tensor if using the jagged layout or will be copied for the strided layout.</span>
-<span class="sd">        dim (int): the dimension where narrow will be applied. Only `dim=1` is supported for the</span>
-<span class="sd">            jagged layout, while strided supports all dim</span>
-<span class="sd">        start (Union[int, :class:`torch.Tensor`]): starting element for the narrow operation</span>
-<span class="sd">        length (Union[int, :class:`torch.Tensor`]): number of elements taken during the narrow op</span>
+<span class="sd">Args:</span>
+<span class="sd">    tensor (:class:`torch.Tensor`): a strided tensor, which will be used as the underlying data</span>
+<span class="sd">        for the nested tensor if using the jagged layout or will be copied for the strided layout.</span>
+<span class="sd">    dim (int): the dimension where narrow will be applied. Only `dim=1` is supported for the</span>
+<span class="sd">        jagged layout, while strided supports all dim</span>
+<span class="sd">    start (Union[int, :class:`torch.Tensor`]): starting element for the narrow operation</span>
+<span class="sd">    length (Union[int, :class:`torch.Tensor`]): number of elements taken during the narrow op</span>
 
-<span class="sd">    Keyword arguments:</span>
-<span class="sd">        layout (:class:`torch.layout`, optional): the desired layout of returned nested tensor.</span>
-<span class="sd">            Only strided and jagged layouts are supported. Default: if None, the strided layout.</span>
+<span class="sd">Keyword arguments:</span>
+<span class="sd">    layout (:class:`torch.layout`, optional): the desired layout of returned nested tensor.</span>
+<span class="sd">        Only strided and jagged layouts are supported. Default: if None, the strided layout.</span>
 
-<span class="sd">    Example::</span>
+<span class="sd">Example::</span>
 
-<span class="sd">        &gt;&gt;&gt; starts = torch.tensor([0, 1, 2, 3, 4], dtype=torch.int64)</span>
-<span class="sd">        &gt;&gt;&gt; lengths = torch.tensor([3, 2, 2, 1, 5], dtype=torch.int64)</span>
-<span class="sd">        &gt;&gt;&gt; narrow_base = torch.randn(5, 10, 20)</span>
-<span class="sd">        &gt;&gt;&gt; nt_narrowed = torch.nested.narrow(narrow_base, 1, starts, lengths, layout=torch.jagged)</span>
-<span class="sd">        &gt;&gt;&gt; nt_narrowed.is_contiguous()</span>
-<span class="sd">        False</span>
+<span class="sd">    &gt;&gt;&gt; starts = torch.tensor([0, 1, 2, 3, 4], dtype=torch.int64)</span>
+<span class="sd">    &gt;&gt;&gt; lengths = torch.tensor([3, 2, 2, 1, 5], dtype=torch.int64)</span>
+<span class="sd">    &gt;&gt;&gt; narrow_base = torch.randn(5, 10, 20)</span>
+<span class="sd">    &gt;&gt;&gt; nt_narrowed = torch.nested.narrow(narrow_base, 1, starts, lengths, layout=torch.jagged)</span>
+<span class="sd">    &gt;&gt;&gt; nt_narrowed.is_contiguous()</span>
+<span class="sd">    False</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">SymInt</span><span class="p">,</span> <span class="n">Tensor</span><span class="p">)):</span>
         <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;start must be an integer or a tensor&quot;</span><span class="p">)</span>
@@ -888,13 +943,9 @@ window.addEventListener("load", () => mermaid.run());
 
     <span class="k">if</span> <span class="n">layout</span> <span class="o">==</span> <span class="n">torch</span><span class="o">.</span><span class="n">strided</span><span class="p">:</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">Tensor</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">Tensor</span><span class="p">):</span>
-            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
-                <span class="s2">&quot;start and length must be integers for the strided layout NT impl&quot;</span>
-            <span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;start and length must be integers for the strided layout NT impl&quot;</span><span class="p">)</span>
         <span class="c1"># TODO: switch to as_nested_tensor(tensor) when it is available</span>
-        <span class="n">nt</span> <span class="o">=</span> <span class="n">as_nested_tensor</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">unbind</span><span class="p">(</span><span class="n">tensor</span><span class="p">),</span> <span class="n">layout</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">strided</span><span class="p">)</span><span class="o">.</span><span class="n">narrow</span><span class="p">(</span>
-            <span class="n">dim</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">length</span>
-        <span class="p">)</span>
+        <span class="n">nt</span> <span class="o">=</span> <span class="n">as_nested_tensor</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">unbind</span><span class="p">(</span><span class="n">tensor</span><span class="p">),</span> <span class="n">layout</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">strided</span><span class="p">)</span><span class="o">.</span><span class="n">narrow</span><span class="p">(</span><span class="n">dim</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">layout</span> <span class="o">==</span> <span class="n">torch</span><span class="o">.</span><span class="n">jagged</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">dim</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;jagged layout only supports dim=1&quot;</span><span class="p">)</span>
@@ -909,9 +960,7 @@ window.addEventListener("load", () => mermaid.run());
 
         <span class="n">nt</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">jagged_from_tensor_and_lengths</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
-            <span class="sa">f</span><span class="s2">&quot;Specified layout is unsupported for nested narrow: </span><span class="si">{</span><span class="n">layout</span><span class="si">}</span><span class="s2">&quot;</span>
-        <span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Specified layout is unsupported for nested narrow: </span><span class="si">{</span><span class="n">layout</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">nt</span>
 
@@ -925,72 +974,71 @@ window.addEventListener("load", () => mermaid.run());
     <span class="n">max_seqlen</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Constructs a jagged layout nested tensor from the given jagged components. The jagged layout</span>
-<span class="sd">    consists of a required values buffer with the jagged dimension packed into a single dimension.</span>
-<span class="sd">    The offsets / lengths metadata determines how this dimension is split into batch elements</span>
-<span class="sd">    and are expected to be allocated on the same device as the values buffer.</span>
+<span class="sd">Constructs a jagged layout nested tensor from the given jagged components. The jagged layout</span>
+<span class="sd">consists of a required values buffer with the jagged dimension packed into a single dimension.</span>
+<span class="sd">The offsets / lengths metadata determines how this dimension is split into batch elements</span>
+<span class="sd">and are expected to be allocated on the same device as the values buffer.</span>
 
-<span class="sd">    Expected metadata formats:</span>
-<span class="sd">        * offsets: Indices within the packed dimension splitting it into heterogeneously-sized</span>
-<span class="sd">          batch elements. Example: [0, 2, 3, 6] indicates that a packed jagged dim of size 6</span>
-<span class="sd">          should be conceptually split into batch elements of length [2, 1, 3]. Note that both the</span>
-<span class="sd">          beginning and ending offsets are required for kernel convenience (i.e. shape batch_size + 1).</span>
-<span class="sd">        * lengths: Lengths of the individual batch elements; shape == batch_size. Example: [2, 1, 3]</span>
-<span class="sd">          indicates that a packed jagged dim of size 6 should be conceptually split into batch</span>
-<span class="sd">          elements of length [2, 1, 3].</span>
+<span class="sd">Expected metadata formats:</span>
+<span class="sd">    * offsets: Indices within the packed dimension splitting it into heterogeneously-sized</span>
+<span class="sd">      batch elements. Example: [0, 2, 3, 6] indicates that a packed jagged dim of size 6</span>
+<span class="sd">      should be conceptually split into batch elements of length [2, 1, 3]. Note that both the</span>
+<span class="sd">      beginning and ending offsets are required for kernel convenience (i.e. shape batch_size + 1).</span>
+<span class="sd">    * lengths: Lengths of the individual batch elements; shape == batch_size. Example: [2, 1, 3]</span>
+<span class="sd">      indicates that a packed jagged dim of size 6 should be conceptually split into batch</span>
+<span class="sd">      elements of length [2, 1, 3].</span>
 
-<span class="sd">    Note that it can be useful to provide both offsets and lengths. This describes a nested tensor</span>
-<span class="sd">    with &quot;holes&quot;, where the offsets indicate the start position of each batch item and the length</span>
-<span class="sd">    specifies the total number of elements (see example below).</span>
+<span class="sd">Note that it can be useful to provide both offsets and lengths. This describes a nested tensor</span>
+<span class="sd">with &quot;holes&quot;, where the offsets indicate the start position of each batch item and the length</span>
+<span class="sd">specifies the total number of elements (see example below).</span>
 
-<span class="sd">    The returned jagged layout nested tensor will be a view of the input values tensor.</span>
+<span class="sd">The returned jagged layout nested tensor will be a view of the input values tensor.</span>
 
-<span class="sd">    Args:</span>
-<span class="sd">        values (:class:`torch.Tensor`): The underlying buffer in the shape of</span>
-<span class="sd">            (sum_B(*), D_1, ..., D_N). The jagged dimension is packed into a single dimension,</span>
-<span class="sd">            with the offsets / lengths metadata used to distinguish batch elements.</span>
-<span class="sd">        offsets (optional :class:`torch.Tensor`): Offsets into the jagged dimension of shape B + 1.</span>
-<span class="sd">        lengths (optional :class:`torch.Tensor`): Lengths of the batch elements of shape B.</span>
-<span class="sd">        jagged_dim (optional int): Indicates which dimension in values is the packed jagged</span>
-<span class="sd">            dimension. If None, this is set to dim=1 (i.e. the dimension immediately following</span>
-<span class="sd">            the batch dimension). Default: None</span>
-<span class="sd">        min_seqlen (optional int): If set, uses the specified value as the cached minimum sequence</span>
-<span class="sd">            length for the returned nested tensor. This can be a useful alternative to computing</span>
-<span class="sd">            this value on-demand, possibly avoiding a GPU -&gt; CPU sync. Default: None</span>
-<span class="sd">        max_seqlen (optional int): If set, uses the specified value as the cached maximum sequence</span>
-<span class="sd">            length for the returned nested tensor. This can be a useful alternative to computing</span>
-<span class="sd">            this value on-demand, possibly avoiding a GPU -&gt; CPU sync. Default: None</span>
+<span class="sd">Args:</span>
+<span class="sd">    values (:class:`torch.Tensor`): The underlying buffer in the shape of</span>
+<span class="sd">        (sum_B(*), D_1, ..., D_N). The jagged dimension is packed into a single dimension,</span>
+<span class="sd">        with the offsets / lengths metadata used to distinguish batch elements.</span>
+<span class="sd">    offsets (optional :class:`torch.Tensor`): Offsets into the jagged dimension of shape B + 1.</span>
+<span class="sd">    lengths (optional :class:`torch.Tensor`): Lengths of the batch elements of shape B.</span>
+<span class="sd">    jagged_dim (optional int): Indicates which dimension in values is the packed jagged</span>
+<span class="sd">        dimension. If None, this is set to dim=1 (i.e. the dimension immediately following</span>
+<span class="sd">        the batch dimension). Default: None</span>
+<span class="sd">    min_seqlen (optional int): If set, uses the specified value as the cached minimum sequence</span>
+<span class="sd">        length for the returned nested tensor. This can be a useful alternative to computing</span>
+<span class="sd">        this value on-demand, possibly avoiding a GPU -&gt; CPU sync. Default: None</span>
+<span class="sd">    max_seqlen (optional int): If set, uses the specified value as the cached maximum sequence</span>
+<span class="sd">        length for the returned nested tensor. This can be a useful alternative to computing</span>
+<span class="sd">        this value on-demand, possibly avoiding a GPU -&gt; CPU sync. Default: None</span>
 
-<span class="sd">    Example::</span>
+<span class="sd">Example::</span>
 
-<span class="sd">        &gt;&gt;&gt; values = torch.randn(12, 5)</span>
-<span class="sd">        &gt;&gt;&gt; offsets = torch.tensor([0, 3, 5, 6, 10, 12])</span>
-<span class="sd">        &gt;&gt;&gt; nt = nested_tensor_from_jagged(values, offsets)</span>
-<span class="sd">        &gt;&gt;&gt; # 3D shape with the middle dimension jagged</span>
-<span class="sd">        &gt;&gt;&gt; nt.shape</span>
-<span class="sd">        torch.Size([5, j2, 5])</span>
-<span class="sd">        &gt;&gt;&gt; # Length of each item in the batch:</span>
-<span class="sd">        &gt;&gt;&gt; offsets.diff()</span>
-<span class="sd">        tensor([3, 2, 1, 4, 2])</span>
+<span class="sd">    &gt;&gt;&gt; values = torch.randn(12, 5)</span>
+<span class="sd">    &gt;&gt;&gt; offsets = torch.tensor([0, 3, 5, 6, 10, 12])</span>
+<span class="sd">    &gt;&gt;&gt; nt = nested_tensor_from_jagged(values, offsets)</span>
+<span class="sd">    &gt;&gt;&gt; # 3D shape with the middle dimension jagged</span>
+<span class="sd">    &gt;&gt;&gt; nt.shape</span>
+<span class="sd">    torch.Size([5, j2, 5])</span>
+<span class="sd">    &gt;&gt;&gt; # Length of each item in the batch:</span>
+<span class="sd">    &gt;&gt;&gt; offsets.diff()</span>
+<span class="sd">    tensor([3, 2, 1, 4, 2])</span>
 
-<span class="sd">        &gt;&gt;&gt; values = torch.randn(6, 5)</span>
-<span class="sd">        &gt;&gt;&gt; offsets = torch.tensor([0, 2, 3, 6])</span>
-<span class="sd">        &gt;&gt;&gt; lengths = torch.tensor([1, 1, 2])</span>
-<span class="sd">        &gt;&gt;&gt; # NT with holes</span>
-<span class="sd">        &gt;&gt;&gt; nt = nested_tensor_from_jagged(values, offsets, lengths)</span>
-<span class="sd">        &gt;&gt;&gt; a, b, c = nt.unbind()</span>
-<span class="sd">        &gt;&gt;&gt; # Batch item 1 consists of indices [0, 1)</span>
-<span class="sd">        &gt;&gt;&gt; torch.equal(a, values[0:1, :])</span>
-<span class="sd">        True</span>
-<span class="sd">        &gt;&gt;&gt; # Batch item 2 consists of indices [2, 3)</span>
-<span class="sd">        &gt;&gt;&gt; torch.equal(b, values[2:3, :])</span>
-<span class="sd">        True</span>
-<span class="sd">        &gt;&gt;&gt; # Batch item 3 consists of indices [3, 5)</span>
-<span class="sd">        &gt;&gt;&gt; torch.equal(c, values[3:5, :])</span>
-<span class="sd">        True</span>
+<span class="sd">    &gt;&gt;&gt; values = torch.randn(6, 5)</span>
+<span class="sd">    &gt;&gt;&gt; offsets = torch.tensor([0, 2, 3, 6])</span>
+<span class="sd">    &gt;&gt;&gt; lengths = torch.tensor([1, 1, 2])</span>
+<span class="sd">    &gt;&gt;&gt; # NT with holes</span>
+<span class="sd">    &gt;&gt;&gt; nt = nested_tensor_from_jagged(values, offsets, lengths)</span>
+<span class="sd">    &gt;&gt;&gt; a, b, c = nt.unbind()</span>
+<span class="sd">    &gt;&gt;&gt; # Batch item 1 consists of indices [0, 1)</span>
+<span class="sd">    &gt;&gt;&gt; torch.equal(a, values[0:1, :])</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; # Batch item 2 consists of indices [2, 3)</span>
+<span class="sd">    &gt;&gt;&gt; torch.equal(b, values[2:3, :])</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; # Batch item 3 consists of indices [3, 5)</span>
+<span class="sd">    &gt;&gt;&gt; torch.equal(c, values[3:5, :])</span>
+<span class="sd">    True</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="kn">from</span><span class="w"> </span><span class="nn">torch.fx._symbolic_trace</span><span class="w"> </span><span class="kn">import</span> <span class="n">is_fx_tracing</span>
-
     <span class="k">if</span> <span class="n">is_fx_tracing</span><span class="p">():</span>
         <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
             <span class="s2">&quot;torch.nested.nested_tensor_from_jagged does not support tracing with fx.symbolic_trace. &quot;</span>
@@ -1011,19 +1059,10 @@ window.addEventListener("load", () => mermaid.run());
     <span class="k">if</span> <span class="n">jagged_dim</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">jagged_dim</span> <span class="o">=</span> <span class="mi">1</span>
 
-    <span class="kn">from</span><span class="w"> </span><span class="nn">torch.nested._internal.nested_tensor</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
-        <span class="n">nested_view_from_values_offsets_lengths</span><span class="p">,</span>
-    <span class="p">)</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">torch.nested._internal.nested_tensor</span><span class="w"> </span><span class="kn">import</span> <span class="n">nested_view_from_values_offsets_lengths</span>
 
     <span class="k">return</span> <span class="n">nested_view_from_values_offsets_lengths</span><span class="p">(</span>
-        <span class="n">values</span><span class="p">,</span>
-        <span class="n">offsets</span><span class="p">,</span>
-        <span class="n">lengths</span><span class="p">,</span>
-        <span class="n">ragged_idx</span><span class="o">=</span><span class="n">jagged_dim</span><span class="p">,</span>
-        <span class="n">min_seqlen</span><span class="o">=</span><span class="n">min_seqlen</span><span class="p">,</span>
-        <span class="n">max_seqlen</span><span class="o">=</span><span class="n">max_seqlen</span><span class="p">,</span>
-    <span class="p">)</span>
-
+        <span class="n">values</span><span class="p">,</span> <span class="n">offsets</span><span class="p">,</span> <span class="n">lengths</span><span class="p">,</span> <span class="n">ragged_idx</span><span class="o">=</span><span class="n">jagged_dim</span><span class="p">,</span> <span class="n">min_seqlen</span><span class="o">=</span><span class="n">min_seqlen</span><span class="p">,</span> <span class="n">max_seqlen</span><span class="o">=</span><span class="n">max_seqlen</span><span class="p">)</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">masked_select</span><span class="p">(</span><span class="n">tensor</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span> <span class="n">mask</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
@@ -1038,9 +1077,7 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sd">    Example::</span>
 
 <span class="sd">    &gt;&gt;&gt; tensor = torch.randn(3, 3)</span>
-<span class="sd">    &gt;&gt;&gt; mask = torch.tensor(</span>
-<span class="sd">    ...     [[False, False, True], [True, False, True], [False, False, True]]</span>
-<span class="sd">    ... )</span>
+<span class="sd">    &gt;&gt;&gt; mask = torch.tensor([[False, False, True], [True, False, True], [False, False, True]])</span>
 <span class="sd">    &gt;&gt;&gt; nt = torch.nested.masked_select(tensor, mask)</span>
 <span class="sd">    &gt;&gt;&gt; nt.shape</span>
 <span class="sd">    torch.Size([3, j4])</span>
@@ -1070,7 +1107,9 @@ window.addEventListener("load", () => mermaid.run());
     <span class="n">expanded_mask</span> <span class="o">=</span> <span class="n">mask</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">tensor</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
     <span class="n">res_lengths</span> <span class="o">=</span> <span class="n">expanded_mask</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="n">tensor</span><span class="o">.</span><span class="n">ndim</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
-    <span class="kn">from</span><span class="w"> </span><span class="nn">torch.nested._internal.nested_tensor</span><span class="w"> </span><span class="kn">import</span> <span class="n">nested_view_from_values_offsets</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">torch.nested._internal.nested_tensor</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+        <span class="n">nested_view_from_values_offsets</span><span class="p">,</span>
+    <span class="p">)</span>
 
     <span class="k">return</span> <span class="n">nested_view_from_values_offsets</span><span class="p">(</span>
         <span class="n">values</span><span class="o">=</span><span class="n">res_values</span><span class="p">,</span>
@@ -1107,7 +1146,6 @@ window.addEventListener("load", () => mermaid.run());
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

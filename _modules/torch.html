@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -44,7 +44,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -63,7 +63,7 @@ window.addEventListener("load", () => mermaid.run());
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -72,7 +72,6 @@ window.addEventListener("load", () => mermaid.run());
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -159,7 +158,7 @@ window.addEventListener("load", () => mermaid.run());
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -183,8 +182,8 @@ window.addEventListener("load", () => mermaid.run());
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -254,7 +253,7 @@ window.addEventListener("load", () => mermaid.run());
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -269,7 +268,6 @@ window.addEventListener("load", () => mermaid.run());
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -309,9 +307,27 @@ window.addEventListener("load", () => mermaid.run());
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -325,20 +341,14 @@ window.addEventListener("load", () => mermaid.run());
   
   
   
-    
-    
-      
-    
-    
-    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -399,6 +409,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -489,6 +539,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
         
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
       </div>
     
   </div>
@@ -575,9 +665,13 @@ window.addEventListener("load", () => mermaid.run());
 <span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
     <span class="n">Any</span> <span class="k">as</span> <span class="n">_Any</span><span class="p">,</span>
     <span class="n">Callable</span> <span class="k">as</span> <span class="n">_Callable</span><span class="p">,</span>
+    <span class="n">Dict</span> <span class="k">as</span> <span class="n">_Dict</span><span class="p">,</span>
     <span class="n">get_origin</span> <span class="k">as</span> <span class="n">_get_origin</span><span class="p">,</span>
     <span class="n">Optional</span> <span class="k">as</span> <span class="n">_Optional</span><span class="p">,</span>
     <span class="n">overload</span> <span class="k">as</span> <span class="n">_overload</span><span class="p">,</span>
+    <span class="n">Set</span> <span class="k">as</span> <span class="n">_Set</span><span class="p">,</span>
+    <span class="n">Tuple</span> <span class="k">as</span> <span class="n">_Tuple</span><span class="p">,</span>
+    <span class="n">Type</span> <span class="k">as</span> <span class="n">_Type</span><span class="p">,</span>
     <span class="n">TYPE_CHECKING</span><span class="p">,</span>
     <span class="n">TypeVar</span> <span class="k">as</span> <span class="n">_TypeVar</span><span class="p">,</span>
     <span class="n">Union</span> <span class="k">as</span> <span class="n">_Union</span><span class="p">,</span>
@@ -875,16 +969,17 @@ window.addEventListener("load", () => mermaid.run());
             <span class="c1"># libtorch_global_deps.so always depends in cudart, check if its installed via wheel</span>
             <span class="k">if</span> <span class="s2">&quot;nvidia/cuda_runtime/lib/libcudart.so&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">_maps</span><span class="p">:</span>
                 <span class="k">return</span>
-            <span class="c1"># If all abovementioned conditions are met, preload nvjitlink and nvrtc</span>
-            <span class="n">_preload_cuda_deps</span><span class="p">(</span><span class="s2">&quot;nvjitlink&quot;</span><span class="p">,</span> <span class="s2">&quot;libnvJitLink.so.*[0-9]&quot;</span><span class="p">)</span>
+            <span class="c1"># If all above-mentioned conditions are met, preload nvrtc and nvjitlink</span>
+            <span class="c1"># Please note that order are important for CUDA-11.8 , as nvjitlink does not exist there</span>
             <span class="n">_preload_cuda_deps</span><span class="p">(</span><span class="s2">&quot;cuda_nvrtc&quot;</span><span class="p">,</span> <span class="s2">&quot;libnvrtc.so.*[0-9]&quot;</span><span class="p">)</span>
+            <span class="n">_preload_cuda_deps</span><span class="p">(</span><span class="s2">&quot;nvjitlink&quot;</span><span class="p">,</span> <span class="s2">&quot;libnvJitLink.so.*[0-9]&quot;</span><span class="p">)</span>
         <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
             <span class="k">pass</span>
 
     <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
         <span class="c1"># Can only happen for wheel with cuda libs as PYPI deps</span>
         <span class="c1"># As PyTorch is not purelib, but nvidia-*-cu12 is</span>
-        <span class="n">cuda_libs</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">cuda_libs</span><span class="p">:</span> <span class="n">_Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s2">&quot;cublas&quot;</span><span class="p">:</span> <span class="s2">&quot;libcublas.so.*[0-9]&quot;</span><span class="p">,</span>
             <span class="s2">&quot;cudnn&quot;</span><span class="p">:</span> <span class="s2">&quot;libcudnn.so.*[0-9]&quot;</span><span class="p">,</span>
             <span class="s2">&quot;cuda_nvrtc&quot;</span><span class="p">:</span> <span class="s2">&quot;libnvrtc.so.*[0-9]&quot;</span><span class="p">,</span>
@@ -1137,7 +1232,7 @@ window.addEventListener("load", () => mermaid.run());
 
 <div class="viewcode-block" id="SymInt.as_integer_ratio">
 <a class="viewcode-back" href="../python-api/torch.html#torch.SymInt.as_integer_ratio">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">as_integer_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="s2">&quot;SymInt&quot;</span><span class="p">,</span> <span class="n">builtins</span><span class="o">.</span><span class="n">int</span><span class="p">]:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">as_integer_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">_Tuple</span><span class="p">[</span><span class="s2">&quot;SymInt&quot;</span><span class="p">,</span> <span class="n">builtins</span><span class="o">.</span><span class="n">int</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Represent this int as an exact integer ratio&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="p">,</span> <span class="mi">1</span></div>
 
@@ -1258,7 +1353,7 @@ window.addEventListener("load", () => mermaid.run());
 
 <div class="viewcode-block" id="SymFloat.as_integer_ratio">
 <a class="viewcode-back" href="../python-api/torch.html#torch.SymFloat.as_integer_ratio">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">as_integer_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">builtins</span><span class="o">.</span><span class="n">int</span><span class="p">,</span> <span class="n">builtins</span><span class="o">.</span><span class="n">int</span><span class="p">]:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">as_integer_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">_Tuple</span><span class="p">[</span><span class="n">builtins</span><span class="o">.</span><span class="n">int</span><span class="p">,</span> <span class="n">builtins</span><span class="o">.</span><span class="n">int</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Represent this float as an exact integer ratio&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">builtins</span><span class="o">.</span><span class="n">float</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">as_integer_ratio</span><span class="p">()</span></div>
 
@@ -1360,7 +1455,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="sym_not">
-<a class="viewcode-back" href="../generated/torch.sym_not.html#torch.sym_not">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.sym_not.html#torch.sym_not">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">sym_not</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;SymInt-aware utility for logical negation.</span>
 
@@ -1380,7 +1475,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="sym_float">
-<a class="viewcode-back" href="../python-api/torch.sym_float.html#torch.sym_float">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.sym_float.html#torch.sym_float">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">sym_float</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;SymInt-aware utility for float casting.</span>
 
@@ -1398,7 +1493,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="sym_int">
-<a class="viewcode-back" href="../generated/torch.sym_int.html#torch.sym_int">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.sym_int.html#torch.sym_int">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">sym_int</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;SymInt-aware utility for int casting.</span>
 
@@ -1416,7 +1511,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="sym_max">
-<a class="viewcode-back" href="../python-api/torch.sym_max.html#torch.sym_max">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.sym_max.html#torch.sym_max">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">sym_max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    SymInt-aware utility for max which avoids branching on a &lt; b.</span>
@@ -1439,23 +1534,23 @@ window.addEventListener("load", () => mermaid.run());
     <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">all_types</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
     <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">all_types</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">float_types</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">float_types</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">builtins</span><span class="o">.</span><span class="n">float</span><span class="p">(</span><span class="n">builtins</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>  <span class="c1"># type: ignore[call-overload]</span>
+        <span class="k">return</span> <span class="n">builtins</span><span class="o">.</span><span class="n">float</span><span class="p">(</span><span class="n">builtins</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">builtins</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># type: ignore[call-overload]</span></div>
+        <span class="k">return</span> <span class="n">builtins</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span></div>
 
 
 
-<span class="k">def</span><span class="w"> </span><span class="nf">__all_and_float_types</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">type</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">type</span><span class="p">,</span> <span class="o">...</span><span class="p">]]:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">__all_and_float_types</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">_Tuple</span><span class="p">[</span><span class="n">_Tuple</span><span class="p">[</span><span class="n">_Type</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="n">_Tuple</span><span class="p">[</span><span class="n">_Type</span><span class="p">,</span> <span class="o">...</span><span class="p">]]:</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-        <span class="n">all_types</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">type</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">all_types</span><span class="p">:</span> <span class="n">_Tuple</span><span class="p">[</span><span class="n">_Type</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
             <span class="n">np</span><span class="o">.</span><span class="n">integer</span><span class="p">,</span>
             <span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">,</span>
             <span class="n">builtins</span><span class="o">.</span><span class="n">int</span><span class="p">,</span>
             <span class="n">builtins</span><span class="o">.</span><span class="n">float</span><span class="p">,</span>
         <span class="p">)</span>
-        <span class="n">float_types</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">type</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">,</span> <span class="n">builtins</span><span class="o">.</span><span class="n">float</span><span class="p">)</span>
+        <span class="n">float_types</span><span class="p">:</span> <span class="n">_Tuple</span><span class="p">[</span><span class="n">_Type</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">,</span> <span class="n">builtins</span><span class="o">.</span><span class="n">float</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">ModuleNotFoundError</span><span class="p">:</span>
         <span class="n">all_types</span> <span class="o">=</span> <span class="p">(</span><span class="n">builtins</span><span class="o">.</span><span class="n">int</span><span class="p">,</span> <span class="n">builtins</span><span class="o">.</span><span class="n">float</span><span class="p">)</span>
         <span class="n">float_types</span> <span class="o">=</span> <span class="p">(</span><span class="n">builtins</span><span class="o">.</span><span class="n">float</span><span class="p">,)</span>
@@ -1464,7 +1559,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="sym_min">
-<a class="viewcode-back" href="../python-api/torch.sym_min.html#torch.sym_min">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.sym_min.html#torch.sym_min">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">sym_min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;SymInt-aware utility for min().&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">overrides</span><span class="o">.</span><span class="n">has_torch_function</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)):</span>
@@ -1479,14 +1574,14 @@ window.addEventListener("load", () => mermaid.run());
     <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">all_types</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
     <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">all_types</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">float_types</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">float_types</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">builtins</span><span class="o">.</span><span class="n">float</span><span class="p">(</span><span class="n">builtins</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>  <span class="c1"># type: ignore[call-overload]</span>
+        <span class="k">return</span> <span class="n">builtins</span><span class="o">.</span><span class="n">float</span><span class="p">(</span><span class="n">builtins</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">builtins</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># type: ignore[call-overload]</span></div>
+        <span class="k">return</span> <span class="n">builtins</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span></div>
 
 
 
 <div class="viewcode-block" id="sym_sum">
-<a class="viewcode-back" href="../generated/torch.sym_sum.html#torch.sym_sum">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.sym_sum.html#torch.sym_sum">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">sym_sum</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    N-ary add which is faster to compute for long lists than iterated binary</span>
@@ -1552,7 +1647,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="sym_ite">
-<a class="viewcode-back" href="../python-api/torch.sym_ite.html#torch.sym_ite">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.sym_ite.html#torch.sym_ite">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">sym_ite</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">overrides</span><span class="o">.</span><span class="n">has_torch_function</span><span class="p">((</span><span class="n">b</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">f</span><span class="p">)):</span>
         <span class="k">return</span> <span class="n">overrides</span><span class="o">.</span><span class="n">handle_torch_function</span><span class="p">(</span><span class="n">sym_ite</span><span class="p">,</span> <span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">f</span><span class="p">),</span> <span class="n">b</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
@@ -1565,7 +1660,7 @@ window.addEventListener("load", () => mermaid.run());
 
 <span class="c1"># Create a fresh unbacked int, from an (possibly unbacked int) expression.</span>
 <div class="viewcode-block" id="sym_fresh_size">
-<a class="viewcode-back" href="../python-api/torch.sym_fresh_size.html#torch.sym_fresh_size">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.sym_fresh_size.html#torch.sym_fresh_size">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">sym_fresh_size</span><span class="p">(</span><span class="n">expr</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">()</span></div>
 
@@ -1688,7 +1783,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="is_tensor">
-<a class="viewcode-back" href="../python-api/torch.is_tensor.html#torch.is_tensor">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.is_tensor.html#torch.is_tensor">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">is_tensor</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">_Any</span><span class="p">,</span> <span class="o">/</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">_TypeIs</span><span class="p">[</span><span class="s2">&quot;torch.Tensor&quot;</span><span class="p">]:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Returns True if `obj` is a PyTorch tensor.</span>
 
@@ -1711,7 +1806,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="is_storage">
-<a class="viewcode-back" href="../python-api/torch.is_storage.html#torch.is_storage">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.is_storage.html#torch.is_storage">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">is_storage</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">_Any</span><span class="p">,</span> <span class="o">/</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">_TypeIs</span><span class="p">[</span><span class="n">_Union</span><span class="p">[</span><span class="s2">&quot;TypedStorage&quot;</span><span class="p">,</span> <span class="s2">&quot;UntypedStorage&quot;</span><span class="p">]]:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Returns True if `obj` is a PyTorch storage object.</span>
 
@@ -1726,7 +1821,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="get_default_device">
-<a class="viewcode-back" href="../python-api/torch.get_default_device.html#torch.get_default_device">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.get_default_device.html#torch.get_default_device">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">get_default_device</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="s2">&quot;torch.device&quot;</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Gets the default ``torch.Tensor`` to be allocated on ``device``&quot;&quot;&quot;</span>
     <span class="k">global</span> <span class="n">_GLOBAL_DEVICE_CONTEXT</span>
@@ -1745,7 +1840,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="set_default_device">
-<a class="viewcode-back" href="../python-api/torch.set_default_device.html#torch.set_default_device">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.set_default_device.html#torch.set_default_device">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">set_default_device</span><span class="p">(</span>
     <span class="n">device</span><span class="p">:</span> <span class="n">_Optional</span><span class="p">[</span><span class="n">_Union</span><span class="p">[</span><span class="s2">&quot;torch.device&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">builtins</span><span class="o">.</span><span class="n">int</span><span class="p">]],</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -1812,8 +1907,8 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="set_default_tensor_type">
-<a class="viewcode-back" href="../python-api/torch.set_default_tensor_type.html#torch.set_default_tensor_type">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">set_default_tensor_type</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="n">_Union</span><span class="p">[</span><span class="nb">type</span><span class="p">[</span><span class="s2">&quot;torch.Tensor&quot;</span><span class="p">],</span> <span class="nb">str</span><span class="p">],</span> <span class="o">/</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<a class="viewcode-back" href="../python-api/generated/torch.set_default_tensor_type.html#torch.set_default_tensor_type">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">set_default_tensor_type</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="n">_Union</span><span class="p">[</span><span class="n">_Type</span><span class="p">[</span><span class="s2">&quot;torch.Tensor&quot;</span><span class="p">],</span> <span class="nb">str</span><span class="p">],</span> <span class="o">/</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    .. warning::</span>
 
@@ -1846,7 +1941,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="set_default_dtype">
-<a class="viewcode-back" href="../python-api/torch.set_default_dtype.html#torch.set_default_dtype">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.set_default_dtype.html#torch.set_default_dtype">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">set_default_dtype</span><span class="p">(</span><span class="n">d</span><span class="p">:</span> <span class="s2">&quot;torch.dtype&quot;</span><span class="p">,</span> <span class="o">/</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 
@@ -1902,7 +1997,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="use_deterministic_algorithms">
-<a class="viewcode-back" href="../python-api/torch.use_deterministic_algorithms.html#torch.use_deterministic_algorithms">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.use_deterministic_algorithms.html#torch.use_deterministic_algorithms">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">use_deterministic_algorithms</span><span class="p">(</span>
     <span class="n">mode</span><span class="p">:</span> <span class="n">builtins</span><span class="o">.</span><span class="n">bool</span><span class="p">,</span>
     <span class="o">*</span><span class="p">,</span>
@@ -2047,7 +2142,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="are_deterministic_algorithms_enabled">
-<a class="viewcode-back" href="../python-api/torch.are_deterministic_algorithms_enabled.html#torch.are_deterministic_algorithms_enabled">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.are_deterministic_algorithms_enabled.html#torch.are_deterministic_algorithms_enabled">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">are_deterministic_algorithms_enabled</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">builtins</span><span class="o">.</span><span class="n">bool</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Returns True if the global deterministic flag is turned on. Refer to</span>
 <span class="sd">    :func:`torch.use_deterministic_algorithms` documentation for more details.</span>
@@ -2057,7 +2152,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="is_deterministic_algorithms_warn_only_enabled">
-<a class="viewcode-back" href="../python-api/torch.is_deterministic_algorithms_warn_only_enabled.html#torch.is_deterministic_algorithms_warn_only_enabled">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.is_deterministic_algorithms_warn_only_enabled.html#torch.is_deterministic_algorithms_warn_only_enabled">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">is_deterministic_algorithms_warn_only_enabled</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">builtins</span><span class="o">.</span><span class="n">bool</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Returns True if the global deterministic flag is set to warn only.</span>
 <span class="sd">    Refer to :func:`torch.use_deterministic_algorithms` documentation for more</span>
@@ -2068,7 +2163,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="set_deterministic_debug_mode">
-<a class="viewcode-back" href="../python-api/torch.set_deterministic_debug_mode.html#torch.set_deterministic_debug_mode">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.set_deterministic_debug_mode.html#torch.set_deterministic_debug_mode">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">set_deterministic_debug_mode</span><span class="p">(</span><span class="n">debug_mode</span><span class="p">:</span> <span class="n">_Union</span><span class="p">[</span><span class="n">builtins</span><span class="o">.</span><span class="n">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Sets the debug mode for deterministic operations.</span>
 
@@ -2115,7 +2210,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="get_deterministic_debug_mode">
-<a class="viewcode-back" href="../generated/torch.get_deterministic_debug_mode.html#torch.get_deterministic_debug_mode">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.get_deterministic_debug_mode.html#torch.get_deterministic_debug_mode">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">get_deterministic_debug_mode</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">builtins</span><span class="o">.</span><span class="n">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Returns the current value of the debug mode for deterministic</span>
 <span class="sd">    operations. Refer to :func:`torch.set_deterministic_debug_mode`</span>
@@ -2133,7 +2228,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="get_float32_matmul_precision">
-<a class="viewcode-back" href="../generated/torch.get_float32_matmul_precision.html#torch.get_float32_matmul_precision">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.get_float32_matmul_precision.html#torch.get_float32_matmul_precision">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">get_float32_matmul_precision</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Returns the current value of float32 matrix multiplication precision. Refer to</span>
 <span class="sd">    :func:`torch.set_float32_matmul_precision` documentation for more details.</span>
@@ -2143,7 +2238,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="set_float32_matmul_precision">
-<a class="viewcode-back" href="../python-api/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">set_float32_matmul_precision</span><span class="p">(</span><span class="n">precision</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Sets the internal precision of float32 matrix multiplications.</span>
 
@@ -2212,7 +2307,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="set_warn_always">
-<a class="viewcode-back" href="../generated/torch.set_warn_always.html#torch.set_warn_always">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.set_warn_always.html#torch.set_warn_always">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">set_warn_always</span><span class="p">(</span><span class="n">b</span><span class="p">:</span> <span class="n">builtins</span><span class="o">.</span><span class="n">bool</span><span class="p">,</span> <span class="o">/</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;When this flag is False (default) then some PyTorch warnings may only</span>
 <span class="sd">    appear once per process. This helps avoid excessive warning information.</span>
@@ -2228,7 +2323,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="is_warn_always_enabled">
-<a class="viewcode-back" href="../python-api/torch.is_warn_always_enabled.html#torch.is_warn_always_enabled">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.is_warn_always_enabled.html#torch.is_warn_always_enabled">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">is_warn_always_enabled</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">builtins</span><span class="o">.</span><span class="n">bool</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Returns True if the global warn_always flag is turned on. Refer to</span>
 <span class="sd">    :func:`torch.set_warn_always` documentation for more details.</span>
@@ -2295,18 +2390,11 @@ window.addEventListener("load", () => mermaid.run());
     <span class="n">_check_with</span><span class="p">(</span><span class="ne">RuntimeError</span><span class="p">,</span> <span class="n">cond</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
 
 
-<span class="k">def</span><span class="w"> </span><span class="nf">_check_is_size</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_check_is_size</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Checks that a given integer is a valid size (i.e., is non-negative).</span>
-<span class="sd">    You should use this over ``_check(i &gt;= 0)`` because it can prevent</span>
-<span class="sd">    ``GuardOnDataDependentSymNode`` exceptions by opting yourself into alternate</span>
-<span class="sd">    semantics for ``guard_size_oblivious`` tests that treat values 0 and 1</span>
-<span class="sd">    equivalently to all other values.</span>
-
-<span class="sd">    When max is not None, this specifies an upper bound equivalent to</span>
-<span class="sd">    ``_check(i &lt;= max)``.  This bound is also subject to alternate semantics:</span>
-<span class="sd">    in ``guard_size_oblivious`` tests, we assume that a constant max bound is</span>
-<span class="sd">    treated equivalently to all other values.  Symbolic max bounds are not yet</span>
-<span class="sd">    supported.</span>
+<span class="sd">    You should use this over _check(i &gt;= 0) because we can use the semantic</span>
+<span class="sd">    information (that i is a size) to make some further inferences in case</span>
+<span class="sd">    i is an unbacked SymInt.</span>
 
 <span class="sd">    NB: Do NOT use this in contexts where a -1 size would be valid (indicating</span>
 <span class="sd">    to infer the size from context, or if you should wrap-around or truncate).</span>
@@ -2317,13 +2405,6 @@ window.addEventListener("load", () => mermaid.run());
     <span class="kn">from</span><span class="w"> </span><span class="nn">torch.fx.experimental.symbolic_shapes</span><span class="w"> </span><span class="kn">import</span> <span class="n">_advise_is_size</span>
 
     <span class="n">_advise_is_size</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="nb">max</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">_check</span><span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="nb">max</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
-
-        <span class="kn">from</span><span class="w"> </span><span class="nn">torch.fx.experimental.symbolic_shapes</span><span class="w"> </span><span class="kn">import</span> <span class="n">_advise_is_bounded</span>
-
-        <span class="n">_advise_is_bounded</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="nb">max</span><span class="p">)</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">_check_index</span><span class="p">(</span><span class="n">cond</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>  <span class="c1"># noqa: F811</span>
@@ -2749,7 +2830,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 
-<span class="n">_storage_classes</span><span class="p">:</span> <span class="nb">set</span><span class="p">[</span><span class="nb">type</span><span class="p">[</span><span class="n">_Union</span><span class="p">[</span><span class="n">TypedStorage</span><span class="p">,</span> <span class="n">UntypedStorage</span><span class="p">]]]</span> <span class="o">=</span> <span class="p">{</span>
+<span class="n">_storage_classes</span><span class="p">:</span> <span class="n">_Set</span><span class="p">[</span><span class="n">_Type</span><span class="p">[</span><span class="n">_Union</span><span class="p">[</span><span class="n">TypedStorage</span><span class="p">,</span> <span class="n">UntypedStorage</span><span class="p">]]]</span> <span class="o">=</span> <span class="p">{</span>
     <span class="n">UntypedStorage</span><span class="p">,</span>
     <span class="n">DoubleStorage</span><span class="p">,</span>
     <span class="n">FloatStorage</span><span class="p">,</span>
@@ -2772,7 +2853,7 @@ window.addEventListener("load", () => mermaid.run());
 <span class="p">}</span>
 
 <span class="c1"># The _tensor_classes set is initialized by the call to initialize_python_bindings.</span>
-<span class="n">_tensor_classes</span><span class="p">:</span> <span class="nb">set</span><span class="p">[</span><span class="nb">type</span><span class="p">[</span><span class="s2">&quot;torch.Tensor&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="n">_tensor_classes</span><span class="p">:</span> <span class="n">_Set</span><span class="p">[</span><span class="n">_Type</span><span class="p">[</span><span class="s2">&quot;torch.Tensor&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
 
 <span class="c1"># If you edit these imports, please update torch/__init__.py.in as well</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">torch</span><span class="w"> </span><span class="kn">import</span> <span class="n">amp</span> <span class="k">as</span> <span class="n">amp</span><span class="p">,</span> <span class="n">random</span> <span class="k">as</span> <span class="n">random</span><span class="p">,</span> <span class="n">serialization</span> <span class="k">as</span> <span class="n">serialization</span>
@@ -2877,7 +2958,7 @@ window.addEventListener("load", () => mermaid.run());
 
 <span class="c1"># needs to be before the submodule imports to avoid circular dependencies</span>
 <div class="viewcode-block" id="_assert">
-<a class="viewcode-back" href="../python-api/torch._assert.html#torch._assert">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch._assert.html#torch._assert">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">_assert</span><span class="p">(</span><span class="n">condition</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;A wrapper around Python&#39;s assert which is symbolically traceable.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">condition</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span> <span class="ow">and</span> <span class="n">overrides</span><span class="o">.</span><span class="n">has_torch_function</span><span class="p">(</span>
@@ -2961,7 +3042,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="compiled_with_cxx11_abi">
-<a class="viewcode-back" href="../python-api/torch.compiled_with_cxx11_abi.html#torch.compiled_with_cxx11_abi">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.compiled_with_cxx11_abi.html#torch.compiled_with_cxx11_abi">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">compiled_with_cxx11_abi</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">builtins</span><span class="o">.</span><span class="n">bool</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Returns whether PyTorch was built with _GLIBCXX_USE_CXX11_ABI=1&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">_C</span><span class="o">.</span><span class="n">_GLIBCXX_USE_CXX11_ABI</span></div>
@@ -3028,13 +3109,10 @@ window.addEventListener("load", () => mermaid.run());
     <span class="n">compiler_name</span> <span class="o">=</span> <span class="s2">&quot;inductor&quot;</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">options</span><span class="p">,</span> <span class="n">dynamic</span><span class="p">):</span>
-        <span class="kn">from</span><span class="w"> </span><span class="nn">torch._inductor.compiler_bisector</span><span class="w"> </span><span class="kn">import</span> <span class="n">CompilerBisector</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">_Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">:</span> <span class="n">_Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">_Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dynamic</span> <span class="o">=</span> <span class="n">dynamic</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">apply_mode</span><span class="p">(</span><span class="n">mode</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">apply_options</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">apply_options</span><span class="p">(</span><span class="n">CompilerBisector</span><span class="o">.</span><span class="n">get_config_change</span><span class="p">(</span><span class="s2">&quot;inductor&quot;</span><span class="p">))</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;triton.cudagraphs&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
             <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DISABLE_CUPTI_LAZY_REINIT&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span>
@@ -3052,18 +3130,32 @@ window.addEventListener("load", () => mermaid.run());
         <span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">apply_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="n">_Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]):</span>
-        <span class="k">if</span> <span class="n">mode</span> <span class="ow">and</span> <span class="n">mode</span> <span class="o">!=</span> <span class="s2">&quot;default&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">mode</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;default&quot;</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">elif</span> <span class="n">mode</span> <span class="ow">in</span> <span class="p">{</span><span class="s2">&quot;reduce-overhead&quot;</span><span class="p">,</span> <span class="s2">&quot;max-autotune&quot;</span><span class="p">,</span> <span class="s2">&quot;max-autotune-no-cudagraphs&quot;</span><span class="p">}:</span>
             <span class="kn">from</span><span class="w"> </span><span class="nn">torch._inductor</span><span class="w"> </span><span class="kn">import</span> <span class="n">list_mode_options</span>
 
             <span class="bp">self</span><span class="o">.</span><span class="n">apply_options</span><span class="p">(</span><span class="n">list_mode_options</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dynamic</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Unrecognized mode=</span><span class="si">{</span><span class="n">mode</span><span class="si">}</span><span class="s2">, should be one of: default, reduce-overhead, max-autotune, max-autotune-no-cudagraphs&quot;</span>
+            <span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">apply_options</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="n">_Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">_Any</span><span class="p">]]):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">apply_options</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="n">_Optional</span><span class="p">[</span><span class="n">_Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">_Any</span><span class="p">]]):</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">torch._inductor.compiler_bisector</span><span class="w"> </span><span class="kn">import</span> <span class="n">CompilerBisector</span>
+
+        <span class="k">if</span> <span class="n">bisect_changes</span> <span class="o">:=</span> <span class="n">CompilerBisector</span><span class="o">.</span><span class="n">get_config_change</span><span class="p">(</span><span class="s2">&quot;inductor&quot;</span><span class="p">):</span>
+            <span class="n">options</span> <span class="o">=</span> <span class="p">{}</span> <span class="k">if</span> <span class="n">options</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">options</span>
+            <span class="n">options</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="p">{</span><span class="o">**</span><span class="n">bisect_changes</span><span class="p">}</span> <span class="k">if</span> <span class="n">options</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="p">{</span><span class="o">**</span><span class="n">options</span><span class="p">,</span> <span class="o">**</span><span class="n">bisect_changes</span><span class="p">}</span>  <span class="c1"># type: ignore[dict-item]</span>
+            <span class="p">)</span>
+
         <span class="k">if</span> <span class="ow">not</span> <span class="n">options</span><span class="p">:</span>
             <span class="k">return</span>
 
         <span class="kn">from</span><span class="w"> </span><span class="nn">torch._inductor</span><span class="w"> </span><span class="kn">import</span> <span class="n">config</span>
 
-        <span class="n">current_config</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">_Any</span><span class="p">]</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get_config_copy</span><span class="p">()</span>
+        <span class="n">current_config</span><span class="p">:</span> <span class="n">_Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">_Any</span><span class="p">]</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get_config_copy</span><span class="p">()</span>
 
         <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">options</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="n">attr_name</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">)</span>
@@ -3082,7 +3174,7 @@ window.addEventListener("load", () => mermaid.run());
                     <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
                         <span class="sa">f</span><span class="s2">&quot;Unexpected type of attr </span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">, got </span><span class="si">{</span><span class="n">val_type_str</span><span class="si">}</span><span class="s2"> should be </span><span class="si">{</span><span class="n">expected_type_str</span><span class="si">}</span><span class="s2">&quot;</span>
                     <span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="n">attr_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="n">attr_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_</span><span class="p">,</span> <span class="n">inputs_</span><span class="p">):</span>
         <span class="kn">from</span><span class="w"> </span><span class="nn">torch._inductor.compile_fx</span><span class="w"> </span><span class="kn">import</span> <span class="n">compile_fx</span>
@@ -3151,7 +3243,7 @@ window.addEventListener("load", () => mermaid.run());
     <span class="n">dynamic</span><span class="p">:</span> <span class="n">_Optional</span><span class="p">[</span><span class="n">builtins</span><span class="o">.</span><span class="n">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">backend</span><span class="p">:</span> <span class="n">_Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">_Callable</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;inductor&quot;</span><span class="p">,</span>
     <span class="n">mode</span><span class="p">:</span> <span class="n">_Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="n">options</span><span class="p">:</span> <span class="n">_Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">_Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">builtins</span><span class="o">.</span><span class="n">int</span><span class="p">,</span> <span class="n">builtins</span><span class="o">.</span><span class="n">bool</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">options</span><span class="p">:</span> <span class="n">_Optional</span><span class="p">[</span><span class="n">_Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">_Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">builtins</span><span class="o">.</span><span class="n">int</span><span class="p">,</span> <span class="n">builtins</span><span class="o">.</span><span class="n">bool</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">disable</span><span class="p">:</span> <span class="n">builtins</span><span class="o">.</span><span class="n">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">_Callable</span><span class="p">[</span><span class="n">_InputT</span><span class="p">,</span> <span class="n">_RetT</span><span class="p">]:</span> <span class="o">...</span>
 
@@ -3164,13 +3256,13 @@ window.addEventListener("load", () => mermaid.run());
     <span class="n">dynamic</span><span class="p">:</span> <span class="n">_Optional</span><span class="p">[</span><span class="n">builtins</span><span class="o">.</span><span class="n">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">backend</span><span class="p">:</span> <span class="n">_Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">_Callable</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;inductor&quot;</span><span class="p">,</span>
     <span class="n">mode</span><span class="p">:</span> <span class="n">_Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="n">options</span><span class="p">:</span> <span class="n">_Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">_Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">builtins</span><span class="o">.</span><span class="n">int</span><span class="p">,</span> <span class="n">builtins</span><span class="o">.</span><span class="n">bool</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">options</span><span class="p">:</span> <span class="n">_Optional</span><span class="p">[</span><span class="n">_Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">_Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">builtins</span><span class="o">.</span><span class="n">int</span><span class="p">,</span> <span class="n">builtins</span><span class="o">.</span><span class="n">bool</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">disable</span><span class="p">:</span> <span class="n">builtins</span><span class="o">.</span><span class="n">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">_Callable</span><span class="p">[[</span><span class="n">_Callable</span><span class="p">[</span><span class="n">_InputT</span><span class="p">,</span> <span class="n">_RetT</span><span class="p">]],</span> <span class="n">_Callable</span><span class="p">[</span><span class="n">_InputT</span><span class="p">,</span> <span class="n">_RetT</span><span class="p">]]:</span> <span class="o">...</span>
 
 
 <div class="viewcode-block" id="compile">
-<a class="viewcode-back" href="../generated/torch.compile.html#torch.compile">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.compile.html#torch.compile">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">compile</span><span class="p">(</span>
     <span class="n">model</span><span class="p">:</span> <span class="n">_Optional</span><span class="p">[</span><span class="n">_Callable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="o">*</span><span class="p">,</span>
@@ -3178,7 +3270,7 @@ window.addEventListener("load", () => mermaid.run());
     <span class="n">dynamic</span><span class="p">:</span> <span class="n">_Optional</span><span class="p">[</span><span class="n">builtins</span><span class="o">.</span><span class="n">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">backend</span><span class="p">:</span> <span class="n">_Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">_Callable</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;inductor&quot;</span><span class="p">,</span>
     <span class="n">mode</span><span class="p">:</span> <span class="n">_Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="n">options</span><span class="p">:</span> <span class="n">_Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">_Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">builtins</span><span class="o">.</span><span class="n">int</span><span class="p">,</span> <span class="n">builtins</span><span class="o">.</span><span class="n">bool</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">options</span><span class="p">:</span> <span class="n">_Optional</span><span class="p">[</span><span class="n">_Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">_Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">builtins</span><span class="o">.</span><span class="n">int</span><span class="p">,</span> <span class="n">builtins</span><span class="o">.</span><span class="n">bool</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">disable</span><span class="p">:</span> <span class="n">builtins</span><span class="o">.</span><span class="n">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">_Union</span><span class="p">[</span>
     <span class="n">_Callable</span><span class="p">[[</span><span class="n">_Callable</span><span class="p">[</span><span class="n">_InputT</span><span class="p">,</span> <span class="n">_RetT</span><span class="p">]],</span> <span class="n">_Callable</span><span class="p">[</span><span class="n">_InputT</span><span class="p">,</span> <span class="n">_RetT</span><span class="p">]],</span>
@@ -3195,7 +3287,7 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sd">    results are not applicable for subsequent calls (this is called a &quot;guard</span>
 <span class="sd">    failure), you can use TORCH_LOGS=guards to debug these situations.</span>
 <span class="sd">    Multiple compiled results can be associated with a frame up to</span>
-<span class="sd">    ``torch._dynamo.config.recompile_limit``, which defaults to 8; at which</span>
+<span class="sd">    ``torch._dynamo.config.cache_size_limit``, which defaults to 8; at which</span>
 <span class="sd">    point we will fall back to eager.  Note that compile caches are per</span>
 <span class="sd">    *code object*, not frame; if you dynamically create multiple copies of a</span>
 <span class="sd">    function, they will all share the same code cache.</span>
@@ -3375,7 +3467,7 @@ window.addEventListener("load", () => mermaid.run());
 
     <span class="k">class</span><span class="w"> </span><span class="nc">_TritonLibrary</span><span class="p">:</span>
         <span class="n">lib</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">library</span><span class="o">.</span><span class="n">Library</span><span class="p">(</span><span class="s2">&quot;triton&quot;</span><span class="p">,</span> <span class="s2">&quot;DEF&quot;</span><span class="p">)</span>
-        <span class="n">ops_table</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">_Callable</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">ops_table</span><span class="p">:</span> <span class="n">_Dict</span><span class="p">[</span><span class="n">_Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">_Callable</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="nd">@classmethod</span>
         <span class="k">def</span><span class="w"> </span><span class="nf">registerOp</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">op_key</span><span class="p">,</span> <span class="n">full_schema</span><span class="p">,</span> <span class="n">op_impl</span><span class="p">,</span> <span class="n">dispatch_key</span><span class="p">):</span>
@@ -3435,7 +3527,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="get_device_module">
-<a class="viewcode-back" href="../python-api/torch.get_device_module.html#torch.get_device_module">[docs]</a>
+<a class="viewcode-back" href="../python-api/generated/torch.get_device_module.html#torch.get_device_module">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">get_device_module</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">_Optional</span><span class="p">[</span><span class="n">_Union</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns the module associated with a given device(e.g., torch.device(&#39;cuda&#39;), &quot;mtia:0&quot;, &quot;xpu&quot;, ...).</span>
@@ -3583,7 +3675,6 @@ window.addEventListener("load", () => mermaid.run());
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

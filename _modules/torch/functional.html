@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -44,7 +44,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -63,7 +63,7 @@ window.addEventListener("load", () => mermaid.run());
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -72,7 +72,6 @@ window.addEventListener("load", () => mermaid.run());
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -159,7 +158,7 @@ window.addEventListener("load", () => mermaid.run());
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -183,8 +182,8 @@ window.addEventListener("load", () => mermaid.run());
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -254,7 +253,7 @@ window.addEventListener("load", () => mermaid.run());
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -269,7 +268,6 @@ window.addEventListener("load", () => mermaid.run());
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -309,9 +307,27 @@ window.addEventListener("load", () => mermaid.run());
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -325,20 +341,14 @@ window.addEventListener("load", () => mermaid.run());
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -399,6 +409,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -489,6 +539,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
         
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
       </div>
     
   </div>
@@ -555,8 +645,7 @@ window.addEventListener("load", () => mermaid.run());
 <span></span><span class="c1"># mypy: allow-untyped-defs</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">itertools</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">operator</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">collections.abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sequence</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">Union</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">Union</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn.functional</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">F</span>
@@ -600,7 +689,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="broadcast_tensors">
-<a class="viewcode-back" href="../../python-api/torch.broadcast_tensors.html#torch.broadcast_tensors">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.broadcast_tensors.html#torch.broadcast_tensors">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">broadcast_tensors</span><span class="p">(</span><span class="o">*</span><span class="n">tensors</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;broadcast_tensors(*tensors) -&gt; List of Tensors</span>
 
@@ -635,7 +724,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="broadcast_shapes">
-<a class="viewcode-back" href="../../python-api/torch.broadcast_shapes.html#torch.broadcast_shapes">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.broadcast_shapes.html#torch.broadcast_shapes">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">broadcast_shapes</span><span class="p">(</span><span class="o">*</span><span class="n">shapes</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;broadcast_shapes(*shapes) -&gt; Size</span>
 
@@ -714,12 +803,12 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="split">
-<a class="viewcode-back" href="../../python-api/torch.split.html#torch.split">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.split.html#torch.split">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">split</span><span class="p">(</span>
     <span class="n">tensor</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span>
-    <span class="n">split_size_or_sections</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span>
+    <span class="n">split_size_or_sections</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span>
     <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Tensor</span><span class="p">,</span> <span class="o">...</span><span class="p">]:</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Tensor</span><span class="p">,</span> <span class="o">...</span><span class="p">]:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Splits the tensor into chunks. Each chunk is a view of the original tensor.</span>
 
 <span class="sd">    If :attr:`split_size_or_sections` is an integer type, then :attr:`tensor` will</span>
@@ -772,7 +861,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="einsum">
-<a class="viewcode-back" href="../../python-api/torch.einsum.html#torch.einsum">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.einsum.html#torch.einsum">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">einsum</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;einsum(equation, *operands) -&gt; Tensor</span>
 
@@ -988,15 +1077,15 @@ window.addEventListener("load", () => mermaid.run());
 <span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
     <span class="c1"># The JIT doesn&#39;t understand Union, so only add type annotation for mypy</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">meshgrid</span><span class="p">(</span>
-        <span class="o">*</span><span class="n">tensors</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Tensor</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="n">Tensor</span><span class="p">]],</span> <span class="n">indexing</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Tensor</span><span class="p">,</span> <span class="o">...</span><span class="p">]:</span>
+        <span class="o">*</span><span class="n">tensors</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Tensor</span><span class="p">]],</span> <span class="n">indexing</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Tensor</span><span class="p">,</span> <span class="o">...</span><span class="p">]:</span>
         <span class="k">return</span> <span class="n">_meshgrid</span><span class="p">(</span><span class="o">*</span><span class="n">tensors</span><span class="p">,</span> <span class="n">indexing</span><span class="o">=</span><span class="n">indexing</span><span class="p">)</span>
 
 <span class="k">else</span><span class="p">:</span>
 
 <div class="viewcode-block" id="meshgrid">
-<a class="viewcode-back" href="../../generated/torch.meshgrid.html#torch.meshgrid">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">meshgrid</span><span class="p">(</span><span class="o">*</span><span class="n">tensors</span><span class="p">,</span> <span class="n">indexing</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Tensor</span><span class="p">,</span> <span class="o">...</span><span class="p">]:</span>
+<a class="viewcode-back" href="../../python-api/generated/torch.meshgrid.html#torch.meshgrid">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">meshgrid</span><span class="p">(</span><span class="o">*</span><span class="n">tensors</span><span class="p">,</span> <span class="n">indexing</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Tensor</span><span class="p">,</span> <span class="o">...</span><span class="p">]:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Creates grids of coordinates specified by the 1D inputs in `attr`:tensors.</span>
 
 <span class="sd">        This is helpful when you want to visualize data over some</span>
@@ -1110,7 +1199,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="stft">
-<a class="viewcode-back" href="../../python-api/torch.stft.html#torch.stft">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.stft.html#torch.stft">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">stft</span><span class="p">(</span>
     <span class="nb">input</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span>
     <span class="n">n_fft</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
@@ -1380,7 +1469,7 @@ window.addEventListener("load", () => mermaid.run());
     <span class="c1"># done by the caller of the _impl function</span>
     <span class="n">_unique_impl_out</span> <span class="o">=</span> <span class="n">Any</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="n">_unique_impl_out</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">Tensor</span><span class="p">,</span> <span class="n">Tensor</span><span class="p">]</span>
+    <span class="n">_unique_impl_out</span> <span class="o">=</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">Tensor</span><span class="p">,</span> <span class="n">Tensor</span><span class="p">]</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">_unique_impl</span><span class="p">(</span>
@@ -1390,7 +1479,7 @@ window.addEventListener("load", () => mermaid.run());
     <span class="n">return_counts</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
     <span class="n">dim</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">_unique_impl_out</span><span class="p">:</span>
-<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;unique(input, sorted=True, return_inverse=False, return_counts=False, dim=None) -&gt; tuple[Tensor, Tensor, Tensor]</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;unique(input, sorted=True, return_inverse=False, return_counts=False, dim=None) -&gt; Tuple[Tensor, Tensor, Tensor]</span>
 
 <span class="sd">    Returns the unique elements of the input tensor.</span>
 
@@ -1629,7 +1718,7 @@ window.addEventListener("load", () => mermaid.run());
     <span class="n">return_counts</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">dim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
 <span class="p">):</span>
-    <span class="c1"># type: (Tensor, bool, bool, bool, Optional[int]) -&gt; tuple[Tensor, Tensor]</span>
+    <span class="c1"># type: (Tensor, bool, bool, bool, Optional[int]) -&gt; Tuple[Tensor, Tensor]</span>
 
     <span class="k">if</span> <span class="n">has_torch_function_unary</span><span class="p">(</span><span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">_unique_impl</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="nb">sorted</span><span class="p">,</span> <span class="n">return_inverse</span><span class="p">,</span> <span class="n">return_counts</span><span class="p">,</span> <span class="n">dim</span><span class="p">)</span>
@@ -1661,7 +1750,7 @@ window.addEventListener("load", () => mermaid.run());
     <span class="n">return_counts</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">dim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
 <span class="p">):</span>
-    <span class="c1"># type: (Tensor, bool, bool, bool, Optional[int]) -&gt; tuple[Tensor, Tensor]</span>
+    <span class="c1"># type: (Tensor, bool, bool, bool, Optional[int]) -&gt; Tuple[Tensor, Tensor]</span>
 
     <span class="k">if</span> <span class="n">has_torch_function_unary</span><span class="p">(</span><span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">_unique_impl</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="nb">sorted</span><span class="p">,</span> <span class="n">return_inverse</span><span class="p">,</span> <span class="n">return_counts</span><span class="p">,</span> <span class="n">dim</span><span class="p">)</span>
@@ -1713,7 +1802,7 @@ window.addEventListener("load", () => mermaid.run());
     <span class="n">return_counts</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">dim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
 <span class="p">):</span>
-    <span class="c1"># type: (Tensor, bool, bool, Optional[int]) -&gt; tuple[Tensor, Tensor]</span>
+    <span class="c1"># type: (Tensor, bool, bool, Optional[int]) -&gt; Tuple[Tensor, Tensor]</span>
 
     <span class="k">if</span> <span class="n">has_torch_function_unary</span><span class="p">(</span><span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">_unique_consecutive_impl</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">return_inverse</span><span class="p">,</span> <span class="n">return_counts</span><span class="p">,</span> <span class="n">dim</span><span class="p">)</span>
@@ -1745,7 +1834,7 @@ window.addEventListener("load", () => mermaid.run());
     <span class="n">return_counts</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">dim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
 <span class="p">):</span>
-    <span class="c1"># type: (Tensor, bool, bool, Optional[int]) -&gt; tuple[Tensor, Tensor]</span>
+    <span class="c1"># type: (Tensor, bool, bool, Optional[int]) -&gt; Tuple[Tensor, Tensor]</span>
 
     <span class="k">if</span> <span class="n">has_torch_function_unary</span><span class="p">(</span><span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">_unique_consecutive_impl</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">return_inverse</span><span class="p">,</span> <span class="n">return_counts</span><span class="p">,</span> <span class="n">dim</span><span class="p">)</span>
@@ -1809,7 +1898,7 @@ window.addEventListener("load", () => mermaid.run());
     <span class="k">def</span><span class="w"> </span><span class="nf">tensordot</span><span class="p">(</span>  <span class="c1"># noqa: F811</span>
         <span class="n">a</span><span class="p">,</span>
         <span class="n">b</span><span class="p">,</span>
-        <span class="n">dims</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span>
+        <span class="n">dims</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span>
         <span class="n">out</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="p">):</span>
         <span class="k">pass</span>
@@ -1818,7 +1907,7 @@ window.addEventListener("load", () => mermaid.run());
     <span class="k">def</span><span class="w"> </span><span class="nf">tensordot</span><span class="p">(</span>  <span class="c1"># noqa: F811</span>
         <span class="n">a</span><span class="p">,</span>
         <span class="n">b</span><span class="p">,</span>
-        <span class="n">dims</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span>
+        <span class="n">dims</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span>
         <span class="n">out</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="p">):</span>
         <span class="k">pass</span>
@@ -1834,7 +1923,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="tensordot">
-<a class="viewcode-back" href="../../python-api/torch.tensordot.html#torch.tensordot">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.tensordot.html#torch.tensordot">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">tensordot</span><span class="p">(</span>  <span class="c1"># noqa: F811</span>
     <span class="n">a</span><span class="p">,</span>
     <span class="n">b</span><span class="p">,</span>
@@ -1897,13 +1986,13 @@ window.addEventListener("load", () => mermaid.run());
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dims</span><span class="p">,</span> <span class="p">(</span><span class="nb">tuple</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">SymInt</span><span class="p">)):</span>
         <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
             <span class="s2">&quot;tensordot expects dims to be int or &quot;</span>
-            <span class="o">+</span> <span class="s2">&quot;tuple[list[int], list[int]] or &quot;</span>
-            <span class="o">+</span> <span class="s2">&quot;list[list[int]] containing two lists, but got &quot;</span>
+            <span class="o">+</span> <span class="s2">&quot;Tuple[List[int], List[int]] or &quot;</span>
+            <span class="o">+</span> <span class="s2">&quot;List[List[int]] containing two lists, but got &quot;</span>
             <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;dims=</span><span class="si">{</span><span class="n">dims</span><span class="si">}</span><span class="s2">&quot;</span>
         <span class="p">)</span>
 
-    <span class="n">dims_a</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">dims_b</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">dims_a</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">dims_b</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
 
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dims</span><span class="p">,</span> <span class="p">(</span><span class="nb">tuple</span><span class="p">,</span> <span class="nb">list</span><span class="p">)):</span>
         <span class="n">dims_a</span><span class="p">,</span> <span class="n">dims_b</span> <span class="o">=</span> <span class="n">dims</span>
@@ -1912,8 +2001,8 @@ window.addEventListener("load", () => mermaid.run());
         <span class="n">num_elements</span> <span class="o">=</span> <span class="n">dims</span><span class="o">.</span><span class="n">numel</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">num_elements</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
             <span class="k">assert</span> <span class="n">dims</span><span class="o">.</span><span class="n">size</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span>
-            <span class="n">dims_a</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">jit</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dims</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
-            <span class="n">dims_b</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">jit</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dims</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+            <span class="n">dims_a</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">jit</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dims</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+            <span class="n">dims_b</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">jit</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dims</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">dims_val</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">dims</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
             <span class="k">if</span> <span class="n">dims_val</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
@@ -1939,7 +2028,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="cartesian_prod">
-<a class="viewcode-back" href="../../python-api/torch.cartesian_prod.html#torch.cartesian_prod">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cartesian_prod.html#torch.cartesian_prod">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">cartesian_prod</span><span class="p">(</span><span class="o">*</span><span class="n">tensors</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tensor</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Do cartesian product of the given sequence of tensors. The behavior is similar to</span>
 <span class="sd">    python&#39;s `itertools.product`.</span>
@@ -1977,7 +2066,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="block_diag">
-<a class="viewcode-back" href="../../python-api/torch.block_diag.html#torch.block_diag">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.block_diag.html#torch.block_diag">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">block_diag</span><span class="p">(</span><span class="o">*</span><span class="n">tensors</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a block diagonal matrix from provided tensors.</span>
 
@@ -2016,7 +2105,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="cdist">
-<a class="viewcode-back" href="../../generated/torch.cdist.html#torch.cdist">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.cdist.html#torch.cdist">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">cdist</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">compute_mode</span><span class="o">=</span><span class="s2">&quot;use_mm_for_euclid_dist_if_necessary&quot;</span><span class="p">):</span>
     <span class="c1"># type: (Tensor, Tensor, float, str) -&gt; (Tensor)</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Computes batched the p-norm distance between each pair of the two collections of row vectors.</span>
@@ -2075,7 +2164,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="atleast_1d">
-<a class="viewcode-back" href="../../python-api/torch.atleast_1d.html#torch.atleast_1d">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.atleast_1d.html#torch.atleast_1d">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">atleast_1d</span><span class="p">(</span><span class="o">*</span><span class="n">tensors</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns a 1-dimensional view of each input tensor with zero dimensions.</span>
@@ -2114,7 +2203,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="atleast_2d">
-<a class="viewcode-back" href="../../generated/torch.atleast_2d.html#torch.atleast_2d">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.atleast_2d.html#torch.atleast_2d">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">atleast_2d</span><span class="p">(</span><span class="o">*</span><span class="n">tensors</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns a 2-dimensional view of each input tensor with zero dimensions.</span>
@@ -2155,7 +2244,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="atleast_3d">
-<a class="viewcode-back" href="../../python-api/torch.atleast_3d.html#torch.atleast_3d">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.atleast_3d.html#torch.atleast_3d">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">atleast_3d</span><span class="p">(</span><span class="o">*</span><span class="n">tensors</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns a 3-dimensional view of each input tensor with zero dimensions.</span>
@@ -2268,7 +2357,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="norm">
-<a class="viewcode-back" href="../../python-api/torch.norm.html#torch.norm">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.norm.html#torch.norm">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">norm</span><span class="p">(</span>  <span class="c1"># noqa: F811</span>
     <span class="nb">input</span><span class="p">,</span>
     <span class="n">p</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="s2">&quot;fro&quot;</span><span class="p">,</span>
@@ -2491,11 +2580,11 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="unravel_index">
-<a class="viewcode-back" href="../../generated/torch.unravel_index.html#torch.unravel_index">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.unravel_index.html#torch.unravel_index">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">unravel_index</span><span class="p">(</span>
     <span class="n">indices</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span>
     <span class="n">shape</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">],</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Tensor</span><span class="p">,</span> <span class="o">...</span><span class="p">]:</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Tensor</span><span class="p">,</span> <span class="o">...</span><span class="p">]:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Converts a tensor of flat indices into a tuple of coordinate tensors that</span>
 <span class="sd">    index into an arbitrary tensor of the specified shape.</span>
 
@@ -2594,7 +2683,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="chain_matmul">
-<a class="viewcode-back" href="../../python-api/torch.chain_matmul.html#torch.chain_matmul">[docs]</a>
+<a class="viewcode-back" href="../../python-api/generated/torch.chain_matmul.html#torch.chain_matmul">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">chain_matmul</span><span class="p">(</span><span class="o">*</span><span class="n">matrices</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Returns the matrix product of the :math:`N` 2-D tensors. This product is efficiently computed</span>
 <span class="sd">    using the matrix chain order algorithm which selects the order in which incurs the lowest cost in terms</span>
@@ -2644,7 +2733,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">_lu_impl</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">pivot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">get_infos</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="c1"># type: (Tensor, bool, bool, Any) -&gt; tuple[Tensor, Tensor, Tensor]</span>
+    <span class="c1"># type: (Tensor, bool, bool, Any) -&gt; Tuple[Tensor, Tensor, Tensor]</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Computes the LU factorization of a matrix or batches of matrices</span>
 <span class="sd">    :attr:`A`. Returns a tuple containing the LU factorization and</span>
 <span class="sd">    pivots of :attr:`A`.  Pivoting is done if :attr:`pivot` is set to</span>
@@ -2746,7 +2835,7 @@ window.addEventListener("load", () => mermaid.run());
 <span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
     <span class="n">_ListOrSeq</span> <span class="o">=</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Tensor</span><span class="p">]</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="n">_ListOrSeq</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">Tensor</span><span class="p">]</span>
+    <span class="n">_ListOrSeq</span> <span class="o">=</span> <span class="n">List</span><span class="p">[</span><span class="n">Tensor</span><span class="p">]</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">_check_list_size</span><span class="p">(</span><span class="n">out_len</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">get_infos</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">out</span><span class="p">:</span> <span class="n">_ListOrSeq</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -2762,7 +2851,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">_lu_with_infos</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">pivot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">get_infos</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="c1"># type: (Tensor, bool, bool, Optional[tuple[Tensor, Tensor, Tensor]]) -&gt; tuple[Tensor, Tensor, Tensor]</span>
+    <span class="c1"># type: (Tensor, bool, bool, Optional[Tuple[Tensor, Tensor, Tensor]]) -&gt; Tuple[Tensor, Tensor, Tensor]</span>
     <span class="k">if</span> <span class="n">has_torch_function_unary</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">handle_torch_function</span><span class="p">(</span>
             <span class="n">lu</span><span class="p">,</span> <span class="p">(</span><span class="n">A</span><span class="p">,),</span> <span class="n">A</span><span class="p">,</span> <span class="n">pivot</span><span class="o">=</span><span class="n">pivot</span><span class="p">,</span> <span class="n">get_infos</span><span class="o">=</span><span class="n">get_infos</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">out</span>
@@ -2778,7 +2867,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">_lu_no_infos</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">pivot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">get_infos</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="c1"># type: (Tensor, bool, bool, Optional[tuple[Tensor, Tensor]]) -&gt; tuple[Tensor, Tensor]</span>
+    <span class="c1"># type: (Tensor, bool, bool, Optional[Tuple[Tensor, Tensor]]) -&gt; Tuple[Tensor, Tensor]</span>
     <span class="c1"># need to check for torch_function here so that we exit if</span>
     <span class="k">if</span> <span class="n">has_torch_function_unary</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">handle_torch_function</span><span class="p">(</span>
@@ -2841,7 +2930,6 @@ window.addEventListener("load", () => mermaid.run());
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

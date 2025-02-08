@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -44,7 +44,7 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../../../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -63,7 +63,7 @@ window.addEventListener("load", () => mermaid.run());
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -72,7 +72,6 @@ window.addEventListener("load", () => mermaid.run());
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -159,7 +158,7 @@ window.addEventListener("load", () => mermaid.run());
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -183,8 +182,8 @@ window.addEventListener("load", () => mermaid.run());
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -254,7 +253,7 @@ window.addEventListener("load", () => mermaid.run());
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -269,7 +268,6 @@ window.addEventListener("load", () => mermaid.run());
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -309,9 +307,27 @@ window.addEventListener("load", () => mermaid.run());
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -325,20 +341,14 @@ window.addEventListener("load", () => mermaid.run());
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -399,6 +409,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -489,6 +539,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
         
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
       </div>
     
   </div>
@@ -565,7 +655,7 @@ window.addEventListener("load", () => mermaid.run());
 <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">inspect</span><span class="w"> </span><span class="kn">import</span> <span class="n">signature</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Literal</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Literal</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Union</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">typing_extensions</span><span class="w"> </span><span class="kn">import</span> <span class="n">deprecated</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
@@ -657,7 +747,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="caching_allocator_alloc">
-<a class="viewcode-back" href="../../../python-api/torch.cuda.caching_allocator_alloc.html#torch.cuda.caching_allocator_alloc">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.caching_allocator_alloc.html#torch.cuda.memory.caching_allocator_alloc">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">caching_allocator_alloc</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">device</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Perform a memory allocation using the CUDA memory allocator.</span>
 
@@ -696,7 +786,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="caching_allocator_delete">
-<a class="viewcode-back" href="../../../generated/torch.cuda.caching_allocator_delete.html#torch.cuda.caching_allocator_delete">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.caching_allocator_delete.html#torch.cuda.memory.caching_allocator_delete">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">caching_allocator_delete</span><span class="p">(</span><span class="n">mem_ptr</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Delete memory allocated using the CUDA memory allocator.</span>
 
@@ -716,7 +806,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="caching_allocator_enable">
-<a class="viewcode-back" href="../../../python-api/torch.cuda.memory.caching_allocator_enable.html#torch.cuda.caching_allocator_enable">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.memory.caching_allocator_enable.html#torch.cuda.memory.caching_allocator_enable">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">caching_allocator_enable</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Enable or disable the CUDA memory allocator. On by default.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">is_initialized</span><span class="p">():</span>
@@ -725,7 +815,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="set_per_process_memory_fraction">
-<a class="viewcode-back" href="../../../python-api/torch.cuda.set_per_process_memory_fraction.html#torch.cuda.set_per_process_memory_fraction">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.set_per_process_memory_fraction.html#torch.cuda.memory.set_per_process_memory_fraction">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">set_per_process_memory_fraction</span><span class="p">(</span>
     <span class="n">fraction</span><span class="p">,</span> <span class="n">device</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -757,7 +847,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="get_per_process_memory_fraction">
-<a class="viewcode-back" href="../../../python-api/torch.cuda.get_per_process_memory_fraction.html#torch.cuda.get_per_process_memory_fraction">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.get_per_process_memory_fraction.html#torch.cuda.memory.get_per_process_memory_fraction">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">get_per_process_memory_fraction</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Get memory fraction for a process.</span>
 
@@ -776,7 +866,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="empty_cache">
-<a class="viewcode-back" href="../../../generated/torch.cuda.empty_cache.html#torch.cuda.empty_cache">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.empty_cache.html#torch.cuda.memory.empty_cache">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">empty_cache</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Release all unoccupied cached memory currently held by the caching</span>
 <span class="sd">    allocator so that those can be used in other GPU application and visible in</span>
@@ -794,8 +884,8 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="memory_stats">
-<a class="viewcode-back" href="../../../generated/torch.cuda.memory_stats.html#torch.cuda.memory_stats">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">memory_stats</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.memory_stats.html#torch.cuda.memory.memory_stats">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">memory_stats</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return a dictionary of CUDA memory allocator statistics for a given device.</span>
 
 <span class="sd">    The return value of this function is a dictionary of statistics, each of</span>
@@ -901,7 +991,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 
-<span class="k">def</span><span class="w"> </span><span class="nf">memory_stats_as_nested_dict</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">memory_stats_as_nested_dict</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the result of :func:`~torch.cuda.memory_stats` as a nested dictionary.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">is_initialized</span><span class="p">():</span>
         <span class="k">return</span> <span class="p">{}</span>
@@ -930,7 +1020,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="reset_peak_memory_stats">
-<a class="viewcode-back" href="../../../python-api/torch.cuda.reset_peak_memory_stats.html#torch.cuda.reset_peak_memory_stats">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.reset_peak_memory_stats.html#torch.cuda.memory.reset_peak_memory_stats">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">reset_peak_memory_stats</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Reset the &quot;peak&quot; stats tracked by the CUDA memory allocator.</span>
 
@@ -952,7 +1042,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="reset_max_memory_allocated">
-<a class="viewcode-back" href="../../../python-api/torch.cuda.reset_max_memory_allocated.html#torch.cuda.reset_max_memory_allocated">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.reset_max_memory_allocated.html#torch.cuda.memory.reset_max_memory_allocated">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">reset_max_memory_allocated</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Reset the starting point in tracking maximum GPU memory occupied by tensors for a given device.</span>
 
@@ -981,7 +1071,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="reset_max_memory_cached">
-<a class="viewcode-back" href="../../../python-api/torch.cuda.reset_max_memory_cached.html#torch.cuda.reset_max_memory_cached">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.reset_max_memory_cached.html#torch.cuda.memory.reset_max_memory_cached">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">reset_max_memory_cached</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Reset the starting point in tracking maximum GPU memory managed by the caching allocator for a given device.</span>
 
@@ -1010,7 +1100,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="memory_allocated">
-<a class="viewcode-back" href="../../../python-api/torch.cuda.memory_allocated.html#torch.cuda.memory_allocated">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.memory_allocated.html#torch.cuda.memory.memory_allocated">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">memory_allocated</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the current GPU memory occupied by tensors in bytes for a given device.</span>
 
@@ -1030,7 +1120,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="max_memory_allocated">
-<a class="viewcode-back" href="../../../python-api/torch.cuda.max_memory_allocated.html#torch.cuda.max_memory_allocated">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.max_memory_allocated.html#torch.cuda.memory.max_memory_allocated">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">max_memory_allocated</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the maximum GPU memory occupied by tensors in bytes for a given device.</span>
 
@@ -1054,7 +1144,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="memory_reserved">
-<a class="viewcode-back" href="../../../python-api/torch.cuda.memory_reserved.html#torch.cuda.memory_reserved">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.memory_reserved.html#torch.cuda.memory.memory_reserved">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">memory_reserved</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the current GPU memory managed by the caching allocator in bytes for a given device.</span>
 
@@ -1072,7 +1162,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="max_memory_reserved">
-<a class="viewcode-back" href="../../../generated/torch.cuda.max_memory_reserved.html#torch.cuda.max_memory_reserved">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.max_memory_reserved.html#torch.cuda.memory.max_memory_reserved">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">max_memory_reserved</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the maximum GPU memory managed by the caching allocator in bytes for a given device.</span>
 
@@ -1096,7 +1186,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="memory_cached">
-<a class="viewcode-back" href="../../../python-api/torch.cuda.memory_cached.html#torch.cuda.memory_cached">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.memory_cached.html#torch.cuda.memory.memory_cached">[docs]</a>
 <span class="nd">@deprecated</span><span class="p">(</span>
     <span class="s2">&quot;`torch.cuda.memory_cached` has been renamed to `torch.cuda.memory_reserved`&quot;</span><span class="p">,</span>
     <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">,</span>
@@ -1108,7 +1198,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="max_memory_cached">
-<a class="viewcode-back" href="../../../generated/torch.cuda.max_memory_cached.html#torch.cuda.max_memory_cached">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.max_memory_cached.html#torch.cuda.memory.max_memory_cached">[docs]</a>
 <span class="nd">@deprecated</span><span class="p">(</span>
     <span class="s2">&quot;`torch.cuda.max_memory_cached` has been renamed to `torch.cuda.max_memory_reserved`&quot;</span><span class="p">,</span>
     <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">,</span>
@@ -1120,7 +1210,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="memory_snapshot">
-<a class="viewcode-back" href="../../../generated/torch.cuda.memory_snapshot.html#torch.cuda.memory_snapshot">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.memory_snapshot.html#torch.cuda.memory.memory_snapshot">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">memory_snapshot</span><span class="p">():</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return a snapshot of the CUDA memory allocator state across all devices.</span>
 
@@ -1136,7 +1226,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="memory_summary">
-<a class="viewcode-back" href="../../../generated/torch.cuda.memory_summary.html#torch.cuda.memory_summary">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.memory_summary.html#torch.cuda.memory.memory_summary">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">memory_summary</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">abbreviated</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return a human-readable printout of the current memory allocator statistics for a given device.</span>
 
@@ -1266,7 +1356,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="list_gpu_processes">
-<a class="viewcode-back" href="../../../python-api/torch.cuda.list_gpu_processes.html#torch.cuda.list_gpu_processes">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.list_gpu_processes.html#torch.cuda.memory.list_gpu_processes">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">list_gpu_processes</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return a human-readable printout of the running processes and their GPU memory use for a given device.</span>
 
@@ -1334,8 +1424,8 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="mem_get_info">
-<a class="viewcode-back" href="../../../generated/torch.cuda.mem_get_info.html#torch.cuda.mem_get_info">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">mem_get_info</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.mem_get_info.html#torch.cuda.memory.mem_get_info">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">mem_get_info</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the global free and total GPU memory for a given device using cudaMemGetInfo.</span>
 
 <span class="sd">    Args:</span>
@@ -1373,7 +1463,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="_record_memory_history">
-<a class="viewcode-back" href="../../../python-api/torch_cuda_memory.html#torch.cuda._record_memory_history">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/torch_cuda_memory.html#torch.cuda.memory._record_memory_history">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">_record_memory_history</span><span class="p">(</span>
     <span class="n">enabled</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;state&quot;</span><span class="p">,</span> <span class="s2">&quot;all&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -1434,7 +1524,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="_snapshot">
-<a class="viewcode-back" href="../../../python-api/torch_cuda_memory.html#torch.cuda._snapshot">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/torch_cuda_memory.html#torch.cuda.memory._snapshot">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">_snapshot</span><span class="p">(</span><span class="n">device</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Save a snapshot of CUDA memory state at the time it was called.</span>
 
@@ -1514,7 +1604,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="_dump_snapshot">
-<a class="viewcode-back" href="../../../python-api/torch_cuda_memory.html#torch.cuda._dump_snapshot">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/torch_cuda_memory.html#torch.cuda.memory._dump_snapshot">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">_dump_snapshot</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;dump_snapshot.pickle&quot;</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Save a pickled version of the `torch.memory._snapshot()` dictionary to a file.</span>
@@ -1549,7 +1639,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="get_allocator_backend">
-<a class="viewcode-back" href="../../../generated/torch.cuda.get_allocator_backend.html#torch.cuda.get_allocator_backend">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.get_allocator_backend.html#torch.cuda.memory.get_allocator_backend">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">get_allocator_backend</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return a string describing the active allocator backend as set by</span>
 <span class="sd">    ``PYTORCH_CUDA_ALLOC_CONF``. Currently available backends are</span>
@@ -1574,7 +1664,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="CUDAPluggableAllocator">
-<a class="viewcode-back" href="../../../python-api/torch.cuda.CUDAPluggableAllocator.html#torch.cuda.CUDAPluggableAllocator">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.CUDAPluggableAllocator.html#torch.cuda.memory.CUDAPluggableAllocator">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">CUDAPluggableAllocator</span><span class="p">(</span><span class="n">_CUDAAllocator</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;CUDA memory allocator loaded from a so file.&quot;&quot;&quot;</span>
 
@@ -1609,7 +1699,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="change_current_allocator">
-<a class="viewcode-back" href="../../../python-api/torch.cuda.change_current_allocator.html#torch.cuda.change_current_allocator">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.change_current_allocator.html#torch.cuda.memory.change_current_allocator">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">change_current_allocator</span><span class="p">(</span><span class="n">allocator</span><span class="p">:</span> <span class="n">_CUDAAllocator</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Change the currently used memory allocator to be the one provided.</span>
 
@@ -1635,7 +1725,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="MemPoolContext">
-<a class="viewcode-back" href="../../../python-api/torch.cuda.MemPoolContext.html#torch.cuda.MemPoolContext">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.MemPoolContext.html#torch.cuda.memory.MemPoolContext">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MemPoolContext</span><span class="p">(</span><span class="n">_MemPoolContext</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;MemPoolContext holds the currently active pool and stashes the previous</span>
 <span class="sd">    pool. On deletion it makes the previous pool active.</span>
@@ -1650,7 +1740,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">pool</span><span class="p">)</span>
 
 <div class="viewcode-block" id="MemPoolContext.active_pool">
-<a class="viewcode-back" href="../../../python-api/torch.cuda.MemPoolContext.html#torch.cuda.MemPoolContext.active_pool">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.MemPoolContext.html#torch.cuda.memory.MemPoolContext.active_pool">[docs]</a>
     <span class="nd">@staticmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">active_pool</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">_MemPool</span><span class="p">]:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Returns the active MemPool&quot;&quot;&quot;</span>
@@ -1660,7 +1750,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="MemPool">
-<a class="viewcode-back" href="../../../generated/torch.cuda.MemPool.html#torch.cuda.MemPool">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.MemPool.html#torch.cuda.memory.MemPool">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MemPool</span><span class="p">(</span><span class="n">_MemPool</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;MemPool represents a pool of memory in a caching allocator. Currently,</span>
 <span class="sd">    it&#39;s just the ID of the pool object maintained in the CUDACachingAllocator.</span>
@@ -1678,7 +1768,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">allocator</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Returns the ID of this pool as a tuple of two ints.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">id</span>
 
@@ -1688,14 +1778,14 @@ window.addEventListener("load", () => mermaid.run());
         <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">allocator</span>
 
 <div class="viewcode-block" id="MemPool.use_count">
-<a class="viewcode-back" href="../../../generated/torch.cuda.MemPool.html#torch.cuda.MemPool.use_count">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.MemPool.html#torch.cuda.memory.MemPool.use_count">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">use_count</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Returns the reference count of this pool.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">use_count</span><span class="p">()</span></div>
 
 
 <div class="viewcode-block" id="MemPool.snapshot">
-<a class="viewcode-back" href="../../../generated/torch.cuda.MemPool.html#torch.cuda.MemPool.snapshot">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/generated/torch.cuda.MemPool.html#torch.cuda.memory.MemPool.snapshot">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">snapshot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return a snapshot of the CUDA memory allocator pool state across all</span>
 <span class="sd">        devices.</span>
@@ -1718,7 +1808,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="use_mem_pool">
-<a class="viewcode-back" href="../../../python-api/cuda.html#torch.cuda.use_mem_pool">[docs]</a>
+<a class="viewcode-back" href="../../../python-api/cuda.html#torch.cuda.memory.use_mem_pool">[docs]</a>
 <span class="nd">@contextlib</span><span class="o">.</span><span class="n">contextmanager</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">use_mem_pool</span><span class="p">(</span><span class="n">pool</span><span class="p">:</span> <span class="n">MemPool</span><span class="p">,</span> <span class="n">device</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Device</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;A context manager that routes allocations to a given pool.</span>
@@ -1774,7 +1864,6 @@ window.addEventListener("load", () => mermaid.run());
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">

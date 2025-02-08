@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom2.css?v=189c4a6a" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom2.css?v=3539c01c" />
   
   <!-- So that users can add custom icons -->
   <script src="../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -44,7 +44,7 @@
   <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../../_static/documentation_options.js?v=53c08c8d"></script>
+    <script src="../../../../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -63,7 +63,7 @@ window.addEventListener("load", () => mermaid.run());
     <link rel="search" title="Search" href="../../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.7.0a0+git74cfb4f )" />
+  <meta name="docsearch:version" content="main (2.6.0 )" />
   </head>
   
   
@@ -72,7 +72,6 @@ window.addEventListener("load", () => mermaid.run());
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
@@ -159,7 +158,7 @@ window.addEventListener("load", () => mermaid.run());
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>
+            </div>  
           </li>
 
           <li class="main-menu-item">
@@ -183,8 +182,8 @@ window.addEventListener("load", () => mermaid.run());
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News
-              lnhetrlnle</a>
+                Blogs & News 
+              </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
                   <span class="dropdown-title">PyTorch Blog</span>
@@ -254,7 +253,7 @@ window.addEventListener("load", () => mermaid.run());
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -269,7 +268,6 @@ window.addEventListener("load", () => mermaid.run());
     </div>
   </div>
 </div>
-
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -309,9 +307,27 @@ window.addEventListener("load", () => mermaid.run());
   </button>
   
   
-    <div class="navbar-header-items__start" style="display: flex; align-items: center; justify-content: flex-start;">
-    <div class="navbar-item">
-      <a class="nav-link nav-internal" href="/index.html">Home</a></div>
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
     
       <div class="navbar-item">
 
@@ -325,20 +341,14 @@ window.addEventListener("load", () => mermaid.run());
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-light" alt="PyTorch main documentation - Home"/>
-    <img src="../../../../_static/pytorch-logo-dark-unstable.png" class="logo__image only-dark pst-js-only" alt="PyTorch main documentation - Home"/>
   
+    <p class="title logo__title">Home</p>
   
 </a></div>
     
   </div>
   
-  <div class="col-lg-9 navbar-header-items">
+  <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
@@ -399,6 +409,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -489,6 +539,46 @@ window.addEventListener("load", () => mermaid.run());
   <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button></div>
         
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://x.com/PyTorch" title="X" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-x-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">X</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/pytorch/pytorch" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
       </div>
     
   </div>
@@ -566,7 +656,7 @@ window.addEventListener("load", () => mermaid.run());
 <span class="kn">from</span><span class="w"> </span><span class="nn">contextlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">contextmanager</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span><span class="p">,</span> <span class="n">fields</span><span class="p">,</span> <span class="n">is_dataclass</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">auto</span><span class="p">,</span> <span class="n">Enum</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">TYPE_CHECKING</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">TYPE_CHECKING</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">torch.distributed</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dist</span>
@@ -878,7 +968,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="DistributedDataParallel">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.parallel.DistributedDataParallel.html#torch.nn.parallel.DistributedDataParallel">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.parallel.DistributedDataParallel.html#torch.nn.parallel.DistributedDataParallel">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">DistributedDataParallel</span><span class="p">(</span><span class="n">Module</span><span class="p">,</span> <span class="n">Joinable</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Implement distributed data parallelism based on ``torch.distributed`` at module level.</span>
 
@@ -1097,12 +1187,6 @@ window.addEventListener("load", () => mermaid.run());
 <span class="sd">        broadcast_buffers (bool): Flag that enables syncing (broadcasting)</span>
 <span class="sd">                          buffers of the module at beginning of the ``forward``</span>
 <span class="sd">                          function. (default: ``True``)</span>
-<span class="sd">        init_sync (bool): Whether to sync during initialization to verify param</span>
-<span class="sd">                          shapes and broadcast parameters and buffers.</span>
-<span class="sd">                          WARNING: if this is set to False the user is required</span>
-<span class="sd">                          to ensure themselves that the weights are the same on</span>
-<span class="sd">                          all ranks.</span>
-<span class="sd">                          (default: ``True``)</span>
 <span class="sd">        process_group: The process group to be used for distributed data</span>
 <span class="sd">                       all-reduction. If ``None``, the default process group, which</span>
 <span class="sd">                       is created by :func:`torch.distributed.init_process_group`,</span>
@@ -1194,7 +1278,6 @@ window.addEventListener("load", () => mermaid.run());
         <span class="n">output_device</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
         <span class="n">broadcast_buffers</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-        <span class="n">init_sync</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
         <span class="n">process_group</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">bucket_cap_mb</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">find_unused_parameters</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
@@ -1371,7 +1454,7 @@ window.addEventListener("load", () => mermaid.run());
 
         <span class="c1"># Initialize gradient buffers and register all reduce hook</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_delay_grad_buffer</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_delay_grad_views</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_delay_grad_views</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_delay_all_reduce_all_params</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_delay_all_reduce_params</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_register_delay_all_reduce_hook</span><span class="p">(</span>
@@ -1384,21 +1467,17 @@ window.addEventListener("load", () => mermaid.run());
 
         <span class="c1"># Build parameters for reducer.</span>
         <span class="n">parameters</span><span class="p">,</span> <span class="n">expect_sparse_gradient</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_build_params_for_reducer</span><span class="p">()</span>
-
-        <span class="c1"># All collectives during initialization are gated by this flag.</span>
-        <span class="k">if</span> <span class="n">init_sync</span><span class="p">:</span>
-            <span class="c1"># Verify model equivalence.</span>
-            <span class="n">_verify_param_shape_across_processes</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">process_group</span><span class="p">,</span> <span class="n">parameters</span><span class="p">)</span>
-            <span class="c1"># Sync params and buffers. Ensures all DDP models start off at the same value.</span>
-            <span class="n">_sync_module_states</span><span class="p">(</span>
-                <span class="n">module</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">module</span><span class="p">,</span>
-                <span class="n">process_group</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">process_group</span><span class="p">,</span>
-                <span class="n">broadcast_bucket_size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">broadcast_bucket_size</span><span class="p">,</span>
-                <span class="n">src</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-                <span class="n">params_and_buffers_to_ignore</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters_to_ignore</span><span class="p">,</span>
-                <span class="n">broadcast_buffers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">broadcast_buffers</span><span class="p">,</span>
-            <span class="p">)</span>
-
+        <span class="c1"># Verify model equivalence.</span>
+        <span class="n">_verify_param_shape_across_processes</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">process_group</span><span class="p">,</span> <span class="n">parameters</span><span class="p">)</span>
+        <span class="c1"># Sync params and buffers. Ensures all DDP models start off at the same value.</span>
+        <span class="n">_sync_module_states</span><span class="p">(</span>
+            <span class="n">module</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">module</span><span class="p">,</span>
+            <span class="n">process_group</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">process_group</span><span class="p">,</span>
+            <span class="n">broadcast_bucket_size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">broadcast_bucket_size</span><span class="p">,</span>
+            <span class="n">src</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="n">params_and_buffers_to_ignore</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters_to_ignore</span><span class="p">,</span>
+            <span class="n">broadcast_buffers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">broadcast_buffers</span><span class="p">,</span>
+        <span class="p">)</span>
         <span class="c1"># In debug mode, build a mapping of parameter index -&gt; parameter.</span>
         <span class="n">param_to_name_mapping</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_build_debug_param_to_name_mapping</span><span class="p">(</span><span class="n">parameters</span><span class="p">)</span>
 
@@ -1409,7 +1488,7 @@ window.addEventListener("load", () => mermaid.run());
             <span class="n">param_to_name_mapping</span><span class="p">,</span>
             <span class="n">static_graph</span><span class="p">,</span>
         <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_comm_hooks</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">,</span> <span class="nb">object</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_comm_hooks</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">,</span> <span class="nb">object</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[]</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mixed_precision</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">_setup_mixed_precision_params</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mixed_precision</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">module</span><span class="p">)</span>
@@ -1463,7 +1542,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="c1"># Register the AccumulateGrad post hooks if optimize_ddp is</span>
         <span class="c1"># True. The hooks will be deregistered if compiled_autograd is not</span>
         <span class="c1"># enabled.</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_accum_grad_hooks</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">RemovableHandle</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_accum_grad_hooks</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">RemovableHandle</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">optimize_ddp</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">_dynamo</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">_get_optimize_ddp_mode</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_use_python_reducer</span> <span class="o">=</span> <span class="n">optimize_ddp</span> <span class="ow">in</span> <span class="p">(</span>
             <span class="s2">&quot;python_reducer&quot;</span><span class="p">,</span>
@@ -1973,7 +2052,7 @@ window.addEventListener("load", () => mermaid.run());
             <span class="p">)</span>
 
 <div class="viewcode-block" id="DistributedDataParallel.no_sync">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.parallel.DistributedDataParallel.html#torch.nn.parallel.DistributedDataParallel.no_sync">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.parallel.DistributedDataParallel.html#torch.nn.parallel.DistributedDataParallel.no_sync">[docs]</a>
     <span class="nd">@contextmanager</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">no_sync</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
@@ -2173,7 +2252,7 @@ window.addEventListener("load", () => mermaid.run());
                 <span class="n">treespec</span><span class="p">,</span>
                 <span class="n">output_is_rref</span><span class="p">,</span>
             <span class="p">)</span> <span class="o">=</span> <span class="n">_tree_flatten_with_rref</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
-            <span class="n">output_placeholders</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Optional</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">output_placeholders</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Optional</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[</span>
                 <span class="kc">None</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">output_tensor_list</span><span class="p">))</span>
             <span class="p">]</span>
             <span class="c1"># Do not touch tensors that have no grad_fn, which can cause issues</span>
@@ -2310,7 +2389,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="bp">self</span><span class="o">.</span><span class="n">process_group</span><span class="o">.</span><span class="n">allreduce</span><span class="p">(</span><span class="n">locally_used_param_map</span><span class="p">)</span>
 
 <div class="viewcode-block" id="DistributedDataParallel.join">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.parallel.DistributedDataParallel.html#torch.nn.parallel.DistributedDataParallel.join">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.parallel.DistributedDataParallel.html#torch.nn.parallel.DistributedDataParallel.join">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">join</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">divide_by_initial_world_size</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
@@ -2419,7 +2498,7 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <div class="viewcode-block" id="DistributedDataParallel.join_hook">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.parallel.DistributedDataParallel.html#torch.nn.parallel.DistributedDataParallel.join_hook">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.parallel.DistributedDataParallel.html#torch.nn.parallel.DistributedDataParallel.join_hook">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">join_hook</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
@@ -2504,7 +2583,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="p">)</span>
 
 <div class="viewcode-block" id="DistributedDataParallel.register_comm_hook">
-<a class="viewcode-back" href="../../../../python-api/torch.nn.parallel.DistributedDataParallel.html#torch.nn.parallel.DistributedDataParallel.register_comm_hook">[docs]</a>
+<a class="viewcode-back" href="../../../../python-api/generated/torch.nn.parallel.DistributedDataParallel.html#torch.nn.parallel.DistributedDataParallel.register_comm_hook">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">register_comm_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="nb">object</span><span class="p">,</span> <span class="n">hook</span><span class="p">:</span> <span class="n">Callable</span><span class="p">):</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Register communication hook for user-defined DDP aggregation of gradients across multiple workers.</span>
@@ -2614,7 +2693,7 @@ window.addEventListener("load", () => mermaid.run());
         <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">_set_comm_hook_name</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">comm_hook_type</span><span class="p">))</span>
         <span class="n">dist</span><span class="o">.</span><span class="n">_register_builtin_comm_hook</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">reducer</span><span class="p">,</span> <span class="n">comm_hook_type</span><span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">_register_fused_optim</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">optim</span><span class="p">:</span> <span class="nb">type</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">optim_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_register_fused_optim</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">optim</span><span class="p">:</span> <span class="n">Type</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">optim_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Register an optimizer in DDP to optimize parameter immediately after its gradient reduction.</span>
 
@@ -3015,7 +3094,6 @@ window.addEventListener("load", () => mermaid.run());
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
 
 
   <footer class="bd-footer">
