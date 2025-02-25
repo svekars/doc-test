@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom2.css?v=a9f46c5e" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom2.css?v=dd3e252d" />
   
   <!-- So that users can add custom icons -->
   <script src="../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -59,11 +59,27 @@ import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.es
 window.addEventListener("load", () => mermaid.run());
 </script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_modules/torch/distributed/tensor/experimental';</script>
+    <script src="../../../../_static/js/star-rating.js?v=8861fcb6"></script>
+    <script src="../../../../_static/js/send-feedback.js?v=5646bf45"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="main (2.6.0 )" />
+<script type="text/javascript" src="../../../../_static/js/send-feedback.js"></script>
+<script type="text/javascript" src="../../../../_static/js/star-rating.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TEST12345"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TEST12345');
+    </script>
+
   </head>
   
   
@@ -72,7 +88,8 @@ window.addEventListener("load", () => mermaid.run());
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-<div class="container-fluid header-holder tutorials-header" id="header-holder">
+<body data-feedback-url="https://github.com/pytorch/pytorch">
+  <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
       <a class="header-logo" href="" aria-label="PyTorch"></a>
@@ -158,7 +175,7 @@ window.addEventListener("load", () => mermaid.run());
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>  
+            </div>
           </li>
 
           <li class="main-menu-item">
@@ -182,7 +199,7 @@ window.addEventListener("load", () => mermaid.run());
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News 
+                Blogs & News
               </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
@@ -253,7 +270,7 @@ window.addEventListener("load", () => mermaid.run());
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -310,26 +327,6 @@ window.addEventListener("load", () => mermaid.run());
   <div class=" navbar-header-items__start">
     
       <div class="navbar-item">
-<div class="version-switcher__container dropdown pst-js-only">
-  <button id="pst-version-switcher-button-2"
-    type="button"
-    class="version-switcher__button btn btn-sm dropdown-toggle"
-    data-bs-toggle="dropdown"
-    aria-haspopup="listbox"
-    aria-controls="pst-version-switcher-list-2"
-    aria-label="Version switcher list"
-  >
-    Choose version  <!-- this text may get changed later by javascript -->
-    <span class="caret"></span>
-  </button>
-  <div id="pst-version-switcher-list-2"
-    class="version-switcher__menu dropdown-menu list-group-flush py-0"
-    role="listbox" aria-labelledby="pst-version-switcher-button-2">
-    <!-- dropdown will be populated by javascript on page load -->
-  </div>
-</div></div>
-    
-      <div class="navbar-item">
 
   
     
@@ -371,15 +368,8 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../../../community/index.html">
-    Community
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../../../lang-bindings/index.html">
-    Language Bindings
+  <a class="nav-link nav-external" href="https://pytorch.org/tutorials/">
+    Tutorials
   </a>
 </li>
 
@@ -401,6 +391,26 @@ window.addEventListener("load", () => mermaid.run());
 </button>
         </div>
       
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
       
         <div class="navbar-item">
 
@@ -509,15 +519,8 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../../../community/index.html">
-    Community
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../../../lang-bindings/index.html">
-    Language Bindings
+  <a class="nav-link nav-external" href="https://pytorch.org/tutorials/">
+    Tutorials
   </a>
 </li>
 
@@ -530,6 +533,26 @@ window.addEventListener("load", () => mermaid.run());
     
     
       <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
         
           <div class="navbar-item">
 
@@ -638,6 +661,27 @@ window.addEventListener("load", () => mermaid.run());
     </div>
   
   
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item"><div class="rating">
+    Rate this Page
+    <div class="stars">
+        
+        <span class="star" data-value="1">★</span>
+        
+        <span class="star" data-value="2">★</span>
+        
+        <span class="star" data-value="3">★</span>
+        
+        <span class="star" data-value="4">★</span>
+        
+        <span class="star" data-value="5">★</span>
+        
+    </div>
+</div></div>
+      
+    </div>
+  
 </div>
 </div>
               
@@ -687,6 +731,34 @@ window.addEventListener("load", () => mermaid.run());
                 </article>
               
               
+              
+                <footer class="bd-footer-article">
+                  <div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><div class="feedback">
+  <div class="rating">
+    Rate this Page
+    <div class="stars">
+        
+        <span class="star" data-value="1">★</span>
+        
+        <span class="star" data-value="2">★</span>
+        
+        <span class="star" data-value="3">★</span>
+        
+        <span class="star" data-value="4">★</span>
+        
+        <span class="star" data-value="5">★</span>
+        
+    </div>
+</div>
+  <div class="feedback-send">
+    <button class="feedback-btn" onclick="openGitHubIssue()">Send Feedback</button>
+  </div>
+</div></div>
+  
+</div>
+                </footer>
               
               
               

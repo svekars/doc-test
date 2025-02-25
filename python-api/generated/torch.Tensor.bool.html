@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/custom2.css?v=a9f46c5e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom2.css?v=dd3e252d" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -52,13 +52,29 @@
     <script src="../../_static/copybutton.js?v=940804e7"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'python-api/generated/torch.Tensor.bool';</script>
+    <script src="../../_static/js/star-rating.js?v=8861fcb6"></script>
+    <script src="../../_static/js/send-feedback.js?v=5646bf45"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="torch.Tensor.byte" href="torch.Tensor.byte.html" />
     <link rel="prev" title="torch.Tensor.bmm" href="torch.Tensor.bmm.html" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="main (2.6.0 )" />
+<script type="text/javascript" src="../../_static/js/send-feedback.js"></script>
+<script type="text/javascript" src="../../_static/js/star-rating.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TEST12345"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TEST12345');
+    </script>
+
   </head>
   
   
@@ -67,7 +83,8 @@
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-<div class="container-fluid header-holder tutorials-header" id="header-holder">
+<body data-feedback-url="https://github.com/pytorch/pytorch">
+  <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
       <a class="header-logo" href="" aria-label="PyTorch"></a>
@@ -153,7 +170,7 @@
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>  
+            </div>
           </li>
 
           <li class="main-menu-item">
@@ -177,7 +194,7 @@
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News 
+                Blogs & News
               </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
@@ -248,7 +265,7 @@
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -305,26 +322,6 @@
   <div class=" navbar-header-items__start">
     
       <div class="navbar-item">
-<div class="version-switcher__container dropdown pst-js-only">
-  <button id="pst-version-switcher-button-2"
-    type="button"
-    class="version-switcher__button btn btn-sm dropdown-toggle"
-    data-bs-toggle="dropdown"
-    aria-haspopup="listbox"
-    aria-controls="pst-version-switcher-list-2"
-    aria-label="Version switcher list"
-  >
-    Choose version  <!-- this text may get changed later by javascript -->
-    <span class="caret"></span>
-  </button>
-  <div id="pst-version-switcher-list-2"
-    class="version-switcher__menu dropdown-menu list-group-flush py-0"
-    role="listbox" aria-labelledby="pst-version-switcher-button-2">
-    <!-- dropdown will be populated by javascript on page load -->
-  </div>
-</div></div>
-    
-      <div class="navbar-item">
 
   
     
@@ -366,15 +363,8 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../community/index.html">
-    Community
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../lang-bindings/index.html">
-    Language Bindings
+  <a class="nav-link nav-external" href="https://pytorch.org/tutorials/">
+    Tutorials
   </a>
 </li>
 
@@ -396,6 +386,26 @@
 </button>
         </div>
       
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
       
         <div class="navbar-item">
 
@@ -506,15 +516,8 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../community/index.html">
-    Community
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../lang-bindings/index.html">
-    Language Bindings
+  <a class="nav-link nav-external" href="https://pytorch.org/tutorials/">
+    Tutorials
   </a>
 </li>
 
@@ -527,6 +530,26 @@
     
     
       <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
         
           <div class="navbar-item">
 
@@ -2428,6 +2451,27 @@
     </div>
   
   
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item"><div class="rating">
+    Rate this Page
+    <div class="stars">
+        
+        <span class="star" data-value="1">★</span>
+        
+        <span class="star" data-value="2">★</span>
+        
+        <span class="star" data-value="3">★</span>
+        
+        <span class="star" data-value="4">★</span>
+        
+        <span class="star" data-value="5">★</span>
+        
+    </div>
+</div></div>
+      
+    </div>
+  
 </div>
 </div>
               
@@ -2457,6 +2501,34 @@ returned Tensor. Default: <code class="docutils literal notranslate"><span class
                 </article>
               
               
+              
+                <footer class="bd-footer-article">
+                  <div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><div class="feedback">
+  <div class="rating">
+    Rate this Page
+    <div class="stars">
+        
+        <span class="star" data-value="1">★</span>
+        
+        <span class="star" data-value="2">★</span>
+        
+        <span class="star" data-value="3">★</span>
+        
+        <span class="star" data-value="4">★</span>
+        
+        <span class="star" data-value="5">★</span>
+        
+    </div>
+</div>
+  <div class="feedback-send">
+    <button class="feedback-btn" onclick="openGitHubIssue()">Send Feedback</button>
+  </div>
+</div></div>
+  
+</div>
+                </footer>
               
               
               
@@ -2530,26 +2602,50 @@ returned Tensor. Default: <code class="docutils literal notranslate"><span class
 
 </div>
 <div class="sidebar-secondary-item">
- <h6>PyTorch Libraries</h6>
+  <div class="sidebar-heading">PyTorch Community</div>
+  <ul>
+  
+   <li><a class="nav-link nav-external" href="community/index.html">PyTorch Governance</a></li>
+  
+   <li><a class="nav-link nav-external" href="https://pytorch.org/docs/stable/community/design.html">PyTorch Design Philosophy</a></li>
+  
+   <li><a class="nav-link nav-external" href="https://github.com/pytorch/pytorch/wiki/The-Ultimate-Guide-to-PyTorch-Contributions">The Ultimate Guide to PyTorch Contributions</a></li>
+  
+  </ul>
+</div>
+<div class="sidebar-secondary-item">
+ <div class="sidebar-heading">Language Bindings</div>
  <ul>
  
-  <li><a class="nav-link nav-external" href="https://pytorch.org/audio/stable/">torchaudio</a></li>
+  <li><a class="nav-link nav-external" href="https://pytorch.org/docs/stable/cpp_index.html">C++</a></li>
  
-  <li><a class="nav-link nav-external" href="https://pytorch.org/ao">torchao</a></li>
+  <li><a class="nav-link nav-external" href="https://pytorch.org/javadoc/">Javadoc</a></li>
  
-  <li><a class="nav-link nav-external" href="https://pytorch.org/executorch">ExecuTorch</a></li>
- 
-  <li><a class="nav-link nav-external" href="https://pytorch.org/torchrec">torchrec</a></li>
- 
-  <li><a class="nav-link nav-external" href="https://pytorch.org/serve/">torchserve</a></li>
- 
-  <li><a class="nav-link nav-external" href="https://pytorch.org/data">torchdata</a></li>
- 
-  <li><a class="nav-link nav-external" href="https://pytorch.org/data">torchvision</a></li>
- 
-  <li><a class="nav-link nav-external" href="https://pytorch.org/xla">PyTorch on XLA Devices</a></li>
+  <li><a class="nav-link nav-external" href="https://github.com/pytorch/multipy">torch.multiply</a></li>
  
  </ul>
+</div>
+<div class="sidebar-secondary-item">
+  <div class="sidebar-heading">PyTorch Libraries</div>
+  <ul>
+  
+   <li><a class="nav-link nav-external" href="https://pytorch.org/audio/stable/">torchaudio</a></li>
+  
+   <li><a class="nav-link nav-external" href="https://pytorch.org/ao">torchao</a></li>
+  
+   <li><a class="nav-link nav-external" href="https://pytorch.org/executorch">ExecuTorch</a></li>
+  
+   <li><a class="nav-link nav-external" href="https://pytorch.org/torchrec">torchrec</a></li>
+  
+   <li><a class="nav-link nav-external" href="https://pytorch.org/serve/">torchserve</a></li>
+  
+   <li><a class="nav-link nav-external" href="https://pytorch.org/data">torchdata</a></li>
+  
+   <li><a class="nav-link nav-external" href="https://pytorch.org/data">torchvision</a></li>
+  
+   <li><a class="nav-link nav-external" href="https://pytorch.org/xla">PyTorch on XLA Devices</a></li>
+  
+  </ul>
 </div>
 </div>
 </div>

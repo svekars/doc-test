@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/css/jit.css?v=8de1ea5d" />
     <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="_static/css/custom2.css?v=a9f46c5e" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom2.css?v=dd3e252d" />
   
   <!-- So that users can add custom icons -->
   <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -60,12 +60,28 @@ import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.es
 window.addEventListener("load", () => mermaid.run());
 </script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <script src="_static/js/star-rating.js?v=8861fcb6"></script>
+    <script src="_static/js/send-feedback.js?v=5646bf45"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Python API" href="python-api/index.html" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="main (2.6.0 )" />
+<script type="text/javascript" src="_static/js/send-feedback.js"></script>
+<script type="text/javascript" src="_static/js/star-rating.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TEST12345"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TEST12345');
+    </script>
+
   </head>
   
   
@@ -74,7 +90,8 @@ window.addEventListener("load", () => mermaid.run());
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-<div class="container-fluid header-holder tutorials-header" id="header-holder">
+<body data-feedback-url="https://github.com/pytorch/pytorch">
+  <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
       <a class="header-logo" href="" aria-label="PyTorch"></a>
@@ -160,7 +177,7 @@ window.addEventListener("load", () => mermaid.run());
                   <span class="dropdown-title">ExecuTorch Docs</span>
                 </a>
               </div>
-            </div>  
+            </div>
           </li>
 
           <li class="main-menu-item">
@@ -184,7 +201,7 @@ window.addEventListener("load", () => mermaid.run());
           <li>
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="with-down-arrow">
-                Blogs & News 
+                Blogs & News
               </a>
               <div class="resources-dropdown-menu">
                 <a class="nav-dropdown-item" href="">
@@ -255,7 +272,7 @@ window.addEventListener("load", () => mermaid.run());
              </a>
            </div>
           </li>
-          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later. 
+          <!--- TODO: This block adds the search icon to the nav bar. We will enable it later.
           <li>
             <div class="main-menu-item">
              <a href="" class="search-icon">
@@ -312,26 +329,6 @@ window.addEventListener("load", () => mermaid.run());
   <div class=" navbar-header-items__start">
     
       <div class="navbar-item">
-<div class="version-switcher__container dropdown pst-js-only">
-  <button id="pst-version-switcher-button-2"
-    type="button"
-    class="version-switcher__button btn btn-sm dropdown-toggle"
-    data-bs-toggle="dropdown"
-    aria-haspopup="listbox"
-    aria-controls="pst-version-switcher-list-2"
-    aria-label="Version switcher list"
-  >
-    Choose version  <!-- this text may get changed later by javascript -->
-    <span class="caret"></span>
-  </button>
-  <div id="pst-version-switcher-list-2"
-    class="version-switcher__menu dropdown-menu list-group-flush py-0"
-    role="listbox" aria-labelledby="pst-version-switcher-button-2">
-    <!-- dropdown will be populated by javascript on page load -->
-  </div>
-</div></div>
-    
-      <div class="navbar-item">
 
   
     
@@ -373,15 +370,8 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="community/index.html">
-    Community
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="lang-bindings/index.html">
-    Language Bindings
+  <a class="nav-link nav-external" href="https://pytorch.org/tutorials/">
+    Tutorials
   </a>
 </li>
 
@@ -403,6 +393,26 @@ window.addEventListener("load", () => mermaid.run());
 </button>
         </div>
       
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
       
         <div class="navbar-item">
 
@@ -515,15 +525,8 @@ window.addEventListener("load", () => mermaid.run());
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="community/index.html">
-    Community
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="lang-bindings/index.html">
-    Language Bindings
+  <a class="nav-link nav-external" href="https://pytorch.org/tutorials/">
+    Tutorials
   </a>
 </li>
 
@@ -536,6 +539,26 @@ window.addEventListener("load", () => mermaid.run());
     
     
       <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
         
           <div class="navbar-item">
 
@@ -609,7 +632,33 @@ window.addEventListener("load", () => mermaid.run());
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none"></div>
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item"><div class="rating">
+    Rate this Page
+    <div class="stars">
+        
+        <span class="star" data-value="1">★</span>
+        
+        <span class="star" data-value="2">★</span>
+        
+        <span class="star" data-value="3">★</span>
+        
+        <span class="star" data-value="4">★</span>
+        
+        <span class="star" data-value="5">★</span>
+        
+    </div>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
               
               
               
@@ -626,20 +675,58 @@ efficient tensor computation with strong GPU acceleration, enabling
 the handling of large-scale data.</p>
 <pre  class="mermaid">
         graph TD;
-A[PyTorch] --&gt; B[Tensors]
-A --&gt; C[Autograd]
-A --&gt; D[Neural Networks]
-A --&gt; E[Optimizers]
-B --&gt; F[Operations]
-C --&gt; G[Backward Propagation]
-D --&gt; H[Modules]
-D --&gt; I[Layers]
-E --&gt; J[SGD]
-E --&gt; K[Adam]
-F --&gt; L[Matrix Multiplication]
-F --&gt; M[Element-wise Operations]
-H --&gt; N[Sequential]
-H --&gt; O[Custom Modules]
+    A([&quot;PyTorch&quot;]) --&gt; B[&quot;Tensors&quot;]
+    A --&gt; C[&quot;JIT (Just-in-Time)&quot;]
+    A --&gt; D[&quot;Torch Compile&quot;]
+    A --&gt; E[&quot;Inductor&quot;]
+    A --&gt; F[&quot;Torch Export&quot;]
+    A --&gt; G[&quot;Executorch&quot;]
+
+    subgraph Components [Components]
+        direction LR
+        B
+        C
+        D
+        E
+        F
+        G
+    end
+
+    subgraph Functions [What they do]
+        direction LR
+        H([&quot;Multi-dimensional matrices for data storage and operations&quot;])
+        M([&quot;Compiles PyTorch models for optimization and execution&quot;])
+        R([&quot;Converts PyTorch models to optimized native code&quot;])
+        U([&quot;Generates efficient code from Torch IR&quot;])
+        Y([&quot;Captures graph for non-Python execution&quot;])
+        AA([&quot;Executes models on edge devices efficiently&quot;])
+    end
+
+    B --&gt; H
+    C --&gt; M
+    D --&gt; R
+    E --&gt; U
+    F --&gt; Y
+    G --&gt; AA
+
+    classDef topNode fill:#F9BFB4,stroke:#DE3412,stroke-width:2px,color:#DE3412,font-weight:bold,font-size:25px,fill-opacity:0.2;
+    classDef middleRow fill:#F3E8FB,stroke:#812CE5,stroke-width:2px,color:#812CE5,font-weight:bold,font-size:18px,fill-opacity:0.5,rx:10,ry:10;
+    classDef lastRow fill:none,stroke:#812CE5,stroke-width:0px,color:#B932CC,font-weight:bold,font-size:18px,fill-opacity:0.1,text-align:center;
+    classDef title fill:none,stroke:none,color:#333,font-weight:bold,font-size:22px;
+
+
+    class A topNode;
+    class B,C,D,E,F,G middleRow;
+    class H,M,R,U,Y,AA lastRow;
+
+    linkStyle default stroke:#BBBBBB,stroke-width:2px;
+
+    
+    %% Change the background color of the Components subgraph
+    style Components fill:#E9D8FD,stroke:#812CE5,stroke-width:2px,fill-opacity:0.1;
+
+    %% Change the background color of the Functions subgraph
+    style Functions fill:#B932CC,stroke:#B932CC,stroke-width:0px,fill-opacity:0.03;
     </pre><section id="beginner-s-essentials">
 <h2>Beginner’s Essentials<a class="headerlink" href="#beginner-s-essentials" title="Link to this heading">#</a></h2>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
@@ -649,8 +736,7 @@ H --&gt; O[Custom Modules]
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 Get Started</div>
-<p class="sd-card-text">Visit the <strong>PyTorch Get Started</strong> page to find the appropriate
-installation command for your operating system and environment.</p>
+<p class="sd-card-text">Visit the <strong>PyTorch Get Started</strong> page to find the appropriate installation command for your operating system and environment.</p>
 </div>
 <a class="sd-stretched-link sd-hide-link-text reference external" href="https://pytorch.org/get-started/locally/"><span>https://pytorch.org/get-started/locally/</span></a></div>
 </div>
@@ -659,9 +745,7 @@ installation command for your operating system and environment.</p>
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 Learn the Basics</div>
-<p class="sd-card-text">Familiarize yourself with PyTorch’s core concepts by
-exploring the Learn the <strong>Basics tutorial series</strong>, which
-cover tensors, autograd, and building neural networks.</p>
+<p class="sd-card-text">Familiarize yourself with PyTorch’s core concepts by exploring the Learn the <strong>Basics tutorial series</strong>, which cover tensors, autograd, and building neural networks.</p>
 </div>
 <a class="sd-stretched-link sd-hide-link-text reference external" href="https://pytorch.org/tutorials/beginner/basics/intro.html"><span>https://pytorch.org/tutorials/beginner/basics/intro.html</span></a></div>
 </div>
@@ -670,8 +754,7 @@ cover tensors, autograd, and building neural networks.</p>
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 Build Neural Networks</div>
-<p class="sd-card-text">Dive into the <strong>Neural Networks</strong> tutorial to learn how to
-define and train models using PyTorch’s torch.nn module.</p>
+<p class="sd-card-text">Dive into the <strong>Neural Networks</strong> tutorial to learn how to define and train models using PyTorch’s torch.nn module.</p>
 </div>
 <a class="sd-stretched-link sd-hide-link-text reference external" href="https://pytorch.org/tutorials/beginner/basics/intro.html"><span>https://pytorch.org/tutorials/beginner/basics/intro.html</span></a></div>
 </div>
@@ -680,8 +763,7 @@ define and train models using PyTorch’s torch.nn module.</p>
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 Python API</div>
-<p class="sd-card-text">Explore the <strong>PyTorch Python API Documentation</strong> to get detailed
-information on all available classes, functions, and modules.</p>
+<p class="sd-card-text">Explore the <strong>PyTorch Python API Documentation</strong> to get detailed information on all available classes, functions, and modules.</p>
 </div>
 <span class="sd-stretched-link sd-hide-link-text">torch_api</span></div>
 </div>
@@ -697,8 +779,7 @@ information on all available classes, functions, and modules.</p>
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 Distributed Training</div>
-<p class="sd-card-text">Learn how to scale your models across multiple GPUs and machines
-using PyTorch’s distributed training capabilities.</p>
+<p class="sd-card-text">Learn how to scale your models across multiple GPUs and machines using PyTorch’s distributed training capabilities.</p>
 </div>
 <a class="sd-stretched-link sd-hide-link-text reference external" href="https://pytorch.org/docs/stable/distributed.html"><span>https://pytorch.org/docs/stable/distributed.html</span></a></div>
 </div>
@@ -707,10 +788,18 @@ using PyTorch’s distributed training capabilities.</p>
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 CUDA and GPU Acceleration</div>
-<p class="sd-card-text">Explore how to leverage CUDA for GPU acceleration to
-significantly speed up model training and inference.</p>
+<p class="sd-card-text">Explore how to leverage CUDA for GPU acceleration to significantly speed up model training and inference.</p>
 </div>
 <a class="sd-stretched-link sd-hide-link-text reference external" href="https://pytorch.org/docs/stable/notes/cuda.html"><span>https://pytorch.org/docs/stable/notes/cuda.html</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Performance Optimization</div>
+<p class="sd-card-text">Discover how to use torch.compile to optimize model performance by compiling PyTorch models for faster execution.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="Discoverhowtousetorch.compiletooptimizemodelperformancebycompilingPyTorchmodelsforfasterexecution."><span>Discoverhowtousetorch.compiletooptimizemodelperformancebycompilingPyTorchmodelsforfasterexecution.</span></a></div>
 </div>
 </div>
 </div>
@@ -740,10 +829,6 @@ and in the <a class="reference external" href="https://github.com/pytorch/pytorc
 </div>
 <div class="toctree-wrapper compound">
 </div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 </section>
 
@@ -751,6 +836,34 @@ and in the <a class="reference external" href="https://github.com/pytorch/pytorc
                 </article>
               
               
+              
+                <footer class="bd-footer-article">
+                  <div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><div class="feedback">
+  <div class="rating">
+    Rate this Page
+    <div class="stars">
+        
+        <span class="star" data-value="1">★</span>
+        
+        <span class="star" data-value="2">★</span>
+        
+        <span class="star" data-value="3">★</span>
+        
+        <span class="star" data-value="4">★</span>
+        
+        <span class="star" data-value="5">★</span>
+        
+    </div>
+</div>
+  <div class="feedback-send">
+    <button class="feedback-btn" onclick="openGitHubIssue()">Send Feedback</button>
+  </div>
+</div></div>
+  
+</div>
+                </footer>
               
               
               
@@ -798,7 +911,7 @@ and in the <a class="reference external" href="https://github.com/pytorch/pytorc
 
   
   <div class="tocsection editthispage">
-    <a href="https://github.com/pytorch/pytorch/edit/main/docs/source/index.rst">
+    <a href="https://github.com/pytorch/pytorch/edit/main/docs/source/index.md">
       <i class="fa-solid fa-pencil"></i>
       
       
@@ -812,7 +925,7 @@ and in the <a class="reference external" href="https://github.com/pytorch/pytorc
 
   <div class="sidebar-secondary-item">
     <div class="tocsection sourcelink">
-      <a href="_sources/index.rst.txt">
+      <a href="_sources/index.md.txt">
         <i class="fa-solid fa-file-lines"></i> Show Source
       </a>
     </div>
@@ -820,26 +933,50 @@ and in the <a class="reference external" href="https://github.com/pytorch/pytorc
 
 </div>
 <div class="sidebar-secondary-item">
- <h6>PyTorch Libraries</h6>
+  <div class="sidebar-heading">PyTorch Community</div>
+  <ul>
+  
+   <li><a class="nav-link nav-external" href="community/index.html">PyTorch Governance</a></li>
+  
+   <li><a class="nav-link nav-external" href="https://pytorch.org/docs/stable/community/design.html">PyTorch Design Philosophy</a></li>
+  
+   <li><a class="nav-link nav-external" href="https://github.com/pytorch/pytorch/wiki/The-Ultimate-Guide-to-PyTorch-Contributions">The Ultimate Guide to PyTorch Contributions</a></li>
+  
+  </ul>
+</div>
+<div class="sidebar-secondary-item">
+ <div class="sidebar-heading">Language Bindings</div>
  <ul>
  
-  <li><a class="nav-link nav-external" href="https://pytorch.org/audio/stable/">torchaudio</a></li>
+  <li><a class="nav-link nav-external" href="https://pytorch.org/docs/stable/cpp_index.html">C++</a></li>
  
-  <li><a class="nav-link nav-external" href="https://pytorch.org/ao">torchao</a></li>
+  <li><a class="nav-link nav-external" href="https://pytorch.org/javadoc/">Javadoc</a></li>
  
-  <li><a class="nav-link nav-external" href="https://pytorch.org/executorch">ExecuTorch</a></li>
- 
-  <li><a class="nav-link nav-external" href="https://pytorch.org/torchrec">torchrec</a></li>
- 
-  <li><a class="nav-link nav-external" href="https://pytorch.org/serve/">torchserve</a></li>
- 
-  <li><a class="nav-link nav-external" href="https://pytorch.org/data">torchdata</a></li>
- 
-  <li><a class="nav-link nav-external" href="https://pytorch.org/data">torchvision</a></li>
- 
-  <li><a class="nav-link nav-external" href="https://pytorch.org/xla">PyTorch on XLA Devices</a></li>
+  <li><a class="nav-link nav-external" href="https://github.com/pytorch/multipy">torch.multiply</a></li>
  
  </ul>
+</div>
+<div class="sidebar-secondary-item">
+  <div class="sidebar-heading">PyTorch Libraries</div>
+  <ul>
+  
+   <li><a class="nav-link nav-external" href="https://pytorch.org/audio/stable/">torchaudio</a></li>
+  
+   <li><a class="nav-link nav-external" href="https://pytorch.org/ao">torchao</a></li>
+  
+   <li><a class="nav-link nav-external" href="https://pytorch.org/executorch">ExecuTorch</a></li>
+  
+   <li><a class="nav-link nav-external" href="https://pytorch.org/torchrec">torchrec</a></li>
+  
+   <li><a class="nav-link nav-external" href="https://pytorch.org/serve/">torchserve</a></li>
+  
+   <li><a class="nav-link nav-external" href="https://pytorch.org/data">torchdata</a></li>
+  
+   <li><a class="nav-link nav-external" href="https://pytorch.org/data">torchvision</a></li>
+  
+   <li><a class="nav-link nav-external" href="https://pytorch.org/xla">PyTorch on XLA Devices</a></li>
+  
+  </ul>
 </div>
 </div>
 </div>
