@@ -10,7 +10,10 @@ var cookieBanner = {
   },
 
   bind: function() {
-    $(".close-button").on("click", cookieBanner.hideCookieNotice);
+    $(".close-button").on("click", function() {
+      cookieBanner.hideCookieNotice();
+      cookieBanner.setCookie(); // Set the cookie or local storage item when the banner is closed
+    });
   },
 
   cookieExists: function() {
