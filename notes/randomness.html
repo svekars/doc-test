@@ -1,12 +1,21 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+<meta property="og:title" content="Reproducibility" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://pytorch.org/notes/randomness.html" />
+<meta property="og:site_name" content="PyTorch" />
+<meta property="og:description" content="Completely reproducible results are not guaranteed across PyTorch releases, individual commits, or different platforms. Furthermore, results may not be reproducible between CPU and GPU executions, ..." />
+<meta property="og:image" content="https://pytorch.org/docs/stable/_static/img/pytorch-logo-dark.svg" />
+<meta property="og:image:alt" content="PyTorch" />
+<meta name="description" content="Completely reproducible results are not guaranteed across PyTorch releases, individual commits, or different platforms. Furthermore, results may not be reproducible between CPU and GPU executions, ..." />
 
     <title>Reproducibility &#8212; PyTorch main documentation</title>
   
@@ -16,44 +25,49 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/katex-math.css?v=91adb8b6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/jit.css?v=8de1ea5d" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=baa440dc" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <script src="../_static/documentation_options.js?v=a8da1a53"></script>
-    <script src="../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=940804e7"></script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/katex-math.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/jit.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notes/randomness';</script>
-    <script src="../_static/js/star-rating.js?v=8861fcb6"></script>
-    <script src="../_static/js/send-feedback.js?v=5646bf45"></script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://pytorch.org/docs/pytorch-versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'main';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Serialization semantics" href="serialization.html" />
@@ -61,32 +75,62 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.6.0 )" />
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script type="text/javascript" src="../_static/js/send-feedback.js"></script>
-<script type="text/javascript" src="../_static/js/star-rating.js"></script>
-<script type="text/javascript" src="../_static/js/cookie-banner.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../_static/css/theme.css">
+<script type="text/javascript" src="../_static/js/theme.js"></script>
+<link rel="stylesheet" href="../_static/webfonts/all.min.css">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TEST12345"></script>
-    <script type="text/javascript">
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8XT4PS"
+   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+   <!-- End Google Tag Manager (noscript) -->
+   <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   j.onload = function() {
+     window.dispatchEvent(new Event('gtm_loaded'));
+     console.log('GTM loaded successfully');
+   };
+   })(window,document,'script','dataLayer','GTM-T8XT4PS');
+</script>
+ <!-- End Google Tag Manager -->
+ <!-- Facebook Pixel Code -->
+<script>
+   !function(f,b,e,v,n,t,s)
+   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+   if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+   n.queue=[];t=b.createElement(e);t.async=!0;
+   t.src=v;s=b.getElementsByTagName(e)[0];
+   s.parentNode.insertBefore(t,s)}(window,document,'script',
+   'https://connect.facebook.net/en_US/fbevents.js');
+   fbq('init', '243028289693773');
+   fbq('track', 'PageView');
+</script>
+<noscript>
+   <img height="1" width="1" src="https://www.facebook.com/tr?id=243028289693773&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
 
-      gtag('config', 'G-TEST12345');
-    </script>
+<script async src="https://cse.google.com/cse.js?cx=e65585f8c3ea1440e"></script>
+
+   <!--
+   Search engines should not index the main version of documentation.
+   Stable documentation are built without release == 'main'.
+   -->
+   <meta name="robots" content="noindex">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
 
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
-  
-  
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-<body data-feedback-url="https://github.com/pytorch/pytorch">
-  <div class="container-fluid header-holder tutorials-header" id="header-holder">
-  <div class="container">
+<body data-feedback-url="https://github.com/pytorch/pytorch" class="pytorch-body">
+     <div class="container-fluid header-holder tutorials-header" id="header-holder">
+   <div class="header-container-wrapper">
     <div class="header-container">
       <a class="header-logo" href="" aria-label="PyTorch"></a>
 
@@ -277,10 +321,167 @@
         </ul>
       </div>
 
-      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu">
+        <i class="fa-solid fa-ellipsis"></i>
+      </a>
+    </div>
+  </div>
+ </div>
+
+ <!-- Begin Mobile Menu -->
+
+<div class="mobile-main-menu">
+  <div class="container-fluid">
+    <div class="header-container-wrapper">
+      <div class="mobile-main-menu-header-container">
+        <a class="header-logo" href="" aria-label="PyTorch"></a>
+        <a class="main-menu-close-button" href="#" data-behavior="close-mobile-menu">
+          <i class="fa-solid fa-xmark"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-main-menu-links-container">
+    <div class="main-menu">
+      <ul>
+         <li class="resources-mobile-menu-title">
+           <a>Learn</a>
+         </li>
+         <ul class="resources-mobile-menu-items">
+           <li>
+             <a href="">Get Started</a>
+           </li>
+           <li>
+             <a href="">Tutorials</a>
+           </li>
+           <li>
+             <a href="">Learn the Basics</a>
+           </li>
+           <li>
+             <a href="">PyTorch Recipes</a>
+           </li>
+           <li>
+             <a href="">Introduction to PyTorch - YouTube Series</a>
+           </li>
+         </ul>
+         <li class="resources-mobile-menu-title">
+           <a>Ecosystem</a>
+         </li>
+         <ul class="resources-mobile-menu-items">
+           <li>
+             <a href="">Tools</a>
+           </li>
+           <li>
+             <a href="">Community</a>
+           </li>
+           <li>
+             <a href="">Forums</a>
+           </li>
+           <li>
+             <a href="">Developer Resources</a>
+           </li>
+           <li>
+             <a href="">Contributor Awards - 2024</a>
+           </li>
+         </ul>
+
+         <li class="resources-mobile-menu-title">
+           <a>Edge</a>
+         </li>
+
+         <ul class="resources-mobile-menu-items">
+           <li>
+             <a href="">About PyTorch Edge</a>
+           </li>
+
+           <li>
+             <a href="">ExecuTorch</a>
+           </li>
+           <li>
+             <a href="">ExecuTorch Documentation</a>
+           </li>
+         </ul>
+
+         <li class="resources-mobile-menu-title">
+           <a>Docs</a>
+         </li>
+
+         <ul class="resources-mobile-menu-items">
+          <li>
+            <a href="">PyTorch</a>
+          </li>
+
+          <li>
+            <a href="">PyTorch Domains</a>
+          </li>
+        </ul>
+
+        <li class="resources-mobile-menu-title">
+          <a>Blog & News</a>
+        </li>
+
+         <ul class="resources-mobile-menu-items">
+          <li>
+            <a href="">PyTorch Blog</a>
+          </li>
+          <li>
+            <a href="">Community Blog</a>
+          </li>
+
+          <li>
+            <a href="">Videos</a>
+          </li>
+
+          <li>
+            <a href="">Community Stories</a>
+          </li>
+          <li>
+            <a href="">Events</a>
+          </li>
+          <li>
+             <a href="">Newsletter</a>
+           </li>
+        </ul>
+
+        <li class="resources-mobile-menu-title">
+          <a>About</a>
+        </li>
+
+        <ul class="resources-mobile-menu-items">
+          <li>
+            <a href="">PyTorch Foundation</a>
+          </li>
+          <li>
+            <a href="">Governing Board</a>
+          </li>
+          <li>
+             <a href="">Cloud Credit Program</a>
+          </li>
+          <li>
+             <a href="">Technical Advisory Council</a>
+          </li>
+          <li>
+             <a href="">Staff</a>
+          </li>
+          <li>
+             <a href="">Contact Us</a>
+          </li>
+        </ul>
+      </ul>
     </div>
   </div>
 </div>
+
+<!-- End Mobile Menu -->
+   
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -289,8 +490,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -298,6 +510,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -305,8 +518,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -321,6 +534,30 @@
   
   
   <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
     
       <div class="navbar-item">
 
@@ -350,14 +587,14 @@
   <ul class="bd-navbar-elements navbar-nav">
     
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../python-api/index.html">
+  <a class="nav-link nav-internal" href="../pytorch-api.html">
     Python API
   </a>
 </li>
 
 
 <li class="nav-item current active">
-  <a class="nav-link nav-internal" href="index.html">
+  <a class="nav-link nav-internal" href="../notes.html">
     Developer Notes
   </a>
 </li>
@@ -377,44 +614,305 @@
     
     <div class="navbar-header-items__end">
       
-        <div class="navbar-item navbar-persistent--container">
-          
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
-        </div>
-      
       
         <div class="navbar-item">
-<div class="version-switcher__container dropdown pst-js-only">
-  <button id="pst-version-switcher-button-2"
-    type="button"
-    class="version-switcher__button btn btn-sm dropdown-toggle"
-    data-bs-toggle="dropdown"
-    aria-haspopup="listbox"
-    aria-controls="pst-version-switcher-list-2"
-    aria-label="Version switcher list"
-  >
-    Choose version  <!-- this text may get changed later by javascript -->
-    <span class="caret"></span>
-  </button>
-  <div id="pst-version-switcher-list-2"
-    class="version-switcher__menu dropdown-menu list-group-flush py-0"
-    role="listbox" aria-labelledby="pst-version-switcher-button-2">
-    <!-- dropdown will be populated by javascript on page load -->
+<div class="search-container-wrapper">
+  <div id="sphinx-search" class="search-container">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
   </div>
-</div></div>
+
+  <div id="google-search" class="search-container" style="display:none;">
+    <div class="gcse-search-wrapper">
+      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      <div class="gcse-search"></div>
+    </div>
+  </div>
+
+  <div class="search-toggle-container" data-bs-title="Google Search Off" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <div class="search-toggle-inner">
+      <label class="switch">
+        <input type="checkbox" id="search-toggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Define the search callback
+    const myWebSearchStartingCallback = (gname, query) => {
+      if (typeof dataLayer !== 'undefined' && query) {
+        dataLayer.push({
+          'event': 'google_search',
+          'search_term': query,
+          'event_category': 'Search',
+          'event_label': 'Google Search'
+        });
+        console.log('GA event sent via callback: google_search - ' + query);
+      }
+      return '';
+    };
+
+    // Set up the GCSE search callbacks
+    window.__gcse || (window.__gcse = {});
+    window.__gcse.searchCallbacks = {
+      web: {
+        starting: myWebSearchStartingCallback,
+      },
+    };
+    if (window.location.pathname.includes('/search.html')) {
+      document.body.classList.add('search-page');
+    }
+
+    // Function to reinitialize Google CSE
+    function reinitializeGoogleSearch() {
+      if (window.__gcse) {
+        // Force Google CSE to reinitialize
+        if (window.__gcse.initializationCallback) {
+          window.__gcse.initializationCallback();
+        }
+      }
+    }
+
+    // Function to handle search toggle
+    function handleSearchToggle(toggle, sphinxSearch, googleSearch) {
+      if (!toggle || !sphinxSearch || !googleSearch) return;
+
+      // Check if the URL contains /stable/ or /tutorials/
+      const currentUrl = window.location.href;
+      const shouldDefaultToGoogle = currentUrl.includes('/stable/') || currentUrl.includes('/tutorials/');
+
+      // Check if there's a saved preference, otherwise use the URL-based default
+      const savedPreference = localStorage.getItem('searchPreference');
+      if (savedPreference === 'google' || (savedPreference === null && shouldDefaultToGoogle)) {
+        toggle.checked = true;
+        sphinxSearch.style.display = 'none';
+        googleSearch.style.display = 'block';
+        // Save the preference if it wasn't already saved
+        if (savedPreference === null) {
+          localStorage.setItem('searchPreference', 'google');
+        }
+        // Ensure Google search is properly initialized
+        reinitializeGoogleSearch();
+      } else {
+        toggle.checked = false;
+        sphinxSearch.style.display = 'block';
+        googleSearch.style.display = 'none';
+      }
+
+      // Update tooltip based on initial state
+      const tooltipElement = document.querySelector('.search-toggle-container');
+      if (tooltipElement) {
+        tooltipElement.setAttribute('data-bs-title', toggle.checked ? 'Google Search On' : 'Google Search Off');
+        // Reinitialize tooltip if Bootstrap's tooltip is already initialized
+        if (bootstrap && bootstrap.Tooltip) {
+          const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipElement);
+          if (tooltipInstance) tooltipInstance.dispose();
+          new bootstrap.Tooltip(tooltipElement);
+        }
+      }
+
+      // Add a data attribute to track if this toggle has been initialized
+      if (toggle.hasAttribute('data-initialized')) {
+        return; // Skip adding another event listener if already initialized
+      }
+      toggle.setAttribute('data-initialized', 'true');
+
+      toggle.addEventListener('change', function() {
+        if (this.checked) {
+          sphinxSearch.style.display = 'none';
+          googleSearch.style.display = 'block';
+          localStorage.setItem('searchPreference', 'google');
+          // Reinitialize Google search when switching to it
+          reinitializeGoogleSearch();
+          const tooltipElement = document.querySelector('.search-toggle-container');
+          if (tooltipElement) {
+            tooltipElement.setAttribute('data-bs-title', 'Google Search On');
+            // Refresh tooltip
+            if (bootstrap && bootstrap.Tooltip) {
+              const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipElement);
+              if (tooltipInstance) tooltipInstance.dispose();
+              new bootstrap.Tooltip(tooltipElement);
+            }
+          }
+          if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({
+              'event': 'search_engine_switch',
+              'event_category': 'Search',
+              'event_label': 'Google'
+            });
+            console.log('GA event sent via dataLayer: search_engine_switch - Google');
+          } else {
+            console.log('GA not available: Cannot track Google search switch');
+          }
+        } else {
+          sphinxSearch.style.display = 'block';
+          googleSearch.style.display = 'none';
+          localStorage.setItem('searchPreference', 'sphinx');
+          const tooltipElement = document.querySelector('.search-toggle-container');
+          if (tooltipElement) {
+            tooltipElement.setAttribute('data-bs-title', 'Google Search Off');
+            // Refresh tooltip
+            if (bootstrap && bootstrap.Tooltip) {
+              const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipElement);
+              if (tooltipInstance) tooltipInstance.dispose();
+              new bootstrap.Tooltip(tooltipElement);
+            }
+          }
+          if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({
+              'event': 'search_engine_switch',
+              'event_category': 'Search',
+              'event_label': 'Sphinx'
+            });
+            console.log('GA event sent via dataLayer: search_engine_switch - Sphinx');
+          } else {
+            console.log('GA not available: Cannot track Sphinx search switch');
+          }
+        }
+
+        // Also update mobile search if it exists
+        updateMobileSearch(false); // Pass false to prevent triggering another event
+      });
+    }
+
+
+    // Function to update mobile search based on current toggle state
+    function updateMobileSearch() {
+      const toggle = document.getElementById('search-toggle');
+      if (!toggle) return;
+
+      // Find mobile search container
+      const mobileSearchContainer = document.querySelector('.sidebar-header-items__end .navbar-item .search-container-wrapper');
+      if (mobileSearchContainer) {
+        const mobileSphinxSearch = mobileSearchContainer.querySelector('#sphinx-search');
+        const mobileGoogleSearch = mobileSearchContainer.querySelector('#google-search');
+
+        if (mobileSphinxSearch && mobileGoogleSearch) {
+          if (toggle.checked) {
+            mobileSphinxSearch.style.display = 'none';
+            mobileGoogleSearch.style.display = 'block';
+            // Reinitialize Google search in mobile view
+            reinitializeGoogleSearch();
+          } else {
+            mobileSphinxSearch.style.display = 'block';
+            mobileGoogleSearch.style.display = 'none';
+          }
+        }
+      }
+    }
+
+    // Initialize desktop search toggle
+    const toggle = document.getElementById('search-toggle');
+    const sphinxSearch = document.getElementById('sphinx-search');
+    const googleSearch = document.getElementById('google-search');
+    handleSearchToggle(toggle, sphinxSearch, googleSearch);
+
+    // Set placeholder text for Google search input
+    const observer = new MutationObserver(function(mutations, obs) {
+      const searchInputs = document.querySelectorAll('.gsc-input input');
+      searchInputs.forEach(input => {
+      if (input) {
+        input.setAttribute('placeholder', 'Search the docs ...');
+
+        if (!input.hasAttribute('data-tracking-added')) {
+          input.setAttribute('data-tracking-added', 'true');
+        }
+      }
+      });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    // Watch for mobile menu creation
+    const mobileMenuObserver = new MutationObserver(function(mutations) {
+      for (const mutation of mutations) {
+        const mobileSearchInputs = document.querySelectorAll('.sidebar-header-items__end .navbar-item .search-container-wrapper .gsc-input input');
+      mobileSearchInputs.forEach(input => {
+        if (input) {
+          input.setAttribute('placeholder', 'Search the docs ...');
+          input.style.paddingLeft = '36px';
+          }
+        });
+        if (mutation.addedNodes.length) {
+          // Check if the mobile search container was added
+          const mobileSearchContainer = document.querySelector('.sidebar-header-items__end .navbar-item .search-container-wrapper');
+          if (mobileSearchContainer) {
+            // Clone the toggle for mobile if needed
+            const mobileToggle = mobileSearchContainer.querySelector('#search-toggle');
+            if (mobileToggle) {
+              // Sync mobile toggle with desktop toggle
+              mobileToggle.checked = toggle.checked;
+
+              // Update mobile search display
+              updateMobileSearch();
+
+              // Add event listener to mobile toggle
+              mobileToggle.addEventListener('change', function() {
+                // Sync desktop toggle with mobile toggle
+                toggle.checked = this.checked;
+                // Trigger change event on desktop toggle to update both
+                toggle.dispatchEvent(new Event('change'));
+              });
+            }
+          }
+        }
+      }
+    });
+
+    mobileMenuObserver.observe(document.body, { childList: true, subtree: true });
+
+    // Ensure Google CSE is properly loaded
+    if (window.__gcse) {
+      window.__gcse.callback = function() {
+        // This will run after Google CSE is fully loaded
+        if (toggle && toggle.checked) {
+          // If Google search is active, make sure it's properly initialized
+          reinitializeGoogleSearch();
+        }
+      };
+    } else {
+      // If Google CSE hasn't loaded yet, set up a callback
+      window.__gcse = {
+        callback: function() {
+          if (toggle && toggle.checked) {
+            reinitializeGoogleSearch();
+          }
+        }
+      };
+    }
+  });
+</script>
+</div>
       
         <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -451,8 +949,20 @@
           
           
           
-          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">PyPI</span></a>
+          <a href="https://discuss.pytorch.org/" title="PyTorch Forum" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discourse fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyTorch Forum</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPi</span></a>
         </li>
 </ul></div>
       
@@ -460,15 +970,6 @@
     
   </div>
   
-  
-    <div class="navbar-persistent--mobile">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
-    </div>
   
 
   
@@ -486,8 +987,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -503,14 +1003,14 @@
   <ul class="bd-navbar-elements navbar-nav">
     
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../python-api/index.html">
+  <a class="nav-link nav-internal" href="../pytorch-api.html">
     Python API
   </a>
 </li>
 
 
 <li class="nav-item current active">
-  <a class="nav-link nav-internal" href="index.html">
+  <a class="nav-link nav-internal" href="../notes.html">
     Developer Notes
   </a>
 </li>
@@ -533,32 +1033,303 @@
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
-<div class="version-switcher__container dropdown pst-js-only">
-  <button id="pst-version-switcher-button-3"
-    type="button"
-    class="version-switcher__button btn btn-sm dropdown-toggle"
-    data-bs-toggle="dropdown"
-    aria-haspopup="listbox"
-    aria-controls="pst-version-switcher-list-3"
-    aria-label="Version switcher list"
-  >
-    Choose version  <!-- this text may get changed later by javascript -->
-    <span class="caret"></span>
-  </button>
-  <div id="pst-version-switcher-list-3"
-    class="version-switcher__menu dropdown-menu list-group-flush py-0"
-    role="listbox" aria-labelledby="pst-version-switcher-button-3">
-    <!-- dropdown will be populated by javascript on page load -->
+<div class="search-container-wrapper">
+  <div id="sphinx-search" class="search-container">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
   </div>
-</div></div>
+
+  <div id="google-search" class="search-container" style="display:none;">
+    <div class="gcse-search-wrapper">
+      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      <div class="gcse-search"></div>
+    </div>
+  </div>
+
+  <div class="search-toggle-container" data-bs-title="Google Search Off" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <div class="search-toggle-inner">
+      <label class="switch">
+        <input type="checkbox" id="search-toggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Define the search callback
+    const myWebSearchStartingCallback = (gname, query) => {
+      if (typeof dataLayer !== 'undefined' && query) {
+        dataLayer.push({
+          'event': 'google_search',
+          'search_term': query,
+          'event_category': 'Search',
+          'event_label': 'Google Search'
+        });
+        console.log('GA event sent via callback: google_search - ' + query);
+      }
+      return '';
+    };
+
+    // Set up the GCSE search callbacks
+    window.__gcse || (window.__gcse = {});
+    window.__gcse.searchCallbacks = {
+      web: {
+        starting: myWebSearchStartingCallback,
+      },
+    };
+    if (window.location.pathname.includes('/search.html')) {
+      document.body.classList.add('search-page');
+    }
+
+    // Function to reinitialize Google CSE
+    function reinitializeGoogleSearch() {
+      if (window.__gcse) {
+        // Force Google CSE to reinitialize
+        if (window.__gcse.initializationCallback) {
+          window.__gcse.initializationCallback();
+        }
+      }
+    }
+
+    // Function to handle search toggle
+    function handleSearchToggle(toggle, sphinxSearch, googleSearch) {
+      if (!toggle || !sphinxSearch || !googleSearch) return;
+
+      // Check if the URL contains /stable/ or /tutorials/
+      const currentUrl = window.location.href;
+      const shouldDefaultToGoogle = currentUrl.includes('/stable/') || currentUrl.includes('/tutorials/');
+
+      // Check if there's a saved preference, otherwise use the URL-based default
+      const savedPreference = localStorage.getItem('searchPreference');
+      if (savedPreference === 'google' || (savedPreference === null && shouldDefaultToGoogle)) {
+        toggle.checked = true;
+        sphinxSearch.style.display = 'none';
+        googleSearch.style.display = 'block';
+        // Save the preference if it wasn't already saved
+        if (savedPreference === null) {
+          localStorage.setItem('searchPreference', 'google');
+        }
+        // Ensure Google search is properly initialized
+        reinitializeGoogleSearch();
+      } else {
+        toggle.checked = false;
+        sphinxSearch.style.display = 'block';
+        googleSearch.style.display = 'none';
+      }
+
+      // Update tooltip based on initial state
+      const tooltipElement = document.querySelector('.search-toggle-container');
+      if (tooltipElement) {
+        tooltipElement.setAttribute('data-bs-title', toggle.checked ? 'Google Search On' : 'Google Search Off');
+        // Reinitialize tooltip if Bootstrap's tooltip is already initialized
+        if (bootstrap && bootstrap.Tooltip) {
+          const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipElement);
+          if (tooltipInstance) tooltipInstance.dispose();
+          new bootstrap.Tooltip(tooltipElement);
+        }
+      }
+
+      // Add a data attribute to track if this toggle has been initialized
+      if (toggle.hasAttribute('data-initialized')) {
+        return; // Skip adding another event listener if already initialized
+      }
+      toggle.setAttribute('data-initialized', 'true');
+
+      toggle.addEventListener('change', function() {
+        if (this.checked) {
+          sphinxSearch.style.display = 'none';
+          googleSearch.style.display = 'block';
+          localStorage.setItem('searchPreference', 'google');
+          // Reinitialize Google search when switching to it
+          reinitializeGoogleSearch();
+          const tooltipElement = document.querySelector('.search-toggle-container');
+          if (tooltipElement) {
+            tooltipElement.setAttribute('data-bs-title', 'Google Search On');
+            // Refresh tooltip
+            if (bootstrap && bootstrap.Tooltip) {
+              const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipElement);
+              if (tooltipInstance) tooltipInstance.dispose();
+              new bootstrap.Tooltip(tooltipElement);
+            }
+          }
+          if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({
+              'event': 'search_engine_switch',
+              'event_category': 'Search',
+              'event_label': 'Google'
+            });
+            console.log('GA event sent via dataLayer: search_engine_switch - Google');
+          } else {
+            console.log('GA not available: Cannot track Google search switch');
+          }
+        } else {
+          sphinxSearch.style.display = 'block';
+          googleSearch.style.display = 'none';
+          localStorage.setItem('searchPreference', 'sphinx');
+          const tooltipElement = document.querySelector('.search-toggle-container');
+          if (tooltipElement) {
+            tooltipElement.setAttribute('data-bs-title', 'Google Search Off');
+            // Refresh tooltip
+            if (bootstrap && bootstrap.Tooltip) {
+              const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipElement);
+              if (tooltipInstance) tooltipInstance.dispose();
+              new bootstrap.Tooltip(tooltipElement);
+            }
+          }
+          if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({
+              'event': 'search_engine_switch',
+              'event_category': 'Search',
+              'event_label': 'Sphinx'
+            });
+            console.log('GA event sent via dataLayer: search_engine_switch - Sphinx');
+          } else {
+            console.log('GA not available: Cannot track Sphinx search switch');
+          }
+        }
+
+        // Also update mobile search if it exists
+        updateMobileSearch(false); // Pass false to prevent triggering another event
+      });
+    }
+
+
+    // Function to update mobile search based on current toggle state
+    function updateMobileSearch() {
+      const toggle = document.getElementById('search-toggle');
+      if (!toggle) return;
+
+      // Find mobile search container
+      const mobileSearchContainer = document.querySelector('.sidebar-header-items__end .navbar-item .search-container-wrapper');
+      if (mobileSearchContainer) {
+        const mobileSphinxSearch = mobileSearchContainer.querySelector('#sphinx-search');
+        const mobileGoogleSearch = mobileSearchContainer.querySelector('#google-search');
+
+        if (mobileSphinxSearch && mobileGoogleSearch) {
+          if (toggle.checked) {
+            mobileSphinxSearch.style.display = 'none';
+            mobileGoogleSearch.style.display = 'block';
+            // Reinitialize Google search in mobile view
+            reinitializeGoogleSearch();
+          } else {
+            mobileSphinxSearch.style.display = 'block';
+            mobileGoogleSearch.style.display = 'none';
+          }
+        }
+      }
+    }
+
+    // Initialize desktop search toggle
+    const toggle = document.getElementById('search-toggle');
+    const sphinxSearch = document.getElementById('sphinx-search');
+    const googleSearch = document.getElementById('google-search');
+    handleSearchToggle(toggle, sphinxSearch, googleSearch);
+
+    // Set placeholder text for Google search input
+    const observer = new MutationObserver(function(mutations, obs) {
+      const searchInputs = document.querySelectorAll('.gsc-input input');
+      searchInputs.forEach(input => {
+      if (input) {
+        input.setAttribute('placeholder', 'Search the docs ...');
+
+        if (!input.hasAttribute('data-tracking-added')) {
+          input.setAttribute('data-tracking-added', 'true');
+        }
+      }
+      });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    // Watch for mobile menu creation
+    const mobileMenuObserver = new MutationObserver(function(mutations) {
+      for (const mutation of mutations) {
+        const mobileSearchInputs = document.querySelectorAll('.sidebar-header-items__end .navbar-item .search-container-wrapper .gsc-input input');
+      mobileSearchInputs.forEach(input => {
+        if (input) {
+          input.setAttribute('placeholder', 'Search the docs ...');
+          input.style.paddingLeft = '36px';
+          }
+        });
+        if (mutation.addedNodes.length) {
+          // Check if the mobile search container was added
+          const mobileSearchContainer = document.querySelector('.sidebar-header-items__end .navbar-item .search-container-wrapper');
+          if (mobileSearchContainer) {
+            // Clone the toggle for mobile if needed
+            const mobileToggle = mobileSearchContainer.querySelector('#search-toggle');
+            if (mobileToggle) {
+              // Sync mobile toggle with desktop toggle
+              mobileToggle.checked = toggle.checked;
+
+              // Update mobile search display
+              updateMobileSearch();
+
+              // Add event listener to mobile toggle
+              mobileToggle.addEventListener('change', function() {
+                // Sync desktop toggle with mobile toggle
+                toggle.checked = this.checked;
+                // Trigger change event on desktop toggle to update both
+                toggle.dispatchEvent(new Event('change'));
+              });
+            }
+          }
+        }
+      }
+    });
+
+    mobileMenuObserver.observe(document.body, { childList: true, subtree: true });
+
+    // Ensure Google CSE is properly loaded
+    if (window.__gcse) {
+      window.__gcse.callback = function() {
+        // This will run after Google CSE is fully loaded
+        if (toggle && toggle.checked) {
+          // If Google search is active, make sure it's properly initialized
+          reinitializeGoogleSearch();
+        }
+      };
+    } else {
+      // If Google CSE hasn't loaded yet, set up a callback
+      window.__gcse = {
+        callback: function() {
+          if (toggle && toggle.checked) {
+            reinitializeGoogleSearch();
+          }
+        }
+      };
+    }
+  });
+</script>
+</div>
         
           <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -595,8 +1366,20 @@
           
           
           
-          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">PyPI</span></a>
+          <a href="https://discuss.pytorch.org/" title="PyTorch Forum" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discourse fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyTorch Forum</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPi</span></a>
         </li>
 </ul></div>
         
@@ -609,50 +1392,29 @@
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Core Concepts</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="autograd.html">Autograd mechanics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gradcheck.html">Gradcheck mechanics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Device and Hardware Support</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="cuda.html">CUDA semantics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hip.html">HIP (ROCm) semantics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mps.html">MPS backend</a></li>
-<li class="toctree-l1"><a class="reference internal" href="get_start_xpu.html">Getting Started on Intel GPU</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Distributed Training and Deployment</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="ddp.html">Distributed Data Parallel</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fsdp.html">FSDP Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="large_scale_deployments.html">Features for large-scale deployments</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization and Performance</span></p>
-<ul class="nav bd-sidenav">
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="amp_examples.html">Automatic Mixed Precision examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autograd.html">Autograd mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="broadcasting.html">Broadcasting semantics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cpu_threading_torchscript_inference.html">CPU threading and TorchScript inference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multiprocessing.html">Multiprocessing best practices</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extending PyTorch</span></p>
-<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cuda.html">CUDA semantics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_operators.html">PyTorch Custom Operators Landing Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ddp.html">Distributed Data Parallel</a></li>
 <li class="toctree-l1"><a class="reference internal" href="extending.html">Extending PyTorch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="extending.func.html">Extending torch.func with autograd.Function</a></li>
-<li class="toctree-l1"><a class="reference internal" href="custom_operators.html">PyTorch Custom Operators Landing Page</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Numerical Considerations</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="broadcasting.html">Broadcasting semantics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fsdp.html">FSDP Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_start_xpu.html">Getting Started on Intel GPU</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gradcheck.html">Gradcheck mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hip.html">HIP (ROCm) semantics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large_scale_deployments.html">Features for large-scale deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="libtorch_stable_abi.html">LibTorch Stable ABI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mps.html">MPS backend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multiprocessing.html">Multiprocessing best practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="numerical_accuracy.html">Numerical accuracy</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Reproducibility</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Serialization and Storage</span></p>
-<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="serialization.html">Serialization semantics</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">FAQs</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="windows.html">Windows FAQ</a></li>
 </ul>
 </div>
@@ -661,14 +1423,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -686,6 +1443,8 @@
       
         <div class="header-article-item">
 
+
+
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -695,9 +1454,9 @@
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Developer Notes</a></li>
+    <li class="breadcrumb-item"><a href="../notes.html" class="nav-link">Developer Notes</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Reproducibility</span></li>
+    <li class="breadcrumb-item active" aria-current="page">Reproducibility</li>
   </ul>
 </nav>
 </div>
@@ -712,15 +1471,15 @@
     Rate this Page
     <div class="stars">
         
-        <span class="star" data-value="1">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="1" data-value="1">★</span>
         
-        <span class="star" data-value="2">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="2" data-value="2">★</span>
         
-        <span class="star" data-value="3">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="3" data-value="3">★</span>
         
-        <span class="star" data-value="4">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="4" data-value="4">★</span>
         
-        <span class="star" data-value="5">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="5" data-value="5">★</span>
         
     </div>
 </div>
@@ -732,13 +1491,13 @@
 </div>
               
               
-              
-                
+  
 <div id="searchbox"></div>
-                <article class="bd-article">
-                  
+  <article class="bd-article">
+    
+    
   <section id="reproducibility">
-<span id="id1"></span><h1>Reproducibility<a class="headerlink" href="#reproducibility" title="Link to this heading">#</a></h1>
+<span id="id1"></span><h1>Reproducibility<a class="headerlink" href="#reproducibility" title="Permalink to this heading">#</a></h1>
 <p>Completely reproducible results are not guaranteed across PyTorch releases,
 individual commits, or different platforms. Furthermore, results may not be
 reproducible between CPU and GPU executions, even when using identical seeds.</p>
@@ -756,28 +1515,28 @@ save time in development by facilitating experimentation, debugging, and
 regression testing.</p>
 </div>
 <section id="controlling-sources-of-randomness">
-<h2>Controlling sources of randomness<a class="headerlink" href="#controlling-sources-of-randomness" title="Link to this heading">#</a></h2>
+<h2>Controlling sources of randomness<a class="headerlink" href="#controlling-sources-of-randomness" title="Permalink to this heading">#</a></h2>
 <section id="pytorch-random-number-generator">
-<h3>PyTorch random number generator<a class="headerlink" href="#pytorch-random-number-generator" title="Link to this heading">#</a></h3>
-<p>You can use <a class="reference internal" href="../python-api/generated/torch.manual_seed.html#torch.manual_seed" title="torch.manual_seed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.manual_seed()</span></code></a> to seed the RNG for all devices (both
+<h3>PyTorch random number generator<a class="headerlink" href="#pytorch-random-number-generator" title="Permalink to this heading">#</a></h3>
+<p>You can use <a class="reference internal" href="../generated/torch.manual_seed.html#torch.manual_seed" title="torch.manual_seed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.manual_seed()</span></code></a> to seed the RNG for all devices (both
 CPU and CUDA):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
 <span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Some PyTorch operations may use random numbers internally.
-<a class="reference internal" href="../python-api/generated/torch.svd_lowrank.html#torch.svd_lowrank" title="torch.svd_lowrank"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.svd_lowrank()</span></code></a> does this, for instance. Consequently, calling it
+<a class="reference internal" href="../generated/torch.svd_lowrank.html#torch.svd_lowrank" title="torch.svd_lowrank"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.svd_lowrank()</span></code></a> does this, for instance. Consequently, calling it
 multiple times back-to-back with the same input arguments may give different
-results. However, as long as <a class="reference internal" href="../python-api/generated/torch.manual_seed.html#torch.manual_seed" title="torch.manual_seed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.manual_seed()</span></code></a> is set to a constant
+results. However, as long as <a class="reference internal" href="../generated/torch.manual_seed.html#torch.manual_seed" title="torch.manual_seed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.manual_seed()</span></code></a> is set to a constant
 at the beginning of an application and all other sources of nondeterminism have
 been eliminated, the same series of random numbers will be generated each time
 the application is run in the same environment.</p>
 <p>It is also possible to obtain identical results from an operation that uses
-random numbers by setting <a class="reference internal" href="../python-api/generated/torch.manual_seed.html#torch.manual_seed" title="torch.manual_seed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.manual_seed()</span></code></a> to the same value between
+random numbers by setting <a class="reference internal" href="../generated/torch.manual_seed.html#torch.manual_seed" title="torch.manual_seed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.manual_seed()</span></code></a> to the same value between
 subsequent calls.</p>
 </section>
 <section id="python">
-<h3>Python<a class="headerlink" href="#python" title="Link to this heading">#</a></h3>
+<h3>Python<a class="headerlink" href="#python" title="Permalink to this heading">#</a></h3>
 <p>For custom operators, you might need to set python seed as well:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
 <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -785,7 +1544,7 @@ subsequent calls.</p>
 </div>
 </section>
 <section id="random-number-generators-in-other-libraries">
-<h3>Random number generators in other libraries<a class="headerlink" href="#random-number-generators-in-other-libraries" title="Link to this heading">#</a></h3>
+<h3>Random number generators in other libraries<a class="headerlink" href="#random-number-generators-in-other-libraries" title="Permalink to this heading">#</a></h3>
 <p>If you or any of the libraries you are using rely on NumPy, you can seed the global
 NumPy RNG with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -800,7 +1559,7 @@ need to be seeded consistently as well.</p>
 the documentation for those libraries to see how to set consistent seeds for them.</p>
 </section>
 <section id="cuda-convolution-benchmarking">
-<h3>CUDA convolution benchmarking<a class="headerlink" href="#cuda-convolution-benchmarking" title="Link to this heading">#</a></h3>
+<h3>CUDA convolution benchmarking<a class="headerlink" href="#cuda-convolution-benchmarking" title="Permalink to this heading">#</a></h3>
 <p>The cuDNN library, used by CUDA convolution operations, can be a source of nondeterminism
 across multiple executions of an application. When a cuDNN convolution is called with a
 new set of size parameters, an optional feature can run multiple convolution algorithms,
@@ -819,17 +1578,17 @@ setting discussed below.</p>
 </section>
 </section>
 <section id="avoiding-nondeterministic-algorithms">
-<h2>Avoiding nondeterministic algorithms<a class="headerlink" href="#avoiding-nondeterministic-algorithms" title="Link to this heading">#</a></h2>
-<p><a class="reference internal" href="../python-api/generated/torch.use_deterministic_algorithms.html#torch.use_deterministic_algorithms" title="torch.use_deterministic_algorithms"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.use_deterministic_algorithms()</span></code></a> lets you configure PyTorch to use
+<h2>Avoiding nondeterministic algorithms<a class="headerlink" href="#avoiding-nondeterministic-algorithms" title="Permalink to this heading">#</a></h2>
+<p><a class="reference internal" href="../generated/torch.use_deterministic_algorithms.html#torch.use_deterministic_algorithms" title="torch.use_deterministic_algorithms"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.use_deterministic_algorithms()</span></code></a> lets you configure PyTorch to use
 deterministic algorithms instead of nondeterministic ones where available, and
 to throw an error if an operation is known to be nondeterministic (and without
 a deterministic alternative).</p>
-<p>Please check the documentation for <a class="reference internal" href="../python-api/generated/torch.use_deterministic_algorithms.html#torch.use_deterministic_algorithms" title="torch.use_deterministic_algorithms"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.use_deterministic_algorithms()</span></code></a>
+<p>Please check the documentation for <a class="reference internal" href="../generated/torch.use_deterministic_algorithms.html#torch.use_deterministic_algorithms" title="torch.use_deterministic_algorithms"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.use_deterministic_algorithms()</span></code></a>
 for a full list of affected operations. If an operation does not act correctly
 according to the documentation, or if you need a deterministic implementation
 of an operation that does not have one, please submit an issue:
 <a class="github reference external" href="https://github.com/pytorch/pytorch/issues?q=label:%22module:%20determinism%22">pytorch/pytorch#issues</a></p>
-<p>For example, running the nondeterministic CUDA implementation of <a class="reference internal" href="../python-api/generated/torch.Tensor.index_add_.html#torch.Tensor.index_add_" title="torch.Tensor.index_add_"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.Tensor.index_add_()</span></code></a>
+<p>For example, running the nondeterministic CUDA implementation of <a class="reference internal" href="../generated/torch.Tensor.index_add_.html#torch.Tensor.index_add_" title="torch.Tensor.index_add_"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.Tensor.index_add_()</span></code></a>
 will throw an error:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">torch</span><span class="o">.</span><span class="n">use_deterministic_algorithms</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
@@ -840,7 +1599,7 @@ will throw an error:</p>
 <span class="x">&#39;torch.use_deterministic_algorithms(True)&#39;. ...</span>
 </pre></div>
 </div>
-<p>When <a class="reference internal" href="../python-api/generated/torch.bmm.html#torch.bmm" title="torch.bmm"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.bmm()</span></code></a> is called with sparse-dense CUDA tensors it typically uses a
+<p>When <a class="reference internal" href="../generated/torch.bmm.html#torch.bmm" title="torch.bmm"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.bmm()</span></code></a> is called with sparse-dense CUDA tensors it typically uses a
 nondeterministic algorithm, but when the deterministic flag is turned on, its alternate
 deterministic implementation will be used:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
@@ -856,28 +1615,28 @@ deterministic implementation will be used:</p>
 should set the environment variable <cite>CUBLAS_WORKSPACE_CONFIG</cite> according to CUDA documentation:
 <a class="reference external" href="https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility">https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility</a></p>
 <section id="cuda-convolution-determinism">
-<h3>CUDA convolution determinism<a class="headerlink" href="#cuda-convolution-determinism" title="Link to this heading">#</a></h3>
+<h3>CUDA convolution determinism<a class="headerlink" href="#cuda-convolution-determinism" title="Permalink to this heading">#</a></h3>
 <p>While disabling CUDA convolution benchmarking (discussed above) ensures that
 CUDA selects the same algorithm each time an application is run, that algorithm
 itself may be nondeterministic, unless either
 <code class="code docutils literal notranslate"><span class="pre">torch.use_deterministic_algorithms(True)</span></code> or
 <code class="code docutils literal notranslate"><span class="pre">torch.backends.cudnn.deterministic</span> <span class="pre">=</span> <span class="pre">True</span></code> is set. The latter setting
-controls only this behavior, unlike <a class="reference internal" href="../python-api/generated/torch.use_deterministic_algorithms.html#torch.use_deterministic_algorithms" title="torch.use_deterministic_algorithms"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.use_deterministic_algorithms()</span></code></a>
+controls only this behavior, unlike <a class="reference internal" href="../generated/torch.use_deterministic_algorithms.html#torch.use_deterministic_algorithms" title="torch.use_deterministic_algorithms"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.use_deterministic_algorithms()</span></code></a>
 which will make other PyTorch operations behave deterministically, too.</p>
 </section>
 <section id="cuda-rnn-and-lstm">
-<h3>CUDA RNN and LSTM<a class="headerlink" href="#cuda-rnn-and-lstm" title="Link to this heading">#</a></h3>
+<h3>CUDA RNN and LSTM<a class="headerlink" href="#cuda-rnn-and-lstm" title="Permalink to this heading">#</a></h3>
 <p>In some versions of CUDA, RNNs and LSTM networks may have non-deterministic behavior.
-See <a class="reference internal" href="../python-api/generated/torch.nn.RNN.html#torch.nn.RNN" title="torch.nn.RNN"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.nn.RNN()</span></code></a> and <a class="reference internal" href="../python-api/generated/torch.nn.LSTM.html#torch.nn.LSTM" title="torch.nn.LSTM"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.nn.LSTM()</span></code></a> for details and workarounds.</p>
+See <a class="reference internal" href="../generated/torch.nn.RNN.html#torch.nn.RNN" title="torch.nn.RNN"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.nn.RNN()</span></code></a> and <a class="reference internal" href="../generated/torch.nn.LSTM.html#torch.nn.LSTM" title="torch.nn.LSTM"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.nn.LSTM()</span></code></a> for details and workarounds.</p>
 </section>
 <section id="filling-uninitialized-memory">
-<h3>Filling uninitialized memory<a class="headerlink" href="#filling-uninitialized-memory" title="Link to this heading">#</a></h3>
-<p>Operations like <a class="reference internal" href="../python-api/generated/torch.empty.html#torch.empty" title="torch.empty"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.empty()</span></code></a> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.Tensor.resize_()</span></code> can return
+<h3>Filling uninitialized memory<a class="headerlink" href="#filling-uninitialized-memory" title="Permalink to this heading">#</a></h3>
+<p>Operations like <a class="reference internal" href="../generated/torch.empty.html#torch.empty" title="torch.empty"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.empty()</span></code></a> and <a class="reference internal" href="../generated/torch.Tensor.resize_.html#torch.Tensor.resize_" title="torch.Tensor.resize_"><code class="xref py py-meth docutils literal notranslate"><span class="pre">torch.Tensor.resize_()</span></code></a> can return
 tensors with uninitialized memory that contain undefined values. Using such a
 tensor as an input to another operation is invalid if determinism is required,
 because the output will be nondeterministic. But there is nothing to actually
 prevent such invalid code from being run. So for safety,
-<a class="reference internal" href="../python-api/deterministic.html#torch.utils.deterministic.fill_uninitialized_memory" title="torch.utils.deterministic.fill_uninitialized_memory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">torch.utils.deterministic.fill_uninitialized_memory</span></code></a> is set to <code class="docutils literal notranslate"><span class="pre">True</span></code>
+<a class="reference internal" href="../deterministic.html#torch.utils.deterministic.fill_uninitialized_memory" title="torch.utils.deterministic.fill_uninitialized_memory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">torch.utils.deterministic.fill_uninitialized_memory</span></code></a> is set to <code class="docutils literal notranslate"><span class="pre">True</span></code>
 by default, which will fill the uninitialized memory with a known value if
 <code class="code docutils literal notranslate"><span class="pre">torch.use_deterministic_algorithms(True)</span></code> is set. This will prevent the
 possibility of this kind of nondeterministic behavior.</p>
@@ -887,8 +1646,8 @@ operation, then this setting can be turned off for better performance.</p>
 </section>
 </section>
 <section id="dataloader">
-<h2>DataLoader<a class="headerlink" href="#dataloader" title="Link to this heading">#</a></h2>
-<p>DataLoader will reseed workers following <a class="reference internal" href="../python-api/data.html#data-loading-randomness"><span class="std std-ref">Randomness in multi-process data loading</span></a> algorithm.
+<h2>DataLoader<a class="headerlink" href="#dataloader" title="Permalink to this heading">#</a></h2>
+<p>DataLoader will reseed workers following <a class="reference internal" href="../data.html#data-loading-randomness"><span class="std std-ref">Randomness in multi-process data loading</span></a> algorithm.
 Use <code class="xref py py-meth docutils literal notranslate"><span class="pre">worker_init_fn()</span></code> and <cite>generator</cite> to preserve reproducibility:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">seed_worker</span><span class="p">(</span><span class="n">worker_id</span><span class="p">):</span>
     <span class="n">worker_seed</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">initial_seed</span><span class="p">()</span> <span class="o">%</span> <span class="mi">2</span><span class="o">**</span><span class="mi">32</span>
@@ -911,8 +1670,8 @@ Use <code class="xref py py-meth docutils literal notranslate"><span class="pre"
 </section>
 
 
-                </article>
-              
+  </article>
+
               
               
                 <footer class="bd-footer-article">
@@ -925,24 +1684,65 @@ Use <code class="xref py py-meth docutils literal notranslate"><span class="pre"
     Rate this Page
     <div class="stars">
         
-        <span class="star" data-value="1">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="1" data-value="1">★</span>
         
-        <span class="star" data-value="2">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="2" data-value="2">★</span>
         
-        <span class="star" data-value="3">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="3" data-value="3">★</span>
         
-        <span class="star" data-value="4">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="4" data-value="4">★</span>
         
-        <span class="star" data-value="5">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="5" data-value="5">★</span>
         
     </div>
 </div>
 
   <div class="feedback-send">
-    <button class="feedback-btn" onclick="openGitHubIssue()">Send Feedback</button>
+    <button class="feedback-btn"
+            onclick="openGitHubIssue()"
+            data-bs-title="Create a GitHub Issue"
+            data-bs-placement="bottom"
+            data-bs-toggle="tooltip">Send Feedback
+    </button>
   </div>
 </div>
+
+
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="numerical_accuracy.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Numerical accuracy</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="serialization.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Serialization semantics</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
+
+<div class="footer-info">
+  <p class="copyright">
+    
+      
+        © Copyright PyTorch Contributors.
+      
+      <br/>
+    
+  </p>
+
+  <p class="theme-version">
+    Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  </p>
+</div></div>
   
 </div>
                 </footer>
@@ -977,11 +1777,10 @@ Use <code class="xref py py-meth docutils literal notranslate"><span class="pre"
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc">
+                <div class="bd-sidebar-secondary bd-toc">
 <div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
+    
+       <div class="sidebar-secondary-item">
 <div
     id="pst-page-navigation-heading-2"
     class="page-toc tocsection onthispage">
@@ -1005,12 +1804,12 @@ Use <code class="xref py py-meth docutils literal notranslate"><span class="pre"
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataloader">DataLoader</a></li>
 </ul>
   </nav></div>
-
-  <div class="sidebar-secondary-item">
+    
+       <div class="sidebar-secondary-item">
 
   
   <div class="tocsection editthispage">
-    <a href="https://github.com/pytorch/pytorch/edit/main/docs/source/notes/randomness.rst">
+    <a href="https://github.com/pytorch/pytorch/edit/main/docs/cpp/source/notes/randomness.rst">
       <i class="fa-solid fa-pencil"></i>
       
       
@@ -1021,21 +1820,22 @@ Use <code class="xref py py-meth docutils literal notranslate"><span class="pre"
     </a>
   </div>
 </div>
-
-  <div class="sidebar-secondary-item">
+    
+       <div class="sidebar-secondary-item">
     <div class="tocsection sourcelink">
       <a href="../_sources/notes/randomness.rst.txt">
         <i class="fa-solid fa-file-lines"></i> Show Source
       </a>
     </div>
 </div>
+    
 
-</div>
+
 <div class="sidebar-secondary-item">
   <div class="sidebar-heading">PyTorch Community</div>
   <ul style="list-style-type: none; padding: 0;">
   
-   <li><a class="nav-link nav-external" href="community/index.html" style="color: var(--pst-color-text-muted)">PyTorch Governance</a></li>
+   <li><a class="nav-link nav-external" href="https://pytorch.org/docs/stable/community/index.html" style="color: var(--pst-color-text-muted)">PyTorch Governance</a></li>
   
    <li><a class="nav-link nav-external" href="https://pytorch.org/docs/stable/community/design.html" style="color: var(--pst-color-text-muted)">PyTorch Design Philosophy</a></li>
   
@@ -1043,6 +1843,8 @@ Use <code class="xref py py-meth docutils literal notranslate"><span class="pre"
   
   </ul>
 </div>
+
+
 <div class="sidebar-secondary-item">
  <div class="sidebar-heading">Language Bindings</div>
  <ul style="list-style-type: none; padding: 0;">
@@ -1055,9 +1857,11 @@ Use <code class="xref py py-meth docutils literal notranslate"><span class="pre"
  
  </ul>
 </div>
+
+
 <div class="sidebar-secondary-item">
   <div class="sidebar-heading">PyTorch Libraries</div>
-  <ul style="list-style-type: none; padding: 0;">
+  <ul style="list-style-type: none; padding: 0; padding-bottom: 80px;">
   
    <li><a class="nav-link nav-external" href="https://pytorch.org/audio/stable/" style="color: var(--pst-color-text-muted)">torchaudio</a></li>
   
@@ -1077,6 +1881,7 @@ Use <code class="xref py py-meth docutils literal notranslate"><span class="pre"
   
   </ul>
 </div>
+
 </div>
 </div>
               
@@ -1091,50 +1896,8 @@ Use <code class="xref py py-meth docutils literal notranslate"><span class="pre"
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
-
-  <footer class="bd-footer">
-    
-    <div class="bd-footer__inner bd-page-width">
-      
-        <div class="footer-items__start">
-          
-            <div class="footer-item">
-
-  <p class="copyright">
-    
-      © Copyright PyTorch Contributors.
-      <br/>
-    
-  </p>
-</div>
-          
-            <div class="footer-item">
-
-  <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.0.
-    <br/>
-  </p>
-</div>
-          
-        </div>
-      
-    
-    
-      <div class="footer-items__end">
-        
-          <div class="footer-item">
-<p class="theme-version">
-  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
-</p></div>
-        
-      </div>
-    
-   </div>
-   
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
    <div class="container-fluid docs-tutorials-resources" id="docs-tutorials-resources">
       <div class="container">
@@ -1232,8 +1995,52 @@ Use <code class="xref py py-meth docutils literal notranslate"><span class="pre"
     <img class="close-button" src="../_static/img/pytorch-x.svg">
   </div>
 </div>
-  </footer>
+ </footer>
+   
+  <footer class="bd-footer"><div class="cookie-banner-wrapper">
+  <div class="container">
+    <p class="gdpr-notice">To analyze traffic and optimize your experience, we serve cookies on this site. By clicking or navigating, you agree to allow our usage of cookies. As the current maintainers of this site, Facebook’s Cookies Policy applies. Learn more, including about available controls: <a href="https://www.facebook.com/policies/cookies/">Cookies Policy</a>.</p>
+    <img class="close-button" src="../_static/img/pytorch-x.svg">
+  </div>
+</div>
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
 
+  <p class="copyright">
+    
+      © Copyright PyTorch Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
 
   </body>
 </html>

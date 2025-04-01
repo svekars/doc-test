@@ -1,12 +1,21 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+<meta property="og:title" content="Extending PyTorch" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://pytorch.org/notes/extending.html" />
+<meta property="og:site_name" content="PyTorch" />
+<meta property="og:description" content="In this note we’ll cover ways of extending torch.nn, torch.autograd, torch, and writing custom C++ extensions. Adding new operators: PyTorch offers a large library of operators that work on Tensors..." />
+<meta property="og:image" content="https://pytorch.org/docs/stable/_static/img/pytorch-logo-dark.svg" />
+<meta property="og:image:alt" content="PyTorch" />
+<meta name="description" content="In this note we’ll cover ways of extending torch.nn, torch.autograd, torch, and writing custom C++ extensions. Adding new operators: PyTorch offers a large library of operators that work on Tensors..." />
 
     <title>Extending PyTorch &#8212; PyTorch main documentation</title>
   
@@ -16,77 +25,112 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/katex-math.css?v=91adb8b6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/jit.css?v=8de1ea5d" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=baa440dc" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <script src="../_static/documentation_options.js?v=a8da1a53"></script>
-    <script src="../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=940804e7"></script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/katex-math.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/jit.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notes/extending';</script>
-    <script src="../_static/js/star-rating.js?v=8861fcb6"></script>
-    <script src="../_static/js/send-feedback.js?v=5646bf45"></script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://pytorch.org/docs/pytorch-versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'main';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Extending torch.func with autograd.Function" href="extending.func.html" />
-    <link rel="prev" title="Multiprocessing best practices" href="multiprocessing.html" />
+    <link rel="prev" title="Distributed Data Parallel" href="ddp.html" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.6.0 )" />
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script type="text/javascript" src="../_static/js/send-feedback.js"></script>
-<script type="text/javascript" src="../_static/js/star-rating.js"></script>
-<script type="text/javascript" src="../_static/js/cookie-banner.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../_static/css/theme.css">
+<script type="text/javascript" src="../_static/js/theme.js"></script>
+<link rel="stylesheet" href="../_static/webfonts/all.min.css">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TEST12345"></script>
-    <script type="text/javascript">
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8XT4PS"
+   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+   <!-- End Google Tag Manager (noscript) -->
+   <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   j.onload = function() {
+     window.dispatchEvent(new Event('gtm_loaded'));
+     console.log('GTM loaded successfully');
+   };
+   })(window,document,'script','dataLayer','GTM-T8XT4PS');
+</script>
+ <!-- End Google Tag Manager -->
+ <!-- Facebook Pixel Code -->
+<script>
+   !function(f,b,e,v,n,t,s)
+   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+   if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+   n.queue=[];t=b.createElement(e);t.async=!0;
+   t.src=v;s=b.getElementsByTagName(e)[0];
+   s.parentNode.insertBefore(t,s)}(window,document,'script',
+   'https://connect.facebook.net/en_US/fbevents.js');
+   fbq('init', '243028289693773');
+   fbq('track', 'PageView');
+</script>
+<noscript>
+   <img height="1" width="1" src="https://www.facebook.com/tr?id=243028289693773&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
 
-      gtag('config', 'G-TEST12345');
-    </script>
+<script async src="https://cse.google.com/cse.js?cx=e65585f8c3ea1440e"></script>
+
+   <!--
+   Search engines should not index the main version of documentation.
+   Stable documentation are built without release == 'main'.
+   -->
+   <meta name="robots" content="noindex">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
 
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
-  
-  
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-<body data-feedback-url="https://github.com/pytorch/pytorch">
-  <div class="container-fluid header-holder tutorials-header" id="header-holder">
-  <div class="container">
+<body data-feedback-url="https://github.com/pytorch/pytorch" class="pytorch-body">
+     <div class="container-fluid header-holder tutorials-header" id="header-holder">
+   <div class="header-container-wrapper">
     <div class="header-container">
       <a class="header-logo" href="" aria-label="PyTorch"></a>
 
@@ -277,10 +321,167 @@
         </ul>
       </div>
 
-      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu">
+        <i class="fa-solid fa-ellipsis"></i>
+      </a>
+    </div>
+  </div>
+ </div>
+
+ <!-- Begin Mobile Menu -->
+
+<div class="mobile-main-menu">
+  <div class="container-fluid">
+    <div class="header-container-wrapper">
+      <div class="mobile-main-menu-header-container">
+        <a class="header-logo" href="" aria-label="PyTorch"></a>
+        <a class="main-menu-close-button" href="#" data-behavior="close-mobile-menu">
+          <i class="fa-solid fa-xmark"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-main-menu-links-container">
+    <div class="main-menu">
+      <ul>
+         <li class="resources-mobile-menu-title">
+           <a>Learn</a>
+         </li>
+         <ul class="resources-mobile-menu-items">
+           <li>
+             <a href="">Get Started</a>
+           </li>
+           <li>
+             <a href="">Tutorials</a>
+           </li>
+           <li>
+             <a href="">Learn the Basics</a>
+           </li>
+           <li>
+             <a href="">PyTorch Recipes</a>
+           </li>
+           <li>
+             <a href="">Introduction to PyTorch - YouTube Series</a>
+           </li>
+         </ul>
+         <li class="resources-mobile-menu-title">
+           <a>Ecosystem</a>
+         </li>
+         <ul class="resources-mobile-menu-items">
+           <li>
+             <a href="">Tools</a>
+           </li>
+           <li>
+             <a href="">Community</a>
+           </li>
+           <li>
+             <a href="">Forums</a>
+           </li>
+           <li>
+             <a href="">Developer Resources</a>
+           </li>
+           <li>
+             <a href="">Contributor Awards - 2024</a>
+           </li>
+         </ul>
+
+         <li class="resources-mobile-menu-title">
+           <a>Edge</a>
+         </li>
+
+         <ul class="resources-mobile-menu-items">
+           <li>
+             <a href="">About PyTorch Edge</a>
+           </li>
+
+           <li>
+             <a href="">ExecuTorch</a>
+           </li>
+           <li>
+             <a href="">ExecuTorch Documentation</a>
+           </li>
+         </ul>
+
+         <li class="resources-mobile-menu-title">
+           <a>Docs</a>
+         </li>
+
+         <ul class="resources-mobile-menu-items">
+          <li>
+            <a href="">PyTorch</a>
+          </li>
+
+          <li>
+            <a href="">PyTorch Domains</a>
+          </li>
+        </ul>
+
+        <li class="resources-mobile-menu-title">
+          <a>Blog & News</a>
+        </li>
+
+         <ul class="resources-mobile-menu-items">
+          <li>
+            <a href="">PyTorch Blog</a>
+          </li>
+          <li>
+            <a href="">Community Blog</a>
+          </li>
+
+          <li>
+            <a href="">Videos</a>
+          </li>
+
+          <li>
+            <a href="">Community Stories</a>
+          </li>
+          <li>
+            <a href="">Events</a>
+          </li>
+          <li>
+             <a href="">Newsletter</a>
+           </li>
+        </ul>
+
+        <li class="resources-mobile-menu-title">
+          <a>About</a>
+        </li>
+
+        <ul class="resources-mobile-menu-items">
+          <li>
+            <a href="">PyTorch Foundation</a>
+          </li>
+          <li>
+            <a href="">Governing Board</a>
+          </li>
+          <li>
+             <a href="">Cloud Credit Program</a>
+          </li>
+          <li>
+             <a href="">Technical Advisory Council</a>
+          </li>
+          <li>
+             <a href="">Staff</a>
+          </li>
+          <li>
+             <a href="">Contact Us</a>
+          </li>
+        </ul>
+      </ul>
     </div>
   </div>
 </div>
+
+<!-- End Mobile Menu -->
+   
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -289,8 +490,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -298,6 +510,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -305,8 +518,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -321,6 +534,30 @@
   
   
   <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
     
       <div class="navbar-item">
 
@@ -350,14 +587,14 @@
   <ul class="bd-navbar-elements navbar-nav">
     
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../python-api/index.html">
+  <a class="nav-link nav-internal" href="../pytorch-api.html">
     Python API
   </a>
 </li>
 
 
 <li class="nav-item current active">
-  <a class="nav-link nav-internal" href="index.html">
+  <a class="nav-link nav-internal" href="../notes.html">
     Developer Notes
   </a>
 </li>
@@ -377,44 +614,305 @@
     
     <div class="navbar-header-items__end">
       
-        <div class="navbar-item navbar-persistent--container">
-          
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
-        </div>
-      
       
         <div class="navbar-item">
-<div class="version-switcher__container dropdown pst-js-only">
-  <button id="pst-version-switcher-button-2"
-    type="button"
-    class="version-switcher__button btn btn-sm dropdown-toggle"
-    data-bs-toggle="dropdown"
-    aria-haspopup="listbox"
-    aria-controls="pst-version-switcher-list-2"
-    aria-label="Version switcher list"
-  >
-    Choose version  <!-- this text may get changed later by javascript -->
-    <span class="caret"></span>
-  </button>
-  <div id="pst-version-switcher-list-2"
-    class="version-switcher__menu dropdown-menu list-group-flush py-0"
-    role="listbox" aria-labelledby="pst-version-switcher-button-2">
-    <!-- dropdown will be populated by javascript on page load -->
+<div class="search-container-wrapper">
+  <div id="sphinx-search" class="search-container">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
   </div>
-</div></div>
+
+  <div id="google-search" class="search-container" style="display:none;">
+    <div class="gcse-search-wrapper">
+      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      <div class="gcse-search"></div>
+    </div>
+  </div>
+
+  <div class="search-toggle-container" data-bs-title="Google Search Off" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <div class="search-toggle-inner">
+      <label class="switch">
+        <input type="checkbox" id="search-toggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Define the search callback
+    const myWebSearchStartingCallback = (gname, query) => {
+      if (typeof dataLayer !== 'undefined' && query) {
+        dataLayer.push({
+          'event': 'google_search',
+          'search_term': query,
+          'event_category': 'Search',
+          'event_label': 'Google Search'
+        });
+        console.log('GA event sent via callback: google_search - ' + query);
+      }
+      return '';
+    };
+
+    // Set up the GCSE search callbacks
+    window.__gcse || (window.__gcse = {});
+    window.__gcse.searchCallbacks = {
+      web: {
+        starting: myWebSearchStartingCallback,
+      },
+    };
+    if (window.location.pathname.includes('/search.html')) {
+      document.body.classList.add('search-page');
+    }
+
+    // Function to reinitialize Google CSE
+    function reinitializeGoogleSearch() {
+      if (window.__gcse) {
+        // Force Google CSE to reinitialize
+        if (window.__gcse.initializationCallback) {
+          window.__gcse.initializationCallback();
+        }
+      }
+    }
+
+    // Function to handle search toggle
+    function handleSearchToggle(toggle, sphinxSearch, googleSearch) {
+      if (!toggle || !sphinxSearch || !googleSearch) return;
+
+      // Check if the URL contains /stable/ or /tutorials/
+      const currentUrl = window.location.href;
+      const shouldDefaultToGoogle = currentUrl.includes('/stable/') || currentUrl.includes('/tutorials/');
+
+      // Check if there's a saved preference, otherwise use the URL-based default
+      const savedPreference = localStorage.getItem('searchPreference');
+      if (savedPreference === 'google' || (savedPreference === null && shouldDefaultToGoogle)) {
+        toggle.checked = true;
+        sphinxSearch.style.display = 'none';
+        googleSearch.style.display = 'block';
+        // Save the preference if it wasn't already saved
+        if (savedPreference === null) {
+          localStorage.setItem('searchPreference', 'google');
+        }
+        // Ensure Google search is properly initialized
+        reinitializeGoogleSearch();
+      } else {
+        toggle.checked = false;
+        sphinxSearch.style.display = 'block';
+        googleSearch.style.display = 'none';
+      }
+
+      // Update tooltip based on initial state
+      const tooltipElement = document.querySelector('.search-toggle-container');
+      if (tooltipElement) {
+        tooltipElement.setAttribute('data-bs-title', toggle.checked ? 'Google Search On' : 'Google Search Off');
+        // Reinitialize tooltip if Bootstrap's tooltip is already initialized
+        if (bootstrap && bootstrap.Tooltip) {
+          const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipElement);
+          if (tooltipInstance) tooltipInstance.dispose();
+          new bootstrap.Tooltip(tooltipElement);
+        }
+      }
+
+      // Add a data attribute to track if this toggle has been initialized
+      if (toggle.hasAttribute('data-initialized')) {
+        return; // Skip adding another event listener if already initialized
+      }
+      toggle.setAttribute('data-initialized', 'true');
+
+      toggle.addEventListener('change', function() {
+        if (this.checked) {
+          sphinxSearch.style.display = 'none';
+          googleSearch.style.display = 'block';
+          localStorage.setItem('searchPreference', 'google');
+          // Reinitialize Google search when switching to it
+          reinitializeGoogleSearch();
+          const tooltipElement = document.querySelector('.search-toggle-container');
+          if (tooltipElement) {
+            tooltipElement.setAttribute('data-bs-title', 'Google Search On');
+            // Refresh tooltip
+            if (bootstrap && bootstrap.Tooltip) {
+              const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipElement);
+              if (tooltipInstance) tooltipInstance.dispose();
+              new bootstrap.Tooltip(tooltipElement);
+            }
+          }
+          if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({
+              'event': 'search_engine_switch',
+              'event_category': 'Search',
+              'event_label': 'Google'
+            });
+            console.log('GA event sent via dataLayer: search_engine_switch - Google');
+          } else {
+            console.log('GA not available: Cannot track Google search switch');
+          }
+        } else {
+          sphinxSearch.style.display = 'block';
+          googleSearch.style.display = 'none';
+          localStorage.setItem('searchPreference', 'sphinx');
+          const tooltipElement = document.querySelector('.search-toggle-container');
+          if (tooltipElement) {
+            tooltipElement.setAttribute('data-bs-title', 'Google Search Off');
+            // Refresh tooltip
+            if (bootstrap && bootstrap.Tooltip) {
+              const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipElement);
+              if (tooltipInstance) tooltipInstance.dispose();
+              new bootstrap.Tooltip(tooltipElement);
+            }
+          }
+          if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({
+              'event': 'search_engine_switch',
+              'event_category': 'Search',
+              'event_label': 'Sphinx'
+            });
+            console.log('GA event sent via dataLayer: search_engine_switch - Sphinx');
+          } else {
+            console.log('GA not available: Cannot track Sphinx search switch');
+          }
+        }
+
+        // Also update mobile search if it exists
+        updateMobileSearch(false); // Pass false to prevent triggering another event
+      });
+    }
+
+
+    // Function to update mobile search based on current toggle state
+    function updateMobileSearch() {
+      const toggle = document.getElementById('search-toggle');
+      if (!toggle) return;
+
+      // Find mobile search container
+      const mobileSearchContainer = document.querySelector('.sidebar-header-items__end .navbar-item .search-container-wrapper');
+      if (mobileSearchContainer) {
+        const mobileSphinxSearch = mobileSearchContainer.querySelector('#sphinx-search');
+        const mobileGoogleSearch = mobileSearchContainer.querySelector('#google-search');
+
+        if (mobileSphinxSearch && mobileGoogleSearch) {
+          if (toggle.checked) {
+            mobileSphinxSearch.style.display = 'none';
+            mobileGoogleSearch.style.display = 'block';
+            // Reinitialize Google search in mobile view
+            reinitializeGoogleSearch();
+          } else {
+            mobileSphinxSearch.style.display = 'block';
+            mobileGoogleSearch.style.display = 'none';
+          }
+        }
+      }
+    }
+
+    // Initialize desktop search toggle
+    const toggle = document.getElementById('search-toggle');
+    const sphinxSearch = document.getElementById('sphinx-search');
+    const googleSearch = document.getElementById('google-search');
+    handleSearchToggle(toggle, sphinxSearch, googleSearch);
+
+    // Set placeholder text for Google search input
+    const observer = new MutationObserver(function(mutations, obs) {
+      const searchInputs = document.querySelectorAll('.gsc-input input');
+      searchInputs.forEach(input => {
+      if (input) {
+        input.setAttribute('placeholder', 'Search the docs ...');
+
+        if (!input.hasAttribute('data-tracking-added')) {
+          input.setAttribute('data-tracking-added', 'true');
+        }
+      }
+      });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    // Watch for mobile menu creation
+    const mobileMenuObserver = new MutationObserver(function(mutations) {
+      for (const mutation of mutations) {
+        const mobileSearchInputs = document.querySelectorAll('.sidebar-header-items__end .navbar-item .search-container-wrapper .gsc-input input');
+      mobileSearchInputs.forEach(input => {
+        if (input) {
+          input.setAttribute('placeholder', 'Search the docs ...');
+          input.style.paddingLeft = '36px';
+          }
+        });
+        if (mutation.addedNodes.length) {
+          // Check if the mobile search container was added
+          const mobileSearchContainer = document.querySelector('.sidebar-header-items__end .navbar-item .search-container-wrapper');
+          if (mobileSearchContainer) {
+            // Clone the toggle for mobile if needed
+            const mobileToggle = mobileSearchContainer.querySelector('#search-toggle');
+            if (mobileToggle) {
+              // Sync mobile toggle with desktop toggle
+              mobileToggle.checked = toggle.checked;
+
+              // Update mobile search display
+              updateMobileSearch();
+
+              // Add event listener to mobile toggle
+              mobileToggle.addEventListener('change', function() {
+                // Sync desktop toggle with mobile toggle
+                toggle.checked = this.checked;
+                // Trigger change event on desktop toggle to update both
+                toggle.dispatchEvent(new Event('change'));
+              });
+            }
+          }
+        }
+      }
+    });
+
+    mobileMenuObserver.observe(document.body, { childList: true, subtree: true });
+
+    // Ensure Google CSE is properly loaded
+    if (window.__gcse) {
+      window.__gcse.callback = function() {
+        // This will run after Google CSE is fully loaded
+        if (toggle && toggle.checked) {
+          // If Google search is active, make sure it's properly initialized
+          reinitializeGoogleSearch();
+        }
+      };
+    } else {
+      // If Google CSE hasn't loaded yet, set up a callback
+      window.__gcse = {
+        callback: function() {
+          if (toggle && toggle.checked) {
+            reinitializeGoogleSearch();
+          }
+        }
+      };
+    }
+  });
+</script>
+</div>
       
         <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -451,8 +949,20 @@
           
           
           
-          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">PyPI</span></a>
+          <a href="https://discuss.pytorch.org/" title="PyTorch Forum" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discourse fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyTorch Forum</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPi</span></a>
         </li>
 </ul></div>
       
@@ -460,15 +970,6 @@
     
   </div>
   
-  
-    <div class="navbar-persistent--mobile">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
-    </div>
   
 
   
@@ -486,8 +987,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -503,14 +1003,14 @@
   <ul class="bd-navbar-elements navbar-nav">
     
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../python-api/index.html">
+  <a class="nav-link nav-internal" href="../pytorch-api.html">
     Python API
   </a>
 </li>
 
 
 <li class="nav-item current active">
-  <a class="nav-link nav-internal" href="index.html">
+  <a class="nav-link nav-internal" href="../notes.html">
     Developer Notes
   </a>
 </li>
@@ -533,32 +1033,303 @@
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
-<div class="version-switcher__container dropdown pst-js-only">
-  <button id="pst-version-switcher-button-3"
-    type="button"
-    class="version-switcher__button btn btn-sm dropdown-toggle"
-    data-bs-toggle="dropdown"
-    aria-haspopup="listbox"
-    aria-controls="pst-version-switcher-list-3"
-    aria-label="Version switcher list"
-  >
-    Choose version  <!-- this text may get changed later by javascript -->
-    <span class="caret"></span>
-  </button>
-  <div id="pst-version-switcher-list-3"
-    class="version-switcher__menu dropdown-menu list-group-flush py-0"
-    role="listbox" aria-labelledby="pst-version-switcher-button-3">
-    <!-- dropdown will be populated by javascript on page load -->
+<div class="search-container-wrapper">
+  <div id="sphinx-search" class="search-container">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
   </div>
-</div></div>
+
+  <div id="google-search" class="search-container" style="display:none;">
+    <div class="gcse-search-wrapper">
+      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      <div class="gcse-search"></div>
+    </div>
+  </div>
+
+  <div class="search-toggle-container" data-bs-title="Google Search Off" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <div class="search-toggle-inner">
+      <label class="switch">
+        <input type="checkbox" id="search-toggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Define the search callback
+    const myWebSearchStartingCallback = (gname, query) => {
+      if (typeof dataLayer !== 'undefined' && query) {
+        dataLayer.push({
+          'event': 'google_search',
+          'search_term': query,
+          'event_category': 'Search',
+          'event_label': 'Google Search'
+        });
+        console.log('GA event sent via callback: google_search - ' + query);
+      }
+      return '';
+    };
+
+    // Set up the GCSE search callbacks
+    window.__gcse || (window.__gcse = {});
+    window.__gcse.searchCallbacks = {
+      web: {
+        starting: myWebSearchStartingCallback,
+      },
+    };
+    if (window.location.pathname.includes('/search.html')) {
+      document.body.classList.add('search-page');
+    }
+
+    // Function to reinitialize Google CSE
+    function reinitializeGoogleSearch() {
+      if (window.__gcse) {
+        // Force Google CSE to reinitialize
+        if (window.__gcse.initializationCallback) {
+          window.__gcse.initializationCallback();
+        }
+      }
+    }
+
+    // Function to handle search toggle
+    function handleSearchToggle(toggle, sphinxSearch, googleSearch) {
+      if (!toggle || !sphinxSearch || !googleSearch) return;
+
+      // Check if the URL contains /stable/ or /tutorials/
+      const currentUrl = window.location.href;
+      const shouldDefaultToGoogle = currentUrl.includes('/stable/') || currentUrl.includes('/tutorials/');
+
+      // Check if there's a saved preference, otherwise use the URL-based default
+      const savedPreference = localStorage.getItem('searchPreference');
+      if (savedPreference === 'google' || (savedPreference === null && shouldDefaultToGoogle)) {
+        toggle.checked = true;
+        sphinxSearch.style.display = 'none';
+        googleSearch.style.display = 'block';
+        // Save the preference if it wasn't already saved
+        if (savedPreference === null) {
+          localStorage.setItem('searchPreference', 'google');
+        }
+        // Ensure Google search is properly initialized
+        reinitializeGoogleSearch();
+      } else {
+        toggle.checked = false;
+        sphinxSearch.style.display = 'block';
+        googleSearch.style.display = 'none';
+      }
+
+      // Update tooltip based on initial state
+      const tooltipElement = document.querySelector('.search-toggle-container');
+      if (tooltipElement) {
+        tooltipElement.setAttribute('data-bs-title', toggle.checked ? 'Google Search On' : 'Google Search Off');
+        // Reinitialize tooltip if Bootstrap's tooltip is already initialized
+        if (bootstrap && bootstrap.Tooltip) {
+          const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipElement);
+          if (tooltipInstance) tooltipInstance.dispose();
+          new bootstrap.Tooltip(tooltipElement);
+        }
+      }
+
+      // Add a data attribute to track if this toggle has been initialized
+      if (toggle.hasAttribute('data-initialized')) {
+        return; // Skip adding another event listener if already initialized
+      }
+      toggle.setAttribute('data-initialized', 'true');
+
+      toggle.addEventListener('change', function() {
+        if (this.checked) {
+          sphinxSearch.style.display = 'none';
+          googleSearch.style.display = 'block';
+          localStorage.setItem('searchPreference', 'google');
+          // Reinitialize Google search when switching to it
+          reinitializeGoogleSearch();
+          const tooltipElement = document.querySelector('.search-toggle-container');
+          if (tooltipElement) {
+            tooltipElement.setAttribute('data-bs-title', 'Google Search On');
+            // Refresh tooltip
+            if (bootstrap && bootstrap.Tooltip) {
+              const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipElement);
+              if (tooltipInstance) tooltipInstance.dispose();
+              new bootstrap.Tooltip(tooltipElement);
+            }
+          }
+          if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({
+              'event': 'search_engine_switch',
+              'event_category': 'Search',
+              'event_label': 'Google'
+            });
+            console.log('GA event sent via dataLayer: search_engine_switch - Google');
+          } else {
+            console.log('GA not available: Cannot track Google search switch');
+          }
+        } else {
+          sphinxSearch.style.display = 'block';
+          googleSearch.style.display = 'none';
+          localStorage.setItem('searchPreference', 'sphinx');
+          const tooltipElement = document.querySelector('.search-toggle-container');
+          if (tooltipElement) {
+            tooltipElement.setAttribute('data-bs-title', 'Google Search Off');
+            // Refresh tooltip
+            if (bootstrap && bootstrap.Tooltip) {
+              const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipElement);
+              if (tooltipInstance) tooltipInstance.dispose();
+              new bootstrap.Tooltip(tooltipElement);
+            }
+          }
+          if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({
+              'event': 'search_engine_switch',
+              'event_category': 'Search',
+              'event_label': 'Sphinx'
+            });
+            console.log('GA event sent via dataLayer: search_engine_switch - Sphinx');
+          } else {
+            console.log('GA not available: Cannot track Sphinx search switch');
+          }
+        }
+
+        // Also update mobile search if it exists
+        updateMobileSearch(false); // Pass false to prevent triggering another event
+      });
+    }
+
+
+    // Function to update mobile search based on current toggle state
+    function updateMobileSearch() {
+      const toggle = document.getElementById('search-toggle');
+      if (!toggle) return;
+
+      // Find mobile search container
+      const mobileSearchContainer = document.querySelector('.sidebar-header-items__end .navbar-item .search-container-wrapper');
+      if (mobileSearchContainer) {
+        const mobileSphinxSearch = mobileSearchContainer.querySelector('#sphinx-search');
+        const mobileGoogleSearch = mobileSearchContainer.querySelector('#google-search');
+
+        if (mobileSphinxSearch && mobileGoogleSearch) {
+          if (toggle.checked) {
+            mobileSphinxSearch.style.display = 'none';
+            mobileGoogleSearch.style.display = 'block';
+            // Reinitialize Google search in mobile view
+            reinitializeGoogleSearch();
+          } else {
+            mobileSphinxSearch.style.display = 'block';
+            mobileGoogleSearch.style.display = 'none';
+          }
+        }
+      }
+    }
+
+    // Initialize desktop search toggle
+    const toggle = document.getElementById('search-toggle');
+    const sphinxSearch = document.getElementById('sphinx-search');
+    const googleSearch = document.getElementById('google-search');
+    handleSearchToggle(toggle, sphinxSearch, googleSearch);
+
+    // Set placeholder text for Google search input
+    const observer = new MutationObserver(function(mutations, obs) {
+      const searchInputs = document.querySelectorAll('.gsc-input input');
+      searchInputs.forEach(input => {
+      if (input) {
+        input.setAttribute('placeholder', 'Search the docs ...');
+
+        if (!input.hasAttribute('data-tracking-added')) {
+          input.setAttribute('data-tracking-added', 'true');
+        }
+      }
+      });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    // Watch for mobile menu creation
+    const mobileMenuObserver = new MutationObserver(function(mutations) {
+      for (const mutation of mutations) {
+        const mobileSearchInputs = document.querySelectorAll('.sidebar-header-items__end .navbar-item .search-container-wrapper .gsc-input input');
+      mobileSearchInputs.forEach(input => {
+        if (input) {
+          input.setAttribute('placeholder', 'Search the docs ...');
+          input.style.paddingLeft = '36px';
+          }
+        });
+        if (mutation.addedNodes.length) {
+          // Check if the mobile search container was added
+          const mobileSearchContainer = document.querySelector('.sidebar-header-items__end .navbar-item .search-container-wrapper');
+          if (mobileSearchContainer) {
+            // Clone the toggle for mobile if needed
+            const mobileToggle = mobileSearchContainer.querySelector('#search-toggle');
+            if (mobileToggle) {
+              // Sync mobile toggle with desktop toggle
+              mobileToggle.checked = toggle.checked;
+
+              // Update mobile search display
+              updateMobileSearch();
+
+              // Add event listener to mobile toggle
+              mobileToggle.addEventListener('change', function() {
+                // Sync desktop toggle with mobile toggle
+                toggle.checked = this.checked;
+                // Trigger change event on desktop toggle to update both
+                toggle.dispatchEvent(new Event('change'));
+              });
+            }
+          }
+        }
+      }
+    });
+
+    mobileMenuObserver.observe(document.body, { childList: true, subtree: true });
+
+    // Ensure Google CSE is properly loaded
+    if (window.__gcse) {
+      window.__gcse.callback = function() {
+        // This will run after Google CSE is fully loaded
+        if (toggle && toggle.checked) {
+          // If Google search is active, make sure it's properly initialized
+          reinitializeGoogleSearch();
+        }
+      };
+    } else {
+      // If Google CSE hasn't loaded yet, set up a callback
+      window.__gcse = {
+        callback: function() {
+          if (toggle && toggle.checked) {
+            reinitializeGoogleSearch();
+          }
+        }
+      };
+    }
+  });
+</script>
+</div>
         
           <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -595,8 +1366,20 @@
           
           
           
-          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">PyPI</span></a>
+          <a href="https://discuss.pytorch.org/" title="PyTorch Forum" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discourse fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyTorch Forum</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPi</span></a>
         </li>
 </ul></div>
         
@@ -609,50 +1392,29 @@
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Core Concepts</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="autograd.html">Autograd mechanics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gradcheck.html">Gradcheck mechanics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Device and Hardware Support</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="cuda.html">CUDA semantics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hip.html">HIP (ROCm) semantics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mps.html">MPS backend</a></li>
-<li class="toctree-l1"><a class="reference internal" href="get_start_xpu.html">Getting Started on Intel GPU</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Distributed Training and Deployment</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="ddp.html">Distributed Data Parallel</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fsdp.html">FSDP Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="large_scale_deployments.html">Features for large-scale deployments</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization and Performance</span></p>
-<ul class="nav bd-sidenav">
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="amp_examples.html">Automatic Mixed Precision examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autograd.html">Autograd mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="broadcasting.html">Broadcasting semantics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cpu_threading_torchscript_inference.html">CPU threading and TorchScript inference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multiprocessing.html">Multiprocessing best practices</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extending PyTorch</span></p>
-<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cuda.html">CUDA semantics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_operators.html">PyTorch Custom Operators Landing Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ddp.html">Distributed Data Parallel</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Extending PyTorch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="extending.func.html">Extending torch.func with autograd.Function</a></li>
-<li class="toctree-l1"><a class="reference internal" href="custom_operators.html">PyTorch Custom Operators Landing Page</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Numerical Considerations</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="broadcasting.html">Broadcasting semantics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fsdp.html">FSDP Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_start_xpu.html">Getting Started on Intel GPU</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gradcheck.html">Gradcheck mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hip.html">HIP (ROCm) semantics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large_scale_deployments.html">Features for large-scale deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="libtorch_stable_abi.html">LibTorch Stable ABI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mps.html">MPS backend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multiprocessing.html">Multiprocessing best practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="numerical_accuracy.html">Numerical accuracy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="randomness.html">Reproducibility</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Serialization and Storage</span></p>
-<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="serialization.html">Serialization semantics</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">FAQs</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="windows.html">Windows FAQ</a></li>
 </ul>
 </div>
@@ -661,14 +1423,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -686,6 +1443,8 @@
       
         <div class="header-article-item">
 
+
+
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -695,9 +1454,9 @@
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Developer Notes</a></li>
+    <li class="breadcrumb-item"><a href="../notes.html" class="nav-link">Developer Notes</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Extending PyTorch</span></li>
+    <li class="breadcrumb-item active" aria-current="page">Extending PyTorch</li>
   </ul>
 </nav>
 </div>
@@ -712,15 +1471,15 @@
     Rate this Page
     <div class="stars">
         
-        <span class="star" data-value="1">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="1" data-value="1">★</span>
         
-        <span class="star" data-value="2">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="2" data-value="2">★</span>
         
-        <span class="star" data-value="3">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="3" data-value="3">★</span>
         
-        <span class="star" data-value="4">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="4" data-value="4">★</span>
         
-        <span class="star" data-value="5">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="5" data-value="5">★</span>
         
     </div>
 </div>
@@ -732,70 +1491,70 @@
 </div>
               
               
-              
-                
+  
 <div id="searchbox"></div>
-                <article class="bd-article">
-                  
+  <article class="bd-article">
+    
+    
   <section id="extending-pytorch">
-<h1>Extending PyTorch<a class="headerlink" href="#extending-pytorch" title="Link to this heading">#</a></h1>
-<p>In this note we’ll cover ways of extending <a class="reference internal" href="../python-api/nn.html#module-torch.nn" title="torch.nn"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.nn</span></code></a>,
-<a class="reference internal" href="../python-api/autograd.html#module-torch.autograd" title="torch.autograd"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.autograd</span></code></a>, <a class="reference internal" href="../python-api/torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a>, and writing custom C++ extensions.</p>
+<h1>Extending PyTorch<a class="headerlink" href="#extending-pytorch" title="Permalink to this heading">#</a></h1>
+<p>In this note we’ll cover ways of extending <a class="reference internal" href="../nn.html#module-torch.nn" title="torch.nn"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.nn</span></code></a>,
+<a class="reference internal" href="../autograd.html#module-torch.autograd" title="torch.autograd"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.autograd</span></code></a>, <a class="reference internal" href="../torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a>, and writing custom C++ extensions.</p>
 <section id="adding-new-operators">
-<h2>Adding new operators<a class="headerlink" href="#adding-new-operators" title="Link to this heading">#</a></h2>
-<p>PyTorch offers a large library of operators that work on Tensors (e.g. <a class="reference internal" href="../python-api/generated/torch.add.html#torch.add" title="torch.add"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.add()</span></code></a>,
-<a class="reference internal" href="../python-api/generated/torch.sum.html#torch.sum" title="torch.sum"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.sum()</span></code></a>, etc). However, you may wish to bring a new custom operation to PyTorch
+<h2>Adding new operators<a class="headerlink" href="#adding-new-operators" title="Permalink to this heading">#</a></h2>
+<p>PyTorch offers a large library of operators that work on Tensors (e.g. <a class="reference internal" href="../generated/torch.add.html#torch.add" title="torch.add"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.add()</span></code></a>,
+<a class="reference internal" href="../generated/torch.sum.html#torch.sum" title="torch.sum"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.sum()</span></code></a>, etc). However, you may wish to bring a new custom operation to PyTorch
 and have it behave like PyTorch’s built-in operators. In order to do so, you must
-register the custom operation with PyTorch via the Python <a class="reference internal" href="../python-api/library.html#torch-library-docs"><span class="std std-ref">torch.library</span></a> or C++ TORCH_LIBRARY
+register the custom operation with PyTorch via the Python <a class="reference internal" href="../library.html#torch-library-docs"><span class="std std-ref">torch.library</span></a> or C++ TORCH_LIBRARY
 APIs.</p>
 <p>Please see <a class="reference external" href="https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html">PyTorch Custom Operators Landing Page</a> for more details.</p>
 </section>
 <section id="extending-torch-autograd">
-<span id="extending-autograd"></span><h2>Extending <a class="reference internal" href="../python-api/autograd.html#module-torch.autograd" title="torch.autograd"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.autograd</span></code></a><a class="headerlink" href="#extending-torch-autograd" title="Link to this heading">#</a></h2>
-<p>Adding operations to <a class="reference internal" href="../python-api/autograd.html#module-torch.autograd" title="torch.autograd"><code class="xref py py-mod docutils literal notranslate"><span class="pre">autograd</span></code></a> requires implementing a new
-<a class="reference internal" href="../python-api/autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a> subclass for each operation. Recall that Functions
-are what <a class="reference internal" href="../python-api/autograd.html#module-torch.autograd" title="torch.autograd"><code class="xref py py-mod docutils literal notranslate"><span class="pre">autograd</span></code></a> uses to encode the operation history and compute
+<span id="extending-autograd"></span><h2>Extending <a class="reference internal" href="../autograd.html#module-torch.autograd" title="torch.autograd"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.autograd</span></code></a><a class="headerlink" href="#extending-torch-autograd" title="Permalink to this heading">#</a></h2>
+<p>Adding operations to <a class="reference internal" href="../autograd.html#module-torch.autograd" title="torch.autograd"><code class="xref py py-mod docutils literal notranslate"><span class="pre">autograd</span></code></a> requires implementing a new
+<a class="reference internal" href="../autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a> subclass for each operation. Recall that Functions
+are what <a class="reference internal" href="../autograd.html#module-torch.autograd" title="torch.autograd"><code class="xref py py-mod docutils literal notranslate"><span class="pre">autograd</span></code></a> uses to encode the operation history and compute
 gradients.</p>
 <p>The first part of this doc is focused on backward mode AD as it is the most widely used
 feature. A section at the end discusses the extensions for forward mode AD.</p>
 <section id="when-to-use">
-<h3>When to use<a class="headerlink" href="#when-to-use" title="Link to this heading">#</a></h3>
+<h3>When to use<a class="headerlink" href="#when-to-use" title="Permalink to this heading">#</a></h3>
 <p>In general, implement a custom function if you want to perform computations in your model
 that are not differentiable or rely on non-PyTorch libraries (e.g., NumPy), but
 still wish for your operation to chain with other ops and work with the autograd engine.</p>
 <p>In some situations, custom functions can also be used to improve performance and
 memory usage: If you implemented your forward and backward passes using a
 <a class="reference external" href="https://pytorch.org/tutorials/advanced/cpp_extension.html">C++ extension</a>,
-you can wrap them in <a class="reference internal" href="../python-api/autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a> to interface with the autograd
+you can wrap them in <a class="reference internal" href="../autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a> to interface with the autograd
 engine. If you’d like to reduce the number of buffers saved for the backward pass,
 custom functions can be used to combine ops together.</p>
 </section>
 <section id="when-not-to-use">
-<h3>When not to use<a class="headerlink" href="#when-not-to-use" title="Link to this heading">#</a></h3>
+<h3>When not to use<a class="headerlink" href="#when-not-to-use" title="Permalink to this heading">#</a></h3>
 <p>If you can already write your function in terms of PyTorch’s built-in ops, its
 backward graph is (most likely) already able to be recorded by autograd. In this case, you do
 not need to implement the backward function yourself. Consider using a plain
 old Python function.</p>
 <p>If you need to maintain state, i.e., trainable parameters, you should (also) use a
-custom module. See the section below for more information on extending <a class="reference internal" href="../python-api/nn.html#module-torch.nn" title="torch.nn"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.nn</span></code></a>.</p>
+custom module. See the section below for more information on extending <a class="reference internal" href="../nn.html#module-torch.nn" title="torch.nn"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.nn</span></code></a>.</p>
 <p>If you’d like to alter the gradients during the backward pass or perform a side
 effect, consider registering a
 <a class="reference external" href="https://pytorch.org/docs/stable/generated/torch.Tensor.register_hook.html#torch.Tensor.register_hook">tensor</a> or
 <a class="reference external" href="https://pytorch.org/docs/stable/notes/modules.html#module-hooks">Module</a> hook.</p>
 </section>
 <section id="how-to-use">
-<h3>How to use<a class="headerlink" href="#how-to-use" title="Link to this heading">#</a></h3>
+<h3>How to use<a class="headerlink" href="#how-to-use" title="Permalink to this heading">#</a></h3>
 <p>Take the following steps:
-1. Subclass <a class="reference internal" href="../python-api/autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a> and implement the <a class="reference internal" href="../python-api/generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a>,
+1. Subclass <a class="reference internal" href="../autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a> and implement the <a class="reference internal" href="../generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a>,
 (optional) <code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_context()</span></code> and
-<a class="reference internal" href="../python-api/generated/torch.autograd.Function.backward.html#torch.autograd.Function.backward" title="torch.autograd.Function.backward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">backward()</span></code></a> methods.
+<a class="reference internal" href="../generated/torch.autograd.Function.backward.html#torch.autograd.Function.backward" title="torch.autograd.Function.backward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">backward()</span></code></a> methods.
 2. Call the proper methods on the <cite>ctx</cite> argument.
 3. Declare whether your function supports
 <a class="reference external" href="https://pytorch.org/tutorials/intermediate/custom_function_double_backward_tutorial.html">double backward</a>.
 4. Validate whether your gradients are correct using gradcheck.</p>
-<p><strong>Step 1:</strong> After subclassing <a class="reference internal" href="../python-api/autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a>, you’ll need to define 3 methods:</p>
+<p><strong>Step 1:</strong> After subclassing <a class="reference internal" href="../autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a>, you’ll need to define 3 methods:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../python-api/generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> is the code that performs the operation. It can take
+<li><p><a class="reference internal" href="../generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> is the code that performs the operation. It can take
 as many arguments as you want, with some of them being optional, if you
 specify the default values. All kinds of Python objects are accepted here.
 <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code> arguments that track history (i.e., with
@@ -805,17 +1564,17 @@ logic won’t traverse lists/dicts/any other data structures and will only
 consider tensors that are direct arguments to the call. You can
 return either a single <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code> output, or a <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a> of
 tensors if there are multiple outputs. Also, please refer to the
-docs of <a class="reference internal" href="../python-api/autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a> to find descriptions of useful methods that can be
-called only from <a class="reference internal" href="../python-api/generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a>.</p></li>
-<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_context()</span></code> (optional). One can either write a “combined” <a class="reference internal" href="../python-api/generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> that
-accepts a <code class="docutils literal notranslate"><span class="pre">ctx</span></code> object or (as of PyTorch 2.0) a separate <a class="reference internal" href="../python-api/generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> that does
+docs of <a class="reference internal" href="../autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a> to find descriptions of useful methods that can be
+called only from <a class="reference internal" href="../generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a>.</p></li>
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_context()</span></code> (optional). One can either write a “combined” <a class="reference internal" href="../generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> that
+accepts a <code class="docutils literal notranslate"><span class="pre">ctx</span></code> object or (as of PyTorch 2.0) a separate <a class="reference internal" href="../generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> that does
 not accept <code class="docutils literal notranslate"><span class="pre">ctx</span></code> and a <code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_context()</span></code> method where the <code class="docutils literal notranslate"><span class="pre">ctx</span></code> modification happens.
-The <a class="reference internal" href="../python-api/generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> should have the compute and <code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_context()</span></code> should
+The <a class="reference internal" href="../generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> should have the compute and <code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_context()</span></code> should
 only be responsible for the <code class="docutils literal notranslate"><span class="pre">ctx</span></code> modification (and not have any compute).
-In general the separate <a class="reference internal" href="../python-api/generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_context()</span></code> is closer to how
+In general the separate <a class="reference internal" href="../generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_context()</span></code> is closer to how
 PyTorch native operations work and therefore more composable with various PyTorch subsystems.
 See <a class="reference internal" href="#combining-forward-context"><span class="std std-ref">Combined or separate forward() and setup_context()</span></a> for more details.</p></li>
-<li><p><a class="reference internal" href="../python-api/generated/torch.autograd.Function.backward.html#torch.autograd.Function.backward" title="torch.autograd.Function.backward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">backward()</span></code></a> (or <code class="xref py py-meth docutils literal notranslate"><span class="pre">vjp()</span></code>) defines the gradient formula.
+<li><p><a class="reference internal" href="../generated/torch.autograd.Function.backward.html#torch.autograd.Function.backward" title="torch.autograd.Function.backward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">backward()</span></code></a> (or <code class="xref py py-meth docutils literal notranslate"><span class="pre">vjp()</span></code>) defines the gradient formula.
 It will be given as many <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code> arguments as there were outputs, with each
 of them representing gradient w.r.t. that output. It is important NEVER to modify
 these in-place. It should return as many tensors as there
@@ -824,26 +1583,26 @@ corresponding input. If your inputs didn’t require gradient
 (<code class="xref py py-attr docutils literal notranslate"><span class="pre">needs_input_grad</span></code> is a tuple of booleans indicating
 whether each input needs gradient computation), or were non-<code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code>
 objects, you can return <code class="xref py py-class docutils literal notranslate"><span class="pre">python:None</span></code>. Also, if you have optional
-arguments to <a class="reference internal" href="../python-api/generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> you can return more gradients than there
+arguments to <a class="reference internal" href="../generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> you can return more gradients than there
 were inputs, as long as they’re all <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a>.</p></li>
 </ul>
 <p><strong>Step 2:</strong> It is your responsibility to use the functions in <code class="docutils literal notranslate"><span class="pre">ctx</span></code>
-properly in order to ensure that the new <a class="reference internal" href="../python-api/autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a> works properly with
+properly in order to ensure that the new <a class="reference internal" href="../autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a> works properly with
 the autograd engine.</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../python-api/generated/torch.autograd.function.FunctionCtx.save_for_backward.html#torch.autograd.function.FunctionCtx.save_for_backward" title="torch.autograd.function.FunctionCtx.save_for_backward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">save_for_backward()</span></code></a> must be
+<li><p><a class="reference internal" href="../generated/torch.autograd.function.FunctionCtx.save_for_backward.html#torch.autograd.function.FunctionCtx.save_for_backward" title="torch.autograd.function.FunctionCtx.save_for_backward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">save_for_backward()</span></code></a> must be
 used to save any tensors to be used in the backward pass. Non-tensors should
 be stored directly on <cite>ctx</cite>. If tensors that are neither input nor output
-are saved for backward your <a class="reference internal" href="../python-api/autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a> may not support double backward
+are saved for backward your <a class="reference internal" href="../autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a> may not support double backward
 (see step 3).</p></li>
-<li><p><a class="reference internal" href="../python-api/generated/torch.autograd.function.FunctionCtx.mark_dirty.html#torch.autograd.function.FunctionCtx.mark_dirty" title="torch.autograd.function.FunctionCtx.mark_dirty"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mark_dirty()</span></code></a> must be used to
+<li><p><a class="reference internal" href="../generated/torch.autograd.function.FunctionCtx.mark_dirty.html#torch.autograd.function.FunctionCtx.mark_dirty" title="torch.autograd.function.FunctionCtx.mark_dirty"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mark_dirty()</span></code></a> must be used to
 mark any input that is modified inplace by the forward function.</p></li>
-<li><p><a class="reference internal" href="../python-api/generated/torch.autograd.function.FunctionCtx.mark_non_differentiable.html#torch.autograd.function.FunctionCtx.mark_non_differentiable" title="torch.autograd.function.FunctionCtx.mark_non_differentiable"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mark_non_differentiable()</span></code></a> must
+<li><p><a class="reference internal" href="../generated/torch.autograd.function.FunctionCtx.mark_non_differentiable.html#torch.autograd.function.FunctionCtx.mark_non_differentiable" title="torch.autograd.function.FunctionCtx.mark_non_differentiable"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mark_non_differentiable()</span></code></a> must
 be used to tell the engine if an output is not differentiable. By
 default all output tensors that are of differentiable type will be set
 to require gradient. Tensors of non-differentiable type (i.e., integral types)
 are never marked as requiring gradients.</p></li>
-<li><p><a class="reference internal" href="../python-api/generated/torch.autograd.function.FunctionCtx.set_materialize_grads.html#torch.autograd.function.FunctionCtx.set_materialize_grads" title="torch.autograd.function.FunctionCtx.set_materialize_grads"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_materialize_grads()</span></code></a> can be
+<li><p><a class="reference internal" href="../generated/torch.autograd.function.FunctionCtx.set_materialize_grads.html#torch.autograd.function.FunctionCtx.set_materialize_grads" title="torch.autograd.function.FunctionCtx.set_materialize_grads"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_materialize_grads()</span></code></a> can be
 used to tell the autograd engine to optimize gradient computations in the cases where
 the output does not depend on the input by not materializing grad tensors given to backward
 function. That is, if set to False, None object in Python or “undefined tensor” (tensor x for
@@ -851,19 +1610,19 @@ which x.defined() is False) in C++ will not be converted to a tensor filled with
 to calling backward, and so your code will need to handle such objects as if they were
 tensors filled with zeros. The default value of this setting is True.</p></li>
 </ul>
-<p><strong>Step 3:</strong> If your <a class="reference internal" href="../python-api/autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a> does not support double backward
+<p><strong>Step 3:</strong> If your <a class="reference internal" href="../autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a> does not support double backward
 you should explicitly declare this by decorating backward with the
-<a class="reference internal" href="../python-api/generated/torch.autograd.function.once_differentiable.html#torch.autograd.function.once_differentiable" title="torch.autograd.function.once_differentiable"><code class="xref py py-func docutils literal notranslate"><span class="pre">once_differentiable()</span></code></a>. With this decorator, attempts to
+<a class="reference internal" href="../generated/torch.autograd.function.once_differentiable.html#torch.autograd.function.once_differentiable" title="torch.autograd.function.once_differentiable"><code class="xref py py-func docutils literal notranslate"><span class="pre">once_differentiable()</span></code></a>. With this decorator, attempts to
 perform double backward through your function will produce an error.
 See our double backward tutorial for more information on double backward.</p>
-<p><strong>Step 4:</strong> It is recommended that you use <a class="reference internal" href="../python-api/autograd.html#module-torch.autograd.gradcheck" title="torch.autograd.gradcheck"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.autograd.gradcheck()</span></code></a>
+<p><strong>Step 4:</strong> It is recommended that you use <a class="reference internal" href="../autograd.html#module-torch.autograd.gradcheck" title="torch.autograd.gradcheck"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.autograd.gradcheck()</span></code></a>
 to check whether your backward function correctly computes gradients of the
 forward by computing the Jacobian matrix using your backward function and
 comparing the value element-wise with the Jacobian computed numerically using
 finite-differencing.</p>
 </section>
 <section id="example">
-<h3>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h3>
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
 <p>Below you can find code for a <code class="docutils literal notranslate"><span class="pre">Linear</span></code> function, with
 additional comments:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Inherit from Function</span>
@@ -965,7 +1724,7 @@ non-Tensor arguments:</p>
         <span class="k">return</span> <span class="n">grad_output</span> <span class="o">*</span> <span class="n">ctx</span><span class="o">.</span><span class="n">constant</span><span class="p">,</span> <span class="kc">None</span>
 </pre></div>
 </div>
-<p>If you need any “intermediate” Tensors computed in <a class="reference internal" href="../python-api/generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> to be saved,
+<p>If you need any “intermediate” Tensors computed in <a class="reference internal" href="../generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> to be saved,
 either they must be returned as outputs, or combine <code class="docutils literal notranslate"><span class="pre">forward</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_context()</span></code>
 (see <a class="reference internal" href="#combining-forward-context"><span class="std std-ref">Combined or separate forward() and setup_context()</span></a>).
 Note that this means if you want gradients to flow through those intermediate values, you
@@ -1007,7 +1766,7 @@ need to define the gradient formula for them (see also
 <p>Inputs to <code class="docutils literal notranslate"><span class="pre">backward</span></code>, i.e., <code class="xref py py-attr docutils literal notranslate"><span class="pre">grad_output</span></code>, can also be tensors that
 track history. So if <code class="docutils literal notranslate"><span class="pre">backward</span></code> is implemented with differentiable
 operations, (e.g., invocation of another custom
-<a class="reference internal" href="../python-api/autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a>), higher order derivatives will work.
+<a class="reference internal" href="../autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a>), higher order derivatives will work.
 In this case, the tensors saved with <code class="docutils literal notranslate"><span class="pre">save_for_backward</span></code> can also be used
 in the backward and have gradients flowing back but tensors saved in the <code class="docutils literal notranslate"><span class="pre">ctx</span></code>
 won’t have gradients flowing back for them.
@@ -1027,25 +1786,25 @@ numerical approximations using small finite differences:</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>See <a class="reference internal" href="../python-api/autograd.html#grad-check"><span class="std std-ref">Numerical gradient checking</span></a> for more details on finite-difference gradient comparisons.
+<p>See <a class="reference internal" href="../autograd.html#grad-check"><span class="std std-ref">Numerical gradient checking</span></a> for more details on finite-difference gradient comparisons.
 If your function is used in higher order derivatives (differentiating the backward pass) you
 can use the <code class="docutils literal notranslate"><span class="pre">gradgradcheck</span></code> function from the same package to check higher order derivatives.</p>
 </section>
 <section id="combined-or-separate-forward-and-setup-context">
-<span id="combining-forward-context"></span><h3>Combined or separate <a class="reference internal" href="../python-api/generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_context()</span></code><a class="headerlink" href="#combined-or-separate-forward-and-setup-context" title="Link to this heading">#</a></h3>
-<p>There are two main ways to define <a class="reference internal" href="../python-api/autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a>. Either:</p>
+<span id="combining-forward-context"></span><h3>Combined or separate <a class="reference internal" href="../generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_context()</span></code><a class="headerlink" href="#combined-or-separate-forward-and-setup-context" title="Permalink to this heading">#</a></h3>
+<p>There are two main ways to define <a class="reference internal" href="../autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a>. Either:</p>
 <ul class="simple">
-<li><p>define a <a class="reference internal" href="../python-api/generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> that combines the forward compute logic with <code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_context()</span></code></p></li>
-<li><p>(as of PyTorch 2.0) define a separate <a class="reference internal" href="../python-api/generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_context()</span></code></p></li>
+<li><p>define a <a class="reference internal" href="../generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> that combines the forward compute logic with <code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_context()</span></code></p></li>
+<li><p>(as of PyTorch 2.0) define a separate <a class="reference internal" href="../generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_context()</span></code></p></li>
 </ul>
-<p>We recommend the second option (separate <a class="reference internal" href="../python-api/generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_context()</span></code>)
+<p>We recommend the second option (separate <a class="reference internal" href="../generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_context()</span></code>)
 because that is closer to how PyTorch native operations are implemented and it composes
-with <a class="reference internal" href="../python-api/func.api.html#module-torch.func" title="torch.func"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.func</span></code></a> transforms. However, we plan to support both approaches going forward;
-combining <a class="reference internal" href="../python-api/generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> with <code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_context()</span></code>: leads to more flexibility since
+with <a class="reference internal" href="../func.api.html#module-torch.func" title="torch.func"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.func</span></code></a> transforms. However, we plan to support both approaches going forward;
+combining <a class="reference internal" href="../generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> with <code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_context()</span></code>: leads to more flexibility since
 you are able to save intermediates without returning them as output.</p>
-<p>Please see the previous section for how to define <a class="reference internal" href="../python-api/autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a> with separate
-<a class="reference internal" href="../python-api/generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_context()</span></code>.</p>
-<p>Here is an example of how to define a <a class="reference internal" href="../python-api/autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a> with combined <a class="reference internal" href="../python-api/generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> and
+<p>Please see the previous section for how to define <a class="reference internal" href="../autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a> with separate
+<a class="reference internal" href="../generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_context()</span></code>.</p>
+<p>Here is an example of how to define a <a class="reference internal" href="../autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a> with combined <a class="reference internal" href="../generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> and
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_context()</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">LinearFunction</span><span class="p">(</span><span class="n">Function</span><span class="p">):</span>
     <span class="nd">@staticmethod</span>
@@ -1075,39 +1834,39 @@ you are able to save intermediates without returning them as output.</p>
 </div>
 </section>
 <section id="forward-mode-ad">
-<span id="forward-ad-autograd-function"></span><h3>Forward mode AD<a class="headerlink" href="#forward-mode-ad" title="Link to this heading">#</a></h3>
+<span id="forward-ad-autograd-function"></span><h3>Forward mode AD<a class="headerlink" href="#forward-mode-ad" title="Permalink to this heading">#</a></h3>
 <p>Overriding the forward mode AD formula has a very similar API with some different subtleties.
-You can implement the <a class="reference internal" href="../python-api/generated/torch.autograd.Function.jvp.html#torch.autograd.Function.jvp" title="torch.autograd.Function.jvp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">jvp()</span></code></a> function.</p>
+You can implement the <a class="reference internal" href="../generated/torch.autograd.Function.jvp.html#torch.autograd.Function.jvp" title="torch.autograd.Function.jvp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">jvp()</span></code></a> function.</p>
 <p>It will be given as many <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code> arguments as there were inputs, with each
 of them representing gradient w.r.t. that input. It should return as many tensors as there
 were outputs, with each of them containing the gradient w.r.t. its corresponding output.
-The <a class="reference internal" href="../python-api/generated/torch.autograd.Function.jvp.html#torch.autograd.Function.jvp" title="torch.autograd.Function.jvp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">jvp()</span></code></a> will be called just after the <a class="reference internal" href="../python-api/generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a>
+The <a class="reference internal" href="../generated/torch.autograd.Function.jvp.html#torch.autograd.Function.jvp" title="torch.autograd.Function.jvp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">jvp()</span></code></a> will be called just after the <a class="reference internal" href="../generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a>
 method, before the <code class="xref py py-meth docutils literal notranslate"><span class="pre">apply()</span></code> returns.</p>
-<p><a class="reference internal" href="../python-api/generated/torch.autograd.Function.jvp.html#torch.autograd.Function.jvp" title="torch.autograd.Function.jvp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">jvp()</span></code></a> has a few subtle differences with the <a class="reference internal" href="../python-api/generated/torch.autograd.Function.backward.html#torch.autograd.Function.backward" title="torch.autograd.Function.backward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">backward()</span></code></a> function:</p>
+<p><a class="reference internal" href="../generated/torch.autograd.Function.jvp.html#torch.autograd.Function.jvp" title="torch.autograd.Function.jvp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">jvp()</span></code></a> has a few subtle differences with the <a class="reference internal" href="../generated/torch.autograd.Function.backward.html#torch.autograd.Function.backward" title="torch.autograd.Function.backward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">backward()</span></code></a> function:</p>
 <ul class="simple">
-<li><p>You can use the <cite>ctx</cite> to pass any data from the <a class="reference internal" href="../python-api/generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> to the <a class="reference internal" href="../python-api/generated/torch.autograd.Function.jvp.html#torch.autograd.Function.jvp" title="torch.autograd.Function.jvp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">jvp()</span></code></a> function.
-If that state will not be needed for the <a class="reference internal" href="../python-api/generated/torch.autograd.Function.backward.html#torch.autograd.Function.backward" title="torch.autograd.Function.backward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">backward()</span></code></a>,
-you can explicitly free it by doing <code class="docutils literal notranslate"><span class="pre">del</span> <span class="pre">ctx.foo</span></code> at the end of the <a class="reference internal" href="../python-api/generated/torch.autograd.Function.jvp.html#torch.autograd.Function.jvp" title="torch.autograd.Function.jvp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">jvp()</span></code></a> function.</p></li>
-<li><p>The implementation of <a class="reference internal" href="../python-api/generated/torch.autograd.Function.jvp.html#torch.autograd.Function.jvp" title="torch.autograd.Function.jvp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">jvp()</span></code></a> must be backward differentiable or explicitly check that
+<li><p>You can use the <cite>ctx</cite> to pass any data from the <a class="reference internal" href="../generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> to the <a class="reference internal" href="../generated/torch.autograd.Function.jvp.html#torch.autograd.Function.jvp" title="torch.autograd.Function.jvp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">jvp()</span></code></a> function.
+If that state will not be needed for the <a class="reference internal" href="../generated/torch.autograd.Function.backward.html#torch.autograd.Function.backward" title="torch.autograd.Function.backward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">backward()</span></code></a>,
+you can explicitly free it by doing <code class="docutils literal notranslate"><span class="pre">del</span> <span class="pre">ctx.foo</span></code> at the end of the <a class="reference internal" href="../generated/torch.autograd.Function.jvp.html#torch.autograd.Function.jvp" title="torch.autograd.Function.jvp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">jvp()</span></code></a> function.</p></li>
+<li><p>The implementation of <a class="reference internal" href="../generated/torch.autograd.Function.jvp.html#torch.autograd.Function.jvp" title="torch.autograd.Function.jvp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">jvp()</span></code></a> must be backward differentiable or explicitly check that
 none of the given forward mode gradient has <code class="docutils literal notranslate"><span class="pre">requires_grad</span></code> set.</p></li>
-<li><p>The <a class="reference internal" href="../python-api/generated/torch.autograd.Function.jvp.html#torch.autograd.Function.jvp" title="torch.autograd.Function.jvp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">jvp()</span></code></a> function must match the view/inplace behavior of <a class="reference internal" href="../python-api/generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a>.
+<li><p>The <a class="reference internal" href="../generated/torch.autograd.Function.jvp.html#torch.autograd.Function.jvp" title="torch.autograd.Function.jvp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">jvp()</span></code></a> function must match the view/inplace behavior of <a class="reference internal" href="../generated/torch.autograd.Function.forward.html#torch.autograd.Function.forward" title="torch.autograd.Function.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a>.
 For example, if the <code class="docutils literal notranslate"><span class="pre">i</span></code> th input is modified inplace, then the <code class="docutils literal notranslate"><span class="pre">i</span></code> th gradient must be updated inplace.
 Similarly, if the <code class="docutils literal notranslate"><span class="pre">j</span></code> th output is a view of the <code class="docutils literal notranslate"><span class="pre">k</span></code> th input. Then the returned <code class="docutils literal notranslate"><span class="pre">j</span></code> th output gradient must be
 a view of the given <code class="docutils literal notranslate"><span class="pre">k</span></code> th input gradient.</p></li>
-<li><p>Because the user cannot specify which gradient needs to be computed, the <a class="reference internal" href="../python-api/generated/torch.autograd.Function.jvp.html#torch.autograd.Function.jvp" title="torch.autograd.Function.jvp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">jvp()</span></code></a> function should
+<li><p>Because the user cannot specify which gradient needs to be computed, the <a class="reference internal" href="../generated/torch.autograd.Function.jvp.html#torch.autograd.Function.jvp" title="torch.autograd.Function.jvp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">jvp()</span></code></a> function should
 always compute gradients for all the outputs.</p></li>
-<li><p>The forward mode gradients do respect the flag set by <a class="reference internal" href="../python-api/generated/torch.autograd.function.FunctionCtx.set_materialize_grads.html#torch.autograd.function.FunctionCtx.set_materialize_grads" title="torch.autograd.function.FunctionCtx.set_materialize_grads"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_materialize_grads()</span></code></a>
+<li><p>The forward mode gradients do respect the flag set by <a class="reference internal" href="../generated/torch.autograd.function.FunctionCtx.set_materialize_grads.html#torch.autograd.function.FunctionCtx.set_materialize_grads" title="torch.autograd.function.FunctionCtx.set_materialize_grads"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_materialize_grads()</span></code></a>
 and you can get <cite>None</cite> input gradients when this is disabled.</p></li>
 </ul>
 </section>
 <section id="torch-func-transforms-and-or-torch-vmap">
-<h3><a class="reference internal" href="../python-api/func.api.html#module-torch.func" title="torch.func"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.func</span></code></a> transforms and/or <a class="reference internal" href="../python-api/generated/torch.vmap.html#torch.vmap" title="torch.vmap"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.vmap()</span></code></a><a class="headerlink" href="#torch-func-transforms-and-or-torch-vmap" title="Link to this heading">#</a></h3>
+<h3><a class="reference internal" href="../func.api.html#module-torch.func" title="torch.func"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.func</span></code></a> transforms and/or <a class="reference internal" href="../generated/torch.vmap.html#torch.vmap" title="torch.vmap"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.vmap()</span></code></a><a class="headerlink" href="#torch-func-transforms-and-or-torch-vmap" title="Permalink to this heading">#</a></h3>
 <p>Please see <a class="reference internal" href="extending.func.html#func-autograd-function"><span class="std std-ref">Extending torch.func with autograd.Function</span></a> for details.</p>
 </section>
 </section>
 <section id="extending-torch-nn">
-<h2>Extending <a class="reference internal" href="../python-api/nn.html#module-torch.nn" title="torch.nn"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.nn</span></code></a><a class="headerlink" href="#extending-torch-nn" title="Link to this heading">#</a></h2>
-<p><a class="reference internal" href="../python-api/nn.html#module-torch.nn" title="torch.nn"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nn</span></code></a> exports two kinds of interfaces - modules and their functional
+<h2>Extending <a class="reference internal" href="../nn.html#module-torch.nn" title="torch.nn"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.nn</span></code></a><a class="headerlink" href="#extending-torch-nn" title="Permalink to this heading">#</a></h2>
+<p><a class="reference internal" href="../nn.html#module-torch.nn" title="torch.nn"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nn</span></code></a> exports two kinds of interfaces - modules and their functional
 versions. You can extend it in both ways, but we recommend using modules for
 all kinds of layers, that hold any parameters or buffers, and recommend using
 a functional form parameter-less operations like activation functions, pooling,
@@ -1115,9 +1874,9 @@ etc.</p>
 <p>Adding a functional version of an operation is already fully covered in the
 section above.</p>
 <section id="adding-a-module">
-<h3>Adding a <a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module" title="torch.nn.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a><a class="headerlink" href="#adding-a-module" title="Link to this heading">#</a></h3>
-<p>Since <a class="reference internal" href="../python-api/nn.html#module-torch.nn" title="torch.nn"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nn</span></code></a> heavily utilizes <a class="reference internal" href="../python-api/autograd.html#module-torch.autograd" title="torch.autograd"><code class="xref py py-mod docutils literal notranslate"><span class="pre">autograd</span></code></a>, adding a new
-<a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module" title="torch.nn.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a> requires implementing a <a class="reference internal" href="../python-api/autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a>
+<h3>Adding a <a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module" title="torch.nn.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a><a class="headerlink" href="#adding-a-module" title="Permalink to this heading">#</a></h3>
+<p>Since <a class="reference internal" href="../nn.html#module-torch.nn" title="torch.nn"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nn</span></code></a> heavily utilizes <a class="reference internal" href="../autograd.html#module-torch.autograd" title="torch.autograd"><code class="xref py py-mod docutils literal notranslate"><span class="pre">autograd</span></code></a>, adding a new
+<a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module" title="torch.nn.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a> requires implementing a <a class="reference internal" href="../autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a>
 that performs the operation and can compute the gradient. From now on let’s
 assume that we want to implement a <code class="docutils literal notranslate"><span class="pre">Linear</span></code> module and we have the function
 implemented as in the listing above. There’s very little code required to
@@ -1125,7 +1884,7 @@ add this. Now, there are two functions that need to be implemented:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">__init__</span></code> (<em>optional</em>) - takes in arguments such as kernel sizes, numbers
 of features, etc. and initializes parameters and buffers.</p></li>
-<li><p><a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.forward" title="torch.nn.Module.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> - instantiates a <a class="reference internal" href="../python-api/autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a> and
+<li><p><a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module.forward" title="torch.nn.Module.forward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">forward()</span></code></a> - instantiates a <a class="reference internal" href="../autograd.html#torch.autograd.Function" title="torch.autograd.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a> and
 uses it to perform the operation. It’s very similar to a functional wrapper
 shown above.</p></li>
 </ul>
@@ -1171,22 +1930,22 @@ shown above.</p></li>
 </section>
 </section>
 <section id="extending-torch-python-api">
-<span id="extending-torch-python"></span><h2>Extending <a class="reference internal" href="../python-api/torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> Python API<a class="headerlink" href="#extending-torch-python-api" title="Link to this heading">#</a></h2>
+<span id="extending-torch-python"></span><h2>Extending <a class="reference internal" href="../torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> Python API<a class="headerlink" href="#extending-torch-python-api" title="Permalink to this heading">#</a></h2>
 <p>You can create custom types that emulate <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code> by defining a custom
 class with methods that match <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code>. But what if you want to be able
-to pass these types to functions like <a class="reference internal" href="../python-api/generated/torch.add.html#torch.add" title="torch.add"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.add()</span></code></a> in the top-level
-<a class="reference internal" href="../python-api/torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> namespace that accept <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code> operands?</p>
+to pass these types to functions like <a class="reference internal" href="../generated/torch.add.html#torch.add" title="torch.add"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.add()</span></code></a> in the top-level
+<a class="reference internal" href="../torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> namespace that accept <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code> operands?</p>
 <p>If your custom Python type defines a method named <code class="docutils literal notranslate"><span class="pre">__torch_function__</span></code>, PyTorch
 will invoke your <code class="docutils literal notranslate"><span class="pre">__torch_function__</span></code> implementation when an instance of your
-custom class is passed to a function in the <a class="reference internal" href="../python-api/torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> namespace. This makes
+custom class is passed to a function in the <a class="reference internal" href="../torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> namespace. This makes
 it possible to define custom implementations for any of the functions in the
-<a class="reference internal" href="../python-api/torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> namespace which your <code class="docutils literal notranslate"><span class="pre">__torch_function__</span></code> implementation can call,
+<a class="reference internal" href="../torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> namespace which your <code class="docutils literal notranslate"><span class="pre">__torch_function__</span></code> implementation can call,
 allowing your users to make use of your custom type with existing PyTorch
 workflows that they have already written for <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code>. This works with
 “duck” types that are unrelated to <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code> as well as user-defined
 subclasses of <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code>.</p>
 <section id="extending-torch-with-a-tensor-like-type">
-<h3>Extending <a class="reference internal" href="../python-api/torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> with a <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code>-like type<a class="headerlink" href="#extending-torch-with-a-tensor-like-type" title="Link to this heading">#</a></h3>
+<h3>Extending <a class="reference internal" href="../torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> with a <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code>-like type<a class="headerlink" href="#extending-torch-with-a-tensor-like-type" title="Permalink to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This functionality is inspired by the NumPy <code class="docutils literal notranslate"><span class="pre">__array_function__</span></code>
@@ -1224,7 +1983,7 @@ tensor than in the base tensor class:</p>
 <span class="go">        [0., 0., 0., 0., 2.]])</span>
 </pre></div>
 </div>
-<p>If we try to use this object with the <a class="reference internal" href="../python-api/torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> API, we will run
+<p>If we try to use this object with the <a class="reference internal" href="../torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> API, we will run
 into issues:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">torch</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
@@ -1303,7 +2062,7 @@ of doing this is to define a decorator:</p>
 override since it only takes one operand. We can use the same machinery to
 override a function that takes more than one operand, any one of which might be
 a tensor or tensor-like that defines <code class="docutils literal notranslate"><span class="pre">__torch_function__</span></code>, for example for
-<a class="reference internal" href="../python-api/generated/torch.add.html#torch.add" title="torch.add"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.add()</span></code></a>:</p>
+<a class="reference internal" href="../generated/torch.add.html#torch.add" title="torch.add"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.add()</span></code></a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">ensure_tensor</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">ScalarTensor</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">data</span><span class="o">.</span><span class="n">tensor</span><span class="p">()</span>
@@ -1335,18 +2094,18 @@ function correctly when either operand is a <code class="docutils literal notran
 </pre></div>
 </div>
 <p>Note that our implementation of <code class="docutils literal notranslate"><span class="pre">add</span></code> does not take <code class="docutils literal notranslate"><span class="pre">alpha</span></code> or <code class="docutils literal notranslate"><span class="pre">out</span></code> as
-keyword arguments like <a class="reference internal" href="../python-api/generated/torch.add.html#torch.add" title="torch.add"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.add()</span></code></a> does:</p>
+keyword arguments like <a class="reference internal" href="../generated/torch.add.html#torch.add" title="torch.add"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.add()</span></code></a> does:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="go">TypeError: add() got an unexpected keyword argument &#39;alpha&#39;</span>
 </pre></div>
 </div>
 <p>For speed and flexibility the <code class="docutils literal notranslate"><span class="pre">__torch_function__</span></code> dispatch mechanism does not
 check that the signature of an override function matches the signature of the
-function being overridden in the <a class="reference internal" href="../python-api/torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> API. For some applications ignoring
+function being overridden in the <a class="reference internal" href="../torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> API. For some applications ignoring
 optional arguments would be fine but to ensure full compatibility with
 <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code>, user implementations of torch API functions should take care to
 exactly emulate the API of the function that is being overridden.</p>
-<p>Functions in the <a class="reference internal" href="../python-api/torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> API that do not have explicit overrides will
+<p>Functions in the <a class="reference internal" href="../torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> API that do not have explicit overrides will
 return <code class="docutils literal notranslate"><span class="pre">NotImplemented</span></code> from <code class="docutils literal notranslate"><span class="pre">__torch_function__</span></code>. If all operands with
 <code class="docutils literal notranslate"><span class="pre">__torch_function__</span></code> defined on them return <code class="docutils literal notranslate"><span class="pre">NotImplemented</span></code>, PyTorch will
 raise a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>. This means that most of the time operations that do not
@@ -1359,11 +2118,11 @@ of such a type is passed:</p>
 </div>
 <p>In practice this means that if you would like to implement your overrides using
 a <code class="docutils literal notranslate"><span class="pre">__torch_function__</span></code> implementation along these lines, you will need to
-explicitly implement the full <a class="reference internal" href="../python-api/torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> API or the entire subset of the API
+explicitly implement the full <a class="reference internal" href="../torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> API or the entire subset of the API
 that you care about for your use case. This may be a tall order as the full
-<a class="reference internal" href="../python-api/torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> API is quite extensive.</p>
+<a class="reference internal" href="../torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> API is quite extensive.</p>
 <p>Another option is to not return <code class="docutils literal notranslate"><span class="pre">NotImplemented</span></code> for operations that are not
-handled but to instead pass a <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code> to the original <a class="reference internal" href="../python-api/torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a>
+handled but to instead pass a <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code> to the original <a class="reference internal" href="../torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a>
 function when no override is available. For example, if we change our
 implementation of <code class="docutils literal notranslate"><span class="pre">__torch_function__</span></code> for <code class="docutils literal notranslate"><span class="pre">ScalarTensor</span></code> to the one below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@classmethod</span>
@@ -1379,7 +2138,7 @@ implementation of <code class="docutils literal notranslate"><span class="pre">_
     <span class="k">return</span> <span class="n">HANDLED_FUNCTIONS</span><span class="p">[</span><span class="n">func</span><span class="p">](</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Then <a class="reference internal" href="../python-api/generated/torch.mul.html#torch.mul" title="torch.mul"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.mul()</span></code></a> will work correctly, although the return type will always
+<p>Then <a class="reference internal" href="../generated/torch.mul.html#torch.mul" title="torch.mul"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.mul()</span></code></a> will work correctly, although the return type will always
 be a <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code> rather than a <code class="xref py py-class docutils literal notranslate"><span class="pre">ScalarTensor</span></code>, even if both operands
 are <code class="xref py py-class docutils literal notranslate"><span class="pre">ScalarTensor</span></code> instances:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">ScalarTensor</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
@@ -1390,7 +2149,7 @@ are <code class="xref py py-class docutils literal notranslate"><span class="pre
 </div>
 <p>Also see the <code class="docutils literal notranslate"><span class="pre">MetadataTensor</span></code> example below for another variation on this
 pattern but instead always returns a <code class="docutils literal notranslate"><span class="pre">MetadataTensor</span></code> to propagate metadata
-through operations in the <a class="reference internal" href="../python-api/torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> API.</p>
+through operations in the <a class="reference internal" href="../torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> API.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">__torch_function__</span></code> protocol is designed for full coverage of the API,
 partial coverage may lead to undesirable results, in particular, certain
 functions raising a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>. This is especially true for subclasses,
@@ -1401,7 +2160,7 @@ of a function from <code class="docutils literal notranslate"><span class="pre">
 <code class="docutils literal notranslate"><span class="pre">super().__torch_function__</span></code> inside their implementation.</p>
 </section>
 <section id="subclassing-torch-tensor">
-<h3>Subclassing <code class="docutils literal notranslate"><span class="pre">torch.Tensor</span></code><a class="headerlink" href="#subclassing-torch-tensor" title="Link to this heading">#</a></h3>
+<h3>Subclassing <code class="docutils literal notranslate"><span class="pre">torch.Tensor</span></code><a class="headerlink" href="#subclassing-torch-tensor" title="Permalink to this heading">#</a></h3>
 <p>As of version 1.7.0, methods on <code class="docutils literal notranslate"><span class="pre">torch.Tensor</span></code> and functions in public
 <code class="docutils literal notranslate"><span class="pre">torch.*</span></code> namespaces applied on <code class="docutils literal notranslate"><span class="pre">torch.Tensor</span></code> subclasses
 will return subclass instances instead of <code class="docutils literal notranslate"><span class="pre">torch.Tensor</span></code> instances:</p>
@@ -1451,12 +2210,12 @@ to recurse back into <code class="docutils literal notranslate"><span class="pre
 recursion.</p>
 </section>
 <section id="extending-torch-with-a-tensor-wrapper-type">
-<h3>Extending <a class="reference internal" href="../python-api/torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> with a <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code> wrapper type<a class="headerlink" href="#extending-torch-with-a-tensor-wrapper-type" title="Link to this heading">#</a></h3>
+<h3>Extending <a class="reference internal" href="../torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> with a <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code> wrapper type<a class="headerlink" href="#extending-torch-with-a-tensor-wrapper-type" title="Permalink to this heading">#</a></h3>
 <p>Another useful case is a type that wraps a <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code>, either as an
 attribute or via subclassing. Below we implement a special case of this sort of
 type, a <code class="docutils literal notranslate"><span class="pre">MetadataTensor</span></code> that attaches a dictionary of metadata to a
-<code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code> that is propagated through <a class="reference internal" href="../python-api/torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> operations. Since this
-is a generic sort of wrapping for the full <a class="reference internal" href="../python-api/torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> API, we do not need to
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code> that is propagated through <a class="reference internal" href="../torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> operations. Since this
+is a generic sort of wrapping for the full <a class="reference internal" href="../torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> API, we do not need to
 individually implement each override so we can make the <code class="docutils literal notranslate"><span class="pre">__torch_function__</span></code>
 implementation more permissive about what operations are allowed:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">MetadataTensor</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
@@ -1479,7 +2238,7 @@ implementation more permissive about what operations are allowed:</p>
 </pre></div>
 </div>
 <p>This simple implementation won’t necessarily work with every function in the
-<a class="reference internal" href="../python-api/torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> API but it is good enough to capture most common operations:</p>
+<a class="reference internal" href="../torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> API but it is good enough to capture most common operations:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;owner&#39;</span><span class="p">:</span> <span class="s1">&#39;Ministry of Silly Walks&#39;</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="n">MetadataTensor</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]],</span> <span class="n">metadata</span><span class="o">=</span><span class="n">metadata</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
@@ -1501,7 +2260,7 @@ implementation more permissive about what operations are allowed:</p>
 </div>
 </section>
 <section id="operations-on-multiple-types-that-define-torch-function">
-<h3>Operations on multiple types that define <code class="docutils literal notranslate"><span class="pre">__torch_function__</span></code><a class="headerlink" href="#operations-on-multiple-types-that-define-torch-function" title="Link to this heading">#</a></h3>
+<h3>Operations on multiple types that define <code class="docutils literal notranslate"><span class="pre">__torch_function__</span></code><a class="headerlink" href="#operations-on-multiple-types-that-define-torch-function" title="Permalink to this heading">#</a></h3>
 <p>It is possible to use the torch API with multiple distinct types that each have
 a <code class="docutils literal notranslate"><span class="pre">__torch_function__</span></code> implementation, but special care must be taken. In such
 a case the rules are:</p>
@@ -1517,7 +2276,7 @@ implement an operation by returning <code class="docutils literal notranslate"><
 </ul>
 </section>
 <section id="testing-coverage-of-overrides-for-the-pytorch-api">
-<h3>Testing Coverage of Overrides for the PyTorch API<a class="headerlink" href="#testing-coverage-of-overrides-for-the-pytorch-api" title="Link to this heading">#</a></h3>
+<h3>Testing Coverage of Overrides for the PyTorch API<a class="headerlink" href="#testing-coverage-of-overrides-for-the-pytorch-api" title="Permalink to this heading">#</a></h3>
 <p>One troublesome aspect of implementing <code class="docutils literal notranslate"><span class="pre">__torch_function__</span></code> is that if some
 operations do and others do not have overrides, users will at best see an
 inconsistent experience, or at worst will see errors raised at runtime when they
@@ -1563,7 +2322,7 @@ by <code class="docutils literal notranslate"><span class="pre">get_overridable_
 </section>
 </section>
 <section id="extending-torch-native-api">
-<span id="extending-torch-c"></span><h2>Extending <a class="reference internal" href="../python-api/torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> native API<a class="headerlink" href="#extending-torch-native-api" title="Link to this heading">#</a></h2>
+<span id="extending-torch-c"></span><h2>Extending <a class="reference internal" href="../torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> native API<a class="headerlink" href="#extending-torch-native-api" title="Permalink to this heading">#</a></h2>
 <p>While <code class="docutils literal notranslate"><span class="pre">__torch_function__</span></code> allows one to effectively extend PyTorch’s pure Python
 components’ behavior, it does not allow one to extend the parts of
 PyTorch implemented in C++. To that end, a <code class="xref py py-class docutils literal notranslate"><span class="pre">Tensor</span></code> subclass can also
@@ -1598,10 +2357,10 @@ output and, finally, autocast will have a chance to do any update it needs on ex
 <p>In a similar way where <code class="docutils literal notranslate"><span class="pre">__torch_function__</span></code> is able to interpose on all of torch’s Python API and Tensor methods, <code class="docutils literal notranslate"><span class="pre">__torch_dispatch__</span></code> is able to intercept all calls into the aten native API. Note that all methods on Tensors are converted into function calls before entering the dispatcher and thus will appear as function calls here: <code class="docutils literal notranslate"><span class="pre">torch.add(a,</span> <span class="pre">2)</span></code> and <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">2</span></code> will lead to exactly the same aten call.
 Most of these functions are defined in <code class="docutils literal notranslate"><span class="pre">native_functions.yaml</span></code> which specifies the properties of these functions as well as their backend implementation. Their implementation alongside specified features are then automatically registered via codegen.
 Some more exotic functions or features are also registered in other places in the C++ codebase or in user-defined C++ extensions.</p>
-<p>It is also possible to add <cite>new</cite> native functions using <a class="reference internal" href="../python-api/library.html#module-torch.library" title="torch.library"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.library</span></code></a>. This Python feature allows defining and/or adding new implementations to native functions. This can be used to add missing kernels, replace existing ones or define brand new native functions.</p>
+<p>It is also possible to add <cite>new</cite> native functions using <a class="reference internal" href="../library.html#module-torch.library" title="torch.library"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.library</span></code></a>. This Python feature allows defining and/or adding new implementations to native functions. This can be used to add missing kernels, replace existing ones or define brand new native functions.</p>
 <p>You can find many examples of <code class="docutils literal notranslate"><span class="pre">__torch_dispatch__</span></code>-based subclasses in the <a class="reference external" href="https://github.com/albanD/subclass_zoo">subclass zoo</a> repo.</p>
 <section id="torch-dispatch-calling-convention">
-<span id="id1"></span><h3><code class="docutils literal notranslate"><span class="pre">__torch_dispatch__</span></code> calling convention<a class="headerlink" href="#torch-dispatch-calling-convention" title="Link to this heading">#</a></h3>
+<span id="id1"></span><h3><code class="docutils literal notranslate"><span class="pre">__torch_dispatch__</span></code> calling convention<a class="headerlink" href="#torch-dispatch-calling-convention" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@classmethod</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">__torch_dispatch__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="n">types</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(),</span> <span class="n">kwargs</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="k">pass</span>
@@ -1622,7 +2381,7 @@ are not passed, it will not be passed.</p></li>
 </section>
 </section>
 <section id="extending-all-torch-api-with-modes">
-<h2>Extending all <a class="reference internal" href="../python-api/torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> API with Modes<a class="headerlink" href="#extending-all-torch-api-with-modes" title="Link to this heading">#</a></h2>
+<h2>Extending all <a class="reference internal" href="../torch.html#module-torch" title="torch"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code></a> API with Modes<a class="headerlink" href="#extending-all-torch-api-with-modes" title="Permalink to this heading">#</a></h2>
 <p>Unfortunately, there are functions that do not take Tensor inputs. This means that the subclass approach described above cannot be used to override the behavior of all of PyTorch’s functions. Also, if the use case requires to intercept every function call, changing every Tensor to be a subclass can be overly intrusive.</p>
 <p>To address this use case, we introduced the concept of “Mode”. These exist for <code class="docutils literal notranslate"><span class="pre">__torch_function__</span></code> and <code class="docutils literal notranslate"><span class="pre">__torch_dispatch__</span></code> overrides, are created by subclassing respectively <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.overrides.TorchFunctionMode</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.utils._python_dispatch.TorchDispatchMode</span></code>, and are used as a context manager.</p>
 <p>To simplify the description of how it interacts with subclasses and other modes, whenever the context manager for a mode is entered, every function behaves as if there was an extra Tensor argument at the beginning of the argument list with the mode as a subclass.
@@ -1687,8 +2446,8 @@ This means in particular that all modes handlers will be called before any subcl
 </section>
 
 
-                </article>
-              
+  </article>
+
               
               
                 <footer class="bd-footer-article">
@@ -1701,24 +2460,65 @@ This means in particular that all modes handlers will be called before any subcl
     Rate this Page
     <div class="stars">
         
-        <span class="star" data-value="1">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="1" data-value="1">★</span>
         
-        <span class="star" data-value="2">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="2" data-value="2">★</span>
         
-        <span class="star" data-value="3">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="3" data-value="3">★</span>
         
-        <span class="star" data-value="4">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="4" data-value="4">★</span>
         
-        <span class="star" data-value="5">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="5" data-value="5">★</span>
         
     </div>
 </div>
 
   <div class="feedback-send">
-    <button class="feedback-btn" onclick="openGitHubIssue()">Send Feedback</button>
+    <button class="feedback-btn"
+            onclick="openGitHubIssue()"
+            data-bs-title="Create a GitHub Issue"
+            data-bs-placement="bottom"
+            data-bs-toggle="tooltip">Send Feedback
+    </button>
   </div>
 </div>
+
+
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ddp.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Distributed Data Parallel</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="extending.func.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Extending torch.func with autograd.Function</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
+
+<div class="footer-info">
+  <p class="copyright">
+    
+      
+        © Copyright PyTorch Contributors.
+      
+      <br/>
+    
+  </p>
+
+  <p class="theme-version">
+    Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  </p>
+</div></div>
   
 </div>
                 </footer>
@@ -1729,12 +2529,12 @@ This means in particular that all modes handlers will be called before any subcl
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="multiprocessing.html"
+       href="ddp.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Multiprocessing best practices</p>
+        <p class="prev-next-title">Distributed Data Parallel</p>
       </div>
     </a>
     <a class="right-next"
@@ -1753,11 +2553,10 @@ This means in particular that all modes handlers will be called before any subcl
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc">
+                <div class="bd-sidebar-secondary bd-toc">
 <div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
+    
+       <div class="sidebar-secondary-item">
 <div
     id="pst-page-navigation-heading-2"
     class="page-toc tocsection onthispage">
@@ -1795,12 +2594,12 @@ This means in particular that all modes handlers will be called before any subcl
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extending-all-torch-api-with-modes">Extending all <code class="xref py py-mod docutils literal notranslate"><span class="pre">torch</span></code> API with Modes</a></li>
 </ul>
   </nav></div>
-
-  <div class="sidebar-secondary-item">
+    
+       <div class="sidebar-secondary-item">
 
   
   <div class="tocsection editthispage">
-    <a href="https://github.com/pytorch/pytorch/edit/main/docs/source/notes/extending.rst">
+    <a href="https://github.com/pytorch/pytorch/edit/main/docs/cpp/source/notes/extending.rst">
       <i class="fa-solid fa-pencil"></i>
       
       
@@ -1811,21 +2610,22 @@ This means in particular that all modes handlers will be called before any subcl
     </a>
   </div>
 </div>
-
-  <div class="sidebar-secondary-item">
+    
+       <div class="sidebar-secondary-item">
     <div class="tocsection sourcelink">
       <a href="../_sources/notes/extending.rst.txt">
         <i class="fa-solid fa-file-lines"></i> Show Source
       </a>
     </div>
 </div>
+    
 
-</div>
+
 <div class="sidebar-secondary-item">
   <div class="sidebar-heading">PyTorch Community</div>
   <ul style="list-style-type: none; padding: 0;">
   
-   <li><a class="nav-link nav-external" href="community/index.html" style="color: var(--pst-color-text-muted)">PyTorch Governance</a></li>
+   <li><a class="nav-link nav-external" href="https://pytorch.org/docs/stable/community/index.html" style="color: var(--pst-color-text-muted)">PyTorch Governance</a></li>
   
    <li><a class="nav-link nav-external" href="https://pytorch.org/docs/stable/community/design.html" style="color: var(--pst-color-text-muted)">PyTorch Design Philosophy</a></li>
   
@@ -1833,6 +2633,8 @@ This means in particular that all modes handlers will be called before any subcl
   
   </ul>
 </div>
+
+
 <div class="sidebar-secondary-item">
  <div class="sidebar-heading">Language Bindings</div>
  <ul style="list-style-type: none; padding: 0;">
@@ -1845,9 +2647,11 @@ This means in particular that all modes handlers will be called before any subcl
  
  </ul>
 </div>
+
+
 <div class="sidebar-secondary-item">
   <div class="sidebar-heading">PyTorch Libraries</div>
-  <ul style="list-style-type: none; padding: 0;">
+  <ul style="list-style-type: none; padding: 0; padding-bottom: 80px;">
   
    <li><a class="nav-link nav-external" href="https://pytorch.org/audio/stable/" style="color: var(--pst-color-text-muted)">torchaudio</a></li>
   
@@ -1867,6 +2671,7 @@ This means in particular that all modes handlers will be called before any subcl
   
   </ul>
 </div>
+
 </div>
 </div>
               
@@ -1881,50 +2686,8 @@ This means in particular that all modes handlers will be called before any subcl
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
-
-  <footer class="bd-footer">
-    
-    <div class="bd-footer__inner bd-page-width">
-      
-        <div class="footer-items__start">
-          
-            <div class="footer-item">
-
-  <p class="copyright">
-    
-      © Copyright PyTorch Contributors.
-      <br/>
-    
-  </p>
-</div>
-          
-            <div class="footer-item">
-
-  <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.0.
-    <br/>
-  </p>
-</div>
-          
-        </div>
-      
-    
-    
-      <div class="footer-items__end">
-        
-          <div class="footer-item">
-<p class="theme-version">
-  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
-</p></div>
-        
-      </div>
-    
-   </div>
-   
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
    <div class="container-fluid docs-tutorials-resources" id="docs-tutorials-resources">
       <div class="container">
@@ -2022,8 +2785,52 @@ This means in particular that all modes handlers will be called before any subcl
     <img class="close-button" src="../_static/img/pytorch-x.svg">
   </div>
 </div>
-  </footer>
+ </footer>
+   
+  <footer class="bd-footer"><div class="cookie-banner-wrapper">
+  <div class="container">
+    <p class="gdpr-notice">To analyze traffic and optimize your experience, we serve cookies on this site. By clicking or navigating, you agree to allow our usage of cookies. As the current maintainers of this site, Facebook’s Cookies Policy applies. Learn more, including about available controls: <a href="https://www.facebook.com/policies/cookies/">Cookies Policy</a>.</p>
+    <img class="close-button" src="../_static/img/pytorch-x.svg">
+  </div>
+</div>
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
 
+  <p class="copyright">
+    
+      © Copyright PyTorch Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
 
   </body>
 </html>

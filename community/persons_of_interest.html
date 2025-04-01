@@ -1,12 +1,21 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+<meta property="og:title" content="PyTorch Governance | Maintainers" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://pytorch.org/community/persons_of_interest.html" />
+<meta property="og:site_name" content="PyTorch" />
+<meta property="og:description" content="Responsibilities: Triage and fix high priority issues assigned to the module or library, Triage, review, and land high priority pull requests assigned to the module or library, Answer module or lib..." />
+<meta property="og:image" content="https://pytorch.org/docs/stable/_static/img/pytorch-logo-dark.svg" />
+<meta property="og:image:alt" content="PyTorch" />
+<meta name="description" content="Responsibilities: Triage and fix high priority issues assigned to the module or library, Triage, review, and land high priority pull requests assigned to the module or library, Answer module or lib..." />
 
     <title>PyTorch Governance | Maintainers &#8212; PyTorch main documentation</title>
   
@@ -16,75 +25,110 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/katex-math.css?v=91adb8b6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/jit.css?v=8de1ea5d" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=baa440dc" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <script src="../_static/documentation_options.js?v=a8da1a53"></script>
-    <script src="../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=940804e7"></script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/katex-math.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/jit.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'community/persons_of_interest';</script>
-    <script src="../_static/js/star-rating.js?v=8861fcb6"></script>
-    <script src="../_static/js/send-feedback.js?v=5646bf45"></script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://pytorch.org/docs/pytorch-versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'main';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.6.0 )" />
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script type="text/javascript" src="../_static/js/send-feedback.js"></script>
-<script type="text/javascript" src="../_static/js/star-rating.js"></script>
-<script type="text/javascript" src="../_static/js/cookie-banner.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../_static/css/theme.css">
+<script type="text/javascript" src="../_static/js/theme.js"></script>
+<link rel="stylesheet" href="../_static/webfonts/all.min.css">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TEST12345"></script>
-    <script type="text/javascript">
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8XT4PS"
+   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+   <!-- End Google Tag Manager (noscript) -->
+   <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   j.onload = function() {
+     window.dispatchEvent(new Event('gtm_loaded'));
+     console.log('GTM loaded successfully');
+   };
+   })(window,document,'script','dataLayer','GTM-T8XT4PS');
+</script>
+ <!-- End Google Tag Manager -->
+ <!-- Facebook Pixel Code -->
+<script>
+   !function(f,b,e,v,n,t,s)
+   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+   if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+   n.queue=[];t=b.createElement(e);t.async=!0;
+   t.src=v;s=b.getElementsByTagName(e)[0];
+   s.parentNode.insertBefore(t,s)}(window,document,'script',
+   'https://connect.facebook.net/en_US/fbevents.js');
+   fbq('init', '243028289693773');
+   fbq('track', 'PageView');
+</script>
+<noscript>
+   <img height="1" width="1" src="https://www.facebook.com/tr?id=243028289693773&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
 
-      gtag('config', 'G-TEST12345');
-    </script>
+<script async src="https://cse.google.com/cse.js?cx=e65585f8c3ea1440e"></script>
+
+   <!--
+   Search engines should not index the main version of documentation.
+   Stable documentation are built without release == 'main'.
+   -->
+   <meta name="robots" content="noindex">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
 
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
-  
-  
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-<body data-feedback-url="https://github.com/pytorch/pytorch">
-  <div class="container-fluid header-holder tutorials-header" id="header-holder">
-  <div class="container">
+<body data-feedback-url="https://github.com/pytorch/pytorch" class="pytorch-body">
+     <div class="container-fluid header-holder tutorials-header" id="header-holder">
+   <div class="header-container-wrapper">
     <div class="header-container">
       <a class="header-logo" href="" aria-label="PyTorch"></a>
 
@@ -275,10 +319,167 @@
         </ul>
       </div>
 
-      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu">
+        <i class="fa-solid fa-ellipsis"></i>
+      </a>
+    </div>
+  </div>
+ </div>
+
+ <!-- Begin Mobile Menu -->
+
+<div class="mobile-main-menu">
+  <div class="container-fluid">
+    <div class="header-container-wrapper">
+      <div class="mobile-main-menu-header-container">
+        <a class="header-logo" href="" aria-label="PyTorch"></a>
+        <a class="main-menu-close-button" href="#" data-behavior="close-mobile-menu">
+          <i class="fa-solid fa-xmark"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-main-menu-links-container">
+    <div class="main-menu">
+      <ul>
+         <li class="resources-mobile-menu-title">
+           <a>Learn</a>
+         </li>
+         <ul class="resources-mobile-menu-items">
+           <li>
+             <a href="">Get Started</a>
+           </li>
+           <li>
+             <a href="">Tutorials</a>
+           </li>
+           <li>
+             <a href="">Learn the Basics</a>
+           </li>
+           <li>
+             <a href="">PyTorch Recipes</a>
+           </li>
+           <li>
+             <a href="">Introduction to PyTorch - YouTube Series</a>
+           </li>
+         </ul>
+         <li class="resources-mobile-menu-title">
+           <a>Ecosystem</a>
+         </li>
+         <ul class="resources-mobile-menu-items">
+           <li>
+             <a href="">Tools</a>
+           </li>
+           <li>
+             <a href="">Community</a>
+           </li>
+           <li>
+             <a href="">Forums</a>
+           </li>
+           <li>
+             <a href="">Developer Resources</a>
+           </li>
+           <li>
+             <a href="">Contributor Awards - 2024</a>
+           </li>
+         </ul>
+
+         <li class="resources-mobile-menu-title">
+           <a>Edge</a>
+         </li>
+
+         <ul class="resources-mobile-menu-items">
+           <li>
+             <a href="">About PyTorch Edge</a>
+           </li>
+
+           <li>
+             <a href="">ExecuTorch</a>
+           </li>
+           <li>
+             <a href="">ExecuTorch Documentation</a>
+           </li>
+         </ul>
+
+         <li class="resources-mobile-menu-title">
+           <a>Docs</a>
+         </li>
+
+         <ul class="resources-mobile-menu-items">
+          <li>
+            <a href="">PyTorch</a>
+          </li>
+
+          <li>
+            <a href="">PyTorch Domains</a>
+          </li>
+        </ul>
+
+        <li class="resources-mobile-menu-title">
+          <a>Blog & News</a>
+        </li>
+
+         <ul class="resources-mobile-menu-items">
+          <li>
+            <a href="">PyTorch Blog</a>
+          </li>
+          <li>
+            <a href="">Community Blog</a>
+          </li>
+
+          <li>
+            <a href="">Videos</a>
+          </li>
+
+          <li>
+            <a href="">Community Stories</a>
+          </li>
+          <li>
+            <a href="">Events</a>
+          </li>
+          <li>
+             <a href="">Newsletter</a>
+           </li>
+        </ul>
+
+        <li class="resources-mobile-menu-title">
+          <a>About</a>
+        </li>
+
+        <ul class="resources-mobile-menu-items">
+          <li>
+            <a href="">PyTorch Foundation</a>
+          </li>
+          <li>
+            <a href="">Governing Board</a>
+          </li>
+          <li>
+             <a href="">Cloud Credit Program</a>
+          </li>
+          <li>
+             <a href="">Technical Advisory Council</a>
+          </li>
+          <li>
+             <a href="">Staff</a>
+          </li>
+          <li>
+             <a href="">Contact Us</a>
+          </li>
+        </ul>
+      </ul>
     </div>
   </div>
 </div>
+
+<!-- End Mobile Menu -->
+   
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -287,8 +488,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -296,6 +508,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -303,8 +516,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -319,6 +532,30 @@
   
   
   <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
     
       <div class="navbar-item">
 
@@ -348,14 +585,14 @@
   <ul class="bd-navbar-elements navbar-nav">
     
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../python-api/index.html">
+  <a class="nav-link nav-internal" href="../pytorch-api.html">
     Python API
   </a>
 </li>
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../notes/index.html">
+  <a class="nav-link nav-internal" href="../notes.html">
     Developer Notes
   </a>
 </li>
@@ -375,44 +612,305 @@
     
     <div class="navbar-header-items__end">
       
-        <div class="navbar-item navbar-persistent--container">
-          
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
-        </div>
-      
       
         <div class="navbar-item">
-<div class="version-switcher__container dropdown pst-js-only">
-  <button id="pst-version-switcher-button-2"
-    type="button"
-    class="version-switcher__button btn btn-sm dropdown-toggle"
-    data-bs-toggle="dropdown"
-    aria-haspopup="listbox"
-    aria-controls="pst-version-switcher-list-2"
-    aria-label="Version switcher list"
-  >
-    Choose version  <!-- this text may get changed later by javascript -->
-    <span class="caret"></span>
-  </button>
-  <div id="pst-version-switcher-list-2"
-    class="version-switcher__menu dropdown-menu list-group-flush py-0"
-    role="listbox" aria-labelledby="pst-version-switcher-button-2">
-    <!-- dropdown will be populated by javascript on page load -->
+<div class="search-container-wrapper">
+  <div id="sphinx-search" class="search-container">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
   </div>
-</div></div>
+
+  <div id="google-search" class="search-container" style="display:none;">
+    <div class="gcse-search-wrapper">
+      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      <div class="gcse-search"></div>
+    </div>
+  </div>
+
+  <div class="search-toggle-container" data-bs-title="Google Search Off" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <div class="search-toggle-inner">
+      <label class="switch">
+        <input type="checkbox" id="search-toggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Define the search callback
+    const myWebSearchStartingCallback = (gname, query) => {
+      if (typeof dataLayer !== 'undefined' && query) {
+        dataLayer.push({
+          'event': 'google_search',
+          'search_term': query,
+          'event_category': 'Search',
+          'event_label': 'Google Search'
+        });
+        console.log('GA event sent via callback: google_search - ' + query);
+      }
+      return '';
+    };
+
+    // Set up the GCSE search callbacks
+    window.__gcse || (window.__gcse = {});
+    window.__gcse.searchCallbacks = {
+      web: {
+        starting: myWebSearchStartingCallback,
+      },
+    };
+    if (window.location.pathname.includes('/search.html')) {
+      document.body.classList.add('search-page');
+    }
+
+    // Function to reinitialize Google CSE
+    function reinitializeGoogleSearch() {
+      if (window.__gcse) {
+        // Force Google CSE to reinitialize
+        if (window.__gcse.initializationCallback) {
+          window.__gcse.initializationCallback();
+        }
+      }
+    }
+
+    // Function to handle search toggle
+    function handleSearchToggle(toggle, sphinxSearch, googleSearch) {
+      if (!toggle || !sphinxSearch || !googleSearch) return;
+
+      // Check if the URL contains /stable/ or /tutorials/
+      const currentUrl = window.location.href;
+      const shouldDefaultToGoogle = currentUrl.includes('/stable/') || currentUrl.includes('/tutorials/');
+
+      // Check if there's a saved preference, otherwise use the URL-based default
+      const savedPreference = localStorage.getItem('searchPreference');
+      if (savedPreference === 'google' || (savedPreference === null && shouldDefaultToGoogle)) {
+        toggle.checked = true;
+        sphinxSearch.style.display = 'none';
+        googleSearch.style.display = 'block';
+        // Save the preference if it wasn't already saved
+        if (savedPreference === null) {
+          localStorage.setItem('searchPreference', 'google');
+        }
+        // Ensure Google search is properly initialized
+        reinitializeGoogleSearch();
+      } else {
+        toggle.checked = false;
+        sphinxSearch.style.display = 'block';
+        googleSearch.style.display = 'none';
+      }
+
+      // Update tooltip based on initial state
+      const tooltipElement = document.querySelector('.search-toggle-container');
+      if (tooltipElement) {
+        tooltipElement.setAttribute('data-bs-title', toggle.checked ? 'Google Search On' : 'Google Search Off');
+        // Reinitialize tooltip if Bootstrap's tooltip is already initialized
+        if (bootstrap && bootstrap.Tooltip) {
+          const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipElement);
+          if (tooltipInstance) tooltipInstance.dispose();
+          new bootstrap.Tooltip(tooltipElement);
+        }
+      }
+
+      // Add a data attribute to track if this toggle has been initialized
+      if (toggle.hasAttribute('data-initialized')) {
+        return; // Skip adding another event listener if already initialized
+      }
+      toggle.setAttribute('data-initialized', 'true');
+
+      toggle.addEventListener('change', function() {
+        if (this.checked) {
+          sphinxSearch.style.display = 'none';
+          googleSearch.style.display = 'block';
+          localStorage.setItem('searchPreference', 'google');
+          // Reinitialize Google search when switching to it
+          reinitializeGoogleSearch();
+          const tooltipElement = document.querySelector('.search-toggle-container');
+          if (tooltipElement) {
+            tooltipElement.setAttribute('data-bs-title', 'Google Search On');
+            // Refresh tooltip
+            if (bootstrap && bootstrap.Tooltip) {
+              const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipElement);
+              if (tooltipInstance) tooltipInstance.dispose();
+              new bootstrap.Tooltip(tooltipElement);
+            }
+          }
+          if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({
+              'event': 'search_engine_switch',
+              'event_category': 'Search',
+              'event_label': 'Google'
+            });
+            console.log('GA event sent via dataLayer: search_engine_switch - Google');
+          } else {
+            console.log('GA not available: Cannot track Google search switch');
+          }
+        } else {
+          sphinxSearch.style.display = 'block';
+          googleSearch.style.display = 'none';
+          localStorage.setItem('searchPreference', 'sphinx');
+          const tooltipElement = document.querySelector('.search-toggle-container');
+          if (tooltipElement) {
+            tooltipElement.setAttribute('data-bs-title', 'Google Search Off');
+            // Refresh tooltip
+            if (bootstrap && bootstrap.Tooltip) {
+              const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipElement);
+              if (tooltipInstance) tooltipInstance.dispose();
+              new bootstrap.Tooltip(tooltipElement);
+            }
+          }
+          if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({
+              'event': 'search_engine_switch',
+              'event_category': 'Search',
+              'event_label': 'Sphinx'
+            });
+            console.log('GA event sent via dataLayer: search_engine_switch - Sphinx');
+          } else {
+            console.log('GA not available: Cannot track Sphinx search switch');
+          }
+        }
+
+        // Also update mobile search if it exists
+        updateMobileSearch(false); // Pass false to prevent triggering another event
+      });
+    }
+
+
+    // Function to update mobile search based on current toggle state
+    function updateMobileSearch() {
+      const toggle = document.getElementById('search-toggle');
+      if (!toggle) return;
+
+      // Find mobile search container
+      const mobileSearchContainer = document.querySelector('.sidebar-header-items__end .navbar-item .search-container-wrapper');
+      if (mobileSearchContainer) {
+        const mobileSphinxSearch = mobileSearchContainer.querySelector('#sphinx-search');
+        const mobileGoogleSearch = mobileSearchContainer.querySelector('#google-search');
+
+        if (mobileSphinxSearch && mobileGoogleSearch) {
+          if (toggle.checked) {
+            mobileSphinxSearch.style.display = 'none';
+            mobileGoogleSearch.style.display = 'block';
+            // Reinitialize Google search in mobile view
+            reinitializeGoogleSearch();
+          } else {
+            mobileSphinxSearch.style.display = 'block';
+            mobileGoogleSearch.style.display = 'none';
+          }
+        }
+      }
+    }
+
+    // Initialize desktop search toggle
+    const toggle = document.getElementById('search-toggle');
+    const sphinxSearch = document.getElementById('sphinx-search');
+    const googleSearch = document.getElementById('google-search');
+    handleSearchToggle(toggle, sphinxSearch, googleSearch);
+
+    // Set placeholder text for Google search input
+    const observer = new MutationObserver(function(mutations, obs) {
+      const searchInputs = document.querySelectorAll('.gsc-input input');
+      searchInputs.forEach(input => {
+      if (input) {
+        input.setAttribute('placeholder', 'Search the docs ...');
+
+        if (!input.hasAttribute('data-tracking-added')) {
+          input.setAttribute('data-tracking-added', 'true');
+        }
+      }
+      });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    // Watch for mobile menu creation
+    const mobileMenuObserver = new MutationObserver(function(mutations) {
+      for (const mutation of mutations) {
+        const mobileSearchInputs = document.querySelectorAll('.sidebar-header-items__end .navbar-item .search-container-wrapper .gsc-input input');
+      mobileSearchInputs.forEach(input => {
+        if (input) {
+          input.setAttribute('placeholder', 'Search the docs ...');
+          input.style.paddingLeft = '36px';
+          }
+        });
+        if (mutation.addedNodes.length) {
+          // Check if the mobile search container was added
+          const mobileSearchContainer = document.querySelector('.sidebar-header-items__end .navbar-item .search-container-wrapper');
+          if (mobileSearchContainer) {
+            // Clone the toggle for mobile if needed
+            const mobileToggle = mobileSearchContainer.querySelector('#search-toggle');
+            if (mobileToggle) {
+              // Sync mobile toggle with desktop toggle
+              mobileToggle.checked = toggle.checked;
+
+              // Update mobile search display
+              updateMobileSearch();
+
+              // Add event listener to mobile toggle
+              mobileToggle.addEventListener('change', function() {
+                // Sync desktop toggle with mobile toggle
+                toggle.checked = this.checked;
+                // Trigger change event on desktop toggle to update both
+                toggle.dispatchEvent(new Event('change'));
+              });
+            }
+          }
+        }
+      }
+    });
+
+    mobileMenuObserver.observe(document.body, { childList: true, subtree: true });
+
+    // Ensure Google CSE is properly loaded
+    if (window.__gcse) {
+      window.__gcse.callback = function() {
+        // This will run after Google CSE is fully loaded
+        if (toggle && toggle.checked) {
+          // If Google search is active, make sure it's properly initialized
+          reinitializeGoogleSearch();
+        }
+      };
+    } else {
+      // If Google CSE hasn't loaded yet, set up a callback
+      window.__gcse = {
+        callback: function() {
+          if (toggle && toggle.checked) {
+            reinitializeGoogleSearch();
+          }
+        }
+      };
+    }
+  });
+</script>
+</div>
       
         <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -449,8 +947,20 @@
           
           
           
-          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">PyPI</span></a>
+          <a href="https://discuss.pytorch.org/" title="PyTorch Forum" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discourse fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyTorch Forum</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPi</span></a>
         </li>
 </ul></div>
       
@@ -458,15 +968,6 @@
     
   </div>
   
-  
-    <div class="navbar-persistent--mobile">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
-    </div>
   
 
   
@@ -484,8 +985,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -501,14 +1001,14 @@
   <ul class="bd-navbar-elements navbar-nav">
     
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../python-api/index.html">
+  <a class="nav-link nav-internal" href="../pytorch-api.html">
     Python API
   </a>
 </li>
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../notes/index.html">
+  <a class="nav-link nav-internal" href="../notes.html">
     Developer Notes
   </a>
 </li>
@@ -531,32 +1031,303 @@
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
-<div class="version-switcher__container dropdown pst-js-only">
-  <button id="pst-version-switcher-button-3"
-    type="button"
-    class="version-switcher__button btn btn-sm dropdown-toggle"
-    data-bs-toggle="dropdown"
-    aria-haspopup="listbox"
-    aria-controls="pst-version-switcher-list-3"
-    aria-label="Version switcher list"
-  >
-    Choose version  <!-- this text may get changed later by javascript -->
-    <span class="caret"></span>
-  </button>
-  <div id="pst-version-switcher-list-3"
-    class="version-switcher__menu dropdown-menu list-group-flush py-0"
-    role="listbox" aria-labelledby="pst-version-switcher-button-3">
-    <!-- dropdown will be populated by javascript on page load -->
+<div class="search-container-wrapper">
+  <div id="sphinx-search" class="search-container">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
   </div>
-</div></div>
+
+  <div id="google-search" class="search-container" style="display:none;">
+    <div class="gcse-search-wrapper">
+      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      <div class="gcse-search"></div>
+    </div>
+  </div>
+
+  <div class="search-toggle-container" data-bs-title="Google Search Off" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <div class="search-toggle-inner">
+      <label class="switch">
+        <input type="checkbox" id="search-toggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Define the search callback
+    const myWebSearchStartingCallback = (gname, query) => {
+      if (typeof dataLayer !== 'undefined' && query) {
+        dataLayer.push({
+          'event': 'google_search',
+          'search_term': query,
+          'event_category': 'Search',
+          'event_label': 'Google Search'
+        });
+        console.log('GA event sent via callback: google_search - ' + query);
+      }
+      return '';
+    };
+
+    // Set up the GCSE search callbacks
+    window.__gcse || (window.__gcse = {});
+    window.__gcse.searchCallbacks = {
+      web: {
+        starting: myWebSearchStartingCallback,
+      },
+    };
+    if (window.location.pathname.includes('/search.html')) {
+      document.body.classList.add('search-page');
+    }
+
+    // Function to reinitialize Google CSE
+    function reinitializeGoogleSearch() {
+      if (window.__gcse) {
+        // Force Google CSE to reinitialize
+        if (window.__gcse.initializationCallback) {
+          window.__gcse.initializationCallback();
+        }
+      }
+    }
+
+    // Function to handle search toggle
+    function handleSearchToggle(toggle, sphinxSearch, googleSearch) {
+      if (!toggle || !sphinxSearch || !googleSearch) return;
+
+      // Check if the URL contains /stable/ or /tutorials/
+      const currentUrl = window.location.href;
+      const shouldDefaultToGoogle = currentUrl.includes('/stable/') || currentUrl.includes('/tutorials/');
+
+      // Check if there's a saved preference, otherwise use the URL-based default
+      const savedPreference = localStorage.getItem('searchPreference');
+      if (savedPreference === 'google' || (savedPreference === null && shouldDefaultToGoogle)) {
+        toggle.checked = true;
+        sphinxSearch.style.display = 'none';
+        googleSearch.style.display = 'block';
+        // Save the preference if it wasn't already saved
+        if (savedPreference === null) {
+          localStorage.setItem('searchPreference', 'google');
+        }
+        // Ensure Google search is properly initialized
+        reinitializeGoogleSearch();
+      } else {
+        toggle.checked = false;
+        sphinxSearch.style.display = 'block';
+        googleSearch.style.display = 'none';
+      }
+
+      // Update tooltip based on initial state
+      const tooltipElement = document.querySelector('.search-toggle-container');
+      if (tooltipElement) {
+        tooltipElement.setAttribute('data-bs-title', toggle.checked ? 'Google Search On' : 'Google Search Off');
+        // Reinitialize tooltip if Bootstrap's tooltip is already initialized
+        if (bootstrap && bootstrap.Tooltip) {
+          const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipElement);
+          if (tooltipInstance) tooltipInstance.dispose();
+          new bootstrap.Tooltip(tooltipElement);
+        }
+      }
+
+      // Add a data attribute to track if this toggle has been initialized
+      if (toggle.hasAttribute('data-initialized')) {
+        return; // Skip adding another event listener if already initialized
+      }
+      toggle.setAttribute('data-initialized', 'true');
+
+      toggle.addEventListener('change', function() {
+        if (this.checked) {
+          sphinxSearch.style.display = 'none';
+          googleSearch.style.display = 'block';
+          localStorage.setItem('searchPreference', 'google');
+          // Reinitialize Google search when switching to it
+          reinitializeGoogleSearch();
+          const tooltipElement = document.querySelector('.search-toggle-container');
+          if (tooltipElement) {
+            tooltipElement.setAttribute('data-bs-title', 'Google Search On');
+            // Refresh tooltip
+            if (bootstrap && bootstrap.Tooltip) {
+              const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipElement);
+              if (tooltipInstance) tooltipInstance.dispose();
+              new bootstrap.Tooltip(tooltipElement);
+            }
+          }
+          if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({
+              'event': 'search_engine_switch',
+              'event_category': 'Search',
+              'event_label': 'Google'
+            });
+            console.log('GA event sent via dataLayer: search_engine_switch - Google');
+          } else {
+            console.log('GA not available: Cannot track Google search switch');
+          }
+        } else {
+          sphinxSearch.style.display = 'block';
+          googleSearch.style.display = 'none';
+          localStorage.setItem('searchPreference', 'sphinx');
+          const tooltipElement = document.querySelector('.search-toggle-container');
+          if (tooltipElement) {
+            tooltipElement.setAttribute('data-bs-title', 'Google Search Off');
+            // Refresh tooltip
+            if (bootstrap && bootstrap.Tooltip) {
+              const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipElement);
+              if (tooltipInstance) tooltipInstance.dispose();
+              new bootstrap.Tooltip(tooltipElement);
+            }
+          }
+          if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({
+              'event': 'search_engine_switch',
+              'event_category': 'Search',
+              'event_label': 'Sphinx'
+            });
+            console.log('GA event sent via dataLayer: search_engine_switch - Sphinx');
+          } else {
+            console.log('GA not available: Cannot track Sphinx search switch');
+          }
+        }
+
+        // Also update mobile search if it exists
+        updateMobileSearch(false); // Pass false to prevent triggering another event
+      });
+    }
+
+
+    // Function to update mobile search based on current toggle state
+    function updateMobileSearch() {
+      const toggle = document.getElementById('search-toggle');
+      if (!toggle) return;
+
+      // Find mobile search container
+      const mobileSearchContainer = document.querySelector('.sidebar-header-items__end .navbar-item .search-container-wrapper');
+      if (mobileSearchContainer) {
+        const mobileSphinxSearch = mobileSearchContainer.querySelector('#sphinx-search');
+        const mobileGoogleSearch = mobileSearchContainer.querySelector('#google-search');
+
+        if (mobileSphinxSearch && mobileGoogleSearch) {
+          if (toggle.checked) {
+            mobileSphinxSearch.style.display = 'none';
+            mobileGoogleSearch.style.display = 'block';
+            // Reinitialize Google search in mobile view
+            reinitializeGoogleSearch();
+          } else {
+            mobileSphinxSearch.style.display = 'block';
+            mobileGoogleSearch.style.display = 'none';
+          }
+        }
+      }
+    }
+
+    // Initialize desktop search toggle
+    const toggle = document.getElementById('search-toggle');
+    const sphinxSearch = document.getElementById('sphinx-search');
+    const googleSearch = document.getElementById('google-search');
+    handleSearchToggle(toggle, sphinxSearch, googleSearch);
+
+    // Set placeholder text for Google search input
+    const observer = new MutationObserver(function(mutations, obs) {
+      const searchInputs = document.querySelectorAll('.gsc-input input');
+      searchInputs.forEach(input => {
+      if (input) {
+        input.setAttribute('placeholder', 'Search the docs ...');
+
+        if (!input.hasAttribute('data-tracking-added')) {
+          input.setAttribute('data-tracking-added', 'true');
+        }
+      }
+      });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    // Watch for mobile menu creation
+    const mobileMenuObserver = new MutationObserver(function(mutations) {
+      for (const mutation of mutations) {
+        const mobileSearchInputs = document.querySelectorAll('.sidebar-header-items__end .navbar-item .search-container-wrapper .gsc-input input');
+      mobileSearchInputs.forEach(input => {
+        if (input) {
+          input.setAttribute('placeholder', 'Search the docs ...');
+          input.style.paddingLeft = '36px';
+          }
+        });
+        if (mutation.addedNodes.length) {
+          // Check if the mobile search container was added
+          const mobileSearchContainer = document.querySelector('.sidebar-header-items__end .navbar-item .search-container-wrapper');
+          if (mobileSearchContainer) {
+            // Clone the toggle for mobile if needed
+            const mobileToggle = mobileSearchContainer.querySelector('#search-toggle');
+            if (mobileToggle) {
+              // Sync mobile toggle with desktop toggle
+              mobileToggle.checked = toggle.checked;
+
+              // Update mobile search display
+              updateMobileSearch();
+
+              // Add event listener to mobile toggle
+              mobileToggle.addEventListener('change', function() {
+                // Sync desktop toggle with mobile toggle
+                toggle.checked = this.checked;
+                // Trigger change event on desktop toggle to update both
+                toggle.dispatchEvent(new Event('change'));
+              });
+            }
+          }
+        }
+      }
+    });
+
+    mobileMenuObserver.observe(document.body, { childList: true, subtree: true });
+
+    // Ensure Google CSE is properly loaded
+    if (window.__gcse) {
+      window.__gcse.callback = function() {
+        // This will run after Google CSE is fully loaded
+        if (toggle && toggle.checked) {
+          // If Google search is active, make sure it's properly initialized
+          reinitializeGoogleSearch();
+        }
+      };
+    } else {
+      // If Google CSE hasn't loaded yet, set up a callback
+      window.__gcse = {
+        callback: function() {
+          if (toggle && toggle.checked) {
+            reinitializeGoogleSearch();
+          }
+        }
+      };
+    }
+  });
+</script>
+</div>
         
           <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -593,8 +1364,20 @@
           
           
           
-          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">PyPI</span></a>
+          <a href="https://discuss.pytorch.org/" title="PyTorch Forum" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discourse fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyTorch Forum</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPi</span></a>
         </li>
 </ul></div>
         
@@ -613,14 +1396,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -638,6 +1416,8 @@
       
         <div class="header-article-item">
 
+
+
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -646,7 +1426,7 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">PyTorch Governance | Maintainers</span></li>
+    <li class="breadcrumb-item active" aria-current="page">PyTorch...</li>
   </ul>
 </nav>
 </div>
@@ -661,15 +1441,15 @@
     Rate this Page
     <div class="stars">
         
-        <span class="star" data-value="1">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="1" data-value="1">★</span>
         
-        <span class="star" data-value="2">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="2" data-value="2">★</span>
         
-        <span class="star" data-value="3">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="3" data-value="3">★</span>
         
-        <span class="star" data-value="4">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="4" data-value="4">★</span>
         
-        <span class="star" data-value="5">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="5" data-value="5">★</span>
         
     </div>
 </div>
@@ -681,15 +1461,15 @@
 </div>
               
               
-              
-                
+  
 <div id="searchbox"></div>
-                <article class="bd-article">
-                  
+  <article class="bd-article">
+    
+    
   <section id="pytorch-governance-maintainers">
-<h1>PyTorch Governance | Maintainers<a class="headerlink" href="#pytorch-governance-maintainers" title="Link to this heading">#</a></h1>
+<h1>PyTorch Governance | Maintainers<a class="headerlink" href="#pytorch-governance-maintainers" title="Permalink to this heading">#</a></h1>
 <section id="responsibilities">
-<h2>Responsibilities<a class="headerlink" href="#responsibilities" title="Link to this heading">#</a></h2>
+<h2>Responsibilities<a class="headerlink" href="#responsibilities" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Triage and fix high priority issues assigned to the module or library</p></li>
 <li><p>Triage, review, and land high priority pull requests assigned to the module or library</p></li>
@@ -700,13 +1480,13 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="lead-core-maintainer-bdfl">
-<h2>Lead Core Maintainer (BDFL)<a class="headerlink" href="#lead-core-maintainer-bdfl" title="Link to this heading">#</a></h2>
+<h2>Lead Core Maintainer (BDFL)<a class="headerlink" href="#lead-core-maintainer-bdfl" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Soumith Chintala (<a class="reference external" href="https://github.com/soumith">soumith</a>)</p></li>
 </ul>
 </section>
 <section id="core-maintainers">
-<h2>Core Maintainers<a class="headerlink" href="#core-maintainers" title="Link to this heading">#</a></h2>
+<h2>Core Maintainers<a class="headerlink" href="#core-maintainers" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Soumith Chintala (<a class="reference external" href="https://github.com/soumith">soumith</a>)</p></li>
 <li><p>Edward Yang (<a class="reference external" href="https://github.com/ezyang">ezyang</a>)</p></li>
@@ -718,9 +1498,9 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="module-level-maintainers">
-<h2>Module-level maintainers<a class="headerlink" href="#module-level-maintainers" title="Link to this heading">#</a></h2>
+<h2>Module-level maintainers<a class="headerlink" href="#module-level-maintainers" title="Permalink to this heading">#</a></h2>
 <section id="nn-apis-torch-nn">
-<h3>NN APIs (torch.nn)<a class="headerlink" href="#nn-apis-torch-nn" title="Link to this heading">#</a></h3>
+<h3>NN APIs (torch.nn)<a class="headerlink" href="#nn-apis-torch-nn" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Mikayla Gawarecki (<a class="reference external" href="https://github.com/mikaylagawarecki">mikaylagawarecki</a>)</p></li>
 <li><p>Alban Desmaison (<a class="reference external" href="https://github.com/albanD">albanD</a>)</p></li>
@@ -732,7 +1512,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="optimizers-torch-optim">
-<h3>Optimizers (torch.optim)<a class="headerlink" href="#optimizers-torch-optim" title="Link to this heading">#</a></h3>
+<h3>Optimizers (torch.optim)<a class="headerlink" href="#optimizers-torch-optim" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Jane Xu (<a class="reference external" href="https://github.com/janeyx99">janeyx99</a>)</p></li>
 <li><p>Alban Desmaison (<a class="reference external" href="https://github.com/albanD">albanD</a>)</p></li>
@@ -743,7 +1523,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="autograd-torch-autograd">
-<h3>Autograd (torch.autograd)<a class="headerlink" href="#autograd-torch-autograd" title="Link to this heading">#</a></h3>
+<h3>Autograd (torch.autograd)<a class="headerlink" href="#autograd-torch-autograd" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Jeffrey Wan (<a class="reference external" href="https://github.com/soulitzer">soulitzer</a>)</p></li>
 <li><p>Alban Desmaison (<a class="reference external" href="https://github.com/alband">alband</a>)</p></li>
@@ -752,7 +1532,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="torchdynamo">
-<h3>TorchDynamo<a class="headerlink" href="#torchdynamo" title="Link to this heading">#</a></h3>
+<h3>TorchDynamo<a class="headerlink" href="#torchdynamo" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Animesh Jain (<a class="reference external" href="https://github.com/anijain2305">anijain2305</a>)</p></li>
 <li><p>Jason Ansel (<a class="reference external" href="https://github.com/jansel">jansel</a>)</p></li>
@@ -760,7 +1540,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="torchinductor">
-<h3>TorchInductor<a class="headerlink" href="#torchinductor" title="Link to this heading">#</a></h3>
+<h3>TorchInductor<a class="headerlink" href="#torchinductor" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Elias Ellison (<a class="reference external" href="https://github.com/eellison">eellison</a>)</p></li>
 <li><p>Horace He (<a class="reference external" href="https://github.com/Chillee">Chillee</a>)</p></li>
@@ -770,13 +1550,13 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="cudagraph-tree">
-<h3>Cudagraph Tree<a class="headerlink" href="#cudagraph-tree" title="Link to this heading">#</a></h3>
+<h3>Cudagraph Tree<a class="headerlink" href="#cudagraph-tree" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Elias Ellison (<a class="reference external" href="https://github.com/eellison">eellison</a>)</p></li>
 </ul>
 </section>
 <section id="pt2-dispatcher">
-<h3>PT2 Dispatcher<a class="headerlink" href="#pt2-dispatcher" title="Link to this heading">#</a></h3>
+<h3>PT2 Dispatcher<a class="headerlink" href="#pt2-dispatcher" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Brian Hirsh (<a class="reference external" href="https://github.com/bdhirsh">bdhirsh</a>)</p></li>
 <li><p>Richard Zou (<a class="reference external" href="https://github.com/zou3519">zou3519</a>)</p></li>
@@ -785,14 +1565,14 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="pt2-export-torch-export">
-<h3>PT2 Export (torch.export)<a class="headerlink" href="#pt2-export-torch-export" title="Link to this heading">#</a></h3>
+<h3>PT2 Export (torch.export)<a class="headerlink" href="#pt2-export-torch-export" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Avik Chaudhuri (<a class="reference external" href="https://github.com/avikchaudhuri">avikchaudhuri</a>)</p></li>
 <li><p>Yanan Cao (<a class="reference external" href="https://github.com/gmagogsfm">gmagogsfm</a>)</p></li>
 </ul>
 </section>
 <section id="aot-inductor-aoti-aoti-runtime">
-<h3>AOT Inductor (AOTI) &amp; AOTI Runtime<a class="headerlink" href="#aot-inductor-aoti-aoti-runtime" title="Link to this heading">#</a></h3>
+<h3>AOT Inductor (AOTI) &amp; AOTI Runtime<a class="headerlink" href="#aot-inductor-aoti-aoti-runtime" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Bin Bao (<a class="reference external" href="https://github.com/desertfire">desertfire</a>)</p></li>
 <li><p>Angela Yi (<a class="reference external" href="https://github.com/angelayi">angelayi</a>)</p></li>
@@ -800,7 +1580,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="compilers-jit-torchscript-package-deploy">
-<h3>Compilers (JIT / TorchScript / Package / Deploy)<a class="headerlink" href="#compilers-jit-torchscript-package-deploy" title="Link to this heading">#</a></h3>
+<h3>Compilers (JIT / TorchScript / Package / Deploy)<a class="headerlink" href="#compilers-jit-torchscript-package-deploy" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>(emeritus) Elias Ellison (<a class="reference external" href="https://github.com/eellison">eellison</a>)</p></li>
 <li><p>(emeritus) Michael Suo (<a class="reference external" href="https://github.com/suo">suo</a>)</p></li>
@@ -812,7 +1592,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="distributions-rng">
-<h3>Distributions &amp; RNG<a class="headerlink" href="#distributions-rng" title="Link to this heading">#</a></h3>
+<h3>Distributions &amp; RNG<a class="headerlink" href="#distributions-rng" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Fritz Obermeyer (<a class="reference external" href="https://github.com/fritzo">fritzo</a>)</p></li>
 <li><p>Neeraj Pradhan (<a class="reference external" href="https://github.com/neerajprad">neerajprad</a>)</p></li>
@@ -821,7 +1601,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="distributed">
-<h3>Distributed<a class="headerlink" href="#distributed" title="Link to this heading">#</a></h3>
+<h3>Distributed<a class="headerlink" href="#distributed" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Will Constable (<a class="reference external" href="https://github.com/wconstab">wconstab</a>)</p></li>
 <li><p>Howard Huang (<a class="reference external" href="https://github.com/H-Huang">H-Huang</a>)</p></li>
@@ -843,7 +1623,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="multiprocessing">
-<h3>Multiprocessing<a class="headerlink" href="#multiprocessing" title="Link to this heading">#</a></h3>
+<h3>Multiprocessing<a class="headerlink" href="#multiprocessing" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>(emeritus) Simon Wang (<a class="reference external" href="https://github.com/SsnL">SsnL</a>)</p></li>
 <li><p>(emeritus) Vitaly Fedyunin (<a class="reference external" href="https://github.com/VitalyFedyunin">VitalyFedyunin</a>)</p></li>
@@ -851,16 +1631,17 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="linear-algebra-torch-linalg">
-<h3>Linear Algebra (torch.linalg)<a class="headerlink" href="#linear-algebra-torch-linalg" title="Link to this heading">#</a></h3>
+<h3>Linear Algebra (torch.linalg)<a class="headerlink" href="#linear-algebra-torch-linalg" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Mario Lezcano (<a class="reference external" href="https://github.com/lezcano">lezcano</a>)</p></li>
 <li><p>(emeritus) Mike Ruberry (<a class="reference external" href="https://github.com/mruberry">mruberry</a>)</p></li>
 <li><p>(emeritus) Ivan Yashchuk (<a class="reference external" href="https://github.com/IvanYashchuk">IvanYashchuk</a>)</p></li>
 <li><p>(emeritus) Vishwak Srinivasan (<a class="reference external" href="https://github.com/vishwakftw">vishwakftw</a>)</p></li>
+<li><p>(emeritus) Nikita Vedeneev (<a class="reference external" href="https://github.com/nikitaved">nikitaved</a>)</p></li>
 </ul>
 </section>
 <section id="sparse-torch-sparse">
-<h3>Sparse (torch.sparse)<a class="headerlink" href="#sparse-torch-sparse" title="Link to this heading">#</a></h3>
+<h3>Sparse (torch.sparse)<a class="headerlink" href="#sparse-torch-sparse" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>(emeritus) Pearu Peterson (<a class="reference external" href="https://github.com/pearu">pearu</a>)</p></li>
 <li><p>(emeritus) Nikita Vedeneev (<a class="reference external" href="https://github.com/nikitaved">nikitaved</a>)</p></li>
@@ -870,7 +1651,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="nestedtensor-torch-nested">
-<h3>NestedTensor (torch.nested)<a class="headerlink" href="#nestedtensor-torch-nested" title="Link to this heading">#</a></h3>
+<h3>NestedTensor (torch.nested)<a class="headerlink" href="#nestedtensor-torch-nested" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Joel Schlosser (<a class="reference external" href="https://github.com/jbschlosser">jbschlosser</a>)</p></li>
 <li><p>Christian Puhrsch (<a class="reference external" href="https://github.com/cpuhrsch">cpuhrsch</a>)</p></li>
@@ -881,21 +1662,21 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="maskedtensor-torch-masked">
-<h3>MaskedTensor (torch.masked)<a class="headerlink" href="#maskedtensor-torch-masked" title="Link to this heading">#</a></h3>
+<h3>MaskedTensor (torch.masked)<a class="headerlink" href="#maskedtensor-torch-masked" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Christian Puhrsch (<a class="reference external" href="https://github.com/cpuhrsch">cpuhrsch</a>)</p></li>
 <li><p>(emeritus) George Qi (<a class="reference external" href="https://github.com/george-qi">george-qi</a>)</p></li>
 </ul>
 </section>
 <section id="fast-fourier-transform-torch-fft">
-<h3>Fast Fourier Transform (torch.fft)<a class="headerlink" href="#fast-fourier-transform-torch-fft" title="Link to this heading">#</a></h3>
+<h3>Fast Fourier Transform (torch.fft)<a class="headerlink" href="#fast-fourier-transform-torch-fft" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>(emeritus) Mike Ruberry (<a class="reference external" href="https://github.com/mruberry">mruberry</a>)</p></li>
 <li><p>(emeritus) Peter Bell (<a class="reference external" href="https://github.com/peterbell10">peterbell10</a>)</p></li>
 </ul>
 </section>
 <section id="mkldnn">
-<h3>MKLDNN<a class="headerlink" href="#mkldnn" title="Link to this heading">#</a></h3>
+<h3>MKLDNN<a class="headerlink" href="#mkldnn" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Xiaobing Zhang (<a class="reference external" href="https://github.com/XiaobingSuper">XiaobingSuper</a>)</p></li>
 <li><p>Mingfei Ma (<a class="reference external" href="https://github.com/mingfeima">mingfeima</a>)</p></li>
@@ -911,7 +1692,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="cuda">
-<h3>CUDA<a class="headerlink" href="#cuda" title="Link to this heading">#</a></h3>
+<h3>CUDA<a class="headerlink" href="#cuda" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Natalia Gimelshein (<a class="reference external" href="https://github.com/ngimel">ngimel</a>)</p></li>
 <li><p>Edward Yang (<a class="reference external" href="https://github.com/ezyang">ezyang</a>)</p></li>
@@ -922,7 +1703,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="amd-rocm-hip">
-<h3>AMD/ROCm/HIP<a class="headerlink" href="#amd-rocm-hip" title="Link to this heading">#</a></h3>
+<h3>AMD/ROCm/HIP<a class="headerlink" href="#amd-rocm-hip" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Jeff Daily (<a class="reference external" href="https://github.com/jeffdaily">jeffdaily</a>)</p></li>
 <li><p>Jithun Nair (<a class="reference external" href="https://github.com/jithunnair-amd">jithunnair-amd</a>)</p></li>
@@ -930,7 +1711,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="build-ci">
-<h3>Build + CI<a class="headerlink" href="#build-ci" title="Link to this heading">#</a></h3>
+<h3>Build + CI<a class="headerlink" href="#build-ci" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Nikita Shulga (<a class="reference external" href="https://github.com/malfet">malfet</a>)</p></li>
 <li><p>Eli Uriegas (<a class="reference external" href="https://github.com/seemethere">seemethere</a>)</p></li>
@@ -946,7 +1727,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="performance-tools">
-<h3>Performance Tools<a class="headerlink" href="#performance-tools" title="Link to this heading">#</a></h3>
+<h3>Performance Tools<a class="headerlink" href="#performance-tools" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Taylor Robie (<a class="reference external" href="https://github.com/robieta">robieta</a>)</p></li>
 <li><p>Xu Zhao (<a class="reference external" href="https://github.com/xuzhao9">xuzhao9</a>)</p></li>
@@ -957,14 +1738,14 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="c-api">
-<h3>C++ API<a class="headerlink" href="#c-api" title="Link to this heading">#</a></h3>
+<h3>C++ API<a class="headerlink" href="#c-api" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>(emeritus) Joel Schlosser (<a class="reference external" href="https://github.com/jbschlosser">jbschlosser</a>)</p></li>
 <li><p>(emeritus) Will Feng (<a class="reference external" href="https://github.com/yf225">yf225</a>)</p></li>
 </ul>
 </section>
 <section id="c10-utils-and-operator-dispatch">
-<h3>C10 utils and operator dispatch<a class="headerlink" href="#c10-utils-and-operator-dispatch" title="Link to this heading">#</a></h3>
+<h3>C10 utils and operator dispatch<a class="headerlink" href="#c10-utils-and-operator-dispatch" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Brian Hirsh (<a class="reference external" href="https://github.com/bdhirsh">bdhirsh</a>)</p></li>
 <li><p>Edward Yang (<a class="reference external" href="https://github.com/ezyang">ezyang</a>)</p></li>
@@ -973,7 +1754,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="onnx-exporter">
-<h3>ONNX exporter<a class="headerlink" href="#onnx-exporter" title="Link to this heading">#</a></h3>
+<h3>ONNX exporter<a class="headerlink" href="#onnx-exporter" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Shubham Bhokare (<a class="reference external" href="https://github.com/shubhambhokare1">shubhambhokare1</a>)</p></li>
 <li><p>Justin Chu (<a class="reference external" href="https://github.com/justinchuby">justinchuby</a>)</p></li>
@@ -990,7 +1771,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="liteinterpreter">
-<h3>LiteInterpreter<a class="headerlink" href="#liteinterpreter" title="Link to this heading">#</a></h3>
+<h3>LiteInterpreter<a class="headerlink" href="#liteinterpreter" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>(emeritus) David Reiss (<a class="reference external" href="https://github.com/dreiss">dreiss</a>)</p></li>
 <li><p>(emeritus) Raziel Guevara (<a class="reference external" href="https://github.com/raziel">raziel</a>)</p></li>
@@ -1000,7 +1781,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="quantization-torch-ao">
-<h3>Quantization (torch/ao)<a class="headerlink" href="#quantization-torch-ao" title="Link to this heading">#</a></h3>
+<h3>Quantization (torch/ao)<a class="headerlink" href="#quantization-torch-ao" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Mark Saroufim (<a class="reference external" href="https://github.com/msaroufim">msaroufim</a>)</p></li>
 <li><p>Vasiliy Kuznetsov (<a class="reference external" href="https://github.com/vkuzo">vkuzo</a>)</p></li>
@@ -1010,7 +1791,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="windows">
-<h3>Windows<a class="headerlink" href="#windows" title="Link to this heading">#</a></h3>
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>(emeritus) Guoliang Hua (<a class="reference external" href="https://github.com/nbcsm">nbcsm</a>)</p></li>
 <li><p>(emeritus) Teng Gao (<a class="reference external" href="https://github.com/gaoteng-git">gaoteng-git</a>)</p></li>
@@ -1018,7 +1799,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="apple-m1-mps-metal">
-<h3>Apple M1/MPS/Metal<a class="headerlink" href="#apple-m1-mps-metal" title="Link to this heading">#</a></h3>
+<h3>Apple M1/MPS/Metal<a class="headerlink" href="#apple-m1-mps-metal" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Kulin Seth (<a class="reference external" href="https://github.com/kulinseth">kulinseth</a>)</p></li>
 <li><p>Alban Desmaison (<a class="reference external" href="https://github.com/alband">alband</a>)</p></li>
@@ -1027,35 +1808,35 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="powerpc">
-<h3>PowerPC<a class="headerlink" href="#powerpc" title="Link to this heading">#</a></h3>
+<h3>PowerPC<a class="headerlink" href="#powerpc" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>(emeritus) Alfredo Mendoza (<a class="reference external" href="https://github.com/avmgithub">avmgithub</a>)</p></li>
 </ul>
 </section>
 <section id="x86-cpu">
-<h3>x86 CPU<a class="headerlink" href="#x86-cpu" title="Link to this heading">#</a></h3>
+<h3>x86 CPU<a class="headerlink" href="#x86-cpu" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Mingfei Ma (<a class="reference external" href="https://github.com/mingfeima">mingfeima</a>)</p></li>
 <li><p>Jiong Gong (<a class="reference external" href="https://github.com/jgong5">jgong5</a>)</p></li>
 </ul>
 </section>
 <section id="aarch64-cpu">
-<h3>AArch64 CPU<a class="headerlink" href="#aarch64-cpu" title="Link to this heading">#</a></h3>
+<h3>AArch64 CPU<a class="headerlink" href="#aarch64-cpu" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Sunita Nadampalli (<a class="reference external" href="https://github.com/snadampal">snadampal</a>)</p></li>
 </ul>
 </section>
 <section id="docs-tutorials">
-<h3>Docs / Tutorials<a class="headerlink" href="#docs-tutorials" title="Link to this heading">#</a></h3>
+<h3>Docs / Tutorials<a class="headerlink" href="#docs-tutorials" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Svetlana Karslioglu (<a class="reference external" href="https://github.com/svekars">svekars</a>)</p></li>
 </ul>
 </section>
 </section>
 <section id="library-level-maintainers">
-<h2>Library-level maintainers<a class="headerlink" href="#library-level-maintainers" title="Link to this heading">#</a></h2>
+<h2>Library-level maintainers<a class="headerlink" href="#library-level-maintainers" title="Permalink to this heading">#</a></h2>
 <section id="xla">
-<h3>XLA<a class="headerlink" href="#xla" title="Link to this heading">#</a></h3>
+<h3>XLA<a class="headerlink" href="#xla" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Jack Cao (<a class="reference external" href="https://github.com/JackCaoG">JackCaoG</a>)</p></li>
 <li><p>Daniel Sohn (<a class="reference external" href="https://github.com/jysohn23">jysohn23</a>)</p></li>
@@ -1068,7 +1849,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="torchserve">
-<h3>TorchServe<a class="headerlink" href="#torchserve" title="Link to this heading">#</a></h3>
+<h3>TorchServe<a class="headerlink" href="#torchserve" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Li Ning (<a class="reference external" href="https://github.com/lxning">lxning</a>)</p></li>
 <li><p>Ankith Gunapal (<a class="reference external" href="https://github.com/agunapal">agunapal</a>)</p></li>
@@ -1080,7 +1861,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="torchvision">
-<h3>TorchVision<a class="headerlink" href="#torchvision" title="Link to this heading">#</a></h3>
+<h3>TorchVision<a class="headerlink" href="#torchvision" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Nicolas Hug (<a class="reference external" href="https://github.com/NicolasHug">NicolasHug</a>)</p></li>
 <li><p>Philip Meier (<a class="reference external" href="https://github.com/pmeier">pmeier</a>)</p></li>
@@ -1092,7 +1873,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="torchtext">
-<h3>TorchText<a class="headerlink" href="#torchtext" title="Link to this heading">#</a></h3>
+<h3>TorchText<a class="headerlink" href="#torchtext" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>(emeritus) Nayef Ahmed (<a class="reference external" href="https://github.com/Nayef211">Nayef211</a>)</p></li>
 <li><p>(emeritus) Parmeet Singh Bhatia (<a class="reference external" href="https://github.com/parmeet">parmeet</a>)</p></li>
@@ -1101,7 +1882,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="torchaudio">
-<h3>TorchAudio<a class="headerlink" href="#torchaudio" title="Link to this heading">#</a></h3>
+<h3>TorchAudio<a class="headerlink" href="#torchaudio" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Moto Hira (<a class="reference external" href="https://github.com/mthrok">mthrok</a>)</p></li>
 <li><p>(emeritus) Jeff Hwang (<a class="reference external" href="https://github.com/hwangjeff">hwangjeff</a>)</p></li>
@@ -1113,7 +1894,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="torchrec">
-<h3>TorchRec<a class="headerlink" href="#torchrec" title="Link to this heading">#</a></h3>
+<h3>TorchRec<a class="headerlink" href="#torchrec" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Colin Taylor (<a class="reference external" href="https://github.com/colin2328">colin2328</a>)</p></li>
 <li><p>Paul Zhang (<a class="reference external" href="https://github.com/PaulZhang12">PaulZhang12</a>)</p></li>
@@ -1121,28 +1902,28 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="torchx">
-<h3>TorchX<a class="headerlink" href="#torchx" title="Link to this heading">#</a></h3>
+<h3>TorchX<a class="headerlink" href="#torchx" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>(emeritus) Tristan Rice (<a class="reference external" href="https://github.com/d4l3k">d4l3k</a>)</p></li>
 <li><p>(emeritus) Kiuk Chung (<a class="reference external" href="https://github.com/kiukchung">kiukchung</a>)</p></li>
 </ul>
 </section>
 <section id="torchdata">
-<h3>TorchData<a class="headerlink" href="#torchdata" title="Link to this heading">#</a></h3>
+<h3>TorchData<a class="headerlink" href="#torchdata" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Andrew Ho (<a class="reference external" href="https://github.com/andrewkho">andrewkho</a>)</p></li>
 <li><p>Divyansh Khanna (<a class="reference external" href="https://github.com/divyanshk">divyanshk</a>)</p></li>
 </ul>
 </section>
 <section id="torcharrow">
-<h3>TorchArrow<a class="headerlink" href="#torcharrow" title="Link to this heading">#</a></h3>
+<h3>TorchArrow<a class="headerlink" href="#torcharrow" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>(emeritus) Wenlei Xie (<a class="reference external" href="https://github.com/wenleix">wenleix</a>)</p></li>
 <li><p>(emeritus) Vitaly Fedyunin (<a class="reference external" href="https://github.com/VitalyFedyunin">VitalyFedyunin</a>)</p></li>
 </ul>
 </section>
 <section id="executorch-edge-mobile">
-<h3>ExecuTorch (Edge, Mobile)<a class="headerlink" href="#executorch-edge-mobile" title="Link to this heading">#</a></h3>
+<h3>ExecuTorch (Edge, Mobile)<a class="headerlink" href="#executorch-edge-mobile" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Mergen Nachin (<a class="reference external" href="https://github.com/mergennachin">mergennachin</a>)</p></li>
 <li><p>Kimish Patel (<a class="reference external" href="https://github.com/kimishpatel">kimishpatel</a>)</p></li>
@@ -1151,7 +1932,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="torchtune">
-<h3>TorchTune<a class="headerlink" href="#torchtune" title="Link to this heading">#</a></h3>
+<h3>TorchTune<a class="headerlink" href="#torchtune" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Kartikay Khandelwal (<a class="reference external" href="https://github.com/kartikayk">kartikayk</a>)</p></li>
 <li><p>Evan Smothers (<a class="reference external" href="https://github.com/ebsmothers">ebsmothers</a>)</p></li>
@@ -1159,7 +1940,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="torchchat">
-<h3>TorchChat<a class="headerlink" href="#torchchat" title="Link to this heading">#</a></h3>
+<h3>TorchChat<a class="headerlink" href="#torchchat" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Jack Khuu (<a class="reference external" href="https://github.com/Jack-Khuu">Jack-Khuu</a>)</p></li>
 <li><p>Jesse White (<a class="reference external" href="https://github.com/byjlw">byjlw</a>)</p></li>
@@ -1167,7 +1948,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </ul>
 </section>
 <section id="torchcodec">
-<h3>TorchCodec<a class="headerlink" href="#torchcodec" title="Link to this heading">#</a></h3>
+<h3>TorchCodec<a class="headerlink" href="#torchcodec" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Nicolas Hug (<a class="reference external" href="https://github.com/nicolashug">nicolashug</a>)</p></li>
 <li><p>Ahmad Sharif (<a class="reference external" href="https://github.com/ahmadsharif1">ahmadsharif1</a>)</p></li>
@@ -1178,8 +1959,8 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </section>
 
 
-                </article>
-              
+  </article>
+
               
               
                 <footer class="bd-footer-article">
@@ -1192,24 +1973,47 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
     Rate this Page
     <div class="stars">
         
-        <span class="star" data-value="1">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="1" data-value="1">★</span>
         
-        <span class="star" data-value="2">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="2" data-value="2">★</span>
         
-        <span class="star" data-value="3">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="3" data-value="3">★</span>
         
-        <span class="star" data-value="4">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="4" data-value="4">★</span>
         
-        <span class="star" data-value="5">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="5" data-value="5">★</span>
         
     </div>
 </div>
 
   <div class="feedback-send">
-    <button class="feedback-btn" onclick="openGitHubIssue()">Send Feedback</button>
+    <button class="feedback-btn"
+            onclick="openGitHubIssue()"
+            data-bs-title="Create a GitHub Issue"
+            data-bs-placement="bottom"
+            data-bs-toggle="tooltip">Send Feedback
+    </button>
   </div>
 </div>
+
+
+<div class="prev-next-area">
 </div>
+
+<div class="footer-info">
+  <p class="copyright">
+    
+      
+        © Copyright PyTorch Contributors.
+      
+      <br/>
+    
+  </p>
+
+  <p class="theme-version">
+    Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  </p>
+</div></div>
   
 </div>
                 </footer>
@@ -1226,11 +2030,10 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc">
+                <div class="bd-sidebar-secondary bd-toc">
 <div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
+    
+       <div class="sidebar-secondary-item">
 <div
     id="pst-page-navigation-heading-2"
     class="page-toc tocsection onthispage">
@@ -1296,12 +2099,12 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
 </li>
 </ul>
   </nav></div>
-
-  <div class="sidebar-secondary-item">
+    
+       <div class="sidebar-secondary-item">
 
   
   <div class="tocsection editthispage">
-    <a href="https://github.com/pytorch/pytorch/edit/main/docs/source/community/persons_of_interest.rst">
+    <a href="https://github.com/pytorch/pytorch/edit/main/docs/cpp/source/community/persons_of_interest.rst">
       <i class="fa-solid fa-pencil"></i>
       
       
@@ -1312,21 +2115,22 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
     </a>
   </div>
 </div>
-
-  <div class="sidebar-secondary-item">
+    
+       <div class="sidebar-secondary-item">
     <div class="tocsection sourcelink">
       <a href="../_sources/community/persons_of_interest.rst.txt">
         <i class="fa-solid fa-file-lines"></i> Show Source
       </a>
     </div>
 </div>
+    
 
-</div>
+
 <div class="sidebar-secondary-item">
   <div class="sidebar-heading">PyTorch Community</div>
   <ul style="list-style-type: none; padding: 0;">
   
-   <li><a class="nav-link nav-external" href="community/index.html" style="color: var(--pst-color-text-muted)">PyTorch Governance</a></li>
+   <li><a class="nav-link nav-external" href="https://pytorch.org/docs/stable/community/index.html" style="color: var(--pst-color-text-muted)">PyTorch Governance</a></li>
   
    <li><a class="nav-link nav-external" href="https://pytorch.org/docs/stable/community/design.html" style="color: var(--pst-color-text-muted)">PyTorch Design Philosophy</a></li>
   
@@ -1334,6 +2138,8 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
   
   </ul>
 </div>
+
+
 <div class="sidebar-secondary-item">
  <div class="sidebar-heading">Language Bindings</div>
  <ul style="list-style-type: none; padding: 0;">
@@ -1346,9 +2152,11 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
  
  </ul>
 </div>
+
+
 <div class="sidebar-secondary-item">
   <div class="sidebar-heading">PyTorch Libraries</div>
-  <ul style="list-style-type: none; padding: 0;">
+  <ul style="list-style-type: none; padding: 0; padding-bottom: 80px;">
   
    <li><a class="nav-link nav-external" href="https://pytorch.org/audio/stable/" style="color: var(--pst-color-text-muted)">torchaudio</a></li>
   
@@ -1368,6 +2176,7 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
   
   </ul>
 </div>
+
 </div>
 </div>
               
@@ -1382,50 +2191,8 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
-
-  <footer class="bd-footer">
-    
-    <div class="bd-footer__inner bd-page-width">
-      
-        <div class="footer-items__start">
-          
-            <div class="footer-item">
-
-  <p class="copyright">
-    
-      © Copyright PyTorch Contributors.
-      <br/>
-    
-  </p>
-</div>
-          
-            <div class="footer-item">
-
-  <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.0.
-    <br/>
-  </p>
-</div>
-          
-        </div>
-      
-    
-    
-      <div class="footer-items__end">
-        
-          <div class="footer-item">
-<p class="theme-version">
-  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
-</p></div>
-        
-      </div>
-    
-   </div>
-   
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
    <div class="container-fluid docs-tutorials-resources" id="docs-tutorials-resources">
       <div class="container">
@@ -1523,8 +2290,52 @@ and <a class="reference external" href="https://dev-discuss.pytorch.org/">dev-di
     <img class="close-button" src="../_static/img/pytorch-x.svg">
   </div>
 </div>
-  </footer>
+ </footer>
+   
+  <footer class="bd-footer"><div class="cookie-banner-wrapper">
+  <div class="container">
+    <p class="gdpr-notice">To analyze traffic and optimize your experience, we serve cookies on this site. By clicking or navigating, you agree to allow our usage of cookies. As the current maintainers of this site, Facebook’s Cookies Policy applies. Learn more, including about available controls: <a href="https://www.facebook.com/policies/cookies/">Cookies Policy</a>.</p>
+    <img class="close-button" src="../_static/img/pytorch-x.svg">
+  </div>
+</div>
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
 
+  <p class="copyright">
+    
+      © Copyright PyTorch Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
 
   </body>
 </html>

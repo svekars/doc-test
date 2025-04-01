@@ -1,12 +1,21 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+<meta property="og:title" content="Modules" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://pytorch.org/notes/modules.html" />
+<meta property="og:site_name" content="PyTorch" />
+<meta property="og:description" content="PyTorch uses modules to represent neural networks. Modules are: Building blocks of stateful computation. PyTorch provides a robust library of modules and makes it simple to define new custom module..." />
+<meta property="og:image" content="https://pytorch.org/docs/stable/_static/img/pytorch-logo-dark.svg" />
+<meta property="og:image:alt" content="PyTorch" />
+<meta name="description" content="PyTorch uses modules to represent neural networks. Modules are: Building blocks of stateful computation. PyTorch provides a robust library of modules and makes it simple to define new custom module..." />
 
     <title>Modules &#8212; PyTorch main documentation</title>
   
@@ -16,77 +25,112 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=949a1ff5" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/katex-math.css?v=91adb8b6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/jit.css?v=8de1ea5d" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3ccf5357" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom2.css?v=baa440dc" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <script src="../_static/documentation_options.js?v=a8da1a53"></script>
-    <script src="../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=940804e7"></script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/katex-math.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/jit.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notes/modules';</script>
-    <script src="../_static/js/star-rating.js?v=8861fcb6"></script>
-    <script src="../_static/js/send-feedback.js?v=5646bf45"></script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://pytorch.org/docs/pytorch-versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'main';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        </script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="CUDA semantics" href="cuda.html" />
-    <link rel="prev" title="Gradcheck mechanics" href="gradcheck.html" />
+    <link rel="next" title="MPS backend" href="mps.html" />
+    <link rel="prev" title="LibTorch Stable ABI" href="libtorch_stable_abi.html" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="main (2.6.0 )" />
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script type="text/javascript" src="../_static/js/send-feedback.js"></script>
-<script type="text/javascript" src="../_static/js/star-rating.js"></script>
-<script type="text/javascript" src="../_static/js/cookie-banner.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../_static/css/theme.css">
+<script type="text/javascript" src="../_static/js/theme.js"></script>
+<link rel="stylesheet" href="../_static/webfonts/all.min.css">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TEST12345"></script>
-    <script type="text/javascript">
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8XT4PS"
+   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+   <!-- End Google Tag Manager (noscript) -->
+   <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   j.onload = function() {
+     window.dispatchEvent(new Event('gtm_loaded'));
+     console.log('GTM loaded successfully');
+   };
+   })(window,document,'script','dataLayer','GTM-T8XT4PS');
+</script>
+ <!-- End Google Tag Manager -->
+ <!-- Facebook Pixel Code -->
+<script>
+   !function(f,b,e,v,n,t,s)
+   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+   if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+   n.queue=[];t=b.createElement(e);t.async=!0;
+   t.src=v;s=b.getElementsByTagName(e)[0];
+   s.parentNode.insertBefore(t,s)}(window,document,'script',
+   'https://connect.facebook.net/en_US/fbevents.js');
+   fbq('init', '243028289693773');
+   fbq('track', 'PageView');
+</script>
+<noscript>
+   <img height="1" width="1" src="https://www.facebook.com/tr?id=243028289693773&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
 
-      gtag('config', 'G-TEST12345');
-    </script>
+<script async src="https://cse.google.com/cse.js?cx=e65585f8c3ea1440e"></script>
+
+   <!--
+   Search engines should not index the main version of documentation.
+   Stable documentation are built without release == 'main'.
+   -->
+   <meta name="robots" content="noindex">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
 
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
-  
-  
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-<body data-feedback-url="https://github.com/pytorch/pytorch">
-  <div class="container-fluid header-holder tutorials-header" id="header-holder">
-  <div class="container">
+<body data-feedback-url="https://github.com/pytorch/pytorch" class="pytorch-body">
+     <div class="container-fluid header-holder tutorials-header" id="header-holder">
+   <div class="header-container-wrapper">
     <div class="header-container">
       <a class="header-logo" href="" aria-label="PyTorch"></a>
 
@@ -277,10 +321,167 @@
         </ul>
       </div>
 
-      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu">
+        <i class="fa-solid fa-ellipsis"></i>
+      </a>
+    </div>
+  </div>
+ </div>
+
+ <!-- Begin Mobile Menu -->
+
+<div class="mobile-main-menu">
+  <div class="container-fluid">
+    <div class="header-container-wrapper">
+      <div class="mobile-main-menu-header-container">
+        <a class="header-logo" href="" aria-label="PyTorch"></a>
+        <a class="main-menu-close-button" href="#" data-behavior="close-mobile-menu">
+          <i class="fa-solid fa-xmark"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-main-menu-links-container">
+    <div class="main-menu">
+      <ul>
+         <li class="resources-mobile-menu-title">
+           <a>Learn</a>
+         </li>
+         <ul class="resources-mobile-menu-items">
+           <li>
+             <a href="">Get Started</a>
+           </li>
+           <li>
+             <a href="">Tutorials</a>
+           </li>
+           <li>
+             <a href="">Learn the Basics</a>
+           </li>
+           <li>
+             <a href="">PyTorch Recipes</a>
+           </li>
+           <li>
+             <a href="">Introduction to PyTorch - YouTube Series</a>
+           </li>
+         </ul>
+         <li class="resources-mobile-menu-title">
+           <a>Ecosystem</a>
+         </li>
+         <ul class="resources-mobile-menu-items">
+           <li>
+             <a href="">Tools</a>
+           </li>
+           <li>
+             <a href="">Community</a>
+           </li>
+           <li>
+             <a href="">Forums</a>
+           </li>
+           <li>
+             <a href="">Developer Resources</a>
+           </li>
+           <li>
+             <a href="">Contributor Awards - 2024</a>
+           </li>
+         </ul>
+
+         <li class="resources-mobile-menu-title">
+           <a>Edge</a>
+         </li>
+
+         <ul class="resources-mobile-menu-items">
+           <li>
+             <a href="">About PyTorch Edge</a>
+           </li>
+
+           <li>
+             <a href="">ExecuTorch</a>
+           </li>
+           <li>
+             <a href="">ExecuTorch Documentation</a>
+           </li>
+         </ul>
+
+         <li class="resources-mobile-menu-title">
+           <a>Docs</a>
+         </li>
+
+         <ul class="resources-mobile-menu-items">
+          <li>
+            <a href="">PyTorch</a>
+          </li>
+
+          <li>
+            <a href="">PyTorch Domains</a>
+          </li>
+        </ul>
+
+        <li class="resources-mobile-menu-title">
+          <a>Blog & News</a>
+        </li>
+
+         <ul class="resources-mobile-menu-items">
+          <li>
+            <a href="">PyTorch Blog</a>
+          </li>
+          <li>
+            <a href="">Community Blog</a>
+          </li>
+
+          <li>
+            <a href="">Videos</a>
+          </li>
+
+          <li>
+            <a href="">Community Stories</a>
+          </li>
+          <li>
+            <a href="">Events</a>
+          </li>
+          <li>
+             <a href="">Newsletter</a>
+           </li>
+        </ul>
+
+        <li class="resources-mobile-menu-title">
+          <a>About</a>
+        </li>
+
+        <ul class="resources-mobile-menu-items">
+          <li>
+            <a href="">PyTorch Foundation</a>
+          </li>
+          <li>
+            <a href="">Governing Board</a>
+          </li>
+          <li>
+             <a href="">Cloud Credit Program</a>
+          </li>
+          <li>
+             <a href="">Technical Advisory Council</a>
+          </li>
+          <li>
+             <a href="">Staff</a>
+          </li>
+          <li>
+             <a href="">Contact Us</a>
+          </li>
+        </ul>
+      </ul>
     </div>
   </div>
 </div>
+
+<!-- End Mobile Menu -->
+   
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
 
   
   <div id="pst-scroll-pixel-helper"></div>
@@ -289,8 +490,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -298,6 +510,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -305,8 +518,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -321,6 +534,30 @@
   
   
   <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-2"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-2"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-2"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-2">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
     
       <div class="navbar-item">
 
@@ -350,14 +587,14 @@
   <ul class="bd-navbar-elements navbar-nav">
     
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../python-api/index.html">
+  <a class="nav-link nav-internal" href="../pytorch-api.html">
     Python API
   </a>
 </li>
 
 
 <li class="nav-item current active">
-  <a class="nav-link nav-internal" href="index.html">
+  <a class="nav-link nav-internal" href="../notes.html">
     Developer Notes
   </a>
 </li>
@@ -377,44 +614,305 @@
     
     <div class="navbar-header-items__end">
       
-        <div class="navbar-item navbar-persistent--container">
-          
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
-        </div>
-      
       
         <div class="navbar-item">
-<div class="version-switcher__container dropdown pst-js-only">
-  <button id="pst-version-switcher-button-2"
-    type="button"
-    class="version-switcher__button btn btn-sm dropdown-toggle"
-    data-bs-toggle="dropdown"
-    aria-haspopup="listbox"
-    aria-controls="pst-version-switcher-list-2"
-    aria-label="Version switcher list"
-  >
-    Choose version  <!-- this text may get changed later by javascript -->
-    <span class="caret"></span>
-  </button>
-  <div id="pst-version-switcher-list-2"
-    class="version-switcher__menu dropdown-menu list-group-flush py-0"
-    role="listbox" aria-labelledby="pst-version-switcher-button-2">
-    <!-- dropdown will be populated by javascript on page load -->
+<div class="search-container-wrapper">
+  <div id="sphinx-search" class="search-container">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
   </div>
-</div></div>
+
+  <div id="google-search" class="search-container" style="display:none;">
+    <div class="gcse-search-wrapper">
+      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      <div class="gcse-search"></div>
+    </div>
+  </div>
+
+  <div class="search-toggle-container" data-bs-title="Google Search Off" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <div class="search-toggle-inner">
+      <label class="switch">
+        <input type="checkbox" id="search-toggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Define the search callback
+    const myWebSearchStartingCallback = (gname, query) => {
+      if (typeof dataLayer !== 'undefined' && query) {
+        dataLayer.push({
+          'event': 'google_search',
+          'search_term': query,
+          'event_category': 'Search',
+          'event_label': 'Google Search'
+        });
+        console.log('GA event sent via callback: google_search - ' + query);
+      }
+      return '';
+    };
+
+    // Set up the GCSE search callbacks
+    window.__gcse || (window.__gcse = {});
+    window.__gcse.searchCallbacks = {
+      web: {
+        starting: myWebSearchStartingCallback,
+      },
+    };
+    if (window.location.pathname.includes('/search.html')) {
+      document.body.classList.add('search-page');
+    }
+
+    // Function to reinitialize Google CSE
+    function reinitializeGoogleSearch() {
+      if (window.__gcse) {
+        // Force Google CSE to reinitialize
+        if (window.__gcse.initializationCallback) {
+          window.__gcse.initializationCallback();
+        }
+      }
+    }
+
+    // Function to handle search toggle
+    function handleSearchToggle(toggle, sphinxSearch, googleSearch) {
+      if (!toggle || !sphinxSearch || !googleSearch) return;
+
+      // Check if the URL contains /stable/ or /tutorials/
+      const currentUrl = window.location.href;
+      const shouldDefaultToGoogle = currentUrl.includes('/stable/') || currentUrl.includes('/tutorials/');
+
+      // Check if there's a saved preference, otherwise use the URL-based default
+      const savedPreference = localStorage.getItem('searchPreference');
+      if (savedPreference === 'google' || (savedPreference === null && shouldDefaultToGoogle)) {
+        toggle.checked = true;
+        sphinxSearch.style.display = 'none';
+        googleSearch.style.display = 'block';
+        // Save the preference if it wasn't already saved
+        if (savedPreference === null) {
+          localStorage.setItem('searchPreference', 'google');
+        }
+        // Ensure Google search is properly initialized
+        reinitializeGoogleSearch();
+      } else {
+        toggle.checked = false;
+        sphinxSearch.style.display = 'block';
+        googleSearch.style.display = 'none';
+      }
+
+      // Update tooltip based on initial state
+      const tooltipElement = document.querySelector('.search-toggle-container');
+      if (tooltipElement) {
+        tooltipElement.setAttribute('data-bs-title', toggle.checked ? 'Google Search On' : 'Google Search Off');
+        // Reinitialize tooltip if Bootstrap's tooltip is already initialized
+        if (bootstrap && bootstrap.Tooltip) {
+          const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipElement);
+          if (tooltipInstance) tooltipInstance.dispose();
+          new bootstrap.Tooltip(tooltipElement);
+        }
+      }
+
+      // Add a data attribute to track if this toggle has been initialized
+      if (toggle.hasAttribute('data-initialized')) {
+        return; // Skip adding another event listener if already initialized
+      }
+      toggle.setAttribute('data-initialized', 'true');
+
+      toggle.addEventListener('change', function() {
+        if (this.checked) {
+          sphinxSearch.style.display = 'none';
+          googleSearch.style.display = 'block';
+          localStorage.setItem('searchPreference', 'google');
+          // Reinitialize Google search when switching to it
+          reinitializeGoogleSearch();
+          const tooltipElement = document.querySelector('.search-toggle-container');
+          if (tooltipElement) {
+            tooltipElement.setAttribute('data-bs-title', 'Google Search On');
+            // Refresh tooltip
+            if (bootstrap && bootstrap.Tooltip) {
+              const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipElement);
+              if (tooltipInstance) tooltipInstance.dispose();
+              new bootstrap.Tooltip(tooltipElement);
+            }
+          }
+          if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({
+              'event': 'search_engine_switch',
+              'event_category': 'Search',
+              'event_label': 'Google'
+            });
+            console.log('GA event sent via dataLayer: search_engine_switch - Google');
+          } else {
+            console.log('GA not available: Cannot track Google search switch');
+          }
+        } else {
+          sphinxSearch.style.display = 'block';
+          googleSearch.style.display = 'none';
+          localStorage.setItem('searchPreference', 'sphinx');
+          const tooltipElement = document.querySelector('.search-toggle-container');
+          if (tooltipElement) {
+            tooltipElement.setAttribute('data-bs-title', 'Google Search Off');
+            // Refresh tooltip
+            if (bootstrap && bootstrap.Tooltip) {
+              const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipElement);
+              if (tooltipInstance) tooltipInstance.dispose();
+              new bootstrap.Tooltip(tooltipElement);
+            }
+          }
+          if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({
+              'event': 'search_engine_switch',
+              'event_category': 'Search',
+              'event_label': 'Sphinx'
+            });
+            console.log('GA event sent via dataLayer: search_engine_switch - Sphinx');
+          } else {
+            console.log('GA not available: Cannot track Sphinx search switch');
+          }
+        }
+
+        // Also update mobile search if it exists
+        updateMobileSearch(false); // Pass false to prevent triggering another event
+      });
+    }
+
+
+    // Function to update mobile search based on current toggle state
+    function updateMobileSearch() {
+      const toggle = document.getElementById('search-toggle');
+      if (!toggle) return;
+
+      // Find mobile search container
+      const mobileSearchContainer = document.querySelector('.sidebar-header-items__end .navbar-item .search-container-wrapper');
+      if (mobileSearchContainer) {
+        const mobileSphinxSearch = mobileSearchContainer.querySelector('#sphinx-search');
+        const mobileGoogleSearch = mobileSearchContainer.querySelector('#google-search');
+
+        if (mobileSphinxSearch && mobileGoogleSearch) {
+          if (toggle.checked) {
+            mobileSphinxSearch.style.display = 'none';
+            mobileGoogleSearch.style.display = 'block';
+            // Reinitialize Google search in mobile view
+            reinitializeGoogleSearch();
+          } else {
+            mobileSphinxSearch.style.display = 'block';
+            mobileGoogleSearch.style.display = 'none';
+          }
+        }
+      }
+    }
+
+    // Initialize desktop search toggle
+    const toggle = document.getElementById('search-toggle');
+    const sphinxSearch = document.getElementById('sphinx-search');
+    const googleSearch = document.getElementById('google-search');
+    handleSearchToggle(toggle, sphinxSearch, googleSearch);
+
+    // Set placeholder text for Google search input
+    const observer = new MutationObserver(function(mutations, obs) {
+      const searchInputs = document.querySelectorAll('.gsc-input input');
+      searchInputs.forEach(input => {
+      if (input) {
+        input.setAttribute('placeholder', 'Search the docs ...');
+
+        if (!input.hasAttribute('data-tracking-added')) {
+          input.setAttribute('data-tracking-added', 'true');
+        }
+      }
+      });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    // Watch for mobile menu creation
+    const mobileMenuObserver = new MutationObserver(function(mutations) {
+      for (const mutation of mutations) {
+        const mobileSearchInputs = document.querySelectorAll('.sidebar-header-items__end .navbar-item .search-container-wrapper .gsc-input input');
+      mobileSearchInputs.forEach(input => {
+        if (input) {
+          input.setAttribute('placeholder', 'Search the docs ...');
+          input.style.paddingLeft = '36px';
+          }
+        });
+        if (mutation.addedNodes.length) {
+          // Check if the mobile search container was added
+          const mobileSearchContainer = document.querySelector('.sidebar-header-items__end .navbar-item .search-container-wrapper');
+          if (mobileSearchContainer) {
+            // Clone the toggle for mobile if needed
+            const mobileToggle = mobileSearchContainer.querySelector('#search-toggle');
+            if (mobileToggle) {
+              // Sync mobile toggle with desktop toggle
+              mobileToggle.checked = toggle.checked;
+
+              // Update mobile search display
+              updateMobileSearch();
+
+              // Add event listener to mobile toggle
+              mobileToggle.addEventListener('change', function() {
+                // Sync desktop toggle with mobile toggle
+                toggle.checked = this.checked;
+                // Trigger change event on desktop toggle to update both
+                toggle.dispatchEvent(new Event('change'));
+              });
+            }
+          }
+        }
+      }
+    });
+
+    mobileMenuObserver.observe(document.body, { childList: true, subtree: true });
+
+    // Ensure Google CSE is properly loaded
+    if (window.__gcse) {
+      window.__gcse.callback = function() {
+        // This will run after Google CSE is fully loaded
+        if (toggle && toggle.checked) {
+          // If Google search is active, make sure it's properly initialized
+          reinitializeGoogleSearch();
+        }
+      };
+    } else {
+      // If Google CSE hasn't loaded yet, set up a callback
+      window.__gcse = {
+        callback: function() {
+          if (toggle && toggle.checked) {
+            reinitializeGoogleSearch();
+          }
+        }
+      };
+    }
+  });
+</script>
+</div>
       
         <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -451,8 +949,20 @@
           
           
           
-          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">PyPI</span></a>
+          <a href="https://discuss.pytorch.org/" title="PyTorch Forum" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discourse fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyTorch Forum</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPi</span></a>
         </li>
 </ul></div>
       
@@ -460,15 +970,6 @@
     
   </div>
   
-  
-    <div class="navbar-persistent--mobile">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
-    </div>
   
 
   
@@ -486,8 +987,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -503,14 +1003,14 @@
   <ul class="bd-navbar-elements navbar-nav">
     
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../python-api/index.html">
+  <a class="nav-link nav-internal" href="../pytorch-api.html">
     Python API
   </a>
 </li>
 
 
 <li class="nav-item current active">
-  <a class="nav-link nav-internal" href="index.html">
+  <a class="nav-link nav-internal" href="../notes.html">
     Developer Notes
   </a>
 </li>
@@ -533,32 +1033,303 @@
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
-<div class="version-switcher__container dropdown pst-js-only">
-  <button id="pst-version-switcher-button-3"
-    type="button"
-    class="version-switcher__button btn btn-sm dropdown-toggle"
-    data-bs-toggle="dropdown"
-    aria-haspopup="listbox"
-    aria-controls="pst-version-switcher-list-3"
-    aria-label="Version switcher list"
-  >
-    Choose version  <!-- this text may get changed later by javascript -->
-    <span class="caret"></span>
-  </button>
-  <div id="pst-version-switcher-list-3"
-    class="version-switcher__menu dropdown-menu list-group-flush py-0"
-    role="listbox" aria-labelledby="pst-version-switcher-button-3">
-    <!-- dropdown will be populated by javascript on page load -->
+<div class="search-container-wrapper">
+  <div id="sphinx-search" class="search-container">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
   </div>
-</div></div>
+
+  <div id="google-search" class="search-container" style="display:none;">
+    <div class="gcse-search-wrapper">
+      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      <div class="gcse-search"></div>
+    </div>
+  </div>
+
+  <div class="search-toggle-container" data-bs-title="Google Search Off" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <div class="search-toggle-inner">
+      <label class="switch">
+        <input type="checkbox" id="search-toggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Define the search callback
+    const myWebSearchStartingCallback = (gname, query) => {
+      if (typeof dataLayer !== 'undefined' && query) {
+        dataLayer.push({
+          'event': 'google_search',
+          'search_term': query,
+          'event_category': 'Search',
+          'event_label': 'Google Search'
+        });
+        console.log('GA event sent via callback: google_search - ' + query);
+      }
+      return '';
+    };
+
+    // Set up the GCSE search callbacks
+    window.__gcse || (window.__gcse = {});
+    window.__gcse.searchCallbacks = {
+      web: {
+        starting: myWebSearchStartingCallback,
+      },
+    };
+    if (window.location.pathname.includes('/search.html')) {
+      document.body.classList.add('search-page');
+    }
+
+    // Function to reinitialize Google CSE
+    function reinitializeGoogleSearch() {
+      if (window.__gcse) {
+        // Force Google CSE to reinitialize
+        if (window.__gcse.initializationCallback) {
+          window.__gcse.initializationCallback();
+        }
+      }
+    }
+
+    // Function to handle search toggle
+    function handleSearchToggle(toggle, sphinxSearch, googleSearch) {
+      if (!toggle || !sphinxSearch || !googleSearch) return;
+
+      // Check if the URL contains /stable/ or /tutorials/
+      const currentUrl = window.location.href;
+      const shouldDefaultToGoogle = currentUrl.includes('/stable/') || currentUrl.includes('/tutorials/');
+
+      // Check if there's a saved preference, otherwise use the URL-based default
+      const savedPreference = localStorage.getItem('searchPreference');
+      if (savedPreference === 'google' || (savedPreference === null && shouldDefaultToGoogle)) {
+        toggle.checked = true;
+        sphinxSearch.style.display = 'none';
+        googleSearch.style.display = 'block';
+        // Save the preference if it wasn't already saved
+        if (savedPreference === null) {
+          localStorage.setItem('searchPreference', 'google');
+        }
+        // Ensure Google search is properly initialized
+        reinitializeGoogleSearch();
+      } else {
+        toggle.checked = false;
+        sphinxSearch.style.display = 'block';
+        googleSearch.style.display = 'none';
+      }
+
+      // Update tooltip based on initial state
+      const tooltipElement = document.querySelector('.search-toggle-container');
+      if (tooltipElement) {
+        tooltipElement.setAttribute('data-bs-title', toggle.checked ? 'Google Search On' : 'Google Search Off');
+        // Reinitialize tooltip if Bootstrap's tooltip is already initialized
+        if (bootstrap && bootstrap.Tooltip) {
+          const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipElement);
+          if (tooltipInstance) tooltipInstance.dispose();
+          new bootstrap.Tooltip(tooltipElement);
+        }
+      }
+
+      // Add a data attribute to track if this toggle has been initialized
+      if (toggle.hasAttribute('data-initialized')) {
+        return; // Skip adding another event listener if already initialized
+      }
+      toggle.setAttribute('data-initialized', 'true');
+
+      toggle.addEventListener('change', function() {
+        if (this.checked) {
+          sphinxSearch.style.display = 'none';
+          googleSearch.style.display = 'block';
+          localStorage.setItem('searchPreference', 'google');
+          // Reinitialize Google search when switching to it
+          reinitializeGoogleSearch();
+          const tooltipElement = document.querySelector('.search-toggle-container');
+          if (tooltipElement) {
+            tooltipElement.setAttribute('data-bs-title', 'Google Search On');
+            // Refresh tooltip
+            if (bootstrap && bootstrap.Tooltip) {
+              const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipElement);
+              if (tooltipInstance) tooltipInstance.dispose();
+              new bootstrap.Tooltip(tooltipElement);
+            }
+          }
+          if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({
+              'event': 'search_engine_switch',
+              'event_category': 'Search',
+              'event_label': 'Google'
+            });
+            console.log('GA event sent via dataLayer: search_engine_switch - Google');
+          } else {
+            console.log('GA not available: Cannot track Google search switch');
+          }
+        } else {
+          sphinxSearch.style.display = 'block';
+          googleSearch.style.display = 'none';
+          localStorage.setItem('searchPreference', 'sphinx');
+          const tooltipElement = document.querySelector('.search-toggle-container');
+          if (tooltipElement) {
+            tooltipElement.setAttribute('data-bs-title', 'Google Search Off');
+            // Refresh tooltip
+            if (bootstrap && bootstrap.Tooltip) {
+              const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipElement);
+              if (tooltipInstance) tooltipInstance.dispose();
+              new bootstrap.Tooltip(tooltipElement);
+            }
+          }
+          if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({
+              'event': 'search_engine_switch',
+              'event_category': 'Search',
+              'event_label': 'Sphinx'
+            });
+            console.log('GA event sent via dataLayer: search_engine_switch - Sphinx');
+          } else {
+            console.log('GA not available: Cannot track Sphinx search switch');
+          }
+        }
+
+        // Also update mobile search if it exists
+        updateMobileSearch(false); // Pass false to prevent triggering another event
+      });
+    }
+
+
+    // Function to update mobile search based on current toggle state
+    function updateMobileSearch() {
+      const toggle = document.getElementById('search-toggle');
+      if (!toggle) return;
+
+      // Find mobile search container
+      const mobileSearchContainer = document.querySelector('.sidebar-header-items__end .navbar-item .search-container-wrapper');
+      if (mobileSearchContainer) {
+        const mobileSphinxSearch = mobileSearchContainer.querySelector('#sphinx-search');
+        const mobileGoogleSearch = mobileSearchContainer.querySelector('#google-search');
+
+        if (mobileSphinxSearch && mobileGoogleSearch) {
+          if (toggle.checked) {
+            mobileSphinxSearch.style.display = 'none';
+            mobileGoogleSearch.style.display = 'block';
+            // Reinitialize Google search in mobile view
+            reinitializeGoogleSearch();
+          } else {
+            mobileSphinxSearch.style.display = 'block';
+            mobileGoogleSearch.style.display = 'none';
+          }
+        }
+      }
+    }
+
+    // Initialize desktop search toggle
+    const toggle = document.getElementById('search-toggle');
+    const sphinxSearch = document.getElementById('sphinx-search');
+    const googleSearch = document.getElementById('google-search');
+    handleSearchToggle(toggle, sphinxSearch, googleSearch);
+
+    // Set placeholder text for Google search input
+    const observer = new MutationObserver(function(mutations, obs) {
+      const searchInputs = document.querySelectorAll('.gsc-input input');
+      searchInputs.forEach(input => {
+      if (input) {
+        input.setAttribute('placeholder', 'Search the docs ...');
+
+        if (!input.hasAttribute('data-tracking-added')) {
+          input.setAttribute('data-tracking-added', 'true');
+        }
+      }
+      });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    // Watch for mobile menu creation
+    const mobileMenuObserver = new MutationObserver(function(mutations) {
+      for (const mutation of mutations) {
+        const mobileSearchInputs = document.querySelectorAll('.sidebar-header-items__end .navbar-item .search-container-wrapper .gsc-input input');
+      mobileSearchInputs.forEach(input => {
+        if (input) {
+          input.setAttribute('placeholder', 'Search the docs ...');
+          input.style.paddingLeft = '36px';
+          }
+        });
+        if (mutation.addedNodes.length) {
+          // Check if the mobile search container was added
+          const mobileSearchContainer = document.querySelector('.sidebar-header-items__end .navbar-item .search-container-wrapper');
+          if (mobileSearchContainer) {
+            // Clone the toggle for mobile if needed
+            const mobileToggle = mobileSearchContainer.querySelector('#search-toggle');
+            if (mobileToggle) {
+              // Sync mobile toggle with desktop toggle
+              mobileToggle.checked = toggle.checked;
+
+              // Update mobile search display
+              updateMobileSearch();
+
+              // Add event listener to mobile toggle
+              mobileToggle.addEventListener('change', function() {
+                // Sync desktop toggle with mobile toggle
+                toggle.checked = this.checked;
+                // Trigger change event on desktop toggle to update both
+                toggle.dispatchEvent(new Event('change'));
+              });
+            }
+          }
+        }
+      }
+    });
+
+    mobileMenuObserver.observe(document.body, { childList: true, subtree: true });
+
+    // Ensure Google CSE is properly loaded
+    if (window.__gcse) {
+      window.__gcse.callback = function() {
+        // This will run after Google CSE is fully loaded
+        if (toggle && toggle.checked) {
+          // If Google search is active, make sure it's properly initialized
+          reinitializeGoogleSearch();
+        }
+      };
+    } else {
+      // If Google CSE hasn't loaded yet, set up a callback
+      window.__gcse = {
+        callback: function() {
+          if (toggle && toggle.checked) {
+            reinitializeGoogleSearch();
+          }
+        }
+      };
+    }
+  });
+</script>
+</div>
         
           <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -595,8 +1366,20 @@
           
           
           
-          <a href="https://pypi.org/project/torch" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">PyPI</span></a>
+          <a href="https://discuss.pytorch.org/" title="PyTorch Forum" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discourse fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyTorch Forum</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/torch/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPi</span></a>
         </li>
 </ul></div>
         
@@ -609,50 +1392,29 @@
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Core Concepts</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="autograd.html">Autograd mechanics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gradcheck.html">Gradcheck mechanics</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Modules</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Device and Hardware Support</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="cuda.html">CUDA semantics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hip.html">HIP (ROCm) semantics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mps.html">MPS backend</a></li>
-<li class="toctree-l1"><a class="reference internal" href="get_start_xpu.html">Getting Started on Intel GPU</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Distributed Training and Deployment</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="ddp.html">Distributed Data Parallel</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fsdp.html">FSDP Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="large_scale_deployments.html">Features for large-scale deployments</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Optimization and Performance</span></p>
-<ul class="nav bd-sidenav">
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="amp_examples.html">Automatic Mixed Precision examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autograd.html">Autograd mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="broadcasting.html">Broadcasting semantics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cpu_threading_torchscript_inference.html">CPU threading and TorchScript inference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multiprocessing.html">Multiprocessing best practices</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extending PyTorch</span></p>
-<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cuda.html">CUDA semantics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_operators.html">PyTorch Custom Operators Landing Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ddp.html">Distributed Data Parallel</a></li>
 <li class="toctree-l1"><a class="reference internal" href="extending.html">Extending PyTorch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="extending.func.html">Extending torch.func with autograd.Function</a></li>
-<li class="toctree-l1"><a class="reference internal" href="custom_operators.html">PyTorch Custom Operators Landing Page</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Numerical Considerations</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="broadcasting.html">Broadcasting semantics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fsdp.html">FSDP Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_start_xpu.html">Getting Started on Intel GPU</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gradcheck.html">Gradcheck mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hip.html">HIP (ROCm) semantics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large_scale_deployments.html">Features for large-scale deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="libtorch_stable_abi.html">LibTorch Stable ABI</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mps.html">MPS backend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multiprocessing.html">Multiprocessing best practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="numerical_accuracy.html">Numerical accuracy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="randomness.html">Reproducibility</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Serialization and Storage</span></p>
-<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="serialization.html">Serialization semantics</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">FAQs</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="windows.html">Windows FAQ</a></li>
 </ul>
 </div>
@@ -661,14 +1423,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -686,6 +1443,8 @@
       
         <div class="header-article-item">
 
+
+
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -695,9 +1454,9 @@
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Developer Notes</a></li>
+    <li class="breadcrumb-item"><a href="../notes.html" class="nav-link">Developer Notes</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Modules</span></li>
+    <li class="breadcrumb-item active" aria-current="page">Modules</li>
   </ul>
 </nav>
 </div>
@@ -712,15 +1471,15 @@
     Rate this Page
     <div class="stars">
         
-        <span class="star" data-value="1">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="1" data-value="1">★</span>
         
-        <span class="star" data-value="2">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="2" data-value="2">★</span>
         
-        <span class="star" data-value="3">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="3" data-value="3">★</span>
         
-        <span class="star" data-value="4">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="4" data-value="4">★</span>
         
-        <span class="star" data-value="5">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="5" data-value="5">★</span>
         
     </div>
 </div>
@@ -732,13 +1491,13 @@
 </div>
               
               
-              
-                
+  
 <div id="searchbox"></div>
-                <article class="bd-article">
-                  
+  <article class="bd-article">
+    
+    
   <section id="modules">
-<span id="id1"></span><h1>Modules<a class="headerlink" href="#modules" title="Link to this heading">#</a></h1>
+<span id="id1"></span><h1>Modules<a class="headerlink" href="#modules" title="Permalink to this heading">#</a></h1>
 <p>PyTorch uses modules to represent neural networks. Modules are:</p>
 <ul class="simple">
 <li><p><strong>Building blocks of stateful computation.</strong>
@@ -774,8 +1533,8 @@ are provided here as well.</p>
 </ul>
 </nav>
 <section id="a-simple-custom-module">
-<h2><a class="toc-backref" href="#id4" role="doc-backlink">A Simple Custom Module</a><a class="headerlink" href="#a-simple-custom-module" title="Link to this heading">#</a></h2>
-<p>To get started, let’s look at a simpler, custom version of PyTorch’s <a class="reference internal" href="../python-api/generated/torch.nn.Linear.html#torch.nn.Linear" title="torch.nn.Linear"><code class="xref py py-class docutils literal notranslate"><span class="pre">Linear</span></code></a> module.
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">A Simple Custom Module</a><a class="headerlink" href="#a-simple-custom-module" title="Permalink to this heading">#</a></h2>
+<p>To get started, let’s look at a simpler, custom version of PyTorch’s <a class="reference internal" href="../generated/torch.nn.Linear.html#torch.nn.Linear" title="torch.nn.Linear"><code class="xref py py-class docutils literal notranslate"><span class="pre">Linear</span></code></a> module.
 This module applies an affine transformation to its input.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">torch</span><span class="w"> </span><span class="kn">import</span> <span class="n">nn</span>
@@ -793,12 +1552,12 @@ This module applies an affine transformation to its input.</p>
 <p>This simple module has the following fundamental characteristics of modules:</p>
 <ul class="simple">
 <li><p><strong>It inherits from the base Module class.</strong>
-All modules should subclass <a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module" title="torch.nn.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a> for composability with other modules.</p></li>
+All modules should subclass <a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module" title="torch.nn.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a> for composability with other modules.</p></li>
 <li><p><strong>It defines some “state” that is used in computation.</strong>
 Here, the state consists of randomly-initialized <code class="docutils literal notranslate"><span class="pre">weight</span></code> and <code class="docutils literal notranslate"><span class="pre">bias</span></code> tensors that define the affine
-transformation. Because each of these is defined as a <a class="reference internal" href="../python-api/generated/torch.nn.parameter.Parameter.html#torch.nn.parameter.Parameter" title="torch.nn.parameter.Parameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Parameter</span></code></a>, they are
+transformation. Because each of these is defined as a <a class="reference internal" href="../generated/torch.nn.parameter.Parameter.html#torch.nn.parameter.Parameter" title="torch.nn.parameter.Parameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Parameter</span></code></a>, they are
 <em>registered</em> for the module and will automatically be tracked and returned from calls
-to <a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.parameters" title="torch.nn.Module.parameters"><code class="xref py py-func docutils literal notranslate"><span class="pre">parameters()</span></code></a>. Parameters can be
+to <a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module.parameters" title="torch.nn.Module.parameters"><code class="xref py py-func docutils literal notranslate"><span class="pre">parameters()</span></code></a>. Parameters can be
 considered the “learnable” aspects of the module’s computation (more on this later). Note that modules
 are not required to have state, and can also be stateless.</p></li>
 <li><p><strong>It defines a forward() function that performs the computation.</strong> For this affine transformation module, the input
@@ -824,7 +1583,7 @@ is not required to manually implement a <code class="docutils literal notranslat
 module parameters through successive forward / backward passes is covered in detail in
 <a class="reference internal" href="#neural-network-training-with-modules"><span class="std std-ref">Neural Network Training with Modules</span></a>.</p>
 <p>The full set of parameters registered by the module can be iterated through via a call to
-<a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.parameters" title="torch.nn.Module.parameters"><code class="xref py py-func docutils literal notranslate"><span class="pre">parameters()</span></code></a> or <a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.named_parameters" title="torch.nn.Module.named_parameters"><code class="xref py py-func docutils literal notranslate"><span class="pre">named_parameters()</span></code></a>,
+<a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module.parameters" title="torch.nn.Module.parameters"><code class="xref py py-func docutils literal notranslate"><span class="pre">parameters()</span></code></a> or <a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module.named_parameters" title="torch.nn.Module.named_parameters"><code class="xref py py-func docutils literal notranslate"><span class="pre">named_parameters()</span></code></a>,
 where the latter includes each parameter’s name:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">named_parameters</span><span class="p">():</span>
   <span class="nb">print</span><span class="p">(</span><span class="n">parameter</span><span class="p">)</span>
@@ -842,9 +1601,9 @@ where the latter includes each parameter’s name:</p>
 Before we get to that, however, let’s first examine how modules can be composed with one another.</p>
 </section>
 <section id="modules-as-building-blocks">
-<h2><a class="toc-backref" href="#id5" role="doc-backlink">Modules as Building Blocks</a><a class="headerlink" href="#modules-as-building-blocks" title="Link to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Modules as Building Blocks</a><a class="headerlink" href="#modules-as-building-blocks" title="Permalink to this heading">#</a></h2>
 <p>Modules can contain other modules, making them useful building blocks for developing more elaborate functionality.
-The simplest way to do this is using the <a class="reference internal" href="../python-api/generated/torch.nn.Sequential.html#torch.nn.Sequential" title="torch.nn.Sequential"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequential</span></code></a> module. It allows us to chain together
+The simplest way to do this is using the <a class="reference internal" href="../generated/torch.nn.Sequential.html#torch.nn.Sequential" title="torch.nn.Sequential"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequential</span></code></a> module. It allows us to chain together
 multiple modules:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">net</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
   <span class="n">MyLinear</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
@@ -857,8 +1616,8 @@ multiple modules:</p>
 <span class="p">:</span> <span class="n">tensor</span><span class="p">([</span><span class="o">-</span><span class="mf">0.6749</span><span class="p">],</span> <span class="n">grad_fn</span><span class="o">=&lt;</span><span class="n">AddBackward0</span><span class="o">&gt;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Note that <a class="reference internal" href="../python-api/generated/torch.nn.Sequential.html#torch.nn.Sequential" title="torch.nn.Sequential"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequential</span></code></a> automatically feeds the output of the first <code class="docutils literal notranslate"><span class="pre">MyLinear</span></code> module as input
-into the <a class="reference internal" href="../python-api/generated/torch.nn.ReLU.html#torch.nn.ReLU" title="torch.nn.ReLU"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReLU</span></code></a>, and the output of that as input into the second <code class="docutils literal notranslate"><span class="pre">MyLinear</span></code> module. As
+<p>Note that <a class="reference internal" href="../generated/torch.nn.Sequential.html#torch.nn.Sequential" title="torch.nn.Sequential"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequential</span></code></a> automatically feeds the output of the first <code class="docutils literal notranslate"><span class="pre">MyLinear</span></code> module as input
+into the <a class="reference internal" href="../generated/torch.nn.ReLU.html#torch.nn.ReLU" title="torch.nn.ReLU"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReLU</span></code></a>, and the output of that as input into the second <code class="docutils literal notranslate"><span class="pre">MyLinear</span></code> module. As
 shown, it is limited to in-order chaining of modules with a single input and output.</p>
 <p>In general, it is recommended to define a custom module for anything beyond the simplest use cases, as this gives
 full flexibility on how submodules are used for a module’s computation.</p>
@@ -879,8 +1638,8 @@ full flexibility on how submodules are used for a module’s computation.</p>
 </div>
 <p>This module is composed of two “children” or “submodules” (<code class="docutils literal notranslate"><span class="pre">l0</span></code> and <code class="docutils literal notranslate"><span class="pre">l1</span></code>) that define the layers of
 the neural network and are utilized for computation within the module’s <code class="docutils literal notranslate"><span class="pre">forward()</span></code> method. Immediate
-children of a module can be iterated through via a call to <a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.children" title="torch.nn.Module.children"><code class="xref py py-func docutils literal notranslate"><span class="pre">children()</span></code></a> or
-<a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.named_children" title="torch.nn.Module.named_children"><code class="xref py py-func docutils literal notranslate"><span class="pre">named_children()</span></code></a>:</p>
+children of a module can be iterated through via a call to <a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module.children" title="torch.nn.Module.children"><code class="xref py py-func docutils literal notranslate"><span class="pre">children()</span></code></a> or
+<a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module.named_children" title="torch.nn.Module.named_children"><code class="xref py py-func docutils literal notranslate"><span class="pre">named_children()</span></code></a>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">net</span> <span class="o">=</span> <span class="n">Net</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">named_children</span><span class="p">():</span>
   <span class="nb">print</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
@@ -888,8 +1647,8 @@ children of a module can be iterated through via a call to <a class="reference i
 <span class="p">(</span><span class="s1">&#39;l1&#39;</span><span class="p">,</span> <span class="n">MyLinear</span><span class="p">())</span>
 </pre></div>
 </div>
-<p>To go deeper than just the immediate children, <a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.modules" title="torch.nn.Module.modules"><code class="xref py py-func docutils literal notranslate"><span class="pre">modules()</span></code></a> and
-<a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.named_modules" title="torch.nn.Module.named_modules"><code class="xref py py-func docutils literal notranslate"><span class="pre">named_modules()</span></code></a> <em>recursively</em> iterate through a module and its child modules:</p>
+<p>To go deeper than just the immediate children, <a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module.modules" title="torch.nn.Module.modules"><code class="xref py py-func docutils literal notranslate"><span class="pre">modules()</span></code></a> and
+<a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module.named_modules" title="torch.nn.Module.named_modules"><code class="xref py py-func docutils literal notranslate"><span class="pre">named_modules()</span></code></a> <em>recursively</em> iterate through a module and its child modules:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">BigNet</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
   <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
@@ -918,7 +1677,7 @@ children of a module can be iterated through via a call to <a class="reference i
 </pre></div>
 </div>
 <p>Sometimes, it’s necessary for a module to dynamically define submodules.
-The <a class="reference internal" href="../python-api/generated/torch.nn.ModuleList.html#torch.nn.ModuleList" title="torch.nn.ModuleList"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModuleList</span></code></a> and <a class="reference internal" href="../python-api/generated/torch.nn.ModuleDict.html#torch.nn.ModuleDict" title="torch.nn.ModuleDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModuleDict</span></code></a> modules are useful here; they
+The <a class="reference internal" href="../generated/torch.nn.ModuleList.html#torch.nn.ModuleList" title="torch.nn.ModuleList"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModuleList</span></code></a> and <a class="reference internal" href="../generated/torch.nn.ModuleDict.html#torch.nn.ModuleDict" title="torch.nn.ModuleDict"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModuleDict</span></code></a> modules are useful here; they
 register submodules from a list or dict:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">DynamicNet</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
   <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_layers</span><span class="p">):</span>
@@ -943,7 +1702,7 @@ register submodules from a list or dict:</p>
 </pre></div>
 </div>
 <p>For any given module, its parameters consist of its direct parameters as well as the parameters of all submodules.
-This means that calls to <a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.parameters" title="torch.nn.Module.parameters"><code class="xref py py-func docutils literal notranslate"><span class="pre">parameters()</span></code></a> and <a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.named_parameters" title="torch.nn.Module.named_parameters"><code class="xref py py-func docutils literal notranslate"><span class="pre">named_parameters()</span></code></a> will
+This means that calls to <a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module.parameters" title="torch.nn.Module.parameters"><code class="xref py py-func docutils literal notranslate"><span class="pre">parameters()</span></code></a> and <a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module.named_parameters" title="torch.nn.Module.named_parameters"><code class="xref py py-func docutils literal notranslate"><span class="pre">named_parameters()</span></code></a> will
 recursively include child parameters, allowing for convenient optimization of all parameters within the network:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="n">dynamic_net</span><span class="o">.</span><span class="n">named_parameters</span><span class="p">():</span>
   <span class="nb">print</span><span class="p">(</span><span class="n">parameter</span><span class="p">)</span>
@@ -975,7 +1734,7 @@ recursively include child parameters, allowing for convenient optimization of al
 </pre></div>
 </div>
 <p>It’s also easy to move all parameters to a different device or change their precision using
-<a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.to" title="torch.nn.Module.to"><code class="xref py py-func docutils literal notranslate"><span class="pre">to()</span></code></a>:</p>
+<a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module.to" title="torch.nn.Module.to"><code class="xref py py-func docutils literal notranslate"><span class="pre">to()</span></code></a>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Move all parameters to a CUDA device</span>
 <span class="n">dynamic_net</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="o">=</span><span class="s1">&#39;cuda&#39;</span><span class="p">)</span>
 
@@ -987,7 +1746,7 @@ recursively include child parameters, allowing for convenient optimization of al
 </pre></div>
 </div>
 <p>More generally, an arbitrary function can be applied to a module and its submodules recursively by
-using the <a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.apply" title="torch.nn.Module.apply"><code class="xref py py-func docutils literal notranslate"><span class="pre">apply()</span></code></a> function. For example, to apply custom initialization to parameters
+using the <a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module.apply" title="torch.nn.Module.apply"><code class="xref py py-func docutils literal notranslate"><span class="pre">apply()</span></code></a> function. For example, to apply custom initialization to parameters
 of a module and its submodules:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define a function to initialize Linear weights.</span>
 <span class="c1"># Note that no_grad() is used here to avoid tracking this computation in the autograd graph.</span>
@@ -1003,7 +1762,7 @@ of a module and its submodules:</p>
 </div>
 <p>These examples show how elaborate neural networks can be formed through module composition and conveniently
 manipulated. To allow for quick and easy construction of neural networks with minimal boilerplate, PyTorch
-provides a large library of performant modules within the <a class="reference internal" href="../python-api/nn.html#module-torch.nn" title="torch.nn"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.nn</span></code></a> namespace that perform common neural
+provides a large library of performant modules within the <a class="reference internal" href="../nn.html#module-torch.nn" title="torch.nn"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.nn</span></code></a> namespace that perform common neural
 network operations like pooling, convolutions, loss functions, etc.</p>
 <p>In the next section, we give a full example of training a neural network.</p>
 <p>For more information, check out:</p>
@@ -1013,9 +1772,9 @@ network operations like pooling, convolutions, loss functions, etc.</p>
 </ul>
 </section>
 <section id="neural-network-training-with-modules">
-<span id="id2"></span><h2><a class="toc-backref" href="#id6" role="doc-backlink">Neural Network Training with Modules</a><a class="headerlink" href="#neural-network-training-with-modules" title="Link to this heading">#</a></h2>
+<span id="id2"></span><h2><a class="toc-backref" href="#id6" role="doc-backlink">Neural Network Training with Modules</a><a class="headerlink" href="#neural-network-training-with-modules" title="Permalink to this heading">#</a></h2>
 <p>Once a network is built, it has to be trained, and its parameters can be easily optimized with one of PyTorch’s
-Optimizers from <a class="reference internal" href="../python-api/optim.html#module-torch.optim" title="torch.optim"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.optim</span></code></a>:</p>
+Optimizers from <a class="reference internal" href="../optim.html#module-torch.optim" title="torch.optim"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.optim</span></code></a>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the network (from previous section) and optimizer</span>
 <span class="n">net</span> <span class="o">=</span> <span class="n">Net</span><span class="p">()</span>
 <span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">SGD</span><span class="p">(</span><span class="n">net</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">,</span> <span class="n">weight_decay</span><span class="o">=</span><span class="mf">1e-2</span><span class="p">,</span> <span class="n">momentum</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span>
@@ -1038,7 +1797,7 @@ Optimizers from <a class="reference internal" href="../python-api/optim.html#mod
 </pre></div>
 </div>
 <p>In this simplified example, the network learns to simply output zero, as any non-zero output is “penalized” according
-to its absolute value by employing <a class="reference internal" href="../python-api/generated/torch.abs.html#torch.abs" title="torch.abs"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.abs()</span></code></a> as a loss function. While this is not a very interesting task, the
+to its absolute value by employing <a class="reference internal" href="../generated/torch.abs.html#torch.abs" title="torch.abs"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.abs()</span></code></a> as a loss function. While this is not a very interesting task, the
 key parts of training are present:</p>
 <ul class="simple">
 <li><p>A network is created.</p></li>
@@ -1067,8 +1826,8 @@ value of <code class="docutils literal notranslate"><span class="pre">l1</span><
 </pre></div>
 </div>
 <p>Note that the above process is done entirely while the network module is in “training mode”. Modules default to
-training mode and can be switched between training and evaluation modes using <a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.train" title="torch.nn.Module.train"><code class="xref py py-func docutils literal notranslate"><span class="pre">train()</span></code></a> and
-<a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.eval" title="torch.nn.Module.eval"><code class="xref py py-func docutils literal notranslate"><span class="pre">eval()</span></code></a>. They can behave differently depending on which mode they are in. For example, the
+training mode and can be switched between training and evaluation modes using <a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module.train" title="torch.nn.Module.train"><code class="xref py py-func docutils literal notranslate"><span class="pre">train()</span></code></a> and
+<a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module.eval" title="torch.nn.Module.eval"><code class="xref py py-func docutils literal notranslate"><span class="pre">eval()</span></code></a>. They can behave differently depending on which mode they are in. For example, the
 <code class="xref py py-class docutils literal notranslate"><span class="pre">BatchNorm</span></code> module maintains a running mean and variance during training that are not updated
 when the module is in evaluation mode. In general, modules should be in training mode during training
 and only switched to evaluation mode for inference or evaluation. Below is an example of a custom module
@@ -1104,7 +1863,7 @@ that behaves differently between the two modes:</p>
 </ul>
 </section>
 <section id="module-state">
-<h2><a class="toc-backref" href="#id7" role="doc-backlink">Module State</a><a class="headerlink" href="#module-state" title="Link to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Module State</a><a class="headerlink" href="#module-state" title="Permalink to this heading">#</a></h2>
 <p>In the previous section, we demonstrated training a module’s “parameters”, or learnable aspects of computation.
 Now, if we want to save the trained model to disk, we can do so by saving its <code class="docutils literal notranslate"><span class="pre">state_dict</span></code> (i.e. “state dictionary”):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save the module</span>
@@ -1134,7 +1893,7 @@ and “non-persistent”. Following is an overview of the various types of state
 <p>As a motivating example for the use of buffers, consider a simple module that maintains a running mean. We want
 the current value of the running mean to be considered part of the module’s <code class="docutils literal notranslate"><span class="pre">state_dict</span></code> so that it will be
 restored when loading a serialized form of the module, but we don’t want it to be learnable.
-This snippet shows how to use <a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.register_buffer" title="torch.nn.Module.register_buffer"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_buffer()</span></code></a> to accomplish this:</p>
+This snippet shows how to use <a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module.register_buffer" title="torch.nn.Module.register_buffer"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_buffer()</span></code></a> to accomplish this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">RunningMean</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
   <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_features</span><span class="p">,</span> <span class="n">momentum</span><span class="o">=</span><span class="mf">0.9</span><span class="p">):</span>
     <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
@@ -1168,13 +1927,13 @@ and will be properly restored when loading the module from disk:</p>
 </pre></div>
 </div>
 <p>Both persistent and non-persistent buffers are affected by model-wide device / dtype changes applied with
-<a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.to" title="torch.nn.Module.to"><code class="xref py py-func docutils literal notranslate"><span class="pre">to()</span></code></a>:</p>
+<a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module.to" title="torch.nn.Module.to"><code class="xref py py-func docutils literal notranslate"><span class="pre">to()</span></code></a>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Moves all module parameters and buffers to the specified device / dtype</span>
 <span class="n">m</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="o">=</span><span class="s1">&#39;cuda&#39;</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Buffers of a module can be iterated over using <a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.buffers" title="torch.nn.Module.buffers"><code class="xref py py-func docutils literal notranslate"><span class="pre">buffers()</span></code></a> or
-<a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.named_buffers" title="torch.nn.Module.named_buffers"><code class="xref py py-func docutils literal notranslate"><span class="pre">named_buffers()</span></code></a>.</p>
+<p>Buffers of a module can be iterated over using <a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module.buffers" title="torch.nn.Module.buffers"><code class="xref py py-func docutils literal notranslate"><span class="pre">buffers()</span></code></a> or
+<a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module.named_buffers" title="torch.nn.Module.named_buffers"><code class="xref py py-func docutils literal notranslate"><span class="pre">named_buffers()</span></code></a>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">buffer</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">named_buffers</span><span class="p">():</span>
   <span class="nb">print</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
 </pre></div>
@@ -1248,8 +2007,8 @@ and will be properly restored when loading the module from disk:</p>
 </ul>
 </section>
 <section id="module-initialization">
-<h2><a class="toc-backref" href="#id8" role="doc-backlink">Module Initialization</a><a class="headerlink" href="#module-initialization" title="Link to this heading">#</a></h2>
-<p>By default, parameters and floating-point buffers for modules provided by <a class="reference internal" href="../python-api/nn.html#module-torch.nn" title="torch.nn"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.nn</span></code></a> are initialized during
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Module Initialization</a><a class="headerlink" href="#module-initialization" title="Permalink to this heading">#</a></h2>
+<p>By default, parameters and floating-point buffers for modules provided by <a class="reference internal" href="../nn.html#module-torch.nn" title="torch.nn"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.nn</span></code></a> are initialized during
 module instantiation as 32-bit floating point values on the CPU using an initialization scheme determined to
 perform well historically for the module type. For certain use cases, it may be desired to initialize with a different
 dtype, device (e.g. GPU), or initialization technique.</p>
@@ -1275,13 +2034,13 @@ for the module:</p>
 <p>While module writers can use any device or dtype to initialize parameters in their custom modules, good practice is
 to use <code class="docutils literal notranslate"><span class="pre">dtype=torch.float</span></code> and <code class="docutils literal notranslate"><span class="pre">device='cpu'</span></code> by default as well. Optionally, you can provide full flexibility
 in these areas for your custom module by conforming to the convention demonstrated above that all
-<a class="reference internal" href="../python-api/nn.html#module-torch.nn" title="torch.nn"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.nn</span></code></a> modules follow:</p>
+<a class="reference internal" href="../nn.html#module-torch.nn" title="torch.nn"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.nn</span></code></a> modules follow:</p>
 <ul class="simple">
 <li><p>Provide a <code class="docutils literal notranslate"><span class="pre">device</span></code> constructor kwarg that applies to any parameters / buffers registered by the module.</p></li>
 <li><p>Provide a <code class="docutils literal notranslate"><span class="pre">dtype</span></code> constructor kwarg that applies to any parameters / floating-point buffers registered by
 the module.</p></li>
-<li><p>Only use initialization functions (i.e. functions from <a class="reference internal" href="../python-api/nn.html#module-torch.nn.init" title="torch.nn.init"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.nn.init</span></code></a>) on parameters and buffers within the
-module’s constructor. Note that this is only required to use <a class="reference internal" href="../python-api/generated/torch.nn.utils.skip_init.html#torch.nn.utils.skip_init" title="torch.nn.utils.skip_init"><code class="xref py py-func docutils literal notranslate"><span class="pre">skip_init()</span></code></a>; see
+<li><p>Only use initialization functions (i.e. functions from <a class="reference internal" href="../nn.html#module-torch.nn.init" title="torch.nn.init"><code class="xref py py-mod docutils literal notranslate"><span class="pre">torch.nn.init</span></code></a>) on parameters and buffers within the
+module’s constructor. Note that this is only required to use <a class="reference internal" href="../generated/torch.nn.utils.skip_init.html#torch.nn.utils.skip_init" title="torch.nn.utils.skip_init"><code class="xref py py-func docutils literal notranslate"><span class="pre">skip_init()</span></code></a>; see
 <a class="reference external" href="https://pytorch.org/tutorials/prototype/skip_param_init.html#updating-modules-to-support-skipping-initialization">this page</a> for an explanation.</p></li>
 </ul>
 <p>For more information, check out:</p>
@@ -1290,7 +2049,7 @@ module’s constructor. Note that this is only required to use <a class="referen
 </ul>
 </section>
 <section id="module-hooks">
-<h2><a class="toc-backref" href="#id9" role="doc-backlink">Module Hooks</a><a class="headerlink" href="#module-hooks" title="Link to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Module Hooks</a><a class="headerlink" href="#module-hooks" title="Permalink to this heading">#</a></h2>
 <p>In <a class="reference internal" href="#neural-network-training-with-modules"><span class="std std-ref">Neural Network Training with Modules</span></a>, we demonstrated the training process for a module, which iteratively
 performs forward and backward passes, updating module parameters each iteration. For more control
 over this process, PyTorch provides “hooks” that can perform arbitrary computation during a forward or backward
@@ -1300,19 +2059,19 @@ you haven’t written yourself, meaning this functionality can be applied to thi
 <p>PyTorch provides two types of hooks for modules:</p>
 <ul class="simple">
 <li><p><strong>Forward hooks</strong> are called during the forward pass. They can be installed for a given module with
-<a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.register_forward_pre_hook" title="torch.nn.Module.register_forward_pre_hook"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_forward_pre_hook()</span></code></a> and <a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.register_forward_hook" title="torch.nn.Module.register_forward_hook"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_forward_hook()</span></code></a>.
+<a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module.register_forward_pre_hook" title="torch.nn.Module.register_forward_pre_hook"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_forward_pre_hook()</span></code></a> and <a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module.register_forward_hook" title="torch.nn.Module.register_forward_hook"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_forward_hook()</span></code></a>.
 These hooks will be called respectively just before the forward function is called and just after it is called.
 Alternatively, these hooks can be installed globally for all modules with the analogous
-<a class="reference internal" href="../python-api/generated/torch.nn.modules.module.register_module_forward_pre_hook.html#torch.nn.modules.module.register_module_forward_pre_hook" title="torch.nn.modules.module.register_module_forward_pre_hook"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_module_forward_pre_hook()</span></code></a> and
-<a class="reference internal" href="../python-api/generated/torch.nn.modules.module.register_module_forward_hook.html#torch.nn.modules.module.register_module_forward_hook" title="torch.nn.modules.module.register_module_forward_hook"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_module_forward_hook()</span></code></a> functions.</p></li>
+<a class="reference internal" href="../generated/torch.nn.modules.module.register_module_forward_pre_hook.html#torch.nn.modules.module.register_module_forward_pre_hook" title="torch.nn.modules.module.register_module_forward_pre_hook"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_module_forward_pre_hook()</span></code></a> and
+<a class="reference internal" href="../generated/torch.nn.modules.module.register_module_forward_hook.html#torch.nn.modules.module.register_module_forward_hook" title="torch.nn.modules.module.register_module_forward_hook"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_module_forward_hook()</span></code></a> functions.</p></li>
 <li><p><strong>Backward hooks</strong> are called during the backward pass. They can be installed with
-<a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_pre_hook" title="torch.nn.Module.register_full_backward_pre_hook"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_full_backward_pre_hook()</span></code></a> and <a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook" title="torch.nn.Module.register_full_backward_hook"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_full_backward_hook()</span></code></a>.
+<a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_pre_hook" title="torch.nn.Module.register_full_backward_pre_hook"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_full_backward_pre_hook()</span></code></a> and <a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook" title="torch.nn.Module.register_full_backward_hook"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_full_backward_hook()</span></code></a>.
 These hooks will be called when the backward for this Module has been computed.
-<a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_pre_hook" title="torch.nn.Module.register_full_backward_pre_hook"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_full_backward_pre_hook()</span></code></a> will allow the user to access the gradients for outputs
-while <a class="reference internal" href="../python-api/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook" title="torch.nn.Module.register_full_backward_hook"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_full_backward_hook()</span></code></a> will allow the user to access the gradients
+<a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_pre_hook" title="torch.nn.Module.register_full_backward_pre_hook"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_full_backward_pre_hook()</span></code></a> will allow the user to access the gradients for outputs
+while <a class="reference internal" href="../generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook" title="torch.nn.Module.register_full_backward_hook"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_full_backward_hook()</span></code></a> will allow the user to access the gradients
 both the inputs and outputs. Alternatively, they can be installed globally for all modules with
-<a class="reference internal" href="../python-api/generated/torch.nn.modules.module.register_module_full_backward_hook.html#torch.nn.modules.module.register_module_full_backward_hook" title="torch.nn.modules.module.register_module_full_backward_hook"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_module_full_backward_hook()</span></code></a> and
-<a class="reference internal" href="../python-api/generated/torch.nn.modules.module.register_module_full_backward_pre_hook.html#torch.nn.modules.module.register_module_full_backward_pre_hook" title="torch.nn.modules.module.register_module_full_backward_pre_hook"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_module_full_backward_pre_hook()</span></code></a>.</p></li>
+<a class="reference internal" href="../generated/torch.nn.modules.module.register_module_full_backward_hook.html#torch.nn.modules.module.register_module_full_backward_hook" title="torch.nn.modules.module.register_module_full_backward_hook"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_module_full_backward_hook()</span></code></a> and
+<a class="reference internal" href="../generated/torch.nn.modules.module.register_module_full_backward_pre_hook.html#torch.nn.modules.module.register_module_full_backward_pre_hook" title="torch.nn.modules.module.register_module_full_backward_pre_hook"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_module_full_backward_pre_hook()</span></code></a>.</p></li>
 </ul>
 <p>All hooks allow the user to return an updated value that will be used throughout the remaining computation.
 Thus, these hooks can be used to either execute arbitrary code along the regular module forward/backward or
@@ -1389,46 +2148,46 @@ modify some inputs/outputs without having to change the module’s <code class="
 </div>
 </section>
 <section id="advanced-features">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Advanced Features</a><a class="headerlink" href="#advanced-features" title="Link to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Advanced Features</a><a class="headerlink" href="#advanced-features" title="Permalink to this heading">#</a></h2>
 <p>PyTorch also provides several more advanced features that are designed to work with modules. All these functionalities
 are available for custom-written modules, with the small caveat that certain features may require modules to conform
 to particular constraints in order to be supported. In-depth discussion of these features and the corresponding
 requirements can be found in the links below.</p>
 <section id="distributed-training">
-<h3><a class="toc-backref" href="#id11" role="doc-backlink">Distributed Training</a><a class="headerlink" href="#distributed-training" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Distributed Training</a><a class="headerlink" href="#distributed-training" title="Permalink to this heading">#</a></h3>
 <p>Various methods for distributed training exist within PyTorch, both for scaling up training using multiple GPUs
 as well as training across multiple machines. Check out the
 <a class="reference external" href="https://pytorch.org/tutorials/beginner/dist_overview.html">distributed training overview page</a> for
 detailed information on how to utilize these.</p>
 </section>
 <section id="profiling-performance">
-<h3><a class="toc-backref" href="#id12" role="doc-backlink">Profiling Performance</a><a class="headerlink" href="#profiling-performance" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">Profiling Performance</a><a class="headerlink" href="#profiling-performance" title="Permalink to this heading">#</a></h3>
 <p>The <a class="reference external" href="https://pytorch.org/tutorials/beginner/profiler.html">PyTorch Profiler</a> can be useful for identifying
 performance bottlenecks within your models. It measures and outputs performance characteristics for
 both memory usage and time spent.</p>
 </section>
 <section id="improving-performance-with-quantization">
-<h3><a class="toc-backref" href="#id13" role="doc-backlink">Improving Performance with Quantization</a><a class="headerlink" href="#improving-performance-with-quantization" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Improving Performance with Quantization</a><a class="headerlink" href="#improving-performance-with-quantization" title="Permalink to this heading">#</a></h3>
 <p>Applying quantization techniques to modules can improve performance and memory usage by utilizing lower
 bitwidths than floating-point precision. Check out the various PyTorch-provided mechanisms for quantization
 <a class="reference external" href="https://pytorch.org/docs/stable/quantization.html">here</a>.</p>
 </section>
 <section id="improving-memory-usage-with-pruning">
-<h3><a class="toc-backref" href="#id14" role="doc-backlink">Improving Memory Usage with Pruning</a><a class="headerlink" href="#improving-memory-usage-with-pruning" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">Improving Memory Usage with Pruning</a><a class="headerlink" href="#improving-memory-usage-with-pruning" title="Permalink to this heading">#</a></h3>
 <p>Large deep learning models are often over-parametrized, resulting in high memory usage. To combat this, PyTorch
 provides mechanisms for model pruning, which can help reduce memory usage while maintaining task accuracy. The
 <a class="reference external" href="https://pytorch.org/tutorials/intermediate/pruning_tutorial.html">Pruning tutorial</a> describes how to utilize
 the pruning techniques PyTorch provides or define custom pruning techniques as necessary.</p>
 </section>
 <section id="parametrizations">
-<h3><a class="toc-backref" href="#id15" role="doc-backlink">Parametrizations</a><a class="headerlink" href="#parametrizations" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">Parametrizations</a><a class="headerlink" href="#parametrizations" title="Permalink to this heading">#</a></h3>
 <p>For certain applications, it can be beneficial to constrain the parameter space during model training. For example,
 enforcing orthogonality of the learned parameters can improve convergence for RNNs. PyTorch provides a mechanism for
 applying <a class="reference external" href="https://pytorch.org/tutorials/intermediate/parametrizations.html">parametrizations</a> such as this, and
 further allows for custom constraints to be defined.</p>
 </section>
 <section id="transforming-modules-with-fx">
-<h3><a class="toc-backref" href="#id16" role="doc-backlink">Transforming Modules with FX</a><a class="headerlink" href="#transforming-modules-with-fx" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">Transforming Modules with FX</a><a class="headerlink" href="#transforming-modules-with-fx" title="Permalink to this heading">#</a></h3>
 <p>The <a class="reference external" href="https://pytorch.org/docs/stable/fx.html">FX</a> component of PyTorch provides a flexible way to transform
 modules by operating directly on module computation graphs. This can be used to programmatically generate or
 manipulate modules for a broad array of use cases. To explore FX, check out these examples of using FX for
@@ -1439,8 +2198,8 @@ manipulate modules for a broad array of use cases. To explore FX, check out thes
 </section>
 
 
-                </article>
-              
+  </article>
+
               
               
                 <footer class="bd-footer-article">
@@ -1453,24 +2212,65 @@ manipulate modules for a broad array of use cases. To explore FX, check out thes
     Rate this Page
     <div class="stars">
         
-        <span class="star" data-value="1">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="1" data-value="1">★</span>
         
-        <span class="star" data-value="2">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="2" data-value="2">★</span>
         
-        <span class="star" data-value="3">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="3" data-value="3">★</span>
         
-        <span class="star" data-value="4">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="4" data-value="4">★</span>
         
-        <span class="star" data-value="5">★</span>
+        <span class="star" data-behavior="tutorial-rating" data-count="5" data-value="5">★</span>
         
     </div>
 </div>
 
   <div class="feedback-send">
-    <button class="feedback-btn" onclick="openGitHubIssue()">Send Feedback</button>
+    <button class="feedback-btn"
+            onclick="openGitHubIssue()"
+            data-bs-title="Create a GitHub Issue"
+            data-bs-placement="bottom"
+            data-bs-toggle="tooltip">Send Feedback
+    </button>
   </div>
 </div>
+
+
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="libtorch_stable_abi.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">LibTorch Stable ABI</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="mps.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">MPS backend</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
+
+<div class="footer-info">
+  <p class="copyright">
+    
+      
+        © Copyright PyTorch Contributors.
+      
+      <br/>
+    
+  </p>
+
+  <p class="theme-version">
+    Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  </p>
+</div></div>
   
 </div>
                 </footer>
@@ -1481,20 +2281,20 @@ manipulate modules for a broad array of use cases. To explore FX, check out thes
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="gradcheck.html"
+       href="libtorch_stable_abi.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Gradcheck mechanics</p>
+        <p class="prev-next-title">LibTorch Stable ABI</p>
       </div>
     </a>
     <a class="right-next"
-       href="cuda.html"
+       href="mps.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">CUDA semantics</p>
+        <p class="prev-next-title">MPS backend</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1505,11 +2305,10 @@ manipulate modules for a broad array of use cases. To explore FX, check out thes
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc">
+                <div class="bd-sidebar-secondary bd-toc">
 <div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
+    
+       <div class="sidebar-secondary-item">
 <div
     id="pst-page-navigation-heading-2"
     class="page-toc tocsection onthispage">
@@ -1534,12 +2333,12 @@ manipulate modules for a broad array of use cases. To explore FX, check out thes
 </li>
 </ul>
   </nav></div>
-
-  <div class="sidebar-secondary-item">
+    
+       <div class="sidebar-secondary-item">
 
   
   <div class="tocsection editthispage">
-    <a href="https://github.com/pytorch/pytorch/edit/main/docs/source/notes/modules.rst">
+    <a href="https://github.com/pytorch/pytorch/edit/main/docs/cpp/source/notes/modules.rst">
       <i class="fa-solid fa-pencil"></i>
       
       
@@ -1550,21 +2349,22 @@ manipulate modules for a broad array of use cases. To explore FX, check out thes
     </a>
   </div>
 </div>
-
-  <div class="sidebar-secondary-item">
+    
+       <div class="sidebar-secondary-item">
     <div class="tocsection sourcelink">
       <a href="../_sources/notes/modules.rst.txt">
         <i class="fa-solid fa-file-lines"></i> Show Source
       </a>
     </div>
 </div>
+    
 
-</div>
+
 <div class="sidebar-secondary-item">
   <div class="sidebar-heading">PyTorch Community</div>
   <ul style="list-style-type: none; padding: 0;">
   
-   <li><a class="nav-link nav-external" href="community/index.html" style="color: var(--pst-color-text-muted)">PyTorch Governance</a></li>
+   <li><a class="nav-link nav-external" href="https://pytorch.org/docs/stable/community/index.html" style="color: var(--pst-color-text-muted)">PyTorch Governance</a></li>
   
    <li><a class="nav-link nav-external" href="https://pytorch.org/docs/stable/community/design.html" style="color: var(--pst-color-text-muted)">PyTorch Design Philosophy</a></li>
   
@@ -1572,6 +2372,8 @@ manipulate modules for a broad array of use cases. To explore FX, check out thes
   
   </ul>
 </div>
+
+
 <div class="sidebar-secondary-item">
  <div class="sidebar-heading">Language Bindings</div>
  <ul style="list-style-type: none; padding: 0;">
@@ -1584,9 +2386,11 @@ manipulate modules for a broad array of use cases. To explore FX, check out thes
  
  </ul>
 </div>
+
+
 <div class="sidebar-secondary-item">
   <div class="sidebar-heading">PyTorch Libraries</div>
-  <ul style="list-style-type: none; padding: 0;">
+  <ul style="list-style-type: none; padding: 0; padding-bottom: 80px;">
   
    <li><a class="nav-link nav-external" href="https://pytorch.org/audio/stable/" style="color: var(--pst-color-text-muted)">torchaudio</a></li>
   
@@ -1606,6 +2410,7 @@ manipulate modules for a broad array of use cases. To explore FX, check out thes
   
   </ul>
 </div>
+
 </div>
 </div>
               
@@ -1620,50 +2425,8 @@ manipulate modules for a broad array of use cases. To explore FX, check out thes
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
-
-
-  <footer class="bd-footer">
-    
-    <div class="bd-footer__inner bd-page-width">
-      
-        <div class="footer-items__start">
-          
-            <div class="footer-item">
-
-  <p class="copyright">
-    
-      © Copyright PyTorch Contributors.
-      <br/>
-    
-  </p>
-</div>
-          
-            <div class="footer-item">
-
-  <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.0.
-    <br/>
-  </p>
-</div>
-          
-        </div>
-      
-    
-    
-      <div class="footer-items__end">
-        
-          <div class="footer-item">
-<p class="theme-version">
-  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
-</p></div>
-        
-      </div>
-    
-   </div>
-   
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
    <div class="container-fluid docs-tutorials-resources" id="docs-tutorials-resources">
       <div class="container">
@@ -1761,8 +2524,52 @@ manipulate modules for a broad array of use cases. To explore FX, check out thes
     <img class="close-button" src="../_static/img/pytorch-x.svg">
   </div>
 </div>
-  </footer>
+ </footer>
+   
+  <footer class="bd-footer"><div class="cookie-banner-wrapper">
+  <div class="container">
+    <p class="gdpr-notice">To analyze traffic and optimize your experience, we serve cookies on this site. By clicking or navigating, you agree to allow our usage of cookies. As the current maintainers of this site, Facebook’s Cookies Policy applies. Learn more, including about available controls: <a href="https://www.facebook.com/policies/cookies/">Cookies Policy</a>.</p>
+    <img class="close-button" src="../_static/img/pytorch-x.svg">
+  </div>
+</div>
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
 
+  <p class="copyright">
+    
+      © Copyright PyTorch Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
 
   </body>
 </html>
