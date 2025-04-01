@@ -113,6 +113,11 @@
 <noscript>
    <img height="1" width="1" src="https://www.facebook.com/tr?id=243028289693773&ev=PageView&noscript=1"/>
 </noscript>
+<script>
+   function gtag() {
+    window.dataLayer.push(arguments);
+   }
+</script>
 <!-- End Facebook Pixel Code -->
 
 <script async src="https://cse.google.com/cse.js?cx=e65585f8c3ea1440e"></script>
@@ -3019,8 +3024,8 @@ document.write(`
 <li class="toctree-l2 has-children"><a class="reference internal" href="generated/exportdb/index.html">ExportDB</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="generated/exportdb/python.control-flow.html">python.control-flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/exportdb/python.data-structure.html">python.data-structure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/exportdb/torch.cond.html">torch.cond</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/exportdb/python.closure.html">python.closure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/exportdb/torch.cond.html">torch.cond</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/exportdb/torch.dynamic-value.html">torch.dynamic-value</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/exportdb/torch.escape-hatch.html">torch.escape-hatch</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/exportdb/torch.dynamic-shape.html">torch.dynamic-shape</a></li>
@@ -4252,7 +4257,7 @@ range of distributions.</p>
 <span id="id1"></span><h2>Accelerators<a class="headerlink" href="#accelerators" title="Permalink to this heading">#</a></h2>
 <p>Within the PyTorch repo, we define an “Accelerator” as a <a class="reference internal" href="tensor_attributes.html#torch.device" title="torch.device"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.device</span></code></a> that is being used
 alongside a CPU to speed up computation. These device use an asynchronous execution scheme,
-using <a class="reference internal" href="generated/torch.Stream.html#torch.Stream" title="torch.Stream"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Stream</span></code></a> and <a class="reference internal" href="generated/torch.Event.html#torch.Event" title="torch.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Event</span></code></a> as their main way to perform synchronization.
+using <a class="reference internal" href="generated/torch.Stream.html#torch.Stream" title="torch.Stream"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Stream</span></code></a> and <a class="reference internal" href="generated/torch.mtia.Event.html#torch.mtia.Event" title="torch.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Event</span></code></a> as their main way to perform synchronization.
 We also assume that only one such accelerator can be available at once on a given host. This allows
 us to use the current accelerator as the default device for relevant concepts such as pinned memory,
 Stream device_type, FSDP, etc.</p>
@@ -4273,7 +4278,7 @@ used for example.</p>
 <tr class="row-odd"><td><p><p id="torch.Stream"/><a class="reference internal" href="generated/torch.Stream.html#torch.Stream" title="torch.Stream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Stream</span></code></a></p></td>
 <td><p>An in-order queue of executing the respective tasks asynchronously in first in first out (FIFO) order.</p></td>
 </tr>
-<tr class="row-even"><td><p><p id="torch.Event"/><a class="reference internal" href="generated/torch.Event.html#torch.Event" title="torch.Event"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Event</span></code></a></p></td>
+<tr class="row-even"><td><p><p id="torch.mtia.Event"/><a class="reference internal" href="generated/torch.mtia.Event.html#torch.mtia.Event" title="torch.Event"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Event</span></code></a></p></td>
 <td><p>Query and record Stream status to identify or control dependencies across Stream and measure timing.</p></td>
 </tr>
 </tbody>

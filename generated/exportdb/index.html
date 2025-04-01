@@ -113,6 +113,11 @@
 <noscript>
    <img height="1" width="1" src="https://www.facebook.com/tr?id=243028289693773&ev=PageView&noscript=1"/>
 </noscript>
+<script>
+   function gtag() {
+    window.dataLayer.push(arguments);
+   }
+</script>
 <!-- End Facebook Pixel Code -->
 
 <script async src="https://cse.google.com/cse.js?cx=e65585f8c3ea1440e"></script>
@@ -3019,8 +3024,8 @@ document.write(`
 <li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">ExportDB</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="python.control-flow.html">python.control-flow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="python.data-structure.html">python.data-structure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="torch.cond.html">torch.cond</a></li>
 <li class="toctree-l3"><a class="reference internal" href="python.closure.html">python.closure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="torch.cond.html">torch.cond</a></li>
 <li class="toctree-l3"><a class="reference internal" href="torch.dynamic-value.html">torch.dynamic-value</a></li>
 <li class="toctree-l3"><a class="reference internal" href="torch.escape-hatch.html">torch.escape-hatch</a></li>
 <li class="toctree-l3"><a class="reference internal" href="torch.dynamic-shape.html">torch.dynamic-shape</a></li>
@@ -3928,8 +3933,8 @@ support in export please create an issue in the pytorch/pytorch repo with a modu
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="python.control-flow.html">python.control-flow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python.data-structure.html">python.data-structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="torch.cond.html">torch.cond</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python.closure.html">python.closure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="torch.cond.html">torch.cond</a></li>
 <li class="toctree-l1"><a class="reference internal" href="torch.dynamic-value.html">torch.dynamic-value</a></li>
 <li class="toctree-l1"><a class="reference internal" href="torch.escape-hatch.html">torch.escape-hatch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="torch.dynamic-shape.html">torch.dynamic-shape</a></li>
@@ -4097,7 +4102,7 @@ support in export please create an issue in the pytorch/pytorch repo with a modu
 <h3>cond_closed_over_variable<a class="headerlink" href="#cond-closed-over-variable" title="Permalink to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Tags: <a class="reference internal" href="torch.cond.html"><span class="doc">torch.cond</span></a>, <a class="reference internal" href="python.closure.html"><span class="doc">python.closure</span></a></p>
+<p>Tags: <a class="reference internal" href="python.closure.html"><span class="doc">python.closure</span></a>, <a class="reference internal" href="torch.cond.html"><span class="doc">torch.cond</span></a></p>
 <p>Support Level: SUPPORTED</p>
 </div>
 <p>Original source code:</p>
@@ -4827,7 +4832,7 @@ support in export please create an issue in the pytorch/pytorch repo with a modu
 <h3>dynamic_shape_if_guard<a class="headerlink" href="#dynamic-shape-if-guard" title="Permalink to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Tags: <a class="reference internal" href="torch.dynamic-shape.html"><span class="doc">torch.dynamic-shape</span></a>, <a class="reference internal" href="python.control-flow.html"><span class="doc">python.control-flow</span></a></p>
+<p>Tags: <a class="reference internal" href="python.control-flow.html"><span class="doc">python.control-flow</span></a>, <a class="reference internal" href="torch.dynamic-shape.html"><span class="doc">torch.dynamic-shape</span></a></p>
 <p>Support Level: SUPPORTED</p>
 </div>
 <p>Original source code:</p>
@@ -5415,7 +5420,7 @@ support in export please create an issue in the pytorch/pytorch repo with a modu
 <h3>list_contains<a class="headerlink" href="#list-contains" title="Permalink to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Tags: <a class="reference internal" href="python.assert.html"><span class="doc">python.assert</span></a>, <a class="reference internal" href="torch.dynamic-shape.html"><span class="doc">torch.dynamic-shape</span></a>, <a class="reference internal" href="python.data-structure.html"><span class="doc">python.data-structure</span></a></p>
+<p>Tags: <a class="reference internal" href="python.assert.html"><span class="doc">python.assert</span></a>, <a class="reference internal" href="python.data-structure.html"><span class="doc">python.data-structure</span></a>, <a class="reference internal" href="torch.dynamic-shape.html"><span class="doc">torch.dynamic-shape</span></a></p>
 <p>Support Level: SUPPORTED</p>
 </div>
 <p>Original source code:</p>
@@ -5646,7 +5651,7 @@ support in export please create an issue in the pytorch/pytorch repo with a modu
 </pre></div>
 </div>
 <p>Result:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Unsupported</span><span class="p">:</span> <span class="n">torch</span><span class="o">.*</span> <span class="n">op</span> <span class="n">returned</span> <span class="n">non</span><span class="o">-</span><span class="n">Tensor</span> <span class="nb">int</span> <span class="n">call_function</span> <span class="o">&lt;</span><span class="n">function</span> <span class="n">sym_min</span> <span class="n">at</span> <span class="mh">0x10570e830</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Unsupported</span><span class="p">:</span> <span class="n">torch</span><span class="o">.*</span> <span class="n">op</span> <span class="n">returned</span> <span class="n">non</span><span class="o">-</span><span class="n">Tensor</span> <span class="nb">int</span> <span class="n">call_function</span> <span class="o">&lt;</span><span class="n">function</span> <span class="n">sym_min</span> <span class="n">at</span> <span class="mh">0x106f0e830</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </section>
