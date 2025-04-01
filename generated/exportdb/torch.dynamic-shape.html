@@ -40,9 +40,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/katex-math.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/jit.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" />
@@ -71,7 +71,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="python.builtin" href="python.builtin.html" />
-    <link rel="prev" title="torch.dynamic-value" href="torch.dynamic-value.html" />
+    <link rel="prev" title="torch.escape-hatch" href="torch.escape-hatch.html" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -3017,12 +3017,12 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../../torch.compiler_transformations.html">Writing Graph Transformations on ATen IR</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../torch.compiler_ir.html">IRs</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">ExportDB</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="python.data-structure.html">python.data-structure</a></li>
 <li class="toctree-l3"><a class="reference internal" href="python.control-flow.html">python.control-flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.data-structure.html">python.data-structure</a></li>
 <li class="toctree-l3"><a class="reference internal" href="torch.cond.html">torch.cond</a></li>
 <li class="toctree-l3"><a class="reference internal" href="python.closure.html">python.closure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="torch.escape-hatch.html">torch.escape-hatch</a></li>
 <li class="toctree-l3"><a class="reference internal" href="torch.dynamic-value.html">torch.dynamic-value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="torch.escape-hatch.html">torch.escape-hatch</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">torch.dynamic-shape</a></li>
 <li class="toctree-l3"><a class="reference internal" href="python.builtin.html">python.builtin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="torch.map.html">torch.map</a></li>
@@ -3965,7 +3965,7 @@ document.write(`
 <h2>cond_branch_nonlocal_variables<a class="headerlink" href="#cond-branch-nonlocal-variables" title="Permalink to this heading">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Tags: <a class="reference internal" href="#"><span class="doc">torch.dynamic-shape</span></a>, <a class="reference internal" href="torch.cond.html"><span class="doc">torch.cond</span></a></p>
+<p>Tags: <a class="reference internal" href="torch.cond.html"><span class="doc">torch.cond</span></a>, <a class="reference internal" href="#"><span class="doc">torch.dynamic-shape</span></a></p>
 <p>Support Level: SUPPORTED</p>
 </div>
 <p>Original source code:</p>
@@ -4055,7 +4055,7 @@ document.write(`
 <h2>cond_operands<a class="headerlink" href="#cond-operands" title="Permalink to this heading">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Tags: <a class="reference internal" href="#"><span class="doc">torch.dynamic-shape</span></a>, <a class="reference internal" href="torch.cond.html"><span class="doc">torch.cond</span></a></p>
+<p>Tags: <a class="reference internal" href="torch.cond.html"><span class="doc">torch.cond</span></a>, <a class="reference internal" href="#"><span class="doc">torch.dynamic-shape</span></a></p>
 <p>Support Level: SUPPORTED</p>
 </div>
 <p>Original source code:</p>
@@ -4313,7 +4313,7 @@ document.write(`
 <h2>cond_branch_class_method<a class="headerlink" href="#cond-branch-class-method" title="Permalink to this heading">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Tags: <a class="reference internal" href="#"><span class="doc">torch.dynamic-shape</span></a>, <a class="reference internal" href="torch.cond.html"><span class="doc">torch.cond</span></a></p>
+<p>Tags: <a class="reference internal" href="torch.cond.html"><span class="doc">torch.cond</span></a>, <a class="reference internal" href="#"><span class="doc">torch.dynamic-shape</span></a></p>
 <p>Support Level: SUPPORTED</p>
 </div>
 <p>Original source code:</p>
@@ -4433,7 +4433,7 @@ document.write(`
 <h2>cond_predicate<a class="headerlink" href="#cond-predicate" title="Permalink to this heading">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Tags: <a class="reference internal" href="#"><span class="doc">torch.dynamic-shape</span></a>, <a class="reference internal" href="torch.cond.html"><span class="doc">torch.cond</span></a></p>
+<p>Tags: <a class="reference internal" href="torch.cond.html"><span class="doc">torch.cond</span></a>, <a class="reference internal" href="#"><span class="doc">torch.dynamic-shape</span></a></p>
 <p>Support Level: SUPPORTED</p>
 </div>
 <p>Original source code:</p>
@@ -4483,7 +4483,7 @@ document.write(`
 <h2>list_contains<a class="headerlink" href="#list-contains" title="Permalink to this heading">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Tags: <a class="reference internal" href="#"><span class="doc">torch.dynamic-shape</span></a>, <a class="reference internal" href="python.data-structure.html"><span class="doc">python.data-structure</span></a>, <a class="reference internal" href="python.assert.html"><span class="doc">python.assert</span></a></p>
+<p>Tags: <a class="reference internal" href="python.assert.html"><span class="doc">python.assert</span></a>, <a class="reference internal" href="#"><span class="doc">torch.dynamic-shape</span></a>, <a class="reference internal" href="python.data-structure.html"><span class="doc">python.data-structure</span></a></p>
 <p>Support Level: SUPPORTED</p>
 </div>
 <p>Original source code:</p>
@@ -4525,7 +4525,7 @@ document.write(`
 <h2>dynamic_shape_round<a class="headerlink" href="#dynamic-shape-round" title="Permalink to this heading">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Tags: <a class="reference internal" href="#"><span class="doc">torch.dynamic-shape</span></a>, <a class="reference internal" href="python.builtin.html"><span class="doc">python.builtin</span></a></p>
+<p>Tags: <a class="reference internal" href="python.builtin.html"><span class="doc">python.builtin</span></a>, <a class="reference internal" href="#"><span class="doc">torch.dynamic-shape</span></a></p>
 <p>Support Level: NOT_SUPPORTED_YET</p>
 </div>
 <p>Original source code:</p>
@@ -4564,7 +4564,7 @@ document.write(`
 <h2>cond_branch_nested_function<a class="headerlink" href="#cond-branch-nested-function" title="Permalink to this heading">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Tags: <a class="reference internal" href="#"><span class="doc">torch.dynamic-shape</span></a>, <a class="reference internal" href="torch.cond.html"><span class="doc">torch.cond</span></a></p>
+<p>Tags: <a class="reference internal" href="torch.cond.html"><span class="doc">torch.cond</span></a>, <a class="reference internal" href="#"><span class="doc">torch.dynamic-shape</span></a></p>
 <p>Support Level: SUPPORTED</p>
 </div>
 <p>Original source code:</p>
@@ -4669,12 +4669,12 @@ document.write(`
 
 <div class="prev-next-area">
     <a class="left-prev"
-       href="torch.dynamic-value.html"
+       href="torch.escape-hatch.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">torch.dynamic-value</p>
+        <p class="prev-next-title">torch.escape-hatch</p>
       </div>
     </a>
     <a class="right-next"
@@ -4712,12 +4712,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="torch.dynamic-value.html"
+       href="torch.escape-hatch.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">torch.dynamic-value</p>
+        <p class="prev-next-title">torch.escape-hatch</p>
       </div>
     </a>
     <a class="right-next"

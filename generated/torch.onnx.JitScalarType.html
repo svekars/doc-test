@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/katex-math.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/jit.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" />
@@ -3015,12 +3015,12 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../torch.compiler_transformations.html">Writing Graph Transformations on ATen IR</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../torch.compiler_ir.html">IRs</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="exportdb/index.html">ExportDB</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="exportdb/python.data-structure.html">python.data-structure</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exportdb/python.control-flow.html">python.control-flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exportdb/python.data-structure.html">python.data-structure</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exportdb/torch.cond.html">torch.cond</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exportdb/python.closure.html">python.closure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="exportdb/torch.escape-hatch.html">torch.escape-hatch</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exportdb/torch.dynamic-value.html">torch.dynamic-value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exportdb/torch.escape-hatch.html">torch.escape-hatch</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exportdb/torch.dynamic-shape.html">torch.dynamic-shape</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exportdb/python.builtin.html">python.builtin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exportdb/torch.map.html">torch.map</a></li>
@@ -3968,7 +3968,7 @@ Instead use <cite>from_value</cite> API which is safer.</p>
 <dd class="field-odd"><p><a class="reference internal" href="../onnx_dynamo.html#torch.onnx.OnnxExporterError" title="torch.onnx.OnnxExporterError"><strong>OnnxExporterError</strong></a> – if dtype is not a valid torch.dtype or if it is None.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#torch.onnx.JitScalarType" title="torch.onnx.JitScalarType">JitScalarType</a></p>
+<dd class="field-even"><p><a class="reference internal" href="#torch.onnx.JitScalarType" title="torch.onnx.JitScalarType"><em>JitScalarType</em></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -3979,7 +3979,7 @@ Instead use <cite>from_value</cite> API which is safer.</p>
 <dd><p>Convert a ONNX data type to JitScalarType.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>onnx_type</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em> | </em><em>_C_onnx.TensorProtoDataType</em><em> | </em><em>None</em>) – A torch._C._onnx.TensorProtoDataType to create a JitScalarType from</p>
+<dd class="field-odd"><p><strong>onnx_type</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em> | </em><em>torch._C._onnx.TensorProtoDataType</em><em> | </em><em>None</em>) – A torch._C._onnx.TensorProtoDataType to create a JitScalarType from</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>JitScalarType</p>
@@ -3988,7 +3988,7 @@ Instead use <cite>from_value</cite> API which is safer.</p>
 <dd class="field-odd"><p><a class="reference internal" href="../onnx_dynamo.html#torch.onnx.OnnxExporterError" title="torch.onnx.OnnxExporterError"><strong>OnnxExporterError</strong></a> – if dtype is not a valid torch.dtype or if it is None.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#torch.onnx.JitScalarType" title="torch.onnx.JitScalarType">JitScalarType</a></p>
+<dd class="field-even"><p><a class="reference internal" href="#torch.onnx.JitScalarType" title="torch.onnx.JitScalarType"><em>JitScalarType</em></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -4000,7 +4000,7 @@ Instead use <cite>from_value</cite> API which is safer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> (<em>None</em><em> | </em><em>torch._C.Value</em><em> | </em><a class="reference internal" href="../tensors.html#torch.Tensor" title="torch.Tensor"><em>torch.Tensor</em></a>) – An object to fetch scalar type from.</p></li>
+<li><p><strong>value</strong> (<em>None</em><em> | </em><em>torch.Value</em><em> | </em><a class="reference internal" href="../tensors.html#torch.Tensor" title="torch.Tensor"><em>torch.Tensor</em></a>) – An object to fetch scalar type from.</p></li>
 <li><p><strong>default</strong> – The JitScalarType to return if a valid scalar cannot be fetched from value</p></li>
 </ul>
 </dd>
@@ -4014,7 +4014,7 @@ Instead use <cite>from_value</cite> API which is safer.</p>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#torch.onnx.JitScalarType" title="torch.onnx.JitScalarType">JitScalarType</a></p>
+<dd class="field-even"><p><a class="reference internal" href="#torch.onnx.JitScalarType" title="torch.onnx.JitScalarType"><em>JitScalarType</em></a></p>
 </dd>
 </dl>
 </dd></dl>

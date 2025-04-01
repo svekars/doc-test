@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/katex-math.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/jit.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" />
@@ -1477,10 +1477,10 @@ are exactly the same. Set this to False to allow output shape broadcasting.
 Default to True.</p></li>
 <li><p><strong>check_dtype</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – Whether to check the dtypes between PyTorch and ONNX Runtime outputs
 are consistent. Default to True.</p></li>
-<li><p><strong>backend</strong> (<a class="reference internal" href="../onnx_verification.html#torch.onnx.verification.OnnxBackend" title="torch.onnx.verification.OnnxBackend"><em>OnnxBackend</em></a>) – ONNX backend for verification. Default to OnnxBackend.ONNX_RUNTIME_CPU.</p></li>
+<li><p><strong>backend</strong> (<a class="reference internal" href="../onnx_verification.html#torch.onnx.verification.OnnxBackend" title="torch.onnx.verification.OnnxBackend"><em>torch.onnx.verification.OnnxBackend</em></a>) – ONNX backend for verification. Default to OnnxBackend.ONNX_RUNTIME_CPU.</p></li>
 <li><p><strong>rtol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – relative tolerance in comparison between ONNX and PyTorch outputs.</p></li>
 <li><p><strong>atol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – absolute tolerance in comparison between ONNX and PyTorch outputs.</p></li>
-<li><p><strong>remained_onnx_input_idx</strong> (<em>Sequence</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>] </em><em>| </em><em>None</em>) – If provided, only the specified inputs will be passed
+<li><p><strong>remained_onnx_input_idx</strong> (<em>Optional</em><em>[</em><em>Sequence</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>]</em><em>]</em>) – If provided, only the specified inputs will be passed
 to the ONNX model. Supply a list when there are unused inputs in the model.
 Since unused inputs will be removed in the exported ONNX model, supplying
 all inputs will cause an error on unexpected inputs. This parameter tells

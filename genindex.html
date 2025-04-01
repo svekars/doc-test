@@ -31,9 +31,9 @@
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
     <link rel="stylesheet" type="text/css" href="_static/katex-math.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/jit.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" />
@@ -1741,6 +1741,8 @@ document.write(`
       <ul>
         <li><a href="torch.ao.ns._numeric_suite.html#torch.ao.ns._numeric_suite.Shadow.add">(torch.ao.ns._numeric_suite.Shadow method)</a>
 </li>
+        <li><a href="elastic/rendezvous.html#torch.distributed.elastic.rendezvous.etcd_store.EtcdStore.add">(torch.distributed.elastic.rendezvous.etcd_store.EtcdStore method)</a>
+</li>
         <li><a href="distributed.html#torch.distributed.Store.add">(torch.distributed.Store method)</a>
 </li>
         <li><a href="generated/torch.fx.experimental.symbolic_shapes.DimConstraints.html#torch.fx.experimental.symbolic_shapes.DimConstraints.add">(torch.fx.experimental.symbolic_shapes.DimConstraints method)</a>
@@ -2826,9 +2828,11 @@ document.write(`
       </ul></li>
       <li><a href="storage.html#torch.CharStorage">CharStorage (class in torch)</a>
 </li>
-      <li><a href="distributed.html#torch.distributed.Store.check">check() (torch.distributed.Store method)</a>
+      <li><a href="elastic/rendezvous.html#torch.distributed.elastic.rendezvous.etcd_store.EtcdStore.check">check() (torch.distributed.elastic.rendezvous.etcd_store.EtcdStore method)</a>
 
       <ul>
+        <li><a href="distributed.html#torch.distributed.Store.check">(torch.distributed.Store method)</a>
+</li>
         <li><a href="distributions.html#torch.distributions.constraints.Constraint.check">(torch.distributions.constraints.Constraint method)</a>
 </li>
       </ul></li>
@@ -3435,7 +3439,11 @@ document.write(`
       <li><a href="fx.html#torch.fx.Tracer.create_args_for_root">create_args_for_root() (torch.fx.Tracer method)</a>
 </li>
       <li><a href="elastic/rendezvous.html#torch.distributed.elastic.rendezvous.c10d_rendezvous_backend.create_backend">create_backend() (in module torch.distributed.elastic.rendezvous.c10d_rendezvous_backend)</a>
+
+      <ul>
+        <li><a href="elastic/rendezvous.html#torch.distributed.elastic.rendezvous.etcd_rendezvous_backend.create_backend">(in module torch.distributed.elastic.rendezvous.etcd_rendezvous_backend)</a>
 </li>
+      </ul></li>
       <li><a href="nn.attention.flex_attention.html#torch.nn.attention.flex_attention.create_block_mask">create_block_mask() (in module torch.nn.attention.flex_attention)</a>
 </li>
       <li><a href="distributed.checkpoint.html#torch.distributed.checkpoint.LoadPlanner.create_global_plan">create_global_plan() (torch.distributed.checkpoint.LoadPlanner method)</a>
@@ -4365,15 +4373,21 @@ document.write(`
       </ul></li>
       <li><a href="generated/torch.Tensor.erfinv_.html#torch.Tensor.erfinv_">erfinv_() (torch.Tensor method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="elastic/errors.html#torch.distributed.elastic.multiprocessing.errors.ErrorHandler">ErrorHandler (class in torch.distributed.elastic.multiprocessing.errors)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="generated/torch.onnx.verification.GraphInfo.html#torch.onnx.verification.GraphInfo.essential_node_count">essential_node_count() (torch.onnx.verification.GraphInfo method)</a>
 </li>
       <li><a href="generated/torch.onnx.verification.GraphInfo.html#torch.onnx.verification.GraphInfo.essential_node_kinds">essential_node_kinds() (torch.onnx.verification.GraphInfo method)</a>
 </li>
+      <li><a href="elastic/rendezvous.html#torch.distributed.elastic.rendezvous.etcd_rendezvous_backend.EtcdRendezvousBackend">EtcdRendezvousBackend (class in torch.distributed.elastic.rendezvous.etcd_rendezvous_backend)</a>
+</li>
+      <li><a href="elastic/rendezvous.html#torch.distributed.elastic.rendezvous.etcd_rendezvous.EtcdRendezvousHandler">EtcdRendezvousHandler (class in torch.distributed.elastic.rendezvous.etcd_rendezvous)</a>
+</li>
       <li><a href="elastic/rendezvous.html#torch.distributed.elastic.rendezvous.etcd_server.EtcdServer">EtcdServer (class in torch.distributed.elastic.rendezvous.etcd_server)</a>
+</li>
+      <li><a href="elastic/rendezvous.html#torch.distributed.elastic.rendezvous.etcd_store.EtcdStore">EtcdStore (class in torch.distributed.elastic.rendezvous.etcd_store)</a>
 </li>
       <li><a href="generated/torch.jit.ScriptModule.html#torch.jit.ScriptModule.eval">eval() (torch.jit.ScriptModule method)</a>
 
@@ -5210,6 +5224,8 @@ document.write(`
       <li><a href="generated/torch.autograd.profiler_util.StringTable.html#torch.autograd.profiler_util.StringTable.get">get() (torch.autograd.profiler_util.StringTable method)</a>
 
       <ul>
+        <li><a href="elastic/rendezvous.html#torch.distributed.elastic.rendezvous.etcd_store.EtcdStore.get">(torch.distributed.elastic.rendezvous.etcd_store.EtcdStore method)</a>
+</li>
         <li><a href="elastic/rendezvous.html#torch.distributed.elastic.rendezvous.RendezvousParameters.get">(torch.distributed.elastic.rendezvous.RendezvousParameters method)</a>
 </li>
         <li><a href="distributed.html#torch.distributed.Store.get">(torch.distributed.Store method)</a>
@@ -5545,6 +5561,8 @@ document.write(`
 
       <ul>
         <li><a href="elastic/rendezvous.html#torch.distributed.elastic.rendezvous.dynamic_rendezvous.RendezvousBackend.get_state">(torch.distributed.elastic.rendezvous.dynamic_rendezvous.RendezvousBackend method)</a>
+</li>
+        <li><a href="elastic/rendezvous.html#torch.distributed.elastic.rendezvous.etcd_rendezvous_backend.EtcdRendezvousBackend.get_state">(torch.distributed.elastic.rendezvous.etcd_rendezvous_backend.EtcdRendezvousBackend method)</a>
 </li>
         <li><a href="generated/torch.Generator.html#torch.Generator.get_state">(torch.Generator method)</a>
 </li>
@@ -9633,6 +9651,8 @@ document.write(`
 </li>
         <li><a href="elastic/rendezvous.html#torch.distributed.elastic.rendezvous.dynamic_rendezvous.RendezvousBackend.name">(torch.distributed.elastic.rendezvous.dynamic_rendezvous.RendezvousBackend property)</a>
 </li>
+        <li><a href="elastic/rendezvous.html#torch.distributed.elastic.rendezvous.etcd_rendezvous_backend.EtcdRendezvousBackend.name">(torch.distributed.elastic.rendezvous.etcd_rendezvous_backend.EtcdRendezvousBackend property)</a>
+</li>
         <li><a href="rpc.html#torch.distributed.rpc.WorkerInfo.name">(torch.distributed.rpc.WorkerInfo property)</a>
 </li>
         <li><a href="monitor.html#torch.monitor.Aggregation.name">(torch.monitor.Aggregation property)</a>
@@ -11756,8 +11776,12 @@ document.write(`
 </li>
       <li><a href="data.html#torch.utils.data.SequentialSampler">SequentialSampler (class in torch.utils.data)</a>
 </li>
-      <li><a href="distributed.html#torch.distributed.Store.set">set() (torch.distributed.Store method)</a>
+      <li><a href="elastic/rendezvous.html#torch.distributed.elastic.rendezvous.etcd_store.EtcdStore.set">set() (torch.distributed.elastic.rendezvous.etcd_store.EtcdStore method)</a>
+
+      <ul>
+        <li><a href="distributed.html#torch.distributed.Store.set">(torch.distributed.Store method)</a>
 </li>
+      </ul></li>
       <li><a href="generated/torch.Tensor.set_.html#torch.Tensor.set_">set_() (torch.Tensor method)</a>
 </li>
       <li><a href="generated/torch.ao.quantization.backend_config.BackendConfig.html#torch.ao.quantization.backend_config.BackendConfig.set_backend_pattern_config">set_backend_pattern_config() (torch.ao.quantization.backend_config.BackendConfig method)</a>
@@ -11974,6 +11998,8 @@ document.write(`
 
       <ul>
         <li><a href="elastic/rendezvous.html#torch.distributed.elastic.rendezvous.dynamic_rendezvous.RendezvousBackend.set_state">(torch.distributed.elastic.rendezvous.dynamic_rendezvous.RendezvousBackend method)</a>
+</li>
+        <li><a href="elastic/rendezvous.html#torch.distributed.elastic.rendezvous.etcd_rendezvous_backend.EtcdRendezvousBackend.set_state">(torch.distributed.elastic.rendezvous.etcd_rendezvous_backend.EtcdRendezvousBackend method)</a>
 </li>
         <li><a href="generated/torch.Generator.html#torch.Generator.set_state">(torch.Generator method)</a>
 </li>
@@ -19457,6 +19483,8 @@ document.write(`
       <ul>
         <li><a href="generated/torch.cuda.Event.html#torch.cuda.Event.wait">(torch.cuda.Event method)</a>
 </li>
+        <li><a href="elastic/rendezvous.html#torch.distributed.elastic.rendezvous.etcd_store.EtcdStore.wait">(torch.distributed.elastic.rendezvous.etcd_store.EtcdStore method)</a>
+</li>
         <li><a href="distributed.fsdp.fully_shard.html#torch.distributed.fsdp.UnshardHandle.wait">(torch.distributed.fsdp.UnshardHandle method)</a>
 </li>
         <li><a href="distributed.html#torch.distributed.Store.wait">(torch.distributed.Store method)</a>
@@ -19496,10 +19524,10 @@ document.write(`
         <li><a href="generated/torch.nn.utils.parametrizations.weight_norm.html#torch.nn.utils.parametrizations.weight_norm">(in module torch.nn.utils.parametrizations)</a>
 </li>
       </ul></li>
-      <li><a href="data.html#torch.utils.data.WeightedRandomSampler">WeightedRandomSampler (class in torch.utils.data)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="data.html#torch.utils.data.WeightedRandomSampler">WeightedRandomSampler (class in torch.utils.data)</a>
+</li>
       <li><a href="generated/torch.where.html#torch.where">where() (in module torch)</a>
 
       <ul>
