@@ -1,0 +1,24 @@
+name: Sync Directory
+on:
+  push:
+    branches: [main]
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          path: gpu-mode/triton-tutorials
+      - uses: actions/checkout@v3
+        with:
+          repository: svekars/doc-test
+          path: doc-test
+          token: ${{ secrets.PAT_TOKEN }}
+      - run: |
+          find gpu-mode/triton-tutorials -name "*.py" -exec cp --parents {} svekars/doc-test/triton-tutorials \; 
+          cd svekars/doc-test
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git add .
+          git commit -m "Sync directory from source repo" || echo "No changes to commit"
+          git push
