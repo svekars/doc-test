@@ -18,7 +18,7 @@ jobs:
       - run: |
           mkdir -p doc-test/triton-tutorials
           find gpu-mode/triton-tutorials -name "*.py" -exec cp --parents {} doc-test/triton-tutorials \; 
-          cd svekars/doc-test
+          cd doc-test
           git config user.name "GitHub Action"
           git config user.email "action@github.com"
           git add .
