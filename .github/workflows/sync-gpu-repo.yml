@@ -1,4 +1,4 @@
-name: Sync Directory
+name: Sync Triton Tutorials Repo
 on:
   schedule:
     - cron: '0 0 * * *'  # Runs at midnight UTC every day
