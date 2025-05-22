@@ -15,6 +15,7 @@ jobs:
           path: doc-test
           token: ${{ secrets.PAT_TOKEN }}
       - run: |
+          mkdir -p svekars/doc-test/triton-tutorials
           find gpu-mode/triton-tutorials -name "*.py" -exec cp --parents {} svekars/doc-test/triton-tutorials \; 
           cd svekars/doc-test
           git config user.name "GitHub Action"
